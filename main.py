@@ -37,8 +37,8 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='Run the SWE AI Digest pipeline')
     parser.add_argument('--days', type=int, default=None,
                         help='Lookback window in days (overrides config)')
-    parser.add_argument('--config', default='config.yaml',
-                        help='Path to config file (default: config.yaml)')
+    parser.add_argument('--config', default=str(Path(__file__).parent / 'config.yaml'),
+                        help='Path to config file (default: config.yaml next to main.py)')
     parser.add_argument('--dry-run', action='store_true',
                         help='Fetch and process but do not call AI, send email, or push feed')
     parser.add_argument('--no-email', action='store_true',
