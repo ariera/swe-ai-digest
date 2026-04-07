@@ -27,7 +27,7 @@ from dotenv import load_dotenv
 
 from ai.digest import call_anthropic, enrich_ai_articles
 from email_sender.sender import send_admin_notification, send_digest
-from feed.publisher import update_feed
+from feed.publisher import push_docs, update_feed
 from fetcher.core import dedup_by_url, fetch_all, load_sources, sort_and_filter_articles
 from pages.builder import update_pages
 
@@ -334,9 +334,9 @@ def main() -> int:
     else:
         logger.info("Email skipped (dry-run or --no-email)")
 
-    # ── RSS feed + pages ───────────────────────────────────────────────────────
+    # ── RSS feed + pages + push ────────────────────────────────────────────────
     if not args.dry_run and not args.no_feed:
-        repo_path = str(Path(__file__).parent)
+        repo_path = str(REPO_ROOT)
         docs_dir = str(REPO_ROOT / 'docs')
         try:
             update_feed(digest, cfg['feed'], repo_path)
@@ -346,6 +346,12 @@ def main() -> int:
             update_pages(digest, docs_dir)
         except Exception as e:
             logger.error("Pages build failed: %s", e)
+        if cfg['feed'].get('auto_push', False):
+            try:
+                week = datetime.now(tz=timezone.utc).isocalendar()
+                push_docs(repo_path, f"digest: CW{week.week} {week.year}")
+            except Exception as e:
+                logger.error("Git push failed: %s", e)
     else:
         logger.info("RSS feed and pages update skipped (dry-run or --no-feed)")
 

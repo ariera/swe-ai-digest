@@ -162,14 +162,13 @@ def update_feed(digest: dict, feed_cfg: dict, repo_path: str) -> None:
     feed_path.write_text(xml_content, encoding='utf-8')
     logger.info("RSS feed written to %s (%d total items)", feed_path, len(all_items))
 
-    if feed_cfg.get('auto_push', False):
-        _git_push_feed(feed_path, repo_path, len(new_items))
 
+def push_docs(repo_path: str, commit_msg: str) -> None:
+    """Stage all docs/ changes, commit, and push to GitHub.
 
-def _git_push_feed(feed_path: Path, repo_path: str, new_count: int) -> None:
-    """Commit and push all docs/ changes (feed, pages, manifest) to GitHub."""
-    week = datetime.now(tz=timezone.utc).isocalendar()
-    commit_msg = f"digest: CW{week.week} {week.year} — {new_count} new item(s)"
+    Called from main.py after both the feed and pages have been written,
+    so a single commit captures all docs/ changes together.
+    """
     try:
         subprocess.run(['git', 'add', 'docs/'], cwd=repo_path, check=True, capture_output=True)
         result = subprocess.run(
@@ -178,14 +177,14 @@ def _git_push_feed(feed_path: Path, repo_path: str, new_count: int) -> None:
             capture_output=True,
         )
         if result.returncode == 0:
-            logger.info("No changes to feed.xml — skipping git push")
+            logger.info("No changes in docs/ — skipping git push")
             return
         subprocess.run(
             ['git', 'commit', '-m', commit_msg],
             cwd=repo_path, check=True, capture_output=True,
         )
         subprocess.run(['git', 'push'], cwd=repo_path, check=True, capture_output=True)
-        logger.info("RSS feed pushed to GitHub: %s", commit_msg)
+        logger.info("docs/ pushed to GitHub: %s", commit_msg)
     except subprocess.CalledProcessError as e:
         logger.error("Git push failed: %s\nstdout: %s\nstderr: %s",
                      e, e.stdout.decode() if e.stdout else '', e.stderr.decode() if e.stderr else '')
