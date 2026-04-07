@@ -293,8 +293,9 @@ def main() -> int:
                 details=(f"Scanned {len(new_articles)} new articles; "
                          f"all {ai_result.get('dropped_count', 0)} were dropped as not AI-relevant."),
             )
-        state = mark_processed(state, new_articles)
-        save_state(cfg['paths']['state_file'], state)
+        if not args.dry_run:
+            state = mark_processed(state, new_articles)
+            save_state(cfg['paths']['state_file'], state)
         logger.info("=== Pipeline complete (no AI-relevant content) ===")
         return 0
 
@@ -334,8 +335,11 @@ def main() -> int:
         logger.info("RSS feed update skipped (dry-run or --no-feed)")
 
     # ── Persist state ──────────────────────────────────────────────────────────
-    state = mark_processed(state, new_articles)
-    save_state(cfg['paths']['state_file'], state)
+    if not args.dry_run:
+        state = mark_processed(state, new_articles)
+        save_state(cfg['paths']['state_file'], state)
+    else:
+        logger.info("State update skipped (dry-run)")
     logger.info("State updated: %d total processed URLs", len(state['processed_urls']))
 
     logger.info("=== Pipeline complete: %d articles in digest ===", len(enriched_articles))
