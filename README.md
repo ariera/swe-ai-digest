@@ -145,9 +145,8 @@ swe-ai-digest/
 ├── data/
 │   └── digest_sources.yaml  # 34 engineers: names, bios, feed URLs
 ├── output/                  # Generated digest JSON files
-├── docs/
-│   ├── design.md            # Full design document
-│   └── feed.xml             # Published RSS feed (GitHub Pages)
+├── DESIGN.md                # Full design document
+├── docs/                    # GitHub Pages (feed, site)
 ├── logs/                    # Run logs
 └── tests/                   # pytest suite
 ```
