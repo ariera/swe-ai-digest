@@ -99,9 +99,7 @@ def render_digest_email(digest: dict) -> tuple[str, str, str]:
         '',
         'All content belongs to the original authors. Links to source articles',
         'are always included. Summaries and bios are AI-generated and may',
-        'contain inaccuracies. This pipeline was built by an AI agent.',
-        '',
-        'SWE AI Digest — https://github.com/ariera/swe-ai-digest',
+        'contain inaccuracies.',
     ]
 
     plain = '\n'.join(lines)
@@ -140,9 +138,7 @@ def render_digest_email(digest: dict) -> tuple[str, str, str]:
         'its impact on the profession, how they use it, and where they think it is going. '
         'The goal is simply to stay close to people whose judgement we trust.<br><br>',
         'All content belongs to the original authors. Links to source articles are always included. '
-        'Summaries and bios are AI-generated and may contain inaccuracies. '
-        'This pipeline was built by an AI agent.<br><br>',
-        '<a href="https://github.com/ariera/swe-ai-digest" style="color: #bbb;">SWE AI Digest</a>',
+        'Summaries and bios are AI-generated and may contain inaccuracies.',
         '</p>',
         '</body></html>',
     ]
