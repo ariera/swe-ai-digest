@@ -1,0 +1,37 @@
+# SWE AI Digest — pipeline configuration
+# Secrets (API keys, passwords) go in .env, not here.
+
+pipeline:
+  lookback_days: 7          # default lookback window; override with --days N
+  max_article_words: 2000   # truncation limit before sending content to AI
+
+anthropic:
+  model: claude-sonnet-4-6
+  max_tokens: 8192
+  max_retries: 3            # exponential backoff: 2s, 4s, 8s
+
+email:
+  smtp_host: smtp.gmail.com
+  smtp_port: 587
+  from_address: digest@example.com
+  from_name: SWE AI Digest
+  admin_address: admin@example.com
+  subscribers_file: data/subscribers.yaml
+
+feed:
+  output_path: docs/feed.xml
+  title: "SWE AI Digest"
+  description: >
+    Weekly AI-filtered digest of what leading software engineers are writing
+    about artificial intelligence, its impact on the profession, and how they
+    use it in their own work.
+  link: https://yourusername.github.io/swe-ai-digest/feed.xml
+  publisher_name: SWE AI Digest
+  publisher_email: digest@example.com
+  auto_push: true           # set false to skip git push (useful for testing)
+
+paths:
+  sources_yaml: data/digest_sources.yaml
+  state_file: data/state.json
+  output_dir: output/
+  logs_dir: logs/

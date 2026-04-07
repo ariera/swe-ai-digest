@@ -1,0 +1,332 @@
+# digest_sources.yaml
+# Source manifest for the SWE × AI Weekly Digest
+#
+# type: rss    → fetch via feedparser — fast, parallel, no browser
+# type: scrape → fetch HTML with httpx + parse with BeautifulSoup (no JS needed)
+# type: chrome → requires authenticated browser session; handled by Chrome agent
+# type: skip   → insufficient AI content; excluded from digest
+#
+# bio: one-line description included in the digest under each author section.
+#      Keep it to a single sentence. Source of truth is here, not engineers_list.md.
+
+engineers:
+
+  # ── PRIORITY TIER (1–6 in current digest) ──────────────────────────────────
+
+  - name: Simon Willison
+    priority: 1
+    bio: "Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner's perspective."
+    sources:
+      - url: https://simonwillison.net/atom/everything
+        type: rss
+        label: blog (full feed)
+      - url: https://simonwillison.net/atom/links
+        type: rss
+        label: blog (links only)
+      - url: https://fosstodon.org/@simon.rss
+        type: rss
+        label: Mastodon
+
+  - name: Gergely Orosz
+    priority: 2
+    bio: "Former engineer at Uber and Skype, author of The Software Engineer's Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI's impact on engineering jobs."
+    sources:
+      - url: https://newsletter.pragmaticengineer.com/feed
+        type: rss
+        label: Substack (free posts)
+      - url: https://blog.pragmaticengineer.com/rss/
+        type: rss
+        label: blog
+
+  - name: DHH
+    priority: 3
+    bio: "Creator of Ruby on Rails, co-founder of 37signals (Basecamp/HEY), and outspoken critic of Silicon Valley orthodoxy and AI hype."
+    sources:
+      - url: https://world.hey.com/dhh/feed.atom
+        type: rss
+        label: Hey World blog
+      - url: https://twitter.com/dhh
+        type: chrome
+        label: Twitter/X
+        note: "Supplement; DHH often shares shorter takes here"
+
+  - name: John Carmack
+    priority: 4
+    bio: "Legendary game engine programmer and co-founder of id Software (Doom, Quake), former CTO of Oculus VR, and now one of the most thoughtful public voices on AGI timelines and AI safety."
+    sources:
+      - url: https://carmack.wordpress.com/feed/
+        type: rss
+        label: WordPress blog
+      - url: https://twitter.com/ID_AA_Carmack
+        type: chrome
+        label: Twitter/X
+        note: "Supplement to blog; long-form thinking often posted here"
+
+  - name: Charity Majors
+    priority: 5
+    bio: "Co-founder and CTO of Honeycomb.io, champion of observability-driven development, and an unusually candid voice on engineering culture, AI coding tools, and what it means to be a senior engineer today."
+    sources:
+      - url: https://charity.wtf/feed/
+        type: rss
+        label: blog
+      - url: https://hachyderm.io/@mipsytipsy.rss
+        type: rss
+        label: Mastodon
+
+  - name: Grady Booch
+    priority: 6
+    bio: "Chief Scientist for Software Engineering at IBM Research, co-creator of UML, and one of the longest-standing public commentators on the intersection of AI and software."
+    sources:
+      - url: https://twitter.com/Grady_Booch
+        type: chrome
+        label: Twitter/X
+        note: "Primary channel; publishes almost exclusively on Twitter"
+
+  # ── EXTENDED PRIORITY TIER (7–12) ──────────────────────────────────────────
+
+  - name: Kent Beck
+    priority: 7
+    bio: "Creator of Extreme Programming (XP) and Test-Driven Development (TDD), co-author of the Agile Manifesto, and author of Tidy First? — now writing actively about AI's impact on software craft."
+    sources:
+      - url: https://tidyfirst.substack.com/feed
+        type: rss
+        label: Substack (Tidy First)
+
+  - name: Paul Graham
+    priority: 8
+    bio: "Co-founder of Y Combinator, creator of the Arc language, and essayist whose widely-read long-form pieces on startups, programming, and AI have shaped a generation of builders."
+    sources:
+      - url: http://www.paulgraham.com/articles.html
+        type: scrape
+        label: essays
+        note: "RSS is malformed HTML; scraping articles page. Dates unavailable — undated entries are filtered from weekly digest."
+
+  - name: Bryan Cantrill
+    priority: 9
+    bio: "Systems software engineer, co-creator of DTrace, co-founder of Oxide Computer Company, and a vocal, sharp-tongued critic of AI hype in infrastructure and ops."
+    sources:
+      - url: https://oxide.computer/blog/feed
+        type: rss
+        label: Oxide blog
+        note: "Multi-author blog; filter for Cantrill posts during digest generation"
+      - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCFn4S3OexFT9YhxJ8GWdUYQ
+        type: rss
+        label: Oxide Computer YouTube
+
+  - name: Peter Norvig
+    priority: 10
+    bio: "Director of Research at Google, co-author of the canonical Artificial Intelligence: A Modern Approach textbook, and one of the most credible foundational voices on AI and software."
+    sources:
+      - url: https://norvig.com
+        type: scrape
+        label: personal site
+        note: "No RSS feed; scrape article list from homepage. Dates unavailable — undated entries are filtered from weekly digest."
+
+  - name: Martin Fowler
+    priority: 11
+    bio: "Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto."
+    sources:
+      - url: https://martinfowler.com/feed.atom
+        type: rss
+        label: blog
+      - url: https://toot.thoughtworks.com/@mfowler.rss
+        type: rss
+        label: Mastodon (ThoughtWorks instance)
+
+  - name: Werner Vogels
+    priority: 12
+    bio: "CTO of Amazon Web Services, author of the All Things Distributed blog, and a leading voice on cloud architecture, eventual consistency, and enterprise AI adoption."
+    sources:
+      - url: https://www.allthingsdistributed.com/atom.xml
+        type: rss
+        label: blog
+
+  # ── REST OF LIST ────────────────────────────────────────────────────────────
+
+  - name: Robert C. Martin (Uncle Bob)
+    priority: 13
+    bio: "Author of Clean Code and The Clean Coder, co-author of the Agile Manifesto, and the foremost evangelist of SOLID principles and software craftsmanship."
+    sources:
+      - url: https://unclebob.substack.com/feed
+        type: rss
+        label: Substack
+      - url: https://blog.cleancoder.com/atom.xml
+        type: rss
+        label: Clean Coder blog
+
+  - name: Jonathan Blow
+    priority: 14
+    bio: "Independent game developer, creator of Braid and The Witness, and a provocative voice on programming language design, software complexity, and the risks of AI-assisted coding."
+    sources:
+      - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCCuoqzrsHlwv1YyPKLuMDUQ
+        type: rss
+        label: YouTube
+      - url: https://twitter.com/Jonathan_Blow
+        type: chrome
+        label: Twitter/X
+
+  - name: Dan North
+    priority: 15
+    bio: "Originator of Behavior-Driven Development (BDD), software delivery coach, and a pragmatic voice on how teams should adapt their practices in the age of AI tools."
+    sources:
+      - url: https://dannorth.net/blog/index.xml
+        type: rss
+        label: blog
+
+  - name: Avdi Grimm
+    priority: 16
+    bio: "Ruby developer, author of Confident Ruby and Exceptional Ruby, and creator of the RubyTapas screencast series on software craftsmanship."
+    sources:
+      - url: https://avdi.codes/feed/
+        type: rss
+        label: blog
+
+  - name: Salvatore Sanfilippo (antirez)
+    priority: 17
+    bio: "Italian software engineer, creator of Redis — one of the world's most widely deployed in-memory data stores — and a rare voice for clarity and minimalism in systems design."
+    sources:
+      - url: http://antirez.com/rss
+        type: rss
+        label: blog
+
+  - name: Sandi Metz
+    priority: 18
+    bio: "Ruby programmer, author of Practical Object-Oriented Design in Ruby (POODR), and celebrated speaker on object-oriented design and the costs of complexity."
+    sources:
+      - url: https://sandimetz.com/blog?format=rss
+        type: rss
+        label: blog
+        note: "Last post 2018 — feed is live but blog is dormant; unlikely to yield weekly content"
+
+  - name: Martin Kleppmann
+    priority: 19
+    bio: "Author of Designing Data-Intensive Applications, researcher at Cambridge, and leading expert in distributed systems, stream processing, and CRDTs."
+    sources:
+      - url: https://feeds.feedburner.com/martinkl?format=xml
+        type: rss
+        label: blog (FeedBurner)
+
+  - name: Brendan Gregg
+    priority: 20
+    bio: "Senior performance engineer at Netflix (formerly), creator of flame graphs, author of Systems Performance, and the world's foremost practitioner of Linux and BPF observability."
+    sources:
+      - url: http://www.brendangregg.com/blog/rss.xml
+        type: rss
+        label: blog
+
+  - name: Guido van Rossum
+    priority: 21
+    bio: "Dutch programmer, creator of Python, and former Benevolent Dictator For Life (BDFL) of the language that became the backbone of modern AI and data science."
+    sources:
+      - url: https://twitter.com/gvanrossum
+        type: chrome
+        label: Twitter/X
+        note: "Most active on Twitter; no blog RSS"
+
+  - name: Joel Spolsky
+    priority: 22
+    bio: "Co-founder of Stack Overflow and Fog Creek Software, creator of Trello, and author of the influential Joel on Software blog — required reading for a generation of software managers."
+    sources:
+      - url: https://www.joelonsoftware.com/feed/
+        type: rss
+        label: blog
+
+  - name: Kevlin Henney
+    priority: 23
+    bio: "British software consultant, editor of 97 Things Every Programmer Should Know, and a prolific speaker on software design, patterns, and the philosophy of programming."
+    sources:
+      - url: https://twitter.com/KevlinHenney
+        type: chrome
+        label: Twitter/X
+        note: "kevlin.tel/feed returns malformed XML; Twitter is the reliable channel"
+
+  - name: Alan Kay
+    priority: 24
+    bio: "Turing Award–winning computer scientist, pioneer of object-oriented programming and the Smalltalk language at Xerox PARC, and visionary of the personal computer."
+    sources:
+      - url: https://twitter.com/AlanKaysBlog
+        type: chrome
+        label: Twitter/X
+        note: "No RSS; active on Twitter only"
+
+  - name: Daniel Lemire
+    priority: 25
+    bio: "Canadian computer science professor, author of fast data processing libraries such as simdjson, and a prolific blogger on algorithms, data structures, and performance."
+    sources:
+      - url: https://lemire.me/blog/feed/
+        type: rss
+        label: blog
+
+  - name: Rich Hickey
+    priority: 26
+    bio: "Creator of the Clojure programming language and architect of Datomic, best known for influential talks on simplicity, complexity, and the philosophy of software design."
+    sources:
+      - url: https://twitter.com/richhickey
+        type: chrome
+        label: Twitter/X
+
+  - name: Dave Thomas
+    priority: 27
+    bio: "Co-author of The Pragmatic Programmer, publisher of the Pragmatic Bookshelf, and an advocate for adaptive thinking and craftsmanship in software development."
+    sources:
+      - url: https://pragdave.me/feed.xml
+        type: rss
+        label: blog
+
+  - name: Armin Ronacher
+    priority: 28
+    bio: "Austrian open-source developer, creator of Flask and Jinja2, and a prolific contributor to the Python and Rust ecosystems with a thoughtful voice on developer tooling."
+    sources:
+      - url: https://lucumr.pocoo.org/feed.atom
+        type: rss
+        label: blog
+
+  - name: Jessie Frazelle
+    priority: 29
+    bio: "Systems software engineer, open-source contributor, co-founder of Oxide Computer Company, and a deep expert in containers, Linux internals, and hardware-software co-design."
+    sources:
+      - url: https://www.jessfraz.com/index.xml
+        type: rss
+        label: blog
+
+  - name: Jeff Dean
+    priority: 30
+    bio: "Google Senior Fellow and head of Google DeepMind, co-creator of MapReduce, BigTable, and TensorFlow, and one of the most cited engineers in AI infrastructure."
+    sources:
+      - url: https://twitter.com/JeffDean
+        type: chrome
+        label: Twitter/X
+
+  - name: Linus Torvalds
+    priority: 31
+    bio: "Finnish-American engineer, creator of the Linux kernel and Git, and the single most influential figure in open-source software history."
+    sources:
+      - url: https://twitter.com/torvalds
+        type: chrome
+        label: Twitter/X
+        note: "Rare posts; mostly kernel mailing lists (not practical to monitor)"
+
+  - name: Greg Young
+    priority: 32
+    bio: "Software architect and originator of the Command Query Responsibility Segregation (CQRS) and Event Sourcing patterns, widely influential in domain-driven design circles."
+    sources:
+      - url: https://twitter.com/gregyoung
+        type: chrome
+        label: Twitter/X
+
+  - name: Michael Feathers
+    priority: 33
+    bio: "Author of Working Effectively with Legacy Code and a leading expert on techniques for safely evolving large, untested codebases."
+    sources:
+      - url: https://twitter.com/mfeathers
+        type: chrome
+        label: Twitter/X
+
+  - name: Evan You
+    priority: 34
+    bio: "Creator of Vue.js and the Vite build tool, two of the most widely adopted front-end development projects in the JavaScript ecosystem."
+    sources:
+      - url: https://twitter.com/youyuxi
+        type: chrome
+        label: Twitter/X
+        note: "evanyou.me/feed.xml is 404; Twitter is the only channel"

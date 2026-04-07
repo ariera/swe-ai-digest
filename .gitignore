@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Secrets
+.env
+
+# Logs (keep the dir, not the files)
+logs/*.log
+
+# State (persisted locally, not committed)
+data/state.json
+
+# Subscribers list (private)
+data/subscribers.yaml
+
+# OS
+.DS_Store
+Thumbs.db
