@@ -50,11 +50,27 @@ def parse_args() -> argparse.Namespace:
 
 # ── Config ─────────────────────────────────────────────────────────────────────
 
+REPO_ROOT = Path(__file__).parent
+
+
 def load_config(path: str) -> dict:
     with open(path) as f:
         cfg = yaml.safe_load(f)
+    _resolve_paths(cfg)
     _apply_env_overrides(cfg)
     return cfg
+
+
+def _resolve_paths(cfg: dict) -> None:
+    """Make all paths in config absolute relative to the repo root.
+
+    This ensures the pipeline works regardless of the working directory
+    it is launched from (e.g. when run via cron).
+    """
+    paths = cfg.setdefault('paths', {})
+    for key, value in paths.items():
+        if value and not Path(value).is_absolute():
+            paths[key] = str(REPO_ROOT / value)
 
 
 def _apply_env_overrides(cfg: dict) -> None:
