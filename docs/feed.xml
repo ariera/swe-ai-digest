@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Apr 2026 21:57:02 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2026 22:47:12 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -40,6 +40,14 @@
       <pubDate>Mon, 06 Apr 2026 05:18:26 +0000</pubDate>
       <description>Willison reviews Google AI Edge Gallery, Google's first official iPhone app for running Gemma 4 models locally. The E2B model (2.54GB) runs quickly on-device and supports image Q&amp;A, audio transcription, and tool-calling demos against eight embedded HTML widgets. Willison notes this is the first time a major model vendor has shipped an official on-device inference app for iOS, marking a milestone in local LLM accessibility. He flags that conversations are ephemeral (no persistent logs) and that a follow-up prompt froze the app, but overall rates the app as 'really great' for exploring small-model capabilities without cloud dependency.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Apr/6/google-ai-edge-gallery/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Eight years of wanting, three months of building with AI</title>
+      <link>https://simonwillison.net/2026/Apr/5/building-with-ai/#atom-blogmarks</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 05 Apr 2026 23:54:18 +0000</pubDate>
+      <description>This is a duplicate entry of the "Eight years of wanting, three months of building with AI" article already covered. The content and URL resolve to the same article by Simon Willison summarising Lalit Maganti's syntaqlite essay. The key finding — that AI accelerates implementation while degrading architectural clarity — is covered in the primary entry above.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/5/building-with-ai/#atom-blogmarks</guid>
     </item>
     <item>
       <title>Eight years of wanting, three months of building with AI</title>
