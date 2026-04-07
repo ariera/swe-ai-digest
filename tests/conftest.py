@@ -83,7 +83,6 @@ def sample_digest():
         'global_summary': 'This week engineers discussed AI coding tools extensively.',
         'stats': {
             'articles_fetched': 10,
-            'articles_new': 8,
             'articles_ai_related': 1,
             'articles_dropped': 7,
             'blogs_unreachable': 0,

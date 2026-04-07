@@ -115,7 +115,6 @@ The pipeline commits and pushes `docs/feed.xml` automatically after each run (se
 | `output/digest_YYYY-CWxx.json` | Structured digest JSON for each run |
 | `docs/feed.xml` | Ever-growing RSS 2.0 feed (AI-filtered articles only) |
 | `logs/run_YYYY-CWxx.log` | Per-run log file |
-| `data/state.json` | Processed URL tracker (gitignored) |
 
 ---
 
@@ -143,8 +142,6 @@ swe-ai-digest/
 │   └── sender.py            # SMTP email sender
 ├── feed/
 │   └── publisher.py         # RSS 2.0 generator + GitHub push
-├── state/
-│   └── tracker.py           # Seen-URL persistence
 ├── data/
 │   └── digest_sources.yaml  # 34 engineers: names, bios, feed URLs
 ├── output/                  # Generated digest JSON files

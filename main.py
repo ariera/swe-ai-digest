@@ -7,12 +7,10 @@ Steps:
     1. Load config + secrets
     2. Set up logging
     3. Fetch articles from all RSS/scrape sources
-    4. Filter already-processed articles via state
-    5. Call Anthropic API (batch) to filter for AI relevance and summarise
-    6. Save structured digest JSON to output/
-    7. Send digest email to subscribers
-    8. Update RSS feed (docs/feed.xml) and push to GitHub Pages
-    9. Persist updated state
+    4. Call Anthropic API (batch) to filter for AI relevance and summarise
+    5. Save structured digest JSON to output/
+    6. Send digest email to subscribers
+    7. Update RSS feed (docs/feed.xml) and push to GitHub Pages
 """
 
 import argparse
@@ -31,7 +29,6 @@ from ai.digest import call_anthropic, enrich_ai_articles
 from email_sender.sender import send_admin_notification, send_digest
 from feed.publisher import update_feed
 from fetcher.core import dedup_by_url, fetch_all, load_sources, sort_and_filter_articles
-from state.tracker import filter_new_articles, load_state, mark_processed, save_state
 
 
 # ── CLI ────────────────────────────────────────────────────────────────────────
@@ -43,7 +40,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--config', default='config.yaml',
                         help='Path to config file (default: config.yaml)')
     parser.add_argument('--dry-run', action='store_true',
-                        help='Fetch and process but do not send email or push feed')
+                        help='Fetch and process but do not call AI, send email, or push feed')
     parser.add_argument('--no-email', action='store_true',
                         help='Skip sending email')
     parser.add_argument('--no-feed', action='store_true',
@@ -214,10 +211,8 @@ def main() -> int:
         logger.error("ANTHROPIC_API_KEY not set")
         return 1
 
-    # ── Load sources + state ───────────────────────────────────────────────────
+    # ── Load sources ──────────────────────────────────────────────────────────
     sources_config = load_sources(cfg['paths']['sources_yaml'])
-    state = load_state(cfg['paths']['state_file'])
-    logger.info("State: %d previously processed URLs", len(state['processed_urls']))
 
     # ── Fetch ──────────────────────────────────────────────────────────────────
     logger.info("Fetching articles from RSS feeds and scrapers...")
@@ -237,15 +232,11 @@ def main() -> int:
     logger.info("Fetched %d articles total (%d fetch errors, %d chrome-only sources skipped)",
                 len(all_articles), len(fetch_errors), len(chrome_sources))
 
-    # ── Filter already-seen ────────────────────────────────────────────────────
-    new_articles = filter_new_articles(all_articles, state)
-    logger.info("%d new articles (not yet processed)", len(new_articles))
-
-    if not new_articles:
-        logger.info("No new articles this week")
+    if not all_articles:
+        logger.info("No articles found this week")
         if not args.dry_run and not args.no_email and smtp_password:
             send_admin_notification(
-                reason="No new articles found",
+                reason="No articles found",
                 cfg=cfg,
                 smtp_password=smtp_password,
                 details=f"Lookback: {lookback_days} days. Fetch errors: {len(fetch_errors)}",
@@ -256,12 +247,12 @@ def main() -> int:
     # ── AI filtering + summarisation ───────────────────────────────────────────
     if args.dry_run:
         logger.info("DRY RUN — skipping Anthropic API call, using mock result")
-        ai_result = _mock_ai_result(new_articles)
+        ai_result = _mock_ai_result(all_articles)
     else:
-        logger.info("Calling Anthropic API with %d articles...", len(new_articles))
+        logger.info("Calling Anthropic API with %d articles...", len(all_articles))
         try:
             ai_result = call_anthropic(
-                articles=new_articles,
+                articles=all_articles,
                 days=lookback_days,
                 model=cfg['anthropic']['model'],
                 max_tokens=cfg['anthropic']['max_tokens'],
@@ -279,7 +270,7 @@ def main() -> int:
                 )
             return 1
 
-    enriched_articles = enrich_ai_articles(ai_result, new_articles)
+    enriched_articles = enrich_ai_articles(ai_result, all_articles)
     logger.info("AI result: %d AI-relevant, %d dropped",
                 len(enriched_articles), ai_result.get('dropped_count', 0))
 
@@ -290,19 +281,15 @@ def main() -> int:
                 reason="No AI-relevant articles found",
                 cfg=cfg,
                 smtp_password=smtp_password,
-                details=(f"Scanned {len(new_articles)} new articles; "
+                details=(f"Scanned {len(all_articles)} articles; "
                          f"all {ai_result.get('dropped_count', 0)} were dropped as not AI-relevant."),
             )
-        if not args.dry_run:
-            state = mark_processed(state, new_articles)
-            save_state(cfg['paths']['state_file'], state)
         logger.info("=== Pipeline complete (no AI-relevant content) ===")
         return 0
 
     # ── Build + save digest JSON ───────────────────────────────────────────────
     stats = {
         'articles_fetched': len(all_articles),
-        'articles_new': len(new_articles),
         'articles_ai_related': len(enriched_articles),
         'articles_dropped': ai_result.get('dropped_count', 0),
         'blogs_unreachable': len(fetch_errors),
@@ -333,14 +320,6 @@ def main() -> int:
             logger.error("RSS feed update failed: %s", e)
     else:
         logger.info("RSS feed update skipped (dry-run or --no-feed)")
-
-    # ── Persist state ──────────────────────────────────────────────────────────
-    if not args.dry_run:
-        state = mark_processed(state, new_articles)
-        save_state(cfg['paths']['state_file'], state)
-    else:
-        logger.info("State update skipped (dry-run)")
-    logger.info("State updated: %d total processed URLs", len(state['processed_urls']))
 
     logger.info("=== Pipeline complete: %d articles in digest ===", len(enriched_articles))
     return 0

@@ -19,9 +19,6 @@ logs/*.log
 output/*.json
 output/emails/
 
-# State (persisted locally, not committed)
-data/state.json
-
 # Subscribers list (private)
 data/subscribers.yaml
 
