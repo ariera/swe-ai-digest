@@ -6,7 +6,7 @@ A weekly, automatically generated digest of what leading software engineers are 
 
 This project grew out of a simple question between friends: *amid all the noise about AI, what are the engineers we actually admire saying?*
 
-The list — John Carmack, DHH, Martin Fowler, Simon Willison, Gergely Orosz, Kent Beck, and ~30 others — represents people who have demonstrated, over careers, an unusual ability to cut through complexity and say something true. They write publicly, they share their thinking generously, and in this particular moment in the history of computing, what they have to say about AI feels worth paying attention to.
+The list — DHH, Martin Fowler, Simon Willison, Gergely Orosz, Kent Beck, and ~30 others — represents people who have demonstrated, over careers, an unusual ability to cut through complexity and say something true. They write publicly, they share their thinking generously, and in this particular moment in the history of computing, what they have to say about AI feels worth paying attention to.
 
 This tool does nothing more than aggregate and summarise their public writing. Every article belongs to its original author. Credit is always given. The digest is a lens, not a claim of ownership.
 
