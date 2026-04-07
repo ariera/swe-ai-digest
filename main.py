@@ -156,6 +156,36 @@ def save_digest(digest: dict, output_dir: str) -> Path:
     return out_file
 
 
+# ── Dry-run mock ──────────────────────────────────────────────────────────────
+
+def _mock_ai_result(articles: list[dict]) -> dict:
+    """Return a plausible AI result without calling the API.
+
+    Marks the first 3 articles (or all of them if fewer) as AI-relevant with
+    placeholder summaries, so the full downstream pipeline can be exercised.
+    """
+    sample = articles[:3]
+    dropped = len(articles) - len(sample)
+    return {
+        'global_summary': (
+            '[DRY RUN] This is a mock global summary. '
+            f'{len(sample)} article(s) were selected from {len(articles)} fetched '
+            f'as a dry-run sample. No actual AI filtering was performed.'
+        ),
+        'articles': [
+            {
+                'url': a['url'],
+                'summary': (
+                    f'[DRY RUN] Mock summary for "{a["title"]}" by {a["engineer"]}. '
+                    'No actual AI summarisation was performed.'
+                ),
+            }
+            for a in sample
+        ],
+        'dropped_count': dropped,
+    }
+
+
 # ── Main pipeline ──────────────────────────────────────────────────────────────
 
 def main() -> int:
@@ -175,12 +205,12 @@ def main() -> int:
     logger.info("Lookback: %d days (%s to %s)", lookback_days,
                 period_start.date(), period_end.date())
     if args.dry_run:
-        logger.info("DRY RUN — email and feed push will be skipped")
+        logger.info("DRY RUN — AI call will be mocked; email and feed push will be skipped")
 
     # ── Secrets ────────────────────────────────────────────────────────────────
     anthropic_api_key = os.environ.get('ANTHROPIC_API_KEY', '')
     smtp_password = os.environ.get('SMTP_PASSWORD', '')
-    if not anthropic_api_key:
+    if not anthropic_api_key and not args.dry_run:
         logger.error("ANTHROPIC_API_KEY not set")
         return 1
 
@@ -224,26 +254,30 @@ def main() -> int:
         return 0
 
     # ── AI filtering + summarisation ───────────────────────────────────────────
-    logger.info("Calling Anthropic API with %d articles...", len(new_articles))
-    try:
-        ai_result = call_anthropic(
-            articles=new_articles,
-            days=lookback_days,
-            model=cfg['anthropic']['model'],
-            max_tokens=cfg['anthropic']['max_tokens'],
-            max_retries=cfg['anthropic']['max_retries'],
-            api_key=anthropic_api_key,
-        )
-    except RuntimeError as e:
-        logger.error("AI processing failed: %s", e)
-        if not args.dry_run and not args.no_email and smtp_password:
-            send_admin_notification(
-                reason="Anthropic API failed",
-                cfg=cfg,
-                smtp_password=smtp_password,
-                details=str(e),
+    if args.dry_run:
+        logger.info("DRY RUN — skipping Anthropic API call, using mock result")
+        ai_result = _mock_ai_result(new_articles)
+    else:
+        logger.info("Calling Anthropic API with %d articles...", len(new_articles))
+        try:
+            ai_result = call_anthropic(
+                articles=new_articles,
+                days=lookback_days,
+                model=cfg['anthropic']['model'],
+                max_tokens=cfg['anthropic']['max_tokens'],
+                max_retries=cfg['anthropic']['max_retries'],
+                api_key=anthropic_api_key,
             )
-        return 1
+        except RuntimeError as e:
+            logger.error("AI processing failed: %s", e)
+            if not args.no_email and smtp_password:
+                send_admin_notification(
+                    reason="Anthropic API failed",
+                    cfg=cfg,
+                    smtp_password=smtp_password,
+                    details=str(e),
+                )
+            return 1
 
     enriched_articles = enrich_ai_articles(ai_result, new_articles)
     logger.info("AI result: %d AI-relevant, %d dropped",
