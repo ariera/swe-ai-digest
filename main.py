@@ -55,7 +55,53 @@ def parse_args() -> argparse.Namespace:
 
 def load_config(path: str) -> dict:
     with open(path) as f:
-        return yaml.safe_load(f)
+        cfg = yaml.safe_load(f)
+    _apply_env_overrides(cfg)
+    return cfg
+
+
+def _apply_env_overrides(cfg: dict) -> None:
+    """Overlay email (and feed) config with environment variables.
+
+    Env vars take precedence over config.yaml. This lets a single config file
+    serve as a template while machine-specific values live in .env.
+
+    Supported overrides:
+        SMTP_HOST, SMTP_PORT, SMTP_FROM_ADDRESS, SMTP_FROM_NAME,
+        SMTP_ADMIN_ADDRESS, SMTP_SUBSCRIBERS_FILE,
+        FEED_LINK, FEED_PUBLISHER_NAME, FEED_PUBLISHER_EMAIL,
+        ANTHROPIC_MODEL
+    """
+    email = cfg.setdefault('email', {})
+    _env_str(email, 'smtp_host', 'SMTP_HOST')
+    _env_int(email, 'smtp_port', 'SMTP_PORT')
+    _env_str(email, 'from_address', 'SMTP_FROM_ADDRESS')
+    _env_str(email, 'from_name', 'SMTP_FROM_NAME')
+    _env_str(email, 'admin_address', 'SMTP_ADMIN_ADDRESS')
+    _env_str(email, 'subscribers_file', 'SMTP_SUBSCRIBERS_FILE')
+
+    feed = cfg.setdefault('feed', {})
+    _env_str(feed, 'link', 'FEED_LINK')
+    _env_str(feed, 'publisher_name', 'FEED_PUBLISHER_NAME')
+    _env_str(feed, 'publisher_email', 'FEED_PUBLISHER_EMAIL')
+
+    anthropic = cfg.setdefault('anthropic', {})
+    _env_str(anthropic, 'model', 'ANTHROPIC_MODEL')
+
+
+def _env_str(section: dict, key: str, env_var: str) -> None:
+    value = os.environ.get(env_var)
+    if value is not None:
+        section[key] = value
+
+
+def _env_int(section: dict, key: str, env_var: str) -> None:
+    value = os.environ.get(env_var)
+    if value is not None:
+        try:
+            section[key] = int(value)
+        except ValueError:
+            pass  # leave config.yaml value intact if env var is malformed
 
 
 # ── Logging ────────────────────────────────────────────────────────────────────
