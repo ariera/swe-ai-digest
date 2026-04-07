@@ -184,26 +184,34 @@ def _write_index(docs_dir: Path, manifest: list[dict]) -> None:
     if not manifest:
         entries_html = '<p class="meta">No digests yet.</p>'
     else:
-        items = []
-        for e in manifest:
-            count = e['articles_count']
-            items.append(
-                f'<div style="margin: 1.8em 0;">'
-                f'<a href="{_esc(e["page"])}" style="font-size:1.05em;">{_esc(e["cw"])}</a>'
-                f' <span class="meta">{_esc(e["period_start"])} &ndash; {_esc(e["period_end"])}'
-                f' &middot; {count} article{"s" if count != 1 else ""}</span>'
-                f'<p style="margin:0.3em 0 0; color:#444; font-size:0.93em;">{_esc(e["summary_short"])}</p>'
-                f'</div>'
-            )
-        entries_html = '\n'.join(items)
+        entries_html = '\n'.join(_render_index_entry(e) for e in manifest)
 
     body = (
-        '<p>A weekly digest of what leading software engineers are writing about AI.</p>'
+        '<p>A weekly digest of what leading software engineers are writing about AI.</p>\n'
         f'{entries_html}'
     )
     index_path = docs_dir / 'index.html'
     index_path.write_text(_page('SWE AI Digest', _NAV_ROOT, body), encoding='utf-8')
     logger.info("Index page written: %s", index_path)
+
+
+def _render_index_entry(entry: dict) -> str:
+    count = entry['articles_count']
+    article_word = 'article' if count == 1 else 'articles'
+    return (
+        f'<div style="margin: 1.8em 0;">\n'
+        f'  <a href="{_esc(entry["page"])}" style="font-size: 1.05em;">\n'
+        f'    {_esc(entry["cw"])}\n'
+        f'  </a>\n'
+        f'  <span class="meta">\n'
+        f'    {_esc(entry["period_start"])} &ndash; {_esc(entry["period_end"])}\n'
+        f'    &middot; {count} {article_word}\n'
+        f'  </span>\n'
+        f'  <p style="margin: 0.3em 0 0; color: #444; font-size: 0.93em;">\n'
+        f'    {_esc(entry["summary_short"])}\n'
+        f'  </p>\n'
+        f'</div>'
+    )
 
 
 # ── Entry point ────────────────────────────────────────────────────────────────
