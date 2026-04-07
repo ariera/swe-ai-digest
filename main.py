@@ -72,6 +72,12 @@ def _resolve_paths(cfg: dict) -> None:
         if value and not Path(value).is_absolute():
             paths[key] = str(REPO_ROOT / value)
 
+    # Also resolve the subscribers file path, which lives under email:
+    email = cfg.setdefault('email', {})
+    sub_file = email.get('subscribers_file', '')
+    if sub_file and not Path(sub_file).is_absolute():
+        email['subscribers_file'] = str(REPO_ROOT / sub_file)
+
 
 def _apply_env_overrides(cfg: dict) -> None:
     """Overlay email (and feed) config with environment variables.
