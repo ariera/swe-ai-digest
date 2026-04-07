@@ -223,7 +223,7 @@ def send_digest(digest: dict, cfg: dict, smtp_password: str) -> None:
             subject=subject,
             plain=plain,
             html=html,
-            output_dir=cfg['paths']['output_dir'],
+            output_dir=cfg['paths']['email_output_dir'],
         )
     else:
         if not subscribers:
@@ -253,7 +253,7 @@ def send_admin_notification(reason: str, cfg: dict, smtp_password: str, details:
             subject=subject,
             plain=plain,
             html=None,
-            output_dir=cfg['paths']['output_dir'],
+            output_dir=cfg['paths']['email_output_dir'],
         )
         return
 

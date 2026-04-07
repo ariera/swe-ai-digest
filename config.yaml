@@ -35,4 +35,5 @@ paths:
   sources_yaml: data/digest_sources.yaml
   state_file: data/state.json
   output_dir: output/
+  email_output_dir: output/emails/
   logs_dir: logs/

@@ -15,6 +15,9 @@ htmlcov/
 # Logs (keep the dir, not the files)
 logs/*.log
 
+# Generated email previews
+output/emails/
+
 # State (persisted locally, not committed)
 data/state.json
 
