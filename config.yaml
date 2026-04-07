@@ -11,6 +11,7 @@ anthropic:
   max_retries: 3            # exponential backoff: 2s, 4s, 8s
 
 email:
+  backend: smtp               # smtp | file  (file writes to output/ — useful without an SMTP server)
   smtp_host: smtp.gmail.com
   smtp_port: 587
   from_address: digest@example.com
@@ -25,7 +26,7 @@ feed:
     Weekly AI-filtered digest of what leading software engineers are writing
     about artificial intelligence, its impact on the profession, and how they
     use it in their own work.
-  link: https://yourusername.github.io/swe-ai-digest/feed.xml
+  link: https://ariera.github.io/swe-ai-digest/feed.xml
   publisher_name: SWE AI Digest
   publisher_email: digest@example.com
   auto_push: true           # set false to skip git push (useful for testing)

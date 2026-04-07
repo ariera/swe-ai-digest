@@ -143,9 +143,9 @@ def _escape(text: str) -> str:
     )
 
 
-# ── Sending ────────────────────────────────────────────────────────────────────
+# ── Backends ───────────────────────────────────────────────────────────────────
 
-def send_email(
+def _send_smtp(
     to_addresses: list[str],
     subject: str,
     plain: str,
@@ -174,31 +174,90 @@ def send_email(
     logger.info("Email sent successfully")
 
 
+def _send_file(
+    to_addresses: list[str],
+    subject: str,
+    plain: str,
+    html: str | None,
+    output_dir: str,
+) -> None:
+    """Write the email to disk instead of sending it.
+
+    Saves <output_dir>/email_<slug>.txt and <output_dir>/email_<slug>.html.
+    Useful when no SMTP server is available (EMAIL_BACKEND=file).
+    """
+    from datetime import datetime, timezone
+    from pathlib import Path
+
+    Path(output_dir).mkdir(parents=True, exist_ok=True)
+    now = datetime.now(tz=timezone.utc)
+    iso = now.isocalendar()
+    slug = f"{now.year}-CW{iso.week:02d}"
+
+    txt_path = Path(output_dir) / f"email_{slug}.txt"
+    header = f"To: {', '.join(to_addresses)}\nSubject: {subject}\n\n"
+    txt_path.write_text(header + plain, encoding='utf-8')
+    logger.info("Email (plain) written to %s", txt_path)
+
+    if html:
+        html_path = Path(output_dir) / f"email_{slug}.html"
+        html_path.write_text(html, encoding='utf-8')
+        logger.info("Email (HTML) written to %s", html_path)
+
+
+# ── Public send API ────────────────────────────────────────────────────────────
+
 def send_digest(digest: dict, cfg: dict, smtp_password: str) -> None:
-    """Send the weekly digest to all subscribers."""
+    """Deliver the weekly digest — via SMTP or file backend."""
+    backend = cfg['email'].get('backend', 'smtp')
     subscribers = load_subscribers(cfg['email']['subscribers_file'])
-    if not subscribers:
+    if not subscribers and backend == 'smtp':
         logger.warning("No subscribers found — digest email not sent")
         return
     subject, plain, html = render_digest_email(digest)
-    to_addresses = [s['email'] for s in subscribers]
-    send_email(
-        to_addresses=to_addresses,
-        subject=subject,
-        plain=plain,
-        html=html,
-        smtp_host=cfg['email']['smtp_host'],
-        smtp_port=cfg['email']['smtp_port'],
-        from_address=cfg['email']['from_address'],
-        from_name=cfg['email']['from_name'],
-        password=smtp_password,
-    )
+
+    if backend == 'file':
+        to_addresses = [s['email'] for s in subscribers] if subscribers else ['(no subscribers)']
+        _send_file(
+            to_addresses=to_addresses,
+            subject=subject,
+            plain=plain,
+            html=html,
+            output_dir=cfg['paths']['output_dir'],
+        )
+    else:
+        if not subscribers:
+            logger.warning("No subscribers found — digest email not sent")
+            return
+        _send_smtp(
+            to_addresses=[s['email'] for s in subscribers],
+            subject=subject,
+            plain=plain,
+            html=html,
+            smtp_host=cfg['email']['smtp_host'],
+            smtp_port=cfg['email']['smtp_port'],
+            from_address=cfg['email']['from_address'],
+            from_name=cfg['email']['from_name'],
+            password=smtp_password,
+        )
 
 
 def send_admin_notification(reason: str, cfg: dict, smtp_password: str, details: str = '') -> None:
     """Send a plain notification to the admin address."""
+    backend = cfg['email'].get('backend', 'smtp')
     subject, plain = render_admin_notification(reason, details)
-    send_email(
+
+    if backend == 'file':
+        _send_file(
+            to_addresses=[cfg['email'].get('admin_address', 'admin')],
+            subject=subject,
+            plain=plain,
+            html=None,
+            output_dir=cfg['paths']['output_dir'],
+        )
+        return
+
+    _send_smtp(
         to_addresses=[cfg['email']['admin_address']],
         subject=subject,
         plain=plain,

@@ -73,6 +73,7 @@ def _apply_env_overrides(cfg: dict) -> None:
         ANTHROPIC_MODEL
     """
     email = cfg.setdefault('email', {})
+    _env_str(email, 'backend', 'EMAIL_BACKEND')
     _env_str(email, 'smtp_host', 'SMTP_HOST')
     _env_int(email, 'smtp_port', 'SMTP_PORT')
     _env_str(email, 'from_address', 'SMTP_FROM_ADDRESS')
