@@ -32,14 +32,16 @@ def _week_label(dt: datetime) -> str:
     return f"CW{iso.week} {iso.year}"
 
 
-def _digest_page_url(feed_link: str, cw: str) -> str:
-    """Derive the digest page URL from the feed link and CW label.
+def _digest_page_url(feed_link: str, dt: datetime) -> str:
+    """Derive the digest page URL from the feed link and run datetime.
 
     feed_link: https://ariera.github.io/swe-ai-digest/feed.xml
     result:    https://ariera.github.io/swe-ai-digest/digests/2026-CW15.html
     """
+    iso = dt.isocalendar()
+    cw_slug = f"{iso.year}-CW{iso.week:02d}"
     base = feed_link.rsplit('/', 1)[0]  # strip feed.xml
-    return f"{base}/digests/{cw}.html"
+    return f"{base}/digests/{cw_slug}.html"
 
 
 def render_digest_email(digest: dict, feed_link: str = '') -> tuple[str, str, str]:
@@ -99,7 +101,7 @@ def render_digest_email(digest: dict, feed_link: str = '') -> tuple[str, str, st
                 '',
             ]
 
-    page_url = _digest_page_url(feed_link, week_label) if feed_link else ''
+    page_url = _digest_page_url(feed_link, now) if feed_link else ''
     lines += [
         '=' * 60,
         '',
