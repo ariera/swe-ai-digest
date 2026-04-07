@@ -32,7 +32,17 @@ def _week_label(dt: datetime) -> str:
     return f"CW{iso.week} {iso.year}"
 
 
-def render_digest_email(digest: dict) -> tuple[str, str, str]:
+def _digest_page_url(feed_link: str, cw: str) -> str:
+    """Derive the digest page URL from the feed link and CW label.
+
+    feed_link: https://ariera.github.io/swe-ai-digest/feed.xml
+    result:    https://ariera.github.io/swe-ai-digest/digests/2026-CW15.html
+    """
+    base = feed_link.rsplit('/', 1)[0]  # strip feed.xml
+    return f"{base}/digests/{cw}.html"
+
+
+def render_digest_email(digest: dict, feed_link: str = '') -> tuple[str, str, str]:
     """Render the digest as (subject, plain_text, html).
 
     Articles are grouped by author. Each author section shows the bio, then
@@ -89,6 +99,7 @@ def render_digest_email(digest: dict) -> tuple[str, str, str]:
                 '',
             ]
 
+    page_url = _digest_page_url(feed_link, week_label) if feed_link else ''
     lines += [
         '=' * 60,
         '',
@@ -101,6 +112,8 @@ def render_digest_email(digest: dict) -> tuple[str, str, str]:
         'are always included. Summaries and bios are AI-generated and may',
         'contain inaccuracies.',
     ]
+    if page_url:
+        lines += ['', f'Read online: {page_url}']
 
     plain = '\n'.join(lines)
 
@@ -131,6 +144,10 @@ def render_digest_email(digest: dict) -> tuple[str, str, str]:
                 f'<p style="margin-top: 0.3em;">{_escape(a["summary"])}</p>',
             ]
 
+    page_link_html = (
+        f'<br><br><a href="{_escape(page_url)}" style="color: #bbb;">Read online</a>'
+        if page_url else ''
+    )
     html_parts += [
         '<hr style="margin-top: 3em; border: none; border-top: 1px solid #ddd;">',
         '<p style="font-size: 0.78em; color: #999; line-height: 1.6;">',
@@ -138,7 +155,7 @@ def render_digest_email(digest: dict) -> tuple[str, str, str]:
         'its impact on the profession, how they use it, and where they think it is going. '
         'The goal is simply to stay close to people whose judgement we trust.<br><br>',
         'All content belongs to the original authors. Links to source articles are always included. '
-        'Summaries and bios are AI-generated and may contain inaccuracies.',
+        f'Summaries and bios are AI-generated and may contain inaccuracies.{page_link_html}',
         '</p>',
         '</body></html>',
     ]
@@ -237,7 +254,8 @@ def send_digest(digest: dict, cfg: dict, smtp_password: str) -> None:
     if not subscribers and backend == 'smtp':
         logger.warning("No subscribers found — digest email not sent")
         return
-    subject, plain, html = render_digest_email(digest)
+    feed_link = cfg.get('feed', {}).get('link', '')
+    subject, plain, html = render_digest_email(digest, feed_link=feed_link)
 
     if backend == 'file':
         to_addresses = [s['email'] for s in subscribers] if subscribers else ['(no subscribers)']
