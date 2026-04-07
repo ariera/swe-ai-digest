@@ -167,12 +167,11 @@ def update_feed(digest: dict, feed_cfg: dict, repo_path: str) -> None:
 
 
 def _git_push_feed(feed_path: Path, repo_path: str, new_count: int) -> None:
-    """Commit and push the updated feed.xml to GitHub."""
-    rel_path = str(feed_path.relative_to(repo_path))
+    """Commit and push all docs/ changes (feed, pages, manifest) to GitHub."""
     week = datetime.now(tz=timezone.utc).isocalendar()
-    commit_msg = f"feed: add {new_count} item(s) — CW{week.week} {week.year}"
+    commit_msg = f"digest: CW{week.week} {week.year} — {new_count} new item(s)"
     try:
-        subprocess.run(['git', 'add', rel_path], cwd=repo_path, check=True, capture_output=True)
+        subprocess.run(['git', 'add', 'docs/'], cwd=repo_path, check=True, capture_output=True)
         result = subprocess.run(
             ['git', 'diff', '--cached', '--quiet'],
             cwd=repo_path,

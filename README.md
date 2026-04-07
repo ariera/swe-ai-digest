@@ -76,7 +76,7 @@ cp data/subscribers.yaml.example data/subscribers.yaml
 # Normal weekly run
 python main.py
 
-# Dry run (fetch and process but skip email and feed push)
+# Dry run (fetch but skip processing, email and feed push)
 python main.py --dry-run
 
 # Custom lookback window
@@ -91,7 +91,7 @@ Add to your crontab (`crontab -e`):
 
 ```cron
 # Run every Monday at 07:00 UTC
-0 7 * * 1 /home/arm/dev/swe-ai-digest/.venv/bin/python /home/arm/dev/swe-ai-digest/main.py >> /home/arm/dev/swe-ai-digest/logs/cron.log 2>&1
+0 7 * * 1 /path/to/swe-ai-digest/.venv/bin/python /path/to/swe-ai-digest/main.py >> /path/to/swe-ai-digest/logs/cron.log 2>&1
 ```
 
 ---

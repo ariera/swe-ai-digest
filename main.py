@@ -29,6 +29,7 @@ from ai.digest import call_anthropic, enrich_ai_articles
 from email_sender.sender import send_admin_notification, send_digest
 from feed.publisher import update_feed
 from fetcher.core import dedup_by_url, fetch_all, load_sources, sort_and_filter_articles
+from pages.builder import update_pages
 
 
 # ── CLI ────────────────────────────────────────────────────────────────────────
@@ -333,15 +334,20 @@ def main() -> int:
     else:
         logger.info("Email skipped (dry-run or --no-email)")
 
-    # ── RSS feed ───────────────────────────────────────────────────────────────
+    # ── RSS feed + pages ───────────────────────────────────────────────────────
     if not args.dry_run and not args.no_feed:
+        repo_path = str(Path(__file__).parent)
+        docs_dir = str(REPO_ROOT / 'docs')
         try:
-            repo_path = str(Path(__file__).parent)
             update_feed(digest, cfg['feed'], repo_path)
         except Exception as e:
             logger.error("RSS feed update failed: %s", e)
+        try:
+            update_pages(digest, docs_dir)
+        except Exception as e:
+            logger.error("Pages build failed: %s", e)
     else:
-        logger.info("RSS feed update skipped (dry-run or --no-feed)")
+        logger.info("RSS feed and pages update skipped (dry-run or --no-feed)")
 
     logger.info("=== Pipeline complete: %d articles in digest ===", len(enriched_articles))
     return 0
