@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SWE AI Digest</title>
+    <link>https://ariera.github.io/swe-ai-digest/feed.xml</link>
+    <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
+</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Apr 2026 21:57:02 +0000</lastBuildDate>
+    <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>GLM-5.1: Towards Long-Horizon Tasks</title>
+      <link>https://simonwillison.net/2026/Apr/7/glm-51/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 07 Apr 2026 21:25:14 +0000</pubDate>
+      <description>Simon Willison evaluates Z.ai's GLM-5.1, a 754B-parameter MIT-licensed open-weights model available via OpenRouter. Using his standard 'pelican on a bicycle' SVG benchmark, Willison finds the model notable for two reasons: it spontaneously added CSS animations to its SVG output without being asked, and it successfully self-diagnosed and fixed a rendering bug when prompted with a plain-language error description. The model's ability to reason about CSS transform coordinate systems and generate corrected code in a follow-up turn demonstrates improving agentic self-correction. For engineers tracking open-weights model quality, this release represents a meaningful step in generative code capability from a Chinese lab, with practical accessibility via standard tooling.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/7/glm-51/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Anthropic's Project Glasswing - restricting Claude Mythos to security researchers - sounds necessary to me</title>
+      <link>https://simonwillison.net/2026/Apr/7/project-glasswing/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 07 Apr 2026 20:52:54 +0000</pubDate>
+      <description>Willison covers Anthropic's Project Glasswing, under which the unreleased Claude Mythos model is being made available only to vetted security research partners. The model reportedly found thousands of high-severity vulnerabilities across major OSes and browsers, chained multi-step exploits autonomously, and dramatically outperformed Claude Opus 4.6 on exploit development benchmarks. Testimonials from Linux kernel maintainers and curl's lead developer confirm a sudden qualitative shift in AI-generated security reports — from 'slop' to credible, high-impact findings. Willison argues the restricted rollout is warranted and situates it within a broader industry-wide reckoning, noting that $100M in usage credits and $4M in donations to open-source security orgs are part of the initiative.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/7/project-glasswing/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Cycles of disruption in the tech industry: with software pioneers Kent Beck &amp; Martin Fowler</title>
+      <link>https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 07 Apr 2026 16:27:53 +0000</pubDate>
+      <description>Gergely Orosz summarizes a Pragmatic Summit conversation between Martin Fowler and Kent Beck on AI's impact on software engineering. Key arguments: AI's adoption speed is unlike any prior tech shift; the Agile parallel predicts a 'snake oil' industry and misaligned incentives repeating; AI acts as an amplifier — good for juniors learning fast and experienced engineers working faster, but threatening to mid-career developers; 're-soloing' of programming (reduced team collaboration) is a concerning trend; TDD is more relevant than ever with AI; and unhealthy metrics (PR frequency) are replacing outcome measurement. Beck calls this 'the golden age of the junior programmer' while Fowler urges skepticism balanced with curiosity.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech</guid>
+    </item>
+    <item>
+      <title>Google AI Edge Gallery</title>
+      <link>https://simonwillison.net/2026/Apr/6/google-ai-edge-gallery/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 06 Apr 2026 05:18:26 +0000</pubDate>
+      <description>Willison reviews Google AI Edge Gallery, Google's first official iPhone app for running Gemma 4 models locally. The E2B model (2.54GB) runs quickly on-device and supports image Q&amp;A, audio transcription, and tool-calling demos against eight embedded HTML widgets. Willison notes this is the first time a major model vendor has shipped an official on-device inference app for iOS, marking a milestone in local LLM accessibility. He flags that conversations are ephemeral (no persistent logs) and that a follow-up prompt froze the app, but overall rates the app as 'really great' for exploring small-model capabilities without cloud dependency.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/6/google-ai-edge-gallery/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Eight years of wanting, three months of building with AI</title>
+      <link>https://simonwillison.net/2026/Apr/5/building-with-ai/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 05 Apr 2026 23:54:18 +0000</pubDate>
+      <description>Willison highlights Lalit Maganti's detailed account of building syntaqlite — a SQLite parser, formatter, and verifier — over three months using Claude Code after eight years of procrastination. The key finding: AI excels at tedious, locally verifiable implementation tasks (grammar rules, prototyping) but actively harms architectural decision-making. Maganti found that cheap AI-assisted refactoring encouraged indefinite deferral of design choices, corroding clarity. The first vibe-coded prototype was discarded; the production version required deep human-in-the-loop architecture work. The central insight — AI is useful when tasks have objectively checkable answers, harmful when they don't — is directly applicable to any engineer deciding when and how to deploy coding agents.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/5/building-with-ai/#atom-everything</guid>
+    </item>
+    <item>
+      <title>scan-for-secrets 0.1</title>
+      <link>https://simonwillison.net/2026/Apr/5/scan-for-secrets-3/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 05 Apr 2026 03:27:13 +0000</pubDate>
+      <description>Willison describes scan-for-secrets, a Python CLI tool he built using README-driven development and Claude Code with TDD. The tool scans directories for API keys and secrets, including common encodings (JSON escaping, backslash escaping), to prevent accidental exposure when publishing Claude Code session transcripts. The article is notable as a concrete example of AI-assisted tool creation: Willison wrote a detailed README specifying behavior, then had Claude Code implement the tool against red/green tests. It illustrates a practical workflow pattern — spec-first, agent-implemented — that software engineers can apply to small utility development.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/5/scan-for-secrets-3/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Absurd In Production</title>
+      <link>https://lucumr.pocoo.org/2026/4/4/absurd-in-production/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher reports on five months of running Absurd — a durable execution system built entirely on Postgres — in production for agent workflows. The primary use case is checkpointing LLM agent loops: each iteration (call LLM, process tool results, repeat) becomes a step, enabling crash recovery and replay without re-running completed work. Ronacher details what held up (checkpoint-based replay, pull-based scheduling, thin SDKs), what changed (decomposed steps, task results, a CLI tool, a web dashboard), and what's missing (partitioning, a push model, native scheduling). The article also reflects on the evolving role of open source libraries when agents can generate throwaway implementations on demand.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/4/4/absurd-in-production/</guid>
+    </item>
+    <item>
+      <title>Vulnerability Research Is Cooked</title>
+      <link>https://simonwillison.net/2026/Apr/3/vulnerability-research-is-cooked/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 03 Apr 2026 23:59:08 +0000</pubDate>
+      <description>Willison summarizes Thomas Ptacek's essay arguing that frontier LLM agents have fundamentally disrupted vulnerability research economics. Ptacek's core argument: LLMs are uniquely suited to exploit development because they encode vast cross-corpus knowledge of bug classes, can pattern-match for reachability, and run exhaustive searches without fatigue. He predicts that within months, pointing an agent at a source tree and asking for zero-days will yield high-impact results. The article was prompted by a podcast interview with Anthropic's Nicholas Carlini. For security-conscious engineers, this is a credible expert assessment that automated vulnerability discovery is transitioning from novelty to routine capability.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/3/vulnerability-research-is-cooked/#atom-everything</guid>
+    </item>
+    <item>
+      <title>The cognitive impact of coding agents</title>
+      <link>https://simonwillison.net/2026/Apr/3/cognitive-cost/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 03 Apr 2026 23:57:04 +0000</pubDate>
+      <description>Willison links to a short video clip from his appearance on Lenny Rachitsky's podcast discussing the cognitive impact of coding agents. The 48-second clip attracted over 1.1 million views on Twitter, suggesting broad audience interest in the topic. The associated full episode covers the mental load of managing multiple parallel agents, burnout risks, and how the nature of software engineering work is shifting. While the article itself is brief, it points to the broader podcast conversation (also covered in article 27) and signals that discussions of cognitive cost in AI-augmented engineering are resonating widely beyond the technical community.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/3/cognitive-cost/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Quoting Willy Tarreau</title>
+      <link>https://simonwillison.net/2026/Apr/3/willy-tarreau/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 03 Apr 2026 21:48:22 +0000</pubDate>
+      <description>Willison quotes HAProxy lead developer Willy Tarreau reporting a dramatic surge in security reports on the Linux kernel security list — from 2–3 per week two years ago, to 10 per week last year, to 5–10 per day currently. Tarreau notes that duplicate reports (the same bug found independently by different people using similar AI tools) are now a daily occurrence. This data point quantifies the operational impact of AI-assisted vulnerability research on maintainer workloads and illustrates the emerging problem of coordinating responses when multiple AI-powered researchers independently discover the same issues.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/3/willy-tarreau/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Quoting Daniel Stenberg</title>
+      <link>https://simonwillison.net/2026/Apr/3/daniel-stenberg/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 03 Apr 2026 21:46:07 +0000</pubDate>
+      <description>Willison quotes curl lead developer Daniel Stenberg describing the evolution of AI-generated security reports from a 'slop tsunami' to a 'plain security report tsunami' — fewer obviously bad submissions but dramatically more volume, with many being genuinely high quality. Stenberg reports spending hours per day reviewing these reports. This short quote is a practitioner's ground-level confirmation that AI tooling has crossed a quality threshold in security research, creating new operational burdens for open source maintainers and raising the urgency of automated triage and response tooling.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/3/daniel-stenberg/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Quoting Greg Kroah-Hartman</title>
+      <link>https://simonwillison.net/2026/Apr/3/greg-kroah-hartman/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 03 Apr 2026 21:44:41 +0000</pubDate>
+      <description>Willison quotes Linux kernel maintainer Greg Kroah-Hartman describing a sudden qualitative shift in AI-generated security reports approximately one month prior. Reports that were previously obviously wrong ('AI slop') have become real, valid vulnerability disclosures. Kroah-Hartman states this is happening across all major open source projects. For software engineers maintaining open source infrastructure, this quote is a data point confirming that AI-assisted vulnerability research has reached a threshold where it materially increases the workload on maintainers and the risk surface for widely deployed software.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/3/greg-kroah-hartman/#atom-everything</guid>
+    </item>
+    <item>
+      <title>The Pulse: is GitHub still best for AI-native development?</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-is-github-still-best-for-ai-native-development/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Fri, 03 Apr 2026 15:03:38 +0000</pubDate>
+      <description>Orosz analyzes GitHub's reliability crisis, attributing it to infrastructure saturation from AI agent-generated code load. GitHub's availability has dropped to 'one nine' (90%) in recent months, with database overload, Redis failures, and failover issues cited. Meanwhile, startup Pierre Computer claims to have handled 15,000 new repos per minute — vs GitHub's ~230 — suggesting GitHub is architecturally unprepared for agentic workloads. Orosz argues GitHub lacks strategic direction after losing its CEO, is entangled in Microsoft internal politics, and is losing ground in agentic tooling to Claude Code and Cursor. A must-read for engineers evaluating platform reliability in an AI-agent-heavy development environment.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-is-github-still-best-for-ai-native-development/</guid>
+    </item>
+    <item>
+      <title>Highlights from my conversation about agentic engineering on Lenny's Podcast</title>
+      <link>https://simonwillison.net/2026/Apr/2/lennys-podcast/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 02 Apr 2026 20:40:47 +0000</pubDate>
+      <description>Willison's highlights from his Lenny Rachitsky podcast appearance cover a wide range of AI-in-engineering topics: the November 2025 'inflection point' when GPT-5.1 and Claude Opus 4.5 crossed a reliability threshold; software engineers as bellwethers for other information workers; the cognitive exhaustion of managing parallel agents; broken software estimation intuitions; the vulnerability of mid-career engineers; and the shift in the bottleneck from coding to testing and verification. Willison also discusses 'responsible vibe coding,' the dark factory analogy for fully automated development, and how his own superpower of rapid prototyping has been commoditized. Exceptionally dense with practitioner insight.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/2/lennys-podcast/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Highlights from my conversation about agentic engineering on Lenny's Podcast</title>
+      <link>https://simonwillison.net/2026/Apr/2/lennys-podcast/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 02 Apr 2026 20:40:47 +0000</pubDate>
+      <description>Already captured above — this URL is a duplicate entry for the Lenny podcast highlights article.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/2/lennys-podcast/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Gemma 4: Byte for byte, the most capable open models</title>
+      <link>https://simonwillison.net/2026/Apr/2/gemma-4/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 02 Apr 2026 18:28:54 +0000</pubDate>
+      <description>Willison reviews Google DeepMind's Gemma 4 model family: four Apache 2.0-licensed vision-capable reasoning models (2B, 4B, 31B, and a 26B-A4B MoE). He tests them locally via LM Studio GGUFs and via API, applying his pelican SVG benchmark. Key findings: the 26B-A4B model produces the best pelican he's seen from a laptop-runnable model; the 31B GGUF is broken in his tests; and the E2B/E4B models support native audio input, though local audio inference isn't yet available in major runtimes. The article also notes Google's Per-Layer Embeddings technique for parameter efficiency, relevant to engineers evaluating on-device model deployment.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/2/gemma-4/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Fragments: April  2</title>
+      <link>https://martinfowler.com/fragments/2026-04-02.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Thu, 02 Apr 2026 16:42:00 +0000</pubDate>
+      <description>Martin Fowler's fragments post covers four AI-relevant ideas. First, a three-layer debt model (technical debt in code, cognitive debt in people, intent debt in artifacts) for diagnosing how AI-generated code erodes team understanding. Second, a 'Tri-System cognition' paper adding LLMs as 'System 3' to Kahneman's fast/slow thinking model, introducing the concept of 'cognitive surrender' — uncritical reliance on AI output. Third, Ajey Gore's argument that if coding becomes free, verification becomes the scarce, expensive resource, suggesting org structures should reorganize around validation rather than feature output. Fourth, a survey of emerging views on whether source code has a future as LLMs become primary programmers.</description>
+      <guid isPermaLink="true">https://martinfowler.com/fragments/2026-04-02.html</guid>
+    </item>
+    <item>
+      <title>The Pulse: Industry leaders return to coding with AI</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-industry-leaders-return</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 02 Apr 2026 16:29:36 +0000</pubDate>
+      <description>Orosz covers two stories of founders returning to coding via AI agents: Mark Zuckerberg landing diffs after 20 years away, and Y Combinator's Garry Tan coding again after 15. The article also covers the Claude Code source code leak (revealing anti-distillation measures and hints at a background agent feature), DMCA questions around AI-generated code copyright, Meta's targets for AI-generated code, and GitHub Copilot's ad rollout and rollback. For engineers, the most substantive thread concerns what the leaked Claude Code source reveals about agent design philosophy and the emerging legal ambiguity around AI-generated code ownership.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-industry-leaders-return</guid>
+    </item>
+    <item>
+      <title>Harness engineering for coding agent users</title>
+      <link>https://martinfowler.com/articles/harness-engineering.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Thu, 02 Apr 2026 13:10:00 +0000</pubDate>
+      <description>Birgitta Böckeler's article on martinfowler.com develops the concept of 'harness engineering' — a mental model for how software engineers should structure their work environment to drive coding agents effectively. The piece extends earlier initial thoughts into a fuller framework aimed at practitioners who want to use agents productively rather than just reactively. For engineers adopting coding agents in their workflows, this represents one of the more rigorous attempts to articulate what the new engineering discipline around agent orchestration looks like, complementing adjacent concepts like TDD and verification-first development.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/harness-engineering.html</guid>
+    </item>
+    <item>
+      <title>Scaling Uber with Thuan Pham (Uber’s first CTO)</title>
+      <link>https://newsletter.pragmaticengineer.com/p/scaling-uber-with-thuan-pham-ubers</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 01 Apr 2026 16:49:59 +0000</pubDate>
+      <description>In this Pragmatic Engineer podcast episode, Uber's former CTO Thuan Pham discusses how AI is reshaping engineering at Faire, his current company. He reports that 'swarm coding' — orchestrated parallel AI agents — has doubled some engineers' output in three months, but notes that the hardest AI use case remains adding features to large legacy codebases with complex dependencies. Pham argues AI raises the floor for all developers but doesn't change what makes great engineers great: curiosity, fearlessness, and willingness to learn. His framing that 'AI enables decent apps from non-coders but great engineers still accelerate more' is a useful counterpoint to displacement narratives.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/scaling-uber-with-thuan-pham-ubers</guid>
+    </item>
+  </channel>
+</rss>
