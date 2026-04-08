@@ -44,6 +44,8 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='Run the SWE AI Digest pipeline')
     parser.add_argument('--days', type=int, default=None,
                         help='Lookback window in days (overrides config)')
+    parser.add_argument('--calendar-week', action='store_true',
+                        help='Fetch the previous full ISO calendar week (Mon–Sun) instead of a rolling window')
     parser.add_argument('--config', default=str(REPO_ROOT / 'config.yaml'),
                         help='Path to config file (default: config.yaml next to main.py)')
     parser.add_argument('--dry-run', action='store_true',
@@ -174,6 +176,16 @@ def _write_success_marker(now: datetime) -> None:
     MARKER_FILE.write_text(now.strftime('%Y-%m-%d'))
 
 
+def _previous_iso_week_bounds(now: datetime) -> tuple[datetime, datetime]:
+    """Return (monday_00:00, sunday_23:59:59) UTC for the ISO week before now's week."""
+    # Start of the current ISO week (Monday 00:00 UTC)
+    current_monday = now - timedelta(days=now.isoweekday() - 1)
+    current_monday = current_monday.replace(hour=0, minute=0, second=0, microsecond=0)
+    prev_monday = current_monday - timedelta(weeks=1)
+    prev_sunday = current_monday - timedelta(seconds=1)  # Sun 23:59:59
+    return prev_monday, prev_sunday
+
+
 # ── Logging ────────────────────────────────────────────────────────────────────
 
 def setup_logging(logs_dir: str, debug: bool = False) -> None:
@@ -271,13 +283,25 @@ def main() -> int:
             return 0
         logger.info("Scheduled run triggered (day=%d, hour=%d)", now.isoweekday(), now.hour)
 
-    lookback_days = args.days or cfg['pipeline']['lookback_days']
-    period_end = now
-    period_start = now - timedelta(days=lookback_days)
+    use_calendar_week = args.calendar_week or cfg['pipeline'].get('lookback_mode') == 'calendar_week'
+    if use_calendar_week:
+        period_start, period_end = _previous_iso_week_bounds(now)
+        lookback_days = 7  # used only for the AI prompt wording
+    elif args.days:
+        lookback_days = args.days
+        period_end = now
+        period_start = now - timedelta(days=lookback_days)
+    else:
+        lookback_days = cfg['pipeline']['lookback_days']
+        period_end = now
+        period_start = now - timedelta(days=lookback_days)
 
     logger.info("=== SWE AI Digest pipeline start ===")
-    logger.info("Lookback: %d days (%s to %s)", lookback_days,
-                period_start.date(), period_end.date())
+    if use_calendar_week:
+        logger.info("Calendar week mode: %s to %s", period_start.date(), period_end.date())
+    else:
+        logger.info("Lookback: %d days (%s to %s)", lookback_days,
+                    period_start.date(), period_end.date())
     if args.dry_run:
         logger.info("DRY RUN — AI call will be mocked; email and feed push will be skipped")
 

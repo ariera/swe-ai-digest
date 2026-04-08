@@ -2,11 +2,12 @@
 # Secrets (API keys, passwords) go in .env, not here.
 
 pipeline:
-  lookback_days: 7          # default lookback window; override with --days N
-  max_article_words: 2000   # truncation limit before sending content to AI
-  schedule:                 # only used with --scheduled flag
-    days: [1]               # ISO weekday: Mon=1, Tue=2, Wed=3 ... Sun=7
-    hour: 7                 # don't run before this hour (UTC)
+  lookback_mode: calendar_week  # calendar_week = previous Mon–Sun; or set to 'days' and use lookback_days
+  lookback_days: 7              # used when lookback_mode is 'days', or with --days N override
+  max_article_words: 2000       # truncation limit before sending content to AI
+  schedule:                     # only used with --scheduled flag
+    days: [1]                   # ISO weekday: Mon=1, Tue=2, Wed=3 ... Sun=7
+    hour: 7                     # don't run before this hour (UTC)
 
 anthropic:
   model: claude-sonnet-4-6
