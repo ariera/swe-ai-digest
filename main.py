@@ -2,15 +2,17 @@
 
 Usage:
     python main.py [--days N] [--dry-run] [--config PATH] [--no-email] [--no-feed]
+    python main.py --scheduled          # for hourly cron: runs only on scheduled days, skips if already done
 
 Steps:
-    1. Load config + secrets
-    2. Set up logging
+    1. (if --scheduled) Check if today is a run day and whether a successful run exists
+    2. Load config + secrets
     3. Fetch articles from all RSS/scrape sources
     4. Call Anthropic API (batch) to filter for AI relevance and summarise
     5. Save structured digest JSON to output/
-    6. Send digest email to subscribers
+    6. Send digest email to subscribers (only on full success)
     7. Update RSS feed (docs/feed.xml) and push to GitHub Pages
+    8. (if --scheduled) Write success marker
 """
 
 import argparse
@@ -26,10 +28,14 @@ import yaml
 from dotenv import load_dotenv
 
 from ai.digest import call_anthropic, enrich_ai_articles
-from email_sender.sender import send_admin_notification, send_digest
+from email_sender.sender import send_digest
 from feed.publisher import push_docs, update_feed
 from fetcher.core import dedup_by_url, fetch_all, load_sources, sort_and_filter_articles
 from pages.builder import update_pages
+
+
+REPO_ROOT = Path(__file__).parent
+MARKER_FILE = REPO_ROOT / 'data' / '.last_success'
 
 
 # ── CLI ────────────────────────────────────────────────────────────────────────
@@ -38,7 +44,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='Run the SWE AI Digest pipeline')
     parser.add_argument('--days', type=int, default=None,
                         help='Lookback window in days (overrides config)')
-    parser.add_argument('--config', default=str(Path(__file__).parent / 'config.yaml'),
+    parser.add_argument('--config', default=str(REPO_ROOT / 'config.yaml'),
                         help='Path to config file (default: config.yaml next to main.py)')
     parser.add_argument('--dry-run', action='store_true',
                         help='Fetch and process but do not call AI, send email, or push feed')
@@ -46,13 +52,12 @@ def parse_args() -> argparse.Namespace:
                         help='Skip sending email')
     parser.add_argument('--no-feed', action='store_true',
                         help='Skip updating RSS feed')
+    parser.add_argument('--scheduled', action='store_true',
+                        help='Scheduled mode: only run on configured days, skip if already succeeded today')
     return parser.parse_args()
 
 
 # ── Config ─────────────────────────────────────────────────────────────────────
-
-REPO_ROOT = Path(__file__).parent
-
 
 def load_config(path: str) -> dict:
     with open(path) as f:
@@ -63,17 +68,11 @@ def load_config(path: str) -> dict:
 
 
 def _resolve_paths(cfg: dict) -> None:
-    """Make all paths in config absolute relative to the repo root.
-
-    This ensures the pipeline works regardless of the working directory
-    it is launched from (e.g. when run via cron).
-    """
+    """Make all paths in config absolute relative to the repo root."""
     paths = cfg.setdefault('paths', {})
     for key, value in paths.items():
         if value and not Path(value).is_absolute():
             paths[key] = str(REPO_ROOT / value)
-
-    # Also resolve the subscribers file path, which lives under email:
     email = cfg.setdefault('email', {})
     sub_file = email.get('subscribers_file', '')
     if sub_file and not Path(sub_file).is_absolute():
@@ -81,17 +80,7 @@ def _resolve_paths(cfg: dict) -> None:
 
 
 def _apply_env_overrides(cfg: dict) -> None:
-    """Overlay email (and feed) config with environment variables.
-
-    Env vars take precedence over config.yaml. This lets a single config file
-    serve as a template while machine-specific values live in .env.
-
-    Supported overrides:
-        SMTP_HOST, SMTP_PORT, SMTP_FROM_ADDRESS, SMTP_FROM_NAME,
-        SMTP_ADMIN_ADDRESS, SMTP_SUBSCRIBERS_FILE,
-        FEED_LINK, FEED_PUBLISHER_NAME, FEED_PUBLISHER_EMAIL,
-        ANTHROPIC_MODEL
-    """
+    """Overlay config with environment variables."""
     email = cfg.setdefault('email', {})
     _env_str(email, 'backend', 'EMAIL_BACKEND')
     _env_str(email, 'smtp_host', 'SMTP_HOST')
@@ -122,7 +111,47 @@ def _env_int(section: dict, key: str, env_var: str) -> None:
         try:
             section[key] = int(value)
         except ValueError:
-            pass  # leave config.yaml value intact if env var is malformed
+            pass
+
+
+# ── Scheduling ─────────────────────────────────────────────────────────────────
+
+def _should_run(cfg: dict, now: datetime) -> bool:
+    """Check whether a scheduled run should proceed.
+
+    Returns True if:
+      - Today is one of the configured schedule_days (ISO weekday: Mon=1 .. Sun=7)
+      - Current hour >= schedule_hour
+      - No success marker exists for today
+    """
+    schedule = cfg['pipeline'].get('schedule', {})
+    days = schedule.get('days', [1])           # default Mon
+    hour = schedule.get('hour', 7)            # default 07:00 UTC
+
+    today_weekday = now.isoweekday()
+    if today_weekday not in days:
+        return False
+    if now.hour < hour:
+        return False
+    if _already_succeeded_today(now):
+        return False
+    return True
+
+
+def _already_succeeded_today(now: datetime) -> bool:
+    """Check if the success marker shows today's date."""
+    if not MARKER_FILE.exists():
+        return False
+    try:
+        content = MARKER_FILE.read_text().strip()
+        return content == now.strftime('%Y-%m-%d')
+    except OSError:
+        return False
+
+
+def _write_success_marker(now: datetime) -> None:
+    MARKER_FILE.parent.mkdir(parents=True, exist_ok=True)
+    MARKER_FILE.write_text(now.strftime('%Y-%m-%d'))
 
 
 # ── Logging ────────────────────────────────────────────────────────────────────
@@ -179,11 +208,7 @@ def save_digest(digest: dict, output_dir: str) -> Path:
 # ── Dry-run mock ──────────────────────────────────────────────────────────────
 
 def _mock_ai_result(articles: list[dict]) -> dict:
-    """Return a plausible AI result without calling the API.
-
-    Marks the first 3 articles (or all of them if fewer) as AI-relevant with
-    placeholder summaries, so the full downstream pipeline can be exercised.
-    """
+    """Return a plausible AI result without calling the API."""
     sample = articles[:3]
     dropped = len(articles) - len(sample)
     return {
@@ -216,8 +241,16 @@ def main() -> int:
     setup_logging(cfg['paths']['logs_dir'])
     logger = logging.getLogger('main')
 
-    lookback_days = args.days or cfg['pipeline']['lookback_days']
     now = datetime.now(tz=timezone.utc)
+
+    # ── Scheduling guard ──────────────────────────────────────────────────────
+    if args.scheduled:
+        if not _should_run(cfg, now):
+            # Silent exit — this is expected most hours. Don't log noise.
+            return 0
+        logger.info("Scheduled run triggered (day=%d, hour=%d)", now.isoweekday(), now.hour)
+
+    lookback_days = args.days or cfg['pipeline']['lookback_days']
     period_end = now
     period_start = now - timedelta(days=lookback_days)
 
@@ -256,15 +289,8 @@ def main() -> int:
                 len(all_articles), len(fetch_errors), len(chrome_sources))
 
     if not all_articles:
-        logger.info("No articles found this week")
-        if not args.dry_run and not args.no_email and smtp_password:
-            send_admin_notification(
-                reason="No articles found",
-                cfg=cfg,
-                smtp_password=smtp_password,
-                details=f"Lookback: {lookback_days} days. Fetch errors: {len(fetch_errors)}",
-            )
-        logger.info("=== Pipeline complete (no digest generated) ===")
+        logger.info("No articles found — nothing to do")
+        logger.info("=== Pipeline complete (no articles) ===")
         return 0
 
     # ── AI filtering + summarisation ───────────────────────────────────────────
@@ -284,13 +310,7 @@ def main() -> int:
             )
         except RuntimeError as e:
             logger.error("AI processing failed: %s", e)
-            if not args.no_email and smtp_password:
-                send_admin_notification(
-                    reason="Anthropic API failed",
-                    cfg=cfg,
-                    smtp_password=smtp_password,
-                    details=str(e),
-                )
+            logger.error("=== Pipeline FAILED — no email, feed, or pages updated ===")
             return 1
 
     enriched_articles = enrich_ai_articles(ai_result, all_articles)
@@ -298,15 +318,7 @@ def main() -> int:
                 len(enriched_articles), ai_result.get('dropped_count', 0))
 
     if not enriched_articles:
-        logger.info("No AI-relevant articles found this week")
-        if not args.dry_run and not args.no_email and smtp_password:
-            send_admin_notification(
-                reason="No AI-relevant articles found",
-                cfg=cfg,
-                smtp_password=smtp_password,
-                details=(f"Scanned {len(all_articles)} articles; "
-                         f"all {ai_result.get('dropped_count', 0)} were dropped as not AI-relevant."),
-            )
+        logger.info("No AI-relevant articles found this week — nothing to publish")
         logger.info("=== Pipeline complete (no AI-relevant content) ===")
         return 0
 
@@ -322,7 +334,7 @@ def main() -> int:
     digest_file = save_digest(digest, cfg['paths']['output_dir'])
     logger.info("Digest saved to %s", digest_file)
 
-    # ── Email ──────────────────────────────────────────────────────────────────
+    # ── Email (only on full success) ──────────────────────────────────────────
     if not args.dry_run and not args.no_email:
         if not smtp_password:
             logger.warning("SMTP_PASSWORD not set — skipping email")
@@ -348,12 +360,17 @@ def main() -> int:
             logger.error("Pages build failed: %s", e)
         if cfg['feed'].get('auto_push', False):
             try:
-                week = datetime.now(tz=timezone.utc).isocalendar()
+                week = now.isocalendar()
                 push_docs(repo_path, f"digest: CW{week.week} {week.year}")
             except Exception as e:
                 logger.error("Git push failed: %s", e)
     else:
         logger.info("RSS feed and pages update skipped (dry-run or --no-feed)")
+
+    # ── Success marker ─────────────────────────────────────────────────────────
+    if args.scheduled and not args.dry_run:
+        _write_success_marker(now)
+        logger.info("Success marker written — won't re-run today")
 
     logger.info("=== Pipeline complete: %d articles in digest ===", len(enriched_articles))
     return 0

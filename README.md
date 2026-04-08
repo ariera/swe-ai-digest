@@ -87,11 +87,27 @@ python main.py --days 14
 
 ## Scheduling (cron on Ubuntu)
 
+The recommended approach is to run the script hourly with `--scheduled`. The script checks `config.yaml` to decide if today is a run day (default: Monday) and if it's past the scheduled hour (default: 07:00 UTC). A success marker (`data/.last_success`) prevents re-runs on the same day. If the API is down at 7:00, the 8:00 run retries automatically.
+
 Add to your crontab (`crontab -e`):
 
 ```cron
-# Run every Monday at 07:00 UTC
-0 7 * * 1 /path/to/swe-ai-digest/.venv/bin/python /path/to/swe-ai-digest/main.py >> /path/to/swe-ai-digest/logs/cron.log 2>&1
+# Run hourly — the script decides whether to proceed
+0 * * * * /path/to/swe-ai-digest/.venv/bin/python3 /path/to/swe-ai-digest/main.py --scheduled >> /path/to/swe-ai-digest/logs/cron.log 2>&1
+```
+
+Configure schedule in `config.yaml`:
+```yaml
+pipeline:
+  schedule:
+    days: [1]       # Mon=1
+    hour: 7          # UTC
+```
+
+To run manually (ignores schedule, no marker):
+```bash
+python main.py           # full run
+python main.py --dry-run  # no AI call, no email, no push
 ```
 
 ---

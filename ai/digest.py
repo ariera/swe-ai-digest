@@ -138,6 +138,9 @@ def call_anthropic(
         articles_text=articles_text,
     )
 
+    # Backoff schedule: 30s, 60s, 120s, 240s, 480s → ~15 min total for 5 retries.
+    # The Anthropic SDK also retries internally, so each of our attempts already
+    # includes several sub-attempts. Use long intervals to ride out 529 overloads.
     last_error: Exception | None = None
     for attempt in range(1, max_retries + 1):
         try:
@@ -162,17 +165,17 @@ def call_anthropic(
 
         except anthropic.RateLimitError as e:
             last_error = e
-            wait = 2 ** attempt
+            wait = 30 * (2 ** (attempt - 1))
             logger.warning("Rate limit hit (attempt %d/%d) — retrying in %ds", attempt, max_retries, wait)
             time.sleep(wait)
         except anthropic.APIStatusError as e:
             last_error = e
-            wait = 2 ** attempt
+            wait = 30 * (2 ** (attempt - 1))
             logger.warning("API error %s (attempt %d/%d) — retrying in %ds", e.status_code, attempt, max_retries, wait)
             time.sleep(wait)
         except Exception as e:
             last_error = e
-            wait = 2 ** attempt
+            wait = 30 * (2 ** (attempt - 1))
             logger.warning("Unexpected error (attempt %d/%d): %s — retrying in %ds", attempt, max_retries, e, wait)
             time.sleep(wait)
 

@@ -22,6 +22,9 @@ output/emails/
 # Subscribers list (private)
 data/subscribers.yaml
 
+# Scheduled run success marker
+data/.last_success
+
 # OS
 .DS_Store
 Thumbs.db
