@@ -1,0 +1,42 @@
+<html>
+<body style="font-family: Georgia, serif; max-width: 700px; margin: auto; color: #222;">
+
+  <h1 style="font-size: 1.4em;">SWE AI Digest &mdash; {{ week_label }}</h1>
+  <p style="color: #666; font-size: 0.9em;">Period: {{ period_start }} to {{ period_end }}</p>
+  <hr>
+
+  <h2 style="font-size: 1.15em;">This Week in AI &times; Software Engineering</h2>
+  <p>{{ global_summary }}</p>
+  <hr>
+
+  {% for author, author_articles in authors %}
+  <h2 style="font-size: 1.1em; margin-top: 2em;">{{ author }}</h2>
+  {% if author_articles[0].bio %}
+  <p style="font-style: italic; color: #555; font-size: 0.9em;">{{ author_articles[0].bio }}</p>
+  {% endif %}
+  {% for article in author_articles %}
+  <h3 style="font-size: 1em; margin-bottom: 0.2em;">
+    <a href="{{ article.url }}" style="color: #1a0dab;">{{ article.title }}</a>
+    {% if article.published_at %}
+    <span style="color: #888; font-size: 0.85em;">({{ article.published_at[:10] }})</span>
+    {% endif %}
+  </h3>
+  <p style="margin-top: 0.3em;">{{ article.summary }}</p>
+  {% endfor %}
+  {% endfor %}
+
+  <hr style="margin-top: 3em; border: none; border-top: 1px solid #ddd;">
+  <p style="font-size: 0.78em; color: #999; line-height: 1.6;">
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going. The goal is simply to stay close to people whose judgement
+    we trust.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+    {% if page_url %}
+    <br><br><a href="{{ page_url }}" style="color: #bbb;">Read online</a>
+    {% endif %}
+  </p>
+
+</body>
+</html>

@@ -2,21 +2,7 @@
 
 import pytest
 
-from email_sender.sender import _escape, render_admin_notification, render_digest_email
-
-
-class TestEscape:
-    def test_ampersand(self):
-        assert _escape('a & b') == 'a &amp; b'
-
-    def test_angle_brackets(self):
-        assert _escape('<script>') == '&lt;script&gt;'
-
-    def test_quotes(self):
-        assert _escape('"hello"') == '&quot;hello&quot;'
-
-    def test_clean_string(self):
-        assert _escape('hello world') == 'hello world'
+from email_sender.sender import render_digest_email
 
 
 class TestRenderDigestEmail:
@@ -76,15 +62,6 @@ class TestRenderDigestEmail:
         assert plain.count('Bio A') == 1
         assert 'Post 1' in plain
         assert 'Post 2' in plain
-        assert 'Bob' in plain
+        assert 'BOB' in plain
 
 
-class TestRenderAdminNotification:
-    def test_reason_in_body(self):
-        subject, body = render_admin_notification('No articles found', 'Details here')
-        assert 'No articles found' in body
-        assert 'Details here' in body
-
-    def test_subject(self):
-        subject, _ = render_admin_notification('test')
-        assert 'SWE AI Digest' in subject

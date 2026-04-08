@@ -1,0 +1,38 @@
+SWE AI Digest — {{ week_label }}
+Period: {{ period_start }} to {{ period_end }}
+
+============================================================
+THIS WEEK IN AI × SOFTWARE ENGINEERING
+============================================================
+
+{{ global_summary }}
+
+{% for author, author_articles in authors %}
+------------------------------------------------------------
+{{ author | upper }}
+{% if author_articles[0].bio %}
+{{ author_articles[0].bio }}
+
+{% endif %}
+{% for article in author_articles %}
+  {{ article.title }}
+  {{ article.url }}{% if article.published_at %}  ({{ article.published_at[:10] }}){% endif %}
+
+  {{ article.summary }}
+
+{% endfor %}
+{% endfor %}
+============================================================
+
+This digest tracks what a curated list of leading software engineers
+are publicly writing about AI — its impact on the profession, how they
+use it, and where they think it is going. The goal is simply to stay
+close to people whose judgement we trust.
+
+All content belongs to the original authors. Links to source articles
+are always included. Summaries and bios are AI-generated and may
+contain inaccuracies.
+{% if page_url %}
+
+Read online: {{ page_url }}
+{% endif %}

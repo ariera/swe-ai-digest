@@ -37,18 +37,20 @@
 
   <p>A weekly digest of what leading software engineers are writing about AI.</p>
 
-  
-  
+  {% if entries %}
+  {% for entry in entries %}
   <div class="entry">
-    <a href="digests/2026-CW15.html">2026-CW15</a>
+    <a href="{{ entry.page }}">{{ entry.cw }}</a>
     <span class="meta">
-      2026-04-01 &ndash; 2026-04-08
-      &middot; 19 articles
+      {{ entry.period_start }} &ndash; {{ entry.period_end }}
+      &middot; {{ entry.articles_count }} {{ 'article' if entry.articles_count == 1 else 'articles' }}
     </span>
-    <p>This week&#39;s articles cluster around four major themes. First, AI security research has reached a critical inflection point: Anthropic&#39;s restricted Claude Mythos model, Thomas Ptacek&#39;s &#34;Vulnerability R…</p>
+    <p>{{ entry.summary_short }}</p>
   </div>
-  
-  
+  {% endfor %}
+  {% else %}
+  <p class="meta">No digests yet.</p>
+  {% endif %}
 
   <footer>
     This digest tracks what a curated list of leading software engineers are publicly

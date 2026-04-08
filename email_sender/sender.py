@@ -5,10 +5,18 @@ import smtplib
 from datetime import datetime, timezone
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from pathlib import Path
 
 import yaml
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 logger = logging.getLogger(__name__)
+
+TEMPLATES_DIR = Path(__file__).parent.parent / 'templates'
+_jinja_env = Environment(
+    loader=FileSystemLoader(str(TEMPLATES_DIR)),
+    autoescape=select_autoescape(['html']),
+)
 
 
 # ── Subscriber loading ─────────────────────────────────────────────────────────
@@ -44,145 +52,41 @@ def _digest_page_url(feed_link: str, dt: datetime) -> str:
     return f"{base}/digests/{cw_slug}.html"
 
 
-def render_digest_email(digest: dict, feed_link: str = '') -> tuple[str, str, str]:
-    """Render the digest as (subject, plain_text, html).
-
-    Articles are grouped by author. Each author section shows the bio, then
-    their AI-relevant articles with title, link, and summary.
-    """
-    now = datetime.now(tz=timezone.utc)
-    week_label = _week_label(now)
-    subject = f"SWE AI Digest — {week_label}"
-
-    period_start = digest.get('period_start', '')
-    period_end = digest.get('period_end', '')
-    global_summary = digest.get('global_summary', '')
-    articles = digest.get('articles', [])
-
-    # Group articles by author, preserving order of first appearance
-    authors_seen: list[str] = []
+def _group_by_author(articles: list[dict]) -> list[tuple[str, list[dict]]]:
+    """Return [(author, [articles])] preserving first-appearance order."""
+    seen: list[str] = []
     by_author: dict[str, list[dict]] = {}
     for a in articles:
         author = a['author']
         if author not in by_author:
             by_author[author] = []
-            authors_seen.append(author)
+            seen.append(author)
         by_author[author].append(a)
+    return [(author, by_author[author]) for author in seen]
 
-    # ── Plain text ─────────────────────────────────────────────────────────────
-    lines = [
-        f"SWE AI Digest — {week_label}",
-        f"Period: {period_start[:10]} to {period_end[:10]}",
-        '',
-        '=' * 60,
-        'THIS WEEK IN AI × SOFTWARE ENGINEERING',
-        '=' * 60,
-        '',
-        global_summary,
-        '',
-    ]
 
-    for author in authors_seen:
-        author_articles = by_author[author]
-        bio = author_articles[0].get('bio', '')
-        lines += [
-            '-' * 60,
-            author.upper(),
-        ]
-        if bio:
-            lines += [bio, '']
-        for a in author_articles:
-            pub = a.get('published_at', '')[:10] if a.get('published_at') else ''
-            lines += [
-                f"  {a['title']}",
-                f"  {a['url']}" + (f"  ({pub})" if pub else ''),
-                '',
-                f"  {a['summary']}",
-                '',
-            ]
+def render_digest_email(digest: dict, feed_link: str = '') -> tuple[str, str, str]:
+    """Render the digest as (subject, plain_text, html)."""
+    now = datetime.now(tz=timezone.utc)
+    week_label = _week_label(now)
+    subject = f"SWE AI Digest — {week_label}"
 
-    page_url = _digest_page_url(feed_link, now) if feed_link else ''
-    lines += [
-        '=' * 60,
-        '',
-        'This digest tracks what a curated list of leading software engineers',
-        'are publicly writing about AI — its impact on the profession, how they',
-        'use it, and where they think it is going. The goal is simply to stay',
-        'close to people whose judgement we trust.',
-        '',
-        'All content belongs to the original authors. Links to source articles',
-        'are always included. Summaries and bios are AI-generated and may',
-        'contain inaccuracies.',
-    ]
-    if page_url:
-        lines += ['', f'Read online: {page_url}']
+    ctx = {
+        'week_label': week_label,
+        'period_start': digest.get('period_start', '')[:10],
+        'period_end': digest.get('period_end', '')[:10],
+        'global_summary': digest.get('global_summary', ''),
+        'authors': _group_by_author(digest.get('articles', [])),
+        'page_url': _digest_page_url(feed_link, now) if feed_link else '',
+    }
 
-    plain = '\n'.join(lines)
+    html = _jinja_env.get_template('email.html').render(**ctx)
 
-    # ── HTML ───────────────────────────────────────────────────────────────────
-    html_parts = [
-        '<html><body style="font-family: Georgia, serif; max-width: 700px; margin: auto; color: #222;">',
-        f'<h1 style="font-size: 1.4em;">SWE AI Digest — {week_label}</h1>',
-        f'<p style="color: #666; font-size: 0.9em;">Period: {period_start[:10]} to {period_end[:10]}</p>',
-        '<hr>',
-        '<h2 style="font-size: 1.15em;">This Week in AI &times; Software Engineering</h2>',
-        f'<p>{_escape(global_summary)}</p>',
-        '<hr>',
-    ]
-
-    for author in authors_seen:
-        author_articles = by_author[author]
-        bio = author_articles[0].get('bio', '')
-        html_parts.append(f'<h2 style="font-size: 1.1em; margin-top: 2em;">{_escape(author)}</h2>')
-        if bio:
-            html_parts.append(f'<p style="font-style: italic; color: #555; font-size: 0.9em;">{_escape(bio)}</p>')
-        for a in author_articles:
-            pub = a.get('published_at', '')[:10] if a.get('published_at') else ''
-            pub_str = f' <span style="color:#888; font-size:0.85em;">({pub})</span>' if pub else ''
-            html_parts += [
-                f'<h3 style="font-size: 1em; margin-bottom: 0.2em;">'
-                f'<a href="{_escape(a["url"])}" style="color: #1a0dab;">{_escape(a["title"])}</a>'
-                f'{pub_str}</h3>',
-                f'<p style="margin-top: 0.3em;">{_escape(a["summary"])}</p>',
-            ]
-
-    page_link_html = (
-        f'<br><br><a href="{_escape(page_url)}" style="color: #bbb;">Read online</a>'
-        if page_url else ''
-    )
-    html_parts += [
-        '<hr style="margin-top: 3em; border: none; border-top: 1px solid #ddd;">',
-        '<p style="font-size: 0.78em; color: #999; line-height: 1.6;">',
-        'This digest tracks what a curated list of leading software engineers are publicly writing about AI &mdash; '
-        'its impact on the profession, how they use it, and where they think it is going. '
-        'The goal is simply to stay close to people whose judgement we trust.<br><br>',
-        'All content belongs to the original authors. Links to source articles are always included. '
-        f'Summaries and bios are AI-generated and may contain inaccuracies.{page_link_html}',
-        '</p>',
-        '</body></html>',
-    ]
-    html = '\n'.join(html_parts)
+    # Plain text uses a non-autoescaping environment
+    plain_env = Environment(loader=FileSystemLoader(str(TEMPLATES_DIR)), autoescape=False)
+    plain = plain_env.get_template('email.txt').render(**ctx)
 
     return subject, plain, html
-
-
-def render_admin_notification(reason: str, details: str = '') -> tuple[str, str]:
-    """Render a plain admin notification email."""
-    subject = "SWE AI Digest — run notification"
-    body = f"SWE AI Digest pipeline notification\n\nReason: {reason}\n"
-    if details:
-        body += f"\nDetails:\n{details}\n"
-    return subject, body
-
-
-def _escape(text: str) -> str:
-    """Minimal HTML escaping."""
-    return (
-        text.replace('&', '&amp;')
-            .replace('<', '&lt;')
-            .replace('>', '&gt;')
-            .replace('"', '&quot;')
-    )
 
 
 # ── Backends ───────────────────────────────────────────────────────────────────
@@ -234,9 +138,6 @@ def _send_file(
     Saves <output_dir>/email_<slug>.txt and <output_dir>/email_<slug>.html.
     Useful when no SMTP server is available (EMAIL_BACKEND=file).
     """
-    from datetime import datetime, timezone
-    from pathlib import Path
-
     Path(output_dir).mkdir(parents=True, exist_ok=True)
     now = datetime.now(tz=timezone.utc)
     iso = now.isocalendar()
@@ -294,31 +195,3 @@ def send_digest(digest: dict, cfg: dict, smtp_password: str, admin_only: bool = 
             from_name=cfg['email']['from_name'],
             password=smtp_password,
         )
-
-
-def send_admin_notification(reason: str, cfg: dict, smtp_password: str, details: str = '') -> None:
-    """Send a plain notification to the admin address."""
-    backend = cfg['email'].get('backend', 'smtp')
-    subject, plain = render_admin_notification(reason, details)
-
-    if backend == 'file':
-        _send_file(
-            to_addresses=[cfg['email'].get('admin_address', 'admin')],
-            subject=subject,
-            plain=plain,
-            html=None,
-            output_dir=cfg['paths']['email_output_dir'],
-        )
-        return
-
-    _send_smtp(
-        to_addresses=[cfg['email']['admin_address']],
-        subject=subject,
-        plain=plain,
-        html=None,
-        smtp_host=cfg['email']['smtp_host'],
-        smtp_port=cfg['email']['smtp_port'],
-        from_address=cfg['email']['from_address'],
-        from_name=cfg['email']['from_name'],
-        password=smtp_password,
-    )
