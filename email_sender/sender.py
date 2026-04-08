@@ -188,7 +188,7 @@ def _escape(text: str) -> str:
 # ── Backends ───────────────────────────────────────────────────────────────────
 
 def _send_smtp(
-    to_addresses: list[str],
+    bcc_addresses: list[str],
     subject: str,
     plain: str,
     html: str | None,
@@ -198,21 +198,27 @@ def _send_smtp(
     from_name: str,
     password: str,
 ) -> None:
-    """Send an email via SMTP with TLS."""
+    """Send an email via SMTP with TLS.
+
+    Subscribers go in BCC so they cannot see each other's addresses.
+    The To header is set to the sender address (a common convention for BCC-only sends).
+    """
     msg = MIMEMultipart('alternative')
     msg['Subject'] = subject
     msg['From'] = f"{from_name} <{from_address}>"
-    msg['To'] = ', '.join(to_addresses)
+    msg['To'] = from_address  # visible To: sender — subscribers are hidden in BCC
+    msg['Bcc'] = ', '.join(bcc_addresses)
     msg.attach(MIMEText(plain, 'plain', 'utf-8'))
     if html:
         msg.attach(MIMEText(html, 'html', 'utf-8'))
 
-    logger.info("Sending email '%s' to %d recipient(s)", subject, len(to_addresses))
+    all_recipients = [from_address] + bcc_addresses
+    logger.info("Sending email '%s' to %d BCC recipient(s)", subject, len(bcc_addresses))
     with smtplib.SMTP(smtp_host, smtp_port) as server:
         server.ehlo()
         server.starttls()
         server.login(from_address, password)
-        server.sendmail(from_address, to_addresses, msg.as_string())
+        server.sendmail(from_address, all_recipients, msg.as_string())
     logger.info("Email sent successfully")
 
 
@@ -273,7 +279,7 @@ def send_digest(digest: dict, cfg: dict, smtp_password: str) -> None:
             logger.warning("No subscribers found — digest email not sent")
             return
         _send_smtp(
-            to_addresses=[s['email'] for s in subscribers],
+            bcc_addresses=[s['email'] for s in subscribers],
             subject=subject,
             plain=plain,
             html=html,
