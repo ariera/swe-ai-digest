@@ -58,6 +58,8 @@ def parse_args() -> argparse.Namespace:
                         help='Scheduled mode: only run on configured days, skip if already succeeded today')
     parser.add_argument('--debug', action='store_true',
                         help='Set log level to DEBUG (default: INFO)')
+    parser.add_argument('--admin-only', action='store_true',
+                        help='Send email to admin address only, not the full subscriber list (useful for testing)')
     return parser.parse_args()
 
 
@@ -384,8 +386,10 @@ def main() -> int:
         if not smtp_password:
             logger.warning("SMTP_PASSWORD not set — skipping email")
         else:
+            if args.admin_only:
+                logger.info("--admin-only: sending to admin address only, not subscribers")
             try:
-                send_digest(digest, cfg, smtp_password)
+                send_digest(digest, cfg, smtp_password, admin_only=args.admin_only)
             except Exception as e:
                 logger.error("Email delivery failed: %s", e)
     else:

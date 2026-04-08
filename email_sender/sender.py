@@ -255,31 +255,36 @@ def _send_file(
 
 # ── Public send API ────────────────────────────────────────────────────────────
 
-def send_digest(digest: dict, cfg: dict, smtp_password: str) -> None:
-    """Deliver the weekly digest — via SMTP or file backend."""
+def send_digest(digest: dict, cfg: dict, smtp_password: str, admin_only: bool = False) -> None:
+    """Deliver the weekly digest — via SMTP or file backend.
+
+    admin_only: if True, send only to the admin address instead of the full subscriber list.
+    """
     backend = cfg['email'].get('backend', 'smtp')
-    subscribers = load_subscribers(cfg['email']['subscribers_file'])
-    if not subscribers and backend == 'smtp':
-        logger.warning("No subscribers found — digest email not sent")
-        return
+    admin_address = cfg['email']['admin_address']
     feed_link = cfg.get('feed', {}).get('link', '')
     subject, plain, html = render_digest_email(digest, feed_link=feed_link)
 
+    if admin_only:
+        bcc_addresses = [admin_address]
+    else:
+        subscribers = load_subscribers(cfg['email']['subscribers_file'])
+        if not subscribers:
+            logger.warning("No subscribers found — digest email not sent")
+            return
+        bcc_addresses = [s['email'] for s in subscribers]
+
     if backend == 'file':
-        to_addresses = [s['email'] for s in subscribers] if subscribers else ['(no subscribers)']
         _send_file(
-            to_addresses=to_addresses,
+            to_addresses=bcc_addresses,
             subject=subject,
             plain=plain,
             html=html,
             output_dir=cfg['paths']['email_output_dir'],
         )
     else:
-        if not subscribers:
-            logger.warning("No subscribers found — digest email not sent")
-            return
         _send_smtp(
-            bcc_addresses=[s['email'] for s in subscribers],
+            bcc_addresses=bcc_addresses,
             subject=subject,
             plain=plain,
             html=html,
