@@ -54,6 +54,8 @@ def parse_args() -> argparse.Namespace:
                         help='Skip updating RSS feed')
     parser.add_argument('--scheduled', action='store_true',
                         help='Scheduled mode: only run on configured days, skip if already succeeded today')
+    parser.add_argument('--debug', action='store_true',
+                        help='Set log level to DEBUG (default: INFO)')
     return parser.parse_args()
 
 
@@ -116,26 +118,32 @@ def _env_int(section: dict, key: str, env_var: str) -> None:
 
 # ── Scheduling ─────────────────────────────────────────────────────────────────
 
-def _should_run(cfg: dict, now: datetime) -> bool:
+def _should_run(cfg: dict, now: datetime) -> tuple[bool, str]:
     """Check whether a scheduled run should proceed.
 
-    Returns True if:
-      - Today is one of the configured schedule_days (ISO weekday: Mon=1 .. Sun=7)
-      - Current hour >= schedule_hour
-      - No success marker exists for today
+    Returns (True, '') if all conditions are met, or (False, reason) otherwise.
+
+    On a scheduled day: run if past the configured hour and not already done today.
+    On any other day: run as a catch-up if no successful run exists for this ISO week
+    (handles Monday failures that need to retry on Tuesday, Wednesday, etc.).
     """
     schedule = cfg['pipeline'].get('schedule', {})
     days = schedule.get('days', [1])           # default Mon
     hour = schedule.get('hour', 7)            # default 07:00 UTC
 
     today_weekday = now.isoweekday()
-    if today_weekday not in days:
-        return False
-    if now.hour < hour:
-        return False
-    if _already_succeeded_today(now):
-        return False
-    return True
+    if today_weekday in days:
+        # Normal scheduled day
+        if now.hour < hour:
+            return False, f"current hour {now.hour} UTC is before scheduled hour {hour}"
+        if _already_succeeded_today(now):
+            return False, "already succeeded today"
+        return True, ''
+    else:
+        # Off-day: only run if this week hasn't had a successful run yet
+        if _already_succeeded_this_week(now):
+            return False, f"today is weekday {today_weekday} (not a scheduled day) and already succeeded this week"
+        return True, f"catch-up run: weekday {today_weekday} is not a scheduled day but no successful run this week"
 
 
 def _already_succeeded_today(now: datetime) -> bool:
@@ -149,6 +157,18 @@ def _already_succeeded_today(now: datetime) -> bool:
         return False
 
 
+def _already_succeeded_this_week(now: datetime) -> bool:
+    """Check if the success marker is from the current ISO week."""
+    if not MARKER_FILE.exists():
+        return False
+    try:
+        content = MARKER_FILE.read_text().strip()
+        marker_date = datetime.strptime(content, '%Y-%m-%d').replace(tzinfo=timezone.utc)
+        return marker_date.isocalendar()[:2] == now.isocalendar()[:2]  # (year, week)
+    except (OSError, ValueError):
+        return False
+
+
 def _write_success_marker(now: datetime) -> None:
     MARKER_FILE.parent.mkdir(parents=True, exist_ok=True)
     MARKER_FILE.write_text(now.strftime('%Y-%m-%d'))
@@ -156,7 +176,7 @@ def _write_success_marker(now: datetime) -> None:
 
 # ── Logging ────────────────────────────────────────────────────────────────────
 
-def setup_logging(logs_dir: str) -> None:
+def setup_logging(logs_dir: str, debug: bool = False) -> None:
     logs_path = Path(logs_dir)
     logs_path.mkdir(parents=True, exist_ok=True)
     now = datetime.now(tz=timezone.utc)
@@ -165,7 +185,7 @@ def setup_logging(logs_dir: str) -> None:
 
     fmt = '%(asctime)s %(levelname)-8s %(name)s: %(message)s'
     logging.basicConfig(
-        level=logging.INFO,
+        level=logging.DEBUG if debug else logging.INFO,
         format=fmt,
         handlers=[
             logging.FileHandler(log_file, encoding='utf-8'),
@@ -238,15 +258,16 @@ def main() -> int:
     load_dotenv()
 
     cfg = load_config(args.config)
-    setup_logging(cfg['paths']['logs_dir'])
+    setup_logging(cfg['paths']['logs_dir'], debug=args.debug)
     logger = logging.getLogger('main')
 
     now = datetime.now(tz=timezone.utc)
 
     # ── Scheduling guard ──────────────────────────────────────────────────────
     if args.scheduled:
-        if not _should_run(cfg, now):
-            # Silent exit — this is expected most hours. Don't log noise.
+        should, reason = _should_run(cfg, now)
+        if not should:
+            logger.debug("Scheduled run skipped: %s", reason)
             return 0
         logger.info("Scheduled run triggered (day=%d, hour=%d)", now.isoweekday(), now.hour)
 
