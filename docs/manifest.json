@@ -1,10 +1,10 @@
 [
   {
     "cw": "2026-CW15",
-    "period_start": "2026-03-31",
-    "period_end": "2026-04-07",
+    "period_start": "2026-04-01",
+    "period_end": "2026-04-08",
     "articles_count": 19,
-    "summary_short": "This week's articles cluster around four major themes. First, AI security research has reached an inflection point: multiple maintainers of Linux, curl, and HAProxy report a sudden shift from low-qual\u2026",
+    "summary_short": "This week's articles cluster around four major themes. First, AI security research has reached a critical inflection point: Anthropic's restricted Claude Mythos model, Thomas Ptacek's \"Vulnerability R\u2026",
     "page": "digests/2026-CW15.html"
   }
 ]
