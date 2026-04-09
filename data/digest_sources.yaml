@@ -122,6 +122,18 @@ engineers:
         type: rss
         label: Oxide Computer YouTube
 
+  - slug: matteo-collina
+    name: Matteo Collina
+    priority: 10
+    bio: "Node.js TSC member, co-creator of Fastify, creator of Pino, and CTO of Platformatic — writing regularly about the Node.js ecosystem, performance, and AI's role in software development."
+    sources:
+      - url: https://adventures.nodeland.dev/rss
+        type: rss
+        label: Adventures in Nodeland (newsletter)
+      - url: https://bsky.app/profile/nodeland.dev/rss
+        type: rss
+        label: Bluesky
+
   - slug: peter-norvig
     name: Peter Norvig
     priority: 10
