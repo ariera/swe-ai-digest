@@ -5,29 +5,12 @@ we had in mind when we start working on each one.
 
 ---
 
-## 1. Hourly feed updates + weekly digest email
+## ~~1. Hourly feed updates + weekly digest email~~ DONE
 
-**The idea:** Keep the hourly cron as-is, but split what each run does.
-
-- **Every hourly run:** fetch new articles, update `docs/feed.xml`, update GitHub Pages
-- **Monday 7am only:** run AI summarisation and send the weekly email digest
-
-**The core problem this introduces:** we must not re-summarise articles the AI has
-already processed. The pipeline is currently stateless (date-based cutoff). We need
-to track which URLs have already been summarised.
-
-**Likely approach:** use `docs/feed.xml` as the source of truth — if a URL is already
-in the feed, skip it. Avoids a separate state file and stays consistent with what's
-actually been published.
-
-**Open questions:**
-- On non-email hourly runs, do we call the AI at all?
-  - Option A: No AI on hourly runs — feed contains raw article titles/links only,
-    summaries only appear in the weekly digest email and its page.
-  - Option B: AI runs on every hourly run for new articles only — feed items include
-    summaries as they're processed.
-- What does the GitHub Pages index show between Mondays — raw article links, or nothing new?
-- Does the digest page remain weekly, or do we add a "latest articles" live section?
+Implemented in the SQLite + CLI split refactor (`7b40a56`). `feed` runs hourly
+(fetch → AI filter/summarize → RSS update), `digest` runs weekly (gather →
+global summary → email). SQLite DB tracks state; NULL columns act as an implicit
+state machine for crash recovery and incremental processing.
 
 ---
 
@@ -54,22 +37,10 @@ the existing `smtp` and `file` backends.
 
 ---
 
-## 3. Jinja2 templates instead of hardcoded HTML
+## ~~3. Jinja2 templates instead of hardcoded HTML~~ DONE
 
-**The idea:** Replace f-string HTML assembly in `pages/builder.py` and
-`email_sender/sender.py` with proper Jinja2 templates.
-
-**Why:** the current approach is hard to read, hard to style, and couples logic
-with markup. Templates make it easy to tweak design without touching Python.
-
-**Scope:**
-- `templates/digest_page.html` — individual weekly digest page
-- `templates/index.html` — digest archive/index page
-- `templates/email.html` — HTML email
-- `templates/email.txt` — plain-text email
-
-**Decision:** Jinja2 (pure Python, no new build step) preferred over Jekyll/SSG,
-which would add complexity without clear benefit given the pipeline is already Python.
+Implemented in `0ccbb43`. All HTML generation uses Jinja2 templates in `templates/`:
+`digest_page.html`, `index.html`, `email.html`, `email.txt`, `about.html`.
 
 ---
 
