@@ -25,6 +25,9 @@ data/subscribers.yaml
 # Scheduled run success marker
 data/.last_success
 
+# SQLite database
+data/*.db
+
 # OS
 .DS_Store
 Thumbs.db

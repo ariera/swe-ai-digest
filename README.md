@@ -16,14 +16,22 @@ The spirit is curiosity: staying close to the people whose judgement we trust, a
 
 ## What it does
 
-An end-to-end Python pipeline that runs weekly:
+A Python pipeline split into two commands — **`feed`** (runs hourly) and **`digest`** (runs weekly):
 
-1. Reads `data/digest_sources.yaml` — 34 engineers with their RSS feeds and scrapers
-2. Fetches all content published in the past N days (default: 7)
-3. Sends the batch to the Anthropic API (`claude-sonnet-4-6`) which filters for AI-relevant content and writes per-article summaries
-4. Saves a structured JSON digest to `output/`
+**`feed`** — incremental article processing:
+1. Syncs `data/digest_sources.yaml` (34 engineers) into a local SQLite database
+2. Fetches all content from enabled RSS feeds and scrapers
+3. Deduplicates articles by URL (database unique constraint)
+4. Sends each new article to the Anthropic API (`claude-sonnet-4-6`) for AI-relevance filtering and per-article summary
+5. Updates `docs/feed.xml` (RSS 2.0) with newly relevant articles and pushes to GitHub Pages
+
+**`digest`** — weekly email + digest page:
+1. Runs a feed pass to catch any stragglers
+2. Gathers all AI-relevant articles not yet included in a previous digest
+3. Generates a global summary via the Anthropic API
+4. Builds a digest page in `docs/` and updates the index
 5. Emails the digest to subscribers via SMTP
-6. Appends new items to `docs/feed.xml` (RSS 2.0) and pushes to GitHub Pages
+6. Automatically guards against duplicate sends (skip if already emailed for this period)
 
 **AI relevance criteria** — an article qualifies if it substantively covers:
 - How the author uses AI tools in their own workflow
@@ -73,42 +81,47 @@ cp data/subscribers.yaml.example data/subscribers.yaml
 ### 5. Run
 
 ```bash
-# Normal weekly run
-python main.py
+# Fetch articles, AI-filter, update RSS feed
+python main.py feed
 
-# Dry run (fetch but skip processing, email and feed push)
-python main.py --dry-run
+# Generate and email the weekly digest
+python main.py digest
 
-# Custom lookback window
-python main.py --days 14
+# Dry run (fetch + report only — no DB writes, no AI, no email)
+python main.py feed --dry-run
+python main.py digest --dry-run
+
+# Digest with custom lookback window (default: previous calendar week)
+python main.py digest --days 14
+
+# Send digest email to admin only (for testing)
+python main.py digest --admin-only
+
+# Skip email but run everything else (DB, AI, feed, pages)
+python main.py digest --no-email
+
+# Force re-create a digest even if one was already sent for this period
+python main.py digest --force
+
+# Debug logging
+python main.py feed --debug
 ```
 
 ---
 
 ## Scheduling (cron on Ubuntu)
 
-The recommended approach is to run the script hourly with `--scheduled`. The script checks `config.yaml` to decide if today is a run day (default: Monday) and if it's past the scheduled hour (default: 07:00 UTC). A success marker (`data/.last_success`) prevents re-runs on the same day. If the API is down at 7:00, the 8:00 run retries automatically.
-
-Add to your crontab (`crontab -e`):
+Two cron jobs: `feed` runs every hour to keep the RSS feed current; `digest` runs hourly on Mondays with a built-in guard that prevents duplicate sends.
 
 ```cron
-# Run hourly — the script decides whether to proceed
-0 * * * * /path/to/swe-ai-digest/.venv/bin/python3 /path/to/swe-ai-digest/main.py --scheduled >> /path/to/swe-ai-digest/logs/cron.log 2>&1
+# Feed: hourly — fetch, AI summarize, update RSS feed
+0 * * * * /path/to/swe-ai-digest/.venv/bin/python3 /path/to/swe-ai-digest/main.py feed >> /path/to/swe-ai-digest/logs/cron.log 2>&1
+
+# Digest: hourly on Mondays — first successful run sends the email, subsequent runs skip
+0 * * * 1 /path/to/swe-ai-digest/.venv/bin/python3 /path/to/swe-ai-digest/main.py digest >> /path/to/swe-ai-digest/logs/cron.log 2>&1
 ```
 
-Configure schedule in `config.yaml`:
-```yaml
-pipeline:
-  schedule:
-    days: [1]       # Mon=1
-    hour: 7          # UTC
-```
-
-To run manually (ignores schedule, no marker):
-```bash
-python main.py           # full run
-python main.py --dry-run  # no AI call, no email, no push
-```
+The `digest` command automatically checks whether a digest has already been emailed for the current period. If it has, it exits cleanly. If the 7am run fails (API down), the 8am run retries. No manual intervention needed.
 
 ---
 
@@ -128,8 +141,9 @@ The pipeline commits and pushes `docs/feed.xml` automatically after each run (se
 
 | Path | Description |
 |------|-------------|
-| `output/digest_YYYY-CWxx.json` | Structured digest JSON for each run |
+| `data/swe_ai_digest.db` | SQLite database — single source of truth for articles, digests, authors |
 | `docs/feed.xml` | Ever-growing RSS 2.0 feed (AI-filtered articles only) |
+| `docs/digests/` | Published digest pages (one per period) |
 | `logs/run_YYYY-CWxx.log` | Per-run log file |
 
 ---
@@ -146,23 +160,28 @@ pytest tests/ -v
 
 ```
 swe-ai-digest/
-├── main.py                  # Pipeline entrypoint
+├── main.py                  # CLI entrypoint (feed + digest subcommands)
 ├── config.yaml              # All non-secret configuration
 ├── .env.example             # Secret keys template
 ├── requirements.txt
+├── db/
+│   ├── models.py            # SQLAlchemy ORM models (Author, Source, Article, Digest)
+│   └── session.py           # Engine, session factory, DB init
 ├── fetcher/
 │   └── core.py              # RSS + BeautifulSoup fetchers (async)
 ├── ai/
-│   └── digest.py            # Anthropic API call, prompt, structured output
+│   └── digest.py            # Anthropic API: per-article summarize + global summary
 ├── email_sender/
 │   └── sender.py            # SMTP email sender
 ├── feed/
 │   └── publisher.py         # RSS 2.0 generator + GitHub push
+├── pages/
+│   └── builder.py           # Digest page generator
 ├── data/
-│   └── digest_sources.yaml  # 34 engineers: names, bios, feed URLs
-├── output/                  # Generated digest JSON files
+│   ├── digest_sources.yaml  # 34 engineers: slugs, names, bios, feed URLs
+│   └── swe_ai_digest.db     # SQLite database (gitignored)
 ├── DESIGN.md                # Full design document
-├── docs/                    # GitHub Pages (feed, site)
+├── docs/                    # GitHub Pages (feed, digest pages, site)
 ├── logs/                    # Run logs
 └── tests/                   # pytest suite
 ```

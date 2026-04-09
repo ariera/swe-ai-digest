@@ -5,11 +5,17 @@ from pathlib import Path
 
 import pytest
 import yaml
+from sqlalchemy import create_engine, event
+from sqlalchemy.orm import Session, sessionmaker
+from sqlalchemy.pool import StaticPool
+
+from db.models import Base
 
 
 MINIMAL_SOURCES = {
     'engineers': [
         {
+            'slug': 'alice-engineer',
             'name': 'Alice Engineer',
             'priority': 1,
             'bio': 'A great engineer.',
@@ -18,6 +24,7 @@ MINIMAL_SOURCES = {
             ],
         },
         {
+            'slug': 'bob-coder',
             'name': 'Bob Coder',
             'priority': 2,
             'bio': 'Another great engineer.',
@@ -28,6 +35,25 @@ MINIMAL_SOURCES = {
         },
     ]
 }
+
+
+@pytest.fixture
+def db_engine():
+    engine = create_engine(
+        "sqlite:///:memory:",
+        connect_args={"check_same_thread": False},
+        poolclass=StaticPool,
+    )
+    Base.metadata.create_all(engine)
+    yield engine
+    engine.dispose()
+
+
+@pytest.fixture
+def db_session(db_engine):
+    session = sessionmaker(bind=db_engine)()
+    yield session
+    session.close()
 
 
 @pytest.fixture

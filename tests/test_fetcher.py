@@ -8,13 +8,11 @@ import pytest
 
 from fetcher.core import (
     build_engineer_index,
-    dedup_by_url,
     entry_content_for_ai,
     entry_date,
     entry_summary,
     load_sources,
     parse_date,
-    sort_and_filter_articles,
 )
 
 
@@ -128,53 +126,6 @@ class TestEntryContentForAI:
         result = entry_content_for_ai(entry, max_words=2000)
         assert result == 'Hello world'
         assert '[truncated]' not in result
-
-
-# ── sort_and_filter_articles ───────────────────────────────────────────────────
-
-class TestSortAndFilter:
-    def test_filters_undated_scrape(self):
-        articles = [
-            {'source_type': 'scrape', 'published': None, 'priority': 1,
-             'title': 'A', 'url': 'http://a.com'},
-            {'source_type': 'rss', 'published': '2026-04-01T00:00:00+00:00',
-             'priority': 1, 'title': 'B', 'url': 'http://b.com'},
-        ]
-        result = sort_and_filter_articles(articles)
-        assert len(result) == 1
-        assert result[0]['title'] == 'B'
-
-    def test_sorted_by_priority_then_date(self):
-        articles = [
-            {'source_type': 'rss', 'published': '2026-04-01T00:00:00+00:00',
-             'priority': 2, 'title': 'B', 'url': 'http://b.com'},
-            {'source_type': 'rss', 'published': '2026-04-03T00:00:00+00:00',
-             'priority': 1, 'title': 'A', 'url': 'http://a.com'},
-        ]
-        result = sort_and_filter_articles(articles)
-        assert result[0]['priority'] == 1
-
-
-# ── dedup_by_url ───────────────────────────────────────────────────────────────
-
-class TestDedupByUrl:
-    def test_removes_duplicates(self):
-        articles = [
-            {'url': 'http://a.com', 'title': 'A1'},
-            {'url': 'http://a.com', 'title': 'A2'},
-            {'url': 'http://b.com', 'title': 'B'},
-        ]
-        result = dedup_by_url(articles)
-        assert len(result) == 2
-        assert result[0]['title'] == 'A1'
-
-    def test_empty_url_kept_but_not_deduped(self):
-        articles = [
-            {'url': '', 'title': 'X'},
-            {'url': '', 'title': 'Y'},
-        ]
-        result = dedup_by_url(articles)
-        assert len(result) == 2
 
 
 # ── load_sources ───────────────────────────────────────────────────────────────

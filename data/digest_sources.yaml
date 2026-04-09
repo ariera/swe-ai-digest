@@ -13,7 +13,8 @@ engineers:
 
   # ── PRIORITY TIER (1–6 in current digest) ──────────────────────────────────
 
-  - name: Simon Willison
+  - slug: simon-willison
+    name: Simon Willison
     priority: 1
     bio: "Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner's perspective."
     sources:
@@ -27,7 +28,8 @@ engineers:
         type: rss
         label: Mastodon
 
-  - name: Gergely Orosz
+  - slug: gergely-orosz
+    name: Gergely Orosz
     priority: 2
     bio: "Former engineer at Uber and Skype, author of The Software Engineer's Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI's impact on engineering jobs."
     sources:
@@ -38,7 +40,8 @@ engineers:
         type: rss
         label: blog
 
-  - name: DHH
+  - slug: dhh
+    name: DHH
     priority: 3
     bio: "Creator of Ruby on Rails, co-founder of 37signals (Basecamp/HEY), and outspoken critic of Silicon Valley orthodoxy and AI hype."
     sources:
@@ -50,7 +53,8 @@ engineers:
         label: Twitter/X
         note: "Supplement; DHH often shares shorter takes here"
 
-  - name: John Carmack
+  - slug: john-carmack
+    name: John Carmack
     priority: 4
     bio: "Legendary game engine programmer and co-founder of id Software (Doom, Quake), former CTO of Oculus VR, and now one of the most thoughtful public voices on AGI timelines and AI safety."
     sources:
@@ -62,7 +66,8 @@ engineers:
         label: Twitter/X
         note: "Supplement to blog; long-form thinking often posted here"
 
-  - name: Charity Majors
+  - slug: charity-majors
+    name: Charity Majors
     priority: 5
     bio: "Co-founder and CTO of Honeycomb.io, champion of observability-driven development, and an unusually candid voice on engineering culture, AI coding tools, and what it means to be a senior engineer today."
     sources:
@@ -73,7 +78,8 @@ engineers:
         type: rss
         label: Mastodon
 
-  - name: Grady Booch
+  - slug: grady-booch
+    name: Grady Booch
     priority: 6
     bio: "Chief Scientist for Software Engineering at IBM Research, co-creator of UML, and one of the longest-standing public commentators on the intersection of AI and software."
     sources:
@@ -84,7 +90,8 @@ engineers:
 
   # ── EXTENDED PRIORITY TIER (7–12) ──────────────────────────────────────────
 
-  - name: Kent Beck
+  - slug: kent-beck
+    name: Kent Beck
     priority: 7
     bio: "Creator of Extreme Programming (XP) and Test-Driven Development (TDD), co-author of the Agile Manifesto, and author of Tidy First? — now writing actively about AI's impact on software craft."
     sources:
@@ -92,7 +99,8 @@ engineers:
         type: rss
         label: Substack (Tidy First)
 
-  - name: Paul Graham
+  - slug: paul-graham
+    name: Paul Graham
     priority: 8
     bio: "Co-founder of Y Combinator, creator of the Arc language, and essayist whose widely-read long-form pieces on startups, programming, and AI have shaped a generation of builders."
     sources:
@@ -101,7 +109,8 @@ engineers:
         label: essays
         note: "RSS is malformed HTML; scraping articles page. Dates unavailable — undated entries are filtered from weekly digest."
 
-  - name: Bryan Cantrill
+  - slug: bryan-cantrill
+    name: Bryan Cantrill
     priority: 9
     bio: "Systems software engineer, co-creator of DTrace, co-founder of Oxide Computer Company, and a vocal, sharp-tongued critic of AI hype in infrastructure and ops."
     sources:
@@ -113,7 +122,8 @@ engineers:
         type: rss
         label: Oxide Computer YouTube
 
-  - name: Peter Norvig
+  - slug: peter-norvig
+    name: Peter Norvig
     priority: 10
     bio: "Director of Research at Google, co-author of the canonical Artificial Intelligence: A Modern Approach textbook, and one of the most credible foundational voices on AI and software."
     sources:
@@ -122,7 +132,8 @@ engineers:
         label: personal site
         note: "No RSS feed; scrape article list from homepage. Dates unavailable — undated entries are filtered from weekly digest."
 
-  - name: Martin Fowler
+  - slug: martin-fowler
+    name: Martin Fowler
     priority: 11
     bio: "Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto."
     sources:
@@ -133,7 +144,8 @@ engineers:
         type: rss
         label: Mastodon (ThoughtWorks instance)
 
-  - name: Werner Vogels
+  - slug: werner-vogels
+    name: Werner Vogels
     priority: 12
     bio: "CTO of Amazon Web Services, author of the All Things Distributed blog, and a leading voice on cloud architecture, eventual consistency, and enterprise AI adoption."
     sources:
@@ -143,7 +155,8 @@ engineers:
 
   # ── REST OF LIST ────────────────────────────────────────────────────────────
 
-  - name: Robert C. Martin (Uncle Bob)
+  - slug: robert-c-martin
+    name: Robert C. Martin (Uncle Bob)
     priority: 13
     bio: "Author of Clean Code and The Clean Coder, co-author of the Agile Manifesto, and the foremost evangelist of SOLID principles and software craftsmanship."
     sources:
@@ -154,7 +167,8 @@ engineers:
         type: rss
         label: Clean Coder blog
 
-  - name: Jonathan Blow
+  - slug: jonathan-blow
+    name: Jonathan Blow
     priority: 14
     bio: "Independent game developer, creator of Braid and The Witness, and a provocative voice on programming language design, software complexity, and the risks of AI-assisted coding."
     sources:
@@ -165,7 +179,8 @@ engineers:
         type: chrome
         label: Twitter/X
 
-  - name: Dan North
+  - slug: dan-north
+    name: Dan North
     priority: 15
     bio: "Originator of Behavior-Driven Development (BDD), software delivery coach, and a pragmatic voice on how teams should adapt their practices in the age of AI tools."
     sources:
@@ -173,7 +188,8 @@ engineers:
         type: rss
         label: blog
 
-  - name: Avdi Grimm
+  - slug: avdi-grimm
+    name: Avdi Grimm
     priority: 16
     bio: "Ruby developer, author of Confident Ruby and Exceptional Ruby, and creator of the RubyTapas screencast series on software craftsmanship."
     sources:
@@ -181,7 +197,8 @@ engineers:
         type: rss
         label: blog
 
-  - name: Salvatore Sanfilippo (antirez)
+  - slug: salvatore-sanfilippo
+    name: Salvatore Sanfilippo (antirez)
     priority: 17
     bio: "Italian software engineer, creator of Redis — one of the world's most widely deployed in-memory data stores — and a rare voice for clarity and minimalism in systems design."
     sources:
@@ -189,7 +206,8 @@ engineers:
         type: rss
         label: blog
 
-  - name: Sandi Metz
+  - slug: sandi-metz
+    name: Sandi Metz
     priority: 18
     bio: "Ruby programmer, author of Practical Object-Oriented Design in Ruby (POODR), and celebrated speaker on object-oriented design and the costs of complexity."
     sources:
@@ -198,7 +216,8 @@ engineers:
         label: blog
         note: "Last post 2018 — feed is live but blog is dormant; unlikely to yield weekly content"
 
-  - name: Martin Kleppmann
+  - slug: martin-kleppmann
+    name: Martin Kleppmann
     priority: 19
     bio: "Author of Designing Data-Intensive Applications, researcher at Cambridge, and leading expert in distributed systems, stream processing, and CRDTs."
     sources:
@@ -206,7 +225,8 @@ engineers:
         type: rss
         label: blog (FeedBurner)
 
-  - name: Brendan Gregg
+  - slug: brendan-gregg
+    name: Brendan Gregg
     priority: 20
     bio: "Senior performance engineer at Netflix (formerly), creator of flame graphs, author of Systems Performance, and the world's foremost practitioner of Linux and BPF observability."
     sources:
@@ -214,7 +234,8 @@ engineers:
         type: rss
         label: blog
 
-  - name: Guido van Rossum
+  - slug: guido-van-rossum
+    name: Guido van Rossum
     priority: 21
     bio: "Dutch programmer, creator of Python, and former Benevolent Dictator For Life (BDFL) of the language that became the backbone of modern AI and data science."
     sources:
@@ -223,7 +244,8 @@ engineers:
         label: Twitter/X
         note: "Most active on Twitter; no blog RSS"
 
-  - name: Joel Spolsky
+  - slug: joel-spolsky
+    name: Joel Spolsky
     priority: 22
     bio: "Co-founder of Stack Overflow and Fog Creek Software, creator of Trello, and author of the influential Joel on Software blog — required reading for a generation of software managers."
     sources:
@@ -231,7 +253,8 @@ engineers:
         type: rss
         label: blog
 
-  - name: Kevlin Henney
+  - slug: kevlin-henney
+    name: Kevlin Henney
     priority: 23
     bio: "British software consultant, editor of 97 Things Every Programmer Should Know, and a prolific speaker on software design, patterns, and the philosophy of programming."
     sources:
@@ -240,7 +263,8 @@ engineers:
         label: Twitter/X
         note: "kevlin.tel/feed returns malformed XML; Twitter is the reliable channel"
 
-  - name: Alan Kay
+  - slug: alan-kay
+    name: Alan Kay
     priority: 24
     bio: "Turing Award–winning computer scientist, pioneer of object-oriented programming and the Smalltalk language at Xerox PARC, and visionary of the personal computer."
     sources:
@@ -249,7 +273,8 @@ engineers:
         label: Twitter/X
         note: "No RSS; active on Twitter only"
 
-  - name: Daniel Lemire
+  - slug: daniel-lemire
+    name: Daniel Lemire
     priority: 25
     bio: "Canadian computer science professor, author of fast data processing libraries such as simdjson, and a prolific blogger on algorithms, data structures, and performance."
     sources:
@@ -257,7 +282,8 @@ engineers:
         type: rss
         label: blog
 
-  - name: Rich Hickey
+  - slug: rich-hickey
+    name: Rich Hickey
     priority: 26
     bio: "Creator of the Clojure programming language and architect of Datomic, best known for influential talks on simplicity, complexity, and the philosophy of software design."
     sources:
@@ -265,7 +291,8 @@ engineers:
         type: chrome
         label: Twitter/X
 
-  - name: Dave Thomas
+  - slug: dave-thomas
+    name: Dave Thomas
     priority: 27
     bio: "Co-author of The Pragmatic Programmer, publisher of the Pragmatic Bookshelf, and an advocate for adaptive thinking and craftsmanship in software development."
     sources:
@@ -273,7 +300,8 @@ engineers:
         type: rss
         label: blog
 
-  - name: Armin Ronacher
+  - slug: armin-ronacher
+    name: Armin Ronacher
     priority: 28
     bio: "Austrian open-source developer, creator of Flask and Jinja2, and a prolific contributor to the Python and Rust ecosystems with a thoughtful voice on developer tooling."
     sources:
@@ -281,7 +309,8 @@ engineers:
         type: rss
         label: blog
 
-  - name: Jessie Frazelle
+  - slug: jessie-frazelle
+    name: Jessie Frazelle
     priority: 29
     bio: "Systems software engineer, open-source contributor, co-founder of Oxide Computer Company, and a deep expert in containers, Linux internals, and hardware-software co-design."
     sources:
@@ -289,7 +318,8 @@ engineers:
         type: rss
         label: blog
 
-  - name: Jeff Dean
+  - slug: jeff-dean
+    name: Jeff Dean
     priority: 30
     bio: "Google Senior Fellow and head of Google DeepMind, co-creator of MapReduce, BigTable, and TensorFlow, and one of the most cited engineers in AI infrastructure."
     sources:
@@ -297,7 +327,8 @@ engineers:
         type: chrome
         label: Twitter/X
 
-  - name: Linus Torvalds
+  - slug: linus-torvalds
+    name: Linus Torvalds
     priority: 31
     bio: "Finnish-American engineer, creator of the Linux kernel and Git, and the single most influential figure in open-source software history."
     sources:
@@ -306,7 +337,8 @@ engineers:
         label: Twitter/X
         note: "Rare posts; mostly kernel mailing lists (not practical to monitor)"
 
-  - name: Greg Young
+  - slug: greg-young
+    name: Greg Young
     priority: 32
     bio: "Software architect and originator of the Command Query Responsibility Segregation (CQRS) and Event Sourcing patterns, widely influential in domain-driven design circles."
     sources:
@@ -314,7 +346,8 @@ engineers:
         type: chrome
         label: Twitter/X
 
-  - name: Michael Feathers
+  - slug: michael-feathers
+    name: Michael Feathers
     priority: 33
     bio: "Author of Working Effectively with Legacy Code and a leading expert on techniques for safely evolving large, untested codebases."
     sources:
@@ -322,7 +355,8 @@ engineers:
         type: chrome
         label: Twitter/X
 
-  - name: Evan You
+  - slug: evan-you
+    name: Evan You
     priority: 34
     bio: "Creator of Vue.js and the Vite build tool, two of the most widely adopted front-end development projects in the JavaScript ecosystem."
     sources:

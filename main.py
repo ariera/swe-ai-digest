@@ -1,23 +1,17 @@
 """SWE AI Digest — main pipeline entrypoint.
 
 Usage:
-    python main.py [--days N] [--dry-run] [--config PATH] [--no-email] [--no-feed]
-    python main.py --scheduled          # for hourly cron: runs only on scheduled days, skips if already done
+    python main.py feed   [--dry-run] [--debug] [--config PATH]
+    python main.py digest [--dry-run] [--no-email] [--admin-only] [--force]
+                          [--calendar-week | --days N] [--debug] [--config PATH]
 
-Steps:
-    1. (if --scheduled) Check if today is a run day and whether a successful run exists
-    2. Load config + secrets
-    3. Fetch articles from all RSS/scrape sources
-    4. Call Anthropic API (batch) to filter for AI relevance and summarise
-    5. Save structured digest JSON to output/
-    6. Send digest email to subscribers (only on full success)
-    7. Update RSS feed (docs/feed.xml) and push to GitHub Pages
-    8. (if --scheduled) Write success marker
+Subcommands:
+    feed    Fetch articles, AI filter/summarize, update RSS feed (hourly cron)
+    digest  Build and send weekly digest email (weekly cron, self-guarding)
 """
 
 import argparse
 import asyncio
-import json
 import logging
 import os
 import sys
@@ -27,39 +21,51 @@ from pathlib import Path
 import yaml
 from dotenv import load_dotenv
 
-from ai.digest import call_anthropic, enrich_ai_articles
+from ai.digest import generate_global_summary, summarize_article
+from db.models import Article, Author, Digest, Source, sync_sources_from_yaml
+from db.session import get_engine, get_session_factory, init_db
 from email_sender.sender import send_digest
 from feed.publisher import push_docs, update_feed
-from fetcher.core import dedup_by_url, fetch_all, load_sources, sort_and_filter_articles
+from fetcher.core import fetch_all, load_sources
 from pages.builder import update_pages
 
 
 REPO_ROOT = Path(__file__).parent
-MARKER_FILE = REPO_ROOT / 'data' / '.last_success'
+logger = logging.getLogger('main')
 
 
 # ── CLI ────────────────────────────────────────────────────────────────────────
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description='Run the SWE AI Digest pipeline')
-    parser.add_argument('--days', type=int, default=None,
-                        help='Lookback window in days (overrides config)')
-    parser.add_argument('--calendar-week', action='store_true',
-                        help='Fetch the previous full ISO calendar week (Mon–Sun) instead of a rolling window')
-    parser.add_argument('--config', default=str(REPO_ROOT / 'config.yaml'),
-                        help='Path to config file (default: config.yaml next to main.py)')
-    parser.add_argument('--dry-run', action='store_true',
-                        help='Fetch and process but do not call AI, send email, or push feed')
-    parser.add_argument('--no-email', action='store_true',
-                        help='Skip sending email')
-    parser.add_argument('--no-feed', action='store_true',
-                        help='Skip updating RSS feed')
-    parser.add_argument('--scheduled', action='store_true',
-                        help='Scheduled mode: only run on configured days, skip if already succeeded today')
-    parser.add_argument('--debug', action='store_true',
-                        help='Set log level to DEBUG (default: INFO)')
-    parser.add_argument('--admin-only', action='store_true',
-                        help='Send email to admin address only, not the full subscriber list (useful for testing)')
+    parser = argparse.ArgumentParser(description='SWE AI Digest pipeline')
+    subparsers = parser.add_subparsers(dest='command', required=True)
+
+    # -- feed subcommand --
+    feed_parser = subparsers.add_parser('feed', help='Fetch, AI summarize, update RSS feed')
+    feed_parser.add_argument('--dry-run', action='store_true',
+                             help='Read-only: fetch and report, no DB writes / AI / feed updates')
+    feed_parser.add_argument('--debug', action='store_true', help='Set log level to DEBUG')
+    feed_parser.add_argument('--config', default=str(REPO_ROOT / 'config.yaml'),
+                             help='Path to config file')
+
+    # -- digest subcommand --
+    digest_parser = subparsers.add_parser('digest', help='Build and send weekly digest')
+    digest_parser.add_argument('--dry-run', action='store_true',
+                               help='Read-only: report what digest would contain, no changes')
+    digest_parser.add_argument('--no-email', action='store_true',
+                               help='Full pipeline but skip email send')
+    digest_parser.add_argument('--admin-only', action='store_true',
+                               help='Send email to admin address only')
+    digest_parser.add_argument('--force', action='store_true',
+                               help='Skip already-sent guard, re-create digest for this period')
+    digest_parser.add_argument('--calendar-week', action='store_true',
+                               help='Use previous ISO calendar week (Mon–Sun)')
+    digest_parser.add_argument('--days', type=int, default=None,
+                               help='Lookback window in days (overrides config)')
+    digest_parser.add_argument('--debug', action='store_true', help='Set log level to DEBUG')
+    digest_parser.add_argument('--config', default=str(REPO_ROOT / 'config.yaml'),
+                               help='Path to config file')
+
     return parser.parse_args()
 
 
@@ -120,74 +126,6 @@ def _env_int(section: dict, key: str, env_var: str) -> None:
             pass
 
 
-# ── Scheduling ─────────────────────────────────────────────────────────────────
-
-def _should_run(cfg: dict, now: datetime) -> tuple[bool, str]:
-    """Check whether a scheduled run should proceed.
-
-    Returns (True, '') if all conditions are met, or (False, reason) otherwise.
-
-    On a scheduled day: run if past the configured hour and not already done today.
-    On any other day: run as a catch-up if no successful run exists for this ISO week
-    (handles Monday failures that need to retry on Tuesday, Wednesday, etc.).
-    """
-    schedule = cfg['pipeline'].get('schedule', {})
-    days = schedule.get('days', [1])           # default Mon
-    hour = schedule.get('hour', 7)            # default 07:00 UTC
-
-    today_weekday = now.isoweekday()
-    if today_weekday in days:
-        # Normal scheduled day
-        if now.hour < hour:
-            return False, f"current hour {now.hour} UTC is before scheduled hour {hour}"
-        if _already_succeeded_today(now):
-            return False, "already succeeded today"
-        return True, ''
-    else:
-        # Off-day: only run if this week hasn't had a successful run yet
-        if _already_succeeded_this_week(now):
-            return False, f"today is weekday {today_weekday} (not a scheduled day) and already succeeded this week"
-        return True, f"catch-up run: weekday {today_weekday} is not a scheduled day but no successful run this week"
-
-
-def _already_succeeded_today(now: datetime) -> bool:
-    """Check if the success marker shows today's date."""
-    if not MARKER_FILE.exists():
-        return False
-    try:
-        content = MARKER_FILE.read_text().strip()
-        return content == now.strftime('%Y-%m-%d')
-    except OSError:
-        return False
-
-
-def _already_succeeded_this_week(now: datetime) -> bool:
-    """Check if the success marker is from the current ISO week."""
-    if not MARKER_FILE.exists():
-        return False
-    try:
-        content = MARKER_FILE.read_text().strip()
-        marker_date = datetime.strptime(content, '%Y-%m-%d').replace(tzinfo=timezone.utc)
-        return marker_date.isocalendar()[:2] == now.isocalendar()[:2]  # (year, week)
-    except (OSError, ValueError):
-        return False
-
-
-def _write_success_marker(now: datetime) -> None:
-    MARKER_FILE.parent.mkdir(parents=True, exist_ok=True)
-    MARKER_FILE.write_text(now.strftime('%Y-%m-%d'))
-
-
-def _previous_iso_week_bounds(now: datetime) -> tuple[datetime, datetime]:
-    """Return (monday_00:00, sunday_23:59:59) UTC for the ISO week before now's week."""
-    # Start of the current ISO week (Monday 00:00 UTC)
-    current_monday = now - timedelta(days=now.isoweekday() - 1)
-    current_monday = current_monday.replace(hour=0, minute=0, second=0, microsecond=0)
-    prev_monday = current_monday - timedelta(weeks=1)
-    prev_sunday = current_monday - timedelta(seconds=1)  # Sun 23:59:59
-    return prev_monday, prev_sunday
-
-
 # ── Logging ────────────────────────────────────────────────────────────────────
 
 def setup_logging(logs_dir: str, debug: bool = False) -> None:
@@ -208,117 +146,88 @@ def setup_logging(logs_dir: str, debug: bool = False) -> None:
     )
 
 
-# ── Digest JSON ────────────────────────────────────────────────────────────────
+# ── Shared setup ──────────────────────────────────────────────────────────────
 
-def build_digest(
-    ai_result: dict,
-    enriched_articles: list[dict],
-    period_start: datetime,
-    period_end: datetime,
-    stats: dict,
-) -> dict:
-    return {
-        'generated_at': datetime.now(tz=timezone.utc).isoformat(),
-        'period_start': period_start.isoformat(),
-        'period_end': period_end.isoformat(),
-        'global_summary': ai_result['global_summary'],
-        'stats': stats,
-        'articles': enriched_articles,
-    }
-
-
-def save_digest(digest: dict, output_dir: str) -> Path:
-    output_path = Path(output_dir)
-    output_path.mkdir(parents=True, exist_ok=True)
-    now = datetime.now(tz=timezone.utc)
-    iso = now.isocalendar()
-    filename = f"digest_{now.year}-CW{iso.week:02d}.json"
-    out_file = output_path / filename
-    with open(out_file, 'w', encoding='utf-8') as f:
-        json.dump(digest, f, indent=2, ensure_ascii=False)
-    return out_file
-
-
-# ── Dry-run mock ──────────────────────────────────────────────────────────────
-
-def _mock_ai_result(articles: list[dict]) -> dict:
-    """Return a plausible AI result without calling the API."""
-    sample = articles[:3]
-    dropped = len(articles) - len(sample)
-    return {
-        'global_summary': (
-            '[DRY RUN] This is a mock global summary. '
-            f'{len(sample)} article(s) were selected from {len(articles)} fetched '
-            f'as a dry-run sample. No actual AI filtering was performed.'
-        ),
-        'articles': [
-            {
-                'url': a['url'],
-                'summary': (
-                    f'[DRY RUN] Mock summary for "{a["title"]}" by {a["engineer"]}. '
-                    'No actual AI summarisation was performed.'
-                ),
-            }
-            for a in sample
-        ],
-        'dropped_count': dropped,
-    }
-
-
-# ── Main pipeline ──────────────────────────────────────────────────────────────
-
-def main() -> int:
-    args = parse_args()
+def _setup(args: argparse.Namespace) -> dict:
+    """Common init: dotenv, config, logging, DB. Returns config dict."""
     load_dotenv()
-
     cfg = load_config(args.config)
     setup_logging(cfg['paths']['logs_dir'], debug=args.debug)
-    logger = logging.getLogger('main')
+    db_path = cfg['paths']['db_path']
+    engine = get_engine(db_path)
+    init_db(engine)
+    cfg['_engine'] = engine
+    cfg['_session_factory'] = get_session_factory(engine)
+    return cfg
 
-    now = datetime.now(tz=timezone.utc)
 
-    # ── Scheduling guard ──────────────────────────────────────────────────────
-    if args.scheduled:
-        should, reason = _should_run(cfg, now)
-        if not should:
-            logger.debug("Scheduled run skipped: %s", reason)
-            return 0
-        logger.info("Scheduled run triggered (day=%d, hour=%d)", now.isoweekday(), now.hour)
+# ── Period calculation ─────────────────────────────────────────────────────────
 
-    use_calendar_week = args.calendar_week or cfg['pipeline'].get('lookback_mode') == 'calendar_week'
+def _previous_iso_week_bounds(now: datetime) -> tuple[datetime, datetime]:
+    """Return (monday_00:00, sunday_23:59:59) UTC for the ISO week before now's week."""
+    current_monday = now - timedelta(days=now.isoweekday() - 1)
+    current_monday = current_monday.replace(hour=0, minute=0, second=0, microsecond=0)
+    prev_monday = current_monday - timedelta(weeks=1)
+    prev_sunday = current_monday - timedelta(seconds=1)
+    return prev_monday, prev_sunday
+
+
+def _compute_period(args: argparse.Namespace, cfg: dict, now: datetime) -> tuple[datetime, datetime, str]:
+    """Compute (period_start, period_end, label) based on CLI flags and config.
+
+    CLI flags take precedence: --days overrides calendar_week config.
+    """
+    if getattr(args, 'days', None):
+        # Explicit --days flag always wins
+        period_end = now
+        period_start = now - timedelta(days=args.days)
+        label = f"{now.year}-custom-{args.days}d"
+        return period_start, period_end, label
+    use_calendar_week = getattr(args, 'calendar_week', False) or cfg['pipeline'].get('lookback_mode') == 'calendar_week'
     if use_calendar_week:
         period_start, period_end = _previous_iso_week_bounds(now)
-        lookback_days = 7  # used only for the AI prompt wording
+        iso = period_start.isocalendar()
+        label = f"{iso.year}-CW{iso.week:02d}"
     elif args.days:
-        lookback_days = args.days
         period_end = now
-        period_start = now - timedelta(days=lookback_days)
+        period_start = now - timedelta(days=args.days)
+        label = f"{now.year}-custom-{args.days}d"
     else:
         lookback_days = cfg['pipeline']['lookback_days']
         period_end = now
         period_start = now - timedelta(days=lookback_days)
+        label = f"{now.year}-custom-{lookback_days}d"
+    return period_start, period_end, label
 
-    logger.info("=== SWE AI Digest pipeline start ===")
-    if use_calendar_week:
-        logger.info("Calendar week mode: %s to %s", period_start.date(), period_end.date())
-    else:
-        logger.info("Lookback: %d days (%s to %s)", lookback_days,
-                    period_start.date(), period_end.date())
+
+# ── feed command ──────────────────────────────────────────────────────────────
+
+def cmd_feed(args: argparse.Namespace) -> int:
+    cfg = _setup(args)
+    session = cfg['_session_factory']()
+    now = datetime.now(tz=timezone.utc)
+
+    logger.info("=== feed start ===")
+
     if args.dry_run:
-        logger.info("DRY RUN — AI call will be mocked; email and feed push will be skipped")
+        logger.info("DRY RUN — fetch and report only, no DB/AI/feed changes")
 
-    # ── Secrets ────────────────────────────────────────────────────────────────
-    anthropic_api_key = os.environ.get('ANTHROPIC_API_KEY', '')
-    smtp_password = os.environ.get('SMTP_PASSWORD', '')
-    if not anthropic_api_key and not args.dry_run:
-        logger.error("ANTHROPIC_API_KEY not set")
-        return 1
-
-    # ── Load sources ──────────────────────────────────────────────────────────
+    # 1. Sync YAML → DB
     sources_config = load_sources(cfg['paths']['sources_yaml'])
+    if not args.dry_run:
+        sync_sources_from_yaml(session, sources_config)
+        logger.info("Synced authors + sources from YAML")
 
-    # ── Fetch ──────────────────────────────────────────────────────────────────
-    logger.info("Fetching articles from RSS feeds and scrapers...")
+    # 2. Compute cutoff for fetching
+    use_calendar_week = cfg['pipeline'].get('lookback_mode') == 'calendar_week'
+    if use_calendar_week:
+        period_start, _ = _previous_iso_week_bounds(now)
+    else:
+        lookback_days = cfg['pipeline']['lookback_days']
+        period_start = now - timedelta(days=lookback_days)
+
+    # 3. Fetch all enabled sources
+    logger.info("Fetching articles...")
     all_articles, fetch_errors, chrome_sources = asyncio.run(
         fetch_all(
             sources_config=sources_config,
@@ -326,103 +235,308 @@ def main() -> int:
             max_content_words=cfg['pipeline']['max_article_words'],
         )
     )
-
     for err in fetch_errors:
         logger.warning("Fetch error: %s", err)
-
-    all_articles = dedup_by_url(all_articles)
-    all_articles = sort_and_filter_articles(all_articles)
-    logger.info("Fetched %d articles total (%d fetch errors, %d chrome-only sources skipped)",
+    logger.info("Fetched %d articles (%d errors, %d chrome-only skipped)",
                 len(all_articles), len(fetch_errors), len(chrome_sources))
 
-    if not all_articles:
-        logger.info("No articles found — nothing to do")
-        logger.info("=== Pipeline complete (no articles) ===")
+    if args.dry_run:
+        logger.info("=== feed dry-run complete ===")
+        session.close()
         return 0
 
-    # ── AI filtering + summarisation ───────────────────────────────────────────
-    if args.dry_run:
-        logger.info("DRY RUN — skipping Anthropic API call, using mock result")
-        ai_result = _mock_ai_result(all_articles)
-    else:
-        logger.info("Calling Anthropic API with %d articles...", len(all_articles))
+    # 4. Record fetch health on sources
+    _record_fetch_health(session, sources_config, fetch_errors)
+
+    # 5. Insert articles into DB (dedup via URL unique constraint)
+    new_count = 0
+    for a in all_articles:
+        author_slug = _engineer_name_to_slug(sources_config, a.get('engineer', ''))
+        author = session.query(Author).filter_by(slug=author_slug).first() if author_slug else None
+        if author is None:
+            continue
+        source_url = a.get('source_url', '')
+        source = session.query(Source).filter_by(url=source_url).first()
+        article = Article.insert_if_new(
+            session,
+            url=a['url'],
+            author_id=author.id,
+            source_id=source.id if source else None,
+            title=a['title'],
+            published_at=a.get('published'),
+            raw_content=a.get('content'),
+        )
+        if article is not None:
+            new_count += 1
+    session.commit()
+    logger.info("Inserted %d new articles (%d already in DB)", new_count, len(all_articles) - new_count)
+
+    # 6. AI processing: summarize unprocessed articles
+    anthropic_api_key = os.environ.get('ANTHROPIC_API_KEY', '')
+    if not anthropic_api_key:
+        logger.error("ANTHROPIC_API_KEY not set — cannot process articles")
+        session.close()
+        return 1
+
+    unprocessed = Article.unprocessed(session)
+    logger.info("AI processing: %d unprocessed articles", len(unprocessed))
+    for article in unprocessed:
+        article_dict = {
+            'author': article.author.name,
+            'title': article.title,
+            'url': article.url,
+            'published_at': article.published_at,
+            'content': article.raw_content,
+        }
         try:
-            ai_result = call_anthropic(
-                articles=all_articles,
-                days=lookback_days,
+            result = summarize_article(
+                article_dict,
                 model=cfg['anthropic']['model'],
                 max_tokens=cfg['anthropic']['max_tokens'],
                 max_retries=cfg['anthropic']['max_retries'],
                 api_key=anthropic_api_key,
             )
+            article.mark_ai_result(session, summary=result.get('summary'), ai_relevant=result['ai_relevant'])
+            session.commit()
         except RuntimeError as e:
-            logger.error("AI processing failed: %s", e)
-            logger.error("=== Pipeline FAILED — no email, feed, or pages updated ===")
-            return 1
+            logger.warning("AI failed for %s: %s — will retry next run", article.url, e)
 
-    enriched_articles = enrich_ai_articles(ai_result, all_articles)
-    logger.info("AI result: %d AI-relevant, %d dropped",
-                len(enriched_articles), ai_result.get('dropped_count', 0))
+    # 7. Update feed.xml with unfed relevant articles
+    unfed = Article.unfed(session)
+    if unfed:
+        feed_digest = _build_feed_digest(unfed)
+        repo_path = str(REPO_ROOT)
+        try:
+            update_feed(feed_digest, cfg['feed'], repo_path)
+            for article in unfed:
+                article.mark_fed(session)
+            session.commit()
+            logger.info("Feed updated with %d new articles", len(unfed))
+        except Exception as e:
+            logger.error("RSS feed update failed: %s", e)
 
-    if not enriched_articles:
-        logger.info("No AI-relevant articles found this week — nothing to publish")
-        logger.info("=== Pipeline complete (no AI-relevant content) ===")
+        # 8. Git push if auto_push
+        if cfg['feed'].get('auto_push', False):
+            try:
+                week = now.isocalendar()
+                push_docs(str(REPO_ROOT), f"feed: {len(unfed)} articles, CW{week.week} {week.year}")
+            except Exception as e:
+                logger.error("Git push failed: %s", e)
+    else:
+        logger.info("No new articles for feed")
+
+    logger.info("=== feed complete ===")
+    session.close()
+    return 0
+
+
+# ── digest command ────────────────────────────────────────────────────────────
+
+def cmd_digest(args: argparse.Namespace) -> int:
+    cfg = _setup(args)
+    session = cfg['_session_factory']()
+    now = datetime.now(tz=timezone.utc)
+
+    logger.info("=== digest start ===")
+
+    if args.dry_run:
+        logger.info("DRY RUN — report only, no DB/AI/email/page changes")
+
+    # 1. Compute period
+    period_start, period_end, label = _compute_period(args, cfg, now)
+    logger.info("Digest period: %s (%s to %s)", label, period_start.date(), period_end.date())
+
+    # 2. Already-sent guard
+    if not args.force and not args.dry_run:
+        existing = Digest.for_period(session, period_start.isoformat(), period_end.isoformat())
+        if existing is not None:
+            logger.info("Digest already sent for this period (%s) — skipping. Use --force to override.", existing.label)
+            session.close()
+            return 0
+
+    # 3. Run a feed pass to catch stragglers
+    logger.info("Running feed pass to catch stragglers...")
+    try:
+        feed_args = argparse.Namespace(
+            command='feed',
+            dry_run=args.dry_run,
+            debug=args.debug,
+            config=args.config,
+        )
+        cmd_feed(feed_args)
+    except Exception as e:
+        logger.warning("Feed pass failed (continuing with existing data): %s", e)
+
+    if args.dry_run:
+        # Re-open session (feed pass closed it)
+        session = cfg['_session_factory']()
+        articles = Article.for_digest(session, period_start.isoformat(), period_end.isoformat())
+        logger.info("DRY RUN — digest would contain %d articles", len(articles))
+        for a in articles:
+            logger.info("  - [%s] %s", a.author.name, a.title)
+        logger.info("=== digest dry-run complete ===")
+        session.close()
         return 0
 
-    # ── Build + save digest JSON ───────────────────────────────────────────────
-    stats = {
-        'articles_fetched': len(all_articles),
-        'articles_ai_related': len(enriched_articles),
-        'articles_dropped': ai_result.get('dropped_count', 0),
-        'blogs_unreachable': len(fetch_errors),
-        'chrome_only_skipped': len(chrome_sources),
-    }
-    digest = build_digest(ai_result, enriched_articles, period_start, period_end, stats)
-    digest_file = save_digest(digest, cfg['paths']['output_dir'])
-    logger.info("Digest saved to %s", digest_file)
+    # Re-open session (feed pass closed it)
+    session = cfg['_session_factory']()
 
-    # ── Email (only on full success) ──────────────────────────────────────────
-    if not args.dry_run and not args.no_email:
+    # 4. Check source health
+    total, errored = Source.fetch_health(session)
+    if total > 0 and errored / total > 0.5:
+        logger.warning("HIGH FAILURE RATE: %d/%d enabled sources have errors", errored, total)
+        _send_health_alert(cfg, total, errored)
+
+    # 5. Gather articles for digest
+    # Use current time as upper bound — the feed pass may have inserted articles after
+    # the original period_end was computed
+    query_end = datetime.now(tz=timezone.utc)
+    articles = Article.for_digest(session, period_start.isoformat(), query_end.isoformat())
+    if not articles:
+        logger.info("No AI-relevant articles for this period — nothing to digest")
+        logger.info("=== digest complete (no articles) ===")
+        session.close()
+        return 0
+    logger.info("Digest has %d AI-relevant articles", len(articles))
+
+    # 6. Generate global summary
+    anthropic_api_key = os.environ.get('ANTHROPIC_API_KEY', '')
+    if not anthropic_api_key:
+        logger.error("ANTHROPIC_API_KEY not set")
+        session.close()
+        return 1
+
+    articles_for_summary = [a.to_dict() for a in articles]
+    try:
+        global_summary = generate_global_summary(
+            articles_for_summary,
+            model=cfg['anthropic']['model'],
+            max_tokens=cfg['anthropic']['max_tokens'],
+            max_retries=cfg['anthropic']['max_retries'],
+            api_key=anthropic_api_key,
+        )
+    except RuntimeError as e:
+        logger.error("Global summary generation failed: %s", e)
+        session.close()
+        return 1
+
+    # 7. Create digest in DB
+    digest_row = Digest.create(
+        session, label=label,
+        period_start=period_start.isoformat(),
+        period_end=period_end.isoformat(),
+        global_summary=global_summary,
+        articles=articles,
+    )
+    session.commit()
+
+    # 8. Build digest dict for templates
+    digest_dict = digest_row.to_dict()
+    digest_dict['generated_at'] = now.isoformat()
+    digest_dict['period_start'] = period_start.isoformat()
+    digest_dict['period_end'] = period_end.isoformat()
+
+    # 9. Write digest page + update index
+    docs_dir = str(REPO_ROOT / 'docs')
+    try:
+        update_pages(digest_dict, docs_dir)
+        digest_row.page_at = now.isoformat()
+        session.commit()
+        logger.info("Digest page written")
+    except Exception as e:
+        logger.error("Pages build failed: %s", e)
+
+    # 10. Send email
+    smtp_password = os.environ.get('SMTP_PASSWORD', '')
+    if not args.no_email:
         if not smtp_password:
             logger.warning("SMTP_PASSWORD not set — skipping email")
         else:
             if args.admin_only:
-                logger.info("--admin-only: sending to admin address only, not subscribers")
+                logger.info("--admin-only: sending to admin address only")
             try:
-                send_digest(digest, cfg, smtp_password, admin_only=args.admin_only)
+                send_digest(digest_dict, cfg, smtp_password, admin_only=args.admin_only)
+                digest_row.emailed_at = now.isoformat()
+                session.commit()
+                logger.info("Digest email sent")
             except Exception as e:
                 logger.error("Email delivery failed: %s", e)
     else:
-        logger.info("Email skipped (dry-run or --no-email)")
+        logger.info("Email skipped (--no-email)")
 
-    # ── RSS feed + pages + push ────────────────────────────────────────────────
-    if not args.dry_run and not args.no_feed:
-        repo_path = str(REPO_ROOT)
-        docs_dir = str(REPO_ROOT / 'docs')
+    # 11. Git push
+    if cfg['feed'].get('auto_push', False):
         try:
-            update_feed(digest, cfg['feed'], repo_path)
+            push_docs(str(REPO_ROOT), f"digest: {label}")
         except Exception as e:
-            logger.error("RSS feed update failed: %s", e)
-        try:
-            update_pages(digest, docs_dir)
-        except Exception as e:
-            logger.error("Pages build failed: %s", e)
-        if cfg['feed'].get('auto_push', False):
-            try:
-                week = now.isocalendar()
-                push_docs(repo_path, f"digest: CW{week.week} {week.year}")
-            except Exception as e:
-                logger.error("Git push failed: %s", e)
-    else:
-        logger.info("RSS feed and pages update skipped (dry-run or --no-feed)")
+            logger.error("Git push failed: %s", e)
 
-    # ── Success marker ─────────────────────────────────────────────────────────
-    if args.scheduled and not args.dry_run:
-        _write_success_marker(now)
-        logger.info("Success marker written — won't re-run today")
-
-    logger.info("=== Pipeline complete: %d articles in digest ===", len(enriched_articles))
+    logger.info("=== digest complete: %d articles ===", len(articles))
+    session.close()
     return 0
+
+
+# ── Helpers ───────────────────────────────────────────────────────────────────
+
+def _engineer_name_to_slug(sources_config: dict, name: str) -> str | None:
+    """Look up the slug for an engineer name from the YAML config."""
+    for eng in sources_config.get('engineers', []):
+        if eng['name'] == name:
+            return eng.get('slug')
+    return None
+
+
+def _record_fetch_health(session, sources_config: dict, fetch_errors: list[str]) -> None:
+    """Update source health after a fetch run."""
+    error_names = set()
+    for err in fetch_errors:
+        name = err.split(':')[0].strip()
+        error_names.add(name)
+
+    for eng in sources_config.get('engineers', []):
+        slug = eng.get('slug')
+        if not slug:
+            continue
+        author = session.query(Author).filter_by(slug=slug).first()
+        if not author:
+            continue
+        for src in eng.get('sources', []):
+            source = session.query(Source).filter_by(url=src['url']).first()
+            if source and source.enabled:
+                error_msg = None
+                if eng['name'] in error_names:
+                    error_msg = f"Fetch error for {eng['name']}"
+                source.record_fetch(session, error=error_msg)
+    session.commit()
+
+
+def _build_feed_digest(articles: list) -> dict:
+    """Build a minimal digest dict for update_feed() from Article model instances."""
+    return {
+        'generated_at': datetime.now(tz=timezone.utc).isoformat(),
+        'articles': [a.to_dict() for a in articles],
+    }
+
+
+def _send_health_alert(cfg: dict, total: int, errored: int) -> None:
+    """Send a health alert email to admin if source failure rate is high."""
+    admin_address = cfg.get('email', {}).get('admin_address')
+    if not admin_address:
+        logger.warning("No admin_address configured — cannot send health alert")
+        return
+    logger.warning("Health alert: %d/%d sources errored. Admin: %s", errored, total, admin_address)
+    # TODO: implement actual email alert to admin
+
+
+# ── Entrypoint ────────────────────────────────────────────────────────────────
+
+def main() -> int:
+    args = parse_args()
+    if args.command == 'feed':
+        return cmd_feed(args)
+    elif args.command == 'digest':
+        return cmd_digest(args)
+    return 1
 
 
 if __name__ == '__main__':

@@ -1,8 +1,8 @@
-"""Anthropic API integration — filters articles for AI relevance and summarises them.
+"""Anthropic API integration — evaluates articles for AI relevance and summarises them.
 
-Single batch call per run. The model receives all new articles, decides which are
-AI-relevant, writes per-article summaries, and returns a global weekly summary.
-Structured output is enforced via tool_use with a fixed schema.
+Two main functions:
+- summarize_article(): evaluates a single article for relevance + summary
+- generate_global_summary(): synthesizes summaries into a digest overview
 """
 
 import logging
@@ -13,14 +13,14 @@ import anthropic
 
 logger = logging.getLogger(__name__)
 
-# ── Prompts ────────────────────────────────────────────────────────────────────
+# ── Single-article AI call ────────────────────────────────────────────────────
 
-SYSTEM_PROMPT = """\
-You are the curator of the SWE AI Digest, a weekly newsletter for software engineers \
+ARTICLE_SYSTEM_PROMPT = """\
+You are the curator of the SWE AI Digest, a newsletter for software engineers \
 tracking how leading practitioners think about artificial intelligence.
 
-Your task is to analyse a batch of blog posts and articles published by recognised \
-software engineers, filter for AI-relevant content, and produce structured summaries.
+Your task is to evaluate a single article and decide whether it is AI-relevant, \
+then write a summary if it is.
 
 An article is AI-relevant if it substantively addresses one or more of:
 - How the author personally uses AI tools in their workflow (editors, copilots, agents, etc.)
@@ -38,130 +38,95 @@ editorialize beyond what the author states. Never invent details not present in 
 content provided.\
 """
 
-USER_PROMPT_TEMPLATE = """\
-Below are {n} articles published in the past {days} day(s) by software engineers we track.
+ARTICLE_USER_PROMPT_TEMPLATE = """\
+Evaluate the following article for AI relevance.
 
-For each AI-relevant article write a summary of 100–150 words that:
+If AI-relevant, write a summary of 100–150 words that:
 1. Explains the author's main argument or finding
 2. Situates why it matters to a software engineer following AI developments
 
-Then write a global summary of 150–200 words identifying the main themes and trends \
-across all AI-relevant articles this week.
+If NOT AI-relevant, set ai_relevant to false and leave summary null.
 
-Call the submit_digest tool with your results.
+Call the submit_article_result tool with your assessment.
 
-{articles_text}\
+Author: {author}
+Title: {title}
+URL: {url}
+Published: {published}
+Content:
+{content}\
 """
 
-# ── Tool schema ────────────────────────────────────────────────────────────────
-
-SUBMIT_DIGEST_TOOL: dict[str, Any] = {
-    'name': 'submit_digest',
-    'description': (
-        'Submit the structured weekly digest. Call this exactly once with all '
-        'AI-relevant articles and the global summary.'
-    ),
+SUBMIT_ARTICLE_RESULT_TOOL: dict[str, Any] = {
+    'name': 'submit_article_result',
+    'description': 'Submit the evaluation result for a single article.',
     'input_schema': {
         'type': 'object',
         'properties': {
-            'global_summary': {
+            'url': {
                 'type': 'string',
-                'description': '150–200 word summary of the week\'s themes across all AI-relevant articles.',
+                'description': 'Exact URL from the input article — do not modify.',
             },
-            'articles': {
-                'type': 'array',
-                'description': 'AI-relevant articles only. Omit articles that are not AI-relevant.',
-                'items': {
-                    'type': 'object',
-                    'properties': {
-                        'url': {
-                            'type': 'string',
-                            'description': 'Exact URL from the input article — do not modify.',
-                        },
-                        'summary': {
-                            'type': 'string',
-                            'description': '100–150 word summary explaining the argument and its relevance.',
-                        },
-                    },
-                    'required': ['url', 'summary'],
-                },
+            'ai_relevant': {
+                'type': 'boolean',
+                'description': 'True if the article is AI-relevant, false otherwise.',
             },
-            'dropped_count': {
-                'type': 'integer',
-                'description': 'Number of articles judged not AI-relevant and excluded.',
+            'summary': {
+                'type': ['string', 'null'],
+                'description': '100–150 word summary if AI-relevant, null otherwise.',
             },
         },
-        'required': ['global_summary', 'articles', 'dropped_count'],
+        'required': ['url', 'ai_relevant', 'summary'],
     },
 }
 
 
-# ── Article text builder ───────────────────────────────────────────────────────
-
-def build_articles_text(articles: list[dict]) -> str:
-    """Format articles as numbered blocks for the prompt."""
-    blocks = []
-    for i, a in enumerate(articles, 1):
-        content = a.get('content') or a.get('summary') or '(no content available)'
-        block = (
-            f"=== ARTICLE {i} ===\n"
-            f"Author: {a['engineer']}\n"
-            f"Title: {a['title']}\n"
-            f"URL: {a['url']}\n"
-            f"Published: {a.get('published', 'unknown')}\n"
-            f"Content:\n{content}"
-        )
-        blocks.append(block)
-    return '\n\n'.join(blocks)
-
-
-# ── API call with retry ────────────────────────────────────────────────────────
-
-def call_anthropic(
-    articles: list[dict],
-    days: int,
+def summarize_article(
+    article_dict: dict,
     model: str,
     max_tokens: int,
     max_retries: int,
     api_key: str,
 ) -> dict:
-    """Call the Anthropic API and return the structured digest result.
+    """Evaluate a single article for AI relevance and summarize if relevant.
 
-    Returns a dict with keys: global_summary, articles (url+summary), dropped_count.
+    Returns a dict with keys: url, ai_relevant, summary.
     Raises RuntimeError if all retries are exhausted.
     """
     client = anthropic.Anthropic(api_key=api_key)
-    articles_text = build_articles_text(articles)
-    user_message = USER_PROMPT_TEMPLATE.format(
-        n=len(articles),
-        days=days,
-        articles_text=articles_text,
+    content = article_dict.get('content') or article_dict.get('raw_content') or '(no content available)'
+    user_message = ARTICLE_USER_PROMPT_TEMPLATE.format(
+        author=article_dict.get('author') or article_dict.get('engineer', 'Unknown'),
+        title=article_dict['title'],
+        url=article_dict['url'],
+        published=article_dict.get('published_at') or article_dict.get('published', 'unknown'),
+        content=content,
     )
 
-    # Backoff schedule: 30s, 60s, 120s, 240s, 480s → ~15 min total for 5 retries.
-    # The Anthropic SDK also retries internally, so each of our attempts already
-    # includes several sub-attempts. Use long intervals to ride out 529 overloads.
     last_error: Exception | None = None
     for attempt in range(1, max_retries + 1):
         try:
-            logger.info("Anthropic API call — attempt %d/%d (%d articles)", attempt, max_retries, len(articles))
+            logger.info(
+                "summarize_article — attempt %d/%d — %s",
+                attempt, max_retries, article_dict['url'],
+            )
             response = client.messages.create(
                 model=model,
                 max_tokens=max_tokens,
-                system=SYSTEM_PROMPT,
-                tools=[SUBMIT_DIGEST_TOOL],
-                tool_choice={'type': 'tool', 'name': 'submit_digest'},
+                system=ARTICLE_SYSTEM_PROMPT,
+                tools=[SUBMIT_ARTICLE_RESULT_TOOL],
+                tool_choice={'type': 'tool', 'name': 'submit_article_result'},
                 messages=[{'role': 'user', 'content': user_message}],
             )
             for block in response.content:
-                if block.type == 'tool_use' and block.name == 'submit_digest':
+                if block.type == 'tool_use' and block.name == 'submit_article_result':
+                    result = block.input
                     logger.info(
-                        "AI result: %d AI-relevant, %d dropped",
-                        len(block.input.get('articles', [])),
-                        block.input.get('dropped_count', 0),
+                        "Article %s: ai_relevant=%s",
+                        result.get('url'), result.get('ai_relevant'),
                     )
-                    return block.input
-            raise RuntimeError("submit_digest tool was not called in the response")
+                    return result
+            raise RuntimeError("submit_article_result tool was not called in the response")
 
         except anthropic.RateLimitError as e:
             last_error = e
@@ -179,34 +144,111 @@ def call_anthropic(
             logger.warning("Unexpected error (attempt %d/%d): %s — retrying in %ds", attempt, max_retries, e, wait)
             time.sleep(wait)
 
-    raise RuntimeError(f"Anthropic API failed after {max_retries} attempts: {last_error}")
+    raise RuntimeError(f"summarize_article failed after {max_retries} attempts: {last_error}")
 
 
-# ── Result enrichment ──────────────────────────────────────────────────────────
+# ── Global summary AI call (Phase 2) ─────────────────────────────────────────
 
-def enrich_ai_articles(ai_result: dict, fetched_articles: list[dict]) -> list[dict]:
-    """Join AI output (url + summary) with original fetch data (author, title, etc.).
+GLOBAL_SUMMARY_SYSTEM_PROMPT = """\
+You are the curator of the SWE AI Digest, a newsletter for software engineers \
+tracking how leading practitioners think about artificial intelligence.
 
-    The AI returns only the URL and its generated summary. This function looks up
-    the full article metadata from the fetched batch and merges them.
+Your task is to write a global summary of 150–200 words identifying the main themes \
+and trends across the AI-relevant articles provided. The summaries have already been \
+written — you are synthesising them into a cohesive overview.
+
+Tone: analytical and neutral. Do not editorialize beyond what the authors state.\
+"""
+
+GLOBAL_SUMMARY_USER_PROMPT_TEMPLATE = """\
+Below are the AI-relevant articles from this digest period, with their summaries.
+
+Write a global summary of 150–200 words identifying the main themes and trends.
+
+Call the submit_global_summary tool with your result.
+
+{articles_text}\
+"""
+
+SUBMIT_GLOBAL_SUMMARY_TOOL: dict[str, Any] = {
+    'name': 'submit_global_summary',
+    'description': 'Submit the global summary for the digest.',
+    'input_schema': {
+        'type': 'object',
+        'properties': {
+            'global_summary': {
+                'type': 'string',
+                'description': '150–200 word summary of themes across all AI-relevant articles.',
+            },
+        },
+        'required': ['global_summary'],
+    },
+}
+
+
+def build_summary_text(articles: list[dict]) -> str:
+    """Format already-summarized articles for the global summary prompt."""
+    blocks = []
+    for i, a in enumerate(articles, 1):
+        block = (
+            f"=== ARTICLE {i} ===\n"
+            f"Author: {a.get('author', 'Unknown')}\n"
+            f"Title: {a['title']}\n"
+            f"Summary: {a['summary']}"
+        )
+        blocks.append(block)
+    return '\n\n'.join(blocks)
+
+
+def generate_global_summary(
+    articles_with_summaries: list[dict],
+    model: str,
+    max_tokens: int,
+    max_retries: int,
+    api_key: str,
+) -> str:
+    """Generate a global summary from already-summarized articles.
+
+    Returns the global summary string.
+    Raises RuntimeError if all retries are exhausted.
     """
-    url_index = {a['url']: a for a in fetched_articles}
-    enriched = []
-    for ai_article in ai_result.get('articles', []):
-        url = ai_article['url']
-        original = url_index.get(url)
-        if original is None:
-            logger.warning("AI returned unknown URL (skipping): %s", url)
-            continue
-        enriched.append({
-            'author': original['engineer'],
-            'bio': original.get('bio', ''),
-            'title': original['title'],
-            'url': url,
-            'published_at': original.get('published'),
-            'summary': ai_article['summary'],
-        })
-    # Preserve priority order from the original fetch
-    priority_map = {a['url']: a.get('priority', 99) for a in fetched_articles}
-    enriched.sort(key=lambda a: priority_map.get(a['url'], 99))
-    return enriched
+    client = anthropic.Anthropic(api_key=api_key)
+    articles_text = build_summary_text(articles_with_summaries)
+    user_message = GLOBAL_SUMMARY_USER_PROMPT_TEMPLATE.format(articles_text=articles_text)
+
+    last_error: Exception | None = None
+    for attempt in range(1, max_retries + 1):
+        try:
+            logger.info("generate_global_summary — attempt %d/%d (%d articles)", attempt, max_retries, len(articles_with_summaries))
+            response = client.messages.create(
+                model=model,
+                max_tokens=max_tokens,
+                system=GLOBAL_SUMMARY_SYSTEM_PROMPT,
+                tools=[SUBMIT_GLOBAL_SUMMARY_TOOL],
+                tool_choice={'type': 'tool', 'name': 'submit_global_summary'},
+                messages=[{'role': 'user', 'content': user_message}],
+            )
+            for block in response.content:
+                if block.type == 'tool_use' and block.name == 'submit_global_summary':
+                    summary = block.input['global_summary']
+                    logger.info("Global summary generated (%d chars)", len(summary))
+                    return summary
+            raise RuntimeError("submit_global_summary tool was not called in the response")
+
+        except anthropic.RateLimitError as e:
+            last_error = e
+            wait = 30 * (2 ** (attempt - 1))
+            logger.warning("Rate limit hit (attempt %d/%d) — retrying in %ds", attempt, max_retries, wait)
+            time.sleep(wait)
+        except anthropic.APIStatusError as e:
+            last_error = e
+            wait = 30 * (2 ** (attempt - 1))
+            logger.warning("API error %s (attempt %d/%d) — retrying in %ds", e.status_code, attempt, max_retries, wait)
+            time.sleep(wait)
+        except Exception as e:
+            last_error = e
+            wait = 30 * (2 ** (attempt - 1))
+            logger.warning("Unexpected error (attempt %d/%d): %s — retrying in %ds", attempt, max_retries, e, wait)
+            time.sleep(wait)
+
+    raise RuntimeError(f"generate_global_summary failed after {max_retries} attempts: {last_error}")

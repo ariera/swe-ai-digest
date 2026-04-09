@@ -288,36 +288,6 @@ async def fetch_all(
     return all_articles, errors, chrome_sources
 
 
-# ── Article post-processing ────────────────────────────────────────────────────
-
-def sort_and_filter_articles(articles: list[dict]) -> list[dict]:
-    """Filter undated scrape entries; sort by priority then date.
-
-    Scrape results (Paul Graham, Norvig) have no per-article dates and are
-    excluded from weekly digest runs. The two-pass stable sort groups articles
-    by priority with the newest first within each group.
-    """
-    articles = [
-        a for a in articles
-        if not (a.get('source_type') == 'scrape' and a.get('published') is None)
-    ]
-    articles.sort(key=lambda a: a['published'] or '', reverse=True)
-    articles.sort(key=lambda a: a['priority'])
-    return articles
-
-
-def dedup_by_url(articles: list[dict]) -> list[dict]:
-    """Remove duplicate articles by URL, keeping the first occurrence."""
-    seen: set[str] = set()
-    result = []
-    for a in articles:
-        url = a.get('url', '')
-        if url and url not in seen:
-            seen.add(url)
-            result.append(a)
-    return result
-
-
 # ── Config helpers ─────────────────────────────────────────────────────────────
 
 def load_sources(path: str) -> dict:
