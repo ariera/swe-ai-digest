@@ -6,9 +6,81 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Apr 2026 22:47:12 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 15:22:29 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Writes and Write-Nots</title>
+      <link>http://www.paulgraham.com/writes.html</link>
+      <author>Paul Graham</author>
+      <pubDate>Thu, 09 Apr 2026 15:22:29 +0000</pubDate>
+      <description>In "Writes and Write-Nots," Paul Graham argues that AI writing tools are bifurcating society into those who can write and those who increasingly delegate writing to AI, a distinction he frames as deeply consequential. Graham contends that writing is not merely communication but a proxy for thinking — and that offloading it to AI may atrophy the cognitive abilities underlying clear reasoning. For software engineers tracking AI developments, this essay raises a pointed question about the second-order effects of AI tool adoption: as developers rely on AI for documentation, communication, and even code comments, they may be trading short-term productivity for long-term degradation of the analytical thinking that writing cultivates. Graham's framing positions AI-assisted writing not as neutral augmentation but as a potential inflection point in intellectual skill distribution.</description>
+      <guid isPermaLink="true">http://www.paulgraham.com/writes.html</guid>
+    </item>
+    <item>
+      <title>Fragments: April  9</title>
+      <link>https://martinfowler.com/fragments/2026-04-09.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Thu, 09 Apr 2026 13:23:00 +0000</pubDate>
+      <description>This Martin Fowler digest includes two substantive AI-relevant threads. First, Fowler recommends Simon Willison's podcast appearance, which covers how programming has changed since the "November inflection point," key patterns for AI-assisted work, and security concerns around AI agents. Second, Fowler highlights a detailed case study by Lalit Maganti, who used Claude to build SQLite tooling he'd deferred for years. Maganti's account is a candid breakdown of AI-assisted development: a first attempt yielded spaghetti code he didn't understand, while a second attempt — with tighter human oversight, continuous refactoring, and design direction from the engineer — succeeded. His key finding: AI excels when there's an objectively checkable answer (e.g., passing tests) but struggles with subjective quality concerns like API design, where no metric exists for "pleasant to use."</description>
+      <guid isPermaLink="true">https://martinfowler.com/fragments/2026-04-09.html</guid>
+    </item>
+    <item>
+      <title>Meta's new model is Muse Spark, and meta.ai chat has some interesting tools</title>
+      <link>https://simonwillison.net/2026/Apr/8/muse-spark/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 08 Apr 2026 23:07:44 +0000</pubDate>
+      <description>Simon Willison provides a hands-on evaluation of Meta's new hosted model, Muse Spark, exploring its capabilities through the meta.ai chat interface. He extracts the full list of 16 tools wired into the chat harness — including web browsing, Python code execution (Code Interpreter), image generation, visual grounding/object detection, sub-agent spawning, and Meta-platform content search — and systematically tests them. He benchmarks the model's competitive positioning against GPT-5.4, Gemini 3.1 Pro, and Claude Opus 4.6, noting gaps in agentic and coding tasks. For software engineers, the article is notable for its detailed breakdown of an emerging agent tool harness architecture, the sub-agent-as-a-tool pattern, and the efficiency gains Meta claims (10× less compute than Llama 4 Maverick), while flagging that the model is currently closed-weights with uncertain open-source prospects.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/8/muse-spark/#atom-everything</guid>
+    </item>
+    <item>
+      <title>DHH’s new way of writing code</title>
+      <link>https://newsletter.pragmaticengineer.com/p/dhhs-new-way-of-writing-code</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 08 Apr 2026 17:16:28 +0000</pubDate>
+      <description>Gergely Orosz interviews DHH (creator of Ruby on Rails, CTO of 37signals) about his dramatic shift from rejecting AI coding tools to adopting an agent-first workflow. DHH now runs dual LLM terminals (Gemini 2.5 for speed, Claude Opus for depth) alongside NeoVim, barely writing code by hand. Key findings include: AI agents amplify senior engineers who can validate output, while creating hurdles for juniors; Ruby on Rails is well-suited for agent workflows due to token efficiency and built-in testing; CLI interfaces are emerging as the optimal AI integration layer; and AI acceleration has made 37signals' two-month "Shape Up" development cycle feel obsolete. DHH also warns of burnout risk from the dopamine loop of rapid AI-assisted shipping. The episode is directly relevant to engineers evaluating agentic workflows, toolchain choices, and AI's uneven impact across experience levels.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/dhhs-new-way-of-writing-code</guid>
+    </item>
+    <item>
+      <title>Quoting Giles Turnbull</title>
+      <link>https://simonwillison.net/2026/Apr/8/giles-turnbull/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 08 Apr 2026 15:18:49 +0000</pubDate>
+      <description>Simon Willison quotes Giles Turnbull's observation that people tend to enjoy using AI tools to dabble in other professions, but resist when outsiders use AI to encroach on their own domain. The quip surfaces a widely felt asymmetry in how professionals perceive AI-driven disruption: enthusiasm when the tool empowers you to trespass elsewhere, defensiveness when it threatens your own expertise. For software engineers tracking AI's trajectory, this matters because it frames a recurring tension in adoption debates — developers may welcome AI coding assistants while bristling at the idea of non-engineers using AI to write or review code. The observation, though brief, sharpens thinking about the social and professional dynamics underlying resistance to AI in any given field.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/8/giles-turnbull/#atom-everything</guid>
+    </item>
+    <item>
+      <title>(no title)</title>
+      <link>https://toot.thoughtworks.com/@mfowler/116369356949461889</link>
+      <author>Martin Fowler</author>
+      <pubDate>Wed, 08 Apr 2026 13:37:51 +0000</pubDate>
+      <description>Rahul Garg, in the final installment of his series on AI-Assisted Development, proposes a structured "feedback flywheel" practice for software teams. The core idea is that insights gained from individual AI coding sessions — what worked, what failed, what patterns emerged — should be systematically captured and fed back into shared team artifacts (e.g., guidelines, prompts, conventions). This transforms ad-hoc personal learnings into collective, compounding institutional knowledge. For software engineers tracking AI adoption, this matters because it addresses a key organizational challenge: how teams can scale AI effectiveness beyond individual experimentation. The practice offers a concrete workflow for turning distributed AI usage into a shared, continuously improving team capability, making it directly relevant to engineering culture and AI tooling strategy.</description>
+      <guid isPermaLink="true">https://toot.thoughtworks.com/@mfowler/116369356949461889</guid>
+    </item>
+    <item>
+      <title>Feedback Flywheel</title>
+      <link>https://martinfowler.com/articles/reduce-friction-ai/feedback-flywheel.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Wed, 08 Apr 2026 13:28:00 +0000</pubDate>
+      <description>In the final installment of his series on reducing friction in AI-assisted development, Rahul Garg proposes a "feedback flywheel" — a structured practice for capturing lessons learned during AI coding sessions and systematically feeding them back into a team's shared artifacts (e.g., prompts, guidelines, documentation). The core argument is that individual AI interactions represent untapped organizational learning, and that without a deliberate feedback loop, teams repeat the same friction points. For software engineers, this matters because it frames AI tooling not as a solo productivity boost but as a team-level practice requiring intentional knowledge management. The pattern offers a concrete mechanism for compounding improvement over time, making it directly applicable to teams looking to mature their AI-assisted development workflows beyond ad hoc usage.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/reduce-friction-ai/feedback-flywheel.html</guid>
+    </item>
+    <item>
+      <title>Mario and Earendil</title>
+      <link>https://lucumr.pocoo.org/2026/4/8/mario-and-earendil/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Wed, 08 Apr 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher announces that Mario Zechner (creator of the Pi coding agent library) is joining his company Earendil, using the occasion to articulate a design philosophy for AI tooling. Ronacher argues that the industry's race to ship AI faster is producing "low-grade degradation" — more noise, slop, and incoherence — and that the correct response is to build AI systems that prioritize quality, craft, and deliberate design over throughput. He positions Pi (a coding agent and agent infrastructure library) and Earendil's own Lefos project as examples of this alternative approach. For software engineers tracking AI developments, the post is notable for its critique of velocity-first agent development and its articulation of what "thoughtful" agent architecture could mean in practice, with Pi highlighted as a concrete open, extensible foundation worth watching.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/4/8/mario-and-earendil/</guid>
+    </item>
+    <item>
+      <title>GLM-5.1: Towards Long-Horizon Tasks</title>
+      <link>https://simonwillison.net/2026/Apr/7/glm-51/#atom-blogmarks</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 07 Apr 2026 21:25:14 +0000</pubDate>
+      <description>Simon Willison evaluates GLM-5.1, a 754B parameter, MIT-licensed open-weights model from Chinese AI lab Z.ai. Using his standard "pelican on a bicycle" SVG generation benchmark via the LLM CLI tool and OpenRouter, Willison notes that GLM-5.1 spontaneously produced an HTML page with embedded CSS animations — an unprompted creative decision. When the animation broke positioning, a follow-up prompt yielded a technically coherent diagnosis (CSS transforms conflicting with SVG positioning) and a working fix. For software engineers tracking AI developments, this post is a concise hands-on evaluation of a large open-weights model's code generation and self-correction capabilities, highlighting both its creative initiative and its ability to iteratively debug SVG/CSS output — relevant to anyone assessing open-source LLMs for code-generation or UI-generation tasks.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/7/glm-51/#atom-blogmarks</guid>
+    </item>
     <item>
       <title>GLM-5.1: Towards Long-Horizon Tasks</title>
       <link>https://simonwillison.net/2026/Apr/7/glm-51/#atom-everything</link>
@@ -35,11 +107,27 @@
     </item>
     <item>
       <title>Google AI Edge Gallery</title>
+      <link>https://simonwillison.net/2026/Apr/6/google-ai-edge-gallery/#atom-blogmarks</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 06 Apr 2026 05:18:26 +0000</pubDate>
+      <description>Simon Willison reviews Google AI Edge Gallery, Google's official iOS app for running Gemma 4 models (E2B and E4B) locally on-device. He finds the app genuinely capable: the 2.54GB E2B model is fast and useful, supports image Q&amp;A, audio transcription (up to 30 seconds), and a "skills" demo showcasing tool-calling against eight HTML-based interactive widgets. Willison notes this is the first time a major local model vendor has shipped an official iPhone app for on-device model evaluation. He flags two limitations: the tool-calling demo caused freezes on follow-up prompts, and conversations are ephemeral with no persistent logs. For software engineers, this signals a maturing on-device AI ecosystem where frontier-adjacent models with multimodal and tool-use capabilities are becoming accessible without cloud infrastructure.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/6/google-ai-edge-gallery/#atom-blogmarks</guid>
+    </item>
+    <item>
+      <title>Google AI Edge Gallery</title>
       <link>https://simonwillison.net/2026/Apr/6/google-ai-edge-gallery/#atom-everything</link>
       <author>Simon Willison</author>
       <pubDate>Mon, 06 Apr 2026 05:18:26 +0000</pubDate>
       <description>Willison reviews Google AI Edge Gallery, Google's first official iPhone app for running Gemma 4 models locally. The E2B model (2.54GB) runs quickly on-device and supports image Q&amp;A, audio transcription, and tool-calling demos against eight embedded HTML widgets. Willison notes this is the first time a major model vendor has shipped an official on-device inference app for iOS, marking a milestone in local LLM accessibility. He flags that conversations are ephemeral (no persistent logs) and that a follow-up prompt froze the app, but overall rates the app as 'really great' for exploring small-model capabilities without cloud dependency.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Apr/6/google-ai-edge-gallery/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Cleanup Claude Code Paste</title>
+      <link>https://simonwillison.net/2026/Apr/6/cleanup-claude-code-paste/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 06 Apr 2026 02:55:23 +0000</pubDate>
+      <description>Simon Willison describes a small utility tool he built to address a specific pain point when working with Claude Code, Anthropic's terminal-based AI coding assistant. When copying prompts out of the Claude Code terminal app, the pasted text contains extraneous whitespace that needs to be cleaned up. Willison's tool automates that cleanup step. While the post is brief and the tool is self-described as "super-niche," it is a concrete example of a practitioner building workflow tooling around AI coding agents — a signal of the friction points that emerge as engineers integrate AI tools like Claude Code into their daily development processes. It is relevant to software engineers tracking real-world AI tool adoption and the secondary tooling ecosystems that grow around primary AI assistants.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/6/cleanup-claude-code-paste/#atom-everything</guid>
     </item>
     <item>
       <title>Eight years of wanting, three months of building with AI</title>
@@ -58,6 +146,14 @@
       <guid isPermaLink="true">https://simonwillison.net/2026/Apr/5/building-with-ai/#atom-everything</guid>
     </item>
     <item>
+      <title>Syntaqlite Playground</title>
+      <link>https://simonwillison.net/2026/Apr/5/syntaqlite/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 05 Apr 2026 19:32:59 +0000</pubDate>
+      <description>Simon Willison describes building a WebAssembly-powered browser playground for syntaqlite, a SQLite SQL query parser/formatter written in C and Rust, inspired by the tool's author sharing a deep dive on using AI over three months to build it. Willison compiled the library to a WebAssembly wheel to run in Pyodide, enabling in-browser formatting, parsing, validation, and tokenization. While the post is primarily a tool announcement, it is tagged with `ai-assisted-programming` and `agentic-engineering` and explicitly ties into a broader discussion about AI-assisted development workflows. For software engineers tracking AI in practice, it serves as a concrete example of how AI-assisted coding is enabling developers to tackle complex, multi-language compilation and tooling projects that previously would have required significantly more time or specialized expertise.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/5/syntaqlite/#atom-everything</guid>
+    </item>
+    <item>
       <title>scan-for-secrets 0.1</title>
       <link>https://simonwillison.net/2026/Apr/5/scan-for-secrets-3/#atom-everything</link>
       <author>Simon Willison</author>
@@ -66,12 +162,36 @@
       <guid isPermaLink="true">https://simonwillison.net/2026/Apr/5/scan-for-secrets-3/#atom-everything</guid>
     </item>
     <item>
+      <title>research-llm-apis 2026-04-04</title>
+      <link>https://simonwillison.net/2026/Apr/5/research-llm-apis/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 05 Apr 2026 00:32:11 +0000</pubDate>
+      <description>Simon Willison describes a research effort to redesign the abstraction layer in his open-source LLM Python library and CLI tool, which currently wraps hundreds of models from dozens of vendors. The existing abstraction cannot accommodate newer vendor features such as server-side tool execution. To inform the new design, Willison used Claude Code to read through the official Python client libraries for Anthropic, OpenAI, Gemini, and Mistral, then generate curl commands targeting the raw JSON APIs across streaming and non-streaming scenarios. This is directly relevant to software engineers building on top of LLM APIs: it highlights real architectural gaps in abstraction layers as model capabilities expand, and demonstrates a practical use of an AI coding agent (Claude Code) as a research and API-exploration tool.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/5/research-llm-apis/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Quoting Kyle Daigle</title>
+      <link>https://simonwillison.net/2026/Apr/4/kyle-daigle/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 04 Apr 2026 02:20:17 +0000</pubDate>
+      <description>Simon Willison quotes GitHub COO Kyle Daigle reporting a dramatic surge in GitHub platform activity that is widely attributed to AI-assisted development. Commits have grown from 1 billion in all of 2025 to a pace of 275 million per week in early 2026 — projecting 14 billion annually. GitHub Actions compute has more than quadrupled from 500 million minutes/week in 2023 to 2.1 billion minutes in a single recent week. For software engineers tracking AI's impact, these metrics serve as a macro-level signal of how AI coding tools are materially accelerating the volume of code being written and shipped, driving unprecedented growth in both version-control activity and CI/CD infrastructure demand — concrete evidence that AI is reshaping development workflows at scale across the industry.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/4/kyle-daigle/#atom-everything</guid>
+    </item>
+    <item>
       <title>Absurd In Production</title>
       <link>https://lucumr.pocoo.org/2026/4/4/absurd-in-production/</link>
       <author>Armin Ronacher</author>
       <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
       <description>Armin Ronacher reports on five months of running Absurd — a durable execution system built entirely on Postgres — in production for agent workflows. The primary use case is checkpointing LLM agent loops: each iteration (call LLM, process tool results, repeat) becomes a step, enabling crash recovery and replay without re-running completed work. Ronacher details what held up (checkpoint-based replay, pull-based scheduling, thin SDKs), what changed (decomposed steps, task results, a CLI tool, a web dashboard), and what's missing (partitioning, a push model, native scheduling). The article also reflects on the evolving role of open source libraries when agents can generate throwaway implementations on demand.</description>
       <guid isPermaLink="true">https://lucumr.pocoo.org/2026/4/4/absurd-in-production/</guid>
+    </item>
+    <item>
+      <title>Vulnerability Research Is Cooked</title>
+      <link>https://simonwillison.net/2026/Apr/3/vulnerability-research-is-cooked/#atom-blogmarks</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 03 Apr 2026 23:59:08 +0000</pubDate>
+      <description>Simon Willison summarizes Thomas Ptacek's argument that frontier AI models are poised to fundamentally disrupt vulnerability research and exploit development within months. Ptacek contends that LLM agents are uniquely well-suited to this domain because they arrive pre-loaded with broad correlational knowledge of codebases and established bug classes (stale pointers, type confusion, integer mishandling, etc.), and can relentlessly brute-force reachability and exploitability constraints — tasks that map directly onto LLMs' implicit search strengths. The economic and practical impact, Ptacek argues, will be a step-function shift rather than a gradual one. For software engineers tracking AI, this signals that agentic AI is crossing into high-stakes security research, raising significant implications for how vulnerabilities will be discovered, the economics of offensive security work, and the urgency of defensive practices in software development.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/3/vulnerability-research-is-cooked/#atom-blogmarks</guid>
     </item>
     <item>
       <title>Vulnerability Research Is Cooked</title>
@@ -139,11 +259,35 @@
     </item>
     <item>
       <title>Gemma 4: Byte for byte, the most capable open models</title>
+      <link>https://simonwillison.net/2026/Apr/2/gemma-4/#atom-blogmarks</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 02 Apr 2026 18:28:54 +0000</pubDate>
+      <description>Simon Willison covers Google DeepMind's Gemma 4 release — four Apache 2.0-licensed, vision-capable reasoning LLMs (2B, 4B, 31B, and a 26B Mixture-of-Experts variant) that Google positions as leaders in intelligence-per-parameter efficiency. Willison highlights the models' use of Per-Layer Embeddings (PLE) to maximize on-device performance without simply scaling parameters, and notes their native multimodal support for images, video, and audio. He personally tests the models via LM Studio GGUFs and his own `llm-gemini` plugin, reporting usable local performance for the three smaller variants. For software engineers tracking AI, this article is relevant as a hands-on evaluation of state-of-the-art small open models, illustrating the accelerating trend toward efficient, locally-runnable LLMs and expanding multimodal capabilities — with practical notes on current toolchain support (LM Studio, Ollama, Google AI Studio API).</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/2/gemma-4/#atom-blogmarks</guid>
+    </item>
+    <item>
+      <title>Gemma 4: Byte for byte, the most capable open models</title>
       <link>https://simonwillison.net/2026/Apr/2/gemma-4/#atom-everything</link>
       <author>Simon Willison</author>
       <pubDate>Thu, 02 Apr 2026 18:28:54 +0000</pubDate>
       <description>Willison reviews Google DeepMind's Gemma 4 model family: four Apache 2.0-licensed vision-capable reasoning models (2B, 4B, 31B, and a 26B-A4B MoE). He tests them locally via LM Studio GGUFs and via API, applying his pelican SVG benchmark. Key findings: the 26B-A4B model produces the best pelican he's seen from a laptop-runnable model; the 31B GGUF is broken in his tests; and the E2B/E4B models support native audio input, though local audio inference isn't yet available in major runtimes. The article also notes Google's Per-Layer Embeddings technique for parameter efficiency, relevant to engineers evaluating on-device model deployment.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Apr/2/gemma-4/#atom-everything</guid>
+    </item>
+    <item>
+      <title>llm-gemini 0.30</title>
+      <link>https://simonwillison.net/2026/Apr/2/llm-gemini/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 02 Apr 2026 18:25:08 +0000</pubDate>
+      <description>Simon Willison announces the release of llm-gemini 0.30, a plugin for his LLM command-line tool that adds support for three new Google models: `gemini-3.1-flash-lite-preview`, `gemma-4-26b-a4b-it`, and `gemma-4-31b-it`. While brief, this release note is directly relevant to software engineers tracking AI tooling, as it reflects the rapid expansion of Google's Gemma 4 model family and their integration into developer-facing CLI workflows. The llm ecosystem, maintained by Willison, is a widely used open-source tool for interacting with large language models from the command line, making updates like this a practical signal for engineers evaluating new models for local or API-based use. Engineers interested in the latest Gemma 4 capabilities are pointed to Willison's accompanying notes for deeper context.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/2/llm-gemini/#atom-everything</guid>
+    </item>
+    <item>
+      <title>(no title)</title>
+      <link>https://toot.thoughtworks.com/@mfowler/116336113192965252</link>
+      <author>Martin Fowler</author>
+      <pubDate>Thu, 02 Apr 2026 16:43:31 +0000</pubDate>
+      <description>Martin Fowler's post announces a "Fragments" collection that addresses several AI-centric themes directly relevant to software engineers: framing AI as a "cognitive System 3" (extending dual-process thinking), examining what becomes expensive or scarce if AI agents make coding effectively free, and exploring the future of source code in an agent-driven development world. While this is a brief social-media teaser rather than a full article, its topics substantively engage with how AI is reshaping software engineering economics, developer cognition, and foundational practices like source code management. Engineers tracking AI's trajectory will find these threads — particularly the cost-inversion argument and the fate of source code — directly pertinent to how their roles and toolchains may evolve.</description>
+      <guid isPermaLink="true">https://toot.thoughtworks.com/@mfowler/116336113192965252</guid>
     </item>
     <item>
       <title>Fragments: April  2</title>
@@ -162,6 +306,14 @@
       <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-industry-leaders-return</guid>
     </item>
     <item>
+      <title>(no title)</title>
+      <link>https://toot.thoughtworks.com/@mfowler/116335331149199736</link>
+      <author>Martin Fowler</author>
+      <pubDate>Thu, 02 Apr 2026 13:24:38 +0000</pubDate>
+      <description>Martin Fowler shares a post by bboeckel introducing "Harness Engineering," a mental model for effectively directing coding agents. The piece builds on initial thoughts about how software engineers can better drive AI coding agents, offering a structured framework for thinking about this emerging practice. This matters to software engineers because it signals a growing body of practitioner knowledge around how to work productively with AI agents — moving beyond ad-hoc prompting toward deliberate, principled approaches. As coding agents become more capable, understanding how to harness and direct them effectively is becoming a core engineering skill, and this kind of conceptual framing from established practitioners like those at Thoughtworks helps establish shared vocabulary and best practices for the field.</description>
+      <guid isPermaLink="true">https://toot.thoughtworks.com/@mfowler/116335331149199736</guid>
+    </item>
+    <item>
       <title>Harness engineering for coding agent users</title>
       <link>https://martinfowler.com/articles/harness-engineering.html</link>
       <author>Martin Fowler</author>
@@ -170,12 +322,52 @@
       <guid isPermaLink="true">https://martinfowler.com/articles/harness-engineering.html</guid>
     </item>
     <item>
+      <title>March 2026 sponsors-only newsletter</title>
+      <link>https://simonwillison.net/2026/Apr/2/march-newsletter/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 02 Apr 2026 05:15:04 +0000</pubDate>
+      <description>Simon Willison's March 2026 sponsors-only newsletter covers several AI-relevant topics, including agentic engineering patterns, streaming experts with Mixture-of-Experts (MoE) models running locally on a Mac, and notable model releases from March 2026. The newsletter also touches on "vibe porting" — a likely reference to AI-assisted code or project migration — alongside supply chain security attacks targeting PyPI and NPM. While the article itself is a brief announcement linking to the paywalled content, the listed topics signal continued practitioner-level exploration of agent architectures, on-device inference, and emerging AI-assisted development workflows. For software engineers tracking AI developments, Willison's newsletters are a valuable source of curated, hands-on perspective from a leading practitioner in the space.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/2/march-newsletter/#atom-everything</guid>
+    </item>
+    <item>
       <title>Scaling Uber with Thuan Pham (Uber’s first CTO)</title>
       <link>https://newsletter.pragmaticengineer.com/p/scaling-uber-with-thuan-pham-ubers</link>
       <author>Gergely Orosz</author>
       <pubDate>Wed, 01 Apr 2026 16:49:59 +0000</pubDate>
       <description>In this Pragmatic Engineer podcast episode, Uber's former CTO Thuan Pham discusses how AI is reshaping engineering at Faire, his current company. He reports that 'swarm coding' — orchestrated parallel AI agents — has doubled some engineers' output in three months, but notes that the hardest AI use case remains adding features to large legacy codebases with complex dependencies. Pham argues AI raises the floor for all developers but doesn't change what makes great engineers great: curiosity, fearlessness, and willingness to learn. His framing that 'AI enables decent apps from non-coders but great engineers still accelerate more' is a useful counterpoint to displacement narratives.</description>
       <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/scaling-uber-with-thuan-pham-ubers</guid>
+    </item>
+    <item>
+      <title>What is inference engineering? Deepdive</title>
+      <link>https://newsletter.pragmaticengineer.com/p/what-is-inference-engineering</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 31 Mar 2026 17:01:00 +0000</pubDate>
+      <description>Gergely Orosz, drawing on a deep-dive with inference engineer Philip Kiely, explains what inference engineering is and why it is becoming a mainstream discipline for software engineers. The article argues that the proliferation of open-weight LLMs (e.g., DeepSeek, Kimi, Llama) has democratized inference engineering beyond a handful of frontier labs, making it relevant to any company building AI-native products. It covers the full inference stack — runtime optimizations (quantization, speculative decoding, KV caching, parallelism, disaggregation), infrastructure requirements (autoscaling, Kubernetes, multi-cloud), and key hardware/software (CUDA, vLLM, PyTorch). For software engineers, the piece frames inference engineering as a high-growth, still-nascent specialization that directly impacts product latency, availability, and cost — and one that is increasingly accessible to generalist engineers as open models mature.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/what-is-inference-engineering</guid>
+    </item>
+    <item>
+      <title>(no title)</title>
+      <link>https://toot.thoughtworks.com/@mfowler/116324479387204562</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 31 Mar 2026 15:24:53 +0000</pubDate>
+      <description>Martin Fowler highlights a piece by Rahul Garg arguing that the effectiveness of AI coding assistants is directly tied to how clearly team standards are communicated through prompts. Garg's central proposal is to treat these instructional prompts as first-class engineering artifacts — versioned, peer-reviewed, and shared across the team, much like infrastructure-as-code. This framing matters to software engineers because it shifts AI prompt engineering from an ad hoc, individual practice to a disciplined, collaborative one. For teams adopting AI coding assistants, this approach suggests that investing in shared prompt libraries and governance processes could standardize output quality and reduce inconsistency — making AI tooling more reliable and aligned with established team conventions at scale.</description>
+      <guid isPermaLink="true">https://toot.thoughtworks.com/@mfowler/116324479387204562</guid>
+    </item>
+    <item>
+      <title>Encoding Team Standards</title>
+      <link>https://martinfowler.com/articles/reduce-friction-ai/encoding-team-standards.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 31 Mar 2026 15:20:00 +0000</pubDate>
+      <description>Rahul Garg, writing on Martin Fowler's site, argues that AI coding assistant instructions — covering code generation, refactoring, security, and review — should be treated as first-class engineering infrastructure: versioned, peer-reviewed, and shared across the team rather than left to individual prompters. The core insight is that output quality from AI tools is currently bottlenecked by each developer's ability to articulate team standards in prompts, creating inconsistency. By encoding tacit team knowledge into shared, executable instruction sets, teams can decouple quality from individual prompting skill. This matters to software engineers because it reframes prompt management as a collaborative, operational concern — closer to linting configs or CI pipelines than personal preference — and offers a concrete pattern for making AI-assisted workflows reliably consistent at the team level.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/reduce-friction-ai/encoding-team-standards.html</guid>
+    </item>
+    <item>
+      <title>New Podcast Ep on Agentic Feature Owners</title>
+      <link>https://avdi.codes/new-podcast-ep-on-agentic-feature-owners/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=new-podcast-ep-on-agentic-feature-owners</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Mon, 30 Mar 2026 13:27:51 +0000</pubDate>
+      <description>Avdi Grimm announces a new podcast episode with Jessitron on Graceful.Dev, focused on the concept of "agentic feature owners" — a framing that suggests AI agents could take on ownership roles for software features, echoing Grimm's stated wish to "fork himself." While the article itself is a brief announcement with minimal detail, the topic directly addresses how AI agents may reshape software engineering responsibilities and team structures. For software engineers tracking AI developments, this signals growing practitioner-level conversation around autonomous agents functioning as semi-independent contributors or owners within a development workflow — a meaningful shift in how software teams might be organized and how human engineers could delegate or collaborate with AI counterparts.</description>
+      <guid isPermaLink="true">https://avdi.codes/new-podcast-ep-on-agentic-feature-owners/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=new-podcast-ep-on-agentic-feature-owners</guid>
     </item>
   </channel>
 </rss>
