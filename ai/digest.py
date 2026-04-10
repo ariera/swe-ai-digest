@@ -41,9 +41,12 @@ content provided.\
 ARTICLE_USER_PROMPT_TEMPLATE = """\
 Evaluate the following article for AI relevance.
 
-If AI-relevant, write a summary of 100–150 words that:
+If AI-relevant, write a concise summary of 2–3 sentences (aim for 40–60 words) that:
 1. Explains the author's main argument or finding
 2. Situates why it matters to a software engineer following AI developments
+
+Prefer brevity. Only exceed 3 sentences if the article covers multiple distinct points \
+that cannot be fairly collapsed into one.
 
 If NOT AI-relevant, set ai_relevant to false and leave summary null.
 
@@ -73,7 +76,7 @@ SUBMIT_ARTICLE_RESULT_TOOL: dict[str, Any] = {
             },
             'summary': {
                 'type': ['string', 'null'],
-                'description': '100–150 word summary if AI-relevant, null otherwise.',
+                'description': '2–3 sentence summary (40–60 words) if AI-relevant, null otherwise.',
             },
         },
         'required': ['url', 'ai_relevant', 'summary'],
