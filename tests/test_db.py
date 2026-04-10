@@ -121,6 +121,18 @@ class TestArticle:
         assert len(unprocessed) == 1
         assert unprocessed[0].url == "https://a.com/2"
 
+    def test_unprocessed_excludes_not_relevant_articles(self, db_session):
+        """Regression: articles the AI marked as not-relevant have summary=NULL
+        but ai_relevant=False. These must NOT appear as unprocessed, otherwise
+        the pipeline re-sends them to the AI on every hourly run."""
+        author, source = self._make_author_source(db_session)
+        a1 = Article.insert_if_new(db_session, url="https://a.com/1", author_id=author.id, source_id=source.id, title="P1")
+        a2 = Article.insert_if_new(db_session, url="https://a.com/2", author_id=author.id, source_id=source.id, title="P2")
+        a1.mark_ai_result(db_session, summary=None, ai_relevant=False)  # not relevant, no summary
+        unprocessed = Article.unprocessed(db_session)
+        assert len(unprocessed) == 1
+        assert unprocessed[0].url == "https://a.com/2"
+
     def test_unfed(self, db_session):
         author, source = self._make_author_source(db_session)
         a1 = Article.insert_if_new(db_session, url="https://a.com/1", author_id=author.id, source_id=source.id, title="P1")
@@ -180,6 +192,44 @@ class TestArticle:
         assert d["title"] == "P1"
         assert d["url"] == "https://a.com/1"
         assert d["summary"] == "Summary"
+
+
+    def test_to_dict_uses_fetched_at_when_published_at_is_null(self, db_session):
+        """Regression test: scraped articles (e.g. Paul Graham) have no publication
+        date. Before the fix, to_dict() returned published_at=None, which caused
+        the feed publisher to stamp them with datetime.now() — making old essays
+        appear as if published today every time the feed was rebuilt.
+
+        The fix: to_dict() falls back to fetched_at when published_at is NULL,
+        so the article keeps a stable date (when it was first scraped).
+        """
+        author, source = self._make_author_source(db_session)
+        a = Article.insert_if_new(
+            db_session, url="https://paulgraham.com/writes.html",
+            author_id=author.id, source_id=source.id,
+            title="Writes and Write-Nots",
+            published_at=None,  # scraped articles have no date
+            fetched_at="2026-04-01T12:00:00Z",
+        )
+        a.mark_ai_result(db_session, summary="Summary", ai_relevant=True)
+        d = a.to_dict()
+        assert d["published_at"] == "2026-04-01T12:00:00Z", (
+            "When published_at is NULL, to_dict() must fall back to fetched_at — "
+            "not None (which would cause the feed to use today's date)"
+        )
+
+    def test_to_dict_prefers_published_at_over_fetched_at(self, db_session):
+        """Ensure to_dict() uses the real published_at when it exists."""
+        author, source = self._make_author_source(db_session)
+        a = Article.insert_if_new(
+            db_session, url="https://a.com/dated-post",
+            author_id=author.id, source_id=source.id,
+            title="Dated Post",
+            published_at="2026-03-15T08:00:00Z",
+            fetched_at="2026-04-01T12:00:00Z",
+        )
+        d = a.to_dict()
+        assert d["published_at"] == "2026-03-15T08:00:00Z"
 
 
 class TestDigest:

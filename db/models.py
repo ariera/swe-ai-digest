@@ -142,7 +142,7 @@ class Article(Base):
 
     @classmethod
     def unprocessed(cls, session: Session) -> list[Article]:
-        return session.query(cls).filter(cls.summary.is_(None)).all()
+        return session.query(cls).filter(cls.ai_relevant.is_(None)).all()
 
     @classmethod
     def unfed(cls, session: Session) -> list[Article]:
@@ -176,7 +176,7 @@ class Article(Base):
             "bio": self.author.bio,
             "title": self.title,
             "url": self.url,
-            "published_at": self.published_at,
+            "published_at": self.published_at or self.fetched_at,
             "summary": self.summary,
         }
 
