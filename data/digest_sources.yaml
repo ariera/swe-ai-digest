@@ -4,7 +4,8 @@
 # type: rss    → fetch via feedparser — fast, parallel, no browser
 # type: scrape → fetch HTML with httpx + parse with BeautifulSoup (no JS needed)
 # type: chrome → requires authenticated browser session; handled by Chrome agent
-# type: skip   → insufficient AI content; excluded from digest
+#
+# skip: true   → (optional) disables fetching without losing the source type info
 #
 # bio: one-line description included in the digest under each author section.
 #      Keep it to a single sentence. Source of truth is here, not engineers_list.md.
@@ -175,9 +176,13 @@ engineers:
       - url: https://unclebob.substack.com/feed
         type: rss
         label: Substack
+        skip: true
+        note: "Last post: Feb 2023. Inactive."
       - url: https://blog.cleancoder.com/atom.xml
         type: rss
         label: Clean Coder blog
+        skip: true
+        note: "Last post: Jan 2023. Inactive."
 
   - slug: jonathan-blow
     name: Jonathan Blow

@@ -250,15 +250,13 @@ def sync_sources_from_yaml(session: Session, sources_config: dict) -> None:
             priority=eng.get("priority"),
         )
         for src in eng.get("sources", []):
-            src_type = src["type"]
-            enabled = src_type != "skip"
             Source.upsert(
                 session,
                 url=src["url"],
                 author_id=author.id,
-                type=src_type if enabled else "skip",
+                type=src["type"],
                 label=src.get("label"),
-                enabled=enabled,
+                enabled=not src.get("skip", False),
             )
     session.commit()
 

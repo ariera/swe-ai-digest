@@ -314,7 +314,8 @@ class TestSyncSourcesFromYaml:
         assert alice.bio == "Updated bio"
         assert db_session.query(Author).count() == 2
 
-    def test_sync_skip_type_disables(self, db_session):
+    def test_sync_skip_attribute_disables(self, db_session):
+        """skip: true in YAML sets enabled=False while preserving the source type."""
         config = {
             "engineers": [
                 {
@@ -322,7 +323,7 @@ class TestSyncSourcesFromYaml:
                     "name": "Test",
                     "priority": 1,
                     "sources": [
-                        {"url": "https://skip.com/feed", "type": "skip", "label": "skipped"},
+                        {"url": "https://skip.com/feed", "type": "rss", "label": "skipped", "skip": True},
                     ],
                 }
             ]
@@ -330,6 +331,25 @@ class TestSyncSourcesFromYaml:
         sync_sources_from_yaml(db_session, config)
         source = db_session.query(Source).one()
         assert source.enabled is False
+        assert source.type == "rss"
+
+    def test_sync_skip_defaults_to_false(self, db_session):
+        """Sources without skip attribute default to enabled=True."""
+        config = {
+            "engineers": [
+                {
+                    "slug": "test",
+                    "name": "Test",
+                    "priority": 1,
+                    "sources": [
+                        {"url": "https://active.com/feed", "type": "rss", "label": "blog"},
+                    ],
+                }
+            ]
+        }
+        sync_sources_from_yaml(db_session, config)
+        source = db_session.query(Source).one()
+        assert source.enabled is True
 
     def test_sync_idempotent(self, db_session, sources_config):
         sync_sources_from_yaml(db_session, sources_config)
