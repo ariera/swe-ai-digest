@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Apr 2026 15:22:29 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2026 17:00:14 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>ChatGPT voice mode is a weaker model</title>
+      <link>https://simonwillison.net/2026/Apr/10/voice-mode-is-weaker/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 10 Apr 2026 15:56:02 +0000</pubDate>
+      <description>Simon Willison highlights that ChatGPT's voice mode runs on an older GPT-4o era model (April 2024 knowledge cutoff), not OpenAI's most capable models — a fact non-obvious to many users. Citing Andrej Karpathy, he notes a growing capability gap: consumer-facing access points like voice lag far behind high-tier models (e.g., Codex) that excel in verifiable, B2B domains like coding due to reinforcement learning advantages and commercial prioritization.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/10/voice-mode-is-weaker/#atom-everything</guid>
+    </item>
     <item>
       <title>Writes and Write-Nots</title>
       <link>http://www.paulgraham.com/writes.html</link>
