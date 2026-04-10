@@ -51,11 +51,11 @@ Implemented in `0ccbb43`. All HTML generation uses Jinja2 templates in `template
 **The idea:** Two separate sub-tasks:
 
 ### 4a. Fix broken sources
-14 sources are currently marked `type: chrome` and produce no content. Most are
-Twitter/X profiles. Keep all engineers on the list — do not remove them. Instead,
-research whether each has an alternative RSS-able presence.
+13 sources are `type: chrome` and produce no content. Most are Twitter/X profiles.
+Keep all engineers on the list — do not remove them. Instead, research whether each
+has an alternative RSS-able presence.
 
-Engineers to research (currently Twitter/X only):
+Engineers still to research (currently Twitter/X only):
 - DHH — has hey.com blog (already in list), check Bluesky/Mastodon
 - Grady Booch
 - Jonathan Blow
@@ -75,9 +75,15 @@ the chrome entry in place as a placeholder — do not delete.
 
 - **Nitter** (Twitter RSS proxy) is largely dead. Not a viable fix.
 - LinkedIn has no RSS — same dead end as Twitter.
+- **Robert C. Martin (Uncle Bob)** — both sources marked `skip: true` (inactive since 2023).
 
 ### 4b. Add new engineers
-Expand `data/digest_sources.yaml` with additional names. Candidates to research:
+Expand `data/digest_sources.yaml` with additional names.
+
+Added so far:
+- **Matteo Collina** (`c7dc80e`) — Node.js TSC, Fastify, Platformatic. Sources: Adventures in Nodeland newsletter + Bluesky.
+
+Candidates still to research:
 - Engineers with strong public writing on AI and software craft
 - Prioritise those with RSS feeds to keep the pipeline working without scraping
 
@@ -164,5 +170,16 @@ the current SMTP email + GitHub Pages setup.
   enabled via config (`backend: substack` or a multi-backend list).
 - Does moving to Substack change how we think about the GitHub Pages site — is it
   still needed, or does Substack's archive replace it?
+
+---
+
+## ~~7. Bug fixes (shipped)~~ DONE
+
+Bugs found and fixed during operations:
+
+- **Scraped articles showing today's date in feed** (`fb37dc1`) — `Article.to_dict()` returned `published_at=None` for scrape sources (e.g. Paul Graham), causing the feed publisher to stamp them with `datetime.now()` on every rebuild. Fixed: fall back to `fetched_at`.
+- **AI re-processing not-relevant articles on every run** (`599b212`) — `Article.unprocessed()` filtered on `summary IS NULL`, but not-relevant articles have `summary=None` and `ai_relevant=False`. They were re-sent to the AI every hourly run. Fixed: filter on `ai_relevant IS NULL` instead.
+- **`skip: true` source attribute** (`20f2a80`) — replaced the old `type: skip` convention with an explicit `skip: true` attribute, preserving the real source type (rss, scrape, chrome) while disabling fetching.
+- **Per-article summaries too long** (`25bfc2b`) — reduced prompt target from 100–150 words to 2–3 sentences (40–60 words).
 
 <!-- Add new ideas below -->
