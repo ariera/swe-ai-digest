@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Apr 2026 17:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 21:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>SQLite 3.53.0</title>
+      <link>https://simonwillison.net/2026/Apr/11/sqlite/#atom-blogmarks</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 11 Apr 2026 19:56:53 +0000</pubDate>
+      <description>Simon Willison covers the SQLite 3.53.0 release, highlighting new SQL features and CLI improvements. Notably, he briefly describes using Claude Code on his phone to compile a new formatting library to WebAssembly and build an interactive playground — a concrete example of an AI coding agent being used to handle a non-trivial build task on mobile.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/11/sqlite/#atom-blogmarks</guid>
+    </item>
     <item>
       <title>The Center Has a Bias</title>
       <link>https://lucumr.pocoo.org/2026/4/11/the-center-has-a-bias/</link>
