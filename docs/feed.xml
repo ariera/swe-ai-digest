@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Apr 2026 21:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 16:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Economics of Judgment</title>
+      <link>https://adventures.nodeland.dev/archive/the-economics-of-judgment/</link>
+      <author>Matteo Collina</author>
+      <pubDate>Sun, 12 Apr 2026 15:00:00 +0000</pubDate>
+      <description>Collina applies an academic economic framework to AI's impact on software engineering, arguing that the "Red Queen Effect" (constant model obsolescence), the Jevons Paradox (cheaper AI creates more demand, not less), and the "Wrapper Trap" (thin app layers get displaced by improving foundation models) together make human judgment — not implementation skill — the scarce, durable resource. He contends that as AI handles more coding, the need for engineers who can evaluate correctness, understand domain context, and interpret real client needs actually grows. For software engineers, this reframes AI not as a threat to the profession but as a force that raises the premium on deep expertise and accountability.</description>
+      <guid isPermaLink="true">https://adventures.nodeland.dev/archive/the-economics-of-judgment/</guid>
+    </item>
     <item>
       <title>SQLite 3.53.0</title>
       <link>https://simonwillison.net/2026/Apr/11/sqlite/#atom-blogmarks</link>
