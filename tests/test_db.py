@@ -193,6 +193,46 @@ class TestArticle:
         assert d["url"] == "https://a.com/1"
         assert d["summary"] == "Summary"
 
+    def test_insert_if_new_with_source_type_and_attribution(self, db_session):
+        author, source = self._make_author_source(db_session)
+        article = Article.insert_if_new(
+            db_session,
+            url="https://podcast.com/ep1#engineer=alice",
+            author_id=author.id,
+            source_id=source.id,
+            title="Alice on the AI Podcast",
+            source_type="podcast",
+            attribution="Featured in The AI Podcast",
+        )
+        assert article is not None
+        assert article.source_type == "podcast"
+        assert article.attribution == "Featured in The AI Podcast"
+
+    def test_to_dict_includes_source_type_and_attribution(self, db_session):
+        author, source = self._make_author_source(db_session)
+        a = Article.insert_if_new(
+            db_session,
+            url="https://podcast.com/ep1#engineer=alice",
+            author_id=author.id,
+            source_id=source.id,
+            title="Alice on the AI Podcast",
+            source_type="podcast",
+            attribution="Featured in The AI Podcast",
+        )
+        a.mark_ai_result(db_session, summary="Great episode about AI.", ai_relevant=True)
+        d = a.to_dict()
+        assert d["source_type"] == "podcast"
+        assert d["attribution"] == "Featured in The AI Podcast"
+
+    def test_to_dict_attribution_none_for_regular_articles(self, db_session):
+        author, source = self._make_author_source(db_session)
+        a = Article.insert_if_new(
+            db_session, url="https://a.com/blog-post", author_id=author.id, source_id=source.id,
+            title="Regular Blog Post", source_type="rss",
+        )
+        d = a.to_dict()
+        assert d["attribution"] is None
+
 
     def test_to_dict_uses_fetched_at_when_published_at_is_null(self, db_session):
         """Regression test: scraped articles (e.g. Paul Graham) have no publication
@@ -356,3 +396,32 @@ class TestSyncSourcesFromYaml:
         sync_sources_from_yaml(db_session, sources_config)
         assert db_session.query(Author).count() == 2
         assert db_session.query(Source).count() == 3
+
+    def test_sync_global_sources_creates_sources_without_author(self, db_session):
+        """global_sources are upserted as Sources with author_id=None."""
+        config = {
+            "engineers": [],
+            "global_sources": [
+                {"url": "https://lexfridman.com/feed/podcast/", "type": "podcast", "label": "Lex Fridman Podcast"},
+                {"url": "https://corecursive.libsyn.com/feed", "type": "podcast", "label": "CoRecursive"},
+            ],
+        }
+        sync_sources_from_yaml(db_session, config)
+        sources = db_session.query(Source).all()
+        assert len(sources) == 2
+        for s in sources:
+            assert s.author_id is None
+            assert s.type == "podcast"
+            assert s.enabled is True
+
+    def test_sync_global_sources_skip(self, db_session):
+        """skip: true on a global source sets enabled=False."""
+        config = {
+            "engineers": [],
+            "global_sources": [
+                {"url": "https://example.com/feed", "type": "podcast", "label": "Inactive", "skip": True},
+            ],
+        }
+        sync_sources_from_yaml(db_session, config)
+        source = db_session.query(Source).one()
+        assert source.enabled is False

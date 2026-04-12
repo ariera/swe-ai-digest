@@ -21,6 +21,9 @@
     <span style="color: #888; font-size: 0.85em;">({{ article.published_at[:10] }})</span>
     {% endif %}
   </h3>
+  {% if article.attribution %}
+  <p style="margin-top: 0.1em; font-style: italic; color: #888; font-size: 0.88em;">{{ article.attribution }}</p>
+  {% endif %}
   <p style="margin-top: 0.3em;">{{ article.summary }}</p>
   {% endfor %}
   {% endfor %}

@@ -52,6 +52,9 @@
     <a href="{{ article.url }}">{{ article.title }}</a>
     {% if article.published_at %}<span class="meta">({{ article.published_at[:10] }})</span>{% endif %}
   </h3>
+  {% if article.attribution %}
+  <p class="meta" style="font-style: italic;">{{ article.attribution }}</p>
+  {% endif %}
   <p>{{ article.summary }}</p>
   {% endfor %}
   {% endfor %}

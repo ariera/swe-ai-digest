@@ -1,14 +1,19 @@
 # digest_sources.yaml
 # Source manifest for the SWE × AI Weekly Digest
 #
-# type: rss    → fetch via feedparser — fast, parallel, no browser
-# type: scrape → fetch HTML with httpx + parse with BeautifulSoup (no JS needed)
-# type: chrome → requires authenticated browser session; handled by Chrome agent
+# Engineers section:
+#   type: rss    → fetch via feedparser — fast, parallel, no browser
+#   type: scrape → fetch HTML with httpx + parse with BeautifulSoup (no JS needed)
+#   type: chrome → requires authenticated browser session; handled by Chrome agent
+#   skip: true   → (optional) disables fetching without losing the source type info
+#   aliases:     → (optional) list of alternate names/nicknames for podcast name matching;
+#                  e.g. "antirez" for Salvatore Sanfilippo, "Uncle Bob" for Robert C. Martin
+#   bio: one-line description included in the digest under each author section.
+#        Keep it to a single sentence. Source of truth is here, not engineers_list.md.
 #
-# skip: true   → (optional) disables fetching without losing the source type info
-#
-# bio: one-line description included in the digest under each author section.
-#      Keep it to a single sentence. Source of truth is here, not engineers_list.md.
+# Global sources section (not tied to a single engineer):
+#   type: podcast → fetch RSS feed; match episodes to engineers by name/alias in title+description
+#   label:        → display name used in "Featured in {label}" attribution line
 
 engineers:
 
@@ -43,6 +48,7 @@ engineers:
 
   - slug: dhh
     name: DHH
+    aliases: [David Heinemeier Hansson]
     priority: 3
     bio: "Creator of Ruby on Rails, co-founder of 37signals (Basecamp/HEY), and outspoken critic of Silicon Valley orthodoxy and AI hype."
     sources:
@@ -170,6 +176,7 @@ engineers:
 
   - slug: robert-c-martin
     name: Robert C. Martin (Uncle Bob)
+    aliases: [Uncle Bob, Bob Martin]
     priority: 13
     bio: "Author of Clean Code and The Clean Coder, co-author of the Agile Manifesto, and the foremost evangelist of SOLID principles and software craftsmanship."
     sources:
@@ -216,6 +223,7 @@ engineers:
 
   - slug: salvatore-sanfilippo
     name: Salvatore Sanfilippo (antirez)
+    aliases: [antirez]
     priority: 17
     bio: "Italian software engineer, creator of Redis — one of the world's most widely deployed in-memory data stores — and a rare voice for clarity and minimalism in systems design."
     sources:
@@ -381,3 +389,25 @@ engineers:
         type: chrome
         label: Twitter/X
         note: "evanyou.me/feed.xml is 404; Twitter is the only channel"
+
+global_sources:
+
+  - url: https://lexfridman.com/feed/podcast/
+    type: podcast
+    label: Lex Fridman Podcast
+
+  - url: https://corecursive.libsyn.com/feed
+    type: podcast
+    label: CoRecursive
+
+  - url: https://feeds.megaphone.fm/MLN2155636147
+    type: podcast
+    label: The TWIML AI Podcast
+
+  - url: https://www.dwarkeshpatel.com/feed
+    type: podcast
+    label: Dwarkesh Podcast
+
+  - url: https://feeds.buzzsprout.com/1631160.rss
+    type: podcast
+    label: Software Unscripted

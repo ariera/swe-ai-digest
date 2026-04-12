@@ -107,6 +107,8 @@ class Article(Base):
     summary = Column(Text)
     ai_relevant = Column(Boolean)
     feed_at = Column(String)
+    source_type = Column(String)    # 'rss', 'scrape', 'podcast'
+    attribution = Column(String)    # e.g. "Featured in Lex Fridman Podcast" — NULL for regular articles
 
     author = relationship("Author", back_populates="articles")
     source = relationship("Source")
@@ -123,6 +125,8 @@ class Article(Base):
         published_at: str | None = None,
         fetched_at: str | None = None,
         raw_content: str | None = None,
+        source_type: str | None = None,
+        attribution: str | None = None,
     ) -> Article | None:
         existing = session.query(cls).filter_by(url=url).first()
         if existing is not None:
@@ -135,6 +139,8 @@ class Article(Base):
             published_at=published_at,
             fetched_at=fetched_at or _now_iso(),
             raw_content=raw_content,
+            source_type=source_type,
+            attribution=attribution,
         )
         session.add(article)
         session.flush()
@@ -178,6 +184,8 @@ class Article(Base):
             "url": self.url,
             "published_at": self.published_at or self.fetched_at,
             "summary": self.summary,
+            "source_type": self.source_type,
+            "attribution": self.attribution,
         }
 
 
@@ -258,6 +266,15 @@ def sync_sources_from_yaml(session: Session, sources_config: dict) -> None:
                 label=src.get("label"),
                 enabled=not src.get("skip", False),
             )
+    for src in sources_config.get("global_sources", []):
+        Source.upsert(
+            session,
+            url=src["url"],
+            author_id=None,
+            type=src["type"],
+            label=src.get("label"),
+            enabled=not src.get("skip", False),
+        )
     session.commit()
 
 
