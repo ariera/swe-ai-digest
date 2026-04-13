@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Apr 2026 16:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 01:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Gemma 4 audio with MLX</title>
+      <link>https://simonwillison.net/2026/Apr/12/mlx-audio/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 12 Apr 2026 23:57:53 +0000</pubDate>
+      <description>Simon Willison shares a practical `uv run` recipe for running audio transcription locally on macOS using Google's Gemma 4 E2B model via MLX and mlx-vlm. He demonstrates the workflow on a short voice memo, noting minor transcription errors and their likely causes. This is relevant to engineers exploring on-device, multimodal LLM inference pipelines for speech-to-text tasks.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/12/mlx-audio/#atom-everything</guid>
+    </item>
     <item>
       <title>The Economics of Judgment</title>
       <link>https://adventures.nodeland.dev/archive/the-economics-of-judgment/</link>
