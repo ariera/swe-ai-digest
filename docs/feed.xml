@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Apr 2026 03:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 19:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Exploring the new `servo` crate</title>
+      <link>https://simonwillison.net/2026/Apr/13/servo-crate-exploration/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 13 Apr 2026 15:04:00 +0000</pubDate>
+      <description>Simon Willison uses Claude Code to explore the newly released `servo` crate, delegating tasks like building a CLI screenshot tool and investigating WebAssembly compilation feasibility. The AI agent successfully produced a working Rust tool (`servo-shot`) and a WebAssembly HTML parsing playground, though compiling Servo itself to WASM proved infeasible. This illustrates how AI coding agents can accelerate exploratory research into unfamiliar libraries.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/13/servo-crate-exploration/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Bryan Cantrill</title>
       <link>https://simonwillison.net/2026/Apr/13/bryan-cantrill/#atom-everything</link>
