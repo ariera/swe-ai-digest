@@ -36,10 +36,16 @@
   <hr>
 
   <p class="meta">
-    2026-04-01 &ndash; 2026-04-08
-    &middot; 19 articles
+    2026-04-06 &ndash; 2026-04-12
+    &middot; 4 articles
   </p>
-  <p>This week&#39;s articles cluster around four major themes. First, AI security research has reached a critical inflection point: Anthropic&#39;s restricted Claude Mythos model, Thomas Ptacek&#39;s &#34;Vulnerability Research Is Cooked,&#34; and quotes from Linux/curl/HAProxy maintainers all confirm that LLM agents are now producing high-quality, actionable vulnerability reports at industrial scale — a qualitative shift from earlier &#34;AI slop.&#34; Second, model releases continued apace: Google&#39;s Gemma 4, Z.ai&#39;s GLM-5.1, and tooling updates (llm-gemini) show the rapid cadence of open-weight and on-device model improvements. Third, practitioner reflections on AI-assisted development dominated long-form writing: Simon Willison&#39;s podcast highlights, the &#34;Eight Years / Three Months&#34; essay on agentic engineering limits, and Kent Beck/Martin Fowler&#39;s summit discussion all grapple with AI&#39;s strengths in implementation versus weaknesses in design, architecture, and verification. Finally, infrastructure strain from AI agent activity — GitHub&#39;s reliability collapse under Claude Code load — signals that existing developer platforms were not built for agent-scale throughput. Across all pieces, a shared tension emerges: AI dramatically accelerates output while simultaneously demanding more sophisticated human judgment in architecture, verification, and security response.</p>
+  <p>This digest period&#39;s articles converge on several interlocking themes about AI&#39;s role in software engineering: capability stratification, the value of firsthand experience, and the shifting economics of technical expertise.
+
+A clear thread across articles is the uneven distribution of AI capability. Willison&#39;s piece on ChatGPT voice mode illustrates how consumer-facing AI products can lag significantly behind frontier models, with B2B and coding-focused systems — driven by reinforcement learning and commercial incentives — pulling ahead. This stratification has real implications for how engineers assess and adopt AI tooling.
+
+Ronacher adds an epistemic dimension: credible judgment about AI coding agents requires sustained hands-on use, creating a discourse asymmetry where the most informed voices are easily mistaken for uncritical enthusiasts. The implication is that surface-level familiarity is insufficient for meaningful evaluation.
+
+Willison&#39;s SQLite piece offers a grounded example of AI agents handling non-trivial build tasks, while Collina provides the broadest framing: economic forces — obsolescence cycles, the Jevons Paradox, and commoditizing app layers — together elevate human judgment, domain expertise, and accountability as the durable scarce resources in an AI-augmented engineering landscape.</p>
   <hr>
 
   
@@ -49,124 +55,18 @@
   
   
   <h3>
-    <a href="https://simonwillison.net/2026/Apr/7/glm-51/#atom-everything">GLM-5.1: Towards Long-Horizon Tasks</a>
-    <span class="meta">(2026-04-07)</span>
+    <a href="https://simonwillison.net/2026/Apr/10/voice-mode-is-weaker/#atom-everything">ChatGPT voice mode is a weaker model</a>
+    <span class="meta">(2026-04-10)</span>
   </h3>
-  <p>Simon Willison evaluates Z.ai&#39;s GLM-5.1, a 754B-parameter MIT-licensed open-weight model. In his standard &#39;pelican on a bicycle&#39; SVG benchmark, the model unpromptedly generated an HTML page with embedded CSS animations — a novel behaviour for an open-weights model. When the animation broke, the model correctly diagnosed the CSS/SVG transform conflict and fixed it autonomously. Willison judges this the best SVG output he has seen from an open-weights model. For engineers tracking open-weight frontier models, GLM-5.1 represents a notable step in multi-step reasoning, self-correction, and creative code generation within a single prompt/follow-up exchange, and its MIT licence and OpenRouter availability lower the barrier to experimentation.</p>
+  
+  <p>Simon Willison highlights that ChatGPT&#39;s voice mode runs on an older GPT-4o era model (April 2024 knowledge cutoff), not OpenAI&#39;s most capable models — a fact non-obvious to many users. Citing Andrej Karpathy, he notes a growing capability gap: consumer-facing access points like voice lag far behind high-tier models (e.g., Codex) that excel in verifiable, B2B domains like coding due to reinforcement learning advantages and commercial prioritization.</p>
   
   <h3>
-    <a href="https://simonwillison.net/2026/Apr/7/project-glasswing/#atom-everything">Anthropic&#39;s Project Glasswing - restricting Claude Mythos to security researchers - sounds necessary to me</a>
-    <span class="meta">(2026-04-07)</span>
+    <a href="https://simonwillison.net/2026/Apr/11/sqlite/#atom-blogmarks">SQLite 3.53.0</a>
+    <span class="meta">(2026-04-11)</span>
   </h3>
-  <p>Willison covers Anthropic&#39;s Project Glasswing, under which their unreleased Claude Mythos model is being made available only to vetted security partners. Mythos has already found thousands of high-severity vulnerabilities across major OSes and browsers, autonomously chained multi-step exploits, and wrote working browser exploits at a near-zero failure rate compared to prior models. Anthropic and partners including AWS, Apple, Microsoft, and Google are pooling $100M in usage credits and $4M in donations to get ahead of the inevitable proliferation of these capabilities. For software engineers, this marks a qualitative threshold: AI-assisted vulnerability discovery is no longer theoretical, and the security posture of long-lived C codebases is under systematic automated pressure.</p>
   
-  <h3>
-    <a href="https://simonwillison.net/2026/Apr/6/google-ai-edge-gallery/#atom-everything">Google AI Edge Gallery</a>
-    <span class="meta">(2026-04-06)</span>
-  </h3>
-  <p>Willison reviews Google&#39;s AI Edge Gallery, the first official app from a major model vendor for running models (Gemma 4 E2B and E4B) entirely on-device on an iPhone. The E2B model, at 2.54GB, is described as fast and genuinely useful. The app supports image Q&amp;A, audio transcription, and a tool-calling &#39;skills&#39; demo against eight HTML-based interactive widgets. Willison notes the absence of persistent conversation logs as a significant UX gap. For engineers interested in on-device AI deployment, this represents a meaningful milestone: a production-quality, official vendor app that demonstrates multimodal tool-use inference running locally on consumer hardware without a server.</p>
-  
-  <h3>
-    <a href="https://simonwillison.net/2026/Apr/5/building-with-ai/#atom-blogmarks">Eight years of wanting, three months of building with AI</a>
-    <span class="meta">(2026-04-05)</span>
-  </h3>
-  <p>Willison highlights Lalit Maganti&#39;s essay on building syntaqlite — a production-grade SQLite linting/parsing library — over three months using Claude Code, after eight years of procrastination. The key findings: AI was effective at overcoming the initial inertia of tedious grammar-rule implementation and generating concrete prototypes quickly, but actively harmful for architectural decisions. Deferred design choices corroded codebase clarity, and AI&#39;s inability to evaluate subjective design questions led to wasted weeks on dead ends. The first AI-generated prototype was thrown away; the final library required extensive human-led design work. This is one of the more nuanced practitioner accounts of AI-assisted development, distinguishing where agents excel (implementation, prototyping) from where they fail (architecture, open-ended design).</p>
-  
-  <h3>
-    <a href="https://simonwillison.net/2026/Apr/5/scan-for-secrets-3/#atom-everything">scan-for-secrets 0.1</a>
-    <span class="meta">(2026-04-05)</span>
-  </h3>
-  <p>Willison describes scan-for-secrets, a Python CLI tool he built using README-driven development and Claude Code with TDD. The tool scans directories for secrets (API keys, etc.) and their common encodings (JSON-escaped, backslash-escaped variants), helping engineers safely publish Claude Code session transcripts. The development workflow — writing a detailed README first, then delegating implementation to a coding agent using red/green TDD — is itself the main AI-relevant insight. Willison demonstrates how a well-specified README doubles as a prompt specification for an agent, enabling rapid, test-verified tool creation. This is a practical example of human-in-the-loop agentic engineering for security-adjacent developer tooling.</p>
-  
-  <h3>
-    <a href="https://simonwillison.net/2026/Apr/3/vulnerability-research-is-cooked/#atom-everything">Vulnerability Research Is Cooked</a>
-    <span class="meta">(2026-04-03)</span>
-  </h3>
-  <p>Willison covers Thomas Ptacek&#39;s essay arguing that LLM agents will fundamentally disrupt vulnerability research economics within months, not years. Ptacek&#39;s argument: LLMs are uniquely well-suited to exploit development because they encode vast knowledge of bug classes and source code patterns, can brute-force testable success/failure outcomes tirelessly, and improve in step functions rather than gradually. Triggered by a podcast with Anthropic&#39;s Nicholas Carlini, the essay predicts that pointing an agent at a source tree and asking for zero-days will soon be routine. For security-focused engineers, this is a significant claim about professional disruption — exploit development as a specialisation may be automated faster than most software engineering sub-disciplines.</p>
-  
-  <h3>
-    <a href="https://simonwillison.net/2026/Apr/3/cognitive-cost/#atom-everything">The cognitive impact of coding agents</a>
-    <span class="meta">(2026-04-03)</span>
-  </h3>
-  <p>Willison shares a 48-second clip from his Lenny Rachitsky podcast appearance on the cognitive impact of coding agents, which reached over 1.1 million views. The clip touches on the mental exhaustion of managing multiple parallel agents, the addictive quality of agent-driven productivity, and the risk of burnout. While brief, its viral reach signals broad professional interest in the psychological and cognitive dimensions of agentic workflows — a topic increasingly relevant to engineering managers and individual contributors trying to set sustainable boundaries when AI tools effectively never stop working.</p>
-  
-  <h3>
-    <a href="https://simonwillison.net/2026/Apr/3/willy-tarreau/#atom-everything">Quoting Willy Tarreau</a>
-    <span class="meta">(2026-04-03)</span>
-  </h3>
-  <p>Willison quotes Willy Tarreau (HAProxy lead) reporting a dramatic increase in Linux kernel security reports — from 2–3/week two years ago, to 10/week last year (mostly AI slop), to now 5–10 valid reports per day in 2026. The volume required bringing in additional maintainers and has produced a new phenomenon: duplicate reports of the same bug found independently by different teams using different AI tools simultaneously. This first-hand account from a major open-source maintainer corroborates the broader theme of AI-driven security research reaching critical mass, and has direct implications for open-source project governance and vulnerability triage capacity.</p>
-  
-  <h3>
-    <a href="https://simonwillison.net/2026/Apr/3/daniel-stenberg/#atom-everything">Quoting Daniel Stenberg</a>
-    <span class="meta">(2026-04-03)</span>
-  </h3>
-  <p>Willison quotes curl lead developer Daniel Stenberg describing the transition in AI-generated security reports: the earlier wave of low-quality &#39;AI slop&#39; has given way to a high-volume stream of mostly accurate, high-quality reports. Stenberg reports spending hours per day handling these reports, describing the workload as &#39;intense.&#39; This short but significant data point from one of the most widely deployed open-source libraries reinforces the week&#39;s dominant theme: AI-assisted vulnerability discovery is now producing signal rather than noise at a pace that strains human review capacity in major open-source projects.</p>
-  
-  <h3>
-    <a href="https://simonwillison.net/2026/Apr/3/greg-kroah-hartman/#atom-everything">Quoting Greg Kroah-Hartman</a>
-    <span class="meta">(2026-04-03)</span>
-  </h3>
-  <p>Willison quotes Linux kernel maintainer Greg Kroah-Hartman noting that AI-generated security reports shifted abruptly from obvious low-quality &#39;slop&#39; to real, valid vulnerability reports approximately one month before the quote was published. He states that all major open-source projects are now receiving credible AI-generated reports. This quote, alongside those from Stenberg and Tarreau, forms part of a coordinated body of evidence Willison is assembling under his new &#39;ai-security-research&#39; tag. For engineers maintaining open-source projects, the implication is clear: AI-assisted security auditing has crossed a quality threshold that demands a serious institutional response.</p>
-  
-  <h3>
-    <a href="https://simonwillison.net/2026/Apr/2/lennys-podcast/#atom-everything">Highlights from my conversation about agentic engineering on Lenny&#39;s Podcast</a>
-    <span class="meta">(2026-04-02)</span>
-  </h3>
-  <p>Willison summarises his 100-minute appearance on Lenny Rachitsky&#39;s podcast, covering his views on the November 2025 inflection point in coding agent quality, career impacts (mid-career engineers most at risk), the shift of development bottlenecks from coding to testing/verification, the exhaustion of managing parallel agents, broken time-estimation intuitions, the rise of &#39;dark factory&#39; coding norms, and responsible vibe coding. He frames software engineers as bellwethers for all information workers facing AI disruption. This is one of the most comprehensive practitioner accounts of what it feels like to work at the frontier of AI-assisted engineering, covering both productivity gains and the less-discussed cognitive and professional costs.</p>
-  
-  <h3>
-    <a href="https://simonwillison.net/2026/Apr/2/gemma-4/#atom-everything">Gemma 4: Byte for byte, the most capable open models</a>
-    <span class="meta">(2026-04-02)</span>
-  </h3>
-  <p>Willison evaluates Google DeepMind&#39;s Gemma 4 family: four Apache 2.0-licensed, vision-capable reasoning models (E2B, E4B, 26B-A4B MoE, 31B) featuring Per-Layer Embeddings for on-device efficiency. He tests all sizes locally via LM Studio GGUFs, notes the 31B is broken in current GGUF form, and benchmarks SVG generation quality across model sizes. The E2B and E4B models also support native audio input, though that feature is not yet surfaced in LM Studio or Ollama. For engineers building on local or open-weight models, Gemma 4 represents a meaningful advance in the intelligence-per-parameter ratio, with multimodal capabilities (vision, audio) available even in the smallest sizes.</p>
-  
-  
-  <h2>Gergely Orosz</h2>
-  
-  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
-  
-  
-  <h3>
-    <a href="https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech">Cycles of disruption in the tech industry: with software pioneers Kent Beck &amp; Martin Fowler</a>
-    <span class="meta">(2026-04-07)</span>
-  </h3>
-  <p>Gergely Orosz summarises a Pragmatic Summit conversation between Martin Fowler and Kent Beck on AI&#39;s parallels with past technology disruptions (microprocessor, OOP, Agile). Key arguments: AI is uniquely fast in adoption compared to prior shifts; mid-career developers face the most acute disruption; AI is an amplifier, not a replacement; TDD is more relevant than ever with agents; companies are mis-measuring output over outcomes; a &#39;re-soloing&#39; of development (solo agent management replacing pair/team collaboration) is underway; and the &#39;get rid of programmers&#39; narrative is cyclically resurgent. Fowler and Beck draw on decades of experience to temper both hype and panic, offering grounded career and organisational guidance for engineers navigating the transition.</p>
-  
-  <h3>
-    <a href="https://blog.pragmaticengineer.com/the-pulse-is-github-still-best-for-ai-native-development/">The Pulse: is GitHub still best for AI-native development?</a>
-    <span class="meta">(2026-04-03)</span>
-  </h3>
-  <p>Orosz examines GitHub&#39;s deteriorating reliability — operating at roughly one-nine availability recently — attributing it primarily to infrastructure saturation from AI agent-generated load. Claude Code bot contributions to GitHub have grown 6x in three months. He profiles Pierre Computer, an AI-native git platform startup that claims 15,000 new repos per minute versus GitHub&#39;s ~230. He also covers Mitchell Hashimoto&#39;s critique that GitHub lacks a coherent AI-native strategy, and argues that GitHub&#39;s entanglement with Microsoft&#39;s internal Copilot politics has left it without the focus needed to serve agent-scale workloads. For platform engineers and engineering leaders, this is a concrete case study of how AI agent adoption is stressing foundational developer infrastructure.</p>
-  
-  <h3>
-    <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-industry-leaders-return">The Pulse: Industry leaders return to coding with AI</a>
-    <span class="meta">(2026-04-02)</span>
-  </h3>
-  <p>Orosz covers two stories of AI tools drawing non-coding founders back to hands-on development — Mark Zuckerberg shipping diffs again after 20 years, and Garry Tan coding actively at Y Combinator. He also reports that Claude Code&#39;s source code was accidentally leaked via a sourcemap file, revealing anti-distillation mechanisms and possible future features like an always-on background agent. An Anthropic DMCA strike raises the question of whether fully AI-generated code qualifies for copyright protection. For engineers, the leaked sourcemap details and the copyright question are both practically significant, touching on tool transparency and IP ownership of AI-generated codebases.</p>
-  
-  <h3>
-    <a href="https://newsletter.pragmaticengineer.com/p/scaling-uber-with-thuan-pham-ubers">Scaling Uber with Thuan Pham (Uber’s first CTO)</a>
-    <span class="meta">(2026-04-01)</span>
-  </h3>
-  <p>In this podcast episode summary, Orosz highlights Uber&#39;s first CTO Thuan Pham discussing, among other topics, how Faire currently uses &#39;swarm coding&#39; (parallel orchestrated AI agents) that has doubled some engineers&#39; output in three months. Pham identifies legacy codebases as the hardest AI use case, noting that generating greenfield code is easy but integrating AI assistance into millions of lines of existing code with complex dependencies remains genuinely difficult. He also argues that AI raises the floor for all developers but that the traditional differentiators — curiosity, fearlessness, and learning velocity — remain the key traits of great engineers. Relevant for engineers assessing realistic AI productivity claims in large-scale production contexts.</p>
-  
-  
-  <h2>Martin Fowler</h2>
-  
-  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
-  
-  
-  <h3>
-    <a href="https://martinfowler.com/fragments/2026-04-02.html">Fragments: April  2</a>
-    <span class="meta">(2026-04-02)</span>
-  </h3>
-  <p>Martin Fowler&#39;s fragments post covers four AI-relevant ideas: (1) Margaret-Anne Storey&#39;s framework distinguishing technical debt, cognitive debt, and &#39;intent debt&#39; as AI accelerates code generation faster than human understanding; (2) a Wharton paper proposing AI as &#39;System 3&#39; cognition alongside Kahneman&#39;s System 1/2, introducing the risk of &#39;cognitive surrender&#39;; (3) Ajey Gore&#39;s argument that if coding becomes free, verification becomes the expensive scarce resource, predicting organisational restructuring around validation rather than feature output; and (4) a survey of views on the future of source code in an LLM-centric world. Together, these fragments articulate a coherent emerging framework: AI externalises execution, making judgment, verification, and intent-capture the new core of software engineering.</p>
-  
-  <h3>
-    <a href="https://martinfowler.com/articles/harness-engineering.html">Harness engineering for coding agent users</a>
-    <span class="meta">(2026-04-02)</span>
-  </h3>
-  <p>Martin Fowler&#39;s site publishes Birgitta Böckeler&#39;s developed mental model for &#39;harness engineering&#39; — the practice of structuring the environment, constraints, and feedback loops around a coding agent to steer it effectively. This extends her earlier initial thoughts into a fuller framework intended to help practitioners drive coding agents more reliably. The article is directly relevant to any engineer using AI coding agents in production workflows: it formalises the emerging discipline of agent orchestration as an engineering practice in its own right, analogous to how CI/CD formalised build and deployment automation, and provides concrete mental models for thinking about agent guidance.</p>
+  <p>Simon Willison covers the SQLite 3.53.0 release, highlighting new SQL features and CLI improvements. Notably, he briefly describes using Claude Code on his phone to compile a new formatting library to WebAssembly and build an interactive playground — a concrete example of an AI coding agent being used to handle a non-trivial build task on mobile.</p>
   
   
   <h2>Armin Ronacher</h2>
@@ -175,10 +75,24 @@
   
   
   <h3>
-    <a href="https://lucumr.pocoo.org/2026/4/4/absurd-in-production/">Absurd In Production</a>
-    <span class="meta">(2026-04-04)</span>
+    <a href="https://lucumr.pocoo.org/2026/4/11/the-center-has-a-bias/">The Center Has a Bias</a>
+    <span class="meta">(2026-04-11)</span>
   </h3>
-  <p>Armin Ronacher reports five months of production experience with Absurd, his Postgres-native durable execution system designed primarily for AI agent workflows. The core design — tasks, steps, checkpoints, events — held up without fundamental rethinking. Key additions include decomposed step handles for conditional logic, task result inspection for parent/child workflow patterns, a CLI (absurdctl) for production debugging, and a bundled skill that coding agents can use to introspect workflow state. Ronacher also reflects on the changing economics of open-source libraries in the agentic era, questioning whether agents will simply build throwaway implementations rather than adopting shared libraries. For engineers building agentic systems, this is a rare detailed production retrospective on durable agent workflow infrastructure.</p>
+  
+  <p>Armin Ronacher argues that informed criticism of AI coding agents requires sustained, hands-on use — not just secondhand accounts — meaning the &#34;moderate center&#34; of opinion naturally skews toward people who have already engaged with the tools. This engagement-as-prerequisite creates an asymmetry: the most grounded critics often look indistinguishable from enthusiasts to outsiders, distorting public discourse. For engineers evaluating AI tooling, the piece is a call to treat firsthand experimentation as a prerequisite for credible judgment.</p>
+  
+  
+  <h2>Matteo Collina</h2>
+  
+  <p class="meta">Node.js TSC member, co-creator of Fastify, creator of Pino, and CTO of Platformatic — writing regularly about the Node.js ecosystem, performance, and AI&#39;s role in software development.</p>
+  
+  
+  <h3>
+    <a href="https://adventures.nodeland.dev/archive/the-economics-of-judgment/">The Economics of Judgment</a>
+    <span class="meta">(2026-04-12)</span>
+  </h3>
+  
+  <p>Collina applies an academic economic framework to AI&#39;s impact on software engineering, arguing that the &#34;Red Queen Effect&#34; (constant model obsolescence), the Jevons Paradox (cheaper AI creates more demand, not less), and the &#34;Wrapper Trap&#34; (thin app layers get displaced by improving foundation models) together make human judgment — not implementation skill — the scarce, durable resource. He contends that as AI handles more coding, the need for engineers who can evaluate correctness, understand domain context, and interpret real client needs actually grows. For software engineers, this reframes AI not as a threat to the profession but as a force that raises the premium on deep expertise and accountability.</p>
   
   
 
