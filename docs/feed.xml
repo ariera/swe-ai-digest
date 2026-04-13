@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Apr 2026 01:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 03:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Bryan Cantrill</title>
+      <link>https://simonwillison.net/2026/Apr/13/bryan-cantrill/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 13 Apr 2026 02:44:24 +0000</pubDate>
+      <description>Bryan Cantrill argues that LLMs lack the "virtue of laziness" that drives human engineers to build clean, efficient abstractions — because work has no cost to an LLM, they tend to produce bloated, low-quality systems rather than optimized ones. This matters to software engineers because it reframes a key risk of AI-assisted programming: unchecked LLM output may degrade software quality by optimizing for volume over elegance.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/13/bryan-cantrill/#atom-everything</guid>
+    </item>
     <item>
       <title>Gemma 4 audio with MLX</title>
       <link>https://simonwillison.net/2026/Apr/12/mlx-audio/#atom-everything</link>
