@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Apr 2026 19:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 22:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Steve Yegge</title>
+      <link>https://simonwillison.net/2026/Apr/13/steve-yegge/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 13 Apr 2026 20:59:45 +0000</pubDate>
+      <description>Steve Yegge argues that Google's internal AI adoption mirrors a pattern seen across the industry: ~20% agentic power users, 20% refusers, and 60% still on basic chat tools like Cursor. He warns that an 18-month industry hiring freeze has cut off the external signal that would alert Google — and similar orgs — to how far behind they've fallen in AI-driven engineering practices.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/13/steve-yegge/#atom-everything</guid>
+    </item>
     <item>
       <title>Exploring the new `servo` crate</title>
       <link>https://simonwillison.net/2026/Apr/13/servo-crate-exploration/#atom-everything</link>
