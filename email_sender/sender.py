@@ -67,17 +67,25 @@ def _group_by_author(articles: list[dict]) -> list[tuple[str, list[dict]]]:
 
 def render_digest_email(digest: dict, feed_link: str = '') -> tuple[str, str, str]:
     """Render the digest as (subject, plain_text, html)."""
-    now = datetime.now(tz=timezone.utc)
-    week_label = _week_label(now)
+    # Use period_end to derive the week label and page URL so the email subject
+    # and "read online" link match the digest content period, not the send date.
+    # (Digest runs at midnight on Monday — without this, CW16 send date would
+    # label a CW15 digest as "CW16" and link to a non-existent CW16 page.)
+    period_end_str = digest.get('period_end', '')
+    try:
+        period_dt = datetime.fromisoformat(period_end_str.replace('Z', '+00:00'))
+    except (ValueError, AttributeError):
+        period_dt = datetime.now(tz=timezone.utc)
+    week_label = _week_label(period_dt)
     subject = f"SWE AI Digest — {week_label}"
 
     ctx = {
         'week_label': week_label,
         'period_start': digest.get('period_start', '')[:10],
-        'period_end': digest.get('period_end', '')[:10],
+        'period_end': period_end_str[:10],
         'global_summary': digest.get('global_summary', ''),
         'authors': _group_by_author(digest.get('articles', [])),
-        'page_url': _digest_page_url(feed_link, now) if feed_link else '',
+        'page_url': _digest_page_url(feed_link, period_dt) if feed_link else '',
     }
 
     html = _jinja_env.get_template('email.html').render(**ctx)
