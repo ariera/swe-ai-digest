@@ -5,6 +5,8 @@ from unittest.mock import MagicMock, patch
 import pytest
 
 from ai.digest import (
+    ARTICLE_USER_PROMPT_TEMPLATE,
+    PODCAST_ARTICLE_USER_PROMPT_TEMPLATE,
     build_summary_text,
     generate_global_summary,
     summarize_article,
@@ -91,6 +93,53 @@ class TestSummarizeArticle:
             with patch('ai.digest.time.sleep'):
                 with pytest.raises(RuntimeError, match="failed after 2 attempts"):
                     summarize_article(article, model='test', max_tokens=1024, max_retries=2, api_key='k')
+
+    def test_podcast_source_type_uses_podcast_prompt(self):
+        """When source_type='podcast', the podcast-specific prompt must be sent to the API."""
+        article = {
+            'author': 'Alice',
+            'title': 'Alice on The AI Podcast',
+            'url': 'https://podcast.com/ep1#engineer=alice',
+            'published_at': '2026-04-01',
+            'content': 'Alice discusses her AI workflow.',
+            'source_type': 'podcast',
+            'attribution': 'Featured in The AI Podcast',
+        }
+        mock_response = _mock_tool_response('submit_article_result', {
+            'url': 'https://podcast.com/ep1#engineer=alice',
+            'ai_relevant': True,
+            'summary': 'Alice talks about AI on the podcast.',
+        })
+        with patch('ai.digest.anthropic.Anthropic') as MockClient:
+            mock_create = MockClient.return_value.messages.create
+            mock_create.return_value = mock_response
+            summarize_article(article, model='test', max_tokens=1024, max_retries=1, api_key='k',
+                              source_type='podcast')
+            call_kwargs = mock_create.call_args
+            user_message = call_kwargs[1]['messages'][0]['content']
+        # The podcast prompt mentions "Podcast episode from" — the regular prompt does not
+        assert 'Podcast episode from' in user_message
+
+    def test_regular_source_type_uses_standard_prompt(self):
+        """When source_type is None or 'rss', the standard article prompt is used."""
+        article = {
+            'author': 'Alice',
+            'title': 'Regular Blog Post',
+            'url': 'https://alice.com/blog',
+            'content': 'AI tools review.',
+        }
+        mock_response = _mock_tool_response('submit_article_result', {
+            'url': 'https://alice.com/blog',
+            'ai_relevant': True,
+            'summary': 'Summary.',
+        })
+        with patch('ai.digest.anthropic.Anthropic') as MockClient:
+            mock_create = MockClient.return_value.messages.create
+            mock_create.return_value = mock_response
+            summarize_article(article, model='test', max_tokens=1024, max_retries=1, api_key='k')
+            call_kwargs = mock_create.call_args
+            user_message = call_kwargs[1]['messages'][0]['content']
+        assert 'Podcast episode from' not in user_message
 
 
 class TestGenerateGlobalSummary:

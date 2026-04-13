@@ -233,6 +233,67 @@ async def fetch_scrape(
         return [], f"Error scraping {url}: {e}"
 
 
+# ── Podcast fetcher ───────────────────────────────────────────────────────────
+
+async def fetch_podcast(
+    client: httpx.AsyncClient,
+    source: dict,
+    engineer_index: dict,
+    cutoff: datetime,
+    max_content_words: int = 2000,
+) -> tuple[list[dict], str | None]:
+    """Fetch a podcast RSS feed and match episodes to engineers by name.
+
+    Each episode that mentions a known engineer (in title or description) yields
+    one article per matched engineer. URLs are disambiguated with an
+    `#engineer=<slug>` fragment so the UNIQUE constraint on articles.url is
+    satisfied when an episode matches multiple engineers.
+    """
+    articles = []
+    url = source['url']
+    label = source.get('label', url)
+    try:
+        resp = await client.get(url, timeout=20, follow_redirects=True)
+        resp.raise_for_status()
+        feed = feedparser.parse(resp.content)
+        if feed.bozo and not feed.entries:
+            return [], f"Invalid podcast feed at {url}: {feed.bozo_exception}"
+        for entry in feed.entries:
+            pub = entry_date(entry)
+            if pub and pub < cutoff:
+                continue
+            episode_url = getattr(entry, 'link', '') or url
+            title = getattr(entry, 'title', '(no title)').strip()
+            description = entry_content_for_ai(entry, max_words=max_content_words)
+            search_text = f"{title} {description}"
+            matched = match_engineers_in_text(search_text, engineer_index)
+            for eng in matched:
+                slug = eng['slug']
+                # Append fragment to satisfy articles.url UNIQUE constraint
+                deduped_url = f"{episode_url}#engineer={slug}"
+                articles.append({
+                    'engineer': eng['name'],
+                    'slug': slug,
+                    'priority': eng.get('priority', 99),
+                    'bio': eng.get('bio', ''),
+                    'source_type': 'podcast',
+                    'source_label': label,
+                    'source_url': url,
+                    'title': title,
+                    'url': deduped_url,
+                    'published': pub.isoformat() if pub else None,
+                    'summary': entry_summary(entry),
+                    'content': description,
+                })
+        return articles, None
+    except httpx.TimeoutException:
+        return [], f"Timeout fetching podcast {url}"
+    except httpx.HTTPStatusError as e:
+        return [], f"HTTP {e.response.status_code} fetching podcast {url}"
+    except Exception as e:
+        return [], f"Error fetching podcast {url}: {e}"
+
+
 # ── Main fetcher ───────────────────────────────────────────────────────────────
 
 async def fetch_all(
@@ -241,16 +302,19 @@ async def fetch_all(
     max_priority: int | None = None,
     max_content_words: int = 2000,
 ) -> tuple[list[dict], list[str], list[dict]]:
-    """Run all rss/scrape fetches concurrently; collect chrome-only sources."""
+    """Run all rss/scrape/podcast fetches concurrently; collect chrome-only sources."""
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
                       'AppleWebKit/537.36 (KHTML, like Gecko) '
                       'Chrome/120.0.0.0 Safari/537.36'
     }
+    engineer_index = build_engineer_index(sources_config)
+
     async with httpx.AsyncClient(headers=headers, timeout=20, follow_redirects=True) as client:
         tasks = []
-        task_meta = []
+        task_meta = []  # list of str labels for error reporting
         chrome_sources = []
+
         for eng in sources_config.get('engineers', []):
             priority = eng.get('priority', 99)
             if max_priority is not None and priority > max_priority:
@@ -259,10 +323,10 @@ async def fetch_all(
                 stype = src.get('type', 'skip')
                 if stype == 'rss':
                     tasks.append(fetch_rss(client, eng, src, cutoff, max_content_words))
-                    task_meta.append(eng)
+                    task_meta.append(eng['name'])
                 elif stype == 'scrape':
                     tasks.append(fetch_scrape(client, eng, src, cutoff, max_content_words))
-                    task_meta.append(eng)
+                    task_meta.append(eng['name'])
                 elif stype == 'chrome':
                     chrome_sources.append({
                         'engineer': eng['name'],
@@ -271,19 +335,26 @@ async def fetch_all(
                         'label': src.get('label', ''),
                         'note': src.get('note', ''),
                     })
+
+        for src in sources_config.get('global_sources', []):
+            stype = src.get('type', 'skip')
+            if stype == 'podcast':
+                tasks.append(fetch_podcast(client, src, engineer_index, cutoff, max_content_words))
+                task_meta.append(f"podcast:{src.get('label', src['url'])}")
+
         results = await asyncio.gather(*tasks, return_exceptions=True)
 
     all_articles: list[dict] = []
     errors: list[str] = []
     for i, result in enumerate(results):
-        eng = task_meta[i]
+        label = task_meta[i]
         if isinstance(result, Exception):
-            errors.append(f"{eng['name']}: {result}")
+            errors.append(f"{label}: {result}")
         else:
             articles, error = result
             all_articles.extend(articles)
             if error:
-                errors.append(f"{eng['name']}: {error}")
+                errors.append(f"{label}: {error}")
 
     return all_articles, errors, chrome_sources
 
@@ -300,8 +371,57 @@ def load_sources(path: str) -> dict:
 
 
 def build_engineer_index(sources_config: dict) -> dict:
-    """Build a lowercase name → engineer config dict for O(1) lookup."""
-    return {
-        eng['name'].lower(): eng
-        for eng in sources_config.get('engineers', [])
-    }
+    """Build a lowercase name/alias → engineer config dict for name matching.
+
+    Indexes:
+    - The canonical name (lowercase), e.g. "simon willison"
+    - The canonical name without parenthetical suffix, e.g. "salvatore sanfilippo"
+      for an engineer named "Salvatore Sanfilippo (antirez)"
+    - Each entry in the optional `aliases` list, e.g. "antirez", "uncle bob"
+
+    If two engineers share a key, a warning is logged and the first wins.
+    """
+    import logging
+    index: dict[str, dict] = {}
+
+    def _add(key: str, eng: dict) -> None:
+        key = key.strip().lower()
+        if not key:
+            return
+        if key in index:
+            logging.warning(
+                "build_engineer_index: alias collision for %r — %s vs %s; keeping first",
+                key, index[key]['name'], eng['name'],
+            )
+            return
+        index[key] = eng
+
+    for eng in sources_config.get('engineers', []):
+        name = eng['name']
+        _add(name, eng)
+        # Also index name without parenthetical: "Robert C. Martin (Uncle Bob)" → "robert c. martin"
+        if '(' in name:
+            _add(name[:name.index('(')], eng)
+        for alias in eng.get('aliases', []):
+            _add(alias, eng)
+
+    return index
+
+
+def match_engineers_in_text(text: str, engineer_index: dict) -> list[dict]:
+    """Return deduplicated list of engineer dicts whose name/alias appears in text.
+
+    Case-insensitive substring match. Only whole-alias keys are checked — no
+    partial/first-name matching (too many false positives).
+    """
+    text_lower = text.lower()
+    seen_slugs: set[str] = set()
+    matched: list[dict] = []
+    for key, eng in engineer_index.items():
+        slug = eng['slug']
+        if slug in seen_slugs:
+            continue
+        if key in text_lower:
+            seen_slugs.add(slug)
+            matched.append(eng)
+    return matched
