@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Apr 2026 20:00:23 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 22:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Trusted access for the next era of cyber defense</title>
+      <link>https://simonwillison.net/2026/Apr/14/trusted-access-openai/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 14 Apr 2026 21:23:59 +0000</pubDate>
+      <description>Simon Willison covers OpenAI's introduction of GPT-5.4-Cyber, a fine-tuned model variant designed for defensive cybersecurity use cases, alongside a "Trusted Access for Cyber" identity-verification program offering reduced-friction access to security-focused AI tools. Willison notes the announcement appears to be a competitive response to Anthropic's Project Glasswing, though he finds the two programs functionally similar in their access requirements.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/14/trusted-access-openai/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Trusted access for the next era of cyber defense</title>
+      <link>https://simonwillison.net/2026/Apr/14/trusted-access-openai/#atom-blogmarks</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 14 Apr 2026 21:23:59 +0000</pubDate>
+      <description>Simon Willison covers OpenAI's launch of GPT-5.4-Cyber, a fine-tuned model variant designed to enable defensive cybersecurity use cases, alongside a "Trusted Access for Cyber" identity-verification program. He notes the announcement is difficult to parse and draws a parallel to Anthropic's Project Glasswing, suggesting both companies are converging on similar gated-access approaches for security-sensitive AI capabilities.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/14/trusted-access-openai/#atom-blogmarks</guid>
+    </item>
     <item>
       <title>Cybersecurity Looks Like Proof of Work Now</title>
       <link>https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-everything</link>
