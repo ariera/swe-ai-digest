@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Apr 2026 22:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 14:00:25 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://toot.thoughtworks.com/@mfowler/116403268047338176</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 14 Apr 2026 13:21:53 +0000</pubDate>
+      <description>Fowler's fragments post references discussions on TDD and prompts alongside a pragmatic summit video with Kent Beck and Gergely Orosz, touching on AI-adjacent software engineering practices. The mention of prompts in the context of TDD suggests exploration of how test-driven development intersects with AI-assisted coding workflows, a topic of growing relevance to practicing engineers.</description>
+      <guid isPermaLink="true">https://toot.thoughtworks.com/@mfowler/116403268047338176</guid>
+    </item>
+    <item>
+      <title>Fragments: April 14</title>
+      <link>https://martinfowler.com/fragments/2026-04-14.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 14 Apr 2026 13:16:00 +0000</pubDate>
+      <description>Fowler curates several AI-related reflections: LLMs lack the "laziness" virtue that drives good abstraction, risking bloated codebases and vanity metrics; Jessica Kerr's TDD-style approach to prompting agents (instructions + verification); and the argument that safe AI autonomy requires designing in deliberate restraint and uncertainty-awareness, not just decisiveness. Together, these highlight concrete risks and design principles for AI-assisted software engineering.</description>
+      <guid isPermaLink="true">https://martinfowler.com/fragments/2026-04-14.html</guid>
+    </item>
     <item>
       <title>Quoting Steve Yegge</title>
       <link>https://simonwillison.net/2026/Apr/13/steve-yegge/#atom-everything</link>
