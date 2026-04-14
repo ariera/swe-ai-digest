@@ -125,12 +125,15 @@ def update_feed(digest: dict, feed_cfg: dict, repo_path: str) -> None:
     for article in digest.get('articles', []):
         if article['url'] in existing_urls:
             continue
+        description = article['summary'] or ''
+        if article.get('attribution'):
+            description = f"{article['attribution']}. {description}"
         new_items.append({
             'title': article['title'],
             'url': article['url'],
             'author': article['author'],
             'pub_date': _to_rss_date(article.get('published_at')),
-            'description': article['summary'],
+            'description': description,
             'guid': article['url'],
         })
 

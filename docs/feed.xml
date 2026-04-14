@@ -6,9 +6,113 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Apr 2026 15:22:29 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 20:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Cybersecurity Looks Like Proof of Work Now</title>
+      <link>https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 14 Apr 2026 19:41:48 +0000</pubDate>
+      <description>Willison highlights that AI models like Claude Mythos are so effective at finding security vulnerabilities that cybersecurity becomes a token-spending arms race — defenders must outspend attackers on AI-driven exploit discovery. A notable implication for software engineers is that open-source libraries gain renewed value, since the AI security cost of hardening them is amortized across all users, countering the "vibe-coding" argument that cheap AI-generated replacements make OSS less attractive.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Cybersecurity Looks Like Proof of Work Now</title>
+      <link>https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-blogmarks</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 14 Apr 2026 19:41:48 +0000</pubDate>
+      <description>Simon Willison highlights that Claude Mythos' effectiveness at finding security vulnerabilities scales with token spend, turning cybersecurity into an economic arms race between defenders and attackers. A key implication is that open source libraries gain renewed value, since the cost of AI-powered security reviews can be amortized across all users — directly countering the narrative that cheap vibe-coded replacements make OSS less relevant.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-blogmarks</guid>
+    </item>
+    <item>
+      <title>The impact of AI on software engineers in 2026: key trends</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-impact-of-ai-on-software-engineers-2026</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 14 Apr 2026 16:01:02 +0000</pubDate>
+      <description>Drawing on 900+ survey responses, Gergely Orosz identifies three engineer archetypes shaped by AI adoption — "Builders" (quality-focused, frustrated by AI slop), "Shippers" (productivity-focused, positive but accruing tech debt), and "Coasters" (upleveling fast but generating low-quality output). The piece also surfaces mounting cost concerns, widespread usage-limit friction, and a blurring of engineer/engineering-manager roles as orchestration and context-switching increase.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-impact-of-ai-on-software-engineers-2026</guid>
+    </item>
+    <item>
+      <title>(no title)</title>
+      <link>https://toot.thoughtworks.com/@mfowler/116403268047338176</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 14 Apr 2026 13:21:53 +0000</pubDate>
+      <description>Fowler's fragments post references discussions on TDD and prompts alongside a pragmatic summit video with Kent Beck and Gergely Orosz, touching on AI-adjacent software engineering practices. The mention of prompts in the context of TDD suggests exploration of how test-driven development intersects with AI-assisted coding workflows, a topic of growing relevance to practicing engineers.</description>
+      <guid isPermaLink="true">https://toot.thoughtworks.com/@mfowler/116403268047338176</guid>
+    </item>
+    <item>
+      <title>Fragments: April 14</title>
+      <link>https://martinfowler.com/fragments/2026-04-14.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 14 Apr 2026 13:16:00 +0000</pubDate>
+      <description>Fowler curates several AI-related reflections: LLMs lack the "laziness" virtue that drives good abstraction, risking bloated codebases and vanity metrics; Jessica Kerr's TDD-style approach to prompting agents (instructions + verification); and the argument that safe AI autonomy requires designing in deliberate restraint and uncertainty-awareness, not just decisiveness. Together, these highlight concrete risks and design principles for AI-assisted software engineering.</description>
+      <guid isPermaLink="true">https://martinfowler.com/fragments/2026-04-14.html</guid>
+    </item>
+    <item>
+      <title>Quoting Steve Yegge</title>
+      <link>https://simonwillison.net/2026/Apr/13/steve-yegge/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 13 Apr 2026 20:59:45 +0000</pubDate>
+      <description>Steve Yegge argues that Google's internal AI adoption mirrors a pattern seen across the industry: ~20% agentic power users, 20% refusers, and 60% still on basic chat tools like Cursor. He warns that an 18-month industry hiring freeze has cut off the external signal that would alert Google — and similar orgs — to how far behind they've fallen in AI-driven engineering practices.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/13/steve-yegge/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Exploring the new `servo` crate</title>
+      <link>https://simonwillison.net/2026/Apr/13/servo-crate-exploration/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 13 Apr 2026 15:04:00 +0000</pubDate>
+      <description>Simon Willison uses Claude Code to explore the newly released `servo` crate, delegating tasks like building a CLI screenshot tool and investigating WebAssembly compilation feasibility. The AI agent successfully produced a working Rust tool (`servo-shot`) and a WebAssembly HTML parsing playground, though compiling Servo itself to WASM proved infeasible. This illustrates how AI coding agents can accelerate exploratory research into unfamiliar libraries.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/13/servo-crate-exploration/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Quoting Bryan Cantrill</title>
+      <link>https://simonwillison.net/2026/Apr/13/bryan-cantrill/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 13 Apr 2026 02:44:24 +0000</pubDate>
+      <description>Bryan Cantrill argues that LLMs lack the "virtue of laziness" that drives human engineers to build clean, efficient abstractions — because work has no cost to an LLM, they tend to produce bloated, low-quality systems rather than optimized ones. This matters to software engineers because it reframes a key risk of AI-assisted programming: unchecked LLM output may degrade software quality by optimizing for volume over elegance.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/13/bryan-cantrill/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Gemma 4 audio with MLX</title>
+      <link>https://simonwillison.net/2026/Apr/12/mlx-audio/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 12 Apr 2026 23:57:53 +0000</pubDate>
+      <description>Simon Willison shares a practical `uv run` recipe for running audio transcription locally on macOS using Google's Gemma 4 E2B model via MLX and mlx-vlm. He demonstrates the workflow on a short voice memo, noting minor transcription errors and their likely causes. This is relevant to engineers exploring on-device, multimodal LLM inference pipelines for speech-to-text tasks.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/12/mlx-audio/#atom-everything</guid>
+    </item>
+    <item>
+      <title>The Economics of Judgment</title>
+      <link>https://adventures.nodeland.dev/archive/the-economics-of-judgment/</link>
+      <author>Matteo Collina</author>
+      <pubDate>Sun, 12 Apr 2026 15:00:00 +0000</pubDate>
+      <description>Collina applies an academic economic framework to AI's impact on software engineering, arguing that the "Red Queen Effect" (constant model obsolescence), the Jevons Paradox (cheaper AI creates more demand, not less), and the "Wrapper Trap" (thin app layers get displaced by improving foundation models) together make human judgment — not implementation skill — the scarce, durable resource. He contends that as AI handles more coding, the need for engineers who can evaluate correctness, understand domain context, and interpret real client needs actually grows. For software engineers, this reframes AI not as a threat to the profession but as a force that raises the premium on deep expertise and accountability.</description>
+      <guid isPermaLink="true">https://adventures.nodeland.dev/archive/the-economics-of-judgment/</guid>
+    </item>
+    <item>
+      <title>SQLite 3.53.0</title>
+      <link>https://simonwillison.net/2026/Apr/11/sqlite/#atom-blogmarks</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 11 Apr 2026 19:56:53 +0000</pubDate>
+      <description>Simon Willison covers the SQLite 3.53.0 release, highlighting new SQL features and CLI improvements. Notably, he briefly describes using Claude Code on his phone to compile a new formatting library to WebAssembly and build an interactive playground — a concrete example of an AI coding agent being used to handle a non-trivial build task on mobile.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/11/sqlite/#atom-blogmarks</guid>
+    </item>
+    <item>
+      <title>The Center Has a Bias</title>
+      <link>https://lucumr.pocoo.org/2026/4/11/the-center-has-a-bias/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Sat, 11 Apr 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher argues that informed criticism of AI coding agents requires sustained, hands-on use — not just secondhand accounts — meaning the "moderate center" of opinion naturally skews toward people who have already engaged with the tools. This engagement-as-prerequisite creates an asymmetry: the most grounded critics often look indistinguishable from enthusiasts to outsiders, distorting public discourse. For engineers evaluating AI tooling, the piece is a call to treat firsthand experimentation as a prerequisite for credible judgment.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/4/11/the-center-has-a-bias/</guid>
+    </item>
+    <item>
+      <title>ChatGPT voice mode is a weaker model</title>
+      <link>https://simonwillison.net/2026/Apr/10/voice-mode-is-weaker/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 10 Apr 2026 15:56:02 +0000</pubDate>
+      <description>Simon Willison highlights that ChatGPT's voice mode runs on an older GPT-4o era model (April 2024 knowledge cutoff), not OpenAI's most capable models — a fact non-obvious to many users. Citing Andrej Karpathy, he notes a growing capability gap: consumer-facing access points like voice lag far behind high-tier models (e.g., Codex) that excel in verifiable, B2B domains like coding due to reinforcement learning advantages and commercial prioritization.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/10/voice-mode-is-weaker/#atom-everything</guid>
+    </item>
     <item>
       <title>Writes and Write-Nots</title>
       <link>http://www.paulgraham.com/writes.html</link>

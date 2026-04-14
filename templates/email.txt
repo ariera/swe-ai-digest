@@ -17,7 +17,8 @@ THIS WEEK IN AI × SOFTWARE ENGINEERING
 {% for article in author_articles %}
   {{ article.title }}
   {{ article.url }}{% if article.published_at %}  ({{ article.published_at[:10] }}){% endif %}
-
+{% if article.attribution %}  {{ article.attribution }}
+{% endif %}
   {{ article.summary }}
 
 {% endfor %}

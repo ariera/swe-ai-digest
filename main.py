@@ -251,12 +251,19 @@ def cmd_feed(args: argparse.Namespace) -> int:
     # 5. Insert articles into DB (dedup via URL unique constraint)
     new_count = 0
     for a in all_articles:
-        author_slug = _engineer_name_to_slug(sources_config, a.get('engineer', ''))
+        # Podcast articles carry their own slug; regular articles need a name lookup
+        author_slug = a.get('slug') or _engineer_name_to_slug(sources_config, a.get('engineer', ''))
         author = session.query(Author).filter_by(slug=author_slug).first() if author_slug else None
         if author is None:
             continue
         source_url = a.get('source_url', '')
         source = session.query(Source).filter_by(url=source_url).first()
+        source_type = a.get('source_type')
+        attribution = (
+            f"Featured in {a['source_label']}"
+            if source_type == 'podcast' and a.get('source_label')
+            else None
+        )
         article = Article.insert_if_new(
             session,
             url=a['url'],
@@ -265,6 +272,8 @@ def cmd_feed(args: argparse.Namespace) -> int:
             title=a['title'],
             published_at=a.get('published'),
             raw_content=a.get('content'),
+            source_type=source_type,
+            attribution=attribution,
         )
         if article is not None:
             new_count += 1
@@ -287,6 +296,8 @@ def cmd_feed(args: argparse.Namespace) -> int:
             'url': article.url,
             'published_at': article.published_at,
             'content': article.raw_content,
+            'source_type': article.source_type,
+            'attribution': article.attribution,
         }
         try:
             result = summarize_article(
@@ -295,6 +306,7 @@ def cmd_feed(args: argparse.Namespace) -> int:
                 max_tokens=cfg['anthropic']['max_tokens'],
                 max_retries=cfg['anthropic']['max_retries'],
                 api_key=anthropic_api_key,
+                source_type=article.source_type,
             )
             article.mark_ai_result(session, summary=result.get('summary'), ai_relevant=result['ai_relevant'])
             session.commit()

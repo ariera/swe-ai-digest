@@ -1,18 +1,18 @@
 [
   {
+    "cw": "2026-CW15",
+    "period_start": "2026-04-06",
+    "period_end": "2026-04-12",
+    "articles_count": 4,
+    "summary_short": "This digest period's articles converge on several interlocking themes about AI's role in software engineering: capability stratification, the value of firsthand experience, and the shifting economics \u2026",
+    "page": "digests/2026-CW15.html"
+  },
+  {
     "cw": "2026-CW14",
     "period_start": "2026-03-30",
     "period_end": "2026-04-05",
     "articles_count": 44,
     "summary_short": "This digest period is dominated by two converging themes: the rapid maturation of AI coding agents and a sharpening reckoning with their second-order consequences.\n\nOn capability, multiple practitione\u2026",
     "page": "digests/2026-CW14.html"
-  },
-  {
-    "cw": "2026-CW15",
-    "period_start": "2026-04-01",
-    "period_end": "2026-04-08",
-    "articles_count": 19,
-    "summary_short": "This week's articles cluster around four major themes. First, AI security research has reached a critical inflection point: Anthropic's restricted Claude Mythos model, Thomas Ptacek's \"Vulnerability R\u2026",
-    "page": "digests/2026-CW15.html"
   }
 ]

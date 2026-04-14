@@ -60,6 +60,34 @@ Content:
 {content}\
 """
 
+PODCAST_ARTICLE_USER_PROMPT_TEMPLATE = """\
+Evaluate the following podcast episode description for AI relevance.
+
+This is a podcast episode, not a written article. The "content" field is the episode \
+description or show notes — typically shorter marketing copy.
+
+Relevance bar: if a known software engineer is a guest AND the episode topic substantively \
+touches on AI (tools, workflows, impact on engineering, models, agents, etc.), that is \
+sufficient for AI relevance. The bar is lower than for written articles — a 15-minute \
+podcast segment on AI counts.
+
+If AI-relevant, write a concise summary of 1–2 sentences (25–40 words) that:
+1. Names the engineer guest and the podcast
+2. Briefly states the AI angle discussed
+
+If NOT AI-relevant, set ai_relevant to false and leave summary null.
+
+Call the submit_article_result tool with your assessment.
+
+Author: {author}
+Title: {title}
+URL: {url}
+Published: {published}
+Source: Podcast episode from {source_label}
+Content:
+{content}\
+"""
+
 SUBMIT_ARTICLE_RESULT_TOOL: dict[str, Any] = {
     'name': 'submit_article_result',
     'description': 'Submit the evaluation result for a single article.',
@@ -90,6 +118,7 @@ def summarize_article(
     max_tokens: int,
     max_retries: int,
     api_key: str,
+    source_type: str | None = None,
 ) -> dict:
     """Evaluate a single article for AI relevance and summarize if relevant.
 
@@ -98,13 +127,24 @@ def summarize_article(
     """
     client = anthropic.Anthropic(api_key=api_key)
     content = article_dict.get('content') or article_dict.get('raw_content') or '(no content available)'
-    user_message = ARTICLE_USER_PROMPT_TEMPLATE.format(
-        author=article_dict.get('author') or article_dict.get('engineer', 'Unknown'),
-        title=article_dict['title'],
-        url=article_dict['url'],
-        published=article_dict.get('published_at') or article_dict.get('published', 'unknown'),
-        content=content,
-    )
+    effective_source_type = source_type or article_dict.get('source_type')
+    if effective_source_type == 'podcast':
+        user_message = PODCAST_ARTICLE_USER_PROMPT_TEMPLATE.format(
+            author=article_dict.get('author') or article_dict.get('engineer', 'Unknown'),
+            title=article_dict['title'],
+            url=article_dict['url'],
+            published=article_dict.get('published_at') or article_dict.get('published', 'unknown'),
+            source_label=article_dict.get('attribution') or article_dict.get('source_label', 'Unknown Podcast'),
+            content=content,
+        )
+    else:
+        user_message = ARTICLE_USER_PROMPT_TEMPLATE.format(
+            author=article_dict.get('author') or article_dict.get('engineer', 'Unknown'),
+            title=article_dict['title'],
+            url=article_dict['url'],
+            published=article_dict.get('published_at') or article_dict.get('published', 'unknown'),
+            content=content,
+        )
 
     last_error: Exception | None = None
     for attempt in range(1, max_retries + 1):
