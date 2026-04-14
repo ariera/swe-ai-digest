@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Apr 2026 17:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 20:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Cybersecurity Looks Like Proof of Work Now</title>
+      <link>https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 14 Apr 2026 19:41:48 +0000</pubDate>
+      <description>Willison highlights that AI models like Claude Mythos are so effective at finding security vulnerabilities that cybersecurity becomes a token-spending arms race — defenders must outspend attackers on AI-driven exploit discovery. A notable implication for software engineers is that open-source libraries gain renewed value, since the AI security cost of hardening them is amortized across all users, countering the "vibe-coding" argument that cheap AI-generated replacements make OSS less attractive.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Cybersecurity Looks Like Proof of Work Now</title>
+      <link>https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-blogmarks</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 14 Apr 2026 19:41:48 +0000</pubDate>
+      <description>Simon Willison highlights that Claude Mythos' effectiveness at finding security vulnerabilities scales with token spend, turning cybersecurity into an economic arms race between defenders and attackers. A key implication is that open source libraries gain renewed value, since the cost of AI-powered security reviews can be amortized across all users — directly countering the narrative that cheap vibe-coded replacements make OSS less relevant.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-blogmarks</guid>
+    </item>
     <item>
       <title>The impact of AI on software engineers in 2026: key trends</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-impact-of-ai-on-software-engineers-2026</link>
