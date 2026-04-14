@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Apr 2026 14:00:25 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 17:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The impact of AI on software engineers in 2026: key trends</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-impact-of-ai-on-software-engineers-2026</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 14 Apr 2026 16:01:02 +0000</pubDate>
+      <description>Drawing on 900+ survey responses, Gergely Orosz identifies three engineer archetypes shaped by AI adoption — "Builders" (quality-focused, frustrated by AI slop), "Shippers" (productivity-focused, positive but accruing tech debt), and "Coasters" (upleveling fast but generating low-quality output). The piece also surfaces mounting cost concerns, widespread usage-limit friction, and a blurring of engineer/engineering-manager roles as orchestration and context-switching increase.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-impact-of-ai-on-software-engineers-2026</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://toot.thoughtworks.com/@mfowler/116403268047338176</link>
