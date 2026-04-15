@@ -96,7 +96,7 @@ sources for content *featuring* any engineer on the list — even if they didn't
 publish it themselves.
 
 **Examples:**
-- **Podcasts:** Lex Fridman, Pragmatic Engineer podcast, CoRecursive, Software
+- **Podcasts:** Lex Fridman, drawkesh podcast, Pragmatic Engineer podcast, CoRecursive, Software
   Unscripted, The TWIML AI Podcast — guests are often on the engineer list
 - **Conference talks:** YouTube channels of QCon, Strange Loop, GopherCon, GOTO,
   CraftConf — engineers give talks there that never appear on their blogs
@@ -170,6 +170,40 @@ the current SMTP email + GitHub Pages setup.
   enabled via config (`backend: substack` or a multi-backend list).
 - Does moving to Substack change how we think about the GitHub Pages site — is it
   still needed, or does Substack's archive replace it?
+
+---
+
+## 8. Cross-source deduplication for the same author
+
+**The problem:** Many engineers post on a primary source (e.g., their blog) and then
+link to it from secondary sources (Mastodon, Bluesky, Twitter). The pipeline fetches
+both and treats them as separate articles. This creates noise — the same content
+appears twice (or more) under the same author, once as the full article and once as
+a short social post linking to it.
+
+**Examples:**
+- Simon Willison publishes a blog post, then toots a link to it on Mastodon
+- An engineer publishes on Substack, then posts the link on Bluesky
+
+**Why current dedup doesn't catch it:** The DB deduplicates by exact URL. But the
+blog post URL and the Mastodon/Bluesky post URL are different — the social post has
+its own permalink, even though its content is just a link to the blog post.
+
+**Possible strategies:**
+- **URL extraction:** When processing a social media post, extract any URLs from the
+  content. If a URL matches an article already in the DB from the same author, skip
+  the social post.
+- **AI-assisted dedup:** During the AI summarization step, pass the article's extracted
+  URLs and let the model flag duplicates. More expensive but handles edge cases.
+- **Source priority:** Assign priority to source types (blog > newsletter > mastodon >
+  bluesky). When two articles from the same author share a URL in their content,
+  keep only the highest-priority source's version.
+- **Time-window grouping:** If the same author has two articles within a short window
+  (e.g., 24h) where one's content is mostly a link to the other, merge them.
+
+**Open questions:**
+- Should the social post be dropped entirely, or kept but linked to the primary?
+- What about cases where the social post adds meaningful commentary beyond just linking?
 
 ---
 

@@ -277,6 +277,9 @@ def cmd_feed(args: argparse.Namespace) -> int:
         )
         if article is not None:
             new_count += 1
+            logger.debug("Inserted: [%s] %s", a.get('engineer', a.get('slug', '?')), a['url'])
+        else:
+            logger.debug("Skipped (duplicate): [%s] %s", a.get('engineer', a.get('slug', '?')), a['url'])
     session.commit()
     logger.info("Inserted %d new articles (%d already in DB)", new_count, len(all_articles) - new_count)
 

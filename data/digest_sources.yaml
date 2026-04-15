@@ -14,6 +14,20 @@
 # Global sources section (not tied to a single engineer):
 #   type: podcast → fetch RSS feed; match episodes to engineers by name/alias in title+description
 #   label:        → display name used in "Featured in {label}" attribution line
+#
+# Source curation guidelines:
+#
+#   Prefer the most comprehensive feed over multiple overlapping ones.
+#   e.g. simonwillison.net/atom/everything already includes blogmarks —
+#   adding atom/links as well causes duplicates (different URL fragments
+#   bypass the UNIQUE constraint but the same content appears twice in the digest).
+#
+#   Avoid social/Mastodon sources when the author uses them only to announce
+#   their own blog posts (Martin Fowler is a known case). Keep social sources
+#   only when they carry original content not present in the RSS feed.
+#
+#   To disable a source without losing config history, use skip: true rather
+#   than deleting the entry.
 
 engineers:
 
@@ -27,9 +41,6 @@ engineers:
       - url: https://simonwillison.net/atom/everything
         type: rss
         label: blog (full feed)
-      - url: https://simonwillison.net/atom/links
-        type: rss
-        label: blog (links only)
       - url: https://fosstodon.org/@simon.rss
         type: rss
         label: Mastodon
@@ -159,9 +170,6 @@ engineers:
       - url: https://martinfowler.com/feed.atom
         type: rss
         label: blog
-      - url: https://toot.thoughtworks.com/@mfowler.rss
-        type: rss
-        label: Mastodon (ThoughtWorks instance)
 
   - slug: werner-vogels
     name: Werner Vogels

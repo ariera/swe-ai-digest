@@ -7,6 +7,7 @@ in addition to the short `summary` excerpt.
 
 import asyncio
 import calendar
+import logging
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -16,6 +17,8 @@ import httpx
 import yaml
 from bs4 import BeautifulSoup
 from dateutil import parser as dateutil_parser
+
+logger = logging.getLogger(__name__)
 
 
 # ── Date helpers ───────────────────────────────────────────────────────────────
@@ -350,8 +353,10 @@ async def fetch_all(
         label = task_meta[i]
         if isinstance(result, Exception):
             errors.append(f"{label}: {result}")
+            logger.debug("Source %r raised exception: %s", label, result)
         else:
             articles, error = result
+            logger.debug("Source %r: fetched %d articles", label, len(articles))
             all_articles.extend(articles)
             if error:
                 errors.append(f"{label}: {error}")
