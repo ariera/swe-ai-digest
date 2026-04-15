@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Apr 2026 01:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 16:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Kyle Kingsbury</title>
+      <link>https://simonwillison.net/2026/Apr/15/kyle-kingsbury/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 15 Apr 2026 15:36:02 +0000</pubDate>
+      <description>Kyle Kingsbury, quoted by Simon Willison, predicts a new labor category emerging around AI accountability: "meat shields" — humans made formally or informally responsible for ML system failures. He argues companies will use employees, subcontractors, and designated officers to absorb legal and reputational blame when automated systems misbehave, shifting liability away from the organizations deploying them.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/15/kyle-kingsbury/#atom-everything</guid>
+    </item>
+    <item>
+      <title>The malleable computer</title>
+      <link>https://world.hey.com/dhh/the-malleable-computer-7c187a9b</link>
+      <author>DHH</author>
+      <pubDate>Wed, 15 Apr 2026 15:06:27 +0000</pubDate>
+      <description>DHH argues that AI is finally delivering on open source's original promise by making codebases malleable to non-experts — users can now fork and customize applications or entire Linux systems without deep familiarity with the underlying code. He sees this as a fundamental shift that will erode the notion of fixed, black-box operating systems as AI models grow more capable.</description>
+      <guid isPermaLink="true">https://world.hey.com/dhh/the-malleable-computer-7c187a9b</guid>
+    </item>
     <item>
       <title>datasette PR #2689: Replace token-based CSRF with Sec-Fetch-Site header protection</title>
       <link>https://simonwillison.net/2026/Apr/14/replace-token-based-csrf/#atom-everything</link>
