@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Apr 2026 22:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 01:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette PR #2689: Replace token-based CSRF with Sec-Fetch-Site header protection</title>
+      <link>https://simonwillison.net/2026/Apr/14/replace-token-based-csrf/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 14 Apr 2026 23:58:53 +0000</pubDate>
+      <description>Simon Willison describes landing a CSRF protection overhaul in Datasette, replacing token-based CSRF with Sec-Fetch-Site header validation — noting that Claude Code performed much of the implementation work across 10 commits, closely guided by him and cross-reviewed by GPT-4.5. He also reflects on his practice of writing PR descriptions by hand to maintain conciseness and personal accountability despite AI-assisted coding.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/14/replace-token-based-csrf/#atom-everything</guid>
+    </item>
+    <item>
+      <title>datasette PR #2689: Replace token-based CSRF with Sec-Fetch-Site header protection</title>
+      <link>https://simonwillison.net/2026/Apr/14/replace-token-based-csrf/#atom-blogmarks</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 14 Apr 2026 23:58:53 +0000</pubDate>
+      <description>Simon Willison describes migrating Datasette's CSRF protection from token-based to Sec-Fetch-Site header validation, noting that Claude Code performed the bulk of the implementation across 10 commits under his close guidance, with GPT-5.4 used for cross-review. He also shares a deliberate practice shift: writing PR descriptions by hand to maintain conciseness and personal accountability despite AI-assisted coding. This offers a concrete example of a senior engineer's workflow for responsibly integrating AI tools into open-source development.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/14/replace-token-based-csrf/#atom-blogmarks</guid>
+    </item>
     <item>
       <title>Trusted access for the next era of cyber defense</title>
       <link>https://simonwillison.net/2026/Apr/14/trusted-access-openai/#atom-everything</link>
