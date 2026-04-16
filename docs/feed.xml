@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Apr 2026 17:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 17:58:08 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7</title>
+      <link>https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 16 Apr 2026 17:16:52 +0000</pubDate>
+      <description>Simon Willison benchmarks Alibaba's Qwen3.6-35B-A3B (run locally via LM Studio on a MacBook Pro M5) against Anthropic's Claude Opus 4.7 using his SVG-generation "pelican" test, finding the quantized local model produces better output. He notes this breaks the benchmark's loose correlation between SVG quality and general model usefulness, cautioning against over-interpreting the result. For engineers, it illustrates that capable open-weight models running on consumer hardware can now outperform frontier proprietary models on specific tasks.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-everything</guid>
+    </item>
     <item>
       <title>The Pulse: ‘Tokenmaxxing’ as a weird new trend</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-pulse-tokenmaxxing-as-a-weird</link>
