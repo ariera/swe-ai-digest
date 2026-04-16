@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Apr 2026 11:00:30 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 17:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: ‘Tokenmaxxing’ as a weird new trend</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-tokenmaxxing-as-a-weird</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 16 Apr 2026 16:47:08 +0000</pubDate>
+      <description>Orosz examines "tokenmaxxing" — developers at Meta, Microsoft, and Salesforce deliberately inflating AI token usage to hit internal metrics — alongside unsustainable AI budget practices, such as Uber exhausting its entire 2026 AI token budget in three months. He also covers Anthropic ending enterprise subsidies, Linux kernel AI guidelines, and Cal.com's shift to closed source partly attributed to AI threats. These trends signal that corporate AI adoption incentives and cost structures are producing distorted engineering behaviors software engineers should watch closely.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-tokenmaxxing-as-a-weird</guid>
+    </item>
     <item>
       <title>AI cybersecurity is not proof of work</title>
       <link>http://antirez.com/news/163</link>
