@@ -235,7 +235,7 @@ engineers:
     priority: 17
     bio: "Italian software engineer, creator of Redis — one of the world's most widely deployed in-memory data stores — and a rare voice for clarity and minimalism in systems design."
     sources:
-      - url: http://antirez.com/rss
+      - url: https://antirez.com/rss
         type: rss
         label: blog
 
