@@ -435,7 +435,18 @@ def cmd_digest(args: argparse.Namespace) -> int:
         session.close()
         return 1
 
-    # 7. Create digest in DB
+    # 7. Create digest in DB (delete existing row first when --force)
+    existing = Digest.for_period(session, period_start.isoformat(), period_end.isoformat())
+    if existing is not None:
+        session.execute(
+            __import__('sqlalchemy').text(
+                'DELETE FROM digest_articles WHERE digest_id = :did'
+            ),
+            {'did': existing.id},
+        )
+        session.flush()
+        session.delete(existing)
+        session.flush()
     digest_row = Digest.create(
         session, label=label,
         period_start=period_start.isoformat(),
