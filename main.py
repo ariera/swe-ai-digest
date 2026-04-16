@@ -3,7 +3,7 @@
 Usage:
     python main.py feed   [--dry-run] [--debug] [--config PATH]
     python main.py digest [--dry-run] [--no-email] [--admin-only] [--force]
-                          [--calendar-week | --days N] [--debug] [--config PATH]
+                          [--calendar-week | --week YYYY-CWnn | --days N] [--debug] [--config PATH]
 
 Subcommands:
     feed    Fetch articles, AI filter/summarize, update RSS feed (hourly cron)
@@ -58,10 +58,14 @@ def parse_args() -> argparse.Namespace:
                                help='Send email to admin address only')
     digest_parser.add_argument('--force', action='store_true',
                                help='Skip already-sent guard, re-create digest for this period')
-    digest_parser.add_argument('--calendar-week', action='store_true',
-                               help='Use previous ISO calendar week (Mon–Sun)')
-    digest_parser.add_argument('--days', type=int, default=None,
-                               help='Lookback window in days (overrides config)')
+    period_group = digest_parser.add_mutually_exclusive_group()
+    period_group.add_argument('--calendar-week', action='store_true',
+                              help='Use previous ISO calendar week (Mon–Sun)')
+    period_group.add_argument('--week', metavar='YYYY-CWnn',
+                              type=_parse_week_arg,
+                              help='Target a specific ISO week, e.g. 2026-CW15')
+    period_group.add_argument('--days', type=int, default=None,
+                              help='Lookback window in days (overrides config)')
     digest_parser.add_argument('--debug', action='store_true', help='Set log level to DEBUG')
     digest_parser.add_argument('--config', default=str(REPO_ROOT / 'config.yaml'),
                                help='Path to config file')
@@ -163,6 +167,26 @@ def _setup(args: argparse.Namespace) -> dict:
 
 # ── Period calculation ─────────────────────────────────────────────────────────
 
+def _parse_week_arg(value: str) -> tuple[int, int]:
+    """Validate and parse a '--week YYYY-CWnn' argument into (year, week)."""
+    import re
+    m = re.fullmatch(r'(\d{4})-CW(\d{1,2})', value, re.IGNORECASE)
+    if not m:
+        raise argparse.ArgumentTypeError(
+            f"Invalid format: {value!r}. Expected YYYY-CWnn (e.g. 2026-CW15)"
+        )
+    return int(m.group(1)), int(m.group(2))
+
+
+def _iso_week_bounds(year: int, week: int) -> tuple[datetime, datetime]:
+    """Return (monday_00:00, sunday_23:59:59) UTC for the given ISO year/week."""
+    from datetime import date
+    monday = date.fromisocalendar(year, week, 1)
+    monday_dt = datetime(monday.year, monday.month, monday.day, tzinfo=timezone.utc)
+    sunday_dt = monday_dt + timedelta(weeks=1) - timedelta(seconds=1)
+    return monday_dt, sunday_dt
+
+
 def _previous_iso_week_bounds(now: datetime) -> tuple[datetime, datetime]:
     """Return (monday_00:00, sunday_23:59:59) UTC for the ISO week before now's week."""
     current_monday = now - timedelta(days=now.isoweekday() - 1)
@@ -177,6 +201,11 @@ def _compute_period(args: argparse.Namespace, cfg: dict, now: datetime) -> tuple
 
     CLI flags take precedence: --days overrides calendar_week config.
     """
+    if getattr(args, 'week', None):
+        year, week = args.week
+        period_start, period_end = _iso_week_bounds(year, week)
+        label = f"{year}-CW{week:02d}"
+        return period_start, period_end, label
     if getattr(args, 'days', None):
         # Explicit --days flag always wins
         period_end = now
