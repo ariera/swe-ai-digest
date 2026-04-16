@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Apr 2026 01:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 11:00:30 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>AI cybersecurity is not proof of work</title>
+      <link>http://antirez.com/news/163</link>
+      <author>Salvatore Sanfilippo (antirez)</author>
+      <pubDate>Thu, 16 Apr 2026 10:46:46 +0000</pubDate>
+      <description>Antirez argues that AI-driven cybersecurity is not analogous to proof-of-work: simply throwing more GPU compute at vulnerability discovery has diminishing returns, because LLM sampling paths saturate and model intelligence becomes the binding constraint. Using the OpenBSD SACK bug as a case study, he demonstrates that weaker models hallucinate plausible-sounding bugs without genuine reasoning, while only sufficiently capable models can chain multiple subtle conditions into a real exploit. For security-focused engineers, this suggests that model quality — not raw inference scale — will determine offensive and defensive AI capability.</description>
+      <guid isPermaLink="true">http://antirez.com/news/163</guid>
+    </item>
     <item>
       <title>datasette.io news preview</title>
       <link>https://simonwillison.net/2026/Apr/16/datasette-io-preview/#atom-everything</link>
