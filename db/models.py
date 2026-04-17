@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Table, Text
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Table, Text, func
 from sqlalchemy.orm import DeclarativeBase, Session, relationship
 
 
@@ -156,12 +156,15 @@ class Article(Base):
 
     @classmethod
     def for_digest(cls, session: Session, period_start: str, period_end: str) -> list[Article]:
+        # Use published_at when available; fall back to fetched_at for scraped
+        # articles that have no publication date.
+        effective_date = func.coalesce(cls.published_at, cls.fetched_at)
         return (
             session.query(cls)
             .filter(
                 cls.ai_relevant == True,  # noqa: E712
-                cls.fetched_at >= period_start,
-                cls.fetched_at <= period_end,
+                effective_date >= period_start,
+                effective_date <= period_end,
                 ~cls.digests.any(),
             )
             .all()

@@ -432,10 +432,7 @@ def cmd_digest(args: argparse.Namespace) -> int:
         _send_health_alert(cfg, total, errored)
 
     # 5. Gather articles for digest
-    # Use current time as upper bound — the feed pass may have inserted articles after
-    # the original period_end was computed
-    query_end = datetime.now(tz=timezone.utc)
-    articles = Article.for_digest(session, period_start.isoformat(), query_end.isoformat())
+    articles = Article.for_digest(session, period_start.isoformat(), period_end.isoformat())
     if not articles:
         logger.info("No AI-relevant articles for this period — nothing to digest")
         logger.info("=== digest complete (no articles) ===")
@@ -465,7 +462,7 @@ def cmd_digest(args: argparse.Namespace) -> int:
         return 1
 
     # 7. Create digest in DB (delete existing row first when --force)
-    existing = Digest.for_period(session, period_start.isoformat(), period_end.isoformat())
+    existing = session.query(Digest).filter_by(label=label).first()
     if existing is not None:
         session.execute(
             __import__('sqlalchemy').text(
