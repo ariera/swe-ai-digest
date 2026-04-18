@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Apr 2026 21:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2026 01:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Join us at PyCon US 2026 in Long Beach - we have new AI and security tracks this year</title>
+      <link>https://simonwillison.net/2026/Apr/17/pycon-us-2026/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 17 Apr 2026 23:59:03 +0000</pubDate>
+      <description>Simon Willison announces PyCon US 2026 (Long Beach, May 13–19), highlighting a new dedicated AI track covering topics such as async patterns for AI agents, LLM quantization, real-time voice agents, and AI-assisted open-source contributions. The track, organized with involvement from Anthropic's Zac Hatfield-Dodds, signals growing institutional recognition of AI as a core concern for the Python community. Willison also mentions plans to participate in open-space sessions on agentic engineering.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/17/pycon-us-2026/#atom-everything</guid>
+    </item>
     <item>
       <title>llm-anthropic 0.25</title>
       <link>https://simonwillison.net/2026/Apr/16/llm-anthropic/#atom-everything</link>
