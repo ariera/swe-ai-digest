@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Apr 2026 01:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2026 22:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Headless everything for personal AI</title>
+      <link>https://simonwillison.net/2026/Apr/19/headless-everything/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 19 Apr 2026 21:46:38 +0000</pubDate>
+      <description>Simon Willison highlights a trend toward "headless" services—platforms exposing full functionality via APIs, MCP, and CLIs rather than GUIs—driven by AI agents that work more reliably with direct API access than browser automation. Salesforce's "Headless 360" is cited as a real-world example. Willison notes this shift could disrupt per-seat SaaS pricing models, a significant structural concern for the software industry.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/19/headless-everything/#atom-everything</guid>
+    </item>
     <item>
       <title>Changes in the system prompt between Claude Opus 4.6 and 4.7</title>
       <link>https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-everything</link>
