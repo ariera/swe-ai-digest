@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Apr 2026 00:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2026 01:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Changes in the system prompt between Claude Opus 4.6 and 4.7</title>
+      <link>https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 18 Apr 2026 23:59:40 +0000</pubDate>
+      <description>Simon Willison performs a detailed diff of Anthropic's published system prompts between Claude Opus 4.6 and 4.7, highlighting key behavioral changes: new agentic integrations (Chrome, Excel, PowerPoint), a `tool_search` mechanism that lets Claude discover capabilities before claiming it lacks them, stricter child safety and disordered-eating guardrails, and instructions to reduce verbosity and pushiness. For engineers building on or studying Claude, these diffs reveal how Anthropic iteratively steers model behavior through prompt engineering rather than solely through training.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-everything</guid>
+    </item>
     <item>
       <title>Claude system prompts as a git timeline</title>
       <link>https://simonwillison.net/2026/Apr/18/extract-system-prompts/#atom-everything</link>
