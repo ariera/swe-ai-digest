@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Apr 2026 04:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2026 00:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Claude system prompts as a git timeline</title>
+      <link>https://simonwillison.net/2026/Apr/18/extract-system-prompts/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 18 Apr 2026 12:25:00 +0000</pubDate>
+      <description>Simon Willison used Claude Code to convert Anthropic's published Claude system prompts into separate versioned files with fake git commit dates, enabling diff-style browsing of prompt changes over time via GitHub. This lightweight technique surfaces a practical method for tracking how AI system prompts evolve, which is valuable for engineers studying prompt engineering and LLM behavior across model versions.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/18/extract-system-prompts/#atom-everything</guid>
+    </item>
     <item>
       <title>Adding a new content type to my blog-to-newsletter tool</title>
       <link>https://simonwillison.net/guides/agentic-engineering-patterns/adding-a-new-content-type/#atom-everything</link>
