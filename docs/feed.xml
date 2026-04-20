@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Apr 2026 01:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 16:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mjwtkdtsl426</link>
+      <author>Matteo Collina</author>
+      <pubDate>Mon, 20 Apr 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina and Luca Maraschi announce a discussion on building and scaling AI agents with Kubernetes, arguing that most teams treat Kubernetes as optional until scaling and governance demands arise. The session covers a launch-week debrief on the infrastructure patterns needed to reliably run AI agents in production — a relevant concern for engineers operationalizing AI workloads.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mjwtkdtsl426</guid>
+    </item>
     <item>
       <title>Claude Token Counter, now with model comparisons</title>
       <link>https://simonwillison.net/2026/Apr/20/claude-token-counts/#atom-everything</link>
