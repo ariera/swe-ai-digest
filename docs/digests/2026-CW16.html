@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW16</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW16</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-04-13 &ndash; 2026-04-19
+    &middot; 22 articles
+  </p>
+  <p>This digest period surfaces several interlocking themes at the intersection of AI and software engineering. A dominant concern is code quality: multiple authors — including Bryan Cantrill (via Willison), Martin Fowler, and Gergely Orosz — warn that LLMs optimise for volume over elegance, risking bloated codebases, vanity metrics, and accumulating technical debt. Orosz&#39;s survey data gives this texture through three engineer archetypes, from quality-focused &#34;Builders&#34; to low-output &#34;Coasters.&#34;
+
+Agentic AI workflows feature prominently, with Willison demonstrating practical patterns — reference codebases, filename scoping, self-validation — that improve agent reliability across multiple projects. DHH and Willison also note structural shifts: headless APIs are increasingly preferred by agents over GUIs, threatening per-seat SaaS pricing models.
+
+Cybersecurity emerges as a contested domain. Willison frames AI-driven vulnerability discovery as a token-spending arms race, while Antirez counters that model quality — not raw compute — is the binding constraint. Both OpenAI and Anthropic are releasing specialised defensive security offerings.
+
+Organisational and economic pressures round out the picture: tokenmaxxing, exhausted AI budgets, liability-absorbing &#34;meat shields,&#34; and an industry hiring freeze masking widening gaps in AI-driven engineering maturity are all flagged as trends engineers should monitor closely.</p>
+  <hr>
+
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/13/bryan-cantrill/#atom-everything">Quoting Bryan Cantrill</a>
+    <span class="meta">(2026-04-13)</span>
+  </h3>
+  
+  <p>Bryan Cantrill argues that LLMs lack the &#34;virtue of laziness&#34; that drives human engineers to build clean, efficient abstractions — because work has no cost to an LLM, they tend to produce bloated, low-quality systems rather than optimized ones. This matters to software engineers because it reframes a key risk of AI-assisted programming: unchecked LLM output may degrade software quality by optimizing for volume over elegance.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/13/servo-crate-exploration/#atom-everything">Exploring the new `servo` crate</a>
+    <span class="meta">(2026-04-13)</span>
+  </h3>
+  
+  <p>Simon Willison uses Claude Code to explore the newly released `servo` crate, delegating tasks like building a CLI screenshot tool and investigating WebAssembly compilation feasibility. The AI agent successfully produced a working Rust tool (`servo-shot`) and a WebAssembly HTML parsing playground, though compiling Servo itself to WASM proved infeasible. This illustrates how AI coding agents can accelerate exploratory research into unfamiliar libraries.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/13/steve-yegge/#atom-everything">Quoting Steve Yegge</a>
+    <span class="meta">(2026-04-13)</span>
+  </h3>
+  
+  <p>Steve Yegge argues that Google&#39;s internal AI adoption mirrors a pattern seen across the industry: ~20% agentic power users, 20% refusers, and 60% still on basic chat tools like Cursor. He warns that an 18-month industry hiring freeze has cut off the external signal that would alert Google — and similar orgs — to how far behind they&#39;ve fallen in AI-driven engineering practices.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-everything">Cybersecurity Looks Like Proof of Work Now</a>
+    <span class="meta">(2026-04-14)</span>
+  </h3>
+  
+  <p>Willison highlights that AI models like Claude Mythos are so effective at finding security vulnerabilities that cybersecurity becomes a token-spending arms race — defenders must outspend attackers on AI-driven exploit discovery. A notable implication for software engineers is that open-source libraries gain renewed value, since the AI security cost of hardening them is amortized across all users, countering the &#34;vibe-coding&#34; argument that cheap AI-generated replacements make OSS less attractive.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/14/trusted-access-openai/#atom-everything">Trusted access for the next era of cyber defense</a>
+    <span class="meta">(2026-04-14)</span>
+  </h3>
+  
+  <p>Simon Willison covers OpenAI&#39;s introduction of GPT-5.4-Cyber, a fine-tuned model variant designed for defensive cybersecurity use cases, alongside a &#34;Trusted Access for Cyber&#34; identity-verification program offering reduced-friction access to security-focused AI tools. Willison notes the announcement appears to be a competitive response to Anthropic&#39;s Project Glasswing, though he finds the two programs functionally similar in their access requirements.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/14/replace-token-based-csrf/#atom-everything">datasette PR #2689: Replace token-based CSRF with Sec-Fetch-Site header protection</a>
+    <span class="meta">(2026-04-14)</span>
+  </h3>
+  
+  <p>Simon Willison describes landing a CSRF protection overhaul in Datasette, replacing token-based CSRF with Sec-Fetch-Site header validation — noting that Claude Code performed much of the implementation work across 10 commits, closely guided by him and cross-reviewed by GPT-4.5. He also reflects on his practice of writing PR descriptions by hand to maintain conciseness and personal accountability despite AI-assisted coding.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/15/kyle-kingsbury/#atom-everything">Quoting Kyle Kingsbury</a>
+    <span class="meta">(2026-04-15)</span>
+  </h3>
+  
+  <p>Kyle Kingsbury, quoted by Simon Willison, predicts a new labor category emerging around AI accountability: &#34;meat shields&#34; — humans made formally or informally responsible for ML system failures. He argues companies will use employees, subcontractors, and designated officers to absorb legal and reputational blame when automated systems misbehave, shifting liability away from the organizations deploying them.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/15/gemini-31-flash-tts/#atom-everything">Gemini 3.1 Flash TTS</a>
+    <span class="meta">(2026-04-15)</span>
+  </h3>
+  
+  <p>Simon Willison explores Google&#39;s newly released Gemini 3.1 Flash TTS, a prompt-directed text-to-speech model available via the Gemini API. He highlights the surprisingly elaborate prompting approach — using detailed scene-setting, director&#39;s notes, and accent specifications — to control vocal style and delivery. This is relevant to engineers interested in prompt engineering techniques for generative audio models and emerging TTS capabilities in the Gemini ecosystem.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/15/gemini-flash-tts/#atom-everything">Gemini 3.1 Flash TTS</a>
+    <span class="meta">(2026-04-15)</span>
+  </h3>
+  
+  <p>Simon Willison shares notes on Google&#39;s Gemini 3.1 Flash TTS, a new text-to-speech model. The article is a tool evaluation of a newly released AI model, relevant to engineers tracking Google&#39;s expanding Gemini ecosystem and practical AI capabilities.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/16/datasette-io-preview/#atom-everything">datasette.io news preview</a>
+    <span class="meta">(2026-04-16)</span>
+  </h3>
+  
+  <p>Simon Willison describes using Claude (via claude.ai and Claude Artifacts) to build a custom preview UI for editing a YAML-based news feed, by having Claude clone a GitHub repo and inspect its content mid-chat. The example illustrates a practical &#34;vibe-coding&#34; workflow where AI is used to reduce friction on small internal tooling tasks without writing code manually.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-everything">Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7</a>
+    <span class="meta">(2026-04-16)</span>
+  </h3>
+  
+  <p>Simon Willison benchmarks Alibaba&#39;s Qwen3.6-35B-A3B (run locally via LM Studio on a MacBook Pro M5) against Anthropic&#39;s Claude Opus 4.7 using his SVG-generation &#34;pelican&#34; test, finding the quantized local model produces better output. He notes this breaks the benchmark&#39;s loose correlation between SVG quality and general model usefulness, cautioning against over-interpreting the result. For engineers, it illustrates that capable open-weight models running on consumer hardware can now outperform frontier proprietary models on specific tasks.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/16/llm-anthropic/#atom-everything">llm-anthropic 0.25</a>
+    <span class="meta">(2026-04-16)</span>
+  </h3>
+  
+  <p>Simon Willison releases llm-anthropic 0.25, a plugin for his LLM CLI tool, adding support for Claude Opus 4.7 with extended thinking controls (`thinking_effort: xhigh`, `thinking_display`, `thinking_adaptive`). The update also raises default token limits per model and removes a deprecated beta header. Engineers using the LLM tool to interact with Anthropic models gain finer-grained control over Claude&#39;s reasoning behavior.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/17/pycon-us-2026/#atom-everything">Join us at PyCon US 2026 in Long Beach - we have new AI and security tracks this year</a>
+    <span class="meta">(2026-04-17)</span>
+  </h3>
+  
+  <p>Simon Willison announces PyCon US 2026 (Long Beach, May 13–19), highlighting a new dedicated AI track covering topics such as async patterns for AI agents, LLM quantization, real-time voice agents, and AI-assisted open-source contributions. The track, organized with involvement from Anthropic&#39;s Zac Hatfield-Dodds, signals growing institutional recognition of AI as a core concern for the Python community. Willison also mentions plans to participate in open-space sessions on agentic engineering.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/guides/agentic-engineering-patterns/adding-a-new-content-type/#atom-everything">Adding a new content type to my blog-to-newsletter tool</a>
+    <span class="meta">(2026-04-18)</span>
+  </h3>
+  
+  <p>Simon Willison demonstrates how a short, well-structured prompt directed Claude Code to autonomously clone a reference GitHub repo, modify an HTML/JS tool, and self-validate the result via browser automation — completing the task in a single shot. He unpacks three key prompting patterns: using a reference codebase to communicate complex requirements implicitly, scoping edits by filename in a large repo, and providing agents a validation mechanism so they can verify their own work. This offers practical, replicable agentic engineering techniques for software engineers building or refining AI-assisted workflows.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/18/extract-system-prompts/#atom-everything">Claude system prompts as a git timeline</a>
+    <span class="meta">(2026-04-18)</span>
+  </h3>
+  
+  <p>Simon Willison used Claude Code to convert Anthropic&#39;s published Claude system prompts into separate versioned files with fake git commit dates, enabling diff-style browsing of prompt changes over time via GitHub. This lightweight technique surfaces a practical method for tracking how AI system prompts evolve, which is valuable for engineers studying prompt engineering and LLM behavior across model versions.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-everything">Changes in the system prompt between Claude Opus 4.6 and 4.7</a>
+    <span class="meta">(2026-04-18)</span>
+  </h3>
+  
+  <p>Simon Willison performs a detailed diff of Anthropic&#39;s published system prompts between Claude Opus 4.6 and 4.7, highlighting key behavioral changes: new agentic integrations (Chrome, Excel, PowerPoint), a `tool_search` mechanism that lets Claude discover capabilities before claiming it lacks them, stricter child safety and disordered-eating guardrails, and instructions to reduce verbosity and pushiness. For engineers building on or studying Claude, these diffs reveal how Anthropic iteratively steers model behavior through prompt engineering rather than solely through training.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/19/headless-everything/#atom-everything">Headless everything for personal AI</a>
+    <span class="meta">(2026-04-19)</span>
+  </h3>
+  
+  <p>Simon Willison highlights a trend toward &#34;headless&#34; services—platforms exposing full functionality via APIs, MCP, and CLIs rather than GUIs—driven by AI agents that work more reliably with direct API access than browser automation. Salesforce&#39;s &#34;Headless 360&#34; is cited as a real-world example. Willison notes this shift could disrupt per-seat SaaS pricing models, a significant structural concern for the software industry.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/fragments/2026-04-14.html">Fragments: April 14</a>
+    <span class="meta">(2026-04-14)</span>
+  </h3>
+  
+  <p>Fowler curates several AI-related reflections: LLMs lack the &#34;laziness&#34; virtue that drives good abstraction, risking bloated codebases and vanity metrics; Jessica Kerr&#39;s TDD-style approach to prompting agents (instructions + verification); and the argument that safe AI autonomy requires designing in deliberate restraint and uncertainty-awareness, not just decisiveness. Together, these highlight concrete risks and design principles for AI-assisted software engineering.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-impact-of-ai-on-software-engineers-2026">The impact of AI on software engineers in 2026: key trends</a>
+    <span class="meta">(2026-04-14)</span>
+  </h3>
+  
+  <p>Drawing on 900+ survey responses, Gergely Orosz identifies three engineer archetypes shaped by AI adoption — &#34;Builders&#34; (quality-focused, frustrated by AI slop), &#34;Shippers&#34; (productivity-focused, positive but accruing tech debt), and &#34;Coasters&#34; (upleveling fast but generating low-quality output). The piece also surfaces mounting cost concerns, widespread usage-limit friction, and a blurring of engineer/engineering-manager roles as orchestration and context-switching increase.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-tokenmaxxing-as-a-weird">The Pulse: ‘Tokenmaxxing’ as a weird new trend</a>
+    <span class="meta">(2026-04-16)</span>
+  </h3>
+  
+  <p>Orosz examines &#34;tokenmaxxing&#34; — developers at Meta, Microsoft, and Salesforce deliberately inflating AI token usage to hit internal metrics — alongside unsustainable AI budget practices, such as Uber exhausting its entire 2026 AI token budget in three months. He also covers Anthropic ending enterprise subsidies, Linux kernel AI guidelines, and Cal.com&#39;s shift to closed source partly attributed to AI threats. These trends signal that corporate AI adoption incentives and cost structures are producing distorted engineering behaviors software engineers should watch closely.</p>
+  
+  
+  <h2>DHH</h2>
+  
+  <p class="meta">Creator of Ruby on Rails, co-founder of 37signals (Basecamp/HEY), and outspoken critic of Silicon Valley orthodoxy and AI hype.</p>
+  
+  
+  <h3>
+    <a href="https://world.hey.com/dhh/the-malleable-computer-7c187a9b">The malleable computer</a>
+    <span class="meta">(2026-04-15)</span>
+  </h3>
+  
+  <p>DHH argues that AI is finally delivering on open source&#39;s original promise by making codebases malleable to non-experts — users can now fork and customize applications or entire Linux systems without deep familiarity with the underlying code. He sees this as a fundamental shift that will erode the notion of fixed, black-box operating systems as AI models grow more capable.</p>
+  
+  
+  <h2>Salvatore Sanfilippo (antirez)</h2>
+  
+  <p class="meta">Italian software engineer, creator of Redis — one of the world&#39;s most widely deployed in-memory data stores — and a rare voice for clarity and minimalism in systems design.</p>
+  
+  
+  <h3>
+    <a href="http://antirez.com/news/163">AI cybersecurity is not proof of work</a>
+    <span class="meta">(2026-04-16)</span>
+  </h3>
+  
+  <p>Antirez argues that AI-driven cybersecurity is not analogous to proof-of-work: simply throwing more GPU compute at vulnerability discovery has diminishing returns, because LLM sampling paths saturate and model intelligence becomes the binding constraint. Using the OpenBSD SACK bug as a case study, he demonstrates that weaker models hallucinate plausible-sounding bugs without genuine reasoning, while only sufficiently capable models can chain multiple subtle conditions into a real exploit. For security-focused engineers, this suggests that model quality — not raw inference scale — will determine offensive and defensive AI capability.</p>
+  
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>

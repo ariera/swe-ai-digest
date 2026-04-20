@@ -1,5 +1,13 @@
 [
   {
+    "cw": "2026-CW16",
+    "period_start": "2026-04-13",
+    "period_end": "2026-04-19",
+    "articles_count": 22,
+    "summary_short": "This digest period surfaces several interlocking themes at the intersection of AI and software engineering. A dominant concern is code quality: multiple authors \u2014 including Bryan Cantrill (via Williso\u2026",
+    "page": "digests/2026-CW16.html"
+  },
+  {
     "cw": "2026-CW15",
     "period_start": "2026-04-06",
     "period_end": "2026-04-12",
