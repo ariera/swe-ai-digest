@@ -14,6 +14,7 @@ htmlcov/
 
 # Logs (keep the dir, not the files)
 logs/*.log
+logs/email_deliveries.csv
 
 # Generated output (digests, email previews)
 output/*.json

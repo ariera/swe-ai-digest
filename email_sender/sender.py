@@ -1,5 +1,6 @@
 """SMTP email sender for the SWE AI Digest."""
 
+import csv
 import logging
 import smtplib
 from datetime import datetime, timezone
@@ -162,6 +163,35 @@ def _send_file(
         logger.info("Email (HTML) written to %s", html_path)
 
 
+# ── Delivery log ──────────────────────────────────────────────────────────────
+
+_CSV_HEADER = ['timestamp', 'status', 'subject', 'recipient_count', 'recipients', 'error']
+
+
+def _log_delivery(
+    logs_dir: str,
+    subject: str,
+    recipients: list[str],
+    status: str,
+    error: str = '',
+) -> None:
+    """Append one row to logs/email_deliveries.csv."""
+    log_path = Path(logs_dir) / 'email_deliveries.csv'
+    write_header = not log_path.exists()
+    with open(log_path, 'a', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        if write_header:
+            writer.writerow(_CSV_HEADER)
+        writer.writerow([
+            datetime.now(tz=timezone.utc).isoformat(),
+            status,
+            subject,
+            len(recipients),
+            ';'.join(recipients),
+            error,
+        ])
+
+
 # ── Public send API ────────────────────────────────────────────────────────────
 
 def send_digest(digest: dict, cfg: dict, smtp_password: str, admin_only: bool = False) -> None:
@@ -183,23 +213,29 @@ def send_digest(digest: dict, cfg: dict, smtp_password: str, admin_only: bool = 
             return
         bcc_addresses = [s['email'] for s in subscribers]
 
-    if backend == 'file':
-        _send_file(
-            to_addresses=bcc_addresses,
-            subject=subject,
-            plain=plain,
-            html=html,
-            output_dir=cfg['paths']['email_output_dir'],
-        )
-    else:
-        _send_smtp(
-            bcc_addresses=bcc_addresses,
-            subject=subject,
-            plain=plain,
-            html=html,
-            smtp_host=cfg['email']['smtp_host'],
-            smtp_port=cfg['email']['smtp_port'],
-            from_address=cfg['email']['from_address'],
-            from_name=cfg['email']['from_name'],
-            password=smtp_password,
-        )
+    logs_dir = cfg.get('paths', {}).get('logs_dir', 'logs')
+    try:
+        if backend == 'file':
+            _send_file(
+                to_addresses=bcc_addresses,
+                subject=subject,
+                plain=plain,
+                html=html,
+                output_dir=cfg['paths']['email_output_dir'],
+            )
+        else:
+            _send_smtp(
+                bcc_addresses=bcc_addresses,
+                subject=subject,
+                plain=plain,
+                html=html,
+                smtp_host=cfg['email']['smtp_host'],
+                smtp_port=cfg['email']['smtp_port'],
+                from_address=cfg['email']['from_address'],
+                from_name=cfg['email']['from_name'],
+                password=smtp_password,
+            )
+        _log_delivery(logs_dir, subject, bcc_addresses, status='success')
+    except Exception as exc:
+        _log_delivery(logs_dir, subject, bcc_addresses, status='error', error=str(exc))
+        raise
