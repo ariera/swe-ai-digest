@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Apr 2026 22:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 01:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Claude Token Counter, now with model comparisons</title>
+      <link>https://simonwillison.net/2026/Apr/20/claude-token-counts/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 20 Apr 2026 00:50:45 +0000</pubDate>
+      <description>Simon Willison upgraded his Claude Token Counter tool to compare tokenization across models, finding that Claude Opus 4.7's new tokenizer inflates token counts by ~1.46× for text and ~3× for high-resolution images versus Opus 4.6. Since Opus 4.7 shares the same pricing as 4.6, this token inflation translates to roughly 40%+ higher real-world costs. Engineers using Opus 4.7 should factor in tokenizer changes when estimating API expenses.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/20/claude-token-counts/#atom-everything</guid>
+    </item>
     <item>
       <title>Headless everything for personal AI</title>
       <link>https://simonwillison.net/2026/Apr/19/headless-everything/#atom-everything</link>
