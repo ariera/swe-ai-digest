@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Apr 2026 15:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 16:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mjzdzafnow2m</link>
+      <author>Matteo Collina</author>
+      <pubDate>Tue, 21 Apr 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina, a prominent open-source maintainer, warns against deploying unsolicited AI bots into GitHub repositories, stating he has already banned several. This raises an important boundary-setting norm for the OSS community as AI agents become capable of autonomously opening issues and pull requests on public repos.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mjzdzafnow2m</guid>
+    </item>
     <item>
       <title>Fragments: April 21</title>
       <link>https://martinfowler.com/fragments/2026-04-21.html</link>
@@ -16,6 +24,14 @@
       <pubDate>Tue, 21 Apr 2026 14:34:00 +0000</pubDate>
       <description>Martin Fowler summarizes the Thoughtworks Technology Radar Vol. 34, which is heavily AI-focused and highlights two key tensions: AI tooling is pushing engineers to revisit foundational practices (pair programming, clean code, testability) as a counterweight to AI-generated complexity, and agentic systems are raising serious security concerns around "permission-hungry" agents vulnerable to prompt injection. Fowler also surfaces a practitioner's experience with Claude Code producing large, hard-to-maintain codebases, concluding that durable code requires regular human review regardless of how it was generated.</description>
       <guid isPermaLink="true">https://martinfowler.com/fragments/2026-04-21.html</guid>
+    </item>
+    <item>
+      <title>llm-openrouter 0.6</title>
+      <link>https://simonwillison.net/2026/Apr/20/llm-openrouter/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 20 Apr 2026 18:00:26 +0000</pubDate>
+      <description>Simon Willison releases llm-openrouter 0.6, adding a `refresh` command to manually update the list of available models without waiting for cache expiry. The update was motivated by wanting immediate access to the newly released Kimi 2.6 model on OpenRouter. This is relevant to engineers using the `llm` CLI tool to interact with a wide range of LLMs via OpenRouter.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/20/llm-openrouter/#atom-everything</guid>
     </item>
     <item>
       <title>(no title)</title>
