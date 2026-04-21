@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Apr 2026 17:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 21:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Where's the raccoon with the ham radio? (ChatGPT Images 2.0)</title>
+      <link>https://simonwillison.net/2026/Apr/21/gpt-image-2/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 21 Apr 2026 20:32:24 +0000</pubDate>
+      <description>Simon Willison benchmarks OpenAI's newly released gpt-image-2 against gpt-image-1, Google's Gemini (Nano Banana 2/Pro), and Claude using a "Where's Waldo"-style prompt as a stress test for complex illustration and text rendering. He finds gpt-image-2 produces superior results at high resolution (3840×2160), though at roughly $0.40 per image, and notes that models cannot reliably solve their own generated puzzles — a useful caveat for practitioners evaluating AI image capabilities.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/21/gpt-image-2/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Andreas Påhlsson-Notini</title>
       <link>https://simonwillison.net/2026/Apr/21/andreas-pahlsson-notini/#atom-everything</link>
