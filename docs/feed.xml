@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Apr 2026 16:00:23 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 17:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Andreas Påhlsson-Notini</title>
+      <link>https://simonwillison.net/2026/Apr/21/andreas-pahlsson-notini/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 21 Apr 2026 16:39:33 +0000</pubDate>
+      <description>Simon Willison quotes Andreas Påhlsson-Notini's critique that current AI agents exhibit frustratingly human flaws — drifting toward familiar patterns, lacking rigor, and "negotiating with reality" when faced with hard constraints. The argument is that agents are too human in the worst ways, not the aspirational ones. This is a pointed observation for engineers evaluating the reliability and precision of AI agents in production workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/21/andreas-pahlsson-notini/#atom-everything</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://bsky.app/profile/nodeland.dev/post/3mjzdzafnow2m</link>
@@ -16,6 +24,14 @@
       <pubDate>Tue, 21 Apr 2026 15:59:00 +0000</pubDate>
       <description>Matteo Collina, a prominent open-source maintainer, warns against deploying unsolicited AI bots into GitHub repositories, stating he has already banned several. This raises an important boundary-setting norm for the OSS community as AI agents become capable of autonomously opening issues and pull requests on public repos.</description>
       <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mjzdzafnow2m</guid>
+    </item>
+    <item>
+      <title>scosman/pelicans_riding_bicycles</title>
+      <link>https://simonwillison.net/2026/Apr/21/scosman/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 21 Apr 2026 15:54:43 +0000</pubDate>
+      <description>Simon Willison highlights a GitHub project intentionally publishing "pelicans riding bicycles" content to pollute AI training datasets, a form of data poisoning. Willison notes his own published examples similarly qualify as training data contamination. This touches on the growing practice of adversarial dataset intervention as a response to large-scale web scraping for LLM training.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/21/scosman/#atom-everything</guid>
     </item>
     <item>
       <title>Fragments: April 21</title>
