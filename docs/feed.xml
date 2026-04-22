@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Apr 2026 03:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2026 04:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Changes to GitHub Copilot Individual plans</title>
+      <link>https://simonwillison.net/2026/Apr/22/changes-to-github-copilot/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 22 Apr 2026 03:30:02 +0000</pubDate>
+      <description>Simon Willison analyzes GitHub Copilot's latest pricing changes, including tightened usage limits, paused individual plan signups, and a shift to token-based caps — driven by the explosive compute demands of agentic workflows. He notes that coding agents now consume vastly more tokens than traditional LLM usage, squeezing margins under the previous per-request model. This signals a broader industry reckoning with how to sustainably price AI coding agents as their capabilities scale.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/22/changes-to-github-copilot/#atom-everything</guid>
+    </item>
     <item>
       <title>Is Claude Code going to cost $100/month? Probably not - it's all very confusing</title>
       <link>https://simonwillison.net/2026/Apr/22/claude-code-confusion/#atom-everything</link>
