@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Apr 2026 06:00:26 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2026 17:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model</title>
+      <link>https://simonwillison.net/2026/Apr/22/qwen36-27b/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 22 Apr 2026 16:45:23 +0000</pubDate>
+      <description>Simon Willison evaluates Qwen3.6-27B, a new open-weight model that Qwen claims surpasses the much larger Qwen3.5-397B-A17B on coding benchmarks while fitting in a 55.6GB package. Willison runs it locally via a 16.8GB quantized version with llama.cpp, reporting strong agentic coding performance. This highlights meaningful progress in running flagship-quality coding models on consumer hardware.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/22/qwen36-27b/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Designing Data-intensive Applications with Martin Kleppmann</title>
+      <link>https://newsletter.pragmaticengineer.com/p/designing-data-intensive-applications</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 22 Apr 2026 16:19:26 +0000</pubDate>
+      <description>Martin Kleppmann argues that LLMs are simultaneously increasing code volume beyond human review capacity and improving at writing formal proofs, suggesting formal verification could finally go mainstream as a result. He also notes that AI assistance raises concerns about the formation of coding skills. These observations are directly relevant to software engineers weighing how AI tooling may reshape code quality practices and developer expertise.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/designing-data-intensive-applications</guid>
+    </item>
     <item>
       <title>Quoting Bobby Holley</title>
       <link>https://simonwillison.net/2026/Apr/22/bobby-holley/#atom-everything</link>
