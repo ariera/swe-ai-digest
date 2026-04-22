@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Apr 2026 21:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2026 03:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Is Claude Code going to cost $100/month? Probably not - it's all very confusing</title>
+      <link>https://simonwillison.net/2026/Apr/22/claude-code-confusion/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 22 Apr 2026 02:07:34 +0000</pubDate>
+      <description>Simon Willison documents Anthropic's short-lived, unannounced pricing test that briefly moved Claude Code from the $20/month Pro plan to the $100–$200/month Max plans, before reversing within hours. He argues the lack of transparent communication damaged trust and that a 5x price jump would make the tool inaccessible to most users he teaches. For engineers tracking AI tooling, the episode raises practical questions about platform reliability and whether OpenAI's Codex — free on lower tiers — is now a safer long-term investment.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/22/claude-code-confusion/#atom-everything</guid>
+    </item>
     <item>
       <title>Where's the raccoon with the ham radio? (ChatGPT Images 2.0)</title>
       <link>https://simonwillison.net/2026/Apr/21/gpt-image-2/#atom-everything</link>
