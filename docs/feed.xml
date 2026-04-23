@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Apr 2026 21:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 23:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Extract PDF text in your browser with LiteParse for the web</title>
+      <link>https://simonwillison.net/2026/Apr/23/liteparse-for-the-web/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 23 Apr 2026 21:54:24 +0000</pubDate>
+      <description>Simon Willison details building a browser-based PDF text extractor in 59 minutes using Claude Code and Opus 4.7, sharing his prompting workflow: starting with a plan artifact, using red/green TDD, requesting small commits, and cross-checking with OpenAI Codex to detect shortcuts. He also revisits the definition of "vibe coding," arguing it specifically means using AI without reviewing the generated code — and reflects on when that approach is acceptably low-risk.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/23/liteparse-for-the-web/#atom-everything</guid>
+    </item>
     <item>
       <title>A pelican for GPT-5.5 via the semi-official Codex backdoor API</title>
       <link>https://simonwillison.net/2026/Apr/23/gpt-5-5/#atom-everything</link>
