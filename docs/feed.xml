@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Apr 2026 17:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 17:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: ‘Tokenmaxxing’ as a weird new trend</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-tokenmaxxing-as-a-weird-new-trend/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 23 Apr 2026 16:55:40 +0000</pubDate>
+      <description>Gergely Orosz examines "tokenmaxxing" — the practice of artificially inflating AI token usage to game internal leaderboards at companies like Meta, Microsoft, and Salesforce — arguing it mirrors the discredited lines-of-code productivity metric and generates massive cost with little business value. Drawing on engineer interviews, he contrasts these dysfunctional incentives with Shopify's more measured approach using circuit breakers and qualitative review of high spenders. The piece is a cautionary signal for engineering leaders designing AI adoption metrics.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-tokenmaxxing-as-a-weird-new-trend/</guid>
+    </item>
+    <item>
+      <title>The Pulse: AI token spending out of control – what’s next?</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-ai-token-spending-out-of</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 23 Apr 2026 16:51:01 +0000</pubDate>
+      <description>Gergely Orosz examines an emerging trend where AI token consumption is exceeding engineering teams' budgets, raising questions about cost management and what comes next for AI tool adoption. This matters to software engineers as unchecked token spending signals a growing challenge in sustainably integrating AI tools into development workflows at scale.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-ai-token-spending-out-of</guid>
+    </item>
     <item>
       <title>Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model</title>
       <link>https://simonwillison.net/2026/Apr/22/qwen36-27b/#atom-everything</link>
