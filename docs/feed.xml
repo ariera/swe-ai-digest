@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Apr 2026 17:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 21:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>A pelican for GPT-5.5 via the semi-official Codex backdoor API</title>
+      <link>https://simonwillison.net/2026/Apr/23/gpt-5-5/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 23 Apr 2026 19:59:47 +0000</pubDate>
+      <description>Simon Willison documents GPT-5.5's release, noting its absence from the official API, and shares how he used Claude Code to reverse-engineer OpenAI's Codex CLI to build an LLM plugin that routes prompts through a ChatGPT subscription. He also demonstrates how increasing reasoning effort (from default to "xhigh") dramatically improves output quality at the cost of time and token usage.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/23/gpt-5-5/#atom-everything</guid>
+    </item>
     <item>
       <title>The Pulse: ‘Tokenmaxxing’ as a weird new trend</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-tokenmaxxing-as-a-weird-new-trend/</link>
