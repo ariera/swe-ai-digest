@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Apr 2026 02:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2026 07:00:26 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>DeepSeek V4 - almost on the frontier, a fraction of the price</title>
+      <link>https://simonwillison.net/2026/Apr/24/deepseek-v4/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 24 Apr 2026 06:01:04 +0000</pubDate>
+      <description>Simon Willison reviews DeepSeek's newly released V4-Pro and V4-Flash models, highlighting their exceptional cost-efficiency: V4-Flash undercuts even GPT-5.4 Nano at $0.14/M input tokens, while V4-Pro is the cheapest large frontier model at $1.74/M. The models achieve this through dramatic efficiency gains in FLOPs and KV cache usage at long contexts, though DeepSeek self-reports trailing frontier leaders by roughly 3–6 months on benchmarks.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/24/deepseek-v4/#atom-everything</guid>
+    </item>
     <item>
       <title>An update on recent Claude Code quality reports</title>
       <link>https://simonwillison.net/2026/Apr/24/recent-claude-code-quality-reports/#atom-everything</link>
@@ -32,6 +40,14 @@
       <pubDate>Thu, 23 Apr 2026 19:59:47 +0000</pubDate>
       <description>Simon Willison documents GPT-5.5's release, noting its absence from the official API, and shares how he used Claude Code to reverse-engineer OpenAI's Codex CLI to build an LLM plugin that routes prompts through a ChatGPT subscription. He also demonstrates how increasing reasoning effort (from default to "xhigh") dramatically improves output quality at the cost of time and token usage.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Apr/23/gpt-5-5/#atom-everything</guid>
+    </item>
+    <item>
+      <title>llm-openai-via-codex 0.1a0</title>
+      <link>https://simonwillison.net/2026/Apr/23/llm-openai-via-codex/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 23 Apr 2026 19:22:29 +0000</pubDate>
+      <description>Simon Willison releases `llm-openai-via-codex`, a plugin that reuses Codex CLI credentials to make OpenAI API calls via his LLM tool. This enables developers to leverage existing Codex CLI authentication for programmatic LLM access without separate API key setup, reflecting the growing ecosystem of tools built around AI coding assistants.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/23/llm-openai-via-codex/#atom-everything</guid>
     </item>
     <item>
       <title>The Pulse: ‘Tokenmaxxing’ as a weird new trend</title>
