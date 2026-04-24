@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Apr 2026 07:00:26 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2026 23:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The people do not yearn for automation</title>
+      <link>https://simonwillison.net/2026/Apr/24/the-people-do-not-yearn-for-automation/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 24 Apr 2026 22:38:49 +0000</pubDate>
+      <description>Simon Willison highlights Nilay Patel's essay arguing that AI's unpopularity with the general public stems from a "software brain" mindset — the assumption that automation and optimization are universally desirable — that most people simply don't share. Despite surging ChatGPT usage numbers, ordinary users resist AI because it "flattens" human experience. For engineers, this is a reminder that technical enthusiasm for AI automation doesn't map to broader societal appetite.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/24/the-people-do-not-yearn-for-automation/#atom-everything</guid>
+    </item>
     <item>
       <title>DeepSeek V4 - almost on the frontier, a fraction of the price</title>
       <link>https://simonwillison.net/2026/Apr/24/deepseek-v4/#atom-everything</link>
