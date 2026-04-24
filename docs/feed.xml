@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Apr 2026 23:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2026 02:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>An update on recent Claude Code quality reports</title>
+      <link>https://simonwillison.net/2026/Apr/24/recent-claude-code-quality-reports/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 24 Apr 2026 01:31:25 +0000</pubDate>
+      <description>Simon Willison highlights Anthropic's postmortem on three bugs in the Claude Code harness—not the underlying models—that caused degraded output quality over two months, including one that made Claude appear forgetful by repeatedly clearing session context. He underscores that agentic system harnesses introduce their own complex failure modes independent of model non-determinism, a critical consideration for engineers building or relying on AI coding agents.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/24/recent-claude-code-quality-reports/#atom-everything</guid>
+    </item>
     <item>
       <title>Extract PDF text in your browser with LiteParse for the web</title>
       <link>https://simonwillison.net/2026/Apr/23/liteparse-for-the-web/#atom-everything</link>
