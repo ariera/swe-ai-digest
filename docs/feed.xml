@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Apr 2026 23:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 01:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>llm 0.31</title>
+      <link>https://simonwillison.net/2026/Apr/24/llm/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 24 Apr 2026 23:35:07 +0000</pubDate>
+      <description>Simon Willison releases llm 0.31, his open-source CLI tool for interacting with large language models, adding support for the new GPT-5.5 model alongside configurable verbosity and image detail options for GPT-5+ OpenAI models. The update also enables asynchronous registration for custom models defined in extra-openai-models.yaml. Engineers using llm in their workflows gain finer control over output and image processing behavior with the latest OpenAI models.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/24/llm/#atom-everything</guid>
+    </item>
     <item>
       <title>The people do not yearn for automation</title>
       <link>https://simonwillison.net/2026/Apr/24/the-people-do-not-yearn-for-automation/#atom-everything</link>
