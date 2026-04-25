@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Apr 2026 01:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 05:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>GPT-5.5 prompting guide</title>
+      <link>https://simonwillison.net/2026/Apr/25/gpt-5-5-prompting-guide/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 25 Apr 2026 04:13:36 +0000</pubDate>
+      <description>Simon Willison highlights OpenAI's prompting guidance for GPT-5.5, emphasizing that it should be treated as a new model family requiring fresh prompt baselines rather than a drop-in replacement for earlier versions. Key tips include sending short user-visible status updates before multi-step tool calls and using the Codex `openai-docs` skill to automate migration. Engineers upgrading existing applications should expect to re-tune reasoning effort, verbosity, tool descriptions, and output format from scratch.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/25/gpt-5-5-prompting-guide/#atom-everything</guid>
+    </item>
     <item>
       <title>llm 0.31</title>
       <link>https://simonwillison.net/2026/Apr/24/llm/#atom-everything</link>
