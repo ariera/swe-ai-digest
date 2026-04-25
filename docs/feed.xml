@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Apr 2026 05:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 13:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Romain Huet</title>
+      <link>https://simonwillison.net/2026/Apr/25/romain-huet/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 25 Apr 2026 12:06:55 +0000</pubDate>
+      <description>OpenAI's Romain Huet confirms that since GPT-5.4, the Codex coding model has been merged into the main GPT model line, meaning no separate GPT-5.5-Codex will be released. GPT-5.5 instead delivers improvements in agentic coding and computer use within a unified system. This signals a strategic shift away from specialized coding models toward general-purpose agents capable of broad computer tasks.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/25/romain-huet/#atom-everything</guid>
+    </item>
     <item>
       <title>GPT-5.5 prompting guide</title>
       <link>https://simonwillison.net/2026/Apr/25/gpt-5-5-prompting-guide/#atom-everything</link>
