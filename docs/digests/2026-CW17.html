@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW17</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW17</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-04-20 &ndash; 2026-04-26
+    &middot; 24 articles
+  </p>
+  <p>This digest period is dominated by four interlocking themes: cost and pricing pressure, the maturation and fragility of agentic systems, model efficiency gains, and emerging governance concerns around AI adoption.
+
+Cost visibility has become a central preoccupation. Multiple authors examine tokenizer inflation (Claude Opus 4.7), uncapped token spending (&#34;tokenmaxxing&#34;), budget overruns across engineering teams, and pricing volatility in tools like Claude Code and GitHub Copilot. The shift to agentic workflows is identified as the primary driver of runaway compute costs, prompting the industry to rethink per-request pricing models.
+
+On agentic reliability, practitioners surface recurring concerns: harness-level bugs independent of model quality, agents that &#34;negotiate with reality,&#34; permission-hungry systems vulnerable to prompt injection, and AI-generated codebases that outpace human review capacity. Formal verification is proposed as a potential structural response to this code-volume problem.
+
+Model efficiency continues to advance, with DeepSeek V4 and Qwen3.6-27B demonstrating that near-frontier performance is increasingly achievable at low cost or on consumer hardware.
+
+Finally, governance questions are sharpening: unsolicited AI bots in OSS repos, adversarial dataset poisoning, and public resistance to AI automation all signal that technical progress is outpacing social and institutional norms.</p>
+  <hr>
+
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/20/claude-token-counts/#atom-everything">Claude Token Counter, now with model comparisons</a>
+    <span class="meta">(2026-04-20)</span>
+  </h3>
+  
+  <p>Simon Willison upgraded his Claude Token Counter tool to compare tokenization across models, finding that Claude Opus 4.7&#39;s new tokenizer inflates token counts by ~1.46× for text and ~3× for high-resolution images versus Opus 4.6. Since Opus 4.7 shares the same pricing as 4.6, this token inflation translates to roughly 40%+ higher real-world costs. Engineers using Opus 4.7 should factor in tokenizer changes when estimating API expenses.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/20/llm-openrouter/#atom-everything">llm-openrouter 0.6</a>
+    <span class="meta">(2026-04-20)</span>
+  </h3>
+  
+  <p>Simon Willison releases llm-openrouter 0.6, adding a `refresh` command to manually update the list of available models without waiting for cache expiry. The update was motivated by wanting immediate access to the newly released Kimi 2.6 model on OpenRouter. This is relevant to engineers using the `llm` CLI tool to interact with a wide range of LLMs via OpenRouter.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/21/andreas-pahlsson-notini/#atom-everything">Quoting Andreas Påhlsson-Notini</a>
+    <span class="meta">(2026-04-21)</span>
+  </h3>
+  
+  <p>Simon Willison quotes Andreas Påhlsson-Notini&#39;s critique that current AI agents exhibit frustratingly human flaws — drifting toward familiar patterns, lacking rigor, and &#34;negotiating with reality&#34; when faced with hard constraints. The argument is that agents are too human in the worst ways, not the aspirational ones. This is a pointed observation for engineers evaluating the reliability and precision of AI agents in production workflows.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/21/scosman/#atom-everything">scosman/pelicans_riding_bicycles</a>
+    <span class="meta">(2026-04-21)</span>
+  </h3>
+  
+  <p>Simon Willison highlights a GitHub project intentionally publishing &#34;pelicans riding bicycles&#34; content to pollute AI training datasets, a form of data poisoning. Willison notes his own published examples similarly qualify as training data contamination. This touches on the growing practice of adversarial dataset intervention as a response to large-scale web scraping for LLM training.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/21/gpt-image-2/#atom-everything">Where&#39;s the raccoon with the ham radio? (ChatGPT Images 2.0)</a>
+    <span class="meta">(2026-04-21)</span>
+  </h3>
+  
+  <p>Simon Willison benchmarks OpenAI&#39;s newly released gpt-image-2 against gpt-image-1, Google&#39;s Gemini (Nano Banana 2/Pro), and Claude using a &#34;Where&#39;s Waldo&#34;-style prompt as a stress test for complex illustration and text rendering. He finds gpt-image-2 produces superior results at high resolution (3840×2160), though at roughly $0.40 per image, and notes that models cannot reliably solve their own generated puzzles — a useful caveat for practitioners evaluating AI image capabilities.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/22/claude-code-confusion/#atom-everything">Is Claude Code going to cost $100/month? Probably not - it&#39;s all very confusing</a>
+    <span class="meta">(2026-04-22)</span>
+  </h3>
+  
+  <p>Simon Willison documents Anthropic&#39;s short-lived, unannounced pricing test that briefly moved Claude Code from the $20/month Pro plan to the $100–$200/month Max plans, before reversing within hours. He argues the lack of transparent communication damaged trust and that a 5x price jump would make the tool inaccessible to most users he teaches. For engineers tracking AI tooling, the episode raises practical questions about platform reliability and whether OpenAI&#39;s Codex — free on lower tiers — is now a safer long-term investment.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/22/changes-to-github-copilot/#atom-everything">Changes to GitHub Copilot Individual plans</a>
+    <span class="meta">(2026-04-22)</span>
+  </h3>
+  
+  <p>Simon Willison analyzes GitHub Copilot&#39;s latest pricing changes, including tightened usage limits, paused individual plan signups, and a shift to token-based caps — driven by the explosive compute demands of agentic workflows. He notes that coding agents now consume vastly more tokens than traditional LLM usage, squeezing margins under the previous per-request model. This signals a broader industry reckoning with how to sustainably price AI coding agents as their capabilities scale.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/22/bobby-holley/#atom-everything">Quoting Bobby Holley</a>
+    <span class="meta">(2026-04-22)</span>
+  </h3>
+  
+  <p>Firefox CTO Bobby Holley reports that applying an early version of Claude Mythos Preview to Firefox&#39;s codebase identified 271 vulnerabilities fixed in Firefox 150, marking a meaningful security milestone. The quote highlights a real-world case of AI-assisted security research at scale, suggesting that AI tools may give defenders a decisive edge over attackers in software security.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/22/qwen36-27b/#atom-everything">Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model</a>
+    <span class="meta">(2026-04-22)</span>
+  </h3>
+  
+  <p>Simon Willison evaluates Qwen3.6-27B, a new open-weight model that Qwen claims surpasses the much larger Qwen3.5-397B-A17B on coding benchmarks while fitting in a 55.6GB package. Willison runs it locally via a 16.8GB quantized version with llama.cpp, reporting strong agentic coding performance. This highlights meaningful progress in running flagship-quality coding models on consumer hardware.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/23/gpt-5-5/#atom-everything">A pelican for GPT-5.5 via the semi-official Codex backdoor API</a>
+    <span class="meta">(2026-04-23)</span>
+  </h3>
+  
+  <p>Simon Willison documents GPT-5.5&#39;s release, noting its absence from the official API, and shares how he used Claude Code to reverse-engineer OpenAI&#39;s Codex CLI to build an LLM plugin that routes prompts through a ChatGPT subscription. He also demonstrates how increasing reasoning effort (from default to &#34;xhigh&#34;) dramatically improves output quality at the cost of time and token usage.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/23/liteparse-for-the-web/#atom-everything">Extract PDF text in your browser with LiteParse for the web</a>
+    <span class="meta">(2026-04-23)</span>
+  </h3>
+  
+  <p>Simon Willison details building a browser-based PDF text extractor in 59 minutes using Claude Code and Opus 4.7, sharing his prompting workflow: starting with a plan artifact, using red/green TDD, requesting small commits, and cross-checking with OpenAI Codex to detect shortcuts. He also revisits the definition of &#34;vibe coding,&#34; arguing it specifically means using AI without reviewing the generated code — and reflects on when that approach is acceptably low-risk.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/24/recent-claude-code-quality-reports/#atom-everything">An update on recent Claude Code quality reports</a>
+    <span class="meta">(2026-04-24)</span>
+  </h3>
+  
+  <p>Simon Willison highlights Anthropic&#39;s postmortem on three bugs in the Claude Code harness—not the underlying models—that caused degraded output quality over two months, including one that made Claude appear forgetful by repeatedly clearing session context. He underscores that agentic system harnesses introduce their own complex failure modes independent of model non-determinism, a critical consideration for engineers building or relying on AI coding agents.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/24/deepseek-v4/#atom-everything">DeepSeek V4 - almost on the frontier, a fraction of the price</a>
+    <span class="meta">(2026-04-24)</span>
+  </h3>
+  
+  <p>Simon Willison reviews DeepSeek&#39;s newly released V4-Pro and V4-Flash models, highlighting their exceptional cost-efficiency: V4-Flash undercuts even GPT-5.4 Nano at $0.14/M input tokens, while V4-Pro is the cheapest large frontier model at $1.74/M. The models achieve this through dramatic efficiency gains in FLOPs and KV cache usage at long contexts, though DeepSeek self-reports trailing frontier leaders by roughly 3–6 months on benchmarks.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/23/llm-openai-via-codex/#atom-everything">llm-openai-via-codex 0.1a0</a>
+    <span class="meta">(2026-04-23)</span>
+  </h3>
+  
+  <p>Simon Willison releases `llm-openai-via-codex`, a plugin that reuses Codex CLI credentials to make OpenAI API calls via his LLM tool. This enables developers to leverage existing Codex CLI authentication for programmatic LLM access without separate API key setup, reflecting the growing ecosystem of tools built around AI coding assistants.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/24/the-people-do-not-yearn-for-automation/#atom-everything">The people do not yearn for automation</a>
+    <span class="meta">(2026-04-24)</span>
+  </h3>
+  
+  <p>Simon Willison highlights Nilay Patel&#39;s essay arguing that AI&#39;s unpopularity with the general public stems from a &#34;software brain&#34; mindset — the assumption that automation and optimization are universally desirable — that most people simply don&#39;t share. Despite surging ChatGPT usage numbers, ordinary users resist AI because it &#34;flattens&#34; human experience. For engineers, this is a reminder that technical enthusiasm for AI automation doesn&#39;t map to broader societal appetite.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/24/llm/#atom-everything">llm 0.31</a>
+    <span class="meta">(2026-04-24)</span>
+  </h3>
+  
+  <p>Simon Willison releases llm 0.31, his open-source CLI tool for interacting with large language models, adding support for the new GPT-5.5 model alongside configurable verbosity and image detail options for GPT-5+ OpenAI models. The update also enables asynchronous registration for custom models defined in extra-openai-models.yaml. Engineers using llm in their workflows gain finer control over output and image processing behavior with the latest OpenAI models.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/25/gpt-5-5-prompting-guide/#atom-everything">GPT-5.5 prompting guide</a>
+    <span class="meta">(2026-04-25)</span>
+  </h3>
+  
+  <p>Simon Willison highlights OpenAI&#39;s prompting guidance for GPT-5.5, emphasizing that it should be treated as a new model family requiring fresh prompt baselines rather than a drop-in replacement for earlier versions. Key tips include sending short user-visible status updates before multi-step tool calls and using the Codex `openai-docs` skill to automate migration. Engineers upgrading existing applications should expect to re-tune reasoning effort, verbosity, tool descriptions, and output format from scratch.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/25/romain-huet/#atom-everything">Quoting Romain Huet</a>
+    <span class="meta">(2026-04-25)</span>
+  </h3>
+  
+  <p>OpenAI&#39;s Romain Huet confirms that since GPT-5.4, the Codex coding model has been merged into the main GPT model line, meaning no separate GPT-5.5-Codex will be released. GPT-5.5 instead delivers improvements in agentic coding and computer use within a unified system. This signals a strategic shift away from specialized coding models toward general-purpose agents capable of broad computer tasks.</p>
+  
+  
+  <h2>Matteo Collina</h2>
+  
+  <p class="meta">Node.js TSC member, co-creator of Fastify, creator of Pino, and CTO of Platformatic — writing regularly about the Node.js ecosystem, performance, and AI&#39;s role in software development.</p>
+  
+  
+  <h3>
+    <a href="https://bsky.app/profile/nodeland.dev/post/3mjwtkdtsl426">(no title)</a>
+    <span class="meta">(2026-04-20)</span>
+  </h3>
+  
+  <p>Matteo Collina and Luca Maraschi announce a discussion on building and scaling AI agents with Kubernetes, arguing that most teams treat Kubernetes as optional until scaling and governance demands arise. The session covers a launch-week debrief on the infrastructure patterns needed to reliably run AI agents in production — a relevant concern for engineers operationalizing AI workloads.</p>
+  
+  <h3>
+    <a href="https://bsky.app/profile/nodeland.dev/post/3mjzdzafnow2m">(no title)</a>
+    <span class="meta">(2026-04-21)</span>
+  </h3>
+  
+  <p>Matteo Collina, a prominent open-source maintainer, warns against deploying unsolicited AI bots into GitHub repositories, stating he has already banned several. This raises an important boundary-setting norm for the OSS community as AI agents become capable of autonomously opening issues and pull requests on public repos.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/fragments/2026-04-21.html">Fragments: April 21</a>
+    <span class="meta">(2026-04-21)</span>
+  </h3>
+  
+  <p>Martin Fowler summarizes the Thoughtworks Technology Radar Vol. 34, which is heavily AI-focused and highlights two key tensions: AI tooling is pushing engineers to revisit foundational practices (pair programming, clean code, testability) as a counterweight to AI-generated complexity, and agentic systems are raising serious security concerns around &#34;permission-hungry&#34; agents vulnerable to prompt injection. Fowler also surfaces a practitioner&#39;s experience with Claude Code producing large, hard-to-maintain codebases, concluding that durable code requires regular human review regardless of how it was generated.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/designing-data-intensive-applications">Designing Data-intensive Applications with Martin Kleppmann</a>
+    <span class="meta">(2026-04-22)</span>
+  </h3>
+  
+  <p>Martin Kleppmann argues that LLMs are simultaneously increasing code volume beyond human review capacity and improving at writing formal proofs, suggesting formal verification could finally go mainstream as a result. He also notes that AI assistance raises concerns about the formation of coding skills. These observations are directly relevant to software engineers weighing how AI tooling may reshape code quality practices and developer expertise.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-ai-token-spending-out-of">The Pulse: AI token spending out of control – what’s next?</a>
+    <span class="meta">(2026-04-23)</span>
+  </h3>
+  
+  <p>Gergely Orosz examines an emerging trend where AI token consumption is exceeding engineering teams&#39; budgets, raising questions about cost management and what comes next for AI tool adoption. This matters to software engineers as unchecked token spending signals a growing challenge in sustainably integrating AI tools into development workflows at scale.</p>
+  
+  <h3>
+    <a href="https://blog.pragmaticengineer.com/the-pulse-tokenmaxxing-as-a-weird-new-trend/">The Pulse: ‘Tokenmaxxing’ as a weird new trend</a>
+    <span class="meta">(2026-04-23)</span>
+  </h3>
+  
+  <p>Gergely Orosz examines &#34;tokenmaxxing&#34; — the practice of artificially inflating AI token usage to game internal leaderboards at companies like Meta, Microsoft, and Salesforce — arguing it mirrors the discredited lines-of-code productivity metric and generates massive cost with little business value. Drawing on engineer interviews, he contrasts these dysfunctional incentives with Shopify&#39;s more measured approach using circuit breakers and qualitative review of high spenders. The piece is a cautionary signal for engineering leaders designing AI adoption metrics.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>
