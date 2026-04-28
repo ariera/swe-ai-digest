@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Apr 2026 14:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 15:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>How will AI change operating systems? Part 1: Ubuntu and Linux</title>
+      <link>https://newsletter.pragmaticengineer.com/p/ubuntu-and-ai</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 28 Apr 2026 14:25:18 +0000</pubDate>
+      <description>Gergely Orosz examines how Ubuntu/Canonical is adapting its OS to the AI era, covering hardware enablement (GPU, NPU, DPU support), deepened partnerships with NVIDIA, AMD, and Intel, and plans for local-first inference and future agentic workflow support at the OS level. The article also notes a cultural shift at Canonical toward embracing AI tooling without prescriptive usage targets. For software engineers, it surfaces practical infrastructure changes—like streamlined CUDA installation—that directly affect AI development environments.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/ubuntu-and-ai</guid>
+    </item>
     <item>
       <title>Quoting Matthew Yglesias</title>
       <link>https://simonwillison.net/2026/Apr/28/matthew-yglesias/#atom-everything</link>
