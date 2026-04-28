@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Apr 2026 15:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 16:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mkkxbr37n22t</link>
+      <author>Matteo Collina</author>
+      <pubDate>Tue, 28 Apr 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina argues that Claude Code's effectiveness stems not from model quality alone, but from its architectural co-location — the agent harness shares the same filesystem, process tree, and state as the executing code. He warns that production agents typically lose this co-location, which is the key design property enabling Claude Code's performance.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mkkxbr37n22t</guid>
+    </item>
     <item>
       <title>How will AI change operating systems? Part 1: Ubuntu and Linux</title>
       <link>https://newsletter.pragmaticengineer.com/p/ubuntu-and-ai</link>
