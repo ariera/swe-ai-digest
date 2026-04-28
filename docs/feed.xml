@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Apr 2026 19:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 00:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>microsoft/VibeVoice</title>
+      <link>https://simonwillison.net/2026/Apr/27/vibevoice/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 27 Apr 2026 23:46:56 +0000</pubDate>
+      <description>Simon Willison evaluates Microsoft's VibeVoice, an MIT-licensed Whisper-style speech-to-text model with built-in speaker diarization, running it locally on a MacBook Pro via a one-liner using `uv` and `mlx-audio`. He documents practical performance details — 8m45s to transcribe one hour of audio on an M5 Max — and notes limitations like the one-hour audio cap and a default token ceiling requiring manual override.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/27/vibevoice/#atom-everything</guid>
+    </item>
     <item>
       <title>Tracking the history of the now-deceased OpenAI Microsoft AGI clause</title>
       <link>https://simonwillison.net/2026/Apr/27/now-deceased-agi-clause/#atom-everything</link>
