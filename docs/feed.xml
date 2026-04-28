@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Apr 2026 03:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 14:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Matthew Yglesias</title>
+      <link>https://simonwillison.net/2026/Apr/28/matthew-yglesias/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 28 Apr 2026 13:25:29 +0000</pubDate>
+      <description>Matthew Yglesias, quoted by Simon Willison, articulates a consumer-side perspective on AI coding tools: rather than personally vibe-coding, he prefers that professional software companies leverage AI assistance to deliver better, cheaper products. This reflects a broader debate about who benefits most from AI-assisted programming — end users or developers — and raises questions about where vibe-coding fits in the software industry's future.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/28/matthew-yglesias/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Structured-Prompt-Driven Development (SPDD)</title>
+      <link>https://martinfowler.com/articles/structured-prompt-driven/</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 28 Apr 2026 13:02:00 +0000</pubDate>
+      <description>Thoughtworks' internal IT team has developed Structured Prompt-Driven Development (SPDD), a team-oriented workflow that elevates prompts to first-class artifacts stored in version control alongside code. The approach aims to align development with business needs across teams, not just individual developers. Authors identify three key developer skills required: alignment, abstraction-first thinking, and iterative review — offering a concrete methodology for scaling AI-assisted development in engineering organizations.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/structured-prompt-driven/</guid>
+    </item>
     <item>
       <title>Introducing talkie: a 13B vintage language model from 1930</title>
       <link>https://simonwillison.net/2026/Apr/28/talkie/#atom-everything</link>
