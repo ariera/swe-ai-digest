@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Apr 2026 00:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 03:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Introducing talkie: a 13B vintage language model from 1930</title>
+      <link>https://simonwillison.net/2026/Apr/28/talkie/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 28 Apr 2026 02:47:42 +0000</pubDate>
+      <description>Simon Willison covers the release of talkie, a 13B language model trained exclusively on pre-1931 out-of-copyright text, highlighting its research goals around knowledge cutoff probing and teaching historical models to program. The project raises practical questions about LLM training data provenance ("vegan models") and the unavoidable reliance on modern LLMs (Claude Sonnet/Opus) for fine-tuning, which risks introducing anachronistic knowledge — a challenge the team aims to eventually solve through fully bootstrapped, era-appropriate post-training.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/28/talkie/#atom-everything</guid>
+    </item>
     <item>
       <title>microsoft/VibeVoice</title>
       <link>https://simonwillison.net/2026/Apr/27/vibevoice/#atom-everything</link>
