@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Apr 2026 14:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 15:00:28 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Building Pi, and what makes self-modifying software so fascinating</title>
+      <link>https://newsletter.pragmaticengineer.com/p/building-pi-and-what-makes-self-modifying</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 29 Apr 2026 14:30:17 +0000</pubDate>
+      <description>Gergely Orosz interviews the creators of Pi (a minimalist self-modifying AI coding agent) and Flask, surfacing critical concerns about AI agents in practice: automation bias, declining code quality ("vibe slop"), and the undervalued role of human judgment. Key arguments include that agents accumulate tech debt by never feeling the "pain" of bad code, that frictionless AI-driven shipping is harmful, and that junior engineers remain more valuable than agents for learning and abstraction. The episode is highly relevant to engineers evaluating agentic workflows and their real-world tradeoffs.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/building-pi-and-what-makes-self-modifying</guid>
+    </item>
     <item>
       <title>Fragments: April 29</title>
       <link>https://martinfowler.com/fragments/2026-04-29.html</link>
