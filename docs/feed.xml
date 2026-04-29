@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Apr 2026 23:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 14:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Fragments: April 29</title>
+      <link>https://martinfowler.com/fragments/2026-04-29.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Wed, 29 Apr 2026 13:23:00 +0000</pubDate>
+      <description>Martin Fowler curates several AI-in-engineering perspectives: verification speed (not generation speed) is the new competitive advantage in agentic workflows; senior engineers' evolving role is shaping "harnesses" and training AI rather than reviewing diffs; and Harness Engineering—using static analysis and tests as computational sensors—yields stronger guarantees than LLM-only approaches. He also reflects on why precise conceptual definitions are critical for effective LLM collaboration, and pushes back on delegating writing to AI to preserve his own thinking.</description>
+      <guid isPermaLink="true">https://martinfowler.com/fragments/2026-04-29.html</guid>
+    </item>
     <item>
       <title>Quoting OpenAI Codex base_instructions</title>
       <link>https://simonwillison.net/2026/Apr/28/openai-codex/#atom-everything</link>
