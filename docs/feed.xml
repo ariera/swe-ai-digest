@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Apr 2026 20:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 01:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>llm 0.32a1</title>
+      <link>https://simonwillison.net/2026/Apr/29/llm-3/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 29 Apr 2026 23:52:50 +0000</pubDate>
+      <description>Simon Willison releases llm 0.32a1, a patch fixing a bug in 0.32a0 where tool-calling conversations were not correctly restored from SQLite storage. This matters to engineers using the LLM CLI/library for agentic or tool-use workflows, as the fix restores reliable persistence of multi-turn tool-calling sessions.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/29/llm-3/#atom-everything</guid>
+    </item>
     <item>
       <title>LLM 0.32a0  is a major backwards-compatible refactor</title>
       <link>https://simonwillison.net/2026/Apr/29/llm/#atom-everything</link>
@@ -16,6 +24,14 @@
       <pubDate>Wed, 29 Apr 2026 19:01:47 +0000</pubDate>
       <description>Simon Willison announces LLM 0.32a0, a major refactor of his Python library/CLI for interacting with LLMs. The update replaces the text-prompt/response model with a messages-based input system and a typed streaming parts interface, enabling richer multi-modal I/O, tool call handling, and reasoning token display. These changes better reflect how modern frontier models actually work and give developers a more flexible abstraction layer.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Apr/29/llm/#atom-everything</guid>
+    </item>
+    <item>
+      <title>llm 0.32a0</title>
+      <link>https://simonwillison.net/2026/Apr/29/llm-2/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 29 Apr 2026 18:57:47 +0000</pubDate>
+      <description>Simon Willison announces the alpha release of llm 0.32a0, a CLI tool for interacting with large language models. While the article content is minimal, the release of a new version of this widely-used LLM tooling library is directly relevant to software engineers building AI-powered workflows and integrations.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/29/llm-2/#atom-everything</guid>
     </item>
     <item>
       <title>Building Pi, and what makes self-modifying software so fascinating</title>
