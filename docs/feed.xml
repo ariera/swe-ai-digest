@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Apr 2026 01:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 02:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Zig project's rationale for their firm anti-AI contribution policy</title>
+      <link>https://simonwillison.net/2026/Apr/30/zig-anti-ai/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 30 Apr 2026 01:24:23 +0000</pubDate>
+      <description>Simon Willison covers the Zig project's strict ban on LLM-authored contributions, highlighting the rationale from Zig Software Foundation VP Loris Cro: open source maintainers invest in contributors as long-term assets, and LLM-assisted PRs undermine that by decoupling code authorship from contributor growth. The piece also notes the real-world tension this creates, as Bun — now Anthropic-owned and heavily AI-assisted — cannot upstream a significant performance improvement due to the policy.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/30/zig-anti-ai/#atom-everything</guid>
+    </item>
     <item>
       <title>llm 0.32a1</title>
       <link>https://simonwillison.net/2026/Apr/29/llm-3/#atom-everything</link>
