@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Apr 2026 02:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 15:00:24 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: token spend breaks budgets – what next?</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-token-spend-breaks-budgets-what-next/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 30 Apr 2026 14:52:36 +0000</pubDate>
+      <description>Orosz surveys engineers at 15 companies of varying sizes and finds AI token spend has risen ~10–15x in six months, straining budgets and forcing tradeoffs between model quality and cost. Companies are splitting into two camps: "let it rip and measure" versus active cost controls like model routing, cheaper defaults, and usage limits. The findings are directly relevant to engineers as token costs increasingly shape hiring decisions, performance reviews, and development workflows.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-token-spend-breaks-budgets-what-next/</guid>
+    </item>
+    <item>
+      <title>The Pulse: AI load breaks GitHub – why not other vendors?</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-github-breaks</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 30 Apr 2026 14:23:43 +0000</pubDate>
+      <description>Orosz examines how a 3.5x surge in AI-driven load is degrading GitHub's reliability (dropping to ~86% uptime), while questioning why competing vendors aren't experiencing similar strain. He also covers Anthropic's perceived "extraction era" — silently nerfing Claude Code, banning clients, and raising prices — alongside broader industry signals including GitHub Copilot price hikes, Codex growth, and Google's push to compete in AI coding models.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-github-breaks</guid>
+    </item>
     <item>
       <title>The Zig project's rationale for their firm anti-AI contribution policy</title>
       <link>https://simonwillison.net/2026/Apr/30/zig-anti-ai/#atom-everything</link>
