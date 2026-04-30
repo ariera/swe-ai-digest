@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Apr 2026 19:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 22:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Andrew Kelley</title>
+      <link>https://simonwillison.net/2026/Apr/30/andrew-kelley/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 30 Apr 2026 21:24:55 +0000</pubDate>
+      <description>Andrew Kelley, creator of the Zig programming language, argues that LLM-assisted contributions are identifiable in code reviews — hallucination-style mistakes differ fundamentally from human errors, and agentic-coding habits carry a detectable pattern. He warns contributors against submitting LLM-generated PRs to the Zig project, framing it as a community boundary rather than a blanket condemnation of AI use.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/30/andrew-kelley/#atom-everything</guid>
+    </item>
     <item>
       <title>We need RSS for sharing abundant vibe-coded apps</title>
       <link>https://simonwillison.net/2026/Apr/30/rss-vibe-coded-apps/#atom-everything</link>
