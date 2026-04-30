@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Apr 2026 15:00:24 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 19:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>We need RSS for sharing abundant vibe-coded apps</title>
+      <link>https://simonwillison.net/2026/Apr/30/rss-vibe-coded-apps/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 30 Apr 2026 18:38:48 +0000</pubDate>
+      <description>Simon Willison builds on Matt Webb's idea that vibe-coding (AI-assisted rapid app development) is making app creation so frequent and personal that it resembles blogging, suggesting RSS/Atom feeds as a discovery mechanism for these micro-apps. Willison acted on this by using Claude to add an Atom feed to his own tools page. This highlights how AI-accelerated development is changing the cadence and distribution model for software.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/30/rss-vibe-coded-apps/#atom-everything</guid>
+    </item>
     <item>
       <title>The Pulse: token spend breaks budgets – what next?</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-token-spend-breaks-budgets-what-next/</link>
