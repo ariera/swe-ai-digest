@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 May 2026 00:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 21:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>iNaturalist Sightings</title>
+      <link>https://simonwillison.net/2026/May/1/inat-sightings/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 01 May 2026 19:35:41 +0000</pubDate>
+      <description>Simon Willison demonstrates using Claude Code for web to build a full personal tool — including a Python CLI, a Git scraping pipeline, and a JavaScript front-end app — entirely from his phone while camping. The project illustrates an end-to-end AI-assisted development workflow where natural language prompts drive code generation across multiple components. It offers a practical example of how AI coding agents can enable rapid, mobile-first prototyping outside traditional development environments.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/1/inat-sightings/#atom-everything</guid>
+    </item>
     <item>
       <title>Codex CLI 0.128.0 adds /goal</title>
       <link>https://simonwillison.net/2026/Apr/30/codex-goals/#atom-everything</link>
