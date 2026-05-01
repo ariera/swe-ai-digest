@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Apr 2026 22:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 00:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Codex CLI 0.128.0 adds /goal</title>
+      <link>https://simonwillison.net/2026/Apr/30/codex-goals/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 30 Apr 2026 23:23:17 +0000</pubDate>
+      <description>OpenAI's Codex CLI 0.128.0 introduces a `/goal` command that enables persistent agentic looping — the agent continues executing until it self-evaluates the goal as complete or exhausts a token budget. The feature is implemented via automatically injected prompt files (`goals/continuation.md`, `goals/budget_limit.md`), offering a concrete example of how prompt engineering drives agent control flow in production coding tools.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/30/codex-goals/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Our evaluation of OpenAI's GPT-5.5 cyber capabilities</title>
+      <link>https://simonwillison.net/2026/Apr/30/gpt-55-cyber-capabilities/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 30 Apr 2026 23:03:24 +0000</pubDate>
+      <description>The UK's AI Security Institute evaluated GPT-5.5's ability to find security vulnerabilities, finding it comparable to Claude Mythos — but with the key distinction that GPT-5.5 is currently publicly available. This matters to software engineers because it signals that frontier-level AI cybersecurity capabilities are no longer restricted to research contexts, raising both offensive threat and defensive tooling implications.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Apr/30/gpt-55-cyber-capabilities/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Andrew Kelley</title>
       <link>https://simonwillison.net/2026/Apr/30/andrew-kelley/#atom-everything</link>
