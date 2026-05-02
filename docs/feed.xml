@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 May 2026 08:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 18:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Sightings</title>
+      <link>https://simonwillison.net/2026/May/2/sightings/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 02 May 2026 17:26:40 +0000</pubDate>
+      <description>Simon Willison describes building a new blog feature — syndicating his iNaturalist wildlife photos — entirely on his phone using Claude Code for web. He extended an existing content syndication system ("beats") via an AI-assisted workflow, sharing the resulting PR and prompt. This is a practical example of using an AI coding agent for end-to-end feature development on a mobile device.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/2/sightings/#atom-everything</guid>
+    </item>
     <item>
       <title>Oxide and Friends 4/20/2026 -- Are LLMs Insufficiently Lazy</title>
       <link>https://www.youtube.com/watch?v=iREJYxgzNP8</link>
