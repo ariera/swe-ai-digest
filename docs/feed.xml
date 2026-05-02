@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 May 2026 21:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 08:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Oxide and Friends 4/20/2026 -- Are LLMs Insufficiently Lazy</title>
+      <link>https://www.youtube.com/watch?v=iREJYxgzNP8</link>
+      <author>Bryan Cantrill</author>
+      <pubDate>Sat, 02 May 2026 01:25:22 +0000</pubDate>
+      <description>Bryan Cantrill and guests critically examine Garry Tan's claim of using LLMs to generate tens of thousands of lines of code per day, questioning whether raw output volume is a meaningful measure of software productivity. A Polish engineer, Gregorein, analyzed the generated code to surface concrete findings. The discussion challenges the prevailing narrative that AI-assisted code generation is inherently a productivity win for software engineers.</description>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=iREJYxgzNP8</guid>
+    </item>
     <item>
       <title>iNaturalist Sightings</title>
       <link>https://simonwillison.net/2026/May/1/inat-sightings/#atom-everything</link>
