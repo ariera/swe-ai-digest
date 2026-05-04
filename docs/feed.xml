@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 May 2026 14:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 15:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Redis array type: short story of a long development</title>
+      <link>http://antirez.com/news/164</link>
+      <author>Salvatore Sanfilippo (antirez)</author>
+      <pubDate>Mon, 04 May 2026 14:21:45 +0000</pubDate>
+      <description>Redis creator antirez details how he used LLMs (Claude Opus, GPT-5) throughout a four-month development cycle for a new Array data type — from co-designing the specification to AI-assisted code generation, testing, and optimizing a third-party regex library. He argues that AI didn't replace deep engineering involvement but enabled him to tackle greater complexity and cover more ground than he otherwise would have. This is a rare, candid first-person account of AI augmenting expert-level systems programming on a production open-source project.</description>
+      <guid isPermaLink="true">http://antirez.com/news/164</guid>
+    </item>
     <item>
       <title>Content for Content’s Sake</title>
       <link>https://lucumr.pocoo.org/2026/5/4/content-for-contents-sake/</link>
