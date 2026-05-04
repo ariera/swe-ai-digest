@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 May 2026 16:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 14:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Content for Content’s Sake</title>
+      <link>https://lucumr.pocoo.org/2026/5/4/content-for-contents-sake/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher argues that LLM-generated content is polluting online discourse, eroding trust, and subtly influencing even how humans write and speak. Drawing on personal coding session data showing inflated use of LLM-favored words, he warns that the low cost of AI-generated output creates an arms race that drowns out genuine human signal. He calls for greater friction in text-submission systems, transparency about AI use, and personal accountability in how developers deploy agents in interactions with others.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/5/4/content-for-contents-sake/</guid>
+    </item>
     <item>
       <title>Quoting Anthropic</title>
       <link>https://simonwillison.net/2026/May/3/anthropic/#atom-everything</link>
