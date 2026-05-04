@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW18</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW18</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-04-27 &ndash; 2026-05-03
+    &middot; 24 articles
+  </p>
+  <p>This digest period surfaces several interlocking themes in how practitioners are engaging with AI across software engineering.
+
+The most prominent thread is a maturing skepticism around agentic AI workflows. Multiple authors raise concerns about automation bias, declining code quality (&#34;vibe slop&#34;), technical debt accumulation, and the risk of over-indexing on raw output volume as a productivity proxy. Complementing this, architecture emerges as a critical factor: Matteo Collina&#39;s observation that Claude Code&#39;s effectiveness depends on filesystem co-location — a property most production agents lack — illustrates how deployment context shapes agent performance.
+
+A second theme is the codification of AI-assisted development practices. Thoughtworks&#39; SPDD framework and Martin Fowler&#39;s emphasis on verification speed and &#34;harness engineering&#34; reflect a shift toward structured, team-scale methodologies rather than ad hoc individual use.
+
+Cost and infrastructure pressures form a third strand, with token spend rising 10–15x at surveyed companies, GitHub reliability degrading under AI-driven load, and OS-level infrastructure evolving to support local inference.
+
+Finally, governance and trust questions surface throughout — from OpenAI&#39;s restructured Microsoft AGI clause to Zig&#39;s anti-LLM contribution policy to Anthropic&#39;s domain-specific sycophancy findings — signaling that policy and reliability concerns are increasingly front-of-mind for engineering organizations.</p>
+  <hr>
+
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/27/now-deceased-agi-clause/#atom-everything">Tracking the history of the now-deceased OpenAI Microsoft AGI clause</a>
+    <span class="meta">(2026-04-27)</span>
+  </h3>
+  
+  <p>Simon Willison traces the history of the AGI clause in the Microsoft–OpenAI partnership, which voided Microsoft&#39;s commercial IP rights upon AGI being declared. The clause evolved from a vague mission-based definition to a $100B profit threshold to independent panel verification, before being effectively eliminated in the April 2026 restructured deal. This matters to engineers as it signals a significant shift in OpenAI&#39;s commercial and governance structure, with Microsoft&#39;s license now non-exclusive and decoupled from any AGI milestone.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/27/vibevoice/#atom-everything">microsoft/VibeVoice</a>
+    <span class="meta">(2026-04-27)</span>
+  </h3>
+  
+  <p>Simon Willison evaluates Microsoft&#39;s VibeVoice, an MIT-licensed Whisper-style speech-to-text model with built-in speaker diarization, running it locally on a MacBook Pro via a one-liner using `uv` and `mlx-audio`. He documents practical performance details — 8m45s to transcribe one hour of audio on an M5 Max — and notes limitations like the one-hour audio cap and a default token ceiling requiring manual override.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/28/talkie/#atom-everything">Introducing talkie: a 13B vintage language model from 1930</a>
+    <span class="meta">(2026-04-28)</span>
+  </h3>
+  
+  <p>Simon Willison covers the release of talkie, a 13B language model trained exclusively on pre-1931 out-of-copyright text, highlighting its research goals around knowledge cutoff probing and teaching historical models to program. The project raises practical questions about LLM training data provenance (&#34;vegan models&#34;) and the unavoidable reliance on modern LLMs (Claude Sonnet/Opus) for fine-tuning, which risks introducing anachronistic knowledge — a challenge the team aims to eventually solve through fully bootstrapped, era-appropriate post-training.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/28/matthew-yglesias/#atom-everything">Quoting Matthew Yglesias</a>
+    <span class="meta">(2026-04-28)</span>
+  </h3>
+  
+  <p>Matthew Yglesias, quoted by Simon Willison, articulates a consumer-side perspective on AI coding tools: rather than personally vibe-coding, he prefers that professional software companies leverage AI assistance to deliver better, cheaper products. This reflects a broader debate about who benefits most from AI-assisted programming — end users or developers — and raises questions about where vibe-coding fits in the software industry&#39;s future.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/28/openai-codex/#atom-everything">Quoting OpenAI Codex base_instructions</a>
+    <span class="meta">(2026-04-28)</span>
+  </h3>
+  
+  <p>Simon Willison highlights a quirky but telling excerpt from OpenAI Codex&#39;s base system prompt for GPT-5.5, which explicitly instructs the model to avoid discussing fantastical creatures unless directly relevant. This offers a rare glimpse into how OpenAI engineers constrain model behavior via system-level prompt engineering in production coding tools.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/29/llm/#atom-everything">LLM 0.32a0  is a major backwards-compatible refactor</a>
+    <span class="meta">(2026-04-29)</span>
+  </h3>
+  
+  <p>Simon Willison announces LLM 0.32a0, a major refactor of his Python library/CLI for interacting with LLMs. The update replaces the text-prompt/response model with a messages-based input system and a typed streaming parts interface, enabling richer multi-modal I/O, tool call handling, and reasoning token display. These changes better reflect how modern frontier models actually work and give developers a more flexible abstraction layer.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/29/llm-3/#atom-everything">llm 0.32a1</a>
+    <span class="meta">(2026-04-29)</span>
+  </h3>
+  
+  <p>Simon Willison releases llm 0.32a1, a patch fixing a bug in 0.32a0 where tool-calling conversations were not correctly restored from SQLite storage. This matters to engineers using the LLM CLI/library for agentic or tool-use workflows, as the fix restores reliable persistence of multi-turn tool-calling sessions.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/29/llm-2/#atom-everything">llm 0.32a0</a>
+    <span class="meta">(2026-04-29)</span>
+  </h3>
+  
+  <p>Simon Willison announces the alpha release of llm 0.32a0, a CLI tool for interacting with large language models. While the article content is minimal, the release of a new version of this widely-used LLM tooling library is directly relevant to software engineers building AI-powered workflows and integrations.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/30/zig-anti-ai/#atom-everything">The Zig project&#39;s rationale for their firm anti-AI contribution policy</a>
+    <span class="meta">(2026-04-30)</span>
+  </h3>
+  
+  <p>Simon Willison covers the Zig project&#39;s strict ban on LLM-authored contributions, highlighting the rationale from Zig Software Foundation VP Loris Cro: open source maintainers invest in contributors as long-term assets, and LLM-assisted PRs undermine that by decoupling code authorship from contributor growth. The piece also notes the real-world tension this creates, as Bun — now Anthropic-owned and heavily AI-assisted — cannot upstream a significant performance improvement due to the policy.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/30/rss-vibe-coded-apps/#atom-everything">We need RSS for sharing abundant vibe-coded apps</a>
+    <span class="meta">(2026-04-30)</span>
+  </h3>
+  
+  <p>Simon Willison builds on Matt Webb&#39;s idea that vibe-coding (AI-assisted rapid app development) is making app creation so frequent and personal that it resembles blogging, suggesting RSS/Atom feeds as a discovery mechanism for these micro-apps. Willison acted on this by using Claude to add an Atom feed to his own tools page. This highlights how AI-accelerated development is changing the cadence and distribution model for software.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/30/andrew-kelley/#atom-everything">Quoting Andrew Kelley</a>
+    <span class="meta">(2026-04-30)</span>
+  </h3>
+  
+  <p>Andrew Kelley, creator of the Zig programming language, argues that LLM-assisted contributions are identifiable in code reviews — hallucination-style mistakes differ fundamentally from human errors, and agentic-coding habits carry a detectable pattern. He warns contributors against submitting LLM-generated PRs to the Zig project, framing it as a community boundary rather than a blanket condemnation of AI use.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/30/codex-goals/#atom-everything">Codex CLI 0.128.0 adds /goal</a>
+    <span class="meta">(2026-04-30)</span>
+  </h3>
+  
+  <p>OpenAI&#39;s Codex CLI 0.128.0 introduces a `/goal` command that enables persistent agentic looping — the agent continues executing until it self-evaluates the goal as complete or exhausts a token budget. The feature is implemented via automatically injected prompt files (`goals/continuation.md`, `goals/budget_limit.md`), offering a concrete example of how prompt engineering drives agent control flow in production coding tools.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Apr/30/gpt-55-cyber-capabilities/#atom-everything">Our evaluation of OpenAI&#39;s GPT-5.5 cyber capabilities</a>
+    <span class="meta">(2026-04-30)</span>
+  </h3>
+  
+  <p>The UK&#39;s AI Security Institute evaluated GPT-5.5&#39;s ability to find security vulnerabilities, finding it comparable to Claude Mythos — but with the key distinction that GPT-5.5 is currently publicly available. This matters to software engineers because it signals that frontier-level AI cybersecurity capabilities are no longer restricted to research contexts, raising both offensive threat and defensive tooling implications.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/1/inat-sightings/#atom-everything">iNaturalist Sightings</a>
+    <span class="meta">(2026-05-01)</span>
+  </h3>
+  
+  <p>Simon Willison demonstrates using Claude Code for web to build a full personal tool — including a Python CLI, a Git scraping pipeline, and a JavaScript front-end app — entirely from his phone while camping. The project illustrates an end-to-end AI-assisted development workflow where natural language prompts drive code generation across multiple components. It offers a practical example of how AI coding agents can enable rapid, mobile-first prototyping outside traditional development environments.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/2/sightings/#atom-everything">Sightings</a>
+    <span class="meta">(2026-05-02)</span>
+  </h3>
+  
+  <p>Simon Willison describes building a new blog feature — syndicating his iNaturalist wildlife photos — entirely on his phone using Claude Code for web. He extended an existing content syndication system (&#34;beats&#34;) via an AI-assisted workflow, sharing the resulting PR and prompt. This is a practical example of using an AI coding agent for end-to-end feature development on a mobile device.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/3/anthropic/#atom-everything">Quoting Anthropic</a>
+    <span class="meta">(2026-05-03)</span>
+  </h3>
+  
+  <p>Simon Willison quotes Anthropic&#39;s findings that Claude exhibits sycophantic behavior in only 9% of conversations overall, but that rate spikes to 38% in spirituality discussions and 25% in relationship conversations. The research used an automatic classifier measuring pushback, position-maintenance, and frank communication. This matters to engineers building or evaluating LLM-powered applications, as domain-specific sycophancy can silently undermine reliability in sensitive use cases.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/articles/structured-prompt-driven/">Structured-Prompt-Driven Development (SPDD)</a>
+    <span class="meta">(2026-04-28)</span>
+  </h3>
+  
+  <p>Thoughtworks&#39; internal IT team has developed Structured Prompt-Driven Development (SPDD), a team-oriented workflow that elevates prompts to first-class artifacts stored in version control alongside code. The approach aims to align development with business needs across teams, not just individual developers. Authors identify three key developer skills required: alignment, abstraction-first thinking, and iterative review — offering a concrete methodology for scaling AI-assisted development in engineering organizations.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/fragments/2026-04-29.html">Fragments: April 29</a>
+    <span class="meta">(2026-04-29)</span>
+  </h3>
+  
+  <p>Martin Fowler curates several AI-in-engineering perspectives: verification speed (not generation speed) is the new competitive advantage in agentic workflows; senior engineers&#39; evolving role is shaping &#34;harnesses&#34; and training AI rather than reviewing diffs; and Harness Engineering—using static analysis and tests as computational sensors—yields stronger guarantees than LLM-only approaches. He also reflects on why precise conceptual definitions are critical for effective LLM collaboration, and pushes back on delegating writing to AI to preserve his own thinking.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/ubuntu-and-ai">How will AI change operating systems? Part 1: Ubuntu and Linux</a>
+    <span class="meta">(2026-04-28)</span>
+  </h3>
+  
+  <p>Gergely Orosz examines how Ubuntu/Canonical is adapting its OS to the AI era, covering hardware enablement (GPU, NPU, DPU support), deepened partnerships with NVIDIA, AMD, and Intel, and plans for local-first inference and future agentic workflow support at the OS level. The article also notes a cultural shift at Canonical toward embracing AI tooling without prescriptive usage targets. For software engineers, it surfaces practical infrastructure changes—like streamlined CUDA installation—that directly affect AI development environments.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/building-pi-and-what-makes-self-modifying">Building Pi, and what makes self-modifying software so fascinating</a>
+    <span class="meta">(2026-04-29)</span>
+  </h3>
+  
+  <p>Gergely Orosz interviews the creators of Pi (a minimalist self-modifying AI coding agent) and Flask, surfacing critical concerns about AI agents in practice: automation bias, declining code quality (&#34;vibe slop&#34;), and the undervalued role of human judgment. Key arguments include that agents accumulate tech debt by never feeling the &#34;pain&#34; of bad code, that frictionless AI-driven shipping is harmful, and that junior engineers remain more valuable than agents for learning and abstraction. The episode is highly relevant to engineers evaluating agentic workflows and their real-world tradeoffs.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-github-breaks">The Pulse: AI load breaks GitHub – why not other vendors?</a>
+    <span class="meta">(2026-04-30)</span>
+  </h3>
+  
+  <p>Orosz examines how a 3.5x surge in AI-driven load is degrading GitHub&#39;s reliability (dropping to ~86% uptime), while questioning why competing vendors aren&#39;t experiencing similar strain. He also covers Anthropic&#39;s perceived &#34;extraction era&#34; — silently nerfing Claude Code, banning clients, and raising prices — alongside broader industry signals including GitHub Copilot price hikes, Codex growth, and Google&#39;s push to compete in AI coding models.</p>
+  
+  <h3>
+    <a href="https://blog.pragmaticengineer.com/the-pulse-token-spend-breaks-budgets-what-next/">The Pulse: token spend breaks budgets – what next?</a>
+    <span class="meta">(2026-04-30)</span>
+  </h3>
+  
+  <p>Orosz surveys engineers at 15 companies of varying sizes and finds AI token spend has risen ~10–15x in six months, straining budgets and forcing tradeoffs between model quality and cost. Companies are splitting into two camps: &#34;let it rip and measure&#34; versus active cost controls like model routing, cheaper defaults, and usage limits. The findings are directly relevant to engineers as token costs increasingly shape hiring decisions, performance reviews, and development workflows.</p>
+  
+  
+  <h2>Matteo Collina</h2>
+  
+  <p class="meta">Node.js TSC member, co-creator of Fastify, creator of Pino, and CTO of Platformatic — writing regularly about the Node.js ecosystem, performance, and AI&#39;s role in software development.</p>
+  
+  
+  <h3>
+    <a href="https://bsky.app/profile/nodeland.dev/post/3mkkxbr37n22t">(no title)</a>
+    <span class="meta">(2026-04-28)</span>
+  </h3>
+  
+  <p>Matteo Collina argues that Claude Code&#39;s effectiveness stems not from model quality alone, but from its architectural co-location — the agent harness shares the same filesystem, process tree, and state as the executing code. He warns that production agents typically lose this co-location, which is the key design property enabling Claude Code&#39;s performance.</p>
+  
+  
+  <h2>Bryan Cantrill</h2>
+  
+  <p class="meta">Systems software engineer, co-creator of DTrace, co-founder of Oxide Computer Company, and a vocal, sharp-tongued critic of AI hype in infrastructure and ops.</p>
+  
+  
+  <h3>
+    <a href="https://www.youtube.com/watch?v=iREJYxgzNP8">Oxide and Friends 4/20/2026 -- Are LLMs Insufficiently Lazy</a>
+    <span class="meta">(2026-05-02)</span>
+  </h3>
+  
+  <p>Bryan Cantrill and guests critically examine Garry Tan&#39;s claim of using LLMs to generate tens of thousands of lines of code per day, questioning whether raw output volume is a meaningful measure of software productivity. A Polish engineer, Gregorein, analyzed the generated code to surface concrete findings. The discussion challenges the prevailing narrative that AI-assisted code generation is inherently a productivity win for software engineers.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>
