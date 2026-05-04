@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 May 2026 18:00:14 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 23:00:14 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>April 2026 newsletter</title>
+      <link>https://simonwillison.net/2026/May/4/april-newsletter/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 04 May 2026 22:38:36 +0000</pubDate>
+      <description>Simon Willison's April 2026 newsletter roundup covers major AI model releases and updates, including Opus 4.7, GPT-5.5 (both with price increases), Claude Mythos, ChatGPT Images 2.0, and LLM security research. While the full content is paywalled, the topics signal continued rapid iteration in frontier models and rising costs — directly relevant to engineers tracking the AI tooling landscape.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/4/april-newsletter/#atom-everything</guid>
+    </item>
     <item>
       <title>TRE Python binding — ReDoS robustness demo</title>
       <link>https://simonwillison.net/2026/May/4/tre-python-binding/#atom-everything</link>
