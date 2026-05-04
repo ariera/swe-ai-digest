@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 May 2026 15:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 17:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Redis Array Playground</title>
+      <link>https://simonwillison.net/2026/May/4/redis-array/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 04 May 2026 15:53:57 +0000</pubDate>
+      <description>Simon Willison used Claude Code to build an interactive browser-based playground for a new Redis array data type, leveraging a WASM-compiled Redis build. The article highlights agentic AI tooling being applied to developer tooling tasks — generating a functional web app around an unreleased feature branch. It also references Salvatore Sanfilippo's separate write-up on AI-assisted development of the array type itself.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/4/redis-array/#atom-everything</guid>
+    </item>
     <item>
       <title>Redis array type: short story of a long development</title>
       <link>http://antirez.com/news/164</link>
