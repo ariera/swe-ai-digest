@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 May 2026 17:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 18:00:14 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>TRE Python binding — ReDoS robustness demo</title>
+      <link>https://simonwillison.net/2026/May/4/tre-python-binding/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 04 May 2026 17:52:00 +0000</pubDate>
+      <description>Simon Willison used Claude Code to build an experimental Python binding for the TRE regex engine via ctypes, then tested it against ReDoS (malicious regex) attacks. The article is a practical example of delegating low-level C binding work to an AI coding agent, illustrating how such tools can accelerate exploratory systems programming tasks.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/4/tre-python-binding/#atom-everything</guid>
+    </item>
     <item>
       <title>Redis Array Playground</title>
       <link>https://simonwillison.net/2026/May/4/redis-array/#atom-everything</link>
