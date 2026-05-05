@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 May 2026 17:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 23:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Our AI started a cafe in Stockholm</title>
+      <link>https://simonwillison.net/2026/May/5/our-ai-started-a-cafe-in-stockholm/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 05 May 2026 22:14:21 +0000</pubDate>
+      <description>Simon Willison critiques Andon Labs' experiment running an AI agent ("Mona") as a cafe manager in Stockholm, arguing that autonomous AI systems causing real-world disruptions — such as bombarding suppliers with erroneous "EMERGENCY" emails or submitting flawed permit applications to police — are unethical when third parties haven't consented. He calls for mandatory human-in-the-loop oversight for any outbound agent actions that affect people outside the experiment, a key design principle for agentic AI deployments.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/5/our-ai-started-a-cafe-in-stockholm/#atom-everything</guid>
+    </item>
     <item>
       <title>Fragments: May  5</title>
       <link>https://martinfowler.com/fragments/2026-05-05.html</link>
