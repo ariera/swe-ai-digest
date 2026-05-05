@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 May 2026 23:00:14 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 00:00:26 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Granite 4.1 3B SVG Pelican Gallery</title>
+      <link>https://simonwillison.net/2026/May/4/granite-41-3b-svg-pelican-gallery/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 04 May 2026 23:49:24 +0000</pubDate>
+      <description>Simon Willison evaluates IBM's newly released Apache 2.0-licensed Granite 4.1 3B LLM by prompting 21 quantized GGUF variants to generate an SVG of a pelican riding a bicycle, testing whether model size correlates with output quality. His finding: no meaningful quality difference across sizes — all variants performed poorly. This serves as a practical, if informal, benchmark of quantized model performance for engineers considering local deployment of small LLMs.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/4/granite-41-3b-svg-pelican-gallery/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Quoting Andy Masley</title>
+      <link>https://simonwillison.net/2026/May/4/andy-masley/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 04 May 2026 22:51:09 +0000</pubDate>
+      <description>Simon Willison quotes Andy Masley debunking the "farmland loss" argument against data center construction, noting that the land sold to hyperscalers is negligible compared to the vast acreage farmers have voluntarily sold since 2000. The argument matters to engineers tracking AI infrastructure debates, as it directly addresses a common critique of the physical footprint required to scale AI compute.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/4/andy-masley/#atom-everything</guid>
+    </item>
     <item>
       <title>April 2026 newsletter</title>
       <link>https://simonwillison.net/2026/May/4/april-newsletter/#atom-everything</link>
