@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 May 2026 00:00:26 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 16:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette-llm 0.1a7</title>
+      <link>https://simonwillison.net/2026/May/5/datasette-llm/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 05 May 2026 01:56:55 +0000</pubDate>
+      <description>Simon Willison releases datasette-llm 0.1a7, adding support for configuring default options (e.g., model selection and temperature) for LLM-powered enrichment operations within Datasette. This update reflects the maturing plugin architecture for integrating LLMs into data workflows, relevant to engineers building AI-augmented data tooling.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/5/datasette-llm/#atom-everything</guid>
+    </item>
+    <item>
+      <title>llm-echo 0.5a0</title>
+      <link>https://simonwillison.net/2026/May/5/llm-echo/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 05 May 2026 01:31:54 +0000</pubDate>
+      <description>Simon Willison releases llm-echo 0.5a0, a plugin for the LLM CLI tool that provides a fake "echo" model for automated testing without invoking a real LLM. The new `-o thinking 1` option simulates reasoning/thinking blocks, enabling developers to test workflows that depend on the upcoming LLM 0.32a0 features. This is relevant to engineers building or testing pipelines around LLM tooling and agent architectures.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/5/llm-echo/#atom-everything</guid>
+    </item>
     <item>
       <title>Granite 4.1 3B SVG Pelican Gallery</title>
       <link>https://simonwillison.net/2026/May/4/granite-41-3b-svg-pelican-gallery/#atom-everything</link>
