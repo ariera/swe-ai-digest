@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 May 2026 23:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 15:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Vibe coding and agentic engineering are getting closer than I'd like</title>
+      <link>https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 06 May 2026 14:24:08 +0000</pubDate>
+      <description>Simon Willison argues that vibe coding and agentic engineering — once clearly distinct practices — are converging in his own workflow as coding agents become reliable enough that even experienced engineers stop reviewing every line. He grapples with the accountability gap this creates (AI has no professional reputation), notes that the entire software development lifecycle was implicitly designed around human coding throughput, and identifies a new evaluation challenge: AI-generated repos with tests and docs are now indistinguishable from carefully handcrafted ones. Despite these concerns, he remains unworried about his career, framing AI as an amplifier of existing expertise rather than a replacement.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/#atom-everything</guid>
+    </item>
     <item>
       <title>Our AI started a cafe in Stockholm</title>
       <link>https://simonwillison.net/2026/May/5/our-ai-started-a-cafe-in-stockholm/#atom-everything</link>
