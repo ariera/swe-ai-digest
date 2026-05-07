@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 May 2026 17:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2026 17:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: Did capacity shortages turn Anthropic hostile to devs?</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-did-capacity-shortages</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 07 May 2026 16:45:31 +0000</pubDate>
+      <description>Gergely Orosz examines several AI-industry developments affecting software engineers: Anthropic's possible capacity-driven restrictions on Claude Code, Amazon lifting its ban on Claude Code and Codex, Meta assigning engineers to data-labelling tasks ahead of job cuts, and a trend toward small "AI-forward" teams of 5–10 developers. GitHub's upcoming shift to API token-based pricing for Copilot is flagged as a major, potentially unpredictable cost change for engineering teams.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-did-capacity-shortages</guid>
+    </item>
     <item>
       <title>Live blog: Code w/ Claude 2026</title>
       <link>https://simonwillison.net/2026/May/6/code-w-claude-2026/#atom-everything</link>
