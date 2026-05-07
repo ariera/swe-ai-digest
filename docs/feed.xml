@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 May 2026 18:00:27 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2026 21:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>llm-gemini 0.31</title>
+      <link>https://simonwillison.net/2026/May/7/llm-gemini/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 07 May 2026 19:57:06 +0000</pubDate>
+      <description>Simon Willison announces the release of llm-gemini 0.31, noting that the Gemini 3.1 Flash-Lite model has exited preview and is now generally available. The update is relevant to engineers using the `llm` CLI tool to interact with Google's Gemini models, signaling the model's stabilization for production use.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/7/llm-gemini/#atom-everything</guid>
+    </item>
     <item>
       <title>Behind the Scenes Hardening Firefox with Claude Mythos Preview</title>
       <link>https://simonwillison.net/2026/May/7/firefox-claude-mythos/#atom-everything</link>
