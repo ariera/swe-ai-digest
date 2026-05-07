@@ -6,9 +6,33 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 May 2026 17:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2026 18:00:27 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Behind the Scenes Hardening Firefox with Claude Mythos Preview</title>
+      <link>https://simonwillison.net/2026/May/7/firefox-claude-mythos/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 07 May 2026 17:56:25 +0000</pubDate>
+      <description>Mozilla used early access to Anthropic's Claude Mythos model to dramatically accelerate Firefox security hardening, jumping from ~20–30 security bug fixes per month in 2025 to 423 in April 2026. The effort combined more capable models with improved techniques for steering, scaling, and stacking them to generate high-signal vulnerability reports. This marks a notable shift from AI-generated bug reports being dismissed as noise to becoming a serious, productive security research tool.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/7/firefox-claude-mythos/#atom-everything</guid>
+    </item>
+    <item>
+      <title>The Pulse: AI load breaks GitHub – why not other vendors?</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-ai-load-breaks-github/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 07 May 2026 17:33:18 +0000</pubDate>
+      <description>Gergely Orosz examines how an unexpected surge in AI agent activity — requiring a 30x capacity increase by GitHub's own revised estimates — is a key driver behind GitHub's months-long reliability crisis, including data integrity failures and near-daily outages. The piece argues GitHub was caught off guard by AI-driven load growth that competitors like Google had anticipated and planned for well in advance. This matters to software engineers because it illustrates how AI agent adoption is stressing foundational developer infrastructure at a systemic level.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-ai-load-breaks-github/</guid>
+    </item>
+    <item>
+      <title>Notes on the xAI/Anthropic data center deal</title>
+      <link>https://simonwillison.net/2026/May/7/xai-anthropic/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 07 May 2026 17:09:28 +0000</pubDate>
+      <description>Simon Willison analyzes Anthropic's deal to use xAI's Colossus 1 data center, raising concerns about its poor environmental record and the supply chain risk of Elon Musk retaining the right to reclaim compute if he deems Anthropic's AI harmful to humanity. He also notes xAI's abrupt two-week deprecation notice for several Grok models, highlighting reliability risks for developers depending on third-party AI infrastructure.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/7/xai-anthropic/#atom-everything</guid>
+    </item>
     <item>
       <title>The Pulse: Did capacity shortages turn Anthropic hostile to devs?</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-pulse-did-capacity-shortages</link>
