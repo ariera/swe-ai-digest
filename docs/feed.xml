@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 May 2026 21:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 10:00:25 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Pushing Local Models With Focus And Polish</title>
+      <link>https://lucumr.pocoo.org/2026/5/8/local-models/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher argues that local AI model inference is held back not by model quality but by fragmentation, poor UX, and lack of focused polish — issues like missing tool-parameter streaming and complex configuration chains. He advocates "picking one winner" and building a tight, product-quality stack around it, exemplified by his pi-ds4 extension that embeds Salvatore Sanfilippo's ds4.c (a Mac-native DeepSeek V4 Flash engine) directly into his coding agent Pi with zero manual configuration.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/5/8/local-models/</guid>
+    </item>
     <item>
       <title>llm-gemini 0.31</title>
       <link>https://simonwillison.net/2026/May/7/llm-gemini/#atom-everything</link>
