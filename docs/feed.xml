@@ -6,9 +6,33 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 May 2026 16:00:30 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 20:00:24 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting James Shore</title>
+      <link>https://simonwillison.net/2026/May/11/james-shore/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 11 May 2026 19:48:32 +0000</pubDate>
+      <description>James Shore argues that AI coding agents only deliver net value if they reduce maintenance costs proportionally to the speed gains they provide — doubling output while holding or increasing maintenance costs actually worsens long-term technical debt. The math means that faster code generation without corresponding maintenance improvements leads to quadrupled costs, not productivity gains. This is a critical framing for engineers evaluating whether AI-assisted workflows genuinely improve sustainability or merely accelerate liability.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/11/james-shore/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Your AI Use Is Breaking My Brain</title>
+      <link>https://simonwillison.net/2026/May/11/zombie-internet/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 11 May 2026 19:21:27 +0000</pubDate>
+      <description>Simon Willison highlights Jason Koebler's concept of the "Zombie Internet" — a state where AI-generated and AI-assisted content has become so pervasive online that it distorts human writing styles and makes authentic content increasingly hard to identify. Unlike the "Dead Internet" (bots talking to bots), the Zombie Internet describes a messy hybrid of humans, AI agents, and AI-assisted users all interacting simultaneously. This matters to software engineers as it frames a growing signal-to-noise problem that affects research, communication, and the broader information ecosystem they operate in.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/11/zombie-internet/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Using LLM in the shebang line of a script</title>
+      <link>https://simonwillison.net/2026/May/11/llm-shebang/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 11 May 2026 18:48:57 +0000</pubDate>
+      <description>Simon Willison demonstrates a novel pattern for embedding LLM invocations directly in Unix shebang lines, turning plain text files into executable AI-powered scripts. The technique supports tool calls and YAML-defined Python functions, enabling LLM-driven computation and data querying. This offers software engineers a lightweight, composable way to integrate LLM agents into shell-based workflows without boilerplate code.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/11/llm-shebang/#atom-everything</guid>
+    </item>
     <item>
       <title>Learning on the Shop floor</title>
       <link>https://simonwillison.net/2026/May/11/learning-on-the-shop-floor/#atom-everything</link>
