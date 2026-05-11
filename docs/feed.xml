@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 May 2026 12:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 01:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting New York Times Editors’ Note</title>
+      <link>https://simonwillison.net/2026/May/10/new-york-times-editors-note/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 10 May 2026 23:58:49 +0000</pubDate>
+      <description>Simon Willison highlights a New York Times editors' note admitting that a quote attributed to Canadian politician Pierre Poilievre was actually an AI-generated summary hallucinated as a direct quotation. The incident underscores a concrete, real-world failure mode of LLM hallucinations — fabricated quotes presented as fact — with implications for anyone integrating AI tools into research or content workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/10/new-york-times-editors-note/#atom-everything</guid>
+    </item>
     <item>
       <title>Oxide and Friends 5/4/2026 -- AI in Computer Science Education</title>
       <link>https://www.youtube.com/watch?v=iSOdBO9I6q8</link>
