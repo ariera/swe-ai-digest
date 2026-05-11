@@ -1,5 +1,13 @@
 [
   {
+    "cw": "2026-CW19",
+    "period_start": "2026-05-04",
+    "period_end": "2026-05-10",
+    "articles_count": 21,
+    "summary_short": "This digest period reveals several interlocking themes at the frontier of AI and software engineering. The most prominent is the rapid maturation of AI coding agents \u2014 tools like Claude Code are now b\u2026",
+    "page": "digests/2026-CW19.html"
+  },
+  {
     "cw": "2026-CW18",
     "period_start": "2026-04-27",
     "period_end": "2026-05-03",
