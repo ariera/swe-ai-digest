@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 May 2026 14:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 18:00:29 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Revisiting “No Silver Bullets” in the age of AI</title>
+      <link>https://newsletter.pragmaticengineer.com/p/revisiting-no-silver-bullets-in-the</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 12 May 2026 17:10:28 +0000</pubDate>
+      <description>Gergely Orosz revisits Brooks' 1986 "No Silver Bullet" thesis — that no single technology will yield an order-of-magnitude productivity gain — and tests it against AI. While AI dramatically increases code output volume, Orosz argues that meaningful improvements in productivity, reliability, and simplicity remain unimpressive so far, suggesting AI has not yet qualified as a true silver bullet for software engineering.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/revisiting-no-silver-bullets-in-the</guid>
+    </item>
     <item>
       <title>What is Code</title>
       <link>https://martinfowler.com/articles/what-is-code.html</link>
