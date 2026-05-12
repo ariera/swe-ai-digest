@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 May 2026 01:00:26 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 14:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>What is Code</title>
+      <link>https://martinfowler.com/articles/what-is-code.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 12 May 2026 13:30:00 +0000</pubDate>
+      <description>Unmesh Joshi, via Martin Fowler's site, argues that code serves dual purposes — machine instructions and a conceptual model of the problem domain — and uses this framework to examine what the rise of LLM-driven agents means for the future of source code. The piece raises whether human-authored source code will remain necessary as AI delegation increases, making it directly relevant to engineers reconsidering the role of programming languages and abstractions in an AI-assisted workflow.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/what-is-code.html</guid>
+    </item>
     <item>
       <title>Thoughts on GitLab's workforce reduction" and "structural and strategic decisions"</title>
       <link>https://simonwillison.net/2026/May/11/gitlab-act-2/#atom-everything</link>
