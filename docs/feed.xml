@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 May 2026 00:00:23 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 17:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Boris Mann</title>
+      <link>https://simonwillison.net/2026/May/13/boris-mann/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 13 May 2026 16:15:50 +0000</pubDate>
+      <description>Boris Mann, quoted by Simon Willison, argues that citing a raw count of "AI agents" is as meaningless as saying you have "11 spreadsheets" — the number conveys nothing about capability or value. This is relevant to engineers as it pushes back on superficial agent-count metrics and challenges the industry to develop more meaningful definitions and measures for agentic AI systems.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/13/boris-mann/#atom-everything</guid>
+    </item>
     <item>
       <title>datasette 1.0a29</title>
       <link>https://simonwillison.net/2026/May/12/datasette/#atom-everything</link>
