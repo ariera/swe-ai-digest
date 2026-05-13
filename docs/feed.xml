@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 May 2026 17:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 18:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>TypeScript, C# and Turbo Pascal with Anders Hejlsberg</title>
+      <link>https://newsletter.pragmaticengineer.com/p/typescript-c-and-turbo-pascal-with</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 13 May 2026 17:06:59 +0000</pubDate>
+      <description>Anders Hejlsberg argues that AI excels in languages like TypeScript and Python primarily due to training data volume, not language design, while remaining limited in complex compiler work due to sparse training data on that domain. He predicts engineers will increasingly act as "project managers" reviewing agent-generated code, and suggests AI-assisted code review tooling could make that role more engaging. For software engineers, his insights highlight both the near-term ceiling of AI in specialized technical domains and the likely shift in core engineering workflows.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/typescript-c-and-turbo-pascal-with</guid>
+    </item>
     <item>
       <title>Quoting Boris Mann</title>
       <link>https://simonwillison.net/2026/May/13/boris-mann/#atom-everything</link>
