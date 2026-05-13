@@ -6,9 +6,33 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 May 2026 18:00:29 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette 1.0a29</title>
+      <link>https://simonwillison.net/2026/May/12/datasette/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 12 May 2026 23:41:06 +0000</pubDate>
+      <description>Simon Willison describes fixing a gnarly segfault race condition in Datasette's test suite by using Codex CLI (with GPT-5.5 at high settings) to generate a minimal Dockerfile that reliably reproduced the bug. This is a concrete example of a practitioner leveraging an AI coding agent for debugging and environment reproducibility, rather than code generation alone.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/12/datasette/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Quoting Mo Bitar</title>
+      <link>https://simonwillison.net/2026/May/12/mo-bitar/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 12 May 2026 22:59:58 +0000</pubDate>
+      <description>Mo Bitar's satirical "Unethical Guide to Surviving AI Layoffs" mocks how workers can exploit executive AI hype — fabricating buzzwords and feigning automation expertise — to gain promotions and job security. Simon Willison surfaces it as a pointed commentary on the disconnect between AI promise and practical capability, and the perverse incentives AI anxiety creates in organizations.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/12/mo-bitar/#atom-everything</guid>
+    </item>
+    <item>
+      <title>llm 0.32a2</title>
+      <link>https://simonwillison.net/2026/May/12/llm/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 12 May 2026 17:45:07 +0000</pubDate>
+      <description>Simon Willison announces llm 0.32a2, highlighting a key change where most reasoning-capable OpenAI models now use the `/v1/responses` endpoint instead of `/v1/chat/completions`, enabling interleaved reasoning across tool calls for GPT-5 class models. Users can now view summarized reasoning tokens in a distinct color in the CLI. This matters to engineers building or using LLM-powered tooling, as it surfaces model reasoning steps directly in their workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/12/llm/#atom-everything</guid>
+    </item>
     <item>
       <title>Revisiting “No Silver Bullets” in the age of AI</title>
       <link>https://newsletter.pragmaticengineer.com/p/revisiting-no-silver-bullets-in-the</link>
