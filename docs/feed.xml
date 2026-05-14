@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 May 2026 16:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2026 17:00:26 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: Did capacity shortages turn Anthropic hostile to devs?</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-did-capacity-shortages-turn-anthropic-hostile-to-devs/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 14 May 2026 16:10:59 +0000</pubDate>
+      <description>Gergely Orosz investigates whether Anthropic's recent developer-hostile moves—silently degrading Claude Code, banning corporate accounts, and revoking access for paying users—were driven by severe capacity shortages rather than deliberate policy, citing 80x revenue/usage growth. He also examines the ironic deal where xAI/SpaceX leases its Colossus 1 data center (220,000+ GPUs) to Anthropic, and what Grok's declining market share signals about the competitive AI landscape. Engineers relying on Claude Code for agentic workflows should note both the easing of usage limits and the fragility of AI tooling availability under rapid scaling pressure.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-did-capacity-shortages-turn-anthropic-hostile-to-devs/</guid>
+    </item>
+    <item>
+      <title>The Pulse: Forward deployed engineering heats up again</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-forward-deployed-engineering</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 14 May 2026 16:09:57 +0000</pubDate>
+      <description>Gergely Orosz examines the resurgence of "forward deployed engineering" (FDE) roles, noting massive hiring demand at AI-focused companies like Google, OpenAI, and Anthropic. The modern FDE role blends consulting and solutions engineering to help customers deploy AI products effectively. This signals a growing need for engineers who can bridge deep technical AI knowledge with client-facing implementation work.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-forward-deployed-engineering</guid>
+    </item>
     <item>
       <title>Bliki: Interrogatory LLM</title>
       <link>https://martinfowler.com/bliki/InterrogatoryLLM.html</link>
@@ -16,6 +32,14 @@
       <pubDate>Thu, 14 May 2026 15:04:00 +0000</pubDate>
       <description>Fowler describes the "Interrogatory LLM" technique, where an LLM interviews a human one question at a time to elicit and structure the rich context needed for complex AI tasks — such as feature design or specification review — rather than requiring the human to write it upfront. He also proposes chaining interrogatory LLMs: one to build a context document, others to review it with domain experts. This pattern is practically relevant to engineers designing multi-step LLM workflows or agentic pipelines that depend on high-quality context gathering.</description>
       <guid isPermaLink="true">https://martinfowler.com/bliki/InterrogatoryLLM.html</guid>
+    </item>
+    <item>
+      <title>datasette-ip-rate-limit 0.1a0</title>
+      <link>https://simonwillison.net/2026/May/14/datasette-ip-rate-limit/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 14 May 2026 04:10:23 +0000</pubDate>
+      <description>Simon Willison used OpenAI's Codex (GPT-5.5 xhigh) to build a configurable IP rate-limiting plugin for Datasette after the site was overrun by poorly-behaved crawlers. The post illustrates a practical, real-world example of delegating plugin authorship to an AI coding agent to solve an infrastructure problem quickly.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/14/datasette-ip-rate-limit/#atom-everything</guid>
     </item>
     <item>
       <title>TypeScript, C# and Turbo Pascal with Anders Hejlsberg</title>
