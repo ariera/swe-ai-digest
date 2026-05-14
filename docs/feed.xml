@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 May 2026 17:00:26 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2026 22:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Fragments: May 14</title>
+      <link>https://martinfowler.com/fragments/2026-05-14.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Thu, 14 May 2026 21:52:00 +0000</pubDate>
+      <description>Fowler shares observations from an agentic-programming retreat, covering LLM-driven code porting (70K lines of Rust in 3 days), rethinking legacy "lift-and-shift" migration, using LLMs to manage multi-jurisdiction regulatory complexity, and the challenge of developing junior engineers' judgment in an agentic world. He also highlights practitioner arguments that most "agent" use cases are better modeled as deterministic function calls, and that over-reliance on skill files is a symptom of neglecting codebase architecture.</description>
+      <guid isPermaLink="true">https://martinfowler.com/fragments/2026-05-14.html</guid>
+    </item>
     <item>
       <title>The Pulse: Did capacity shortages turn Anthropic hostile to devs?</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-did-capacity-shortages-turn-anthropic-hostile-to-devs/</link>
