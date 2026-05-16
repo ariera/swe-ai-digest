@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 May 2026 18:00:28 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 01:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -16,6 +16,14 @@
       <pubDate>Fri, 15 May 2026 04:00:49 +0000</pubDate>
       <description>Simon Willison describes using Claude to vibe-code a QR code generator tool supporting both text/URL and WiFi network formats. The example illustrates a practical instance of AI-assisted tool creation, where an LLM handles implementation details, letting the developer focus on the desired outcome rather than code specifics.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/May/15/qr-code-generator/#atom-everything</guid>
+    </item>
+    <item>
+      <title>datasette-llm-limits 0.1a0</title>
+      <link>https://simonwillison.net/2026/May/15/datasette-llm-limits/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 15 May 2026 00:42:09 +0000</pubDate>
+      <description>Simon Willison announces datasette-llm-limits 0.1a0, a plugin that enforces per-user or global spending limits on LLM usage within Datasette, working alongside datasette-llm and datasette-llm-accountant. It allows configurable rolling time-window budget caps (e.g., $1.00/user/day), addressing cost governance for AI-powered data tools — a practical concern for teams deploying LLM features in shared environments.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/15/datasette-llm-limits/#atom-everything</guid>
     </item>
     <item>
       <title>Not so locked in any more</title>
