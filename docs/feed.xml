@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 May 2026 01:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 16:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mm5am46m2l2d</link>
+      <author>Matteo Collina</author>
+      <pubDate>Mon, 18 May 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina highlights that Bun used AI to rewrite itself from Zig to Rust, achieving a 98% test suite pass rate on the first run. He uses this as a prompt to ask whether Node.js should similarly be rewritten in Rust, framing AI-assisted large-scale language migration as a now-practical engineering consideration.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mm5am46m2l2d</guid>
+    </item>
     <item>
       <title>QR code generator</title>
       <link>https://simonwillison.net/2026/May/15/qr-code-generator/#atom-everything</link>
