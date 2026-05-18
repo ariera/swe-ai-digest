@@ -1,5 +1,13 @@
 [
   {
+    "cw": "2026-CW20",
+    "period_start": "2026-05-11",
+    "period_end": "2026-05-17",
+    "articles_count": 22,
+    "summary_short": "This digest period's articles cluster around several intersecting themes in applied AI for software engineering.\n\nA dominant thread is the erosion of traditional software assumptions: language lock-in\u2026",
+    "page": "digests/2026-CW20.html"
+  },
+  {
     "cw": "2026-CW19",
     "period_start": "2026-05-04",
     "period_end": "2026-05-10",

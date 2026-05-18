@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW20</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW20</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-05-11 &ndash; 2026-05-17
+    &middot; 22 articles
+  </p>
+  <p>This digest period&#39;s articles cluster around several intersecting themes in applied AI for software engineering.
+
+A dominant thread is the erosion of traditional software assumptions: language lock-in, platform commitment, and the permanence of large-scale migrations are all challenged as AI coding agents lower the cost of rewrites and ports. Alongside this, authors debate whether AI genuinely improves productivity or merely accelerates liability — James Shore&#39;s maintenance-cost framing and Gergely Orosz&#39;s revisitation of Brooks&#39; &#34;No Silver Bullet&#34; both caution that raw output volume is a poor proxy for engineering value.
+
+Organizational and workflow patterns receive significant attention. Shopify&#39;s Slack-visible AI agent, Fowler&#39;s Interrogatory LLM technique, and the shebang-line scripting pattern each represent concrete, practitioner-tested approaches to integrating LLMs into team or individual workflows. Meanwhile, infrastructure concerns surface in discussions of Anthropic&#39;s capacity-driven service instability and the growing viability of local inference for serious work.
+
+Broader systemic risks are also present: the &#34;Zombie Internet&#34; signal-to-noise problem, perverse incentives around AI hype in organizations, and the challenge of developing junior engineer judgment in agentic environments. Together, the articles reflect a field moving from AI experimentation toward harder questions of sustainability, measurement, and structural adaptation.</p>
+  <hr>
+
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/11/learning-on-the-shop-floor/#atom-everything">Learning on the Shop floor</a>
+    <span class="meta">(2026-05-11)</span>
+  </h3>
+  
+  <p>Shopify CEO Tobias Lütke describes River, an internal AI coding agent that operates exclusively in public Slack channels, turning every interaction into a shared learning resource visible to the whole company. Simon Willison draws a parallel to Midjourney&#39;s early public Discord model, arguing that forced visibility accelerates skill-building with AI tools through &#34;osmosis learning.&#34; For software engineers, this highlights a concrete organizational pattern for scaling AI adoption without formal training programs.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/11/james-shore/#atom-everything">Quoting James Shore</a>
+    <span class="meta">(2026-05-11)</span>
+  </h3>
+  
+  <p>James Shore argues that AI coding agents only deliver net value if they reduce maintenance costs proportionally to the speed gains they provide — doubling output while holding or increasing maintenance costs actually worsens long-term technical debt. The math means that faster code generation without corresponding maintenance improvements leads to quadrupled costs, not productivity gains. This is a critical framing for engineers evaluating whether AI-assisted workflows genuinely improve sustainability or merely accelerate liability.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/11/zombie-internet/#atom-everything">Your AI Use Is Breaking My Brain</a>
+    <span class="meta">(2026-05-11)</span>
+  </h3>
+  
+  <p>Simon Willison highlights Jason Koebler&#39;s concept of the &#34;Zombie Internet&#34; — a state where AI-generated and AI-assisted content has become so pervasive online that it distorts human writing styles and makes authentic content increasingly hard to identify. Unlike the &#34;Dead Internet&#34; (bots talking to bots), the Zombie Internet describes a messy hybrid of humans, AI agents, and AI-assisted users all interacting simultaneously. This matters to software engineers as it frames a growing signal-to-noise problem that affects research, communication, and the broader information ecosystem they operate in.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/11/llm-shebang/#atom-everything">Using LLM in the shebang line of a script</a>
+    <span class="meta">(2026-05-11)</span>
+  </h3>
+  
+  <p>Simon Willison demonstrates a novel pattern for embedding LLM invocations directly in Unix shebang lines, turning plain text files into executable AI-powered scripts. The technique supports tool calls and YAML-defined Python functions, enabling LLM-driven computation and data querying. This offers software engineers a lightweight, composable way to integrate LLM agents into shell-based workflows without boilerplate code.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/11/gitlab-act-2/#atom-everything">Thoughts on GitLab&#39;s workforce reduction&#34; and &#34;structural and strategic decisions&#34;</a>
+    <span class="meta">(2026-05-11)</span>
+  </h3>
+  
+  <p>Simon Willison analyzes GitLab&#39;s workforce restructuring announcement, which frames layoffs and org changes explicitly around the &#34;agentic era&#34; of software development. GitLab argues that AI agents will collapse software production costs, triggering a Jevons-paradox-driven explosion in software demand and developer platform value. Willison notes this optimistic view should be taken skeptically, as GitLab&#39;s halved stock price suggests the market fears agentic engineering may actually erode their core business.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/12/datasette/#atom-everything">datasette 1.0a29</a>
+    <span class="meta">(2026-05-12)</span>
+  </h3>
+  
+  <p>Simon Willison describes fixing a gnarly segfault race condition in Datasette&#39;s test suite by using Codex CLI (with GPT-5.5 at high settings) to generate a minimal Dockerfile that reliably reproduced the bug. This is a concrete example of a practitioner leveraging an AI coding agent for debugging and environment reproducibility, rather than code generation alone.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/12/mo-bitar/#atom-everything">Quoting Mo Bitar</a>
+    <span class="meta">(2026-05-12)</span>
+  </h3>
+  
+  <p>Mo Bitar&#39;s satirical &#34;Unethical Guide to Surviving AI Layoffs&#34; mocks how workers can exploit executive AI hype — fabricating buzzwords and feigning automation expertise — to gain promotions and job security. Simon Willison surfaces it as a pointed commentary on the disconnect between AI promise and practical capability, and the perverse incentives AI anxiety creates in organizations.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/12/llm/#atom-everything">llm 0.32a2</a>
+    <span class="meta">(2026-05-12)</span>
+  </h3>
+  
+  <p>Simon Willison announces llm 0.32a2, highlighting a key change where most reasoning-capable OpenAI models now use the `/v1/responses` endpoint instead of `/v1/chat/completions`, enabling interleaved reasoning across tool calls for GPT-5 class models. Users can now view summarized reasoning tokens in a distinct color in the CLI. This matters to engineers building or using LLM-powered tooling, as it surfaces model reasoning steps directly in their workflows.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/13/boris-mann/#atom-everything">Quoting Boris Mann</a>
+    <span class="meta">(2026-05-13)</span>
+  </h3>
+  
+  <p>Boris Mann, quoted by Simon Willison, argues that citing a raw count of &#34;AI agents&#34; is as meaningless as saying you have &#34;11 spreadsheets&#34; — the number conveys nothing about capability or value. This is relevant to engineers as it pushes back on superficial agent-count metrics and challenges the industry to develop more meaningful definitions and measures for agentic AI systems.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/14/datasette-ip-rate-limit/#atom-everything">datasette-ip-rate-limit 0.1a0</a>
+    <span class="meta">(2026-05-14)</span>
+  </h3>
+  
+  <p>Simon Willison used OpenAI&#39;s Codex (GPT-5.5 xhigh) to build a configurable IP rate-limiting plugin for Datasette after the site was overrun by poorly-behaved crawlers. The post illustrates a practical, real-world example of delegating plugin authorship to an AI coding agent to solve an infrastructure problem quickly.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/14/not-so-locked-in/#atom-everything">Not so locked in any more</a>
+    <span class="meta">(2026-05-14)</span>
+  </h3>
+  
+  <p>Simon Willison observes that coding agents are eroding technology lock-in: a company used AI-driven coding agents to rewrite native iOS and Android apps in React Native, and felt confident the decision was reversible because porting back would also be agent-assisted. The broader point is that AI lowers the cost of large-scale migrations, making previously high-stakes platform and language choices less permanent commitments.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/14/mitchell-hashimoto/#atom-everything">Quoting Mitchell Hashimoto</a>
+    <span class="meta">(2026-05-14)</span>
+  </h3>
+  
+  <p>Mitchell Hashimoto argues that AI has made programming languages increasingly fungible — Bun&#39;s rapid rewrite from Zig to Rust in roughly a week or two demonstrates that language lock-in is eroding. For software engineers, this signals that AI-assisted development is reshaping a foundational assumption of software architecture: that language choice carries long-term switching costs.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/15/qr-code-generator/#atom-everything">QR code generator</a>
+    <span class="meta">(2026-05-15)</span>
+  </h3>
+  
+  <p>Simon Willison describes using Claude to vibe-code a QR code generator tool supporting both text/URL and WiFi network formats. The example illustrates a practical instance of AI-assisted tool creation, where an LLM handles implementation details, letting the developer focus on the desired outcome rather than code specifics.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/15/datasette-llm-limits/#atom-everything">datasette-llm-limits 0.1a0</a>
+    <span class="meta">(2026-05-15)</span>
+  </h3>
+  
+  <p>Simon Willison announces datasette-llm-limits 0.1a0, a plugin that enforces per-user or global spending limits on LLM usage within Datasette, working alongside datasette-llm and datasette-llm-accountant. It allows configurable rolling time-window budget caps (e.g., $1.00/user/day), addressing cost governance for AI-powered data tools — a practical concern for teams deploying LLM features in shared environments.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/articles/what-is-code.html">What is Code</a>
+    <span class="meta">(2026-05-12)</span>
+  </h3>
+  
+  <p>Unmesh Joshi, via Martin Fowler&#39;s site, argues that code serves dual purposes — machine instructions and a conceptual model of the problem domain — and uses this framework to examine what the rise of LLM-driven agents means for the future of source code. The piece raises whether human-authored source code will remain necessary as AI delegation increases, making it directly relevant to engineers reconsidering the role of programming languages and abstractions in an AI-assisted workflow.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/bliki/InterrogatoryLLM.html">Bliki: Interrogatory LLM</a>
+    <span class="meta">(2026-05-14)</span>
+  </h3>
+  
+  <p>Fowler describes the &#34;Interrogatory LLM&#34; technique, where an LLM interviews a human one question at a time to elicit and structure the rich context needed for complex AI tasks — such as feature design or specification review — rather than requiring the human to write it upfront. He also proposes chaining interrogatory LLMs: one to build a context document, others to review it with domain experts. This pattern is practically relevant to engineers designing multi-step LLM workflows or agentic pipelines that depend on high-quality context gathering.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/fragments/2026-05-14.html">Fragments: May 14</a>
+    <span class="meta">(2026-05-14)</span>
+  </h3>
+  
+  <p>Fowler shares observations from an agentic-programming retreat, covering LLM-driven code porting (70K lines of Rust in 3 days), rethinking legacy &#34;lift-and-shift&#34; migration, using LLMs to manage multi-jurisdiction regulatory complexity, and the challenge of developing junior engineers&#39; judgment in an agentic world. He also highlights practitioner arguments that most &#34;agent&#34; use cases are better modeled as deterministic function calls, and that over-reliance on skill files is a symptom of neglecting codebase architecture.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/revisiting-no-silver-bullets-in-the">Revisiting “No Silver Bullets” in the age of AI</a>
+    <span class="meta">(2026-05-12)</span>
+  </h3>
+  
+  <p>Gergely Orosz revisits Brooks&#39; 1986 &#34;No Silver Bullet&#34; thesis — that no single technology will yield an order-of-magnitude productivity gain — and tests it against AI. While AI dramatically increases code output volume, Orosz argues that meaningful improvements in productivity, reliability, and simplicity remain unimpressive so far, suggesting AI has not yet qualified as a true silver bullet for software engineering.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/typescript-c-and-turbo-pascal-with">TypeScript, C# and Turbo Pascal with Anders Hejlsberg</a>
+    <span class="meta">(2026-05-13)</span>
+  </h3>
+  
+  <p>Anders Hejlsberg argues that AI excels in languages like TypeScript and Python primarily due to training data volume, not language design, while remaining limited in complex compiler work due to sparse training data on that domain. He predicts engineers will increasingly act as &#34;project managers&#34; reviewing agent-generated code, and suggests AI-assisted code review tooling could make that role more engaging. For software engineers, his insights highlight both the near-term ceiling of AI in specialized technical domains and the likely shift in core engineering workflows.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-forward-deployed-engineering">The Pulse: Forward deployed engineering heats up again</a>
+    <span class="meta">(2026-05-14)</span>
+  </h3>
+  
+  <p>Gergely Orosz examines the resurgence of &#34;forward deployed engineering&#34; (FDE) roles, noting massive hiring demand at AI-focused companies like Google, OpenAI, and Anthropic. The modern FDE role blends consulting and solutions engineering to help customers deploy AI products effectively. This signals a growing need for engineers who can bridge deep technical AI knowledge with client-facing implementation work.</p>
+  
+  <h3>
+    <a href="https://blog.pragmaticengineer.com/the-pulse-did-capacity-shortages-turn-anthropic-hostile-to-devs/">The Pulse: Did capacity shortages turn Anthropic hostile to devs?</a>
+    <span class="meta">(2026-05-14)</span>
+  </h3>
+  
+  <p>Gergely Orosz investigates whether Anthropic&#39;s recent developer-hostile moves—silently degrading Claude Code, banning corporate accounts, and revoking access for paying users—were driven by severe capacity shortages rather than deliberate policy, citing 80x revenue/usage growth. He also examines the ironic deal where xAI/SpaceX leases its Colossus 1 data center (220,000+ GPUs) to Anthropic, and what Grok&#39;s declining market share signals about the competitive AI landscape. Engineers relying on Claude Code for agentic workflows should note both the easing of usage limits and the fragility of AI tooling availability under rapid scaling pressure.</p>
+  
+  
+  <h2>Salvatore Sanfilippo (antirez)</h2>
+  
+  <p class="meta">Italian software engineer, creator of Redis — one of the world&#39;s most widely deployed in-memory data stores — and a rare voice for clarity and minimalism in systems design.</p>
+  
+  
+  <h3>
+    <a href="http://antirez.com/news/165">A few words on DS4</a>
+    <span class="meta">(2026-05-14)</span>
+  </h3>
+  
+  <p>Redis creator antirez describes the unexpected popularity of DwarfStar 4 (DS4), his local AI inference project built around DeepSeek v4 Flash, arguing that a near-frontier open-weights model running efficiently on high-end consumer hardware (96–128GB RAM via asymmetric quantization) has crossed a threshold where local inference becomes viable for serious work. He notes this is the first time he&#39;s substituted a local model for Claude/GPT on real tasks. Future plans include a coding agent, distributed inference, and domain-specific model variants.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>
