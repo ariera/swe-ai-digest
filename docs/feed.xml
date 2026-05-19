@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 May 2026 02:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 08:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>A new EDIT tool for LLM agents</title>
+      <link>http://antirez.com/news/166</link>
+      <author>Salvatore Sanfilippo (antirez)</author>
+      <pubDate>Tue, 19 May 2026 07:26:03 +0000</pubDate>
+      <description>Antirez (Redis creator) proposes a token-efficient EDIT tool for LLM agents that replaces verbatim "old text" CAS-style edits with a compact line-number + CRC32 tag checksum scheme, reducing token consumption during file edits. This matters to engineers building or optimizing AI coding agents, particularly in token-constrained local inference environments, as it directly addresses reliability and efficiency tradeoffs in agent tool design.</description>
+      <guid isPermaLink="true">http://antirez.com/news/166</guid>
+    </item>
     <item>
       <title>The last six months in LLMs in five minutes</title>
       <link>https://simonwillison.net/2026/May/19/5-minute-llms/#atom-everything</link>
