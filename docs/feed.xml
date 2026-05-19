@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 May 2026 16:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 02:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The last six months in LLMs in five minutes</title>
+      <link>https://simonwillison.net/2026/May/19/5-minute-llms/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 19 May 2026 01:09:44 +0000</pubDate>
+      <description>Simon Willison recaps six months of LLM progress from his PyCon US 2026 lightning talk, identifying two major themes: coding agents crossing a quality threshold in November 2025 to become reliable daily-driver tools, and open-weight models (Qwen, GLM-5.1) dramatically exceeding expectations. He also traces the rapid rise of "Claws" — personal AI assistants — as a new cultural and technical category. The piece offers a practitioner's benchmark-driven perspective on frontier model competition across OpenAI, Anthropic, and Google.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/19/5-minute-llms/#atom-everything</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://bsky.app/profile/nodeland.dev/post/3mm5am46m2l2d</link>
