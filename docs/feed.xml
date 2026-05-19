@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 May 2026 08:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 17:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>AI’s impact on software engineers in 2026: key trends, Part 2</title>
+      <link>https://newsletter.pragmaticengineer.com/p/ai-impact-on-software-engineers-part-2</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 19 May 2026 16:43:10 +0000</pubDate>
+      <description>Drawing on 900+ survey responses, Orosz identifies key patterns in AI's real-world impact on software engineering: codebase quality is declining as "AI slop," weaker code reviews, and more bugs accumulate, while management largely ignores these regressions in favor of output metrics. Company-scale AI adoption remains difficult, with benefits heavily dependent on pre-existing engineering culture — strong practices amplify positives, weak ones amplify negatives. Additional concerns include eroding code ownership, less experienced engineers struggling more with AI tools, and addictive agent behavior driven by tool design.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/ai-impact-on-software-engineers-part-2</guid>
+    </item>
+    <item>
+      <title>Maintainability sensors for coding agents</title>
+      <link>https://martinfowler.com/articles/sensors-for-coding-agents.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 19 May 2026 16:38:00 +0000</pubDate>
+      <description>Birgitta Böckeler explores how to keep codebases maintainable when using coding agents, introducing a "harness" framework of guides and sensors that improve agent output quality and enable self-correction. This installment focuses on static analysis and basic code linting as sensors. The work is directly relevant to engineers building or using agentic coding workflows who need automated quality guardrails.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/sensors-for-coding-agents.html</guid>
+    </item>
     <item>
       <title>A new EDIT tool for LLM agents</title>
       <link>http://antirez.com/news/166</link>
