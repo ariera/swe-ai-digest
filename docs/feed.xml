@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 May 2026 17:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 23:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Gemini 3.5 Flash: more expensive, but Google plan to use it for everything</title>
+      <link>https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 19 May 2026 22:40:25 +0000</pubDate>
+      <description>Simon Willison reviews Google's newly released Gemini 3.5 Flash, highlighting a significant price increase — up to 6x over prior Flash models — and noting that all three major AI labs appear to be probing API price tolerance simultaneously. He also flags Google's new Interactions API as a server-side history management pattern similar to OpenAI's Responses API. For developers, the real-world benchmark costs reveal that 3.5 Flash (high) is pricier to run than Gemini 3.1 Pro Preview, making model selection increasingly cost-sensitive.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-everything</guid>
+    </item>
     <item>
       <title>AI’s impact on software engineers in 2026: key trends, Part 2</title>
       <link>https://newsletter.pragmaticengineer.com/p/ai-impact-on-software-engineers-part-2</link>
