@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 May 2026 23:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 00:00:42 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>llm-gemini 0.32</title>
+      <link>https://simonwillison.net/2026/May/19/llm-gemini-2/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 19 May 2026 23:46:27 +0000</pubDate>
+      <description>Simon Willison announces version 0.32 of his llm-gemini plugin, adding support for Google's newly released Gemini 3.5 Flash model. This is a practical tool update for engineers using the LLM command-line ecosystem to interact with Gemini models, signaling the availability of a new frontier model in that toolchain.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/19/llm-gemini-2/#atom-everything</guid>
+    </item>
     <item>
       <title>Gemini 3.5 Flash: more expensive, but Google plan to use it for everything</title>
       <link>https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-everything</link>
@@ -16,6 +24,30 @@
       <pubDate>Tue, 19 May 2026 22:40:25 +0000</pubDate>
       <description>Simon Willison reviews Google's newly released Gemini 3.5 Flash, highlighting a significant price increase — up to 6x over prior Flash models — and noting that all three major AI labs appear to be probing API price tolerance simultaneously. He also flags Google's new Interactions API as a server-side history management pattern similar to OpenAI's Responses API. For developers, the real-world benchmark costs reveal that 3.5 Flash (high) is pricier to run than Gemini 3.1 Pro Preview, making model selection increasingly cost-sensitive.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-everything</guid>
+    </item>
+    <item>
+      <title>datasette-llm-accountant 0.1a4</title>
+      <link>https://simonwillison.net/2026/May/19/datasette-llm-accountant/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 19 May 2026 20:45:43 +0000</pubDate>
+      <description>Simon Willison releases version 0.1a4 of datasette-llm-accountant, a plugin that tracks LLM usage within the Datasette and LLM toolchain, fixing a bug in how chains of responses are recorded. This tool is relevant to engineers building or auditing LLM-powered workflows, as it provides cost and usage accounting for chained AI interactions.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/19/datasette-llm-accountant/#atom-everything</guid>
+    </item>
+    <item>
+      <title>llm-gemini 0.32a0</title>
+      <link>https://simonwillison.net/2026/May/19/llm-gemini/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 19 May 2026 20:36:23 +0000</pubDate>
+      <description>Simon Willison releases llm-gemini 0.32a0, an alpha update to his LLM CLI plugin for Google's Gemini models that adds support for streaming reasoning tokens. This tooling improvement is relevant to engineers using LLM-based workflows, as streaming reasoning tokens enables real-time visibility into model chain-of-thought output.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/19/llm-gemini/#atom-everything</guid>
+    </item>
+    <item>
+      <title>datasette-llm 0.1a8</title>
+      <link>https://simonwillison.net/2026/May/19/datasette-llm/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 19 May 2026 20:28:16 +0000</pubDate>
+      <description>Simon Willison releases datasette-llm 0.1a8, a patch fixing a bug where the `llm_prompt_context()` hook failed to fully collect chained LLM responses. This plugin integrates LLM capabilities directly into Datasette, and the fix ensures response chains are reliably captured — relevant to engineers building AI-augmented data tooling.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/19/datasette-llm/#atom-everything</guid>
     </item>
     <item>
       <title>AI’s impact on software engineers in 2026: key trends, Part 2</title>
