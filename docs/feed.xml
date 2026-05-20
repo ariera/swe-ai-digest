@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 May 2026 16:00:30 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 17:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Why Rust is different, with Alice Ryhl</title>
+      <link>https://newsletter.pragmaticengineer.com/p/why-rust-is-different-with-alice</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 20 May 2026 16:22:00 +0000</pubDate>
+      <description>The episode explores Rust's suitability for AI-generated and agent-driven code, arguing that Rust's strict compiler creates a high-quality feedback loop that agents can leverage iteratively — making it potentially optimal for agentic workflows. However, the guest warns of "false fluency," where AI-assisted code compiles but is semantically wrong, posing risks for junior engineers. The episode also notes AI code review bots are gaining traction in the Linux kernel as a quality gate.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/why-rust-is-different-with-alice</guid>
+    </item>
     <item>
       <title>Google I/O, Gemini Spark, Antigravity</title>
       <link>https://simonwillison.net/2026/May/20/google-io/#atom-everything</link>
@@ -16,6 +24,14 @@
       <pubDate>Wed, 20 May 2026 15:32:17 +0000</pubDate>
       <description>Simon Willison surveys Google I/O 2026 announcements, focusing on Gemini Spark — a personal AI agent integrating with Google's app ecosystem — and the Antigravity platform (a closed-source CLI, SDK, and IDE). He raises concerns about prompt injection risks as sensitive data flows through hosted agents, and flags that the open-source Gemini CLI will be replaced by the closed-source Antigravity CLI on June 18th.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/May/20/google-io/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Three more static code analysis sensors</title>
+      <link>https://martinfowler.com/articles/sensors-for-coding-agents.html#StaticCodeAnalysisDependencyRules</link>
+      <author>Martin Fowler</author>
+      <pubDate>Wed, 20 May 2026 14:27:00 +0000</pubDate>
+      <description>Birgitta Böckeler examines three static code analysis "sensors" for use with coding agents, finding that computational sensors can enforce dependency rules but are limited in scope, while an inferential (LLM-based) sensor proved more effective for reviewing modularity and coupling. The piece is relevant to engineers exploring how to integrate AI agents into code quality workflows, particularly around architectural enforcement.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/sensors-for-coding-agents.html#StaticCodeAnalysisDependencyRules</guid>
     </item>
     <item>
       <title>llm-gemini 0.32</title>
