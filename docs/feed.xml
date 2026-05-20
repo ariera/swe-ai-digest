@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 May 2026 00:00:42 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 16:00:30 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Google I/O, Gemini Spark, Antigravity</title>
+      <link>https://simonwillison.net/2026/May/20/google-io/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 20 May 2026 15:32:17 +0000</pubDate>
+      <description>Simon Willison surveys Google I/O 2026 announcements, focusing on Gemini Spark — a personal AI agent integrating with Google's app ecosystem — and the Antigravity platform (a closed-source CLI, SDK, and IDE). He raises concerns about prompt injection risks as sensitive data flows through hosted agents, and flags that the open-source Gemini CLI will be replaced by the closed-source Antigravity CLI on June 18th.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/20/google-io/#atom-everything</guid>
+    </item>
     <item>
       <title>llm-gemini 0.32</title>
       <link>https://simonwillison.net/2026/May/19/llm-gemini-2/#atom-everything</link>
