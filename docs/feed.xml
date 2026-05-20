@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 May 2026 19:00:28 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 23:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting SpaceX S-1</title>
+      <link>https://simonwillison.net/2026/May/20/spacex-s1/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 20 May 2026 22:26:36 +0000</pubDate>
+      <description>Simon Willison highlights a disclosure from SpaceX's S-1 filing revealing that Anthropic has agreed to pay SpaceX $1.25 billion per month through May 2029 for access to compute capacity across the COLOSSUS and COLOSSUS II supercomputer clusters. This signals the massive and growing infrastructure investment underpinning frontier AI model training, with direct implications for the competitive compute landscape that shapes which AI tools software engineers ultimately have access to.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/20/spacex-s1/#atom-everything</guid>
+    </item>
     <item>
       <title>How fast is 10 tokens per second really?</title>
       <link>https://simonwillison.net/2026/May/20/tokens-per-second/#atom-everything</link>
