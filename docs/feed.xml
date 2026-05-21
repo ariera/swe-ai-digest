@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 May 2026 18:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 20:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Datasette Agent</title>
+      <link>https://simonwillison.net/2026/May/21/datasette-agent/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 21 May 2026 19:52:19 +0000</pubDate>
+      <description>Simon Willison announces Datasette Agent, a conversational AI assistant that lets users query Datasette databases in natural language, generating SQL on the fly using models like Gemini Flash-Lite or local open-weight models via LM Studio. The system is plugin-extensible and informs a broader refactor of Willison's LLM Python library. It demonstrates a practical pattern for embedding LLM-powered agents into data tools, with Claude Code and OpenAI Codex used to accelerate plugin development.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/21/datasette-agent/#atom-everything</guid>
+    </item>
+    <item>
+      <title>datasette-agent-sprites 0.1a0</title>
+      <link>https://simonwillison.net/2026/May/21/datasette-agent-sprites/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 21 May 2026 18:21:07 +0000</pubDate>
+      <description>Simon Willison releases datasette-agent-sprites 0.1a0, a plugin for the Datasette Agent that enables running commands inside a Fly Sprites sandbox. This is relevant to software engineers as it demonstrates tooling for sandboxed AI agent execution, a key safety and isolation pattern when deploying AI agents that run arbitrary code.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/21/datasette-agent-sprites/#atom-everything</guid>
+    </item>
     <item>
       <title>The Pulse: Antigravity 2.0 takes ‘IDE’ out of its new IDE</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-pulse-antigravity-20-takes-ide</link>
@@ -16,6 +32,14 @@
       <pubDate>Thu, 21 May 2026 17:01:39 +0000</pubDate>
       <description>Gergely Orosz covers the backlash against Antigravity 2.0's redesigned IDE, which has received overwhelmingly negative feedback due to bugs, poor UX, weak model support, and excessive Gemini token consumption. This is directly relevant to software engineers evaluating AI-powered development environments, as it highlights the real-world pitfalls of shipping AI-integrated tooling prematurely.</description>
       <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-antigravity-20-takes-ide</guid>
+    </item>
+    <item>
+      <title>datasette-agent 0.1a3</title>
+      <link>https://simonwillison.net/2026/May/21/datasette-agent-2/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 21 May 2026 15:04:09 +0000</pubDate>
+      <description>Simon Willison announces the 0.1a3 release of datasette-agent, an extensible AI assistant built for Datasette, the open-source data exploration tool. While content is sparse, it signals continued iteration on an agent architecture that integrates AI capabilities directly into a developer data tool, relevant to engineers tracking AI-augmented tooling.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/21/datasette-agent-2/#atom-everything</guid>
     </item>
     <item>
       <title>Bliki: Vibe Coding</title>
