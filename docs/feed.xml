@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 May 2026 23:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 12:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Bliki: Vibe Coding</title>
+      <link>https://martinfowler.com/bliki/VibeCoding.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Thu, 21 May 2026 11:49:00 +0000</pubDate>
+      <description>Martin Fowler defines "vibe coding" strictly as LLM-driven development where the programmer never reads the generated code — distinguishing it from "agentic programming," where developers still review and reason about AI-written code. He argues vibe coding is viable only for disposable, low-stakes software due to serious risks around security, correctness, and maintainability. Software engineers should understand this distinction, as conflating the two obscures very different risk profiles and professional responsibilities.</description>
+      <guid isPermaLink="true">https://martinfowler.com/bliki/VibeCoding.html</guid>
+    </item>
     <item>
       <title>Quoting SpaceX S-1</title>
       <link>https://simonwillison.net/2026/May/20/spacex-s1/#atom-everything</link>
