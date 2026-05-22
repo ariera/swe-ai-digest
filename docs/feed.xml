@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 May 2026 21:00:28 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 05:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>FTC to Require Cox Media Group, Two Other Firms to Pay Nearly $1 Million to Settle Charges They Deceived Customers About “Active Listening” AI-Powered Marketing Service</title>
+      <link>https://simonwillison.net/2026/May/22/ftc-active-listening/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 22 May 2026 04:48:32 +0000</pubDate>
+      <description>The FTC settled charges against Cox Media Group and two other firms for falsely claiming their "Active Listening" AI-powered ad service used smart device microphones to target consumers — when it actually just resold email lists from data brokers. Willison argues this confirms his 2024 theory that the "active listening" branding was marketing hype that misrepresented how standard ad-targeting technology works. The case is a cautionary example of how AI-branded services can deceive customers and attract regulatory scrutiny.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/22/ftc-active-listening/#atom-everything</guid>
+    </item>
     <item>
       <title>Datasette Agent</title>
       <link>https://simonwillison.net/2026/May/21/datasette-agent/#atom-everything</link>
