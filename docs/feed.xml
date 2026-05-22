@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 May 2026 05:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 23:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The memory shortage is causing a repricing of consumer electronics</title>
+      <link>https://simonwillison.net/2026/May/22/memory-shortage/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 22 May 2026 22:01:31 +0000</pubDate>
+      <description>The explosive growth of AI data centers is driving memory manufacturers to reallocate wafer capacity toward high-bandwidth memory (HBM) for GPUs — from 2% to an expected 20% by end of 2026 — squeezing supply for consumer DDR/LPDDR RAM. Because HBM requires over 3× the wafer capacity per gigabyte, this structural shift will raise prices for consumer electronics for years, hitting affordable smartphones in emerging markets hardest.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/22/memory-shortage/#atom-everything</guid>
+    </item>
     <item>
       <title>FTC to Require Cox Media Group, Two Other Firms to Pay Nearly $1 Million to Settle Charges They Deceived Customers About “Active Listening” AI-Powered Marketing Service</title>
       <link>https://simonwillison.net/2026/May/22/ftc-active-listening/#atom-everything</link>
