@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 May 2026 19:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 21:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: Forward deployed engineering heats up again</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-forward-deployed-engineering-heats-up-again/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Sun, 24 May 2026 20:35:11 +0000</pubDate>
+      <description>Gergely Orosz examines the accelerating demand for Forward Deployed Engineers (FDEs) as Google, OpenAI, and Anthropic all ramp up hiring—often through standalone external companies—to embed AI solutions into enterprise clients. He argues the FDE role is converging with traditional consulting and solutions architecture, making it less appealing to experienced engineers but a viable entry point for new grads. The trend signals how AI labs are structuring go-to-market strategies around hands-on deployment rather than purely self-serve adoption.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-forward-deployed-engineering-heats-up-again/</guid>
+    </item>
     <item>
       <title>Quoting Armin Ronacher</title>
       <link>https://simonwillison.net/2026/May/24/armin-ronacher/#atom-everything</link>
