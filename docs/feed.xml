@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 May 2026 23:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 17:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Building Pi With Pi</title>
+      <link>https://lucumr.pocoo.org/2026/5/24/pi-oss/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher reflects on using AI agents ("clankers") to build Pi, observing that LLM-generated issues are often confidently wrong and cause agents to follow bad diagnoses, while AI-generated code tends to over-engineer local workarounds rather than enforcing system invariants. He also warns that AI is flooding open-source trackers with low-quality issues and PRs, fragmenting community effort without increasing the number of maintainers or genuine users. His core argument is that AI amplifies volume and local fixes at the expense of collaborative problem-solving and architectural discipline.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/5/24/pi-oss/</guid>
+    </item>
     <item>
       <title>The memory shortage is causing a repricing of consumer electronics</title>
       <link>https://simonwillison.net/2026/May/22/memory-shortage/#atom-everything</link>
