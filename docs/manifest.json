@@ -1,5 +1,13 @@
 [
   {
+    "cw": "2026-CW21",
+    "period_start": "2026-05-18",
+    "period_end": "2026-05-24",
+    "articles_count": 28,
+    "summary_short": "This digest period is defined by several converging themes in applied AI for software engineering. The maturation of coding agents stands out prominently: practitioners report that LLM-driven coding t\u2026",
+    "page": "digests/2026-CW21.html"
+  },
+  {
     "cw": "2026-CW20",
     "period_start": "2026-05-11",
     "period_end": "2026-05-17",

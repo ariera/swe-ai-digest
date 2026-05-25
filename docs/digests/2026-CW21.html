@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW21</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW21</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-05-18 &ndash; 2026-05-24
+    &middot; 28 articles
+  </p>
+  <p>This digest period is defined by several converging themes in applied AI for software engineering. The maturation of coding agents stands out prominently: practitioners report that LLM-driven coding tools crossed a reliability threshold in late 2025, yet real-world survey data simultaneously reveals declining codebase quality, eroding code ownership, and management indifference to regressions — suggesting adoption is outpacing discipline. Complementing this, multiple authors explore how to impose guardrails on agents, from static analysis sensors and maintainability harnesses to token-efficient tool designs for local inference environments.
+
+A second theme is the tension between AI-amplified productivity and architectural integrity. Both Ronacher and Orosz warn that AI tools favor local fixes and volume over systemic thinking, while Fowler&#39;s &#34;vibe coding&#34; framing sharpens the distinction between unreviewed generation and responsible agentic programming.
+
+Infrastructure economics emerge as a structural backdrop: Anthropic&#39;s $1.25B/month compute contract and HBM memory reallocation signal that frontier AI competition is reshaping hardware markets affecting all developers. Finally, open-weight model progress, rising API prices, and the backlash against Antigravity 2.0 reflect a maturing but turbulent tooling landscape where model selection and cost sensitivity are increasingly critical engineering decisions.</p>
+  <hr>
+
+  
+  <h2>Matteo Collina</h2>
+  
+  <p class="meta">Node.js TSC member, co-creator of Fastify, creator of Pino, and CTO of Platformatic — writing regularly about the Node.js ecosystem, performance, and AI&#39;s role in software development.</p>
+  
+  
+  <h3>
+    <a href="https://bsky.app/profile/nodeland.dev/post/3mm5am46m2l2d">(no title)</a>
+    <span class="meta">(2026-05-18)</span>
+  </h3>
+  
+  <p>Matteo Collina highlights that Bun used AI to rewrite itself from Zig to Rust, achieving a 98% test suite pass rate on the first run. He uses this as a prompt to ask whether Node.js should similarly be rewritten in Rust, framing AI-assisted large-scale language migration as a now-practical engineering consideration.</p>
+  
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/19/5-minute-llms/#atom-everything">The last six months in LLMs in five minutes</a>
+    <span class="meta">(2026-05-19)</span>
+  </h3>
+  
+  <p>Simon Willison recaps six months of LLM progress from his PyCon US 2026 lightning talk, identifying two major themes: coding agents crossing a quality threshold in November 2025 to become reliable daily-driver tools, and open-weight models (Qwen, GLM-5.1) dramatically exceeding expectations. He also traces the rapid rise of &#34;Claws&#34; — personal AI assistants — as a new cultural and technical category. The piece offers a practitioner&#39;s benchmark-driven perspective on frontier model competition across OpenAI, Anthropic, and Google.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-everything">Gemini 3.5 Flash: more expensive, but Google plan to use it for everything</a>
+    <span class="meta">(2026-05-19)</span>
+  </h3>
+  
+  <p>Simon Willison reviews Google&#39;s newly released Gemini 3.5 Flash, highlighting a significant price increase — up to 6x over prior Flash models — and noting that all three major AI labs appear to be probing API price tolerance simultaneously. He also flags Google&#39;s new Interactions API as a server-side history management pattern similar to OpenAI&#39;s Responses API. For developers, the real-world benchmark costs reveal that 3.5 Flash (high) is pricier to run than Gemini 3.1 Pro Preview, making model selection increasingly cost-sensitive.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/19/llm-gemini-2/#atom-everything">llm-gemini 0.32</a>
+    <span class="meta">(2026-05-19)</span>
+  </h3>
+  
+  <p>Simon Willison announces version 0.32 of his llm-gemini plugin, adding support for Google&#39;s newly released Gemini 3.5 Flash model. This is a practical tool update for engineers using the LLM command-line ecosystem to interact with Gemini models, signaling the availability of a new frontier model in that toolchain.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/19/datasette-llm-accountant/#atom-everything">datasette-llm-accountant 0.1a4</a>
+    <span class="meta">(2026-05-19)</span>
+  </h3>
+  
+  <p>Simon Willison releases version 0.1a4 of datasette-llm-accountant, a plugin that tracks LLM usage within the Datasette and LLM toolchain, fixing a bug in how chains of responses are recorded. This tool is relevant to engineers building or auditing LLM-powered workflows, as it provides cost and usage accounting for chained AI interactions.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/19/llm-gemini/#atom-everything">llm-gemini 0.32a0</a>
+    <span class="meta">(2026-05-19)</span>
+  </h3>
+  
+  <p>Simon Willison releases llm-gemini 0.32a0, an alpha update to his LLM CLI plugin for Google&#39;s Gemini models that adds support for streaming reasoning tokens. This tooling improvement is relevant to engineers using LLM-based workflows, as streaming reasoning tokens enables real-time visibility into model chain-of-thought output.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/19/datasette-llm/#atom-everything">datasette-llm 0.1a8</a>
+    <span class="meta">(2026-05-19)</span>
+  </h3>
+  
+  <p>Simon Willison releases datasette-llm 0.1a8, a patch fixing a bug where the `llm_prompt_context()` hook failed to fully collect chained LLM responses. This plugin integrates LLM capabilities directly into Datasette, and the fix ensures response chains are reliably captured — relevant to engineers building AI-augmented data tooling.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/20/google-io/#atom-everything">Google I/O, Gemini Spark, Antigravity</a>
+    <span class="meta">(2026-05-20)</span>
+  </h3>
+  
+  <p>Simon Willison surveys Google I/O 2026 announcements, focusing on Gemini Spark — a personal AI agent integrating with Google&#39;s app ecosystem — and the Antigravity platform (a closed-source CLI, SDK, and IDE). He raises concerns about prompt injection risks as sensitive data flows through hosted agents, and flags that the open-source Gemini CLI will be replaced by the closed-source Antigravity CLI on June 18th.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/20/tokens-per-second/#atom-everything">How fast is 10 tokens per second really?</a>
+    <span class="meta">(2026-05-20)</span>
+  </h3>
+  
+  <p>Simon Willison highlights a small interactive HTML tool by Mike Veerman that lets users viscerally experience LLM token output speeds ranging from 5 to 800 tokens per second. This is practically useful for engineers evaluating model performance, as advertised throughput numbers are otherwise abstract and hard to contextualize without a live simulation.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/20/spacex-s1/#atom-everything">Quoting SpaceX S-1</a>
+    <span class="meta">(2026-05-20)</span>
+  </h3>
+  
+  <p>Simon Willison highlights a disclosure from SpaceX&#39;s S-1 filing revealing that Anthropic has agreed to pay SpaceX $1.25 billion per month through May 2029 for access to compute capacity across the COLOSSUS and COLOSSUS II supercomputer clusters. This signals the massive and growing infrastructure investment underpinning frontier AI model training, with direct implications for the competitive compute landscape that shapes which AI tools software engineers ultimately have access to.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/21/datasette-agent/#atom-everything">Datasette Agent</a>
+    <span class="meta">(2026-05-21)</span>
+  </h3>
+  
+  <p>Simon Willison announces Datasette Agent, a conversational AI assistant that lets users query Datasette databases in natural language, generating SQL on the fly using models like Gemini Flash-Lite or local open-weight models via LM Studio. The system is plugin-extensible and informs a broader refactor of Willison&#39;s LLM Python library. It demonstrates a practical pattern for embedding LLM-powered agents into data tools, with Claude Code and OpenAI Codex used to accelerate plugin development.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/21/datasette-agent-sprites/#atom-everything">datasette-agent-sprites 0.1a0</a>
+    <span class="meta">(2026-05-21)</span>
+  </h3>
+  
+  <p>Simon Willison releases datasette-agent-sprites 0.1a0, a plugin for the Datasette Agent that enables running commands inside a Fly Sprites sandbox. This is relevant to software engineers as it demonstrates tooling for sandboxed AI agent execution, a key safety and isolation pattern when deploying AI agents that run arbitrary code.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/21/datasette-agent-2/#atom-everything">datasette-agent 0.1a3</a>
+    <span class="meta">(2026-05-21)</span>
+  </h3>
+  
+  <p>Simon Willison announces the 0.1a3 release of datasette-agent, an extensible AI assistant built for Datasette, the open-source data exploration tool. While content is sparse, it signals continued iteration on an agent architecture that integrates AI capabilities directly into a developer data tool, relevant to engineers tracking AI-augmented tooling.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/21/datasette-agent-charts/#atom-everything">datasette-agent-charts 0.1a2</a>
+    <span class="meta">(2026-05-21)</span>
+  </h3>
+  
+  <p>Simon Willison releases datasette-agent-charts 0.1a2, an early alpha plugin for Datasette that integrates agent-driven chart rendering, now adding &#34;View SQL query&#34; buttons beneath rendered charts. The project sits at the intersection of AI agents and data tooling, enabling software engineers to see the underlying SQL generated by an AI agent for each visualization.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/20/datasette-agent-charts/#atom-everything">datasette-agent-charts 0.1a1</a>
+    <span class="meta">(2026-05-20)</span>
+  </h3>
+  
+  <p>Simon Willison releases datasette-agent-charts 0.1a1, a plugin that enables an AI agent to generate charts from Datasette SQL queries. The release adds color schemes, interactive tooltips, permission checks before query execution, and a bug fix for waffle chart descriptions. This illustrates how AI agents are being integrated into data tooling workflows to automate visualization tasks.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/22/ftc-active-listening/#atom-everything">FTC to Require Cox Media Group, Two Other Firms to Pay Nearly $1 Million to Settle Charges They Deceived Customers About “Active Listening” AI-Powered Marketing Service</a>
+    <span class="meta">(2026-05-22)</span>
+  </h3>
+  
+  <p>The FTC settled charges against Cox Media Group and two other firms for falsely claiming their &#34;Active Listening&#34; AI-powered ad service used smart device microphones to target consumers — when it actually just resold email lists from data brokers. Willison argues this confirms his 2024 theory that the &#34;active listening&#34; branding was marketing hype that misrepresented how standard ad-targeting technology works. The case is a cautionary example of how AI-branded services can deceive customers and attract regulatory scrutiny.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/22/memory-shortage/#atom-everything">The memory shortage is causing a repricing of consumer electronics</a>
+    <span class="meta">(2026-05-22)</span>
+  </h3>
+  
+  <p>The explosive growth of AI data centers is driving memory manufacturers to reallocate wafer capacity toward high-bandwidth memory (HBM) for GPUs — from 2% to an expected 20% by end of 2026 — squeezing supply for consumer DDR/LPDDR RAM. Because HBM requires over 3× the wafer capacity per gigabyte, this structural shift will raise prices for consumer electronics for years, hitting affordable smartphones in emerging markets hardest.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/24/armin-ronacher/#atom-everything">Quoting Armin Ronacher</a>
+    <span class="meta">(2026-05-24)</span>
+  </h3>
+  
+  <p>Armin Ronacher describes a growing open-source pain point: AI-generated (&#34;slop&#34;) bug reports that reword genuine observations into confident but inaccurate analyses, with fabricated root causes and fake minimal reproductions. He argues maintainers are better served by raw human observations — command run, expected vs. actual behavior, exact error — than by LLM-processed noise. This is a direct signal for engineers on how AI tool misuse is degrading issue-tracker quality in open-source projects.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/24/datasette-agent/#atom-everything">datasette-agent 0.1a4</a>
+    <span class="meta">(2026-05-24)</span>
+  </h3>
+  
+  <p>Simon Willison announces datasette-agent 0.1a4, a plugin that embeds an AI agent chat interface directly into the Datasette data exploration tool via a new JavaScript plugin hook. The update surfaces &#34;Start a new agent chat&#34; through the app&#39;s Jump To menu, making AI-assisted data querying more accessible within the Datasette workflow. This illustrates how AI agent capabilities are being progressively integrated into developer-facing data tools.</p>
+  
+  
+  <h2>Salvatore Sanfilippo (antirez)</h2>
+  
+  <p class="meta">Italian software engineer, creator of Redis — one of the world&#39;s most widely deployed in-memory data stores — and a rare voice for clarity and minimalism in systems design.</p>
+  
+  
+  <h3>
+    <a href="http://antirez.com/news/166">A new EDIT tool for LLM agents</a>
+    <span class="meta">(2026-05-19)</span>
+  </h3>
+  
+  <p>Antirez (Redis creator) proposes a token-efficient EDIT tool for LLM agents that replaces verbatim &#34;old text&#34; CAS-style edits with a compact line-number + CRC32 tag checksum scheme, reducing token consumption during file edits. This matters to engineers building or optimizing AI coding agents, particularly in token-constrained local inference environments, as it directly addresses reliability and efficiency tradeoffs in agent tool design.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/ai-impact-on-software-engineers-part-2">AI’s impact on software engineers in 2026: key trends, Part 2</a>
+    <span class="meta">(2026-05-19)</span>
+  </h3>
+  
+  <p>Drawing on 900+ survey responses, Orosz identifies key patterns in AI&#39;s real-world impact on software engineering: codebase quality is declining as &#34;AI slop,&#34; weaker code reviews, and more bugs accumulate, while management largely ignores these regressions in favor of output metrics. Company-scale AI adoption remains difficult, with benefits heavily dependent on pre-existing engineering culture — strong practices amplify positives, weak ones amplify negatives. Additional concerns include eroding code ownership, less experienced engineers struggling more with AI tools, and addictive agent behavior driven by tool design.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/why-rust-is-different-with-alice">Why Rust is different, with Alice Ryhl</a>
+    <span class="meta">(2026-05-20)</span>
+  </h3>
+  
+  <p>The episode explores Rust&#39;s suitability for AI-generated and agent-driven code, arguing that Rust&#39;s strict compiler creates a high-quality feedback loop that agents can leverage iteratively — making it potentially optimal for agentic workflows. However, the guest warns of &#34;false fluency,&#34; where AI-assisted code compiles but is semantically wrong, posing risks for junior engineers. The episode also notes AI code review bots are gaining traction in the Linux kernel as a quality gate.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-antigravity-20-takes-ide">The Pulse: Antigravity 2.0 takes ‘IDE’ out of its new IDE</a>
+    <span class="meta">(2026-05-21)</span>
+  </h3>
+  
+  <p>Gergely Orosz covers the backlash against Antigravity 2.0&#39;s redesigned IDE, which has received overwhelmingly negative feedback due to bugs, poor UX, weak model support, and excessive Gemini token consumption. This is directly relevant to software engineers evaluating AI-powered development environments, as it highlights the real-world pitfalls of shipping AI-integrated tooling prematurely.</p>
+  
+  <h3>
+    <a href="https://blog.pragmaticengineer.com/the-pulse-forward-deployed-engineering-heats-up-again/">The Pulse: Forward deployed engineering heats up again</a>
+    <span class="meta">(2026-05-24)</span>
+  </h3>
+  
+  <p>Gergely Orosz examines the accelerating demand for Forward Deployed Engineers (FDEs) as Google, OpenAI, and Anthropic all ramp up hiring—often through standalone external companies—to embed AI solutions into enterprise clients. He argues the FDE role is converging with traditional consulting and solutions architecture, making it less appealing to experienced engineers but a viable entry point for new grads. The trend signals how AI labs are structuring go-to-market strategies around hands-on deployment rather than purely self-serve adoption.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/articles/sensors-for-coding-agents.html">Maintainability sensors for coding agents</a>
+    <span class="meta">(2026-05-19)</span>
+  </h3>
+  
+  <p>Birgitta Böckeler explores how to keep codebases maintainable when using coding agents, introducing a &#34;harness&#34; framework of guides and sensors that improve agent output quality and enable self-correction. This installment focuses on static analysis and basic code linting as sensors. The work is directly relevant to engineers building or using agentic coding workflows who need automated quality guardrails.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/articles/sensors-for-coding-agents.html#StaticCodeAnalysisDependencyRules">Three more static code analysis sensors</a>
+    <span class="meta">(2026-05-20)</span>
+  </h3>
+  
+  <p>Birgitta Böckeler examines three static code analysis &#34;sensors&#34; for use with coding agents, finding that computational sensors can enforce dependency rules but are limited in scope, while an inferential (LLM-based) sensor proved more effective for reviewing modularity and coupling. The piece is relevant to engineers exploring how to integrate AI agents into code quality workflows, particularly around architectural enforcement.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/bliki/VibeCoding.html">Bliki: Vibe Coding</a>
+    <span class="meta">(2026-05-21)</span>
+  </h3>
+  
+  <p>Martin Fowler defines &#34;vibe coding&#34; strictly as LLM-driven development where the programmer never reads the generated code — distinguishing it from &#34;agentic programming,&#34; where developers still review and reason about AI-written code. He argues vibe coding is viable only for disposable, low-stakes software due to serious risks around security, correctness, and maintainability. Software engineers should understand this distinction, as conflating the two obscures very different risk profiles and professional responsibilities.</p>
+  
+  
+  <h2>Armin Ronacher</h2>
+  
+  <p class="meta">Austrian open-source developer, creator of Flask and Jinja2, and a prolific contributor to the Python and Rust ecosystems with a thoughtful voice on developer tooling.</p>
+  
+  
+  <h3>
+    <a href="https://lucumr.pocoo.org/2026/5/24/pi-oss/">Building Pi With Pi</a>
+    <span class="meta">(2026-05-24)</span>
+  </h3>
+  
+  <p>Armin Ronacher reflects on using AI agents (&#34;clankers&#34;) to build Pi, observing that LLM-generated issues are often confidently wrong and cause agents to follow bad diagnoses, while AI-generated code tends to over-engineer local workarounds rather than enforcing system invariants. He also warns that AI is flooding open-source trackers with low-quality issues and PRs, fragmenting community effort without increasing the number of maintainers or genuine users. His core argument is that AI amplifies volume and local fixes at the expense of collaborative problem-solving and architectural discipline.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>
