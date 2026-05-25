@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 May 2026 00:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 15:00:27 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Distributing LLM inference in DwarfStar</title>
+      <link>http://antirez.com/news/167</link>
+      <author>Salvatore Sanfilippo (antirez)</author>
+      <pubDate>Mon, 25 May 2026 14:54:59 +0000</pubDate>
+      <description>Antirez explores distributed LLM inference strategies for consumer hardware (Apple Silicon laptops/Mac Studios), comparing pipeline parallelism, expert parallelism, and a lesser-known "LLM ensemble" approach where two models run independently on separate machines and combine logits or select the lower-perplexity continuation. He argues ensembling offers a viable shared-nothing alternative to tensor parallelism, which is impractical at consumer network speeds. This matters to engineers building local or small-scale inference infrastructure as frontier models become increasingly runnable on affordable hardware.</description>
+      <guid isPermaLink="true">http://antirez.com/news/167</guid>
+    </item>
     <item>
       <title>datasette-agent 0.1a4</title>
       <link>https://simonwillison.net/2026/May/24/datasette-agent/#atom-everything</link>
