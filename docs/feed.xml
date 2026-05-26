@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 May 2026 16:00:23 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 19:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>State of the software engineering job market in 2026</title>
+      <link>https://newsletter.pragmaticengineer.com/p/state-of-the-job-market-2026</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 26 May 2026 18:10:59 +0000</pubDate>
+      <description>Gergely Orosz's 2026 job market analysis finds AI engineering demand growing explosively, with many large tech companies posting 50–100% more AI engineering roles year-over-year, while traditional software engineering hiring recovers only modestly. The data raises a pointed question for engineers: whether AI engineering skills are becoming a baseline requirement for all software engineering candidates, signaling a potential structural shift in hiring expectations.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/state-of-the-job-market-2026</guid>
+    </item>
     <item>
       <title>Microsoft Copilot Cowork Exfiltrates Files</title>
       <link>https://simonwillison.net/2026/May/26/copilot-cowork-exfiltrates-files/#atom-everything</link>
