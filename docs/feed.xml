@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 May 2026 15:00:27 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 01:00:27 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Notes on Pope Leo XIV's encyclical on AI</title>
+      <link>https://simonwillison.net/2026/May/25/encyclical-on-ai/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 25 May 2026 23:58:17 +0000</pubDate>
+      <description>Simon Willison highlights key passages from Pope Leo XIV's papal encyclical on AI, noting its unusually clear treatment of topics directly relevant to software engineers: LLM interpretability, algorithmic accountability, baked-in cultural bias, data as a public good, and AI's tendency to concentrate power among resource-rich actors. The document frames AI as a societal challenge analogous to the first industrial revolution, demanding ethical guardrails across the full development-to-deployment chain.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/25/encyclical-on-ai/#atom-everything</guid>
+    </item>
     <item>
       <title>Distributing LLM inference in DwarfStar</title>
       <link>http://antirez.com/news/167</link>
