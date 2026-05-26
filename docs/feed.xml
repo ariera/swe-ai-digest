@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 May 2026 14:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 16:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Microsoft Copilot Cowork Exfiltrates Files</title>
+      <link>https://simonwillison.net/2026/May/26/copilot-cowork-exfiltrates-files/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 26 May 2026 15:36:48 +0000</pubDate>
+      <description>Simon Willison highlights a security vulnerability in Microsoft Copilot Cowork where prompt injection attacks could exploit the agent's ability to send emails and generate pre-authenticated OneDrive links, enabling file exfiltration via externally rendered images. This illustrates a persistent "lethal trifecta" design challenge in agentic AI systems — preventing attackers from weaponizing an agent's legitimate capabilities to leak sensitive user data.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/26/copilot-cowork-exfiltrates-files/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Quoting Paul Graham</title>
+      <link>https://simonwillison.net/2026/May/26/paul-graham/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 26 May 2026 15:02:30 +0000</pubDate>
+      <description>Simon Willison quotes Paul Graham arguing that AI-ghostwritten emails are immediately recognizable and counterproductive — Graham states he has never finished reading one and views them as a form of deception that reflects poorly on the sender. The observation is relevant to software engineers as it highlights a growing social and professional backlash against uncritical AI delegation, particularly in high-stakes written communication.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/26/paul-graham/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Corey Quinn</title>
       <link>https://simonwillison.net/2026/May/26/corey-quinn/#atom-everything</link>
