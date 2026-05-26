@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 May 2026 01:00:27 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 03:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Corey Quinn</title>
+      <link>https://simonwillison.net/2026/May/26/corey-quinn/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 26 May 2026 02:28:54 +0000</pubDate>
+      <description>Corey Quinn quips that Anthropic co-founder Christopher Olah's influence on the Vatican's AI document *Magnifica Humanitas* amounts to the most audacious act of vendor lobbying ever — getting the Pope to frame an AI company's technical constraints as spiritual doctrine. The observation highlights growing concerns about AI lab influence over public institutions and ethical narratives around AI development.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/26/corey-quinn/#atom-everything</guid>
+    </item>
     <item>
       <title>Notes on Pope Leo XIV's encyclical on AI</title>
       <link>https://simonwillison.net/2026/May/25/encyclical-on-ai/#atom-everything</link>
