@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 May 2026 16:00:30 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 17:00:41 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>I think Anthropic and OpenAI have found product-market fit</title>
+      <link>https://simonwillison.net/2026/May/27/product-market-fit/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 27 May 2026 16:38:35 +0000</pubDate>
+      <description>Simon Willison argues that OpenAI and Anthropic have achieved true product-market fit through coding agents (Claude Code and Codex), which burn vastly more tokens than chat tools and are used by highly compensated professionals — making enterprise pricing shifts from flat-seat to API-token-based costs economically transformative for both labs. Both companies quietly overhauled enterprise pricing in late 2025/April 2026 to align with API token costs, resulting in dramatic budget overruns at companies like Uber. Willison identifies April 2026 as a new inflection point where AI agent revenue has become material, with IPO filings likely to confirm the scale.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/27/product-market-fit/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Building OpenCode with Dax Raad</title>
+      <link>https://newsletter.pragmaticengineer.com/p/opencode</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 27 May 2026 16:07:30 +0000</pubDate>
+      <description>Gergely Orosz interviews Dax Raad, co-founder of OpenCode — one of the fastest-growing open-source AI coding tools — who argues that AI makes coding easier but doesn't eliminate the hard thinking required in software development. Raad warns that AI-generated code risks accumulating hidden tech debt, dilutes quality culture when misused, and that productivity gains are more often pocketed as time savings than increased output. He also contends that "old school" design patterns are gaining renewed relevance as agents effectively become junior engineers requiring strong guardrails.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/opencode</guid>
+    </item>
     <item>
       <title>The test suite as a regression sensor</title>
       <link>https://martinfowler.com/articles/sensors-for-coding-agents.html#TheTestSuiteAsARegressionSensor</link>
