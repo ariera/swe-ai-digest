@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 May 2026 15:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 16:00:30 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The test suite as a regression sensor</title>
+      <link>https://martinfowler.com/articles/sensors-for-coding-agents.html#TheTestSuiteAsARegressionSensor</link>
+      <author>Martin Fowler</author>
+      <pubDate>Wed, 27 May 2026 15:01:00 +0000</pubDate>
+      <description>Birgitta Böckeler examines how test suites can serve as "regression sensors" for coding agents, with a focus on mutation testing as a mechanism for evaluating test suite quality. The piece is part of a broader exploration of feedback signals that help AI coding agents detect when their changes break existing behaviour — directly relevant to engineers integrating agents into CI/CD and code quality workflows.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/sensors-for-coding-agents.html#TheTestSuiteAsARegressionSensor</guid>
+    </item>
     <item>
       <title>The VibeSec Reckoning</title>
       <link>https://martinfowler.com/articles/vibesec-reckoning.html</link>
