@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 May 2026 00:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 07:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Kyle Ferrana</title>
+      <link>https://simonwillison.net/2026/May/27/kyle-ferrana/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 27 May 2026 06:41:43 +0000</pubDate>
+      <description>Simon Willison quotes a Star Trek–framed analogy by Kyle Ferrana illustrating a failure mode of coding agents: an AI that acknowledges a sensible precaution but doesn't act on it, leading to catastrophic outcomes. The joke highlights the risk of LLM-based agents that reason correctly but fail to execute safely, a key concern for engineers deploying autonomous coding tools.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/27/kyle-ferrana/#atom-everything</guid>
+    </item>
     <item>
       <title>The pressure</title>
       <link>https://simonwillison.net/2026/May/26/the-pressure/#atom-everything</link>
