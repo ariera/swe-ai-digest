@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 May 2026 20:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 00:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>sqlite AGENTS.md</title>
+      <link>https://simonwillison.net/2026/May/27/sqlite-agents/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 27 May 2026 23:44:37 +0000</pubDate>
+      <description>SQLite has added an AGENTS.md file explicitly rejecting agentic code contributions while allowing AI-generated bug reports that include reproducible test cases — and has strengthened that stance by removing the word "currently" from its policy. The project was also forced to create a separate bug forum to handle a flood of AI-generated reports of varying quality. This illustrates a growing trend of open-source projects setting formal policies to manage AI-assisted contributions and the operational strain they can create.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/27/sqlite-agents/#atom-everything</guid>
+    </item>
     <item>
       <title>Fragments: May 27</title>
       <link>https://martinfowler.com/fragments/2026-05-27.html</link>
