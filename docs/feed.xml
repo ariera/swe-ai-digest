@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 May 2026 17:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 01:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Claude Opus 4.8: "a modest but tangible improvement"</title>
+      <link>https://simonwillison.net/2026/May/28/claude-opus-4-8/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 28 May 2026 23:59:50 +0000</pubDate>
+      <description>Simon Willison reviews Claude Opus 4.8, highlighting Anthropic's unusually candid framing of it as a "modest but tangible improvement" with a focus on honesty — the model is reportedly four times less likely to let code flaws pass unremarked. He also notes practical engineering-relevant changes: mid-conversation system messages for agentic loops, a lower prompt cache minimum (1,024 tokens), and a reduced "fast mode" pricing tier.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/28/claude-opus-4-8/#atom-everything</guid>
+    </item>
     <item>
       <title>The Pulse: a trend of trying to cut back on AI spend within eng departments?</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-pulse-a-trend-of-trying-to-cut</link>
