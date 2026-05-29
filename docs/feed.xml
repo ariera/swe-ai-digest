@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 May 2026 01:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 02:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Anthropic's run-rate revenue hits $47 billion</title>
+      <link>https://simonwillison.net/2026/May/29/anthropic/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 29 May 2026 01:23:08 +0000</pubDate>
+      <description>Simon Willison highlights Anthropic's explosive revenue growth, with run-rate revenue hitting $47B following a $65B Series H raise — up from $14B in February and $30B in April 2026. He argues the figures are credible because they were disclosed to investors in fundraising announcements, where misrepresentation would constitute securities fraud. The trajectory signals massive enterprise adoption of Claude and points toward an eventual IPO.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/29/anthropic/#atom-everything</guid>
+    </item>
     <item>
       <title>Claude Opus 4.8: "a modest but tangible improvement"</title>
       <link>https://simonwillison.net/2026/May/28/claude-opus-4-8/#atom-everything</link>
