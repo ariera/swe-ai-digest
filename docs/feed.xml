@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 May 2026 18:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2026 21:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>I Am Retiring from Tech to Live Offline</title>
+      <link>https://simonwillison.net/2026/May/30/retiring-from-tech-to-live-offline/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 30 May 2026 19:39:08 +0000</pubDate>
+      <description>Simon Willison highlights Chad Whitacre's decision to leave tech entirely, citing AI as the breaking point after an immersive experience with Claude Code left him feeling alienated from his own inner life. Whitacre's story illustrates a growing tension some engineers feel between AI-driven productivity and personal autonomy. Willison also notes that AI disruption is compounding the already-difficult open source sustainability problem.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/30/retiring-from-tech-to-live-offline/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Daniel Jalkut</title>
       <link>https://simonwillison.net/2026/May/30/daniel-jalkut/#atom-everything</link>
