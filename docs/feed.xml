@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 May 2026 02:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2026 18:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Daniel Jalkut</title>
+      <link>https://simonwillison.net/2026/May/30/daniel-jalkut/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 30 May 2026 17:29:55 +0000</pubDate>
+      <description>Simon Willison quotes Daniel Jalkut's observation that discourse around AI is marked by excessive polarization — both critics and advocates hold overstated positions. The quote, surfaced via John Gruber, reflects a broader sentiment relevant to software engineers navigating hype and skepticism when evaluating AI tools and their practical value.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/30/daniel-jalkut/#atom-everything</guid>
+    </item>
     <item>
       <title>Anthropic's run-rate revenue hits $47 billion</title>
       <link>https://simonwillison.net/2026/May/29/anthropic/#atom-everything</link>
