@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 May 2026 21:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2026 22:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>How we contain Claude across products</title>
+      <link>https://simonwillison.net/2026/May/30/how-we-contain-claude/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 30 May 2026 21:36:24 +0000</pubDate>
+      <description>Simon Willison highlights Anthropic's newly published documentation on how Claude agents are sandboxed across Claude.ai, Claude Code, and Claude Cowork, using techniques like gVisor, Seatbelt, Bubblewrap, and full VMs. The post emphasizes that hard boundaries—such as keeping credentials outside the sandbox—are critical to preventing exfiltration. This matters to engineers deploying AI agents, as it surfaces practical containment patterns and real-world security gaps Anthropic encountered.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/30/how-we-contain-claude/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Running Python ASGI apps in the browser via Pyodide + a service worker</title>
+      <link>https://simonwillison.net/2026/May/30/pyodide-asgi-browser/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 30 May 2026 21:02:16 +0000</pubDate>
+      <description>Simon Willison used Claude Opus 4.8 via Claude Code to solve a long-standing technical limitation in Datasette Lite — replacing Web Workers with Service Workers to properly execute JavaScript in browser-based Python ASGI apps. The result unlocks full Datasette plugin compatibility in the browser. This is a concrete example of delegating exploratory architectural research to an AI coding agent to produce working, production-relevant outcomes.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/30/pyodide-asgi-browser/#atom-everything</guid>
+    </item>
     <item>
       <title>I Am Retiring from Tech to Live Offline</title>
       <link>https://simonwillison.net/2026/May/30/retiring-from-tech-to-live-offline/#atom-everything</link>
