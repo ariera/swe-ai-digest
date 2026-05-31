@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 May 2026 22:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2026 17:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The solution might be cancelling my AI subscription</title>
+      <link>https://simonwillison.net/2026/May/31/the-solution-might-be-cancelling-my-ai-subscription/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 31 May 2026 16:31:32 +0000</pubDate>
+      <description>Simon Willison reflects on a shared problem with AI coding agents: their ability to rapidly spin up seemingly complete projects fuels compulsive over-creation, leaving developers with more half-maintained codebases than they can sustainably own. The core argument is that low-friction, high-reward AI tooling acts as an "attention amplifier," and that discipline — not better tooling — is the critical skill engineers need to develop to use these tools responsibly.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/May/31/the-solution-might-be-cancelling-my-ai-subscription/#atom-everything</guid>
+    </item>
     <item>
       <title>How we contain Claude across products</title>
       <link>https://simonwillison.net/2026/May/30/how-we-contain-claude/#atom-everything</link>
