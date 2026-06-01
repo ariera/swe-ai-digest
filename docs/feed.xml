@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 May 2026 18:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 10:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Let the agents democratize open source</title>
+      <link>https://world.hey.com/dhh/let-the-agents-democratize-open-source-9fd630a9</link>
+      <author>DHH</author>
+      <pubDate>Mon, 01 Jun 2026 09:22:27 +0000</pubDate>
+      <description>DHH argues that open source projects barring AI-assisted contributions are engaging in protectionism, not principled quality control — gatekeeping that contradicts open source's founding mission of universal access. He frames anti-agent policies as status-driven resistance to democratization rather than legitimate concerns. For software engineers, this surfaces a live debate about whether AI-assisted contributions should be treated as second-class in collaborative development communities.</description>
+      <guid isPermaLink="true">https://world.hey.com/dhh/let-the-agents-democratize-open-source-9fd630a9</guid>
+    </item>
     <item>
       <title>The solution might be cancelling my AI subscription</title>
       <link>https://simonwillison.net/2026/May/31/the-solution-might-be-cancelling-my-ai-subscription/#atom-everything</link>
