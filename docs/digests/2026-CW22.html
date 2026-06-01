@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW22</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW22</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-05-25 &ndash; 2026-05-31
+    &middot; 23 articles
+  </p>
+  <p>This digest period is defined by a maturation of AI&#39;s role in software engineering — moving from experimental curiosity to an operational force with measurable costs, risks, and structural consequences. Several interlocking themes emerge across the articles.
+
+Agentic AI systems dominate the conversation, with multiple authors examining their security vulnerabilities (prompt injection, file exfiltration, insecure configurations), their effect on open-source maintainers (curl&#39;s vulnerability flood, SQLite&#39;s formal policy rejecting AI contributions), and the challenge of keeping agents safely contained. Engineering workflows are being reshaped: test suites as regression sensors, security context files, and sandbox architectures are proposed as practical guardrails.
+
+Economically, Anthropic&#39;s explosive revenue growth and the token-based pricing shift signal that AI agents have achieved genuine product-market fit — though organizational pushback on AI spend is already emerging. The job market is bifurcating, with AI engineering roles surging while traditional hiring recovers slowly.
+
+Several authors interrogate the social and cultural dimensions: the anthropomorphization of agents, AI&#39;s tendency to concentrate institutional power, polarized discourse, and the personal toll of AI-driven productivity on individual engineers. Underlying many pieces is a consistent call for deliberate, disciplined human judgment — not as resistance to AI, but as its necessary complement.</p>
+  <hr>
+
+  
+  <h2>Salvatore Sanfilippo (antirez)</h2>
+  
+  <p class="meta">Italian software engineer, creator of Redis — one of the world&#39;s most widely deployed in-memory data stores — and a rare voice for clarity and minimalism in systems design.</p>
+  
+  
+  <h3>
+    <a href="http://antirez.com/news/167">Distributing LLM inference in DwarfStar</a>
+    <span class="meta">(2026-05-25)</span>
+  </h3>
+  
+  <p>Antirez explores distributed LLM inference strategies for consumer hardware (Apple Silicon laptops/Mac Studios), comparing pipeline parallelism, expert parallelism, and a lesser-known &#34;LLM ensemble&#34; approach where two models run independently on separate machines and combine logits or select the lower-perplexity continuation. He argues ensembling offers a viable shared-nothing alternative to tensor parallelism, which is impractical at consumer network speeds. This matters to engineers building local or small-scale inference infrastructure as frontier models become increasingly runnable on affordable hardware.</p>
+  
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/25/encyclical-on-ai/#atom-everything">Notes on Pope Leo XIV&#39;s encyclical on AI</a>
+    <span class="meta">(2026-05-25)</span>
+  </h3>
+  
+  <p>Simon Willison highlights key passages from Pope Leo XIV&#39;s papal encyclical on AI, noting its unusually clear treatment of topics directly relevant to software engineers: LLM interpretability, algorithmic accountability, baked-in cultural bias, data as a public good, and AI&#39;s tendency to concentrate power among resource-rich actors. The document frames AI as a societal challenge analogous to the first industrial revolution, demanding ethical guardrails across the full development-to-deployment chain.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/26/corey-quinn/#atom-everything">Quoting Corey Quinn</a>
+    <span class="meta">(2026-05-26)</span>
+  </h3>
+  
+  <p>Corey Quinn quips that Anthropic co-founder Christopher Olah&#39;s influence on the Vatican&#39;s AI document *Magnifica Humanitas* amounts to the most audacious act of vendor lobbying ever — getting the Pope to frame an AI company&#39;s technical constraints as spiritual doctrine. The observation highlights growing concerns about AI lab influence over public institutions and ethical narratives around AI development.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/26/copilot-cowork-exfiltrates-files/#atom-everything">Microsoft Copilot Cowork Exfiltrates Files</a>
+    <span class="meta">(2026-05-26)</span>
+  </h3>
+  
+  <p>Simon Willison highlights a security vulnerability in Microsoft Copilot Cowork where prompt injection attacks could exploit the agent&#39;s ability to send emails and generate pre-authenticated OneDrive links, enabling file exfiltration via externally rendered images. This illustrates a persistent &#34;lethal trifecta&#34; design challenge in agentic AI systems — preventing attackers from weaponizing an agent&#39;s legitimate capabilities to leak sensitive user data.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/26/paul-graham/#atom-everything">Quoting Paul Graham</a>
+    <span class="meta">(2026-05-26)</span>
+  </h3>
+  
+  <p>Simon Willison quotes Paul Graham arguing that AI-ghostwritten emails are immediately recognizable and counterproductive — Graham states he has never finished reading one and views them as a form of deception that reflects poorly on the sender. The observation is relevant to software engineers as it highlights a growing social and professional backlash against uncritical AI delegation, particularly in high-stakes written communication.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/26/the-pressure/#atom-everything">The pressure</a>
+    <span class="meta">(2026-05-26)</span>
+  </h3>
+  
+  <p>Daniel Stenberg reports that AI-assisted security research has driven a 4–5x surge in vulnerability reports to the curl project compared to 2024, now exceeding one per day, with notably higher report quality and detail. While the influx hasn&#39;t uncovered high-severity CVEs, it is creating unsustainable workload pressure on maintainers. This illustrates a concrete, real-world burden AI tooling is placing on open-source security teams.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/27/kyle-ferrana/#atom-everything">Quoting Kyle Ferrana</a>
+    <span class="meta">(2026-05-27)</span>
+  </h3>
+  
+  <p>Simon Willison quotes a Star Trek–framed analogy by Kyle Ferrana illustrating a failure mode of coding agents: an AI that acknowledges a sensible precaution but doesn&#39;t act on it, leading to catastrophic outcomes. The joke highlights the risk of LLM-based agents that reason correctly but fail to execute safely, a key concern for engineers deploying autonomous coding tools.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/27/product-market-fit/#atom-everything">I think Anthropic and OpenAI have found product-market fit</a>
+    <span class="meta">(2026-05-27)</span>
+  </h3>
+  
+  <p>Simon Willison argues that OpenAI and Anthropic have achieved true product-market fit through coding agents (Claude Code and Codex), which burn vastly more tokens than chat tools and are used by highly compensated professionals — making enterprise pricing shifts from flat-seat to API-token-based costs economically transformative for both labs. Both companies quietly overhauled enterprise pricing in late 2025/April 2026 to align with API token costs, resulting in dramatic budget overruns at companies like Uber. Willison identifies April 2026 as a new inflection point where AI agent revenue has become material, with IPO filings likely to confirm the scale.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/27/sqlite-agents/#atom-everything">sqlite AGENTS.md</a>
+    <span class="meta">(2026-05-27)</span>
+  </h3>
+  
+  <p>SQLite has added an AGENTS.md file explicitly rejecting agentic code contributions while allowing AI-generated bug reports that include reproducible test cases — and has strengthened that stance by removing the word &#34;currently&#34; from its policy. The project was also forced to create a separate bug forum to handle a flood of AI-generated reports of varying quality. This illustrates a growing trend of open-source projects setting formal policies to manage AI-assisted contributions and the operational strain they can create.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/28/claude-opus-4-8/#atom-everything">Claude Opus 4.8: &#34;a modest but tangible improvement&#34;</a>
+    <span class="meta">(2026-05-28)</span>
+  </h3>
+  
+  <p>Simon Willison reviews Claude Opus 4.8, highlighting Anthropic&#39;s unusually candid framing of it as a &#34;modest but tangible improvement&#34; with a focus on honesty — the model is reportedly four times less likely to let code flaws pass unremarked. He also notes practical engineering-relevant changes: mid-conversation system messages for agentic loops, a lower prompt cache minimum (1,024 tokens), and a reduced &#34;fast mode&#34; pricing tier.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/29/anthropic/#atom-everything">Anthropic&#39;s run-rate revenue hits $47 billion</a>
+    <span class="meta">(2026-05-29)</span>
+  </h3>
+  
+  <p>Simon Willison highlights Anthropic&#39;s explosive revenue growth, with run-rate revenue hitting $47B following a $65B Series H raise — up from $14B in February and $30B in April 2026. He argues the figures are credible because they were disclosed to investors in fundraising announcements, where misrepresentation would constitute securities fraud. The trajectory signals massive enterprise adoption of Claude and points toward an eventual IPO.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/30/daniel-jalkut/#atom-everything">Quoting Daniel Jalkut</a>
+    <span class="meta">(2026-05-30)</span>
+  </h3>
+  
+  <p>Simon Willison quotes Daniel Jalkut&#39;s observation that discourse around AI is marked by excessive polarization — both critics and advocates hold overstated positions. The quote, surfaced via John Gruber, reflects a broader sentiment relevant to software engineers navigating hype and skepticism when evaluating AI tools and their practical value.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/30/retiring-from-tech-to-live-offline/#atom-everything">I Am Retiring from Tech to Live Offline</a>
+    <span class="meta">(2026-05-30)</span>
+  </h3>
+  
+  <p>Simon Willison highlights Chad Whitacre&#39;s decision to leave tech entirely, citing AI as the breaking point after an immersive experience with Claude Code left him feeling alienated from his own inner life. Whitacre&#39;s story illustrates a growing tension some engineers feel between AI-driven productivity and personal autonomy. Willison also notes that AI disruption is compounding the already-difficult open source sustainability problem.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/30/how-we-contain-claude/#atom-everything">How we contain Claude across products</a>
+    <span class="meta">(2026-05-30)</span>
+  </h3>
+  
+  <p>Simon Willison highlights Anthropic&#39;s newly published documentation on how Claude agents are sandboxed across Claude.ai, Claude Code, and Claude Cowork, using techniques like gVisor, Seatbelt, Bubblewrap, and full VMs. The post emphasizes that hard boundaries—such as keeping credentials outside the sandbox—are critical to preventing exfiltration. This matters to engineers deploying AI agents, as it surfaces practical containment patterns and real-world security gaps Anthropic encountered.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/30/pyodide-asgi-browser/#atom-everything">Running Python ASGI apps in the browser via Pyodide + a service worker</a>
+    <span class="meta">(2026-05-30)</span>
+  </h3>
+  
+  <p>Simon Willison used Claude Opus 4.8 via Claude Code to solve a long-standing technical limitation in Datasette Lite — replacing Web Workers with Service Workers to properly execute JavaScript in browser-based Python ASGI apps. The result unlocks full Datasette plugin compatibility in the browser. This is a concrete example of delegating exploratory architectural research to an AI coding agent to produce working, production-relevant outcomes.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/May/31/the-solution-might-be-cancelling-my-ai-subscription/#atom-everything">The solution might be cancelling my AI subscription</a>
+    <span class="meta">(2026-05-31)</span>
+  </h3>
+  
+  <p>Simon Willison reflects on a shared problem with AI coding agents: their ability to rapidly spin up seemingly complete projects fuels compulsive over-creation, leaving developers with more half-maintained codebases than they can sustainably own. The core argument is that low-friction, high-reward AI tooling acts as an &#34;attention amplifier,&#34; and that discipline — not better tooling — is the critical skill engineers need to develop to use these tools responsibly.</p>
+  
+  
+  <h2>Armin Ronacher</h2>
+  
+  <p class="meta">Austrian open-source developer, creator of Flask and Jinja2, and a prolific contributor to the Python and Rust ecosystems with a thoughtful voice on developer tooling.</p>
+  
+  
+  <h3>
+    <a href="https://lucumr.pocoo.org/2026/5/26/clankers/">Clanker: A Word For The Machine</a>
+    <span class="meta">(2026-05-26)</span>
+  </h3>
+  
+  <p>Armin Ronacher argues that the term &#34;agent&#34; dangerously anthropomorphizes LLM-based tool loops, obscuring human accountability when AI systems cause harm. He advocates for deliberately mechanical language — like &#34;clanker&#34; — to reinforce that LLMs are tools, not moral actors, and that responsibility always rests with the humans who deploy them. For software engineers, this framing has practical implications for how teams assign blame, design systems, and resist the creeping normalization of AI as autonomous decision-makers.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/state-of-the-job-market-2026">State of the software engineering job market in 2026</a>
+    <span class="meta">(2026-05-26)</span>
+  </h3>
+  
+  <p>Gergely Orosz&#39;s 2026 job market analysis finds AI engineering demand growing explosively, with many large tech companies posting 50–100% more AI engineering roles year-over-year, while traditional software engineering hiring recovers only modestly. The data raises a pointed question for engineers: whether AI engineering skills are becoming a baseline requirement for all software engineering candidates, signaling a potential structural shift in hiring expectations.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/opencode">Building OpenCode with Dax Raad</a>
+    <span class="meta">(2026-05-27)</span>
+  </h3>
+  
+  <p>Gergely Orosz interviews Dax Raad, co-founder of OpenCode — one of the fastest-growing open-source AI coding tools — who argues that AI makes coding easier but doesn&#39;t eliminate the hard thinking required in software development. Raad warns that AI-generated code risks accumulating hidden tech debt, dilutes quality culture when misused, and that productivity gains are more often pocketed as time savings than increased output. He also contends that &#34;old school&#34; design patterns are gaining renewed relevance as agents effectively become junior engineers requiring strong guardrails.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-a-trend-of-trying-to-cut">The Pulse: a trend of trying to cut back on AI spend within eng departments?</a>
+    <span class="meta">(2026-05-28)</span>
+  </h3>
+  
+  <p>Gergely Orosz reports a emerging trend among engineering leaders at mid-sized and large companies who are pulling back on AI agent spending by imposing per-engineer monthly caps, driven by ROI scrutiny. This matters to software engineers as it signals that unchecked AI tooling budgets are facing organizational pushback, potentially reshaping how AI access is provisioned and justified across eng departments.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/articles/vibesec-reckoning.html">The VibeSec Reckoning</a>
+    <span class="meta">(2026-05-27)</span>
+  </h3>
+  
+  <p>The authors argue that vibe coding accelerates prototyping but introduces security risks because AI agents frequently suggest insecure configurations. Drawing on real experience building Thoughtworks marketing applications, they recommend countermeasures including a security context file to guide the AI, cautious handling of AI permission requests, a daily security intelligence feed, and secure-by-default templates for builders.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/articles/sensors-for-coding-agents.html#TheTestSuiteAsARegressionSensor">The test suite as a regression sensor</a>
+    <span class="meta">(2026-05-27)</span>
+  </h3>
+  
+  <p>Birgitta Böckeler examines how test suites can serve as &#34;regression sensors&#34; for coding agents, with a focus on mutation testing as a mechanism for evaluating test suite quality. The piece is part of a broader exploration of feedback signals that help AI coding agents detect when their changes break existing behaviour — directly relevant to engineers integrating agents into CI/CD and code quality workflows.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/fragments/2026-05-27.html">Fragments: May 27</a>
+    <span class="meta">(2026-05-27)</span>
+  </h3>
+  
+  <p>Fowler curates several AI-in-software-engineering threads: a practitioner&#39;s case study showing how establishing tests and static analysis enabled greater AI agent autonomy (shifting the developer from &#34;writer to curator&#34;); Adam Tornhill&#39;s warning about cognitive endurance costs of agentic coding; and labor-market data showing a 6.6% employment drop for AI-exposed graduates versus 1.5% for unexposed ones. Together these pieces highlight both the emerging workflow patterns and the professional risks shaping the current AI moment for software engineers.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>

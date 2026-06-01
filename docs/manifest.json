@@ -1,5 +1,13 @@
 [
   {
+    "cw": "2026-CW22",
+    "period_start": "2026-05-25",
+    "period_end": "2026-05-31",
+    "articles_count": 23,
+    "summary_short": "This digest period is defined by a maturation of AI's role in software engineering \u2014 moving from experimental curiosity to an operational force with measurable costs, risks, and structural consequence\u2026",
+    "page": "digests/2026-CW22.html"
+  },
+  {
     "cw": "2026-CW21",
     "period_start": "2026-05-18",
     "period_end": "2026-05-24",
