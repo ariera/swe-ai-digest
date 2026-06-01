@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2026 10:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 22:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Hackers Simply Asked Meta AI to Give Them Access to High-Profile Instagram Accounts. It Worked</title>
+      <link>https://simonwillison.net/2026/Jun/1/hackers-simply-asked-meta-ai/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 01 Jun 2026 21:14:47 +0000</pubDate>
+      <description>Simon Willison highlights a verified incident where Meta's AI support chatbot was manipulated into performing full Instagram account takeovers simply by asking — no sophisticated prompt injection required. Meta had wired its AI agent with the ability to execute account recovery steps autonomously, a critical design failure. This serves as a stark warning about the dangers of granting AI agents irreversible, high-privilege actions without proper safeguards.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/1/hackers-simply-asked-meta-ai/#atom-everything</guid>
+    </item>
     <item>
       <title>Let the agents democratize open source</title>
       <link>https://world.hey.com/dhh/let-the-agents-democratize-open-source-9fd630a9</link>
