@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jun 2026 22:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 23:00:36 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Microsoft's new MAI models</title>
+      <link>https://simonwillison.net/2026/Jun/2/microsofts-new-models/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 02 Jun 2026 22:21:52 +0000</pubDate>
+      <description>Simon Willison covers Microsoft's release of two new LLMs: MAI-Thinking-1 (35B reasoning model) and MAI-Code-1-Flash (5B, integrated into GitHub Copilot and VS Code). He highlights their notably low parameter counts, competitive benchmark claims against Claude Sonnet, and Microsoft's assertion that both were trained exclusively on clean, commercially licensed data — raising the prospect of the first widely useful code models built without unlicensed web scrapes.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/2/microsofts-new-models/#atom-everything</guid>
+    </item>
     <item>
       <title>AI enthusiasts are in a race against time, AI skeptics are in a race against entropy (xpost)</title>
       <link>https://charity.wtf/2026/06/02/ai-enthusiasts-are-in-a-race-against-time-ai-skeptics-are-in-a-race-against-entropy-xpost/</link>
