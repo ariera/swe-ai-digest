@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jun 2026 10:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 17:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Ideas: slow down to speed up when working with AI agents</title>
+      <link>https://newsletter.pragmaticengineer.com/p/ideas-slow-down-to-speed-up-when</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 02 Jun 2026 16:42:23 +0000</pubDate>
+      <description>Gergely Orosz explores the idea of "slowing down to speed up" in the context of AI agents and coding tools, arguing that deliberate pacing may be key to effective AI-assisted development. The piece notes that AI coding tools are now near-universally adopted among software engineers, signaling a major professional shift. This framing is relevant to engineers thinking critically about how to integrate AI agents into their workflows without sacrificing quality or judgment.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/ideas-slow-down-to-speed-up-when</guid>
+    </item>
     <item>
       <title>Fragments: June  2</title>
       <link>https://martinfowler.com/fragments/2026-06-02.html</link>
