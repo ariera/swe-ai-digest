@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2026 22:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 05:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Pasted File Editor</title>
+      <link>https://simonwillison.net/2026/Jun/2/pasted-file-editor/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 02 Jun 2026 04:13:36 +0000</pubDate>
+      <description>Simon Willison describes using OpenAI's Codex desktop to build a prototype tool that replicates Claude's behavior of converting large text pastes into file attachments. The post is a concrete example of AI-assisted programming—using one AI tool to recreate a UX feature from another—illustrating how practitioners are increasingly leveraging AI agents to rapidly prototype workflow utilities.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/2/pasted-file-editor/#atom-everything</guid>
+    </item>
     <item>
       <title>Hackers Simply Asked Meta AI to Give Them Access to High-Profile Instagram Accounts. It Worked</title>
       <link>https://simonwillison.net/2026/Jun/1/hackers-simply-asked-meta-ai/#atom-everything</link>
