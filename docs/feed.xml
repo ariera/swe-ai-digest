@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jun 2026 05:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 10:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Fragments: June  2</title>
+      <link>https://martinfowler.com/fragments/2026-06-02.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 02 Jun 2026 09:21:00 +0000</pubDate>
+      <description>Fowler curates eight AI-focused observations covering: the unreliability of AI productivity metrics, the near-impossibility of forecasting AI's labor market impact, the narrowing capability gap between open and closed models, hallucinated citations in corporate AI reports, Mozilla's dramatic AI-assisted security bug discovery (423 fixes in April 2026 vs. 17–31/month prior), how LLMs amplify both good and bad code patterns ("generative debt"), AI slop degrading internet trust, and the "human-as-GIL" bottleneck when orchestrating multiple agents. A Principal Engineer at Booking.com adds that AI has shifted organizational bottlenecks from engineering to coordination, eroding time for mentorship and strategic thinking.</description>
+      <guid isPermaLink="true">https://martinfowler.com/fragments/2026-06-02.html</guid>
+    </item>
     <item>
       <title>Pasted File Editor</title>
       <link>https://simonwillison.net/2026/Jun/2/pasted-file-editor/#atom-everything</link>
