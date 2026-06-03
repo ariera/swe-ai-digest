@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2026 13:00:27 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 19:00:26 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Kubernetes and retiring at the top with Kelsey Hightower</title>
+      <link>https://newsletter.pragmaticengineer.com/p/kubernetes-and-retiring-at-the-top</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 03 Jun 2026 17:59:17 +0000</pubDate>
+      <description>In this podcast episode, Kelsey Hightower shares his perspective on AI's impact on the software engineering profession, arguing that engineers complaining about AI displacement should reflect on how tech has historically disrupted other industries. He also cautions against giving AI agents unconstrained infrastructure access and advocates for guardrails, while challenging founders to articulate their startup's value without invoking "AI" — often revealing simpler, cheaper alternatives exist.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/kubernetes-and-retiring-at-the-top</guid>
+    </item>
     <item>
       <title>Uber Caps Usage of AI Tools Like Claude Code to Manage Costs</title>
       <link>https://simonwillison.net/2026/Jun/3/uber-caps-usage/#atom-everything</link>
