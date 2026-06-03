@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2026 01:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 13:00:27 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Uber Caps Usage of AI Tools Like Claude Code to Manage Costs</title>
+      <link>https://simonwillison.net/2026/Jun/3/uber-caps-usage/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 03 Jun 2026 12:01:27 +0000</pubDate>
+      <description>Simon Willison analyzes Uber's decision to cap employee AI coding tool spending at $1,500/month per tool, framing it as a rational response to agentic tools like Cursor and Claude Code burning through budgets faster than anticipated. He estimates the cap at ~11% of median engineer compensation, and notes that individual subscribers still benefit from subsidized pricing unavailable to enterprises — a meaningful structural cost gap for organizations scaling AI tooling.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/3/uber-caps-usage/#atom-everything</guid>
+    </item>
     <item>
       <title>Microsoft's new MAI models</title>
       <link>https://simonwillison.net/2026/Jun/2/microsofts-new-models/#atom-everything</link>
