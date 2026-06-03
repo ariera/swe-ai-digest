@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jun 2026 23:00:36 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 01:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -24,6 +24,14 @@
       <pubDate>Tue, 02 Jun 2026 21:33:32 +0000</pubDate>
       <description>Charity Majors argues that AI enthusiasts and skeptics on engineering teams each face legitimate but asymmetric threats — missed competitive windows vs. accruing technical debt and system incoherence — and that a structural feedback gap prevents them from reconciling their experiences. She calls for teams to tell the whole story of AI wins alongside their downstream costs, and to treat AI adoption as an engineering problem (better evals, tests, observability) rather than a rhetorical one. The Intercom/Fin case study — 3x output in 9 months with measurable quality improvements — is cited as evidence that disciplined teams can achieve real, non-hype gains.</description>
       <guid isPermaLink="true">https://charity.wtf/2026/06/02/ai-enthusiasts-are-in-a-race-against-time-ai-skeptics-are-in-a-race-against-entropy-xpost/</guid>
+    </item>
+    <item>
+      <title>datasette-agent-micropython 0.1a0</title>
+      <link>https://simonwillison.net/2026/Jun/2/datasette-agent-micropython/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 02 Jun 2026 19:28:36 +0000</pubDate>
+      <description>Simon Willison releases an alpha plugin enabling Datasette Agent to safely generate and execute Python code using a MicroPython/WebAssembly sandbox. Early testing shows GPT-5.5 has been unable to escape the sandbox, marking a promising step toward secure AI-driven code execution in data tooling.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/2/datasette-agent-micropython/#atom-everything</guid>
     </item>
     <item>
       <title>Ideas: slow down to speed up when working with AI agents</title>
