@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2026 19:00:26 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 17:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Emanuel Maiberg, 404 Media</title>
+      <link>https://simonwillison.net/2026/Jun/4/a-slightly-different-version/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 04 Jun 2026 16:38:29 +0000</pubDate>
+      <description>Simon Willison highlights a 404 Media report revealing that Google pressured the outlet to remove a statement about keeping "humans in the loop" from its AI coverage after publication. The incident raises questions about Google's internal stance on AI safety and oversight, and its willingness to quietly walk back public commitments to human control of AI systems.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/4/a-slightly-different-version/#atom-everything</guid>
+    </item>
     <item>
       <title>Kubernetes and retiring at the top with Kelsey Hightower</title>
       <link>https://newsletter.pragmaticengineer.com/p/kubernetes-and-retiring-at-the-top</link>
