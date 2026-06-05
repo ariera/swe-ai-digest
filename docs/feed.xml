@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2026 01:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 12:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Andreas Kling</title>
+      <link>https://simonwillison.net/2026/Jun/5/andreas-kling/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 05 Jun 2026 11:10:05 +0000</pubDate>
+      <description>Andreas Kling announces that the Ladybird browser project will no longer accept public pull requests, citing how AI-generated code has broken the traditional assumption that a substantial patch signals good-faith effort. The policy shift reframes the core issue: what matters is not how code was written, but who takes responsibility for it. This signals a broader reckoning for open-source maintainers navigating AI-assisted contributions.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/5/andreas-kling/#atom-everything</guid>
+    </item>
     <item>
       <title>AI enthusiasts are in a race against time, AI skeptics are in a race against entropy</title>
       <link>https://simonwillison.net/2026/Jun/4/ai-enthusiasts-ai-skeptics/#atom-everything</link>
