@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jun 2026 01:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 04:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Running Python code in a sandbox with MicroPython and WASM</title>
+      <link>https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 06 Jun 2026 03:53:34 +0000</pubDate>
+      <description>Simon Willison describes building a Python sandboxing library (micropython-wasm) using MicroPython compiled to WebAssembly, with AI coding agents (GPT-5.5 and Codex Desktop) doing much of the implementation work from a research document. The project is directly motivated by his Datasette Agent — an AI agent that needs a safe environment to execute LLM-generated code. The piece illustrates a concrete agentic workflow where AI tools rapidly prototyped a non-trivial systems solution, including custom C code, from a high-level prompt.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-everything</guid>
+    </item>
     <item>
       <title>OpenAI Help: Lockdown Mode</title>
       <link>https://simonwillison.net/2026/Jun/5/openai-help-lockdown-mode/#atom-everything</link>
