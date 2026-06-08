@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jun 2026 10:00:28 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 01:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette-agent-edit 0.1a0</title>
+      <link>https://simonwillison.net/2026/Jun/7/datasette-agent-edit/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 07 Jun 2026 23:56:38 +0000</pubDate>
+      <description>Simon Willison releases datasette-agent-edit, a base plugin that implements agentic text-editing tools (view, str_replace, insert) modeled on Claude's text editor design, enabling reusable LLM-driven editing across Datasette plugins. The release highlights practical patterns for agentic tool use — particularly how to structure precise, reliable text manipulation tools for LLM agents.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/7/datasette-agent-edit/#atom-everything</guid>
+    </item>
     <item>
       <title>A new era for software testing</title>
       <link>http://antirez.com/news/168</link>
