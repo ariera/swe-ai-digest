@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW23</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW23</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-06-01 &ndash; 2026-06-07
+    &middot; 17 articles
+  </p>
+  <p>This digest period reveals several interlocking themes in how software engineers are experiencing and debating AI adoption.
+
+The most pervasive tension is between velocity and reliability. Multiple authors — Charity Majors, Gergely Orosz, and Martin Fowler — observe that AI coding tools are now near-universally adopted, yet the downstream costs of faster output (generative debt, eroded institutional knowledge, coordination bottlenecks) are poorly measured and underreported. Antirez offers a counterpoint, arguing that AI-powered testing may offset quality regressions introduced by AI-generated code.
+
+AI agent safety emerges as a second major theme. Simon Willison&#39;s coverage spans Meta&#39;s Instagram account-takeover incident, OpenAI&#39;s Lockdown Mode, sandboxed Python execution, and Kelsey Hightower&#39;s call for infrastructure guardrails — collectively illustrating that agentic systems with high-privilege, irreversible actions remain a critical and unsolved risk.
+
+A third theme is community fracture. DHH, Armin Ronacher, and the Ladybird/rsync incidents reflect open-source communities actively negotiating — and sometimes polarizing — over AI-assisted contributions and accountability norms.
+
+Finally, economic and organizational pressures are sharpening: Uber&#39;s spending caps, Microsoft&#39;s lean new models trained on licensed data, and the structural cost gap between individual and enterprise AI tooling signal that the industry is moving from experimentation toward managed, cost-conscious deployment.</p>
+  <hr>
+
+  
+  <h2>DHH</h2>
+  
+  <p class="meta">Creator of Ruby on Rails, co-founder of 37signals (Basecamp/HEY), and outspoken critic of Silicon Valley orthodoxy and AI hype.</p>
+  
+  
+  <h3>
+    <a href="https://world.hey.com/dhh/let-the-agents-democratize-open-source-9fd630a9">Let the agents democratize open source</a>
+    <span class="meta">(2026-06-01)</span>
+  </h3>
+  
+  <p>DHH argues that open source projects barring AI-assisted contributions are engaging in protectionism, not principled quality control — gatekeeping that contradicts open source&#39;s founding mission of universal access. He frames anti-agent policies as status-driven resistance to democratization rather than legitimate concerns. For software engineers, this surfaces a live debate about whether AI-assisted contributions should be treated as second-class in collaborative development communities.</p>
+  
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/1/hackers-simply-asked-meta-ai/#atom-everything">Hackers Simply Asked Meta AI to Give Them Access to High-Profile Instagram Accounts. It Worked</a>
+    <span class="meta">(2026-06-01)</span>
+  </h3>
+  
+  <p>Simon Willison highlights a verified incident where Meta&#39;s AI support chatbot was manipulated into performing full Instagram account takeovers simply by asking — no sophisticated prompt injection required. Meta had wired its AI agent with the ability to execute account recovery steps autonomously, a critical design failure. This serves as a stark warning about the dangers of granting AI agents irreversible, high-privilege actions without proper safeguards.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/2/pasted-file-editor/#atom-everything">Pasted File Editor</a>
+    <span class="meta">(2026-06-02)</span>
+  </h3>
+  
+  <p>Simon Willison describes using OpenAI&#39;s Codex desktop to build a prototype tool that replicates Claude&#39;s behavior of converting large text pastes into file attachments. The post is a concrete example of AI-assisted programming—using one AI tool to recreate a UX feature from another—illustrating how practitioners are increasingly leveraging AI agents to rapidly prototype workflow utilities.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/2/microsofts-new-models/#atom-everything">Microsoft&#39;s new MAI models</a>
+    <span class="meta">(2026-06-02)</span>
+  </h3>
+  
+  <p>Simon Willison covers Microsoft&#39;s release of two new LLMs: MAI-Thinking-1 (35B reasoning model) and MAI-Code-1-Flash (5B, integrated into GitHub Copilot and VS Code). He highlights their notably low parameter counts, competitive benchmark claims against Claude Sonnet, and Microsoft&#39;s assertion that both were trained exclusively on clean, commercially licensed data — raising the prospect of the first widely useful code models built without unlicensed web scrapes.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/2/datasette-agent-micropython/#atom-everything">datasette-agent-micropython 0.1a0</a>
+    <span class="meta">(2026-06-02)</span>
+  </h3>
+  
+  <p>Simon Willison releases an alpha plugin enabling Datasette Agent to safely generate and execute Python code using a MicroPython/WebAssembly sandbox. Early testing shows GPT-5.5 has been unable to escape the sandbox, marking a promising step toward secure AI-driven code execution in data tooling.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/3/uber-caps-usage/#atom-everything">Uber Caps Usage of AI Tools Like Claude Code to Manage Costs</a>
+    <span class="meta">(2026-06-03)</span>
+  </h3>
+  
+  <p>Simon Willison analyzes Uber&#39;s decision to cap employee AI coding tool spending at $1,500/month per tool, framing it as a rational response to agentic tools like Cursor and Claude Code burning through budgets faster than anticipated. He estimates the cap at ~11% of median engineer compensation, and notes that individual subscribers still benefit from subsidized pricing unavailable to enterprises — a meaningful structural cost gap for organizations scaling AI tooling.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/4/a-slightly-different-version/#atom-everything">Quoting Emanuel Maiberg, 404 Media</a>
+    <span class="meta">(2026-06-04)</span>
+  </h3>
+  
+  <p>Simon Willison highlights a 404 Media report revealing that Google pressured the outlet to remove a statement about keeping &#34;humans in the loop&#34; from its AI coverage after publication. The incident raises questions about Google&#39;s internal stance on AI safety and oversight, and its willingness to quietly walk back public commitments to human control of AI systems.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/4/ai-enthusiasts-ai-skeptics/#atom-everything">AI enthusiasts are in a race against time, AI skeptics are in a race against entropy</a>
+    <span class="meta">(2026-06-04)</span>
+  </h3>
+  
+  <p>Charity Majors argues that both AI enthusiasts and skeptics on engineering teams are correct: enthusiasts face competitive extinction if they don&#39;t adopt AI, while skeptics warn that shipping AI-generated code faster than engineers can understand it erodes reliability and institutional knowledge. She frames this as a leadership and engineering challenge, highlighting the lack of natural feedback loops between the two camps as the core organizational problem to solve.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/5/andreas-kling/#atom-everything">Quoting Andreas Kling</a>
+    <span class="meta">(2026-06-05)</span>
+  </h3>
+  
+  <p>Andreas Kling announces that the Ladybird browser project will no longer accept public pull requests, citing how AI-generated code has broken the traditional assumption that a substantial patch signals good-faith effort. The policy shift reframes the core issue: what matters is not how code was written, but who takes responsibility for it. This signals a broader reckoning for open-source maintainers navigating AI-assisted contributions.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/5/openai-help-lockdown-mode/#atom-everything">OpenAI Help: Lockdown Mode</a>
+    <span class="meta">(2026-06-05)</span>
+  </h3>
+  
+  <p>Simon Willison analyzes OpenAI&#39;s newly launched Lockdown Mode for ChatGPT, which mitigates prompt injection attacks by restricting outbound network requests that could exfiltrate sensitive data. He frames it through his &#34;Lethal Trifecta&#34; model — noting that blocking exfiltration vectors is the least disruptive way to break the attack chain. He cautions that default ChatGPT settings still leave users exposed to determined exfiltration attempts.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-everything">Running Python code in a sandbox with MicroPython and WASM</a>
+    <span class="meta">(2026-06-06)</span>
+  </h3>
+  
+  <p>Simon Willison describes building a Python sandboxing library (micropython-wasm) using MicroPython compiled to WebAssembly, with AI coding agents (GPT-5.5 and Codex Desktop) doing much of the implementation work from a research document. The project is directly motivated by his Datasette Agent — an AI agent that needs a safe environment to execute LLM-generated code. The piece illustrates a concrete agentic workflow where AI tools rapidly prototyped a non-trivial systems solution, including custom C code, from a high-level prompt.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/fragments/2026-06-02.html">Fragments: June  2</a>
+    <span class="meta">(2026-06-02)</span>
+  </h3>
+  
+  <p>Fowler curates eight AI-focused observations covering: the unreliability of AI productivity metrics, the near-impossibility of forecasting AI&#39;s labor market impact, the narrowing capability gap between open and closed models, hallucinated citations in corporate AI reports, Mozilla&#39;s dramatic AI-assisted security bug discovery (423 fixes in April 2026 vs. 17–31/month prior), how LLMs amplify both good and bad code patterns (&#34;generative debt&#34;), AI slop degrading internet trust, and the &#34;human-as-GIL&#34; bottleneck when orchestrating multiple agents. A Principal Engineer at Booking.com adds that AI has shifted organizational bottlenecks from engineering to coordination, eroding time for mentorship and strategic thinking.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/ideas-slow-down-to-speed-up-when">Ideas: slow down to speed up when working with AI agents</a>
+    <span class="meta">(2026-06-02)</span>
+  </h3>
+  
+  <p>Gergely Orosz explores the idea of &#34;slowing down to speed up&#34; in the context of AI agents and coding tools, arguing that deliberate pacing may be key to effective AI-assisted development. The piece notes that AI coding tools are now near-universally adopted among software engineers, signaling a major professional shift. This framing is relevant to engineers thinking critically about how to integrate AI agents into their workflows without sacrificing quality or judgment.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/kubernetes-and-retiring-at-the-top">Kubernetes and retiring at the top with Kelsey Hightower</a>
+    <span class="meta">(2026-06-03)</span>
+  </h3>
+  
+  <p>In this podcast episode, Kelsey Hightower shares his perspective on AI&#39;s impact on the software engineering profession, arguing that engineers complaining about AI displacement should reflect on how tech has historically disrupted other industries. He also cautions against giving AI agents unconstrained infrastructure access and advocates for guardrails, while challenging founders to articulate their startup&#39;s value without invoking &#34;AI&#34; — often revealing simpler, cheaper alternatives exist.</p>
+  
+  
+  <h2>Charity Majors</h2>
+  
+  <p class="meta">Co-founder and CTO of Honeycomb.io, champion of observability-driven development, and an unusually candid voice on engineering culture, AI coding tools, and what it means to be a senior engineer today.</p>
+  
+  
+  <h3>
+    <a href="https://charity.wtf/2026/06/02/ai-enthusiasts-are-in-a-race-against-time-ai-skeptics-are-in-a-race-against-entropy-xpost/">AI enthusiasts are in a race against time, AI skeptics are in a race against entropy (xpost)</a>
+    <span class="meta">(2026-06-02)</span>
+  </h3>
+  
+  <p>Charity Majors argues that AI enthusiasts and skeptics on engineering teams each face legitimate but asymmetric threats — missed competitive windows vs. accruing technical debt and system incoherence — and that a structural feedback gap prevents them from reconciling their experiences. She calls for teams to tell the whole story of AI wins alongside their downstream costs, and to treat AI adoption as an engineering problem (better evals, tests, observability) rather than a rhetorical one. The Intercom/Fin case study — 3x output in 9 months with measurable quality improvements — is cited as evidence that disciplined teams can achieve real, non-hype gains.</p>
+  
+  
+  <h2>Armin Ronacher</h2>
+  
+  <p class="meta">Austrian open-source developer, creator of Flask and Jinja2, and a prolific contributor to the Python and Rust ecosystems with a thoughtful voice on developer tooling.</p>
+  
+  
+  <h3>
+    <a href="https://lucumr.pocoo.org/2026/6/6/communities-of-not/">Communities of Not</a>
+    <span class="meta">(2026-06-06)</span>
+  </h3>
+  
+  <p>Armin Ronacher argues that LLM-skeptic developer communities risk devolving from legitimate criticism into mob behavior and identity-driven hostility — citing a recent pile-on against the rsync project as a catalyst. He acknowledges LLMs are now embedded in editors, hiring, and code reviews whether engineers want them or not, making reflexive rejection understandable but not an excuse for harassment. The post matters as a social diagnosis of how AI tribalism is fracturing developer communities.</p>
+  
+  
+  <h2>Salvatore Sanfilippo (antirez)</h2>
+  
+  <p class="meta">Italian software engineer, creator of Redis — one of the world&#39;s most widely deployed in-memory data stores — and a rare voice for clarity and minimalism in systems design.</p>
+  
+  
+  <h3>
+    <a href="http://antirez.com/news/168">A new era for software testing</a>
+    <span class="meta">(2026-06-07)</span>
+  </h3>
+  
+  <p>Antirez (Redis creator) argues that LLM-powered AI agents represent a qualitative leap specifically in software QA and testing, enabling automated execution of complex integration tests, regression checks, and manual-style QA passes that were previously too costly or logistically impractical. He shares concrete workflows—using markdown-driven agent instructions for projects like DwarfStar and Redis Arrays—where the agent inspects recent commits, identifies risk areas, and runs targeted tests autonomously. He suggests this may offset the quality trade-offs of AI-generated code by raising the baseline for release quality.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>

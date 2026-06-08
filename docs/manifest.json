@@ -1,5 +1,13 @@
 [
   {
+    "cw": "2026-CW23",
+    "period_start": "2026-06-01",
+    "period_end": "2026-06-07",
+    "articles_count": 17,
+    "summary_short": "This digest period reveals several interlocking themes in how software engineers are experiencing and debating AI adoption.\n\nThe most pervasive tension is between velocity and reliability. Multiple au\u2026",
+    "page": "digests/2026-CW23.html"
+  },
+  {
     "cw": "2026-CW22",
     "period_start": "2026-05-25",
     "period_end": "2026-05-31",
