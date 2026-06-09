@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jun 2026 00:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 17:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>State of the software engineering job market in 2026, part 2</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-job-market-in-2026-part-2</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 09 Jun 2026 16:35:53 +0000</pubDate>
+      <description>Orosz presents data-driven findings on how AI is reshaping the software engineering job market: AI engineering roles have grown 60% year-over-year, command higher compensation than traditional SWE roles, and Anthropic and OpenAI now dominate interview-prep demand. Meanwhile, frontend and mobile engineering titles are declining fastest, intern and new-grad hiring has collapsed at large tech firms, and engineering management layers continue to thin — trends the author attributes in part to AI's expanding role in software work.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-job-market-in-2026-part-2</guid>
+    </item>
     <item>
       <title>Siri AI at WWDC 2026</title>
       <link>https://simonwillison.net/2026/Jun/8/wwdc/#atom-everything</link>
