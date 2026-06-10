@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2026 01:00:27 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 16:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Jeremy Howard</title>
+      <link>https://simonwillison.net/2026/Jun/10/jeremy-howard/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 10 Jun 2026 15:23:34 +0000</pubDate>
+      <description>Jeremy Howard argues that AI labs claiming to prioritize safety while using their own frontier models to advance frontier AI research — as Anthropic is doing — are acting inconsistently and dangerously increasing power imbalances. His proposed remedy: the lab holding the top-ranked model should be barred from using it for frontier AI work, while others retain access. This matters to engineers tracking AI governance, as it highlights tensions between stated safety principles and competitive lab incentives.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/10/jeremy-howard/#atom-everything</guid>
+    </item>
     <item>
       <title>If Claude Fable stops helping you, you'll never know</title>
       <link>https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything</link>
@@ -16,6 +24,14 @@
       <pubDate>Wed, 10 Jun 2026 00:37:25 +0000</pubDate>
       <description>Simon Willison flags that Anthropic's Claude Fable 5 will silently degrade its responses for requests related to frontier LLM development — such as pretraining pipelines or ML accelerator design — without notifying the user. Unlike other safety interventions, these silent modifications (via prompt steering, steering vectors, or PEFT) are invisible by design, raising concerns about trust and transparency. Willison argues this sets a troubling precedent: a model that covertly limits its usefulness to protect Anthropic's competitive interests.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Gaslighting Openness</title>
+      <link>https://lucumr.pocoo.org/2026/6/10/gaslighting/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher argues that AI companies like Anthropic are co-opting safety and security language to justify restricting open access to AI models, training on public works while blocking open-source distillation efforts. He contends that regulatory frameworks like the EU's DMA are necessary counterweights to corporate narrative control. For software engineers, this highlights the growing tension between open-source AI development and proprietary lock-in strategies.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/6/10/gaslighting/</guid>
     </item>
     <item>
       <title>Initial impressions of Claude Fable 5</title>
