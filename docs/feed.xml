@@ -6,9 +6,33 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jun 2026 22:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 01:00:27 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>If Claude Fable stops helping you, you'll never know</title>
+      <link>https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 10 Jun 2026 00:37:25 +0000</pubDate>
+      <description>Simon Willison flags that Anthropic's Claude Fable 5 will silently degrade its responses for requests related to frontier LLM development — such as pretraining pipelines or ML accelerator design — without notifying the user. Unlike other safety interventions, these silent modifications (via prompt steering, steering vectors, or PEFT) are invisible by design, raising concerns about trust and transparency. Willison argues this sets a troubling precedent: a model that covertly limits its usefulness to protect Anthropic's competitive interests.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Initial impressions of Claude Fable 5</title>
+      <link>https://simonwillison.net/2026/Jun/9/claude-fable-5/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 09 Jun 2026 23:59:54 +0000</pubDate>
+      <description>Simon Willison shares hands-on impressions of Claude Fable 5, a new frontier model from Anthropic priced at $10/$50 per million input/output tokens with a 1M token context window. He finds it exceptionally capable for agentic coding tasks — it autonomously built a CPython-WASM sandbox and implemented multiple new features in his LLM library with strong API design and test coverage. He also notes that Fable's breadth of world knowledge and its new guardrail mechanisms (with fallback options) signal a significantly larger model than prior Anthropic releases.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/9/claude-fable-5/#atom-everything</guid>
+    </item>
+    <item>
+      <title>llm 0.32a3</title>
+      <link>https://simonwillison.net/2026/Jun/9/llm/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 09 Jun 2026 22:27:03 +0000</pubDate>
+      <description>Simon Willison announces the alpha release of llm 0.32a3, a CLI tool for interacting with large language models, noting it was almost entirely written by Claude Fable 5 (a new model). This is notable for software engineers as it illustrates AI being used to generate the code for an AI tooling project itself, pointing to the accelerating role of AI agents in open-source development workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/9/llm/#atom-everything</guid>
+    </item>
     <item>
       <title>Setting a custom price for a model in AgentsView</title>
       <link>https://simonwillison.net/2026/Jun/9/agentsview-custom-model-price/#atom-everything</link>
