@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2026 16:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 21:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>DiffusionGemma</title>
+      <link>https://simonwillison.net/2026/Jun/10/diffusiongemma/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 10 Jun 2026 20:00:54 +0000</pubDate>
+      <description>Simon Willison covers the release of DiffusionGemma, Google's open-weight (Apache 2) 26B diffusion language model, a follow-up to last year's experimental Gemini Diffusion preview. The model achieves exceptional inference speeds—Willison recorded over 500 tokens/second via NVIDIA's free NIM cloud API. This release matters to engineers as it brings high-speed diffusion-based LLM inference to an openly licensed, accessible model.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/10/diffusiongemma/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Jeremy Howard</title>
       <link>https://simonwillison.net/2026/Jun/10/jeremy-howard/#atom-everything</link>
