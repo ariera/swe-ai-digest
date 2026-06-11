@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jun 2026 17:00:26 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 19:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -32,6 +32,14 @@
       <pubDate>Thu, 11 Jun 2026 16:22:16 +0000</pubDate>
       <description>Gergely Orosz critically reviews Google's Antigravity 2.0, a flagship AI IDE relaunch, arguing it is a rushed, buggy product that strips IDE functionality in favor of a confusing agent-based interface modeled after Codex. He highlights poor UX, lack of model support, broken CLI migration, and rapid token quota consumption as evidence that Google cannot be taken seriously as an AI dev tools player. The piece warns developers who adopted Antigravity that Google's pattern of deprecating tools makes vendor loyalty costly.</description>
       <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-antigravity-2-0-takes-ide-out-of-its-new-ide/</guid>
+    </item>
+    <item>
+      <title>datasette 1.0a33</title>
+      <link>https://simonwillison.net/2026/Jun/11/datasette/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 11 Jun 2026 15:26:49 +0000</pubDate>
+      <description>Simon Willison describes using Claude Sonnet in Claude Code for planning and GPT-4.5 in Codex Desktop for implementation to build a custom API explorer tool for Datasette 1.0a33. He notes that such tools are "almost free to build now" with AI assistance, illustrating a concrete split-role workflow where different AI models handle distinct phases of development.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/11/datasette/#atom-everything</guid>
     </item>
     <item>
       <title>Anthropic Walks Back Policy That Could Have ‘Sabotaged’ AI Researchers Using Claude</title>
