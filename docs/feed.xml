@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2026 21:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 01:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette-agent 0.2a0</title>
+      <link>https://simonwillison.net/2026/Jun/10/datasette-agent/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 10 Jun 2026 23:57:27 +0000</pubDate>
+      <description>Simon Willison releases datasette-agent 0.2a0, introducing mid-execution human-in-the-loop interactions where AI tools can pause to ask users yes/no, multiple-choice, or free-text questions before proceeding. A new `save_query` tool lets the agent propose SQL for storage, requiring explicit human approval before any side effects occur. This demonstrates a practical pattern for building agentic workflows with controlled, interruptible execution and human oversight.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/10/datasette-agent/#atom-everything</guid>
+    </item>
     <item>
       <title>DiffusionGemma</title>
       <link>https://simonwillison.net/2026/Jun/10/diffusiongemma/#atom-everything</link>
