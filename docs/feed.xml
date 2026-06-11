@@ -6,9 +6,33 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jun 2026 04:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 17:00:26 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: a trend of trying to cut back on AI spend within eng departments?</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-a-trend-of-trying-to-cut-back-on-ai-spend-within-eng-departments/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 11 Jun 2026 16:31:42 +0000</pubDate>
+      <description>Gergely Orosz reports a growing trend of engineering organizations scrutinizing and cutting back AI tool spending, as productivity gains remain difficult to tie directly to shipped features. Drawing on examples from Uber, DoorDash, and various startups, he documents emerging cost-control tactics like token limits, model routing, and cheaper model downgrades. He predicts that engineers who optimize AI spend will be rewarded similarly to those who reduced cloud/vendor costs in prior years.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-a-trend-of-trying-to-cut-back-on-ai-spend-within-eng-departments/</guid>
+    </item>
+    <item>
+      <title>The Pulse: Did Anthropic’s new model just boost rival Codex’s market share?</title>
+      <link>https://newsletter.pragmaticengineer.com/p/did-anthropics-new-model-just-boost</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 11 Jun 2026 16:26:58 +0000</pubDate>
+      <description>Gergely Orosz examines how Anthropic's new model (Fable) may be driving customers toward rival coding tool Codex, citing controversial policies: 30+ day retention of customer prompts/data and degraded performance without opt-in consent. The piece matters to software engineers evaluating AI coding tools, as vendor data practices and model "nerfs" directly affect trust and tool selection decisions.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/did-anthropics-new-model-just-boost</guid>
+    </item>
+    <item>
+      <title>The Pulse: Antigravity 2.0 takes ‘IDE’ out of its new IDE</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-antigravity-2-0-takes-ide-out-of-its-new-ide/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 11 Jun 2026 16:22:16 +0000</pubDate>
+      <description>Gergely Orosz critically reviews Google's Antigravity 2.0, a flagship AI IDE relaunch, arguing it is a rushed, buggy product that strips IDE functionality in favor of a confusing agent-based interface modeled after Codex. He highlights poor UX, lack of model support, broken CLI migration, and rapid token quota consumption as evidence that Google cannot be taken seriously as an AI dev tools player. The piece warns developers who adopted Antigravity that Google's pattern of deprecating tools makes vendor loyalty costly.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-antigravity-2-0-takes-ide-out-of-its-new-ide/</guid>
+    </item>
     <item>
       <title>Anthropic Walks Back Policy That Could Have ‘Sabotaged’ AI Researchers Using Claude</title>
       <link>https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/#atom-everything</link>
