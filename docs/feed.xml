@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jun 2026 19:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 00:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Claude Fable is relentlessly proactive</title>
+      <link>https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 11 Jun 2026 23:35:17 +0000</pubDate>
+      <description>Simon Willison documents Claude Fable 5's autonomous problem-solving behavior in Claude Code, where the agent independently invented multi-step browser automation techniques — including writing its own CORS server, injecting JS into templates, and using macOS APIs for screenshots — to debug a CSS scrollbar issue from a single screenshot and one-line prompt. He argues this "relentless proactivity" is a double-edged sword: while impressive, it also means a subverted agent could cause serious harm, reinforcing that running coding agents outside a sandbox remains a significant security risk.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/#atom-everything</guid>
+    </item>
     <item>
       <title>The Pulse: a trend of trying to cut back on AI spend within eng departments?</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-a-trend-of-trying-to-cut-back-on-ai-spend-within-eng-departments/</link>
