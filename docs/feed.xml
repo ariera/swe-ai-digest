@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jun 2026 01:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 01:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Why AI hasn’t replaced software engineers, and won’t</title>
+      <link>https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 14 Jun 2026 23:54:11 +0000</pubDate>
+      <description>Narayanan and Kappor argue that AI has not caused mass software engineering layoffs because coding is not the real bottleneck — the hard parts are deciding what to build, verifying outcomes, and applying deep contextual understanding of codebases and business domains. Early WARN Act data supports this: no U.S. employer cited AI as a layoff cause in the first year of tracking. Willison adds that while AI aids his deciding and verifying steps, irreplaceable human understanding remains the core of engineering value.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/#atom-everything</guid>
+    </item>
     <item>
       <title>Mapping SQLite result columns back to their source `table.column`</title>
       <link>https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/#atom-everything</link>
