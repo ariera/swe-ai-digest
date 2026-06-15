@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jun 2026 01:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 06:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>AI demands more engineering discipline. Not less (xpost)</title>
+      <link>https://charity.wtf/2026/06/15/ai-demands-more-engineering-discipline-not-less-xpost/</link>
+      <author>Charity Majors</author>
+      <pubDate>Mon, 15 Jun 2026 05:38:29 +0000</pubDate>
+      <description>Charity Majors argues that AI's ability to generate code cheaply and instantly doesn't reduce the need for engineering rigor — it shifts where that rigor must live. Drawing on Chad Fowler's "Phoenix Architectures," she contends that code is now a disposable cache of understanding, and the real discipline must move into evaluation, observability, and explicit behavioral contracts. This reframes AI adoption not as cutting corners, but as demanding stronger systems thinking from engineers.</description>
+      <guid isPermaLink="true">https://charity.wtf/2026/06/15/ai-demands-more-engineering-discipline-not-less-xpost/</guid>
+    </item>
     <item>
       <title>Why AI hasn’t replaced software engineers, and won’t</title>
       <link>https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/#atom-everything</link>
