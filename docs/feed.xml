@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jun 2026 16:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 00:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette-agent 0.3a0</title>
+      <link>https://simonwillison.net/2026/Jun/15/datasette-agent/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 15 Jun 2026 17:19:27 +0000</pubDate>
+      <description>Simon Willison releases datasette-agent 0.3a0, adding an `execute_write_sql` tool that lets an LLM agent modify databases after requesting user approval. The release also introduces `--unsafe` and `--yes` flags for auto-approving operations, enabling natural-language database manipulation (e.g., "create a notes table") via chat. This illustrates evolving patterns for human-in-the-loop control in AI agents with real-world side effects.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/15/datasette-agent/#atom-everything</guid>
+    </item>
     <item>
       <title>"They screwed us": Personality clashes sent Anthropic's models offline</title>
       <link>https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/#atom-everything</link>
