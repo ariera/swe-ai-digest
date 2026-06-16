@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jun 2026 13:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 17:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Why is Meta destroying its engineering organization?</title>
+      <link>https://newsletter.pragmaticengineer.com/p/why-is-meta-destroying-its-engineering</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 16 Jun 2026 16:27:43 +0000</pubDate>
+      <description>Gergely Orosz details how Meta is forcibly reassigning 30–50% of core engineers to AI data labeling and RLHF work, tracking employee keystrokes for AI training data, and broadly subordinating its engineering culture to its LLM ambitions. The article argues this shift is rapidly transforming software engineers from a valued profit center into a cost center and human-data-labeling resource. It serves as a concrete case study of how AI platform competition can radically restructure engineering organizations at scale.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/why-is-meta-destroying-its-engineering</guid>
+    </item>
+    <item>
+      <title>Quoting Georgi Gerganov</title>
+      <link>https://simonwillison.net/2026/Jun/16/georgi-gerganov/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 16 Jun 2026 16:04:59 +0000</pubDate>
+      <description>Georgi Gerganov, creator of llama.cpp, shares his firsthand experience using Qwen3-27B as a local coding assistant for daily maintenance tasks at ggml-org, running on M2 Ultra and RTX 5090 hardware. He describes a minimal agent setup using the `pi` tool in offline mode with a lightweight system prompt. This is a practical signal that local LLMs are now viable for real developer workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/16/georgi-gerganov/#atom-everything</guid>
+    </item>
     <item>
       <title>Building Reliable Agentic AI Systems</title>
       <link>https://martinfowler.com/articles/reliable-llm-bayer.html</link>
