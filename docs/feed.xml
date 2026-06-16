@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jun 2026 04:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 06:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Fable 5 Export Controls Harm US Cyber Defense</title>
+      <link>https://simonwillison.net/2026/Jun/16/fable-5-export-controls/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 16 Jun 2026 05:20:29 +0000</pubDate>
+      <description>Simon Willison argues that export controls banning Claude Fable 5 over a supposed "jailbreak" are misguided, because the triggering prompt — "fix this code" — is core defensive security functionality, not an attack vector. He warns that non-technical policymakers are conflating offensive and defensive AI capabilities, risking regulations that would make AI models less useful for the bug-finding and patch-verification workflows defenders rely on daily.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/16/fable-5-export-controls/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Matteo Wong, The Atlantic</title>
       <link>https://simonwillison.net/2026/Jun/16/matteo-wong-the-atlantic/#atom-everything</link>
