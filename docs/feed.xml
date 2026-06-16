@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jun 2026 07:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 13:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Building Reliable Agentic AI Systems</title>
+      <link>https://martinfowler.com/articles/reliable-llm-bayer.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 16 Jun 2026 12:11:00 +0000</pubDate>
+      <description>Martin Fowler's colleague Sarang Sanjay Kulkarni details the evolution of an LLM-based agentic system built with Bayer, enabling pharmaceutical researchers to query decades of PDF-embedded study data. The system progressed from keyword search to an intelligent assistant capable of complex Q&amp;A and regulatory document drafting. It offers practical insight into building reliable, production-grade agentic AI architectures.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/reliable-llm-bayer.html</guid>
+    </item>
     <item>
       <title>Fragments: June 16</title>
       <link>https://martinfowler.com/fragments/2026-06-16.html</link>
