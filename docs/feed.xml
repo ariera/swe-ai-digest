@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jun 2026 17:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 17:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>CI/CD with Robert Erez</title>
+      <link>https://newsletter.pragmaticengineer.com/p/cicd-with-robert-erez</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 17 Jun 2026 16:41:01 +0000</pubDate>
+      <description>In this podcast episode, principal engineer Robert Erez argues that AI is fundamentally shifting CI/CD priorities from build speed to risk management: as AI agents write and monitor code, the emphasis will move toward running more thorough (even slower) tests to prevent bugs reaching production. This has direct implications for how engineering teams should design their deployment pipelines in an agent-driven development world.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/cicd-with-robert-erez</guid>
+    </item>
+    <item>
+      <title />
+      <link>https://avdi.codes/154098-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=154098-2</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Wed, 17 Jun 2026 16:13:19 +0000</pubDate>
+      <description>Avdi Grimm argues that AI-driven code regeneration changes the fundamental nature of software stewardship: when code can be regenerated faster than it can be understood, preserving specific implementations becomes obsolete. What matters instead is maintaining a system's behavior, boundaries, and intent over time. This reframes the software engineer's role from code custodian to steward of system intent.</description>
+      <guid isPermaLink="true">https://avdi.codes/154098-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=154098-2</guid>
+    </item>
     <item>
       <title>Why is Meta destroying its engineering organization?</title>
       <link>https://newsletter.pragmaticengineer.com/p/why-is-meta-destroying-its-engineering</link>
