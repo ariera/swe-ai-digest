@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jun 2026 18:00:23 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2026 19:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title />
+      <link>https://avdi.codes/154684-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=154684-2</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Thu, 18 Jun 2026 18:41:58 +0000</pubDate>
+      <description>Avdi Grimm argues that generative AI's ability to dramatically lower the cost of modification creates a dangerous illusion that everything in a system should change rapidly just because it can. Drawing on the concept of pace layers, the piece warns software engineers against conflating technical feasibility with architectural wisdom when integrating AI into their workflows.</description>
+      <guid isPermaLink="true">https://avdi.codes/154684-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=154684-2</guid>
+    </item>
     <item>
       <title>The Pulse: Big implications of US banning Anthropic’s new model, Fable</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-pulse-big-implications-of-us</link>
