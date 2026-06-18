@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Jun 2026 17:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2026 10:00:27 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>GLM-5.2 is probably the most powerful text-only open weights LLM</title>
+      <link>https://simonwillison.net/2026/Jun/17/glm-52/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 17 Jun 2026 23:58:39 +0000</pubDate>
+      <description>Simon Willison evaluates Z.ai's newly open-sourced GLM-5.2, a 753B-parameter MoE model that tops the Artificial Analysis Intelligence Index among open-weights LLMs and ranks 2nd on the Code Arena WebDev leaderboard despite lacking vision input. He notes it is significantly more token-hungry than peers and tests its SVG generation capability, finding strong performance on some prompts but regression from GLM-5.1 on others. At ~$1.40/$4.40 per million tokens via OpenRouter, it offers a compelling cost-to-capability ratio versus proprietary alternatives like GPT-5.5 and Claude Opus 4.5.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/17/glm-52/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Quoting Charity Majors</title>
+      <link>https://simonwillison.net/2026/Jun/17/charity-majors/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 17 Jun 2026 17:12:41 +0000</pubDate>
+      <description>Simon Willison quotes Charity Majors' observation that 2025 fundamentally inverted the economics of code production — shifting code from a scarce, carefully curated asset to something effectively free and disposable. Majors argues this demands greater, not lesser, engineering discipline. This reframing is significant for software engineers reconsidering how to value, maintain, and govern AI-generated code.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/17/charity-majors/#atom-everything</guid>
+    </item>
     <item>
       <title>CI/CD with Robert Erez</title>
       <link>https://newsletter.pragmaticengineer.com/p/cicd-with-robert-erez</link>
