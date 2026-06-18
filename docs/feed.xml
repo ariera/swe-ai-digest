@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jun 2026 10:00:27 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2026 18:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: Big implications of US banning Anthropic’s new model, Fable</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-big-implications-of-us</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 18 Jun 2026 17:11:03 +0000</pubDate>
+      <description>Orosz covers several AI industry developments: the US government restricting Anthropic's new model Fable to US citizens, potentially boosting Chinese open models globally; SpaceX's acquisition of Cursor (and Cursor's acquisition of Continue), signaling a direct challenge to Anthropic and OpenAI in AI tooling; and research confirming LLMs amplify existing expertise. These shifts have significant implications for AI tool ecosystems and the competitive landscape facing software engineers.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-big-implications-of-us</guid>
+    </item>
+    <item>
+      <title />
+      <link>https://avdi.codes/154635-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=154635-2</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Thu, 18 Jun 2026 17:01:56 +0000</pubDate>
+      <description>Avdi Grimm argues that the real threat from AI is not science-fiction scenarios like Skynet or misaligned superintelligence, but the near-term socioeconomic dangers: monopolistic power consolidation, rent-seeking, and entrenched defaults reminiscent of the robber baron era. He links to Philipp Markolin's piece on AI potentially rebooting feudalism, framing AI's trajectory as a political-economic concern for the next two decades rather than a purely technical one.</description>
+      <guid isPermaLink="true">https://avdi.codes/154635-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=154635-2</guid>
+    </item>
     <item>
       <title>GLM-5.2 is probably the most powerful text-only open weights LLM</title>
       <link>https://simonwillison.net/2026/Jun/17/glm-52/#atom-everything</link>
