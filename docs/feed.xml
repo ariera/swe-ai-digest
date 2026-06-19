@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jun 2026 01:00:24 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 23:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Sean Lynch</title>
+      <link>https://simonwillison.net/2026/Jun/19/sean-lynch/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 19 Jun 2026 22:45:49 +0000</pubDate>
+      <description>Simon Willison quotes Sean Lynch's insight that MCP's core value proposition is isolating authentication flows outside an agent's context window, rather than its broader protocol features. Lynch suggests MCP's ideal form may simply be an auth gateway for APIs. This reframes how engineers should think about MCP's role in agentic architectures.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/19/sean-lynch/#atom-everything</guid>
+    </item>
     <item>
       <title>Datasette Apps: Host custom HTML applications inside Datasette</title>
       <link>https://simonwillison.net/2026/Jun/18/datasette-apps/#atom-everything</link>
