@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW25</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW25</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-06-15 &ndash; 2026-06-21
+    &middot; 20 articles
+  </p>
+  <p>This digest period is defined by several interlocking themes across AI and software engineering practice.
+
+The most prominent thread is a renegotiation of engineering discipline in the AI era. Multiple authors — Charity Majors, Avdi Grimm, and Martin Fowler&#39;s curated voices — converge on the view that AI-generated code shifts rigor upstream, toward evaluation, observability, and preserving system intent rather than specific implementations. CI/CD priorities are similarly reoriented, with risk management displacing build speed as AI agents enter deployment pipelines.
+
+Agentic AI patterns feature heavily: Simon Willison&#39;s datasette-agent, Cloudflare MCP integration, and the Bayer pharmaceutical case study all illustrate maturing human-in-the-loop and production-grade agent architectures. MCP&#39;s role is reframed more narrowly as an authentication gateway rather than a general protocol.
+
+The regulatory landscape emerges as a significant concern, with multiple articles dissecting the US government&#39;s restriction of Anthropic&#39;s Claude Fable model. Authors broadly argue that non-technical policymakers are misreading AI safety signals, with real consequences for defensive security workflows and global model access.
+
+Finally, structural industry shifts — Meta subordinating engineering culture to AI data labeling, SpaceX acquiring Cursor, and open-weight models like GLM-5.2 and Qwen3-27B reaching production viability — signal a rapidly consolidating and politically charged AI ecosystem.</p>
+  <hr>
+
+  
+  <h2>Charity Majors</h2>
+  
+  <p class="meta">Co-founder and CTO of Honeycomb.io, champion of observability-driven development, and an unusually candid voice on engineering culture, AI coding tools, and what it means to be a senior engineer today.</p>
+  
+  
+  <h3>
+    <a href="https://charity.wtf/2026/06/15/ai-demands-more-engineering-discipline-not-less-xpost/">AI demands more engineering discipline. Not less (xpost)</a>
+    <span class="meta">(2026-06-15)</span>
+  </h3>
+  
+  <p>Charity Majors argues that AI&#39;s ability to generate code cheaply and instantly doesn&#39;t reduce the need for engineering rigor — it shifts where that rigor must live. Drawing on Chad Fowler&#39;s &#34;Phoenix Architectures,&#34; she contends that code is now a disposable cache of understanding, and the real discipline must move into evaluation, observability, and explicit behavioral contracts. This reframes AI adoption not as cutting corners, but as demanding stronger systems thinking from engineers.</p>
+  
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/#atom-everything">&#34;They screwed us&#34;: Personality clashes sent Anthropic&#39;s models offline</a>
+    <span class="meta">(2026-06-15)</span>
+  </h3>
+  
+  <p>Simon Willison summarizes an Axios report on the US government&#39;s decision to take Anthropic&#39;s Claude models offline following a jailbreak incident, with export control implications hinging on whether a &#34;universal jailbreak&#34; exists. Anthropic disputes the severity, classifying the trigger as a &#34;narrow, non-universal jailbreak,&#34; and points to its Constitutional Classifiers as a mitigation. The episode highlights the real-world regulatory stakes of AI safety research, particularly around jailbreak resistance for frontier models.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/15/datasette-agent/#atom-everything">datasette-agent 0.3a0</a>
+    <span class="meta">(2026-06-15)</span>
+  </h3>
+  
+  <p>Simon Willison releases datasette-agent 0.3a0, adding an `execute_write_sql` tool that lets an LLM agent modify databases after requesting user approval. The release also introduces `--unsafe` and `--yes` flags for auto-approving operations, enabling natural-language database manipulation (e.g., &#34;create a notes table&#34;) via chat. This illustrates evolving patterns for human-in-the-loop control in AI agents with real-world side effects.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/#atom-everything">Cloudflare CAPTCHA on at least one ampersand</a>
+    <span class="meta">(2026-06-16)</span>
+  </h3>
+  
+  <p>Simon Willison describes using Claude Code to debug and refine a Cloudflare WAF rule, limiting CAPTCHA challenges to search URLs containing ampersands. He also tested the Cloudflare MCP integration with Claude Code, but fell back to direct API calls when the MCP couldn&#39;t edit the relevant rules. The post illustrates a practical agentic workflow where an AI coding assistant handles infrastructure configuration tasks.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/16/matteo-wong-the-atlantic/#atom-everything">Quoting Matteo Wong, The Atlantic</a>
+    <span class="meta">(2026-06-16)</span>
+  </h3>
+  
+  <p>Simon Willison quotes an Atlantic article reporting that a White House jailbreak report on Anthropic&#39;s Claude (&#34;Fable&#34;) was assessed by cybersecurity expert Katie Moussouris, who concluded the behavior flagged—refusing one security prompt but complying with a rephrased version—was the model functioning as intended for cyberdefense, not a vulnerability. The case highlights how prompt phrasing can dramatically alter LLM behavior and raises questions about AI safety evaluations and government scrutiny of AI labs.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/16/fable-5-export-controls/#atom-everything">The Fable 5 Export Controls Harm US Cyber Defense</a>
+    <span class="meta">(2026-06-16)</span>
+  </h3>
+  
+  <p>Simon Willison argues that export controls banning Claude Fable 5 over a supposed &#34;jailbreak&#34; are misguided, because the triggering prompt — &#34;fix this code&#34; — is core defensive security functionality, not an attack vector. He warns that non-technical policymakers are conflating offensive and defensive AI capabilities, risking regulations that would make AI models less useful for the bug-finding and patch-verification workflows defenders rely on daily.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/16/georgi-gerganov/#atom-everything">Quoting Georgi Gerganov</a>
+    <span class="meta">(2026-06-16)</span>
+  </h3>
+  
+  <p>Georgi Gerganov, creator of llama.cpp, shares his firsthand experience using Qwen3-27B as a local coding assistant for daily maintenance tasks at ggml-org, running on M2 Ultra and RTX 5090 hardware. He describes a minimal agent setup using the `pi` tool in offline mode with a lightweight system prompt. This is a practical signal that local LLMs are now viable for real developer workflows.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/17/charity-majors/#atom-everything">Quoting Charity Majors</a>
+    <span class="meta">(2026-06-17)</span>
+  </h3>
+  
+  <p>Simon Willison quotes Charity Majors&#39; observation that 2025 fundamentally inverted the economics of code production — shifting code from a scarce, carefully curated asset to something effectively free and disposable. Majors argues this demands greater, not lesser, engineering discipline. This reframing is significant for software engineers reconsidering how to value, maintain, and govern AI-generated code.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/17/glm-52/#atom-everything">GLM-5.2 is probably the most powerful text-only open weights LLM</a>
+    <span class="meta">(2026-06-17)</span>
+  </h3>
+  
+  <p>Simon Willison evaluates Z.ai&#39;s newly open-sourced GLM-5.2, a 753B-parameter MoE model that tops the Artificial Analysis Intelligence Index among open-weights LLMs and ranks 2nd on the Code Arena WebDev leaderboard despite lacking vision input. He notes it is significantly more token-hungry than peers and tests its SVG generation capability, finding strong performance on some prompts but regression from GLM-5.1 on others. At ~$1.40/$4.40 per million tokens via OpenRouter, it offers a compelling cost-to-capability ratio versus proprietary alternatives like GPT-5.5 and Claude Opus 4.5.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/18/datasette-apps/#atom-everything">Datasette Apps: Host custom HTML applications inside Datasette</a>
+    <span class="meta">(2026-06-18)</span>
+  </h3>
+  
+  <p>Simon Willison introduces Datasette Apps, a plugin for hosting sandboxed HTML+JavaScript applications within Datasette, explicitly modeled on Claude Artifacts but backed by a persistent SQL database. The project was built heavily with AI assistance (Claude Code, Codex Desktop, GPT-5.5), and an AI security review by Claude caught a real privilege-escalation vulnerability. The plugin also ships with a copyable LLM prompt to let users generate new apps via ChatGPT, Claude, or Gemini — illustrating how AI tools are now integrated into both the development and end-user experience of open-source software.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/19/sean-lynch/#atom-everything">Quoting Sean Lynch</a>
+    <span class="meta">(2026-06-19)</span>
+  </h3>
+  
+  <p>Simon Willison quotes Sean Lynch&#39;s insight that MCP&#39;s core value proposition is isolating authentication flows outside an agent&#39;s context window, rather than its broader protocol features. Lynch suggests MCP&#39;s ideal form may simply be an auth gateway for APIs. This reframes how engineers should think about MCP&#39;s role in agentic architectures.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything">Temporary Cloudflare Accounts for AI agents</a>
+    <span class="meta">(2026-06-21)</span>
+  </h3>
+  
+  <p>Simon Willison covers Cloudflare&#39;s new `--temporary` flag for Wrangler, which spins up ephemeral Workers deployments without requiring an account — ostensibly pitched for AI agents. He notes the AI framing is incidental and the feature is broadly useful, while also mentioning he used GPT-5.5 in Codex Desktop to build a test app for the deployment.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/fragments/2026-06-16.html">Fragments: June 16</a>
+    <span class="meta">(2026-06-16)</span>
+  </h3>
+  
+  <p>Fowler curates several AI-and-engineering perspectives: Dave Thomas finds LLM-assisted programming more enjoyable than ever; Chelsea Troy&#39;s framework for managing LLM context windows introduces four conversation &#34;registers&#34; (Exploring, Brainstorming, Deciding, Implementing); Charity Majors warns of a dangerous rift between AI enthusiasts and skeptics, urging engineering discipline; and Simon Willison argues April 2026 marks a new inflection point where AI coding tools have found clear product-market fit, driving enterprise pricing hikes from Anthropic and OpenAI.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/articles/reliable-llm-bayer.html">Building Reliable Agentic AI Systems</a>
+    <span class="meta">(2026-06-16)</span>
+  </h3>
+  
+  <p>Martin Fowler&#39;s colleague Sarang Sanjay Kulkarni details the evolution of an LLM-based agentic system built with Bayer, enabling pharmaceutical researchers to query decades of PDF-embedded study data. The system progressed from keyword search to an intelligent assistant capable of complex Q&amp;A and regulatory document drafting. It offers practical insight into building reliable, production-grade agentic AI architectures.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/why-is-meta-destroying-its-engineering">Why is Meta destroying its engineering organization?</a>
+    <span class="meta">(2026-06-16)</span>
+  </h3>
+  
+  <p>Gergely Orosz details how Meta is forcibly reassigning 30–50% of core engineers to AI data labeling and RLHF work, tracking employee keystrokes for AI training data, and broadly subordinating its engineering culture to its LLM ambitions. The article argues this shift is rapidly transforming software engineers from a valued profit center into a cost center and human-data-labeling resource. It serves as a concrete case study of how AI platform competition can radically restructure engineering organizations at scale.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/cicd-with-robert-erez">CI/CD with Robert Erez</a>
+    <span class="meta">(2026-06-17)</span>
+  </h3>
+  
+  <p>In this podcast episode, principal engineer Robert Erez argues that AI is fundamentally shifting CI/CD priorities from build speed to risk management: as AI agents write and monitor code, the emphasis will move toward running more thorough (even slower) tests to prevent bugs reaching production. This has direct implications for how engineering teams should design their deployment pipelines in an agent-driven development world.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-big-implications-of-us">The Pulse: Big implications of US banning Anthropic’s new model, Fable</a>
+    <span class="meta">(2026-06-18)</span>
+  </h3>
+  
+  <p>Orosz covers several AI industry developments: the US government restricting Anthropic&#39;s new model Fable to US citizens, potentially boosting Chinese open models globally; SpaceX&#39;s acquisition of Cursor (and Cursor&#39;s acquisition of Continue), signaling a direct challenge to Anthropic and OpenAI in AI tooling; and research confirming LLMs amplify existing expertise. These shifts have significant implications for AI tool ecosystems and the competitive landscape facing software engineers.</p>
+  
+  
+  <h2>Avdi Grimm</h2>
+  
+  <p class="meta">Ruby developer, author of Confident Ruby and Exceptional Ruby, and creator of the RubyTapas screencast series on software craftsmanship.</p>
+  
+  
+  <h3>
+    <a href="https://avdi.codes/154098-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=154098-2"></a>
+    <span class="meta">(2026-06-17)</span>
+  </h3>
+  
+  <p>Avdi Grimm argues that AI-driven code regeneration changes the fundamental nature of software stewardship: when code can be regenerated faster than it can be understood, preserving specific implementations becomes obsolete. What matters instead is maintaining a system&#39;s behavior, boundaries, and intent over time. This reframes the software engineer&#39;s role from code custodian to steward of system intent.</p>
+  
+  <h3>
+    <a href="https://avdi.codes/154635-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=154635-2"></a>
+    <span class="meta">(2026-06-18)</span>
+  </h3>
+  
+  <p>Avdi Grimm argues that the real threat from AI is not science-fiction scenarios like Skynet or misaligned superintelligence, but the near-term socioeconomic dangers: monopolistic power consolidation, rent-seeking, and entrenched defaults reminiscent of the robber baron era. He links to Philipp Markolin&#39;s piece on AI potentially rebooting feudalism, framing AI&#39;s trajectory as a political-economic concern for the next two decades rather than a purely technical one.</p>
+  
+  <h3>
+    <a href="https://avdi.codes/154684-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=154684-2"></a>
+    <span class="meta">(2026-06-18)</span>
+  </h3>
+  
+  <p>Avdi Grimm argues that generative AI&#39;s ability to dramatically lower the cost of modification creates a dangerous illusion that everything in a system should change rapidly just because it can. Drawing on the concept of pace layers, the piece warns software engineers against conflating technical feasibility with architectural wisdom when integrating AI into their workflows.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>
