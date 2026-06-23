@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jun 2026 11:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 16:00:40 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Is Successful Agentic Coding a Delusion?</title>
+      <link>https://avdi.codes/is-successful-agentic-coding-a-delusion/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=is-successful-agentic-coding-a-delusion</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Tue, 23 Jun 2026 15:55:07 +0000</pubDate>
+      <description>Avdi Grimm argues that dismissing agentic coding as universally ineffective is a flawed premise, drawing a parallel to early skepticism around XP practices like TDD. From personal experience, he contends that disciplined, close-collaboration use of coding agents — not "vibe coding" — has delivered more high-quality, well-tested code than he could have otherwise. He distinguishes legitimate criticisms (environmental impact, org-level failure to adopt) from the blanket claim that the tools simply don't work.</description>
+      <guid isPermaLink="true">https://avdi.codes/is-successful-agentic-coding-a-delusion/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=is-successful-agentic-coding-a-delusion</guid>
+    </item>
+    <item>
+      <title>Slow down to speed up: so much has changed in 6 months’ time</title>
+      <link>https://newsletter.pragmaticengineer.com/p/slow-down-to-speed-up</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 23 Jun 2026 15:30:26 +0000</pubDate>
+      <description>Gergely Orosz argues that the rapid adoption of AI agents since late 2025 is fundamentally reshaping software engineering—driving 5x more PRs, larger diffs, and drastically reduced human code review—while creating serious quality and security risks, as illustrated by Meta's catastrophic outage caused by AI-generated, AI-reviewed code. He surveys how leading companies (Anthropic, OpenAI, Uber, Google) are restructuring developer workflows around agents, and warns that over-indexing on AI at the expense of security, integrity, and testing teams is a dangerous organizational pattern. The piece offers career advice for engineers navigating this transition.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/slow-down-to-speed-up</guid>
+    </item>
     <item>
       <title>The Coming Loop</title>
       <link>https://lucumr.pocoo.org/2026/6/23/the-coming-loop/</link>
