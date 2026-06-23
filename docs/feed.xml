@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Jun 2026 23:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 00:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code</title>
+      <link>https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 22 Jun 2026 23:43:51 +0000</pubDate>
+      <description>Simon Willison documents a "vibe coding" session in which he used Claude Code as an autonomous agent to port a PyTorch image-inpainting model (Moebius 0.2B) to run entirely in the browser via ONNX and WebGPU — without writing a single line of code himself. He details his prompting workflow, including parallel agent use, maintaining notes/plan files, and delegating subagent tasks, ultimately producing a deployed demo. The piece illustrates both the current capability ceiling of coding agents and the practice of delegating full end-to-end technical tasks to AI.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-everything</guid>
+    </item>
     <item>
       <title>Temporary Cloudflare Accounts for AI agents</title>
       <link>https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything</link>
