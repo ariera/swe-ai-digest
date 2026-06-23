@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jun 2026 00:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 01:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Prompt Injection as Role Confusion</title>
+      <link>https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 22 Jun 2026 23:59:53 +0000</pubDate>
+      <description>Research by Ye, Cui, and Hadfield-Menell shows that LLMs distinguish privileged system prompts from untrusted user input based on text *style* rather than actual role tags, enabling prompt injection attacks that exploit this "role confusion." A technique called "destyling" — subtly rewriting injected text to not resemble internal model formatting — drops attack success rates from 61% to 10%. The authors argue that without genuine role perception, prompt injection defenses will remain a perpetual whack-a-mole problem, with serious implications for any software engineer building LLM-powered applications.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/#atom-everything</guid>
+    </item>
     <item>
       <title>Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code</title>
       <link>https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-everything</link>
