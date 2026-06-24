@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jun 2026 18:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 19:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Tom MacWright</title>
+      <link>https://simonwillison.net/2026/Jun/24/tom-macwright/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 24 Jun 2026 18:13:51 +0000</pubDate>
+      <description>Tom MacWright observes that job applicants are increasingly submitting fully LLM-generated application materials — resumes, portfolio sites, GitHub projects, and commit messages — which paradoxically renders candidates anonymous and indistinguishable. He argues this over-reliance on AI strips away individuality and signals nothing meaningful about the person behind the application. This is a cautionary note for engineers on how AI tool use can undermine professional credibility.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/24/tom-macwright/#atom-everything</guid>
+    </item>
     <item>
       <title>Tech interviews with NeetCode</title>
       <link>https://newsletter.pragmaticengineer.com/p/tech-interviews-with-neetcode</link>
