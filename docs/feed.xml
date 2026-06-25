@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jun 2026 01:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 05:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title />
+      <link>https://avdi.codes/157853-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=157853-2</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Thu, 25 Jun 2026 04:18:03 +0000</pubDate>
+      <description>Avdi Grimm argues that ideological opposition to AI tools can become more harmful than the technology itself, warning against purity-driven tribalism that excludes pragmatic users. He links to a piece about a developer who used AI, found it effective, but disliked the experience — framing the broader debate as a cautionary tale about dogmatism overriding nuanced judgment.</description>
+      <guid isPermaLink="true">https://avdi.codes/157853-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=157853-2</guid>
+    </item>
     <item>
       <title>simonw/browser-compat-db</title>
       <link>https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything</link>
