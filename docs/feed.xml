@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jun 2026 20:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 01:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>simonw/browser-compat-db</title>
+      <link>https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 24 Jun 2026 23:59:03 +0000</pubDate>
+      <description>Simon Willison describes building a SQLite database of MDN browser compatibility data using two AI tools: Claude Code (Opus 4.8) to generate the conversion script and Codex Desktop (GPT-5.5) to build the GitHub Actions deployment workflow. The project illustrates a practical AI-assisted workflow where different models handle distinct subtasks, and highlights the emerging Model Context Protocol (MCP) ecosystem as a catalyst for new tooling.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything</guid>
+    </item>
     <item>
       <title>Make AI Boring Again (xpost)</title>
       <link>https://charity.wtf/2026/06/24/make-ai-boring-again-xpost/</link>
