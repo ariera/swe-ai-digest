@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jun 2026 05:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 23:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>AI and Liability</title>
+      <link>https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 25 Jun 2026 22:28:46 +0000</pubDate>
+      <description>Simon Willison highlights Bruce Schneier's commentary on a German ruling holding Google liable for errors in AI-generated summaries, arguing that AI outputs should carry the same legal accountability as human-produced work. Schneier warns that exempting companies from liability for AI mistakes creates perverse incentives to replace human professionals with cheaper AI systems. For software engineers, this signals a shifting legal landscape that may redefine how AI-powered products are designed and deployed.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything</guid>
+    </item>
     <item>
       <title />
       <link>https://avdi.codes/157853-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=157853-2</link>
