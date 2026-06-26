@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Jun 2026 19:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 22:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Timothy B. Lee</title>
+      <link>https://simonwillison.net/2026/Jun/26/timothy-b-lee/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 26 Jun 2026 21:15:09 +0000</pubDate>
+      <description>Simon Willison quotes Timothy B. Lee pushing back on the notion that LLMs require no skill or learning curve, comparing effective LLM use to the nuanced skill of management. The analogy argues that directing AI models well is non-trivial, which matters to engineers evaluating how much expertise is actually required to get value from AI tools.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/26/timothy-b-lee/#atom-everything</guid>
+    </item>
     <item>
       <title>What happened after 2,000 people tried to hack my AI assistant</title>
       <link>https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything</link>
