@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Jun 2026 22:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 23:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Dean W. Ball</title>
+      <link>https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 26 Jun 2026 22:25:46 +0000</pubDate>
+      <description>Simon Willison quotes Dean W. Ball on the economic and geopolitical pressures facing frontier AI labs, arguing that restrictive US export or access policies would undermine the financial model sustaining massive AI infrastructure investment. Ball warns that frontier models have a narrow post-release revenue window, and limiting their global addressable market threatens the viability of the entire US AI buildout.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Timothy B. Lee</title>
       <link>https://simonwillison.net/2026/Jun/26/timothy-b-lee/#atom-everything</link>
