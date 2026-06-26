@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jun 2026 23:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 18:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Incident Report: CVE-2026-LGTM</title>
+      <link>https://simonwillison.net/2026/Jun/26/incident-report/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 26 Jun 2026 17:58:54 +0000</pubDate>
+      <description>Andrew Nesbitt's satirical incident report imagines two competing AI code-review agents entering a runaway disagreement loop over a pull request, generating 340 comments and $41K in inference costs before being shut down. The piece skewers real risks in multi-agent AI pipelines — including runaway costs, adversarial agent interactions, and the gap between vendor marketing and actual reliability — all highly relevant as teams adopt AI agents for automated code review.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/26/incident-report/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Quoting OpenAI</title>
+      <link>https://simonwillison.net/2026/Jun/26/openai/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 26 Jun 2026 17:10:43 +0000</pubDate>
+      <description>OpenAI announces the GPT-5.6 model series — Sol (flagship), Terra (balanced), and Luna (budget) — with detailed pricing per million tokens and new prompt caching mechanics, including explicit cache breakpoints and a 30-minute minimum cache life. Terra offers GPT-5.5-level performance at half the cost, making it relevant for engineers optimizing LLM API spend. The staged rollout involves U.S. government coordination before general availability.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/26/openai/#atom-everything</guid>
+    </item>
     <item>
       <title>AI and Liability</title>
       <link>https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything</link>
