@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Jun 2026 18:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 19:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>What happened after 2,000 people tried to hack my AI assistant</title>
+      <link>https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 26 Jun 2026 18:33:14 +0000</pubDate>
+      <description>A public challenge saw 2,000 participants make 6,000 attempts to extract secrets from an AI assistant via prompt injection, and all failed — suggesting frontier models like Opus 4.6 are increasingly resistant to injection attacks. Simon Willison notes this aligns with his own observations about lab-level training improvements, while cautioning that zero successful attacks does not guarantee safety in production systems where irreversible damage is possible.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything</guid>
+    </item>
     <item>
       <title>Incident Report: CVE-2026-LGTM</title>
       <link>https://simonwillison.net/2026/Jun/26/incident-report/#atom-everything</link>
