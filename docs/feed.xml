@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Jun 2026 23:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 23:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Jon Udell</title>
+      <link>https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 28 Jun 2026 21:57:41 +0000</pubDate>
+      <description>Jon Udell argues that the framing of "human in the loop" wrongly positions machines as the default authority, and proposes instead that engineers retain ownership of their workflow and deliberately invite AI agents in as collaborators. He advocates for agentic software development that remains transparent and reviewable, explicitly rejecting black-box pipelines that produce unreviewable PRs. This reframe has direct implications for how teams should structure human oversight in AI-assisted coding workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Dean W. Ball</title>
       <link>https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything</link>
