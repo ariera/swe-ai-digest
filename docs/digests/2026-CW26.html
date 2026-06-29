@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW26</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW26</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-06-22 &ndash; 2026-06-28
+    &middot; 18 articles
+  </p>
+  <p>This digest period is dominated by two interlocking themes: the rapid maturation of AI coding agents and the governance challenges their adoption creates.
+
+On the capability side, multiple authors document hands-on use of coding agents — Claude Code, Codex Desktop — for end-to-end tasks including model porting, browser tooling, and deployment pipelines, often with minimal human code authorship. Willison and Grimm both highlight that effective agentic use demands disciplined prompting and close collaboration, pushing back on the idea that the tools simply don&#39;t work.
+
+Yet capability gains are shadowed by serious risks. Ronacher and Orosz warn that agent-driven development at scale degrades code quality, reduces human review, and can produce catastrophic outages. Prompt injection remains a structurally unsolved security problem, with research showing LLMs distinguish roles by style rather than semantics. A satirical piece underscores the real risks of runaway multi-agent pipelines.
+
+Broader systemic questions also emerge: shifting legal liability for AI-generated outputs, the erosion of individual professional identity through over-reliance on AI, and the ethical tension between abstention from and engagement with AI development. Authors broadly converge on the view that human judgment, oversight, and deliberate workflow design remain indispensable.</p>
+  <hr>
+
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-everything">Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code</a>
+    <span class="meta">(2026-06-22)</span>
+  </h3>
+  
+  <p>Simon Willison documents a &#34;vibe coding&#34; session in which he used Claude Code as an autonomous agent to port a PyTorch image-inpainting model (Moebius 0.2B) to run entirely in the browser via ONNX and WebGPU — without writing a single line of code himself. He details his prompting workflow, including parallel agent use, maintaining notes/plan files, and delegating subagent tasks, ultimately producing a deployed demo. The piece illustrates both the current capability ceiling of coding agents and the practice of delegating full end-to-end technical tasks to AI.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/#atom-everything">Prompt Injection as Role Confusion</a>
+    <span class="meta">(2026-06-22)</span>
+  </h3>
+  
+  <p>Research by Ye, Cui, and Hadfield-Menell shows that LLMs distinguish privileged system prompts from untrusted user input based on text *style* rather than actual role tags, enabling prompt injection attacks that exploit this &#34;role confusion.&#34; A technique called &#34;destyling&#34; — subtly rewriting injected text to not resemble internal model formatting — drops attack success rates from 61% to 10%. The authors argue that without genuine role perception, prompt injection defenses will remain a perpetual whack-a-mole problem, with serious implications for any software engineer building LLM-powered applications.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/23/opfs-pyodide/#atom-everything">OPFS + Pyodide test harness</a>
+    <span class="meta">(2026-06-23)</span>
+  </h3>
+  
+  <p>Simon Willison used Claude Code to build a browser-based test harness for exploring OPFS (Origin Private File System) integration with Pyodide, as part of investigating persistent SQLite file editing in Datasette Lite. This is a brief but concrete example of an engineer delegating exploratory tooling and UI prototyping to an AI coding agent to accelerate browser compatibility research.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/24/tom-macwright/#atom-everything">Quoting Tom MacWright</a>
+    <span class="meta">(2026-06-24)</span>
+  </h3>
+  
+  <p>Tom MacWright observes that job applicants are increasingly submitting fully LLM-generated application materials — resumes, portfolio sites, GitHub projects, and commit messages — which paradoxically renders candidates anonymous and indistinguishable. He argues this over-reliance on AI strips away individuality and signals nothing meaningful about the person behind the application. This is a cautionary note for engineers on how AI tool use can undermine professional credibility.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything">simonw/browser-compat-db</a>
+    <span class="meta">(2026-06-24)</span>
+  </h3>
+  
+  <p>Simon Willison describes building a SQLite database of MDN browser compatibility data using two AI tools: Claude Code (Opus 4.8) to generate the conversion script and Codex Desktop (GPT-5.5) to build the GitHub Actions deployment workflow. The project illustrates a practical AI-assisted workflow where different models handle distinct subtasks, and highlights the emerging Model Context Protocol (MCP) ecosystem as a catalyst for new tooling.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything">AI and Liability</a>
+    <span class="meta">(2026-06-25)</span>
+  </h3>
+  
+  <p>Simon Willison highlights Bruce Schneier&#39;s commentary on a German ruling holding Google liable for errors in AI-generated summaries, arguing that AI outputs should carry the same legal accountability as human-produced work. Schneier warns that exempting companies from liability for AI mistakes creates perverse incentives to replace human professionals with cheaper AI systems. For software engineers, this signals a shifting legal landscape that may redefine how AI-powered products are designed and deployed.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/26/incident-report/#atom-everything">Incident Report: CVE-2026-LGTM</a>
+    <span class="meta">(2026-06-26)</span>
+  </h3>
+  
+  <p>Andrew Nesbitt&#39;s satirical incident report imagines two competing AI code-review agents entering a runaway disagreement loop over a pull request, generating 340 comments and $41K in inference costs before being shut down. The piece skewers real risks in multi-agent AI pipelines — including runaway costs, adversarial agent interactions, and the gap between vendor marketing and actual reliability — all highly relevant as teams adopt AI agents for automated code review.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/26/openai/#atom-everything">Quoting OpenAI</a>
+    <span class="meta">(2026-06-26)</span>
+  </h3>
+  
+  <p>OpenAI announces the GPT-5.6 model series — Sol (flagship), Terra (balanced), and Luna (budget) — with detailed pricing per million tokens and new prompt caching mechanics, including explicit cache breakpoints and a 30-minute minimum cache life. Terra offers GPT-5.5-level performance at half the cost, making it relevant for engineers optimizing LLM API spend. The staged rollout involves U.S. government coordination before general availability.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything">What happened after 2,000 people tried to hack my AI assistant</a>
+    <span class="meta">(2026-06-26)</span>
+  </h3>
+  
+  <p>A public challenge saw 2,000 participants make 6,000 attempts to extract secrets from an AI assistant via prompt injection, and all failed — suggesting frontier models like Opus 4.6 are increasingly resistant to injection attacks. Simon Willison notes this aligns with his own observations about lab-level training improvements, while cautioning that zero successful attacks does not guarantee safety in production systems where irreversible damage is possible.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/26/timothy-b-lee/#atom-everything">Quoting Timothy B. Lee</a>
+    <span class="meta">(2026-06-26)</span>
+  </h3>
+  
+  <p>Simon Willison quotes Timothy B. Lee pushing back on the notion that LLMs require no skill or learning curve, comparing effective LLM use to the nuanced skill of management. The analogy argues that directing AI models well is non-trivial, which matters to engineers evaluating how much expertise is actually required to get value from AI tools.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything">Quoting Dean W. Ball</a>
+    <span class="meta">(2026-06-26)</span>
+  </h3>
+  
+  <p>Simon Willison quotes Dean W. Ball on the economic and geopolitical pressures facing frontier AI labs, arguing that restrictive US export or access policies would undermine the financial model sustaining massive AI infrastructure investment. Ball warns that frontier models have a narrow post-release revenue window, and limiting their global addressable market threatens the viability of the entire US AI buildout.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything">Quoting Jon Udell</a>
+    <span class="meta">(2026-06-28)</span>
+  </h3>
+  
+  <p>Jon Udell argues that the framing of &#34;human in the loop&#34; wrongly positions machines as the default authority, and proposes instead that engineers retain ownership of their workflow and deliberately invite AI agents in as collaborators. He advocates for agentic software development that remains transparent and reviewable, explicitly rejecting black-box pipelines that produce unreviewable PRs. This reframe has direct implications for how teams should structure human oversight in AI-assisted coding workflows.</p>
+  
+  
+  <h2>Armin Ronacher</h2>
+  
+  <p class="meta">Austrian open-source developer, creator of Flask and Jinja2, and a prolific contributor to the Python and Rust ecosystems with a thoughtful voice on developer tooling.</p>
+  
+  
+  <h3>
+    <a href="https://lucumr.pocoo.org/2026/6/23/the-coming-loop/">The Coming Loop</a>
+    <span class="meta">(2026-06-23)</span>
+  </h3>
+  
+  <p>Armin Ronacher examines the rise of &#34;harness-level loops&#34; — outer orchestration layers that drive coding agents beyond a single session — and argues they work well for mechanical tasks (porting, benchmarking, security scanning) but tend to degrade code quality for long-lived systems by amplifying defensive, poorly-abstracted patterns. He warns that even engineers who resist this paradigm may be forced into it by competitive pressure and AI-generated security reports. The piece raises a deeper concern about cognitive dependency: codebases authored, reviewed, and patched entirely by loops may become incomprehensible if access to those models is ever lost.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/slow-down-to-speed-up">Slow down to speed up: so much has changed in 6 months’ time</a>
+    <span class="meta">(2026-06-23)</span>
+  </h3>
+  
+  <p>Gergely Orosz argues that the rapid adoption of AI agents since late 2025 is fundamentally reshaping software engineering—driving 5x more PRs, larger diffs, and drastically reduced human code review—while creating serious quality and security risks, as illustrated by Meta&#39;s catastrophic outage caused by AI-generated, AI-reviewed code. He surveys how leading companies (Anthropic, OpenAI, Uber, Google) are restructuring developer workflows around agents, and warns that over-indexing on AI at the expense of security, integrity, and testing teams is a dangerous organizational pattern. The piece offers career advice for engineers navigating this transition.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/tech-interviews-with-neetcode">Tech interviews with NeetCode</a>
+    <span class="meta">(2026-06-24)</span>
+  </h3>
+  
+  <p>In this podcast episode, NeetCode (Navdeep Singh) shares his views on AI&#39;s impact on software engineering: he uses AI primarily for refactoring legacy code, observes that AI-powered cheating tools are forcing Google to return to in-person whiteboard interviews, and argues that effort, judgment, and weighing tradeoffs remain distinctly human advantages. He pushes back on narratives of coding&#39;s demise, noting engineers are doing more work than before rather than being displaced.</p>
+  
+  
+  <h2>Avdi Grimm</h2>
+  
+  <p class="meta">Ruby developer, author of Confident Ruby and Exceptional Ruby, and creator of the RubyTapas screencast series on software craftsmanship.</p>
+  
+  
+  <h3>
+    <a href="https://avdi.codes/is-successful-agentic-coding-a-delusion/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=is-successful-agentic-coding-a-delusion">Is Successful Agentic Coding a Delusion?</a>
+    <span class="meta">(2026-06-23)</span>
+  </h3>
+  
+  <p>Avdi Grimm argues that dismissing agentic coding as universally ineffective is a flawed premise, drawing a parallel to early skepticism around XP practices like TDD. From personal experience, he contends that disciplined, close-collaboration use of coding agents — not &#34;vibe coding&#34; — has delivered more high-quality, well-tested code than he could have otherwise. He distinguishes legitimate criticisms (environmental impact, org-level failure to adopt) from the blanket claim that the tools simply don&#39;t work.</p>
+  
+  <h3>
+    <a href="https://avdi.codes/157853-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=157853-2"></a>
+    <span class="meta">(2026-06-25)</span>
+  </h3>
+  
+  <p>Avdi Grimm argues that ideological opposition to AI tools can become more harmful than the technology itself, warning against purity-driven tribalism that excludes pragmatic users. He links to a piece about a developer who used AI, found it effective, but disliked the experience — framing the broader debate as a cautionary tale about dogmatism overriding nuanced judgment.</p>
+  
+  
+  <h2>Charity Majors</h2>
+  
+  <p class="meta">Co-founder and CTO of Honeycomb.io, champion of observability-driven development, and an unusually candid voice on engineering culture, AI coding tools, and what it means to be a senior engineer today.</p>
+  
+  
+  <h3>
+    <a href="https://charity.wtf/2026/06/24/make-ai-boring-again-xpost/">Make AI Boring Again (xpost)</a>
+    <span class="meta">(2026-06-24)</span>
+  </h3>
+  
+  <p>Charity Majors argues that software engineers have a moral responsibility to engage deeply with AI rather than disengage for purity&#39;s sake — because shaping the technology requires understanding it firsthand. She catalogues real AI harms (training data theft, labor exploitation, skill atrophy, authoritarian misuse) while rejecting the logic that awareness of those harms justifies abstention. Her core claim: the software industry is AI&#39;s most natural &#34;killer app,&#34; and engineers who walk away cede influence over how it develops.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>
