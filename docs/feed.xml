@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jun 2026 23:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 17:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding</title>
+      <link>https://simonwillison.net/2026/Jun/29/ornith/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 29 Jun 2026 16:17:59 +0000</pubDate>
+      <description>Simon Willison reviews Ornith-1.0, a new open-weights (MIT) model family from DeepReinforce built on Gemma 4 and Qwen 3.5, designed for agentic coding workflows. He reports strong initial performance running the 35B MoE variant locally via LM Studio, where the model handled multi-step tool-call agent tasks against a real codebase. The permissive licensing and state-of-the-art coding benchmark results make it a notable option for engineers exploring self-hosted agentic coding tools.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/29/ornith/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Jon Udell</title>
       <link>https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything</link>
