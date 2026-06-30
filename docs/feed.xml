@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jun 2026 18:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 21:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title />
+      <link>https://avdi.codes/161044-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=161044-2</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Tue, 30 Jun 2026 20:20:30 +0000</pubDate>
+      <description>Avdi Grimm quotes Charity Majors' observation that AI wins are amplified in public forums (blog posts, conference talks) while AI costs surface only in private or operational channels (retros, on-call, grumbling). This structural asymmetry distorts the overall perception of AI's impact, leaving both enthusiasts and skeptics feeling unheard — a dynamic software engineers navigating AI adoption should recognize.</description>
+      <guid isPermaLink="true">https://avdi.codes/161044-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=161044-2</guid>
+    </item>
     <item>
       <title>Impressions from visiting OpenAI, Anthropic, &amp; Cursor</title>
       <link>https://newsletter.pragmaticengineer.com/p/impressions-from-visiting-openai</link>
