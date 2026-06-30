@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jun 2026 21:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 22:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>What's new in Claude Sonnet 5</title>
+      <link>https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 30 Jun 2026 21:23:02 +0000</pubDate>
+      <description>Simon Willison breaks down the key API changes in Claude Sonnet 5, highlighting that while listed pricing matches Sonnet 4.6, a new tokenizer generates ~30% more tokens for English text — effectively a 30% cost increase. He benchmarks the tokenizer across multiple document types, finding 1.4x more tokens for English, 1.28x for Python code, and roughly parity for Simplified Mandarin. Developers should account for these tokenization changes when estimating inference costs.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything</guid>
+    </item>
     <item>
       <title />
       <link>https://avdi.codes/161044-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=161044-2</link>
