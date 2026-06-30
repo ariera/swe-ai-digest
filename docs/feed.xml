@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jun 2026 22:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 23:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Nano Banana 2 Lite</title>
+      <link>https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 30 Jun 2026 22:15:35 +0000</pubDate>
+      <description>Simon Willison briefly evaluates Gemini 3.1 Flash Lite Image (Google's fastest and cheapest Gemini image model), testing it with a whimsical image generation prompt. He notes it outperforms earlier Nano Banana models on the same task but makes spelling errors. This is a lightweight hands-on model evaluation relevant to engineers tracking Google's generative image model releases.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything</guid>
+    </item>
     <item>
       <title>What's new in Claude Sonnet 5</title>
       <link>https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything</link>
