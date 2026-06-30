@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jun 2026 17:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 18:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Impressions from visiting OpenAI, Anthropic, &amp; Cursor</title>
+      <link>https://newsletter.pragmaticengineer.com/p/impressions-from-visiting-openai</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 30 Jun 2026 17:21:05 +0000</pubDate>
+      <description>Gergely Orosz reports from visits to OpenAI, Anthropic, and Cursor, identifying cloud-hosted agents as the next major industry shift — driven by maturing models, larger context windows, and GPU availability. He also notes that over 95% of non-engineers at OpenAI use Codex, and that engineering work is increasingly focused on building efficient environments for agents. These trends signal significant changes to how software is built and who builds it.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/impressions-from-visiting-openai</guid>
+    </item>
     <item>
       <title>Have your agent record video demos of its work with shot-scraper video</title>
       <link>https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything</link>
@@ -16,6 +24,14 @@
       <pubDate>Tue, 30 Jun 2026 16:54:26 +0000</pubDate>
       <description>Simon Willison describes a new `shot-scraper video` command that lets coding agents automatically record video demos of their work using Playwright, with the storyboard YAML generated entirely by GPT-5.5 via Codex Desktop. He highlights a key pattern: making CLI `--help` output detailed enough to serve as agent-readable documentation, effectively embedding a skill file in the tool itself. The feature is also a concrete example of a project he argues he wouldn't have completed without coding agent assistance.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything</guid>
+    </item>
+    <item>
+      <title>shot-scraper 1.10</title>
+      <link>https://simonwillison.net/2026/Jun/30/shot-scraper/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 30 Jun 2026 15:10:14 +0000</pubDate>
+      <description>Simon Willison announces shot-scraper 1.10, whose headline feature—`shot-scraper video`—allows AI agents to automatically record video demos of their work via a storyboard YAML file. This is relevant to software engineers building or evaluating AI agents, as it introduces a practical observability tool for capturing and reviewing agent-driven browser interactions.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/30/shot-scraper/#atom-everything</guid>
     </item>
     <item>
       <title>Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding</title>
