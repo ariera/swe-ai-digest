@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jul 2026 01:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 17:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>How Kent Beck shapes the software engineering industry</title>
+      <link>https://newsletter.pragmaticengineer.com/p/how-kent-beck-shapes-the-software</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 01 Jul 2026 16:57:46 +0000</pubDate>
+      <description>Kent Beck argues that coding is only a small part of software engineering and that the profession's human, relational dimensions cannot be automated away — directly challenging claims that AI will end the field. He warns that trust is not accumulating as fast as AI-generated code is, and that no one yet knows how engineers should work alongside AI agents. His "explore, expand, extract" framework is offered as a way for engineers to navigate major technology shifts like the current AI transition.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/how-kent-beck-shapes-the-software</guid>
+    </item>
     <item>
       <title>Quoting Anthropic</title>
       <link>https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything</link>
