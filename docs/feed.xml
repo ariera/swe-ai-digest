@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jun 2026 23:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 01:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Anthropic</title>
+      <link>https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 30 Jun 2026 23:58:15 +0000</pubDate>
+      <description>Anthropic announced that the U.S. Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5, with access set to be restored imminently. This is significant for software engineers as it signals regulatory clearance for these AI models, potentially expanding their availability to previously restricted regions or use cases.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything</guid>
+    </item>
     <item>
       <title>Nano Banana 2 Lite</title>
       <link>https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything</link>
