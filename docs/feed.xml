@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jul 2026 17:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 22:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title />
+      <link>https://avdi.codes/162155-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=162155-2</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Wed, 01 Jul 2026 21:17:17 +0000</pubDate>
+      <description>Avdi Grimm, referencing Annie Vella's concept of "The Middle Loop," argues that as AI shifts software engineering work toward supervision and oversight, that supervisory role becomes the new craft to master. Engineers should invest in tooling, practice, and professional development around this emerging loop — building the machine that builds the machine.</description>
+      <guid isPermaLink="true">https://avdi.codes/162155-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=162155-2</guid>
+    </item>
     <item>
       <title>How Kent Beck shapes the software engineering industry</title>
       <link>https://newsletter.pragmaticengineer.com/p/how-kent-beck-shapes-the-software</link>
