@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Jul 2026 19:00:26 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 20:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>In defense of AI mandates (xpost)</title>
+      <link>https://charity.wtf/2026/07/02/in-defense-of-ai-mandates-xpost/</link>
+      <author>Charity Majors</author>
+      <pubDate>Thu, 02 Jul 2026 19:53:48 +0000</pubDate>
+      <description>Charity Majors argues that AI mandates — often despised by engineers — can be a legitimate and necessary management tool when leadership is serious about AI adoption, because they function as a funding mechanism that explicitly allocates time, covers for slipping deadlines, and sets clear expectations. Without a formal mandate, she contends, organizations are implicitly signaling that AI upskilling is not a priority while still piling pressure on engineers. She warns leaders to be consistent: if AI is deemed existential, fund it honestly and follow through, or risk lasting resentment.</description>
+      <guid isPermaLink="true">https://charity.wtf/2026/07/02/in-defense-of-ai-mandates-xpost/</guid>
+    </item>
     <item>
       <title>The Pulse: a new trend, smart model routing</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-a-new-trend-smart-model-routing/</link>
