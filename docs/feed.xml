@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jul 2026 22:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 18:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Understand to participate</title>
+      <link>https://simonwillison.net/2026/Jul/2/understand-to-participate/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 02 Jul 2026 17:07:14 +0000</pubDate>
+      <description>Simon Willison highlights Geoffrey Litt's argument that effectively collaborating with coding agents requires engineers to maintain genuine code comprehension — not just delegate to the model. As agents produce larger, more complex changes, developers risk accumulating "cognitive debt" that limits their ability to actively guide the creative process. The core insight: deep conceptual fluency is a prerequisite for meaningful participation in AI-assisted development.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/2/understand-to-participate/#atom-everything</guid>
+    </item>
     <item>
       <title />
       <link>https://avdi.codes/162155-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=162155-2</link>
