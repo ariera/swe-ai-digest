@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Jul 2026 20:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 23:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -16,6 +16,14 @@
       <pubDate>Thu, 02 Jul 2026 19:53:48 +0000</pubDate>
       <description>Charity Majors argues that AI mandates — often despised by engineers — can be a legitimate and necessary management tool when leadership is serious about AI adoption, because they function as a funding mechanism that explicitly allocates time, covers for slipping deadlines, and sets clear expectations. Without a formal mandate, she contends, organizations are implicitly signaling that AI upskilling is not a priority while still piling pressure on engineers. She warns leaders to be consistent: if AI is deemed existential, fund it honestly and follow through, or risk lasting resentment.</description>
       <guid isPermaLink="true">https://charity.wtf/2026/07/02/in-defense-of-ai-mandates-xpost/</guid>
+    </item>
+    <item>
+      <title>llm-coding-agent 0.1a0</title>
+      <link>https://simonwillison.net/2026/Jul/2/llm-coding-agent/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 02 Jul 2026 19:33:12 +0000</pubDate>
+      <description>Simon Willison releases llm-coding-agent 0.1a0, a Claude Code-style coding agent built on his LLM library, itself generated via AI-driven TDD. The agent exposes tools for file reading/editing, command execution, and file search, with a Python API and CLI flags like --yolo for unsupervised runs. It demonstrates a practical pattern for bootstrapping agentic coding tools using LLMs to write their own specs and implementation.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/2/llm-coding-agent/#atom-everything</guid>
     </item>
     <item>
       <title>The Pulse: a new trend, smart model routing</title>
