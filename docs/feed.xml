@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jul 2026 19:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 20:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -24,6 +24,14 @@
       <pubDate>Fri, 03 Jul 2026 14:50:50 +0000</pubDate>
       <description>Simon Willison's June 2026 newsletter covers several AI developments including Claude Fable 5, GPT-5.6, US export restrictions, and the GLM-5.2 open-weights model, which he identifies as the new best in its class. It also touches on the decline of "tokenmaxxing" as a prompting trend and highlights tools and model releases he's actively using. Relevant to engineers tracking the evolving model landscape and practical AI tooling.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/3/june-newsletter/#atom-everything</guid>
+    </item>
+    <item>
+      <title>In defense of AI mandates (xpost)</title>
+      <link>https://charity.wtf/2026/07/02/in-defense-of-ai-mandates/</link>
+      <author>Charity Majors</author>
+      <pubDate>Thu, 02 Jul 2026 19:53:48 +0000</pubDate>
+      <description>Charity Majors argues that AI mandates — when properly funded and honestly communicated — are a legitimate management tool for driving organizational change, not inherently punitive. A mandate functions as a forcing function that allocates time, sets expectations for productivity dips, and signals genuine priority. She warns that mandating AI adoption without resourcing it is dishonest leadership that erodes trust and morale.</description>
+      <guid isPermaLink="true">https://charity.wtf/2026/07/02/in-defense-of-ai-mandates/</guid>
     </item>
     <item>
       <title>In defense of AI mandates (xpost)</title>
@@ -216,6 +224,14 @@
       <pubDate>Wed, 24 Jun 2026 23:59:03 +0000</pubDate>
       <description>Simon Willison describes building a SQLite database of MDN browser compatibility data using two AI tools: Claude Code (Opus 4.8) to generate the conversion script and Codex Desktop (GPT-5.5) to build the GitHub Actions deployment workflow. The project illustrates a practical AI-assisted workflow where different models handle distinct subtasks, and highlights the emerging Model Context Protocol (MCP) ecosystem as a catalyst for new tooling.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Make AI Boring Again (xpost)</title>
+      <link>https://charity.wtf/2026/06/24/make-ai-boring-again/</link>
+      <author>Charity Majors</author>
+      <pubDate>Wed, 24 Jun 2026 19:57:33 +0000</pubDate>
+      <description>Charity Majors argues that software engineers have a moral responsibility to engage with AI rather than abstain from it, because meaningful governance and critique require hands-on expertise. She acknowledges real harms — from training data ethics to labor displacement — but contends that purity politics and performative rejection cede influence to less scrupulous actors. Her core prescription: learn AI deeply, experiment at work, and actively shape its trajectory from the inside.</description>
+      <guid isPermaLink="true">https://charity.wtf/2026/06/24/make-ai-boring-again/</guid>
     </item>
     <item>
       <title>Make AI Boring Again (xpost)</title>
