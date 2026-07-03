@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Jul 2026 23:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 15:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>June 2026 newsletter</title>
+      <link>https://simonwillison.net/2026/Jul/3/june-newsletter/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 03 Jul 2026 14:50:50 +0000</pubDate>
+      <description>Simon Willison's June 2026 newsletter covers several AI developments including Claude Fable 5, GPT-5.6, US export restrictions, and the GLM-5.2 open-weights model, which he identifies as the new best in its class. It also touches on the decline of "tokenmaxxing" as a prompting trend and highlights tools and model releases he's actively using. Relevant to engineers tracking the evolving model landscape and practical AI tooling.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/3/june-newsletter/#atom-everything</guid>
+    </item>
     <item>
       <title>In defense of AI mandates (xpost)</title>
       <link>https://charity.wtf/2026/07/02/in-defense-of-ai-mandates-xpost/</link>
