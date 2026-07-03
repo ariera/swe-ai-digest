@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jul 2026 15:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 19:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Fable's judgement</title>
+      <link>https://simonwillison.net/2026/Jul/3/judgement/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 03 Jul 2026 18:51:06 +0000</pubDate>
+      <description>Simon Willison shares two practical prompting tips for Claude Code (using the "Fable" model): letting the agent exercise its own judgement on when to write tests, and instructing it to delegate coding subtasks to cheaper subagent models (Sonnet/Haiku) while reserving the top-tier model for review and synthesis. This agent orchestration pattern meaningfully reduces token costs without sacrificing quality, offering a concrete workflow template for engineers managing LLM spend in multi-model setups.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/3/judgement/#atom-everything</guid>
+    </item>
     <item>
       <title>June 2026 newsletter</title>
       <link>https://simonwillison.net/2026/Jul/3/june-newsletter/#atom-everything</link>
