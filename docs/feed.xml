@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jul 2026 22:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 23:00:14 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Open Source AI Gap Map</title>
+      <link>https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 03 Jul 2026 22:04:31 +0000</pubDate>
+      <description>Simon Willison highlights the Open Source AI Gap Map, a structured index of 421 open-source AI products—covering tools, models, datasets, and hardware—published by Current AI, a non-profit backed by $400M in funding. The underlying data (1,184 YAML files, MIT-licensed) is publicly available on GitHub, offering engineers a navigable snapshot of the open-source AI ecosystem across model, UX, and infrastructure layers.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Josh W. Comeau</title>
       <link>https://simonwillison.net/2026/Jul/3/josh-w-comeau/#atom-everything</link>
