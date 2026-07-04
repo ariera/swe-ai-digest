@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Jul 2026 20:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 23:00:28 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Better Models: Worse Tools</title>
+      <link>https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 04 Jul 2026 22:53:52 +0000</pubDate>
+      <description>Simon Willison highlights a regression reported by Armin Ronacher: newer Anthropic models (Opus 4.8, Sonnet 5) are *worse* at third-party tool schemas because RL training has optimized them for Claude Code's built-in edit tool, causing schema violations in custom harnesses like Pi. This raises a practical concern for engineers building coding agents: model-specific tool training may force third-party tools to implement multiple edit-tool variants to maintain compatibility across model families.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything</guid>
+    </item>
     <item>
       <title>Better Models: Worse Tools</title>
       <link>https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/</link>
