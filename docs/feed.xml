@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jul 2026 02:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 05:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -16,6 +16,14 @@
       <pubDate>Sun, 05 Jul 2026 01:00:48 +0000</pubDate>
       <description>Simon Willison details using Claude Fable (via Claude Code) as a primary coding agent to drive sqlite-utils to a stable 4.0 release, covering 37 prompts, 34 commits, and an estimated $149.25 in API costs. He also cross-validates Fable's output by having GPT-5.5 review the changes, finding additional bugs — a practice he now does habitually. The piece offers a concrete, cost-annotated case study of multi-model agent workflows in open-source library development.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything</guid>
+    </item>
+    <item>
+      <title>sqlite-utils 4.0rc2</title>
+      <link>https://simonwillison.net/2026/Jul/5/sqlite-utils/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 05 Jul 2026 00:47:38 +0000</pubDate>
+      <description>Simon Willison announces sqlite-utils 4.0rc2, noting the release was "mostly written by Claude" at a cost of approximately $149.25. This is a notable real-world data point on using AI coding agents to produce a substantial open-source library release, illustrating both the practical feasibility and the cost economics of AI-driven software development.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/5/sqlite-utils/#atom-everything</guid>
     </item>
     <item>
       <title>Better Models: Worse Tools</title>
