@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW27</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW27</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-06-29 &ndash; 2026-07-05
+    &middot; 25 articles
+  </p>
+  <p>This digest period is dominated by three intersecting themes: the maturation of agentic coding workflows, the economics and governance of AI adoption, and emerging tensions between model capability and engineering reliability.
+
+On agentic tooling, multiple authors document concrete workflows — multi-model orchestration, AI-driven TDD, automated video demos, and prompt optimization via DSPy — alongside real cost data, such as a $149.25 open-source release driven almost entirely by Claude. New open-weights models (Ornith-1.0, GLM-5.2) and smart routing tools signal that capable, self-hosted agents are increasingly accessible.
+
+Economics surface repeatedly: Claude Sonnet 5&#39;s tokenizer effectively raises costs 30%, model routing promises 20–30% savings, and developer education revenue has dropped 50%+ as LLMs displace paid learning resources.
+
+On the human side, practitioners debate what engineers must preserve — code comprehension, supervisory craft, relational judgment — as automation expands. Charity Majors frames AI mandates as legitimate management tools when properly resourced, while Kent Beck warns that trust in AI-generated code lags far behind its output volume.
+
+A cross-cutting technical concern closes the picture: newer Anthropic models regress on third-party tool schemas, suggesting that RL training on proprietary harnesses is silently reshaping model behavior in ways third-party developers must now actively defend against.</p>
+  <hr>
+
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/29/ornith/#atom-everything">Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding</a>
+    <span class="meta">(2026-06-29)</span>
+  </h3>
+  
+  <p>Simon Willison reviews Ornith-1.0, a new open-weights (MIT) model family from DeepReinforce built on Gemma 4 and Qwen 3.5, designed for agentic coding workflows. He reports strong initial performance running the 35B MoE variant locally via LM Studio, where the model handled multi-step tool-call agent tasks against a real codebase. The permissive licensing and state-of-the-art coding benchmark results make it a notable option for engineers exploring self-hosted agentic coding tools.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything">Have your agent record video demos of its work with shot-scraper video</a>
+    <span class="meta">(2026-06-30)</span>
+  </h3>
+  
+  <p>Simon Willison describes a new `shot-scraper video` command that lets coding agents automatically record video demos of their work using Playwright, with the storyboard YAML generated entirely by GPT-5.5 via Codex Desktop. He highlights a key pattern: making CLI `--help` output detailed enough to serve as agent-readable documentation, effectively embedding a skill file in the tool itself. The feature is also a concrete example of a project he argues he wouldn&#39;t have completed without coding agent assistance.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/30/shot-scraper/#atom-everything">shot-scraper 1.10</a>
+    <span class="meta">(2026-06-30)</span>
+  </h3>
+  
+  <p>Simon Willison announces shot-scraper 1.10, whose headline feature—`shot-scraper video`—allows AI agents to automatically record video demos of their work via a storyboard YAML file. This is relevant to software engineers building or evaluating AI agents, as it introduces a practical observability tool for capturing and reviewing agent-driven browser interactions.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything">What&#39;s new in Claude Sonnet 5</a>
+    <span class="meta">(2026-06-30)</span>
+  </h3>
+  
+  <p>Simon Willison breaks down the key API changes in Claude Sonnet 5, highlighting that while listed pricing matches Sonnet 4.6, a new tokenizer generates ~30% more tokens for English text — effectively a 30% cost increase. He benchmarks the tokenizer across multiple document types, finding 1.4x more tokens for English, 1.28x for Python code, and roughly parity for Simplified Mandarin. Developers should account for these tokenization changes when estimating inference costs.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything">Nano Banana 2 Lite</a>
+    <span class="meta">(2026-06-30)</span>
+  </h3>
+  
+  <p>Simon Willison briefly evaluates Gemini 3.1 Flash Lite Image (Google&#39;s fastest and cheapest Gemini image model), testing it with a whimsical image generation prompt. He notes it outperforms earlier Nano Banana models on the same task but makes spelling errors. This is a lightweight hands-on model evaluation relevant to engineers tracking Google&#39;s generative image model releases.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything">Quoting Anthropic</a>
+    <span class="meta">(2026-06-30)</span>
+  </h3>
+  
+  <p>Anthropic announced that the U.S. Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5, with access set to be restored imminently. This is significant for software engineers as it signals regulatory clearance for these AI models, potentially expanding their availability to previously restricted regions or use cases.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/2/understand-to-participate/#atom-everything">Understand to participate</a>
+    <span class="meta">(2026-07-02)</span>
+  </h3>
+  
+  <p>Simon Willison highlights Geoffrey Litt&#39;s argument that effectively collaborating with coding agents requires engineers to maintain genuine code comprehension — not just delegate to the model. As agents produce larger, more complex changes, developers risk accumulating &#34;cognitive debt&#34; that limits their ability to actively guide the creative process. The core insight: deep conceptual fluency is a prerequisite for meaningful participation in AI-assisted development.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything">Using DSPy to evaluate and improve Datasette Agent&#39;s SQL system prompts</a>
+    <span class="meta">(2026-07-02)</span>
+  </h3>
+  
+  <p>Simon Willison uses DSPy to evaluate and optimize the system prompts powering Datasette Agent&#39;s read-only SQL query feature, delegating the research task to Claude Code. The experiment surfaces a concrete prompt improvement: including column names in schema listings prevents column-name guessing and error-retry loops caused by overly restrictive instructions. This offers a practical example of using LLM-based evaluation frameworks to systematically improve agent prompt quality.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/2/llm-coding-agent/#atom-everything">llm-coding-agent 0.1a0</a>
+    <span class="meta">(2026-07-02)</span>
+  </h3>
+  
+  <p>Simon Willison releases llm-coding-agent 0.1a0, a Claude Code-style coding agent built on his LLM library, itself generated via AI-driven TDD. The agent exposes tools for file reading/editing, command execution, and file search, with a Python API and CLI flags like --yolo for unsupervised runs. It demonstrates a practical pattern for bootstrapping agentic coding tools using LLMs to write their own specs and implementation.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/3/june-newsletter/#atom-everything">June 2026 newsletter</a>
+    <span class="meta">(2026-07-03)</span>
+  </h3>
+  
+  <p>Simon Willison&#39;s June 2026 newsletter covers several AI developments including Claude Fable 5, GPT-5.6, US export restrictions, and the GLM-5.2 open-weights model, which he identifies as the new best in its class. It also touches on the decline of &#34;tokenmaxxing&#34; as a prompting trend and highlights tools and model releases he&#39;s actively using. Relevant to engineers tracking the evolving model landscape and practical AI tooling.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/3/judgement/#atom-everything">Fable&#39;s judgement</a>
+    <span class="meta">(2026-07-03)</span>
+  </h3>
+  
+  <p>Simon Willison shares two practical prompting tips for Claude Code (using the &#34;Fable&#34; model): letting the agent exercise its own judgement on when to write tests, and instructing it to delegate coding subtasks to cheaper subagent models (Sonnet/Haiku) while reserving the top-tier model for review and synthesis. This agent orchestration pattern meaningfully reduces token costs without sacrificing quality, offering a concrete workflow template for engineers managing LLM spend in multi-model setups.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/3/josh-w-comeau/#atom-everything">Quoting Josh W. Comeau</a>
+    <span class="meta">(2026-07-03)</span>
+  </h3>
+  
+  <p>Course creator Josh W. Comeau reports revenue down 50%+ across the creator community, attributing it to a dual AI effect: developers are hesitant to invest in learning amid job uncertainty, and LLMs now serve as free personalized tutors. He also flags the ethical dimension of LLMs training on creator content without consent or compensation. This signals a concrete, measurable economic impact of AI on the developer education market.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything">Open Source AI Gap Map</a>
+    <span class="meta">(2026-07-03)</span>
+  </h3>
+  
+  <p>Simon Willison highlights the Open Source AI Gap Map, a structured index of 421 open-source AI products—covering tools, models, datasets, and hardware—published by Current AI, a non-profit backed by $400M in funding. The underlying data (1,184 YAML files, MIT-licensed) is publicly available on GitHub, offering engineers a navigable snapshot of the open-source AI ecosystem across model, UX, and infrastructure layers.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything">Better Models: Worse Tools</a>
+    <span class="meta">(2026-07-04)</span>
+  </h3>
+  
+  <p>Simon Willison highlights a regression reported by Armin Ronacher: newer Anthropic models (Opus 4.8, Sonnet 5) are *worse* at third-party tool schemas because RL training has optimized them for Claude Code&#39;s built-in edit tool, causing schema violations in custom harnesses like Pi. This raises a practical concern for engineers building coding agents: model-specific tool training may force third-party tools to implement multiple edit-tool variants to maintain compatibility across model families.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything">sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)</a>
+    <span class="meta">(2026-07-05)</span>
+  </h3>
+  
+  <p>Simon Willison details using Claude Fable (via Claude Code) as a primary coding agent to drive sqlite-utils to a stable 4.0 release, covering 37 prompts, 34 commits, and an estimated $149.25 in API costs. He also cross-validates Fable&#39;s output by having GPT-5.5 review the changes, finding additional bugs — a practice he now does habitually. The piece offers a concrete, cost-annotated case study of multi-model agent workflows in open-source library development.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/5/sqlite-utils/#atom-everything">sqlite-utils 4.0rc2</a>
+    <span class="meta">(2026-07-05)</span>
+  </h3>
+  
+  <p>Simon Willison announces sqlite-utils 4.0rc2, noting the release was &#34;mostly written by Claude&#34; at a cost of approximately $149.25. This is a notable real-world data point on using AI coding agents to produce a substantial open-source library release, illustrating both the practical feasibility and the cost economics of AI-driven software development.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/impressions-from-visiting-openai">Impressions from visiting OpenAI, Anthropic, &amp; Cursor</a>
+    <span class="meta">(2026-06-30)</span>
+  </h3>
+  
+  <p>Gergely Orosz reports from visits to OpenAI, Anthropic, and Cursor, identifying cloud-hosted agents as the next major industry shift — driven by maturing models, larger context windows, and GPU availability. He also notes that over 95% of non-engineers at OpenAI use Codex, and that engineering work is increasingly focused on building efficient environments for agents. These trends signal significant changes to how software is built and who builds it.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/how-kent-beck-shapes-the-software">How Kent Beck shapes the software engineering industry</a>
+    <span class="meta">(2026-07-01)</span>
+  </h3>
+  
+  <p>Kent Beck argues that coding is only a small part of software engineering and that the profession&#39;s human, relational dimensions cannot be automated away — directly challenging claims that AI will end the field. He warns that trust is not accumulating as fast as AI-generated code is, and that no one yet knows how engineers should work alongside AI agents. His &#34;explore, expand, extract&#34; framework is offered as a way for engineers to navigate major technology shifts like the current AI transition.</p>
+  
+  <h3>
+    <a href="https://blog.pragmaticengineer.com/the-pulse-a-new-trend-smart-model-routing/">The Pulse: a new trend, smart model routing</a>
+    <span class="meta">(2026-07-02)</span>
+  </h3>
+  
+  <p>Gergely Orosz surveys the emerging landscape of &#34;smart model routing&#34; — tools that automatically select the cheapest or most appropriate LLM for a given coding task, with vendors claiming 20–30% cost savings. He catalogs specific solutions (Factory Router, Not Diamond, LiteLLM, OpenRouter, etc.) and argues that intelligent routing will become table stakes across AI tooling. For engineers, this signals a near-term shift in how teams manage LLM costs at scale, especially as open models prove sufficient for ~60% of coding work.</p>
+  
+  
+  <h2>Avdi Grimm</h2>
+  
+  <p class="meta">Ruby developer, author of Confident Ruby and Exceptional Ruby, and creator of the RubyTapas screencast series on software craftsmanship.</p>
+  
+  
+  <h3>
+    <a href="https://avdi.codes/161044-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=161044-2"></a>
+    <span class="meta">(2026-06-30)</span>
+  </h3>
+  
+  <p>Avdi Grimm quotes Charity Majors&#39; observation that AI wins are amplified in public forums (blog posts, conference talks) while AI costs surface only in private or operational channels (retros, on-call, grumbling). This structural asymmetry distorts the overall perception of AI&#39;s impact, leaving both enthusiasts and skeptics feeling unheard — a dynamic software engineers navigating AI adoption should recognize.</p>
+  
+  <h3>
+    <a href="https://avdi.codes/162155-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=162155-2"></a>
+    <span class="meta">(2026-07-01)</span>
+  </h3>
+  
+  <p>Avdi Grimm, referencing Annie Vella&#39;s concept of &#34;The Middle Loop,&#34; argues that as AI shifts software engineering work toward supervision and oversight, that supervisory role becomes the new craft to master. Engineers should invest in tooling, practice, and professional development around this emerging loop — building the machine that builds the machine.</p>
+  
+  
+  <h2>Charity Majors</h2>
+  
+  <p class="meta">Co-founder and CTO of Honeycomb.io, champion of observability-driven development, and an unusually candid voice on engineering culture, AI coding tools, and what it means to be a senior engineer today.</p>
+  
+  
+  <h3>
+    <a href="https://charity.wtf/2026/07/02/in-defense-of-ai-mandates-xpost/">In defense of AI mandates (xpost)</a>
+    <span class="meta">(2026-07-02)</span>
+  </h3>
+  
+  <p>Charity Majors argues that AI mandates — often despised by engineers — can be a legitimate and necessary management tool when leadership is serious about AI adoption, because they function as a funding mechanism that explicitly allocates time, covers for slipping deadlines, and sets clear expectations. Without a formal mandate, she contends, organizations are implicitly signaling that AI upskilling is not a priority while still piling pressure on engineers. She warns leaders to be consistent: if AI is deemed existential, fund it honestly and follow through, or risk lasting resentment.</p>
+  
+  <h3>
+    <a href="https://charity.wtf/2026/07/02/in-defense-of-ai-mandates/">In defense of AI mandates (xpost)</a>
+    <span class="meta">(2026-07-02)</span>
+  </h3>
+  
+  <p>Charity Majors argues that AI mandates — when properly funded and honestly communicated — are a legitimate management tool for driving organizational change, not inherently punitive. A mandate functions as a forcing function that allocates time, sets expectations for productivity dips, and signals genuine priority. She warns that mandating AI adoption without resourcing it is dishonest leadership that erodes trust and morale.</p>
+  
+  <h3>
+    <a href="https://charity.wtf/p/in-defense-of-ai-mandates">In defense of AI mandates</a>
+    <span class="meta">(2026-07-02)</span>
+  </h3>
+  
+  <p>Charity Majors argues that top-down AI mandates can be legitimate and necessary when organizations treat AI adoption as a strategic priority, because without explicit funding and management cover, employees are effectively told AI skills are optional. She distinguishes between punitive mandates and well-structured ones that acknowledge productivity tradeoffs and provide real enablement. For engineers, the piece reframes the mandate debate: leadership consistency and resource allocation matter more than the mandate itself.</p>
+  
+  
+  <h2>Armin Ronacher</h2>
+  
+  <p class="meta">Austrian open-source developer, creator of Flask and Jinja2, and a prolific contributor to the Python and Rust ecosystems with a thoughtful voice on developer tooling.</p>
+  
+  
+  <h3>
+    <a href="https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/">Better Models: Worse Tools</a>
+    <span class="meta">(2026-07-04)</span>
+  </h3>
+  
+  <p>Armin Ronacher investigates a regression in Anthropic&#39;s newer models (Opus 4.8, Sonnet 5) that increasingly hallucinate extra, invalid fields in tool call schemas — a behavior absent in older models. He hypothesizes this stems from post-training reinforcement on Claude Code&#39;s forgiving, slop-tolerant harness, which silently repairs malformed calls and thus provides no gradient against schema drift. The practical implication for engineers is that tool schemas are no longer neutral contracts: non-canonical schemas may be implicitly penalized by post-training, and strict mode or schema simplification may be necessary mitigations.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>
