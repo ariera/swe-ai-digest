@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jul 2026 20:00:26 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 22:00:30 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -24,6 +24,14 @@
       <pubDate>Tue, 07 Jul 2026 17:25:41 +0000</pubDate>
       <description>Orosz finds the 2026 tech job market in a paradoxical state: hiring managers are flooded with AI-generated resumes and fake candidates, making inbound hiring nearly useless, while qualified engineers struggle to get interviews. Demand is strong for AI/ML engineers but weak for most others, and referral networks have become the dominant hiring channel. The piece illustrates how AI tooling is actively degrading trust and signal quality across the entire recruitment pipeline.</description>
       <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/tech-jobs-market-in-2026-part-3-hiring</guid>
+    </item>
+    <item>
+      <title>github-code Web Component</title>
+      <link>https://simonwillison.net/2026/Jul/7/github-code-component/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 07 Jul 2026 16:18:16 +0000</pubDate>
+      <description>Simon Willison demos a Web Component built with GPT-5.5 via a single prompt, which embeds GitHub code snippets by fetching raw file content and rendering specified line ranges. The article illustrates a practical AI-assisted workflow where a working, deployable UI component is generated from a brief natural-language description, highlighting how LLMs can accelerate front-end prototyping.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/7/github-code-component/#atom-everything</guid>
     </item>
     <item>
       <title>Viability of local models for coding</title>
