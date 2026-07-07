@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jul 2026 01:00:27 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 13:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Viability of local models for coding</title>
+      <link>https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-factors.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 07 Jul 2026 12:34:00 +0000</pubDate>
+      <description>Birgitta Böckeler evaluates the practical viability of running local LLMs for programming tasks, outlining the key factors that determine their effectiveness. This is directly relevant to software engineers considering privacy-conscious or offline AI coding workflows as an alternative to cloud-based copilots.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-factors.html</guid>
+    </item>
     <item>
       <title>tencent/Hy3</title>
       <link>https://simonwillison.net/2026/Jul/6/hy3/#atom-everything</link>
