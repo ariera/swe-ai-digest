@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jul 2026 17:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 21:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Kenton Varda</title>
+      <link>https://simonwillison.net/2026/Jul/8/kenton-varda/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 08 Jul 2026 20:03:34 +0000</pubDate>
+      <description>Kenton Varda (quoted by Simon Willison) banned AI-generated PR and commit descriptions from his team after finding they described low-level code details while omitting the high-level context reviewers actually need. This highlights a concrete failure mode of AI-assisted workflows: LLMs excel at summarizing what code does but struggle to articulate why changes were made, undermining code review quality.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/8/kenton-varda/#atom-everything</guid>
+    </item>
     <item>
       <title>The Pragmatic Engineer AMA</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-pragmatic-engineer-ama</link>
