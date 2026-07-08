@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jul 2026 22:00:30 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 12:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Experiences with local models for coding</title>
+      <link>https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-experiences.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Wed, 08 Jul 2026 11:57:00 +0000</pubDate>
+      <description>Birgitta Böckeler evaluates local AI models for coding tasks, benchmarking them against two standard tasks and testing the most promising candidate in daily development use. This hands-on assessment is directly relevant to software engineers weighing privacy, cost, and capability trade-offs when considering locally-run AI coding assistants as alternatives to cloud-based tools.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-experiences.html</guid>
+    </item>
     <item>
       <title>sqlite-utils 4.0, now with database schema migrations</title>
       <link>https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything</link>
