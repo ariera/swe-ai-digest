@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jul 2026 12:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 17:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pragmatic Engineer AMA</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pragmatic-engineer-ama</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 08 Jul 2026 16:38:49 +0000</pubDate>
+      <description>Gergely Orosz shares several AI-focused opinions: that AI doesn't make work easier and engineers should deliberately preserve skills they value (e.g., he avoids AI in writing but accepts coding skill atrophy); that MCP became a standard partly due to Anthropic's non-dominant position at launch, a dynamic that likely couldn't be replicated today; and that LeetCode interviews will persist but shift back in-person as AI trivially solves DSA puzzles. These perspectives are directly relevant to engineers navigating AI tooling decisions and the evolving hiring landscape.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pragmatic-engineer-ama</guid>
+    </item>
     <item>
       <title>Experiences with local models for coding</title>
       <link>https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-experiences.html</link>
