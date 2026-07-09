@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jul 2026 01:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 17:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: What can we learn from Bun’s rapid Rust rewrite with AI?</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-what-can-we-learn-from</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 09 Jul 2026 16:32:18 +0000</pubDate>
+      <description>Gergely Orosz examines how Bun's JavaScript runtime was rewritten from Zig to Rust in just 11 days using Anthropic's AI tool Fable — a migration that would otherwise take 1–2 years — at a cost of $165K. The piece also surveys the rapidly evolving AI coding model landscape, including new releases from OpenAI, Cursor, and Meta, and highlights how North Korean hackers are using AI to infiltrate remote engineering teams. Together, these stories illustrate both the transformative productivity potential of AI-assisted development and emerging security risks it introduces.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-what-can-we-learn-from</guid>
+    </item>
+    <item>
+      <title>Introducing Muse Spark 1.1</title>
+      <link>https://simonwillison.net/2026/Jul/9/muse-spark-1-1/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 09 Jul 2026 16:24:09 +0000</pubDate>
+      <description>Simon Willison introduces Meta's Muse Spark 1.1, the first in the Spark model line to offer an API, with claimed improvements in agentic tool calling and computer use. He shares his own `llm-meta-ai` plugin, enabling CLI and Python library access to the model via his LLM framework. This is directly relevant to engineers evaluating new LLM APIs and agentic capabilities for integration into their toolchains.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/9/muse-spark-1-1/#atom-everything</guid>
+    </item>
     <item>
       <title>Rewriting Bun in Rust</title>
       <link>https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything</link>
