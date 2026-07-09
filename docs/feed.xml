@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jul 2026 18:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 20:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The new GPT-5.6 family: Luna, Terra, Sol</title>
+      <link>https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 09 Jul 2026 19:46:38 +0000</pubDate>
+      <description>Simon Willison covers the general availability of OpenAI's GPT-5.6 model family (Luna, Terra, Sol), highlighting benchmark comparisons against Anthropic's Claude Fable 5, particularly around long-running agentic tasks and SWE-Bench Pro. He also details new API capabilities including programmatic tool calling with JavaScript orchestration, built-in multi-agent subagent spinning, and explicit prompt cache breakpoints — features directly relevant to engineers building AI-powered tooling and agents.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-everything</guid>
+    </item>
     <item>
       <title>The Pulse: Interesting AI coding stats from Cursor</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-interesting-ai-coding-stats-from-cursor/</link>
