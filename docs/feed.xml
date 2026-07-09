@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jul 2026 00:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 01:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Rewriting Bun in Rust</title>
+      <link>https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 08 Jul 2026 23:57:21 +0000</pubDate>
+      <description>Bun's creator used an agentic Claude-powered workflow to rewrite over one million lines of Zig into Rust in roughly 11 days — a task previously considered impractical at scale. The approach relied on Bun's existing TypeScript test suite as a conformance harness, adversarial LLM code review, and dynamic agent loops, costing an estimated $165,000 in tokens. The case study demonstrates how frontier coding agents are changing the calculus on large-scale rewrites, with the Rust port already shipping in Claude Code.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything</guid>
+    </item>
     <item>
       <title>Introducing GPT‑Live</title>
       <link>https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything</link>
