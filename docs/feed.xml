@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jul 2026 17:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 18:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: Interesting AI coding stats from Cursor</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-interesting-ai-coding-stats-from-cursor/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 09 Jul 2026 17:20:34 +0000</pubDate>
+      <description>Gergely Orosz analyzes Cursor's two-year usage report, highlighting that power users generate up to 40K lines of code per week, input tokens account for ~70% of AI coding costs (with caching reducing that dramatically), and nearly 40% of developers now accept AI-generated commits without manual review — up from 10% in just one month. The data also reveals that cost-per-line-accepted is a more meaningful model efficiency metric than raw per-request cost, suggesting engineers and companies should weigh model capability against price when choosing AI coding tools.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-interesting-ai-coding-stats-from-cursor/</guid>
+    </item>
     <item>
       <title>The Pulse: What can we learn from Bun’s rapid Rust rewrite with AI?</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-pulse-what-can-we-learn-from</link>
@@ -24,6 +32,14 @@
       <pubDate>Thu, 09 Jul 2026 16:24:09 +0000</pubDate>
       <description>Simon Willison introduces Meta's Muse Spark 1.1, the first in the Spark model line to offer an API, with claimed improvements in agentic tool calling and computer use. He shares his own `llm-meta-ai` plugin, enabling CLI and Python library access to the model via his LLM framework. This is directly relevant to engineers evaluating new LLM APIs and agentic capabilities for integration into their toolchains.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/9/muse-spark-1-1/#atom-everything</guid>
+    </item>
+    <item>
+      <title>llm-meta-ai 0.1</title>
+      <link>https://simonwillison.net/2026/Jul/9/llm-meta-ai/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 09 Jul 2026 16:12:20 +0000</pubDate>
+      <description>Simon Willison announces llm-meta-ai 0.1, a plugin that enables the LLM command-line tool to run prompts against Meta's muse-spark-1.1 model. This release expands the LLM ecosystem's support for Meta AI models, giving software engineers a new integration option for accessing Meta's latest LLM via a familiar CLI workflow.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/9/llm-meta-ai/#atom-everything</guid>
     </item>
     <item>
       <title>Rewriting Bun in Rust</title>
