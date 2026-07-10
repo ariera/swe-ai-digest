@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jul 2026 20:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 18:00:26 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Nilay Patel</title>
+      <link>https://simonwillison.net/2026/Jul/10/nilay-patel/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 10 Jul 2026 17:05:26 +0000</pubDate>
+      <description>Nilay Patel argues that augmented reality glasses fundamentally require continuous cloud-connected cameras, making privacy invasion an unavoidable technical trade-off rather than a design choice. Simon Willison highlights this as an AI-ethics concern, suggesting the societal costs of AI-powered AR may be prohibitive enough to warrant halting the product category entirely.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/10/nilay-patel/#atom-everything</guid>
+    </item>
     <item>
       <title>The new GPT-5.6 family: Luna, Terra, Sol</title>
       <link>https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-everything</link>
