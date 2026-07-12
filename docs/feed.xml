@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jul 2026 18:00:26 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 01:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>sqlite-utils 4.1</title>
+      <link>https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 11 Jul 2026 23:50:20 +0000</pubDate>
+      <description>Simon Willison describes using OpenAI Codex to accelerate the sqlite-utils 4.1 release by having it triage open issues and implement new features. He highlights a notable prompting technique: instructing the model to manually exercise its own code via `uv run python -c` to surface edge cases beyond what automated tests cover. This "self-testing" prompt pattern caught two bugs and offers a practical example of AI-assisted library development.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Nilay Patel</title>
       <link>https://simonwillison.net/2026/Jul/10/nilay-patel/#atom-everything</link>
