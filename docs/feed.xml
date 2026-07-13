@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2026 17:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 22:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette code-frequency chart on GitHub</title>
+      <link>https://simonwillison.net/2026/Jul/13/datasette-code-frequency/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 13 Jul 2026 21:45:27 +0000</pubDate>
+      <description>Simon Willison uses a GitHub code-frequency chart for his Datasette project as empirical evidence of how coding agents and frontier models (Opus 4.8, GPT-5.5, GPT-5.6 Sol) have dramatically accelerated his personal output. The sharp spike in commit activity correlates directly with the availability of these more capable models, offering a concrete, data-backed illustration of AI's measurable impact on an individual developer's productivity.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/13/datasette-code-frequency/#atom-everything</guid>
+    </item>
     <item>
       <title>Fragments: July 13</title>
       <link>https://martinfowler.com/fragments/2026-07-13.html</link>
