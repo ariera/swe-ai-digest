@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jul 2026 22:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 01:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Directly Responsible Individuals (DRI)</title>
+      <link>https://simonwillison.net/2026/Jul/12/directly-responsible-individuals/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 12 Jul 2026 23:57:14 +0000</pubDate>
+      <description>Simon Willison argues that LLM-powered agents should never hold the role of "Directly Responsible Individual" (DRI) in an organization, because accountability is a uniquely human capacity. This has direct implications for software engineers designing agentic workflows: however autonomous an AI agent becomes, a human must remain the accountable owner of any project or decision it touches.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/12/directly-responsible-individuals/#atom-everything</guid>
+    </item>
     <item>
       <title>Fable gets another bump</title>
       <link>https://simonwillison.net/2026/Jul/12/bump/#atom-everything</link>
