@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2026 22:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 23:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>DOOMQL</title>
+      <link>https://simonwillison.net/2026/Jul/13/doomql/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 13 Jul 2026 22:34:41 +0000</pubDate>
+      <description>Simon Willison showcases DOOMQL, a Doom-like game built by Peter Gostev using GPT-5.6 Sol, where SQLite serves as the entire game engine — handling movement, collision, rendering, and combat via SQL queries. Willison extends the project by using Claude to generate a Datasette app that visualizes the game's pixel state and minimap in real time. The piece illustrates AI-assisted programming enabling novel, unconventional software architectures.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/13/doomql/#atom-everything</guid>
+    </item>
     <item>
       <title>datasette code-frequency chart on GitHub</title>
       <link>https://simonwillison.net/2026/Jul/13/datasette-code-frequency/#atom-everything</link>
