@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW28</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW28</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-07-06 &ndash; 2026-07-12
+    &middot; 20 articles
+  </p>
+  <p>This digest period is dominated by several interlocking themes in applied AI for software engineering. The most prominent is the rapid maturation of AI-assisted development workflows: multiple articles document practitioners using frontier models — Claude Fable 5, GPT-5.5, GPT-5.6, and OpenAI Codex — to triage issues, generate release notes, design APIs, and even execute million-line codebase rewrites. Bun&#39;s 11-day Zig-to-Rust migration, costing $165K in tokens, stands as the period&#39;s most striking case study in agentic coding at scale.
+
+A second theme is the growing competitive density of the LLM landscape, with new releases from OpenAI (GPT-5.6 family), Meta (Muse Spark 1.1), and Tencent (Hy3), each expanding the options available to engineers for both cloud and local deployment.
+
+Alongside these productivity gains, several authors surface meaningful friction points: runaway token costs, AI-generated PR descriptions that omit critical context, degraded hiring signal from AI-generated resumes, and the risk of AI-assisted infiltration by bad actors. Local model viability and privacy trade-offs are also under active practitioner evaluation. Taken together, the articles reflect an industry moving from AI experimentation to operational integration — while grappling seriously with its costs and failure modes.</p>
+  <hr>
+
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/6/sqlite-utils/#atom-everything">sqlite-utils 4.0rc3</a>
+    <span class="meta">(2026-07-06)</span>
+  </h3>
+  
+  <p>Simon Willison describes releasing sqlite-utils 4.0rc3, noting he used Claude Fable 5 and GPT-5.5 to work through a backlog of issues and PRs, which expanded the changelog significantly. The article is a brief but concrete example of a practitioner using multiple frontier AI models as collaborative tools to accelerate open-source library development and issue triage.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/6/hy3/#atom-everything">tencent/Hy3</a>
+    <span class="meta">(2026-07-06)</span>
+  </h3>
+  
+  <p>Simon Willison covers Tencent&#39;s newly released Hy3, a 295B-parameter MoE open-source model (Apache 2.0) with 21B active parameters and a 256K context window. The model claims to rival flagship open-source models with 2–5x more parameters, and is temporarily available for free on OpenRouter. This is a notable addition to the competitive landscape of large open-weight models from Chinese labs.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything">sqlite-utils 4.0, now with database schema migrations</a>
+    <span class="meta">(2026-07-07)</span>
+  </h3>
+  
+  <p>Simon Willison describes how Claude Fable 5 and GPT-5.5 materially accelerated the sqlite-utils 4.0 release: Claude reviewed the codebase, identified 4 release blockers and 10 additional bugs, and helped design the compound foreign keys API, while both models generated the release notes and upgrade guide. Willison credits Fable 5&#39;s &#34;good taste in API design&#34; and proactive behavior when given open-ended review prompts, offering a concrete practitioner example of AI agents augmenting library maintenance work.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/7/github-code-component/#atom-everything">github-code Web Component</a>
+    <span class="meta">(2026-07-07)</span>
+  </h3>
+  
+  <p>Simon Willison demos a Web Component built with GPT-5.5 via a single prompt, which embeds GitHub code snippets by fetching raw file content and rendering specified line ranges. The article illustrates a practical AI-assisted workflow where a working, deployable UI component is generated from a brief natural-language description, highlighting how LLMs can accelerate front-end prototyping.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/8/kenton-varda/#atom-everything">Quoting Kenton Varda</a>
+    <span class="meta">(2026-07-08)</span>
+  </h3>
+  
+  <p>Kenton Varda (quoted by Simon Willison) banned AI-generated PR and commit descriptions from his team after finding they described low-level code details while omitting the high-level context reviewers actually need. This highlights a concrete failure mode of AI-assisted workflows: LLMs excel at summarizing what code does but struggle to articulate why changes were made, undermining code review quality.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything">Introducing GPT‑Live</a>
+    <span class="meta">(2026-07-08)</span>
+  </h3>
+  
+  <p>Simon Willison shares hands-on impressions of OpenAI&#39;s new GPT-Live voice mode, which replaces the older GPT-4o-era model and adds the ability to delegate complex tasks to GPT-5.5 in the background while maintaining conversational flow. He notes it meaningfully improves usefulness as a brainstorming tool, and flags a quirky early bug where the model interrupted with unsolicited laughter. This is relevant to engineers evaluating real-world usability of AI voice interfaces and agentic delegation patterns.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything">Rewriting Bun in Rust</a>
+    <span class="meta">(2026-07-08)</span>
+  </h3>
+  
+  <p>Bun&#39;s creator used an agentic Claude-powered workflow to rewrite over one million lines of Zig into Rust in roughly 11 days — a task previously considered impractical at scale. The approach relied on Bun&#39;s existing TypeScript test suite as a conformance harness, adversarial LLM code review, and dynamic agent loops, costing an estimated $165,000 in tokens. The case study demonstrates how frontier coding agents are changing the calculus on large-scale rewrites, with the Rust port already shipping in Claude Code.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/9/muse-spark-1-1/#atom-everything">Introducing Muse Spark 1.1</a>
+    <span class="meta">(2026-07-09)</span>
+  </h3>
+  
+  <p>Simon Willison introduces Meta&#39;s Muse Spark 1.1, the first in the Spark model line to offer an API, with claimed improvements in agentic tool calling and computer use. He shares his own `llm-meta-ai` plugin, enabling CLI and Python library access to the model via his LLM framework. This is directly relevant to engineers evaluating new LLM APIs and agentic capabilities for integration into their toolchains.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/9/llm-meta-ai/#atom-everything">llm-meta-ai 0.1</a>
+    <span class="meta">(2026-07-09)</span>
+  </h3>
+  
+  <p>Simon Willison announces llm-meta-ai 0.1, a plugin that enables the LLM command-line tool to run prompts against Meta&#39;s muse-spark-1.1 model. This release expands the LLM ecosystem&#39;s support for Meta AI models, giving software engineers a new integration option for accessing Meta&#39;s latest LLM via a familiar CLI workflow.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-everything">The new GPT-5.6 family: Luna, Terra, Sol</a>
+    <span class="meta">(2026-07-09)</span>
+  </h3>
+  
+  <p>Simon Willison covers the general availability of OpenAI&#39;s GPT-5.6 model family (Luna, Terra, Sol), highlighting benchmark comparisons against Anthropic&#39;s Claude Fable 5, particularly around long-running agentic tasks and SWE-Bench Pro. He also details new API capabilities including programmatic tool calling with JavaScript orchestration, built-in multi-agent subagent spinning, and explicit prompt cache breakpoints — features directly relevant to engineers building AI-powered tooling and agents.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/10/nilay-patel/#atom-everything">Quoting Nilay Patel</a>
+    <span class="meta">(2026-07-10)</span>
+  </h3>
+  
+  <p>Nilay Patel argues that augmented reality glasses fundamentally require continuous cloud-connected cameras, making privacy invasion an unavoidable technical trade-off rather than a design choice. Simon Willison highlights this as an AI-ethics concern, suggesting the societal costs of AI-powered AR may be prohibitive enough to warrant halting the product category entirely.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything">sqlite-utils 4.1</a>
+    <span class="meta">(2026-07-11)</span>
+  </h3>
+  
+  <p>Simon Willison describes using OpenAI Codex to accelerate the sqlite-utils 4.1 release by having it triage open issues and implement new features. He highlights a notable prompting technique: instructing the model to manually exercise its own code via `uv run python -c` to surface edge cases beyond what automated tests cover. This &#34;self-testing&#34; prompt pattern caught two bugs and offers a practical example of AI-assisted library development.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Jul/12/bump/#atom-everything">Fable gets another bump</a>
+    <span class="meta">(2026-07-12)</span>
+  </h3>
+  
+  <p>Simon Willison notes that Anthropic has again extended availability of Claude Fable 5 on paid plans through July 19, citing compute constraints as the original rationale. He argues Anthropic should make Fable permanently available, warning that the ongoing access uncertainty is ceding users to OpenAI, whose GPT-5.6 Sol faces no equivalent restrictions.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/fragments/2026-07-06.html">Fragments: July  6</a>
+    <span class="meta">(2026-07-06)</span>
+  </h3>
+  
+  <p>Fowler reports from Thoughtworks&#39; second Future of Software Development Retreat, where practitioners have moved past debating whether agentic AI changes software engineering and are now focused on *how*. Key themes include the emergence of &#34;harness engineering,&#34; architecture remaining relevant (good modularity helps agents as much as humans), and runaway token costs becoming a pressing operational concern. Charity Majors&#39; post on AI ethics—acknowledging AI&#39;s harms while rejecting disengagement—is also highlighted.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-factors.html">Viability of local models for coding</a>
+    <span class="meta">(2026-07-07)</span>
+  </h3>
+  
+  <p>Birgitta Böckeler evaluates the practical viability of running local LLMs for programming tasks, outlining the key factors that determine their effectiveness. This is directly relevant to software engineers considering privacy-conscious or offline AI coding workflows as an alternative to cloud-based copilots.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-experiences.html">Experiences with local models for coding</a>
+    <span class="meta">(2026-07-08)</span>
+  </h3>
+  
+  <p>Birgitta Böckeler evaluates local AI models for coding tasks, benchmarking them against two standard tasks and testing the most promising candidate in daily development use. This hands-on assessment is directly relevant to software engineers weighing privacy, cost, and capability trade-offs when considering locally-run AI coding assistants as alternatives to cloud-based tools.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/tech-jobs-market-in-2026-part-3-hiring">Tech jobs market in 2026, part 3: hiring managers &amp; job seekers</a>
+    <span class="meta">(2026-07-07)</span>
+  </h3>
+  
+  <p>Orosz finds the 2026 tech job market in a paradoxical state: hiring managers are flooded with AI-generated resumes and fake candidates, making inbound hiring nearly useless, while qualified engineers struggle to get interviews. Demand is strong for AI/ML engineers but weak for most others, and referral networks have become the dominant hiring channel. The piece illustrates how AI tooling is actively degrading trust and signal quality across the entire recruitment pipeline.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-pragmatic-engineer-ama">The Pragmatic Engineer AMA</a>
+    <span class="meta">(2026-07-08)</span>
+  </h3>
+  
+  <p>Gergely Orosz shares several AI-focused opinions: that AI doesn&#39;t make work easier and engineers should deliberately preserve skills they value (e.g., he avoids AI in writing but accepts coding skill atrophy); that MCP became a standard partly due to Anthropic&#39;s non-dominant position at launch, a dynamic that likely couldn&#39;t be replicated today; and that LeetCode interviews will persist but shift back in-person as AI trivially solves DSA puzzles. These perspectives are directly relevant to engineers navigating AI tooling decisions and the evolving hiring landscape.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-what-can-we-learn-from">The Pulse: What can we learn from Bun’s rapid Rust rewrite with AI?</a>
+    <span class="meta">(2026-07-09)</span>
+  </h3>
+  
+  <p>Gergely Orosz examines how Bun&#39;s JavaScript runtime was rewritten from Zig to Rust in just 11 days using Anthropic&#39;s AI tool Fable — a migration that would otherwise take 1–2 years — at a cost of $165K. The piece also surveys the rapidly evolving AI coding model landscape, including new releases from OpenAI, Cursor, and Meta, and highlights how North Korean hackers are using AI to infiltrate remote engineering teams. Together, these stories illustrate both the transformative productivity potential of AI-assisted development and emerging security risks it introduces.</p>
+  
+  <h3>
+    <a href="https://blog.pragmaticengineer.com/the-pulse-interesting-ai-coding-stats-from-cursor/">The Pulse: Interesting AI coding stats from Cursor</a>
+    <span class="meta">(2026-07-09)</span>
+  </h3>
+  
+  <p>Gergely Orosz analyzes Cursor&#39;s two-year usage report, highlighting that power users generate up to 40K lines of code per week, input tokens account for ~70% of AI coding costs (with caching reducing that dramatically), and nearly 40% of developers now accept AI-generated commits without manual review — up from 10% in just one month. The data also reveals that cost-per-line-accepted is a more meaningful model efficiency metric than raw per-request cost, suggesting engineers and companies should weigh model capability against price when choosing AI coding tools.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>

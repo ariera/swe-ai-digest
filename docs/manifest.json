@@ -1,5 +1,13 @@
 [
   {
+    "cw": "2026-CW28",
+    "period_start": "2026-07-06",
+    "period_end": "2026-07-12",
+    "articles_count": 20,
+    "summary_short": "This digest period is dominated by several interlocking themes in applied AI for software engineering. The most prominent is the rapid maturation of AI-assisted development workflows: multiple article\u2026",
+    "page": "digests/2026-CW28.html"
+  },
+  {
     "cw": "2026-CW27",
     "period_start": "2026-06-29",
     "period_end": "2026-07-05",
