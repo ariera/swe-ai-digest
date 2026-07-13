@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2026 01:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 12:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Control the ideas, not the code</title>
+      <link>http://antirez.com/news/169</link>
+      <author>Salvatore Sanfilippo (antirez)</author>
+      <pubDate>Mon, 13 Jul 2026 11:39:52 +0000</pubDate>
+      <description>Antirez (Redis creator) argues that software engineers should shift focus from reviewing AI-generated code to controlling the ideas and design behind their software, as LLMs now handle local code correctness better than humans can at scale. He contends that line-by-line code review is increasingly suboptimal — time is better spent on architecture, QA, and maintaining human-readable design documents. He raises an open question about whether junior engineers still need to deeply understand code internals.</description>
+      <guid isPermaLink="true">http://antirez.com/news/169</guid>
+    </item>
     <item>
       <title>Directly Responsible Individuals (DRI)</title>
       <link>https://simonwillison.net/2026/Jul/12/directly-responsible-individuals/#atom-everything</link>
