@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2026 12:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 16:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mqk2pnikqf2q</link>
+      <author>Matteo Collina</author>
+      <pubDate>Mon, 13 Jul 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina raises the question of sustainability for the open source infrastructure that AI developer tools depend on, noting that while AI is credited with boosting developer productivity, the cost burden on open source maintainers goes largely unexamined. This matters to software engineers as it highlights a systemic funding and labor gap created by AI tooling's reliance on open source ecosystems.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mqk2pnikqf2q</guid>
+    </item>
     <item>
       <title>Control the ideas, not the code</title>
       <link>http://antirez.com/news/169</link>
