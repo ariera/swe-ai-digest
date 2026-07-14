@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2026 23:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 13:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>DSLs Enable Reliable Use of LLMs</title>
+      <link>https://martinfowler.com/articles/llm-and-dsls.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 14 Jul 2026 12:51:00 +0000</pubDate>
+      <description>Unmesh Joshi argues that LLMs serve two key roles in software development: as brainstorming partners for building domain vocabulary, and as a natural language interface once that vocabulary is established. His experience building Tickloom shows that designing a Domain-Specific Language significantly improves LLM reliability and effectiveness. This offers software engineers a concrete architectural pattern for making LLM-assisted development more predictable and robust.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/llm-and-dsls.html</guid>
+    </item>
     <item>
       <title>DOOMQL</title>
       <link>https://simonwillison.net/2026/Jul/13/doomql/#atom-everything</link>
