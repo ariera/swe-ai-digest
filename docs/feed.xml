@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2026 19:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 23:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>simonw/pedalican</title>
+      <link>https://simonwillison.net/2026/Jul/14/pedalican/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 14 Jul 2026 22:29:45 +0000</pubDate>
+      <description>Simon Willison explores how Codex Desktop's custom "pet" feature uses GPT-4o image generation (gpt-image-2) to autonomously produce game-ready sprite assets through multi-round prompting with chroma-key backgrounds. He walks through the prompt structures and open-source skills powering the pipeline, offering a practical case study in AI-driven asset generation. This is relevant to engineers interested in agentic image-generation workflows and prompt engineering for structured visual outputs.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/14/pedalican/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Armin Ronacher</title>
       <link>https://simonwillison.net/2026/Jul/14/armin-ronacher/#atom-everything</link>
