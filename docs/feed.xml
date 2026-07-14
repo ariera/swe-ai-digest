@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2026 17:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 18:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>What is “loop engineering?”</title>
+      <link>https://newsletter.pragmaticengineer.com/p/what-is-loop-engineering</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 14 Jul 2026 17:01:57 +0000</pubDate>
+      <description>Gergely Orosz investigates "loop engineering" — the practice of designing automated systems that repeatedly prompt AI agents toward a goal, rather than manually prompting them — tracing its origins to the "Ralph Wiggum" bash loop technique and its recent adoption as a first-class `/goal` command in Codex, Claude Code, and Hermes. While some engineers find agentic loops valuable for event-driven triggers and overnight coding tasks, others report agent drift, high token costs, and diminishing returns versus human-in-the-loop workflows. Orosz concludes that context engineering may offer broader practical value to most developers than deep loop engineering.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/what-is-loop-engineering</guid>
+    </item>
     <item>
       <title>DSLs Enable Reliable Use of LLMs</title>
       <link>https://martinfowler.com/articles/llm-and-dsls.html</link>
