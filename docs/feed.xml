@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2026 18:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 19:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Armin Ronacher</title>
+      <link>https://simonwillison.net/2026/Jul/14/armin-ronacher/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 14 Jul 2026 18:04:23 +0000</pubDate>
+      <description>Armin Ronacher argues that the "shared language" of a software project — its implicit understanding of concepts, boundaries, and ownership — is partly maintained by the friction of human coordination, not just documentation. He warns that AI coding agents, by bypassing this friction, risk eroding the organizational knowledge-synchronization that keeps teams aligned. This is a critical concern for engineers evaluating how autonomous agents might degrade system coherence over time.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/14/armin-ronacher/#atom-everything</guid>
+    </item>
     <item>
       <title>What is “loop engineering?”</title>
       <link>https://newsletter.pragmaticengineer.com/p/what-is-loop-engineering</link>
