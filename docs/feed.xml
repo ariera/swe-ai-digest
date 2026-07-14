@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2026 13:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 17:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -56,6 +56,14 @@
       <pubDate>Mon, 13 Jul 2026 11:39:52 +0000</pubDate>
       <description>Antirez (Redis creator) argues that software engineers should shift focus from reviewing AI-generated code to controlling the ideas and design behind their software, as LLMs now handle local code correctness better than humans can at scale. He contends that line-by-line code review is increasingly suboptimal — time is better spent on architecture, QA, and maintaining human-readable design documents. He raises an open question about whether junior engineers still need to deeply understand code internals.</description>
       <guid isPermaLink="true">http://antirez.com/news/169</guid>
+    </item>
+    <item>
+      <title>The Tower Keeps Rising</title>
+      <link>https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher argues that AI agents erode the shared architectural understanding that large software teams depend on for coordination — not by preventing communication, but by making it unnecessary. Unlike the Tower of Babel, where lost common language halts construction, AI-assisted development lets codebases keep growing even after coherent shared mental models have collapsed. This matters to engineers because the absence of immediate failure makes the degradation of system-wide understanding invisible and harder to counteract.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/</guid>
     </item>
     <item>
       <title>Directly Responsible Individuals (DRI)</title>
