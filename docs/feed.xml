@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2026 23:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 15:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>How I tricked Claude into leaking your deepest, darkest secrets</title>
+      <link>https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 15 Jul 2026 14:21:54 +0000</pubDate>
+      <description>Simon Willison covers a prompt injection vulnerability in Claude's `web_fetch` tool, where a researcher (Ayush Paul) exploited a loophole allowing the agent to follow links embedded in previously fetched pages — enabling data exfiltration of private user details via a honeypot site. Anthropic patched the issue by preventing `web_fetch` from navigating to links discovered within its own fetched content. This illustrates the ongoing "lethal trifecta" risk for AI agents with access to private data, web browsing, and untrusted content.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything</guid>
+    </item>
     <item>
       <title>simonw/pedalican</title>
       <link>https://simonwillison.net/2026/Jul/14/pedalican/#atom-everything</link>
