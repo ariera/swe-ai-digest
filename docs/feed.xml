@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jul 2026 18:00:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 21:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Kimi K3, and what we can still learn from the pelican benchmark</title>
+      <link>https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 16 Jul 2026 20:19:30 +0000</pubDate>
+      <description>Simon Willison evaluates Moonshot AI's newly released Kimi K3, a 2.8-trillion-parameter model priced at $3/$15 per million tokens — the most expensive from a Chinese lab to date — and benchmarks it using his "pelican SVG" prompt. He reflects on the limitations of that informal benchmark, noting it no longer correlates well with overall model quality and fails to capture agentic tool-calling capabilities. Despite its flaws, Willison argues the test remains useful as a "hello world" exercise that reveals practical characteristics like reasoning token usage, hidden system prompts, and cost-per-task.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Thibault Sottiaux</title>
       <link>https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything</link>
