@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jul 2026 01:00:31 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 14:00:40 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Linus Torvalds</title>
+      <link>https://simonwillison.net/2026/Jul/16/linus-torvalds/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 16 Jul 2026 13:26:10 +0000</pubDate>
+      <description>Linus Torvalds publicly declares that Linux is not an anti-AI project and will not become one, framing AI as a clearly useful tool and inviting dissenters to fork the project. This carries significant weight for software engineers, as Torvalds' endorsement signals that AI tooling is becoming a normalized, non-negotiable part of major open-source infrastructure development.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/16/linus-torvalds/#atom-everything</guid>
+    </item>
+    <item>
+      <title>The Archaeologist’s Copilot</title>
+      <link>https://martinfowler.com/articles/archaeologist-copilot.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Thu, 16 Jul 2026 13:25:00 +0000</pubDate>
+      <description>Nik Malykhin shares lessons from using LLMs to modernize a Java 1.5 codebase, finding that unconstrained AI suggestions were plausible but unreliable. Progress required grounding AI in evidence, assigning it clear roles, and pairing it with a Docker-stabilized environment and test-protected refactoring. The key insight: AI copilots are most effective in legacy modernization when tightly scoped and evidence-driven.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/archaeologist-copilot.html</guid>
+    </item>
     <item>
       <title>Mermaid to Unicode box art (grok-mermaid)</title>
       <link>https://simonwillison.net/2026/Jul/16/grok-mermaid/#atom-everything</link>
