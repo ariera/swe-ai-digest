@@ -6,9 +6,33 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jul 2026 16:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 17:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: What can we learn from Bun’s rapid Rust rewrite with AI?</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-buns-rapid-rust-rewrite-with-ai/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 16 Jul 2026 16:50:20 +0000</pubDate>
+      <description>Gergely Orosz analyzes how Bun's creator used Anthropic's Fable (Claude-based agents) to rewrite 535K lines of Zig into Rust in just 11 days for $165K — a project estimated to take a human team over a year. The process relied on 64 parallel AI agents, adversarial review loops, a detailed porting guide, and a comprehensive test suite. The case argues that AI now makes previously impractical large-scale migrations feasible, but only for well-tested codebases led by engineers with deep domain knowledge.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-buns-rapid-rust-rewrite-with-ai/</guid>
+    </item>
+    <item>
+      <title>The Pulse: Grok’s CLI caught uploading all your local files to the cloud</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-groks-cli-caught-uploading</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 16 Jul 2026 16:48:53 +0000</pubDate>
+      <description>Orosz reports that xAI's Grok CLI was caught automatically uploading users' local files to the cloud without clear consent, surfacing a significant trust and privacy concern just as developers were beginning to adopt it alongside the Grok 4.5 coding model. The incident highlights the security risks inherent in AI-powered developer tooling and the importance of scrutinizing data-handling practices before integrating such tools into engineering workflows.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-groks-cli-caught-uploading</guid>
+    </item>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mqrotcybok23</link>
+      <author>Matteo Collina</author>
+      <pubDate>Thu, 16 Jul 2026 16:47:00 +0000</pubDate>
+      <description>Matteo Collina announces support for running Eve AI agents on Kubernetes via Platformatic, highlighting that Eve provides Markdown-based instructions, TypeScript tooling, and durable workflows. The post underscores that production AI agent deployments require infrastructure beyond a basic HTTP server, signaling growing attention to operationalizing agent frameworks at scale.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mqrotcybok23</guid>
+    </item>
     <item>
       <title>Inkling: Our open-weights model</title>
       <link>https://simonwillison.net/2026/Jul/16/inkling/#atom-everything</link>
