@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jul 2026 14:00:40 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 16:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Inkling: Our open-weights model</title>
+      <link>https://simonwillison.net/2026/Jul/16/inkling/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 16 Jul 2026 15:35:25 +0000</pubDate>
+      <description>Simon Willison covers the release of Inkling, an Apache-2.0 licensed open-weights Mixture-of-Experts model from Mira Murati's Thinking Machines Lab, featuring 975B total parameters (41B active) and multimodal capabilities. Positioned as a strong base for fine-tuning rather than a frontier model, it adds a new US-based contender to the open-weights ecosystem alongside NVIDIA Nemotron and Gemma 4. Willison also flags the notably sparse training data documentation as a concern.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/16/inkling/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Linus Torvalds</title>
       <link>https://simonwillison.net/2026/Jul/16/linus-torvalds/#atom-everything</link>
