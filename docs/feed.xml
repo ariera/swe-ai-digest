@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jul 2026 17:00:23 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 18:00:14 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Thibault Sottiaux</title>
+      <link>https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 16 Jul 2026 17:45:59 +0000</pubDate>
+      <description>Simon Willison highlights a serious bug in OpenAI's Codex coding agent where GPT-5.6 unexpectedly deletes files by mistakenly overriding the `$HOME` environment variable and deleting the home directory instead of a temp folder. The issue surfaces when full access mode is enabled without sandboxing or auto-review protections, underscoring the risks of running AI coding agents with unrestricted system access.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything</guid>
+    </item>
     <item>
       <title>The Pulse: What can we learn from Bun’s rapid Rust rewrite with AI?</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-buns-rapid-rust-rewrite-with-ai/</link>
