@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 17:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 01:00:31 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Mermaid to Unicode box art (grok-mermaid)</title>
+      <link>https://simonwillison.net/2026/Jul/16/grok-mermaid/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 16 Jul 2026 00:33:18 +0000</pubDate>
+      <description>Simon Willison explores the open-sourced Grok CLI coding agent's codebase, discovering a Rust-based Mermaid diagram renderer, then uses Claude Code to port it to a browser tool via WebAssembly. The article illustrates a practical AI-assisted workflow — using one AI coding agent (Claude Code) to repurpose code from another (Grok CLI) — highlighting how open-sourced AI tooling enables rapid experimentation.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/16/grok-mermaid/#atom-everything</guid>
+    </item>
+    <item>
+      <title>xai-org/grok-build, now open source</title>
+      <link>https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 15 Jul 2026 23:59:30 +0000</pubDate>
+      <description>Simon Willison examines xAI's Grok Build CLI agent after it was open-sourced under Apache 2.0 following a privacy scandal — the tool had been silently uploading users' entire directories to xAI's cloud. The 844K-line Rust codebase reveals agent architecture details, including system prompt templates, a subagent prompt, and tool implementations ported from Codex and OpenCode. This offers a rare look into the internals of a production terminal coding agent and the privacy risks such tools can carry.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything</guid>
+    </item>
     <item>
       <title>Context engineering with Dex Horthy</title>
       <link>https://newsletter.pragmaticengineer.com/p/context-engineering-with-dex-horthy</link>
