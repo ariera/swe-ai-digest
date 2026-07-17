@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Jul 2026 00:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 14:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Kimi K3</title>
+      <link>https://simonwillison.net/2026/Jul/17/kimi-k3/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 17 Jul 2026 13:43:53 +0000</pubDate>
+      <description>Simon Willison highlights a brief but telling exchange with Kimi K3, a large language model that refuses to leak its system prompt and deflects with a polite redirect. The anecdote illustrates how frontier LLMs are increasingly exhibiting deliberate "AI personality" behaviors around prompt confidentiality, a practical concern for engineers building on top of these models.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/17/kimi-k3/#atom-everything</guid>
+    </item>
     <item>
       <title>Firefox in WebAssembly</title>
       <link>https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything</link>
