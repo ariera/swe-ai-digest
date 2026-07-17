@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jul 2026 21:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 00:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Firefox in WebAssembly</title>
+      <link>https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 16 Jul 2026 23:34:16 +0000</pubDate>
+      <description>Simon Willison highlights Puter's project compiling Firefox to WebAssembly, which ran an estimated $25,000 worth of Claude Opus and Fable tokens to complete. This serves as a notable real-world data point on the cost and scale of using LLM-assisted programming for complex, low-level systems engineering tasks.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything</guid>
+    </item>
     <item>
       <title>Kimi K3, and what we can still learn from the pelican benchmark</title>
       <link>https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything</link>
@@ -56,6 +64,14 @@
       <pubDate>Thu, 16 Jul 2026 15:35:25 +0000</pubDate>
       <description>Simon Willison covers the release of Inkling, an Apache-2.0 licensed open-weights Mixture-of-Experts model from Mira Murati's Thinking Machines Lab, featuring 975B total parameters (41B active) and multimodal capabilities. Positioned as a strong base for fine-tuning rather than a frontier model, it adds a new US-based contender to the open-weights ecosystem alongside NVIDIA Nemotron and Gemma 4. Willison also flags the notably sparse training data documentation as a concern.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/16/inkling/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Mermaid to ASCII art (mermaid-ascii)</title>
+      <link>https://simonwillison.net/2026/Jul/16/mermaid-ascii/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 16 Jul 2026 14:57:39 +0000</pubDate>
+      <description>Simon Willison describes using Claude Fable 5 to compile a Go library (mermaid-ascii) to WebAssembly, enabling a browser-based Mermaid-to-ASCII art tool. This illustrates a practical AI-assisted workflow where an LLM handles non-trivial cross-compilation tasks, reducing friction for developers building web tooling from existing native libraries.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/16/mermaid-ascii/#atom-everything</guid>
     </item>
     <item>
       <title>Quoting Linus Torvalds</title>
