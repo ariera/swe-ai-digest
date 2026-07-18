@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Jul 2026 19:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 07:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Claude make Fable 5 permanent</title>
+      <link>https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 18 Jul 2026 06:00:13 +0000</pubDate>
+      <description>Anthropic has reversed its plan to restrict Claude Fable 5 to API-only access, instead making it permanently available to Max and Team Premium subscribers — a decision Willison attributes to competitive pressure from GPT-5.6 Sol and Kimi 3. The post highlights how frontier AI model pricing and access strategies are being shaped by intensifying market competition, a key concern for engineers evaluating which platforms and subscription tiers to commit to.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Kimi K3</title>
       <link>https://simonwillison.net/2026/Jul/17/kimi-k3/#atom-everything</link>
