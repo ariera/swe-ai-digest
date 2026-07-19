@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jul 2026 07:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 05:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Claude Code uses Bun written in Rust now</title>
+      <link>https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 19 Jul 2026 03:54:09 +0000</pubDate>
+      <description>Simon Willison investigates Anthropic's Claude Code CLI and confirms it now ships with a Rust-rewritten version of the Bun runtime (v1.4.0, a pre-release), verified via binary string inspection. The migration has been silently deployed to millions of devices with a 10% Linux startup improvement and no breaking changes. This is relevant to engineers using Claude Code as an agentic coding tool, illustrating how its underlying runtime stack is actively evolving.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything</guid>
+    </item>
     <item>
       <title>Claude make Fable 5 permanent</title>
       <link>https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything</link>
