@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jul 2026 05:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 06:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>AI Mania Is Eviscerating Global Decision-Making</title>
+      <link>https://simonwillison.net/2026/Jul/19/ai-mania/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 19 Jul 2026 05:06:21 +0000</pubDate>
+      <description>Simon Willison highlights Nik Suresh's account of AI hype distorting enterprise decision-making, where executives craft AI-centric strategies without ever using the tools, and engineers game token leaderboards rather than deliver real value. A key dynamic revealed is how inflated productivity claims (e.g., "100x gains") create self-reinforcing silence, as vendors fear contradicting customers' own executives. This matters to engineers navigating organizations where AI mandates are driven by politics rather than informed technical judgment.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/19/ai-mania/#atom-everything</guid>
+    </item>
     <item>
       <title>Claude Code uses Bun written in Rust now</title>
       <link>https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything</link>
