@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2026 04:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 18:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Who’s Afraid of Chinese Models?</title>
+      <link>https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 20 Jul 2026 17:09:19 +0000</pubDate>
+      <description>Simon Willison highlights Ben Thompson's proposal that the U.S. should legislate fair use for training data and ban anti-distillation terms of service, enabling American open models to better compete with Chinese counterparts. The post also notes Alibaba's reversal on releasing Qwen 3.8 Max as open weights, potentially prompted by Xi Jinping's push for open-source AI collaboration. Both points carry significant implications for the competitive and legal landscape of open-weight LLM development.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Sam Altman</title>
       <link>https://simonwillison.net/2026/Jul/20/sam-altman/#atom-everything</link>
