@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jul 2026 06:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 04:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Sam Altman</title>
+      <link>https://simonwillison.net/2026/Jul/20/sam-altman/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 20 Jul 2026 03:47:59 +0000</pubDate>
+      <description>Simon Willison highlights a 2022 email from Sam Altman to OpenAI's board, exposed in Musk v. Altman litigation, revealing that OpenAI considered releasing an open-source GPT-3-class model strategically — to preempt competitors and make it harder for rival efforts to secure funding. The quote raises significant questions about OpenAI's stated open-source commitments versus its competitive motivations.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/20/sam-altman/#atom-everything</guid>
+    </item>
     <item>
       <title>AI Mania Is Eviscerating Global Decision-Making</title>
       <link>https://simonwillison.net/2026/Jul/19/ai-mania/#atom-everything</link>
