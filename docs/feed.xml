@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2026 18:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 20:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Reverse-engineering is cheap now</title>
+      <link>https://simonwillison.net/2026/Jul/20/cheap-reverse-engineering/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 20 Jul 2026 19:24:05 +0000</pubDate>
+      <description>Simon Willison argues that coding agents have fundamentally shifted the ROI calculus for reverse-engineering tasks by dramatically lowering the cost of writing and maintaining throwaway code. What once required significant upfront effort — with risky long-term maintenance burdens — is now approachable precisely because cheap code is also cheap to discard or rebuild. This signals a broader pattern: AI agents are unlocking categories of automation previously deemed not worth the effort.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/20/cheap-reverse-engineering/#atom-everything</guid>
+    </item>
     <item>
       <title>Who’s Afraid of Chinese Models?</title>
       <link>https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/#atom-everything</link>
