@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2026 20:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 13:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>A Fireside Chat with Cat and Thariq from the Claude Code team</title>
+      <link>https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 21 Jul 2026 12:54:02 +0000</pubDate>
+      <description>Simon Willison's fireside chat with Anthropic's Claude Code team reveals how AI coding agents are reshaping engineering workflows: Claude Tag now lands 65% of Anthropic's product engineering PRs, the team's system prompt shrank 80%, and conventional practices like spec-first development and avoiding rewrites no longer hold. The discussion offers practical insight into agentic tool design, prompting best practices for newer models, team-level AI collaboration patterns, and how engineers should shift toward product taste over execution as AI handles more implementation.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything</guid>
+    </item>
     <item>
       <title>Reverse-engineering is cheap now</title>
       <link>https://simonwillison.net/2026/Jul/20/cheap-reverse-engineering/#atom-everything</link>
