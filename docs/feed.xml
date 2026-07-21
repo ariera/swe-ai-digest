@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jul 2026 14:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 15:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Nativ: Run AI models locally on your Mac</title>
+      <link>https://simonwillison.net/2026/Jul/21/nativ/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 21 Jul 2026 14:22:27 +0000</pubDate>
+      <description>Simon Willison highlights Nativ, a new macOS desktop app by Prince Canuma that wraps the MLX framework to run AI models locally, offering both a chat interface and a localhost API server — similar to LM Studio. It automatically detects MLX models already cached from Hugging Face, lowering setup friction. This is relevant to engineers exploring local LLM inference on Apple Silicon as a privacy-friendly or offline alternative to cloud-hosted models.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/21/nativ/#atom-everything</guid>
+    </item>
     <item>
       <title>Fragments: July 21</title>
       <link>https://martinfowler.com/fragments/2026-07-21.html</link>
