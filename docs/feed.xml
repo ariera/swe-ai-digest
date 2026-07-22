@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jul 2026 15:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 15:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Not just development, distribution of software may change as well</title>
+      <link>http://antirez.com/news/170</link>
+      <author>Salvatore Sanfilippo (antirez)</author>
+      <pubDate>Wed, 22 Jul 2026 14:52:39 +0000</pubDate>
+      <description>Antirez (Redis creator) argues that AI coding agents are reshaping not just software development but also software distribution: because users can now adapt and extend codebases themselves, repositories should serve as well-documented templates rather than purely polished releases. He proposes that experimental branches become first-class project artifacts, enabling communities to collectively evaluate new features via AI-assisted iteration. For software engineers, this challenges conventional stable/unstable branching models and raises new questions about documentation designed for agent consumption.</description>
+      <guid isPermaLink="true">http://antirez.com/news/170</guid>
+    </item>
     <item>
       <title>Nativ: Run AI models locally on your Mac</title>
       <link>https://simonwillison.net/2026/Jul/21/nativ/#atom-everything</link>
