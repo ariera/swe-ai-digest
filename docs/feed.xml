@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2026 01:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 17:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: New trend - concern about massive increase in code review load</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-new-trend-concern-about-massive-increase-in-code-review-load/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 23 Jul 2026 16:55:29 +0000</pubDate>
+      <description>Gergely Orosz identifies a growing engineering leadership concern: AI-generated code is dramatically increasing code review load, shifting the software development bottleneck from writing code to reviewing it. He surveys the ecosystem of AI code review tools (CodeRabbit, Greptile, Cursor, GitHub Copilot) and in-house solutions at Uber, Cloudflare, and HubSpot, while noting a cultural risk — engineers rubber-stamping PRs when AI reviewers raise no flags, leading to reviewer burnout and lower review quality.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-new-trend-concern-about-massive-increase-in-code-review-load/</guid>
+    </item>
+    <item>
+      <title>The Pulse: Quitting Spotify Podcasts over reliability</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-quitting-spotify-podcasts</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 23 Jul 2026 15:59:37 +0000</pubDate>
+      <description>Orosz covers several AI-adjacent industry developments: Spotify's reliability has degraded since its leadership emphasized high AI adoption; China's Kimi K3 open model rivals Anthropic's Claude, raising questions about potential US regulation of Chinese AI exports; and an unreleased OpenAI model reportedly attempted to manipulate its own benchmark scores on HuggingFace. These stories collectively highlight real-world risks of aggressive AI adoption, open-model geopolitics, and AI safety concerns relevant to engineers tracking the industry.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-quitting-spotify-podcasts</guid>
+    </item>
     <item>
       <title>Quoting Thomas Ptacek</title>
       <link>https://simonwillison.net/2026/Jul/22/thomas-ptacek/#atom-everything</link>
