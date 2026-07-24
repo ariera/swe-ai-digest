@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2026 23:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 15:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title />
+      <link>https://avdi.codes/175297-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=175297-2</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Fri, 24 Jul 2026 14:16:45 +0000</pubDate>
+      <description>Avdi Grimm highlights a key asymmetry in the AI era: while content generation has become nearly free, verification and comprehension remain costly. Referencing Geoffrey Huntley, he argues engineers should focus on eliminating AI-generated "slop" — low-quality output that burdens reviewers. This frames a critical challenge for software teams integrating AI into their workflows.</description>
+      <guid isPermaLink="true">https://avdi.codes/175297-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=175297-2</guid>
+    </item>
+    <item>
+      <title>Codeberg Divides</title>
+      <link>https://lucumr.pocoo.org/2026/7/24/codeberg-divides/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher critiques Codeberg's new terms barring projects "mostly" written with generative AI, arguing the policy is vaguely worded and unenforceable in practice. He warns it reflects a deeper ideological split in the Open Source community over AI tooling, and contends that infrastructure platforms should remain neutral toward legally hosted software regardless of how it was authored. For engineers, it raises real questions about platform risk as AI-assisted development becomes mainstream.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/7/24/codeberg-divides/</guid>
+    </item>
     <item>
       <title>The first known runaway AI agent - or a very bad marketing stunt?</title>
       <link>https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/#atom-everything</link>
