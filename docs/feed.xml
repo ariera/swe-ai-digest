@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jul 2026 00:00:29 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 01:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Boris Cherny</title>
+      <link>https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 25 Jul 2026 00:42:59 +0000</pubDate>
+      <description>Simon Willison highlights a quote from Boris Cherny noting that Claude Opus 5 is Anthropic's most prompt-injection-resistant model to date, citing internal PI evals and red teaming results detailed on page 73 of the system card. For engineers building LLM-powered applications, improved prompt injection robustness is a significant security milestone that could reduce the need for defensive workarounds in agentic workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything</guid>
+    </item>
     <item>
       <title>Introducing Claude Opus 5</title>
       <link>https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything</link>
