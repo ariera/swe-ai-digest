@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jul 2026 01:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 12:00:27 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Being Linux Torvalds</title>
+      <link>http://antirez.com/news/171</link>
+      <author>Salvatore Sanfilippo (antirez)</author>
+      <pubDate>Sat, 25 Jul 2026 11:20:55 +0000</pubDate>
+      <description>Antirez argues that skilled AI-assisted programming mirrors Linus Torvalds' role as Linux's architect-director rather than a line-by-line coder: expert engineers should act as design leads, guiding LLMs and agents the way Linus coordinates subsystem maintainers. He pushes back against "vibe coding," asserting that effective AI programming still requires deep technical judgment, architectural intuition, and learned skill — it isn't democratically easy for everyone.</description>
+      <guid isPermaLink="true">http://antirez.com/news/171</guid>
+    </item>
     <item>
       <title>Quoting Boris Cherny</title>
       <link>https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything</link>
