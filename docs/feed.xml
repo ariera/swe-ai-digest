@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jul 2026 12:00:27 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 23:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Ruff v0.16.0</title>
+      <link>https://simonwillison.net/2026/Jul/25/ruff/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 25 Jul 2026 22:44:05 +0000</pubDate>
+      <description>Simon Willison describes upgrading three major Python projects to Ruff v0.16.0, which expanded default lint rules from 59 to 413. He notes that Ruff's structured error output is well-suited for coding agents, and delegates the bulk of the fixes to Codex (GPT-5.6 Sol) and Claude Code (Opus 5) — a concrete example of AI agents handling routine code-quality remediation at scale.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/25/ruff/#atom-everything</guid>
+    </item>
     <item>
       <title>Being Linux Torvalds</title>
       <link>http://antirez.com/news/171</link>
