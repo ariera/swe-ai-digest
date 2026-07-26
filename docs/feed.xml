@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jul 2026 23:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2026 20:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>An Inside Look at the Relay Market Powering Token Resellers and Fraud</title>
+      <link>https://simonwillison.net/2026/Jul/26/relay-market/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 26 Jul 2026 19:30:54 +0000</pubDate>
+      <description>Simon Willison highlights an investigation into a grey market where resellers exploit free trials, unprotected support bots, and stolen payment methods to resell LLM API tokens at a discount, primarily in China. This ecosystem poses a direct threat to developers building public-facing LLM applications, as unprotected endpoints become targets for exploitation. Willison urges LLM vendors to implement stricter, user-configurable spending caps on API keys.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/26/relay-market/#atom-everything</guid>
+    </item>
     <item>
       <title>Ruff v0.16.0</title>
       <link>https://simonwillison.net/2026/Jul/25/ruff/#atom-everything</link>
