@@ -1,5 +1,13 @@
 [
   {
+    "cw": "2026-CW30",
+    "period_start": "2026-07-20",
+    "period_end": "2026-07-26",
+    "articles_count": 20,
+    "summary_short": "This digest period is dominated by four intersecting themes: the maturing of AI coding agents, the geopolitics of open-weight models, AI safety and security risks, and the verification bottleneck.\n\nOn\u2026",
+    "page": "digests/2026-CW30.html"
+  },
+  {
     "cw": "2026-CW29",
     "period_start": "2026-07-13",
     "period_end": "2026-07-19",
