@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jul 2026 16:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 22:00:25 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>An opinionated guide to which AI to use to do stuff</title>
+      <link>https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 27 Jul 2026 21:55:53 +0000</pubDate>
+      <description>Simon Willison comments on Ethan Mollick's evolving AI usage guide, noting the shift from chat-focused recommendations to agentic systems capable of performing extended, autonomous work. He highlights the confusing naming conventions across ChatGPT and Claude's agent modes (Work, Codex, Cowork, Code) and flags a non-obvious behavior: enabling "Work" mode on ChatGPT mobile removes the internet restriction on its Code Interpreter container. Relevant for engineers evaluating which agentic AI tools to adopt and understanding their distinct capabilities.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/#atom-everything</guid>
+    </item>
     <item>
       <title>I'm sorry, Dave</title>
       <link>https://world.hey.com/dhh/i-m-sorry-dave-380ec27d</link>
