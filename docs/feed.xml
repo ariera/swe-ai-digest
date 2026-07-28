@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jul 2026 14:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 16:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -16,6 +16,22 @@
       <pubDate>Tue, 28 Jul 2026 17:00:00 +0000</pubDate>
       <description>Oxide Computer is joining Anthropic's Project Glasswing, using Claude Mythos 5 to proactively identify and patch vulnerabilities across their full hardware-software stack — from firmware to network control plane. The post argues that AI-assisted security scanning is most effective when an organization controls every layer of its infrastructure. Oxide commits to sharing findings openly, framing responsible AI use in security as a public good for organizations running critical software.</description>
       <guid isPermaLink="true">https://oxide.computer/blog/oxide-anthropic-project-glasswing</guid>
+    </item>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mrprphifgp25</link>
+      <author>Matteo Collina</author>
+      <pubDate>Tue, 28 Jul 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina shares that he is building a new product using AI pair-programming tools (Fable and GPT-Sol), and credits deep code review — enabled by that workflow — with catching significant design mistakes he would have otherwise missed. The anecdote illustrates how AI-assisted review can surface architectural flaws early in development.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mrprphifgp25</guid>
+    </item>
+    <item>
+      <title>How building software is changing at Anthropic</title>
+      <link>https://newsletter.pragmaticengineer.com/p/inside-anthropic</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 28 Jul 2026 15:49:30 +0000</pubDate>
+      <description>Gergely Orosz goes inside Anthropic to document how AI is concretely reshaping software engineering practices: a 500K-line Bun rewrite completed in 11 days with AI tooling, a six-month agent infrastructure project that would have taken two years pre-AI, and shifting norms around prototyping, code review, and team structure. Key findings include that verification now outweighs implementation effort, AI handles more code review and testing, and teams run leaner with a two-engineer-per-project cap. Engineers closest to AI tooling at the lab report less fear of job displacement, not more.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/inside-anthropic</guid>
     </item>
     <item>
       <title>The Orchestrator's Tax</title>
