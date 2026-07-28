@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jul 2026 13:00:25 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 14:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -16,6 +16,14 @@
       <pubDate>Tue, 28 Jul 2026 17:00:00 +0000</pubDate>
       <description>Oxide Computer is joining Anthropic's Project Glasswing, using Claude Mythos 5 to proactively identify and patch vulnerabilities across their full hardware-software stack — from firmware to network control plane. The post argues that AI-assisted security scanning is most effective when an organization controls every layer of its infrastructure. Oxide commits to sharing findings openly, framing responsible AI use in security as a public good for organizations running critical software.</description>
       <guid isPermaLink="true">https://oxide.computer/blog/oxide-anthropic-project-glasswing</guid>
+    </item>
+    <item>
+      <title>The Orchestrator's Tax</title>
+      <link>https://martinfowler.com/articles/orchestrator-tax.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 28 Jul 2026 13:10:00 +0000</pubDate>
+      <description>Rahul Garg argues that the primary value of subagents in multi-agent architectures isn't parallelism or speed, but context economy — keeping irrelevant reasoning out of the orchestrator's limited attention window. Effective delegation requires explicit rules for when and how the orchestrator hands off tasks. This reframes agent design as a working-memory management problem, with direct implications for engineers building or evaluating agentic systems.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/orchestrator-tax.html</guid>
     </item>
     <item>
       <title>Why I’m Writing Rachel’s Ramblings</title>
