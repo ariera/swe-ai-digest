@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jul 2026 22:00:25 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 00:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>moonshotai/Kimi-K3</title>
+      <link>https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 27 Jul 2026 23:39:04 +0000</pubDate>
+      <description>Simon Willison covers the open-weight release of Moonshot AI's Kimi K3, a 2.8 trillion parameter model with weights available on Hugging Face. He highlights the model's evolving license, which now requires a separate commercial agreement for large "Model as a Service" businesses exceeding $20M annual revenue — notably, Moonshot avoids calling it "open source." K3 is already available via OpenRouter at $3/M input and $15/M output tokens.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything</guid>
+    </item>
     <item>
       <title>An opinionated guide to which AI to use to do stuff</title>
       <link>https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/#atom-everything</link>
