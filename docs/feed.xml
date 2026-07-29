@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2026 16:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 17:00:27 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Formal methods with Hillel Wayne</title>
+      <link>https://newsletter.pragmaticengineer.com/p/formal-methods-with-hillel-wayne</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 29 Jul 2026 16:22:31 +0000</pubDate>
+      <description>Formal methods expert Hillel Wayne argues that AI will not make formal verification mainstream, but may grow its industry adoption from roughly 0.1% to 0.3% — still a meaningful increase. He notes that those who successfully use AI to generate formal specs are typically already formal verification experts, undermining the theory that AI will democratize the practice. Wayne also warns that AI may push software engineering toward a lower-paid, lower-prestige "ordinary" profession.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/formal-methods-with-hillel-wayne</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://bsky.app/profile/nodeland.dev/post/3mrsc6glaq72h</link>
