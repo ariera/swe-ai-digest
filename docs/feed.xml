@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2026 17:00:27 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 19:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>AI Worming through Word</title>
+      <link>https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 29 Jul 2026 18:43:03 +0000</pubDate>
+      <description>Researcher Håkon Måløy demonstrated a self-replicating prompt injection worm targeting Microsoft Copilot for Word, where hidden instructions embedded in a document cause Copilot to copy those instructions into newly generated documents, propagating the attack across workflows without the original file. Despite responsible disclosure 144 days prior, Microsoft has no full mitigation. This highlights a critical, unresolved security class for AI-assisted document editing tools.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Quoting Matthew Green</title>
+      <link>https://simonwillison.net/2026/Jul/29/matthew-green/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 29 Jul 2026 18:18:15 +0000</pubDate>
+      <description>Cryptographer Matthew Green, quoted by Simon Willison, argues that AI's growing cryptanalysis capabilities arrive at a uniquely consequential moment — the industry-wide migration to post-quantum algorithms. He suggests that if AI can stress-test the new hard problems underpinning these standards, it could either validate or expose weaknesses in the cryptographic foundations that future software security depends on.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/29/matthew-green/#atom-everything</guid>
+    </item>
     <item>
       <title>Formal methods with Hillel Wayne</title>
       <link>https://newsletter.pragmaticengineer.com/p/formal-methods-with-hillel-wayne</link>
@@ -24,6 +40,14 @@
       <pubDate>Wed, 29 Jul 2026 15:59:00 +0000</pubDate>
       <description>Matteo Collina observes that LLMs, like humans, tend to skip the refactoring step in TDD, and proposes teaching LLMs to use state machines as a potential remedy. This is relevant to engineers exploring how to improve AI coding agents' adherence to structured software development practices.</description>
       <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mrsc6glaq72h</guid>
+    </item>
+    <item>
+      <title>Adding a custom MCP server to Claude and ChatGPT</title>
+      <link>https://simonwillison.net/2026/Jul/29/mcp-in-claude-and-chatgpt/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 29 Jul 2026 00:13:18 +0000</pubDate>
+      <description>Simon Willison documents the process of connecting a custom Model Context Protocol (MCP) server to Claude and ChatGPT's standard chat interfaces, noting it requires several non-trivial steps. This is relevant to engineers exploring agent architectures and tool integrations, as MCP is an emerging standard for extending LLM capabilities with custom tooling.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/29/mcp-in-claude-and-chatgpt/#atom-everything</guid>
     </item>
     <item>
       <title>Discovering cryptographic weaknesses with Claude</title>
