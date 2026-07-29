@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jul 2026 23:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 16:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mrsc6glaq72h</link>
+      <author>Matteo Collina</author>
+      <pubDate>Wed, 29 Jul 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina observes that LLMs, like humans, tend to skip the refactoring step in TDD, and proposes teaching LLMs to use state machines as a potential remedy. This is relevant to engineers exploring how to improve AI coding agents' adherence to structured software development practices.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mrsc6glaq72h</guid>
+    </item>
     <item>
       <title>Discovering cryptographic weaknesses with Claude</title>
       <link>https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything</link>
