@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2026 19:00:23 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 22:00:14 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting D. Richard Hipp</title>
+      <link>https://simonwillison.net/2026/Jul/29/d-richard-hipp/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 29 Jul 2026 21:15:21 +0000</pubDate>
+      <description>SQLite creator D. Richard Hipp draws a historical analogy between SQL's displacement of COBOL programmers and AI's potential impact on software engineers today: just as SQL automated query-generation work without eliminating programmers, AI may shift roles rather than eliminate them. Simon Willison surfaces this quote as a lens for understanding AI's likely effect on the profession.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/29/d-richard-hipp/#atom-everything</guid>
+    </item>
     <item>
       <title>AI Worming through Word</title>
       <link>https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything</link>
