@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2026 22:00:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 14:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Economic Benefit of Refactoring</title>
+      <link>https://martinfowler.com/articles/exploring-gen-ai/refactoring-economic-benefit.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Thu, 30 Jul 2026 13:04:00 +0000</pubDate>
+      <description>Giles Edwards-Alexander experiments with decomposing large functions to determine whether refactoring reduces LLM token consumption and costs. The finding suggests that traditional code quality practices like refactoring may now carry a quantifiable economic benefit in AI-assisted workflows, giving software engineers a new, concrete justification for maintaining clean, modular codebases.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/exploring-gen-ai/refactoring-economic-benefit.html</guid>
+    </item>
     <item>
       <title>Quoting D. Richard Hipp</title>
       <link>https://simonwillison.net/2026/Jul/29/d-richard-hipp/#atom-everything</link>
