@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 16:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 19:00:26 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Bruce Schneier</title>
+      <link>https://simonwillison.net/2026/Jul/30/bruce-schneier/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 30 Jul 2026 18:25:26 +0000</pubDate>
+      <description>Bruce Schneier argues that offloading "gym tasks" — assignments designed to build critical thinking through the struggle of writing — to AI causes those skills to atrophy, with employers already observing the effects. The post, curated by Simon Willison, highlights a key debate for engineers: distinguishing between tasks where AI augments productivity and tasks where doing the work yourself is the point.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/30/bruce-schneier/#atom-everything</guid>
+    </item>
     <item>
       <title>The Pulse: Quitting Spotify Podcasts over reliability</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-quitting-spotify-podcasts-over-reliability/</link>
