@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 15:00:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 16:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: Quitting Spotify Podcasts over reliability</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-quitting-spotify-podcasts-over-reliability/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 30 Jul 2026 15:51:38 +0000</pubDate>
+      <description>Gergely Orosz argues that Spotify exemplifies "AI psychosis" — a pattern where companies sacrifice operational reliability in the pursuit of AI adoption. He cites Spotify's boast of 73% AI-assisted PRs and engineers running parallel Claude agent sessions while its podcast infrastructure suffered repeated outages, drawing a parallel to Meta's similar trade-offs. The piece is a cautionary warning for engineers about organizational risks when AI enthusiasm crowds out reliability culture.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-quitting-spotify-podcasts-over-reliability/</guid>
+    </item>
     <item>
       <title>Oxide and Friends 7/27/2026 -- The Open Weight Revolution with Simon Willison</title>
       <link>https://www.youtube.com/watch?v=f_6TzmifxnI</link>
