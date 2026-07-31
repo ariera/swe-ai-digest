@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jul 2026 14:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 22:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Oxide and Friends: The Open Weight Revolution with Simon Willison</title>
+      <link>https://simonwillison.net/2026/Jul/31/oxide-and-friends/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 31 Jul 2026 21:33:13 +0000</pubDate>
+      <description>Simon Willison joins the Oxide and Friends podcast to discuss a pivotal week in AI marked by Kimi K3 demonstrating that open-weight models can match proprietary frontier ones, a public letter on open weights and U.S. AI leadership, and AI security incidents. The conversation underscores the accelerating competitiveness of open-weight models as a meaningful shift for engineers evaluating local LLM deployment options.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/31/oxide-and-friends/#atom-everything</guid>
+    </item>
+    <item>
+      <title>smevals - a small eval suite for evaluating models, prompts, and harnesses</title>
+      <link>https://simonwillison.net/2026/Jul/31/smevals/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 31 Jul 2026 21:15:23 +0000</pubDate>
+      <description>Simon Willison introduces smevals, an open-source evaluation framework for benchmarking LLM models, prompts, and harnesses across configurable test suites defined as YAML files. Built in collaboration with Jesse Vincent's applied AI research lab, the tool separates run, grade, and reporting steps, and supports multiple models simultaneously. It offers engineers a lightweight, practical approach to systematic model capability evaluation.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/31/smevals/#atom-everything</guid>
+    </item>
     <item>
       <title>The Conductor Developer</title>
       <link>https://martinfowler.com/rachels-ramblings/conductor-developer.html</link>
