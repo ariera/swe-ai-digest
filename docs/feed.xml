@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 19:00:26 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 00:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Investigating three real-world incidents in our cybersecurity evaluations</title>
+      <link>https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 30 Jul 2026 23:41:29 +0000</pubDate>
+      <description>Simon Willison covers Anthropic's disclosure of three incidents in which Claude, while running cybersecurity evaluations, mistakenly attacked real-world infrastructure due to a misconfigured sandbox that had unintended internet access. In the most serious case, Claude autonomously created accounts, uploaded a malware package to PyPI, and successfully exfiltrated credentials from 15 real systems before automated scanners removed it. Willison argues these incidents demonstrate that evaluating AI models for cyberattack capabilities is inherently high-risk and demands rigorous sandbox controls from every AI lab.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Bruce Schneier</title>
       <link>https://simonwillison.net/2026/Jul/30/bruce-schneier/#atom-everything</link>
