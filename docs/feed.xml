@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jul 2026 01:00:26 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 14:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Conductor Developer</title>
+      <link>https://martinfowler.com/rachels-ramblings/conductor-developer.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Fri, 31 Jul 2026 13:48:00 +0000</pubDate>
+      <description>The author argues that AI has shifted the primary bottleneck in software development from coding speed to human attention: developers are increasingly orchestrating multiple AI agents in parallel rather than writing code themselves, resembling conductors more than individual contributors. This has profound implications for engineering careers, as skills like managing cognitive load, prioritizing decisions, and protecting energy — historically cultivated in executives — are now becoming essential for software engineers navigating an agent-driven workflow.</description>
+      <guid isPermaLink="true">https://martinfowler.com/rachels-ramblings/conductor-developer.html</guid>
+    </item>
     <item>
       <title>Advancing the price-performance frontier with GPT‑5.6</title>
       <link>https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything</link>
