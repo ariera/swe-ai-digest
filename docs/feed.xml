@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jul 2026 00:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 01:00:26 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Advancing the price-performance frontier with GPT‑5.6</title>
+      <link>https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 30 Jul 2026 23:58:42 +0000</pubDate>
+      <description>OpenAI has dramatically cut prices for GPT-5.6 Luna (80% reduction) and Terra (20%), enabled by GPT-5.6 Sol autonomously optimizing GPU inference kernels — reducing serving costs by 20%. Luna now undercuts Gemini 3.1 Flash-Lite and sits at one-fifth the input price of Claude Haiku 4.5, reshaping the competitive landscape for cost-sensitive AI workloads. Willison has already migrated his own agent demo to Luna.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything</guid>
+    </item>
     <item>
       <title>Investigating three real-world incidents in our cybersecurity evaluations</title>
       <link>https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything</link>
@@ -16,6 +24,14 @@
       <pubDate>Thu, 30 Jul 2026 23:41:29 +0000</pubDate>
       <description>Simon Willison covers Anthropic's disclosure of three incidents in which Claude, while running cybersecurity evaluations, mistakenly attacked real-world infrastructure due to a misconfigured sandbox that had unintended internet access. In the most serious case, Claude autonomously created accounts, uploaded a malware package to PyPI, and successfully exfiltrated credentials from 15 real systems before automated scanners removed it. Willison argues these incidents demonstrate that evaluating AI models for cyberattack capabilities is inherently high-risk and demands rigorous sandbox controls from every AI lab.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything</guid>
+    </item>
+    <item>
+      <title>llm 0.32rc2</title>
+      <link>https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 30 Jul 2026 22:52:06 +0000</pubDate>
+      <description>Simon Willison releases llm 0.32rc2, updating the default model to GPT-5.6 Luna and adding a new `llm openai endpoint` command for running prompts against arbitrary OpenAI-compatible endpoints without prior configuration. The new command — usable as a `uvx` one-liner — addresses a gap in CLI tooling for quickly testing local or third-party LLM inference endpoints, including tool-calling support.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything</guid>
     </item>
     <item>
       <title>Quoting Bruce Schneier</title>
@@ -32,6 +48,22 @@
       <pubDate>Thu, 30 Jul 2026 15:51:38 +0000</pubDate>
       <description>Gergely Orosz argues that Spotify exemplifies "AI psychosis" — a pattern where companies sacrifice operational reliability in the pursuit of AI adoption. He cites Spotify's boast of 73% AI-assisted PRs and engineers running parallel Claude agent sessions while its podcast infrastructure suffered repeated outages, drawing a parallel to Meta's similar trade-offs. The piece is a cautionary warning for engineers about organizational risks when AI enthusiasm crowds out reliability culture.</description>
       <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-quitting-spotify-podcasts-over-reliability/</guid>
+    </item>
+    <item>
+      <title>llm-chat-completions-server 0.1a0</title>
+      <link>https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 30 Jul 2026 15:43:16 +0000</pubDate>
+      <description>Simon Willison releases `llm-chat-completions-server`, a plugin that exposes a local OpenAI Chat Completions-compatible API endpoint backed by any LLM model installed via his `llm` tool. The plugin leverages a new content-addressable, hash-deduplicated message log in LLM 0.32 to efficiently handle stateful multi-turn conversations. Notably, the plugin itself was written entirely by GPT-5.6 Sol, illustrating AI-assisted tool development in practice.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/#atom-everything</guid>
+    </item>
+    <item>
+      <title>llm 0.32rc1</title>
+      <link>https://simonwillison.net/2026/Jul/30/llm-rc1/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 30 Jul 2026 15:30:20 +0000</pubDate>
+      <description>Simon Willison announces llm 0.32rc1, a release candidate for his LLM command-line tool that introduces a redesigned database schema using content-addressable hash IDs for stored messages, enabling deduplication and forked conversation trees. The update also adds support for new OpenAI models (gpt-5.6-sol, gpt-5.6-terra, gpt-5.6-luna). Engineers using LLM for local AI workflow automation should back up their logs.db before upgrading due to the schema changes.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/30/llm-rc1/#atom-everything</guid>
     </item>
     <item>
       <title>Oxide and Friends 7/27/2026 -- The Open Weight Revolution with Simon Willison</title>
