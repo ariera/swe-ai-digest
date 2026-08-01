@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jul 2026 22:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 00:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)</title>
+      <link>https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 31 Jul 2026 23:13:22 +0000</pubDate>
+      <description>Simon Willison details how the new stateless MCP 2.0 specification simplifies tool integration for LLM-powered agents by reducing HTTP round-trips and eliminating server-side session state. He argues MCP offers a safer, more auditable alternative to giving agents open shell/network access, and documents three tools he built this week — mcp-explorer, datasette-mcp, and llm-mcp-client — to demonstrate the practical benefits of the updated protocol.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-everything</guid>
+    </item>
     <item>
       <title>Oxide and Friends: The Open Weight Revolution with Simon Willison</title>
       <link>https://simonwillison.net/2026/Jul/31/oxide-and-friends/#atom-everything</link>
