@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2026 00:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 01:00:13 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>deepseek-ai/DeepSeek-V4-Flash-0731</title>
+      <link>https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 31 Jul 2026 23:59:44 +0000</pubDate>
+      <description>Simon Willison evaluates DeepSeek-V4-Flash-0731, a 304B parameter model with enhanced agentic capabilities, noting it outperforms larger models like MiniMax M3 (428B) on Artificial Analysis's Intelligence Index. At $0.14/million input tokens, Willison argues it may currently offer the best value-per-intelligence ratio available. He also demonstrates that raising the reasoning effort level significantly improves output quality.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything</guid>
+    </item>
     <item>
       <title>Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)</title>
       <link>https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-everything</link>
