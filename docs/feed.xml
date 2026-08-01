@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2026 21:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 22:00:26 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette-apps 0.2a0</title>
+      <link>https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 01 Aug 2026 21:23:56 +0000</pubDate>
+      <description>Simon Willison announces datasette-apps 0.2a0, which introduces two new agent-facing tools designed for use with Datasette Agent: `app_list()` for enumerating editable apps and `app_debug()` for headless browser-based smoke testing via a hidden iframe. The `app_debug()` tool lets an AI agent execute JavaScript inside a sandboxed iframe to verify app behavior and measure UI elements, illustrating a concrete pattern for integrating agentic testing into a development workflow.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything</guid>
+    </item>
     <item>
       <title>Ten advances in mathematics and theoretical computer science</title>
       <link>https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything</link>
