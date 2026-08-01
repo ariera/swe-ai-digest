@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2026 02:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 21:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Ten advances in mathematics and theoretical computer science</title>
+      <link>https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 01 Aug 2026 20:34:49 +0000</pubDate>
+      <description>OpenAI used an internal version of its next major model to solve ten long-standing mathematical problems for under $2,000 each, publishing Lean 4 formalizations and a paper. Simon Willison frames this alongside Anthropic's recent cryptographic research as evidence of AI's expanding frontier in formal reasoning. He connects the results to Terence Tao's vision of "big mathematics," where AI handles technical grunt work while humans retain creative direction.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything</guid>
+    </item>
     <item>
       <title>deepseek-ai/DeepSeek-V4-Flash-0731</title>
       <link>https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything</link>
@@ -48,6 +56,14 @@
       <pubDate>Fri, 31 Jul 2026 21:15:23 +0000</pubDate>
       <description>Simon Willison introduces smevals, an open-source evaluation framework for benchmarking LLM models, prompts, and harnesses across configurable test suites defined as YAML files. Built in collaboration with Jesse Vincent's applied AI research lab, the tool separates run, grade, and reporting steps, and supports multiple models simultaneously. It offers engineers a lightweight, practical approach to systematic model capability evaluation.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/31/smevals/#atom-everything</guid>
+    </item>
+    <item>
+      <title>Slack Emoji Maker</title>
+      <link>https://simonwillison.net/2026/Jul/31/slack-emoji-maker/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 31 Jul 2026 20:18:05 +0000</pubDate>
+      <description>Simon Willison describes using Fable (an AI tool) to build a simple image editor tailored for creating Slack-compatible emoji (128x128, transparent background). This is a brief but concrete example of using an AI coding/generation tool to quickly produce a purpose-built utility, illustrating how AI agents can handle small, well-defined tool-creation tasks.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/31/slack-emoji-maker/#atom-everything</guid>
     </item>
     <item>
       <title>datasette-agent 0.4a0</title>
