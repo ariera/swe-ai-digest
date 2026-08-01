@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2026 01:00:13 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 02:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -26,6 +26,14 @@
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-everything</guid>
     </item>
     <item>
+      <title>llm-mcp-client 0.1a0</title>
+      <link>https://simonwillison.net/2026/Jul/31/llm-mcp-client/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 31 Jul 2026 23:03:47 +0000</pubDate>
+      <description>Simon Willison announces the initial alpha release of `llm-mcp-client`, a plugin that adds Model Context Protocol (MCP) client support to his `llm` CLI tool. This is relevant to software engineers as MCP is an emerging standard for connecting AI models to external tools and data sources, and this release extends a widely-used LLM utility to support that ecosystem.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/31/llm-mcp-client/#atom-everything</guid>
+    </item>
+    <item>
       <title>Oxide and Friends: The Open Weight Revolution with Simon Willison</title>
       <link>https://simonwillison.net/2026/Jul/31/oxide-and-friends/#atom-everything</link>
       <author>Simon Willison</author>
@@ -40,6 +48,14 @@
       <pubDate>Fri, 31 Jul 2026 21:15:23 +0000</pubDate>
       <description>Simon Willison introduces smevals, an open-source evaluation framework for benchmarking LLM models, prompts, and harnesses across configurable test suites defined as YAML files. Built in collaboration with Jesse Vincent's applied AI research lab, the tool separates run, grade, and reporting steps, and supports multiple models simultaneously. It offers engineers a lightweight, practical approach to systematic model capability evaluation.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/31/smevals/#atom-everything</guid>
+    </item>
+    <item>
+      <title>datasette-agent 0.4a0</title>
+      <link>https://simonwillison.net/2026/Jul/31/datasette-agent/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 31 Jul 2026 14:14:23 +0000</pubDate>
+      <description>Simon Willison releases datasette-agent 0.4a0, introducing a `browser_task()` mechanism that allows AI agent tools to execute custom JavaScript directly in the user's browser. This expands the agentic capabilities of Datasette plugins, enabling tighter integration between LLM-driven agents and browser-side interactions — a relevant pattern for engineers building tool-use architectures around AI agents.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Jul/31/datasette-agent/#atom-everything</guid>
     </item>
     <item>
       <title>The Conductor Developer</title>
