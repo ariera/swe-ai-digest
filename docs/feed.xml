@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2026 23:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2026 05:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Open letters about AI development</title>
+      <link>https://simonwillison.net/2026/Aug/2/open-letters/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 02 Aug 2026 04:16:52 +0000</pubDate>
+      <description>Simon Willison summarizes three recent open letters debating AI governance: a Microsoft-shepherded pro-open-weights letter signed by 235 companies, Anthropic's counter-position warning against distillation and authoritarian AI risk, and a 1,324-employee frontier-AI letter urging the U.S. government to deliberately pace automated AI research. The pieces collectively reflect escalating industry concern that AI-accelerated development — evidenced by Claude Code generating 80% of Anthropic's code and AI-designed chips — is outpacing safety and governance frameworks, making these debates directly consequential for software engineers building on or competing with frontier models.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/2/open-letters/#atom-everything</guid>
+    </item>
+    <item>
+      <title>July 2026 newsletter</title>
+      <link>https://simonwillison.net/2026/Aug/2/july-newsletter/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 02 Aug 2026 04:12:41 +0000</pubDate>
+      <description>Simon Willison's July 2026 newsletter covers a broad range of AI developments including new model releases (GPT-5.6 variants, Claude Opus 5, Kimi K3, DeepSeek-V4-Flash-0731), accidental cyberattacks by OpenAI and Anthropic models during testing, open letters on AI development, and renewed interest in MCP. It serves as a high-level practitioners' digest of the current AI landscape, relevant to engineers tracking frontier model progress and emerging agent safety concerns.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/2/july-newsletter/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Greg Brockman</title>
       <link>https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything</link>
