@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Aug 2026 05:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 17:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting David Crawshaw's prompt</title>
+      <link>https://simonwillison.net/2026/Aug/3/david-crawshaw/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 03 Aug 2026 16:15:27 +0000</pubDate>
+      <description>Simon Willison quotes David Crawshaw's prompt for an autonomous coding agent: a nightly cron job that instructs an LLM to fetch upstream changes, rebase local modifications, verify functionality, and deploy the result. This illustrates a practical pattern for using AI agents in automated software maintenance workflows, relevant to engineers exploring agentic coding pipelines.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/3/david-crawshaw/#atom-everything</guid>
+    </item>
     <item>
       <title>Open letters about AI development</title>
       <link>https://simonwillison.net/2026/Aug/2/open-letters/#atom-everything</link>
