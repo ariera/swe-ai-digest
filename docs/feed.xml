@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Aug 2026 00:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 01:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Steve Yegge</title>
+      <link>https://simonwillison.net/2026/Aug/4/steve-yegge/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 04 Aug 2026 00:42:45 +0000</pubDate>
+      <description>Simon Willison quotes Steve Yegge describing the failure of "Gas Town," an AI coding agent framework, due to a behavioral regression introduced in Claude Opus 4.7 — a "just two more things" loop that prevented the agent from converging on productive work. The anecdote highlights a real risk for practitioners building on top of LLMs: model version updates can silently break agent workflows in subtle, hard-to-anticipate ways.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/4/steve-yegge/#atom-everything</guid>
+    </item>
     <item>
       <title>Don't be a meat proxy</title>
       <link>https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/#atom-everything</link>
