@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2026 18:00:24 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 00:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Don't be a meat proxy</title>
+      <link>https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 03 Aug 2026 23:45:04 +0000</pubDate>
+      <description>Simon Willison highlights the term "meat proxy" — coined by Niklas Gruhn — to describe people who blindly relay AI-generated output without reading, understanding, or validating it. Willison argues that human judgment and synthesis remain the core value-add when using AI tools. This is a timely caution for engineers integrating LLMs into communication or review workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting David Crawshaw's prompt</title>
       <link>https://simonwillison.net/2026/Aug/3/david-crawshaw/#atom-everything</link>
