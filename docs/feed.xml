@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2026 01:00:25 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 20:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>One-shotting a Raccoon Heist game using Claude Fable 5</title>
+      <link>https://simonwillison.net/2026/Aug/5/raccoon-heist/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 05 Aug 2026 19:42:38 +0000</pubDate>
+      <description>Simon Willison demonstrates a "one-shot" workflow using Claude Code (Fable 5) to autonomously build a complete 3D browser game, with the model writing code, generating textures via the OpenAI image API, and self-testing via Playwright screenshots — all without further human input. The article offers a practical walkthrough of pairing Claude Code with GitHub Pages for live previewing and using an OpenAI API key to extend the agent's capabilities. It illustrates how agentic AI coding tools can now handle end-to-end creative software projects on mobile with minimal human intervention.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/5/raccoon-heist/#atom-everything</guid>
+    </item>
     <item>
       <title>New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging</title>
       <link>https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything</link>
