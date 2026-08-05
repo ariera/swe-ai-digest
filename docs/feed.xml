@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2026 00:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 01:00:25 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -18,12 +18,28 @@
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything</guid>
     </item>
     <item>
+      <title>llm-anthropic 0.26</title>
+      <link>https://simonwillison.net/2026/Aug/4/llm-anthropic/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 04 Aug 2026 22:00:58 +0000</pubDate>
+      <description>Simon Willison releases llm-anthropic 0.26, adding support for three new Claude 5 models (Fable, Sonnet, Opus) and server-side tools including WebSearch, WebFetch, CodeExecution, and AnthropicMCP. The update streamlines extended thinking configuration and improves streaming of reasoning and tool-call events. Engineers using the LLM CLI or Python library gain direct access to Claude 5's default reasoning capabilities with simplified controls.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/4/llm-anthropic/#atom-everything</guid>
+    </item>
+    <item>
       <title>PipeNetwork/minimax-h3-mlx</title>
       <link>https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/#atom-everything</link>
       <author>Simon Willison</author>
       <pubDate>Tue, 04 Aug 2026 19:10:09 +0000</pubDate>
       <description>Simon Willison documents running MiniMax-H3, a multimodal generative model, locally on Apple Silicon via an MLX port. The model accepts text, images, audio, and video to generate up to 15-second video clips. He notes it required ~115 GB of model downloads and 45 minutes per generation, highlighting both the accessibility of local inference and the importance of prompt guidance for audio quality.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/#atom-everything</guid>
+    </item>
+    <item>
+      <title>llm 0.32</title>
+      <link>https://simonwillison.net/2026/Aug/4/llm/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 04 Aug 2026 17:15:33 +0000</pubDate>
+      <description>Simon Willison announces version 0.32 of his `llm` command-line tool, a widely used open-source utility for interacting with large language models from the terminal. The release note points to a detailed blog post covering the changes. Software engineers using or evaluating LLM tooling in their workflows should follow the linked post for specifics on new capabilities.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/4/llm/#atom-everything</guid>
     </item>
     <item>
       <title>Fragments: August  4</title>
@@ -64,6 +80,14 @@
       <pubDate>Mon, 03 Aug 2026 15:30:38 +0000</pubDate>
       <description>Simon Willison argues that LLMs have revitalized the practical promise of open-source software by dramatically lowering the barrier to exploring and modifying codebases. He describes using Claude and Codex daily to clone repos, understand how tools work, and offload compilation friction entirely. For software engineers, this reframes AI coding agents not just as productivity boosters but as enablers of deeper, hands-on engagement with open-source projects.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/3/devtools-must-be-open-source-exedev/#atom-everything</guid>
+    </item>
+    <item>
+      <title>condense-json 1.1</title>
+      <link>https://simonwillison.net/2026/Aug/3/condense-json/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 03 Aug 2026 04:56:26 +0000</pubDate>
+      <description>Simon Willison releases condense-json 1.1, a library he is integrating into his LLM tooling, adding support for non-string structural replacements and object-based merge operations to more efficiently compress JSON. These features reduce token overhead when passing JSON data to language models, making it directly relevant to engineers optimizing LLM context usage and cost.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/3/condense-json/#atom-everything</guid>
     </item>
     <item>
       <title>Open letters about AI development</title>
