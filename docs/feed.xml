@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Aug 2026 20:00:14 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 00:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging</title>
+      <link>https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 04 Aug 2026 23:58:24 +0000</pubDate>
+      <description>Simon Willison announces LLM 0.32, a major release of his CLI/Python library for interacting with language models, adding support for visible reasoning traces, server-side tools (code execution, web search, MCP), a redesigned content-addressable SQLite logging system modeled after Git, and a new streaming events API that handles mixed model outputs. The Python API now supports direct message-history construction and event-typed streaming, enabling more robust agent patterns. Willison notes that LLM is increasingly "agent-shaped," with tool-loop orchestration and human-in-the-loop approval now supported.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything</guid>
+    </item>
     <item>
       <title>PipeNetwork/minimax-h3-mlx</title>
       <link>https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/#atom-everything</link>
