@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Aug 2026 17:00:32 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 20:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Moonlight &amp; Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra)</title>
+      <link>https://simonwillison.net/2026/Aug/7/moonlight-mayhem/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 07 Aug 2026 19:18:09 +0000</pubDate>
+      <description>Simon Willison compares two AI coding agents — Claude Fable 5 and Codex Desktop running GPT-5.6 Sol Ultra — on an identical game-generation prompt, finding that Sol's aggressive sub-agent mode produced a significantly more complex and faithful result. He also documents a visual bug that Codex missed despite reviewing screenshots, ultimately correcting it through simple natural-language follow-up prompts. The piece offers a practical, hands-on benchmark of agentic coding tools and highlights both their generative power and current limitations in visual self-review.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/7/moonlight-mayhem/#atom-everything</guid>
+    </item>
     <item>
       <title>Why did Oxide join Anthropic's Project Glasswing? FAQ Friday #55</title>
       <link>https://www.youtube.com/shorts/SMG8wpN1qJc</link>
