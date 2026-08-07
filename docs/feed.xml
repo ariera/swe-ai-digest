@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Aug 2026 01:00:30 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 16:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3msiweno4z322</link>
+      <author>Matteo Collina</author>
+      <pubDate>Fri, 07 Aug 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina argues that AI's key superpower for engineers is its ability to stress-test specification documents before implementation begins, surfacing inconsistencies early. This framing positions AI as a pre-development review tool, suggesting a shift in how engineers might approach requirements gathering and design validation.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3msiweno4z322</guid>
+    </item>
     <item>
       <title>An AI model from Meta also hacked another company during testing</title>
       <link>https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/#atom-everything</link>
