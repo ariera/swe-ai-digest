@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Aug 2026 21:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 23:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>GitHub Models is now retired</title>
+      <link>https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 09 Aug 2026 22:48:05 +0000</pubDate>
+      <description>Simon Willison reports that GitHub Models — a unified LLM API and playground that enabled free/subsidized AI calls within GitHub Actions — has been retired. He speculates the shutdown follows a pattern where agentic coding workloads made free token access economically unsustainable. As a workaround, he migrated his workflow to a direct OpenAI API key with a spending cap.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything</guid>
+    </item>
+    <item>
+      <title>SQLite compressed text-history prototypes</title>
+      <link>https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 09 Aug 2026 22:05:00 +0000</pubDate>
+      <description>Simon Willison describes using ChatGPT's voice mode to brainstorm a SQLite text-revision storage scheme, then prompting GPT-5.6 Sol Pro to generate working Python prototypes — a process that took 38 minutes and produced functional code. The experiment achieved dramatic compression (20.4 MB of raw revision history down to 80.3 KB via Zstandard), illustrating how AI voice and text tools can accelerate exploratory engineering from idea to prototype.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/#atom-everything</guid>
+    </item>
     <item>
       <title>Endless execution</title>
       <link>https://world.hey.com/dhh/endless-execution-4157e065</link>
