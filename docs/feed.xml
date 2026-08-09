@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Aug 2026 14:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 21:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Endless execution</title>
+      <link>https://world.hey.com/dhh/endless-execution-4157e065</link>
+      <author>DHH</author>
+      <pubDate>Sun, 09 Aug 2026 20:27:38 +0000</pubDate>
+      <description>DHH argues that AI agents represent a qualitative leap in personal productivity, enabling immediate execution of virtually any idea — a form of "liberation" he compares to magic. He frames the agent era as the most transformative computing experience of his 40-year career, suggesting that what practitioners are experiencing today may already be functionally indistinguishable from AGI. For software engineers, the piece reflects a practitioner-level enthusiasm for agentic workflows reshaping how ideas are prototyped and shipped.</description>
+      <guid isPermaLink="true">https://world.hey.com/dhh/endless-execution-4157e065</guid>
+    </item>
     <item>
       <title>Triaging the AI Horde</title>
       <link>https://adventures.nodeland.dev/archive/triaging-the-ai-horde/</link>
