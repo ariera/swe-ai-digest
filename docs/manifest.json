@@ -1,5 +1,13 @@
 [
   {
+    "cw": "2026-CW32",
+    "period_start": "2026-08-03",
+    "period_end": "2026-08-09",
+    "articles_count": 27,
+    "summary_short": "This digest period is dominated by two converging themes: the rapid maturation of agentic AI coding workflows, and the safety risks that emerge when AI agents operate with insufficient constraints.\n\nO\u2026",
+    "page": "digests/2026-CW32.html"
+  },
+  {
     "cw": "2026-CW31",
     "period_start": "2026-07-27",
     "period_end": "2026-08-02",
