@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Aug 2026 23:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 00:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Claude Opus 5 system prompt</title>
+      <link>https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 09 Aug 2026 23:31:39 +0000</pubDate>
+      <description>Simon Willison surfaces a notable excerpt from Claude Opus 5's system prompt, which instructs the model to accurately acknowledge post-training-cutoff events — specifically U.S. export control suspensions affecting Claude Fable 5 and Mythos 5 — rather than deny or speculate. This offers a concrete example of how Anthropic uses system prompts to manage knowledge cutoff limitations and maintain factual accuracy, a practical consideration for engineers deploying or prompting LLMs in production.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/#atom-everything</guid>
+    </item>
     <item>
       <title>GitHub Models is now retired</title>
       <link>https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything</link>
