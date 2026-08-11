@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Aug 2026 12:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 16:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mssyaefzxh22</link>
+      <author>Matteo Collina</author>
+      <pubDate>Tue, 11 Aug 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina, a prolific open-source maintainer, observes that nearly all of the 20–40 security vulnerability reports he triages weekly are now AI-generated, often arriving in 3–5 duplicates each. This highlights a growing maintenance burden on open-source projects as AI tools lower the barrier to filing (low-quality) security reports at scale.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mssyaefzxh22</guid>
+    </item>
     <item>
       <title>TDD inside the agent loop - theater or actual value?</title>
       <link>https://martinfowler.com/articles/exploring-gen-ai/tdd-in-the-agent-loop.html</link>
