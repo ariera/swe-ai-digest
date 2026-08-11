@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Aug 2026 17:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 23:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Stealing Reasoning Traces from Proprietary LLM APIs</title>
+      <link>https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 11 Aug 2026 22:40:45 +0000</pubDate>
+      <description>Researchers discovered that Anthropic, OpenAI, and Google return encrypted chain-of-thought reasoning blocks via their APIs that share a single key across model families — allowing attackers to replay a stronger model's trace into a weaker sibling and extract raw reasoning in plaintext. The vulnerability also enabled a novel prompt injection vector, where injected instructions hidden in reasoning traces were executed with high compliance. All three providers have since patched the issue, but the paper exposes meaningful security assumptions around proprietary reasoning transparency.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything</guid>
+    </item>
     <item>
       <title>Software engineering at a proprietary trading company: Optiver</title>
       <link>https://newsletter.pragmaticengineer.com/p/optiver</link>
