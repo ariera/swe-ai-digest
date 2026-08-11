@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Aug 2026 01:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 12:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>TDD inside the agent loop - theater or actual value?</title>
+      <link>https://martinfowler.com/articles/exploring-gen-ai/tdd-in-the-agent-loop.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 11 Aug 2026 11:39:00 +0000</pubDate>
+      <description>Thoughtworks engineer Birgitta Böckeler investigates whether instructing LLM agents to follow Test-Driven Development actually improves outcomes, or is merely performative. The experiments aim to determine if TDD inside an agentic coding loop provides genuine quality benefits. This matters to software engineers weighing how to structure prompts and workflows when delegating code generation to AI agents.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/exploring-gen-ai/tdd-in-the-agent-loop.html</guid>
+    </item>
     <item>
       <title>Introducing Muse Glimmer</title>
       <link>https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything</link>
