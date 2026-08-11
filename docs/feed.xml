@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Aug 2026 00:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 01:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Introducing Muse Glimmer</title>
+      <link>https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 10 Aug 2026 23:56:03 +0000</pubDate>
+      <description>Simon Willison evaluates Meta's new 30B open-weights model, Muse Glimmer (Apache 2.0), testing it locally via LM Studio for agentic coding tasks and vision capabilities. He runs it with his llm-coding-agent plugin against Datasette's codebase and finds the 30B size practical for machines with 32GB+ RAM. The model targets end-to-end agentic task completion, reliable tool use, and multi-step reasoning — benchmarks directly relevant to AI coding assistants.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything</guid>
+    </item>
     <item>
       <title>Quoting Claude Opus 5 system prompt</title>
       <link>https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/#atom-everything</link>
