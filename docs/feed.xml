@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Aug 2026 16:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 17:00:27 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Stop being skeptical about AI for development with Charity Majors</title>
+      <link>https://newsletter.pragmaticengineer.com/p/stop-being-skeptical-about-ai-for</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 12 Aug 2026 16:45:07 +0000</pubDate>
+      <description>Gergely Orosz interviews Honeycomb CTO Charity Majors, who argues that AI's impact on software engineering is now as foundational as cloud computing was in 2010, making skepticism increasingly untenable. She contends that AI shifts engineering's bottleneck from code generation to verification and reliability, that code review is overrated, and that non-deterministic AI-generated code demands greater engineering discipline. She also warns that engineers without AI experience face real career risk.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/stop-being-skeptical-about-ai-for</guid>
+    </item>
     <item>
       <title>Quoting Florian Herrengt</title>
       <link>https://simonwillison.net/2026/Aug/12/florian-herrengt/#atom-everything</link>
