@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Aug 2026 00:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 16:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Florian Herrengt</title>
+      <link>https://simonwillison.net/2026/Aug/12/florian-herrengt/#atom-everything</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 12 Aug 2026 15:08:47 +0000</pubDate>
+      <description>Simon Willison quotes Florian Herrengt's warning that over-reliance on AI coding tools creates "cognitive debt" — teams that delegate understanding to AI accumulate opaque, layered systems that nobody comprehends, making persistent bugs nearly unfixable. Herrengt argues this dynamic is hollowing out mid-level engineering expertise, a direct concern for software engineers navigating AI-assisted workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/12/florian-herrengt/#atom-everything</guid>
+    </item>
     <item>
       <title>There are no lossless transformations of natural-language text</title>
       <link>https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/#atom-everything</link>
