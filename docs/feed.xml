@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Aug 2026 04:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 16:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3msxz67kihs2r</link>
+      <author>Matteo Collina</author>
+      <pubDate>Thu, 13 Aug 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina briefly notes using DeepSeek v4 Flash 0731, run locally on an NVIDIA DGX Spark, to discover four software vulnerabilities. The post illustrates a practitioner using locally-hosted LLMs for security auditing, highlighting AI's growing role in automated vulnerability detection within real engineering workflows.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3msxz67kihs2r</guid>
+    </item>
     <item>
       <title>DeepSeek V4 Pro 0813 (on OpenRouter)</title>
       <link>https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/</link>
