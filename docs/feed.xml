@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Aug 2026 23:02:37 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 01:00:25 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>DeepSeek V4 Pro 0813 (on OpenRouter)</title>
+      <link>https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 12 Aug 2026 23:59:23 +0000</pubDate>
+      <description>Simon Willison covers the API release of DeepSeek V4 Pro 0813, noting its availability via OpenRouter and the likelihood of open weights given prior DeepSeek releases. He highlights a notable observation: the model produces visually distinct outputs across its three reasoning levels (low, medium, high), a behavior he hasn't seen in other models. Benchmark information was only shared informally via WeChat and Reddit, reflecting the opaque release practices common with DeepSeek models.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/</guid>
+    </item>
     <item>
       <title>Stop being skeptical about AI for development with Charity Majors</title>
       <link>https://newsletter.pragmaticengineer.com/p/stop-being-skeptical-about-ai-for</link>
