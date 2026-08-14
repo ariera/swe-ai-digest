@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Aug 2026 16:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 03:00:27 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>llm-gemini 0.33</title>
+      <link>https://simonwillison.net/2026/Aug/13/llm-gemini/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 13 Aug 2026 19:37:34 +0000</pubDate>
+      <description>Simon Willison announces llm-gemini 0.33, a plugin update adding support for Gemini 3.7 Flash and several other new models, plus two embedding models. The release also enables reasoning trace visibility and server-side tool execution (e.g., CodeExecution) via LLM 0.32 compatibility — expanding practical capabilities for developers integrating Gemini into CLI-based AI workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/13/llm-gemini/</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://bsky.app/profile/nodeland.dev/post/3msxz67kihs2r</link>
