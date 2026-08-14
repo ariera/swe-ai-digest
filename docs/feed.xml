@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Aug 2026 03:00:27 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 17:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: Meta’s self-inflicted resignation-wave</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-metas-self-inflicted-resignation</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Fri, 14 Aug 2026 16:55:55 +0000</pubDate>
+      <description>Gergely Orosz evaluates Grok Bot, a generic AI agent harness built by the Cursor team, describing it as a significant step toward automating knowledge-work workflows — analogous to an "OpenClaw moment" for managed AI agents. He argues more AI vendors will replicate this harness pattern. The piece also covers Meta's ongoing talent exodus triggered by layoffs and forced reassignments.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-metas-self-inflicted-resignation</guid>
+    </item>
     <item>
       <title>llm-gemini 0.33</title>
       <link>https://simonwillison.net/2026/Aug/13/llm-gemini/</link>
