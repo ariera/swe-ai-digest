@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Aug 2026 16:00:28 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 23:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</title>
+      <link>https://simonwillison.net/2026/Aug/16/qwen-38-27b/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 16 Aug 2026 22:00:39 +0000</pubDate>
+      <description>Simon Willison evaluates Qwen 3.8 27B, a locally-runnable 17GB open-weight vision LLM, finding it capable of coding, tool-calling, and image annotation — but warns that its default "xhigh" reasoning setting causes severe overthinking, burning unnecessary tokens on trivial tasks. He recommends using low or no reasoning by default and demonstrates Multi-Token Prediction as a way to boost inference speed by ~72%. The piece is a practical benchmark for engineers considering local models as alternatives to hosted APIs.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/16/qwen-38-27b/</guid>
+    </item>
     <item>
       <title>Quoting Dario Amodei</title>
       <link>https://simonwillison.net/2026/Aug/16/dario-amodei/</link>
