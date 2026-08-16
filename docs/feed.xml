@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Aug 2026 02:00:14 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 16:00:28 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Dario Amodei</title>
+      <link>https://simonwillison.net/2026/Aug/16/dario-amodei/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 16 Aug 2026 15:05:36 +0000</pubDate>
+      <description>Anthropic CEO Dario Amodei argues that public distrust of AI stems from a decades-long erosion of trust in corporations and tech, not from leaders discussing AI risks. He contends that marketing campaigns won't fix this — only delivering on AI's promised real-world benefits will, and that failing to do so remains the most valid criticism of AI companies today.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/16/dario-amodei/</guid>
+    </item>
     <item>
       <title>CORS Chat</title>
       <link>https://simonwillison.net/2026/Aug/15/cors-chat/</link>
