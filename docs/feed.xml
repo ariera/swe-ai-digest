@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Aug 2026 23:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 16:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility</title>
+      <link>https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 17 Aug 2026 15:21:29 +0000</pubDate>
+      <description>404 Media used an AirTag to trace a bulk order of ~1,000 rare books to an Amazon facility in Las Vegas confirmed by workers to destructively scan books at scale, implicating Amazon in covert AI training data acquisition. This follows similar reports about Anthropic and highlights an emerging pattern of tech companies secretly sourcing physical books for LLM training, raising serious ethical and legal questions for the industry.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/</guid>
+    </item>
     <item>
       <title>Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</title>
       <link>https://simonwillison.net/2026/Aug/16/qwen-38-27b/</link>
