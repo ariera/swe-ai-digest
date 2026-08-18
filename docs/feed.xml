@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Aug 2026 16:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 01:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index</title>
+      <link>https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 17 Aug 2026 23:58:14 +0000</pubDate>
+      <description>Simon Willison highlights that Qwen 3.8 27B achieves a score of 52 on the Artificial Analysis Intelligence Index, matching or nearly matching much larger models like GPT-5.6 Luna and DeepSeek V4 Pro 0813 (1.6T parameters). This matters to engineers because it signals that a compact 27B model can rival frontier-scale models in benchmark performance, with significant implications for cost-efficient deployment and the competitiveness of Chinese open-weight models.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/</guid>
+    </item>
     <item>
       <title>We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility</title>
       <link>https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/</link>
