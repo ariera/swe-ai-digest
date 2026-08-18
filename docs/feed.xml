@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Aug 2026 16:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 17:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Headed for the Exit: the Great Engineering Leader Career Break</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-great-engineering-leader-career-break</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 18 Aug 2026 16:21:06 +0000</pubDate>
+      <description>Gergely Orosz reports a wave of senior engineering leaders (CTOs, VPs of Engineering) quitting their roles, driven significantly by AI-related pressures: unrealistic "AI-native" transformation demands from founders, shrinking team sizes as AI reduces headcount needs, and fear of becoming irrelevant without hands-on AI experience. The article highlights how AI is reshaping leadership expectations, creating a skills gap that even experienced executives feel compelled to address by stepping away to retool or seek more AI-forward environments.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-great-engineering-leader-career-break</guid>
+    </item>
     <item>
       <title>Fragments: August 18</title>
       <link>https://martinfowler.com/fragments/2026-08-18.html</link>
