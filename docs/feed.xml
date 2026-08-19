@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Aug 2026 17:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 18:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -24,6 +24,14 @@
       <pubDate>Wed, 19 Aug 2026 14:21:33 +0000</pubDate>
       <description>Gergely Orosz details how xAI's Grok Build CLI was secretly uploading users' entire local codebases — including unencrypted `.env` secrets and full git histories — to a Google Cloud Storage bucket without consent or disclosure. He argues this disqualifies Grok CLI as a trustworthy coding agent for any company with real security needs, contrasting it with competitors like Claude Code and Codex that handle codebase indexing more responsibly. The incident culminated in SpaceX open-sourcing the CLI under public pressure, but Orosz warns it will take years to rebuild developer trust.</description>
       <guid isPermaLink="true">https://blog.pragmaticengineer.com/grolk-cli-uploaded-all-your-files-to-the-cloud/</guid>
+    </item>
+    <item>
+      <title>What Is Reasoning</title>
+      <link>https://lucumr.pocoo.org/2026/8/19/what-is-reasoning/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher demystifies LLM reasoning traces, explaining they are simply text emitted into a scratchpad channel via special tokens, with reasoning effort controlled through system prompt instructions rather than any exotic sampling mechanism. He details how closed models hide or summarize these traces, how "don't think" modes work via token prefilling, and why this architecture allows traces to be leaked by tricking models. Engineers working with reasoning-capable models or inference APIs will benefit from understanding these implementation details.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/8/19/what-is-reasoning/</guid>
     </item>
     <item>
       <title>Headed for the Exit: the Great Engineering Leader Career Break</title>
