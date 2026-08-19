@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Aug 2026 19:00:25 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 23:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Conceptual integrity and counting lines of code</title>
+      <link>https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 19 Aug 2026 22:46:07 +0000</pubDate>
+      <description>Simon Willison argues that lines of code becomes a meaningful productivity metric with coding agents, since agents can help senior engineers produce dramatically more high-quality code — but cognitive capacity, not output speed, becomes the new bottleneck. He also warns that the lower cost of adding features via agents erodes "conceptual integrity" (from The Mythical Man-Month), causing codebases to accumulate incoherent, poorly integrated features, requiring new forms of engineering discipline to counteract.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/</guid>
+    </item>
     <item>
       <title>Citizens Build, Agents Execute, Experts Govern</title>
       <link>https://martinfowler.com/rachels-ramblings/citizens-agents-experts.html</link>
