@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Aug 2026 18:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 19:00:25 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Citizens Build, Agents Execute, Experts Govern</title>
+      <link>https://martinfowler.com/rachels-ramblings/citizens-agents-experts.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Wed, 19 Aug 2026 18:30:00 +0000</pubDate>
+      <description>The author argues that AI-enabled "citizen development" doesn't reduce the need for experienced engineers — it amplifies it. As agents handle code execution and non-engineers build working prototypes, engineering expertise shifts toward governance: architecture, security, resilience, and judgement about what is safe for production. The real scarcity, she contends, is now good engineering judgement, not the ability to write code.</description>
+      <guid isPermaLink="true">https://martinfowler.com/rachels-ramblings/citizens-agents-experts.html</guid>
+    </item>
     <item>
       <title>From Chrome DevTools to AI Engineering, with Addy Osmani</title>
       <link>https://newsletter.pragmaticengineer.com/p/from-chrome-devtools-to-ai-engineering</link>
