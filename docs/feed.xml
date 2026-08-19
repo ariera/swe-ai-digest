@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Aug 2026 17:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 15:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: Grok’s CLI caught uploading all your local files to the cloud</title>
+      <link>https://blog.pragmaticengineer.com/grolk-cli-uploaded-all-your-files-to-the-cloud/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 19 Aug 2026 14:21:33 +0000</pubDate>
+      <description>Gergely Orosz details how xAI's Grok Build CLI was secretly uploading users' entire local codebases — including unencrypted `.env` secrets and full git histories — to a Google Cloud Storage bucket without consent or disclosure. He argues this disqualifies Grok CLI as a trustworthy coding agent for any company with real security needs, contrasting it with competitors like Claude Code and Codex that handle codebase indexing more responsibly. The incident culminated in SpaceX open-sourcing the CLI under public pressure, but Orosz warns it will take years to rebuild developer trust.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/grolk-cli-uploaded-all-your-files-to-the-cloud/</guid>
+    </item>
     <item>
       <title>Headed for the Exit: the Great Engineering Leader Career Break</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-great-engineering-leader-career-break</link>
