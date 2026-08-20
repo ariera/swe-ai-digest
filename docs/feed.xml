@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Aug 2026 00:00:23 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 16:00:14 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mtjmgnp2vn2a</link>
+      <author>Matteo Collina</author>
+      <pubDate>Thu, 20 Aug 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina notes that AI-driven demand helped Supabase Storage reach one billion requests, and that adopting Platformatic Watt allowed the team to quadruple throughput while cutting infrastructure in half. The post highlights how AI workloads are reshaping backend scaling requirements and infrastructure efficiency for storage services.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mtjmgnp2vn2a</guid>
+    </item>
     <item>
       <title>smolmachines / smolvm as a sandbox for untrusted Python &amp; JavaScript</title>
       <link>https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/</link>
