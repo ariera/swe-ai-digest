@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Aug 2026 23:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 00:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>smolmachines / smolvm as a sandbox for untrusted Python &amp; JavaScript</title>
+      <link>https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 19 Aug 2026 23:16:00 +0000</pubDate>
+      <description>Simon Willison describes delegating a technical research task — evaluating smolmachines/smolvm as a sandboxing solution for untrusted Python and JavaScript — entirely to Claude Fable 5 running in Claude Code for web. When the agent hit an environmental blocker (no KVM support), it autonomously devised a workaround by spinning up GitHub Actions runners, demonstrating proactive problem-solving. This illustrates how AI coding agents can independently navigate infrastructure constraints during real engineering research tasks.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/</guid>
+    </item>
+    <item>
+      <title>Quoting Jeremy Morrell</title>
+      <link>https://simonwillison.net/2026/Aug/19/jeremy-morrell/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 19 Aug 2026 22:56:31 +0000</pubDate>
+      <description>Jeremy Morrell argues that LLMs dramatically reduce the cost of writing software extensions, and that modern sandboxing primitives make user-authored extensions safe to deploy. This creates a new architectural pattern — a stable app core that users can extend via LLM-generated code — potentially reshaping how software engineers think about extensibility and user empowerment.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/19/jeremy-morrell/</guid>
+    </item>
     <item>
       <title>Conceptual integrity and counting lines of code</title>
       <link>https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/</link>
