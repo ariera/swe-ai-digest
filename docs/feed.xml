@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Aug 2026 16:00:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 18:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: We need to talk about migrations with AI</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-we-need-to-talk-about-migrations</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 20 Aug 2026 17:53:01 +0000</pubDate>
+      <description>Orosz examines how AI is proving especially effective for large-scale framework migrations: Asana used AI to complete an Enzyme test-suite rewrite in two weeks, a project that would otherwise have been indefinitely deferred, with Airbnb and Uber reporting similar gains. The piece also critiques Gartner's "AI code modernization" rankings, arguing that incumbents like AWS and Microsoft score higher than leading AI-native vendors (Anthropic, Cursor, OpenAI) largely because the latter refuse to pay Gartner's participation fees.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-we-need-to-talk-about-migrations</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://bsky.app/profile/nodeland.dev/post/3mtjmgnp2vn2a</link>
