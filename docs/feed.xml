@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Aug 2026 18:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 19:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: Meta’s self-inflicted resignation-wave</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-metas-self-inflicted-resignation-wave/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 20 Aug 2026 18:08:45 +0000</pubDate>
+      <description>Orosz reports that Meta's forced reassignment of engineers to AI data-labeling work has triggered a significant talent exodus, with Anthropic and OpenAI actively poaching staff despite Meta offering $400K–$1M+ retention equity grants. The piece argues that treating engineers as interchangeable commodities — to accelerate AI model development — has backfired, creating a low-morale "mercenary" culture that makes Meta vulnerable to competitors who can match its compensation. For engineers, it illustrates how AI lab hiring is reshaping Big Tech talent markets in real time.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-metas-self-inflicted-resignation-wave/</guid>
+    </item>
     <item>
       <title>The Pulse: We need to talk about migrations with AI</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-pulse-we-need-to-talk-about-migrations</link>
