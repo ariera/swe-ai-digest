@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Aug 2026 00:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 01:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>ChatGPT search now uses the site:operator at scale</title>
+      <link>https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 20 Aug 2026 23:57:32 +0000</pubDate>
+      <description>Simon Willison examines data from Promptwatch showing that ChatGPT Search dramatically increased its use of the `site:` operator — jumping from ~0.5% to 16–17% of fanout queries — coinciding with the GPT-5.6 rollout. He theorizes the search tool now accepts a `domains` parameter rather than emitting raw `site:` syntax, and notes a concurrent reduction in Reddit as a sourced domain. This matters to engineers tracking AI-driven search behavior, system prompt design, and the emerging field of Generative Engine Optimization (GEO).</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/</guid>
+    </item>
     <item>
       <title>The Pulse: Meta’s self-inflicted resignation-wave</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-metas-self-inflicted-resignation-wave/</link>
