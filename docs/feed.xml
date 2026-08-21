@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Aug 2026 01:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 16:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Matt Webb</title>
+      <link>https://simonwillison.net/2026/Aug/21/matt-webb/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 21 Aug 2026 15:06:26 +0000</pubDate>
+      <description>Matt Webb describes using ChatGPT not to write code, but as an interactive tutor to learn quaternion math — a concept he couldn't grasp through books or peer help — just enough to implement augmented reality features himself. He argues that offloading some thinking to AI can paradoxically deepen personal learning rather than replacing it, a nuanced take on AI's effect on developer skill-building.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/21/matt-webb/</guid>
+    </item>
     <item>
       <title>ChatGPT search now uses the site:operator at scale</title>
       <link>https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/</link>
