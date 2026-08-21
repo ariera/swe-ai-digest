@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Aug 2026 17:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 22:00:30 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>llm 0.32.1</title>
+      <link>https://simonwillison.net/2026/Aug/21/llm/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 21 Aug 2026 17:16:13 +0000</pubDate>
+      <description>Simon Willison's LLM CLI tool (version 0.32.1) broke for fresh installs after the OpenAI Python library dropped its httpx dependency, which LLM had been relying on transitively. The patch pins to openai&lt;3 as a stopgap, with a forthcoming 0.33 release planned to migrate from httpx to httpx2. Engineers using the LLM tool should be aware of this dependency issue and the upcoming breaking change.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/21/llm/</guid>
+    </item>
+    <item>
+      <title>llm-openrouter 0.7</title>
+      <link>https://simonwillison.net/2026/Aug/21/llm-openrouter/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 21 Aug 2026 16:58:19 +0000</pubDate>
+      <description>Simon Willison releases llm-openrouter 0.7, a plugin updating compatibility with LLM 0.32 and improving support for reasoning LLMs via OpenRouter. Key additions include adoption of OpenRouter's Responses API and three new server-side tools — Shell, WebFetch, and WebSearch — expanding agentic capabilities for users of the LLM CLI toolchain.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/21/llm-openrouter/</guid>
+    </item>
     <item>
       <title>Stop Making TUIs</title>
       <link>https://simonwillison.net/2026/Aug/21/stop-making-tuis/</link>
