@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2026 17:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 18:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>llm 0.33</title>
+      <link>https://simonwillison.net/2026/Aug/22/llm/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 22 Aug 2026 17:01:16 +0000</pubDate>
+      <description>Simon Willison releases llm 0.33, a CLI/Python tool for interacting with large language models, highlighting several developer-facing improvements: upgraded OpenAI library support, a flexible per-call API key pattern for embedding models, and the ability to compose multiple prompt templates. A new `reasoning_summary` option (auto/concise/detailed) is also added for reasoning-capable Responses API models, useful for testing OpenAI-compatible third-party endpoints.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/22/llm/</guid>
+    </item>
     <item>
       <title>More than just code review</title>
       <link>https://simonwillison.net/2026/Aug/22/more-than-just-code-review/</link>
