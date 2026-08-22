@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2026 18:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 20:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -24,6 +24,14 @@
       <pubDate>Sat, 22 Aug 2026 15:56:54 +0000</pubDate>
       <description>Simon Willison argues that working effectively with coding agents requires two core skills: clearly instructing the agent and confidently verifying its output — but that verification doesn't always mean reading every line of generated code. He contends that line-by-line review has never been the most effective validation method, suggesting engineers should develop broader strategies for assessing agent-produced changes.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/22/more-than-just-code-review/</guid>
+    </item>
+    <item>
+      <title>Fast and Hard Code</title>
+      <link>https://lucumr.pocoo.org/2026/8/22/fast-hard-code/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher argues that LLM-assisted development is lowering the barrier to "hard" languages like Rust and Zig, and previously gatekept domains like eBPF, DWARF, and custom crypto — because agents absorb the learning-curve friction that once deterred developers. This is driving a vibe shift toward performance-obsessed software, with projects increasingly picking low-level, difficult technologies they wouldn't have touched before. For software engineers, it signals that AI is reshaping not just productivity but language and stack selection at an industry level.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/8/22/fast-hard-code/</guid>
     </item>
     <item>
       <title>llm 0.32.1</title>
