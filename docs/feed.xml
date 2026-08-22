@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Aug 2026 22:00:30 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 17:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>More than just code review</title>
+      <link>https://simonwillison.net/2026/Aug/22/more-than-just-code-review/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 22 Aug 2026 15:56:54 +0000</pubDate>
+      <description>Simon Willison argues that working effectively with coding agents requires two core skills: clearly instructing the agent and confidently verifying its output — but that verification doesn't always mean reading every line of generated code. He contends that line-by-line review has never been the most effective validation method, suggesting engineers should develop broader strategies for assessing agent-produced changes.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/22/more-than-just-code-review/</guid>
+    </item>
     <item>
       <title>llm 0.32.1</title>
       <link>https://simonwillison.net/2026/Aug/21/llm/</link>
