@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2026 22:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 21:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Anthropic’s best AI model struggles to attract users as cheaper tools thrive</title>
+      <link>https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 23 Aug 2026 20:24:52 +0000</pubDate>
+      <description>Simon Willison summarizes an FT report showing Anthropic's annualized revenue reaching $65B in July 2026, while noting that its premium Fable 5 model has struggled with adoption due to cost — a pattern corroborated by Ramp's AI index of 70,000 companies. The data highlights a broader market dynamic where cheaper models dominate usage even as AI revenue surges, a key signal for engineers evaluating model cost-performance tradeoffs.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/</guid>
+    </item>
+    <item>
+      <title>Quoting Drew Breunig</title>
+      <link>https://simonwillison.net/2026/Aug/23/drew-breunig/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 23 Aug 2026 19:55:30 +0000</pubDate>
+      <description>Drew Breunig argues that the release of Claude's high-capability but expensive "Fable" model marks the end of an era where engineers could rely on cheaper, upcoming models to solve context and prompting inefficiencies. This pricing pressure is forcing teams to deliberately route tasks to appropriately-tiered models, making prompt engineering and context strategy optimization newly worthwhile investments for software teams.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/23/drew-breunig/</guid>
+    </item>
     <item>
       <title>Quoting Linus Torvalds</title>
       <link>https://simonwillison.net/2026/Aug/22/linus-torvalds/</link>
