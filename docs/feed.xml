@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Aug 2026 21:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 08:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Anger, Anxiety and Agency</title>
+      <link>https://lucumr.pocoo.org/2026/8/24/anger-anxiety-agency/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher argues that anxiety and curiosity are more productive responses to AI-driven disruption than anger, which requires a villain that may be misidentified in a genuinely uncertain landscape. He acknowledges that AI's productivity gains are materializing more in personal side projects than in company profits, and that even leaders projecting confidence are privately unsure. For software engineers, he urges experimentation and curiosity before deciding where resistance is warranted.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/8/24/anger-anxiety-agency/</guid>
+    </item>
     <item>
       <title>Anthropic’s best AI model struggles to attract users as cheaper tools thrive</title>
       <link>https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/</link>
