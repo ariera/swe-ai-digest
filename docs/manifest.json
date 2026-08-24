@@ -1,5 +1,13 @@
 [
   {
+    "cw": "2026-CW34",
+    "period_start": "2026-08-17",
+    "period_end": "2026-08-23",
+    "articles_count": 26,
+    "summary_short": "This digest period's AI coverage converges on several interlocking themes. First, model economics is a central tension: compact open-weight models like Qwen 3 27B now rival frontier-scale systems, whi\u2026",
+    "page": "digests/2026-CW34.html"
+  },
+  {
     "cw": "2026-CW33",
     "period_start": "2026-08-10",
     "period_end": "2026-08-16",
