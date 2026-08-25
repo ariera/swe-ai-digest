@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Aug 2026 20:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 16:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Why Ramp built its own in-house coding agent, Inspect</title>
+      <link>https://newsletter.pragmaticengineer.com/p/why-ramp-built-inspect</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 25 Aug 2026 15:20:23 +0000</pubDate>
+      <description>Ramp built its own internal AI coding agent, Inspect, because off-the-shelf tools like Claude Code and Cursor couldn't support the parallelism, internal integrations, and remote dev environments they needed — it now accounts for 75% of merged PRs. The article details Inspect's architecture (remote sandboxes, OpenCode harness, internal tool access) and how it evolved into a platform hosting 200+ internal agents for code review, incident response, and QA. This challenges the "buy, don't build" convention for AI developer tooling, showing that deep internal integration can yield outperformance over frontier-lab offerings.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/why-ramp-built-inspect</guid>
+    </item>
     <item>
       <title>llm-anthropic 0.27</title>
       <link>https://simonwillison.net/2026/Aug/24/llm-anthropic/</link>
