@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2026 04:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 09:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Paul Dix</title>
+      <link>https://simonwillison.net/2026/Aug/26/paul-dix/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 26 Aug 2026 08:07:55 +0000</pubDate>
+      <description>Paul Dix argues that AI generating and iteratively refining 1 million lines of code into production-quality software — now running on millions of machines — is a landmark achievement, not a trivial port. He contends that pairing AI with a robust verification system enables the production of highly complex, reliable software, signaling a meaningful shift in what AI-assisted coding agents can deliver at scale.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/26/paul-dix/</guid>
+    </item>
     <item>
       <title />
       <link>https://avdi.codes/181574-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=181574-2</link>
