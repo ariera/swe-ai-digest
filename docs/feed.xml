@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Aug 2026 16:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 04:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title />
+      <link>https://avdi.codes/181574-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=181574-2</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Wed, 26 Aug 2026 03:10:26 +0000</pubDate>
+      <description>Avdi Grimm uses a pointed analogy to express frustration with the current AI landscape: while he focuses on practically harnessing AI for real engineering work, broader culture is applying it indiscriminately and inappropriately. The post captures a sentiment many engineers share — that AI's hype-driven misuse drowns out its legitimate utility in software workflows.</description>
+      <guid isPermaLink="true">https://avdi.codes/181574-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=181574-2</guid>
+    </item>
     <item>
       <title>Why Ramp built its own in-house coding agent, Inspect</title>
       <link>https://newsletter.pragmaticengineer.com/p/why-ramp-built-inspect</link>
