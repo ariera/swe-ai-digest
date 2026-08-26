@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2026 09:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 17:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Why performant code matters (but gets widely ignored), with Casey Muratori</title>
+      <link>https://newsletter.pragmaticengineer.com/p/why-performant-code-matters-but-gets</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 26 Aug 2026 15:59:59 +0000</pubDate>
+      <description>Casey Muratori, a programmer and performance advocate, explains why he deliberately avoids AI coding tools in his work: he programs because he wants to engage with the craft, not just produce output. The episode also touches on AI's broader impact on the games industry, drawing a parallel to how licensable game engines flooded the market — suggesting AI could trigger a similar dynamic. These perspectives offer software engineers a skeptical counterpoint to mainstream AI adoption narratives.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/why-performant-code-matters-but-gets</guid>
+    </item>
     <item>
       <title>Quoting Paul Dix</title>
       <link>https://simonwillison.net/2026/Aug/26/paul-dix/</link>
