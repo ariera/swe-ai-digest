@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2026 19:00:28 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 23:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Breaking Claude Code Opus 5 Auto Mode</title>
+      <link>https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 27 Aug 2026 22:50:25 +0000</pubDate>
+      <description>Researcher Johann Rehberger demonstrated an 80%-success-rate prompt injection attack against Claude Code's auto mode, where the safety classifier paradoxically blocked Claude's own attempt to terminate injected malware it had detected. Willison concludes that auto mode's protections are insufficient and endorses sandboxing — containers, restricted network egress, and isolated credentials — as the only reliable safeguard for unattended coding agents facing adversarial threats.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/</guid>
+    </item>
     <item>
       <title>The Pulse: We need to talk about migrations with AI</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai/</link>
