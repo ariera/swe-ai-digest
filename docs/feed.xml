@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2026 17:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 01:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Qwen3.8-Flash-Next</title>
+      <link>https://simonwillison.net/2026/Aug/26/qwen38-flash-next/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 26 Aug 2026 23:52:58 +0000</pubDate>
+      <description>Simon Willison evaluates Qwen3.8-Flash-Next, an open-weights multimodal MoE model from Qwen that previews the Qwen4 architecture. With 125B total parameters but only 6B active, it offers strong performance efficiency. Willison runs quantized variants on an NVIDIA DGX Spark, providing a hands-on look at a capable, locally-runnable frontier model.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/26/qwen38-flash-next/</guid>
+    </item>
     <item>
       <title>Why performant code matters (but gets widely ignored), with Casey Muratori</title>
       <link>https://newsletter.pragmaticengineer.com/p/why-performant-code-matters-but-gets</link>
