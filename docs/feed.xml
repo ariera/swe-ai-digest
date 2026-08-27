@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2026 12:00:28 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 14:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Making Your Data Ready for Agentic AI</title>
+      <link>https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Thu, 27 Aug 2026 13:11:00 +0000</pubDate>
+      <description>Pramod Sadalage and Prem Chandrasekaran argue that agentic AI deployments are only as reliable as the underlying data, and that many organizations are building on a weak data foundation. The article outlines how to construct accurate, trustworthy data infrastructure as a prerequisite for effective AI agents. This is directly relevant to software engineers tasked with designing or integrating AI-driven systems in production environments.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html</guid>
+    </item>
     <item>
       <title>Qwen3.8-Flash-Next</title>
       <link>https://simonwillison.net/2026/Aug/26/qwen38-flash-next/</link>
