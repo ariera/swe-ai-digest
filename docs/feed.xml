@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2026 14:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 19:00:28 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: We need to talk about migrations with AI</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 27 Aug 2026 18:04:54 +0000</pubDate>
+      <description>Gergely Orosz examines real-world case studies of AI-assisted large-scale code migrations — including Asana's Enzyme-to-RTL migration, Airbnb's 3,500-test LLM-aided migration, and Uber's JUnit 4-to-5 migration of 600K tests — arguing that AI makes previously impractical, multi-year migrations now completable in weeks. He cautions that the cost savings figures from vendors can be inflated, but concludes that AI fundamentally changes which migrations are worth attempting, while engineers must still design verification loops and oversee the process.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai/</guid>
+    </item>
+    <item>
+      <title>The Pulse: Meta wanted to reduce teams by 60% because of AI</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-meta-wanted-to-reduce-teams</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 27 Aug 2026 17:59:17 +0000</pubDate>
+      <description>Gergely Orosz examines a Reuters report revealing that Meta's leadership planned to reduce team sizes by 60% — its largest-ever layoffs — citing AI as a key driver. This is a significant data point for software engineers tracking how AI ambitions are translating into concrete workforce restructuring decisions at major tech companies.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-meta-wanted-to-reduce-teams</guid>
+    </item>
     <item>
       <title>Making Your Data Ready for Agentic AI</title>
       <link>https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html</link>
