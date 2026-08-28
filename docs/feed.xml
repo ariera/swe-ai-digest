@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Aug 2026 19:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 23:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Just a rumour of a bug is enough to find a security exploit these days</title>
+      <link>https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 28 Aug 2026 22:12:02 +0000</pubDate>
+      <description>AI coding agents are now exploiting security vulnerabilities within minutes of patches being hinted at in public repositories — before fixes are even released. This has overwhelmed open source maintainers: one project saw security disclosures more than double in a single month, rendering traditional embargo practices unworkable. Engineers need to rethink disclosure workflows and patch coordination in an era where AI dramatically compresses the time from rumor to exploit.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://bsky.app/profile/nodeland.dev/post/3mu5zbpvofz2j</link>
