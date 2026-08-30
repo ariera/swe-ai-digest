@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Aug 2026 23:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 01:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Introducing Hy4 Preview</title>
+      <link>https://simonwillison.net/2026/Aug/29/hy4/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 29 Aug 2026 23:53:13 +0000</pubDate>
+      <description>Simon Willison covers Tencent's newly released Hy4, a 770B-parameter open-weight LLM with a 1M token context window — a significant jump from its predecessor Hy3. He examines the model's chat template, finding it supports only two reasoning effort levels ("high" and "no_think"), and notes that its reasoning traces use abbreviated, grammar-light language for token efficiency — a practical detail relevant to engineers building or evaluating reasoning-capable models.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/29/hy4/</guid>
+    </item>
     <item>
       <title>Just a rumour of a bug is enough to find a security exploit these days</title>
       <link>https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/</link>
