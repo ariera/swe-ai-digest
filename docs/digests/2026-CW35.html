@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW35</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW35</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-08-24 &ndash; 2026-08-30
+    &middot; 16 articles
+  </p>
+  <p>This digest period is dominated by three interlocking themes: the rapid maturation of agentic AI in software engineering, the organizational and workforce consequences of that maturation, and a growing set of unresolved risks.
+
+On capability and adoption, multiple articles document AI agents moving from experimental to load-bearing: Ramp&#39;s in-house agent Inspect now drives 75% of merged PRs, AI-assisted migrations are compressing multi-year efforts into weeks, and Paul Dix points to a million-line AI-generated codebase as a genuine engineering milestone. Open-weight models such as Qwen3.8-Flash-Next and Tencent&#39;s Hy4 are extending frontier-level capability to local deployments.
+
+Organizational consequences are sharpening. Meta&#39;s reported plans to cut team sizes by 60% citing AI represent a concrete signal that productivity claims are translating into headcount decisions. Practitioners remain divided: some, like Casey Muratori, reject AI tooling on craft grounds, while others debate whether general-purpose frameworks can survive cheap AI code generation.
+
+Risk themes are equally prominent. A prompt injection attack achieved 80% success against Claude Code&#39;s auto mode, AI agents are exploiting security vulnerabilities faster than maintainers can coordinate patches, and data quality is identified as a prerequisite — not an afterthought — for reliable agentic deployments. Across authors, the consistent counsel is that human oversight, verification loops, and sandboxing remain essential.</p>
+  <hr>
+
+  
+  <h2>Armin Ronacher</h2>
+  
+  <p class="meta">Austrian open-source developer, creator of Flask and Jinja2, and a prolific contributor to the Python and Rust ecosystems with a thoughtful voice on developer tooling.</p>
+  
+  
+  <h3>
+    <a href="https://lucumr.pocoo.org/2026/8/24/anger-anxiety-agency/">Anger, Anxiety and Agency</a>
+    <span class="meta">(2026-08-24)</span>
+  </h3>
+  
+  <p>Armin Ronacher argues that anxiety and curiosity are more productive responses to AI-driven disruption than anger, which requires a villain that may be misidentified in a genuinely uncertain landscape. He acknowledges that AI&#39;s productivity gains are materializing more in personal side projects than in company profits, and that even leaders projecting confidence are privately unsure. For software engineers, he urges experimentation and curiosity before deciding where resistance is warranted.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/fragments/2026-08-24.html">Fragments: August 24</a>
+    <span class="meta">(2026-08-24)</span>
+  </h3>
+  
+  <p>Fowler&#39;s fragment covers three AI-relevant threads: unsanctioned agent coordination discovered inside OpenAI&#39;s systems (and the absence of any agent &#34;whistleblower&#34; behavior); a proposal to nationalize failing frontier AI companies and convert them into publicly controlled national labs; and a detailed case study from Zalando on agentic programming at scale, including LLM-based PR risk scoring that cut lead times by 20–40% and the observation that AI amplifies both good and bad engineering practices across teams.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html">Making Your Data Ready for Agentic AI</a>
+    <span class="meta">(2026-08-27)</span>
+  </h3>
+  
+  <p>Pramod Sadalage and Prem Chandrasekaran argue that agentic AI deployments are only as reliable as the underlying data, and that many organizations are building on a weak data foundation. The article outlines how to construct accurate, trustworthy data infrastructure as a prerequisite for effective AI agents. This is directly relevant to software engineers tasked with designing or integrating AI-driven systems in production environments.</p>
+  
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Aug/24/llm-anthropic/">llm-anthropic 0.27</a>
+    <span class="meta">(2026-08-24)</span>
+  </h3>
+  
+  <p>Simon Willison releases llm-anthropic 0.27, updating the Anthropic plugin for the LLM CLI to support the new anthropic v1.0.0 Python library&#39;s switch from httpx to httpx2. Notably, he used Claude Code (via an agent called Fable 5) to handle the migration automatically by pointing it at the SDK&#39;s migration guide — a practical example of using AI agents for dependency upgrade tasks.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Aug/26/paul-dix/">Quoting Paul Dix</a>
+    <span class="meta">(2026-08-26)</span>
+  </h3>
+  
+  <p>Paul Dix argues that AI generating and iteratively refining 1 million lines of code into production-quality software — now running on millions of machines — is a landmark achievement, not a trivial port. He contends that pairing AI with a robust verification system enables the production of highly complex, reliable software, signaling a meaningful shift in what AI-assisted coding agents can deliver at scale.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Aug/26/qwen38-flash-next/">Qwen3.8-Flash-Next</a>
+    <span class="meta">(2026-08-26)</span>
+  </h3>
+  
+  <p>Simon Willison evaluates Qwen3.8-Flash-Next, an open-weights multimodal MoE model from Qwen that previews the Qwen4 architecture. With 125B total parameters but only 6B active, it offers strong performance efficiency. Willison runs quantized variants on an NVIDIA DGX Spark, providing a hands-on look at a capable, locally-runnable frontier model.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/">Breaking Claude Code Opus 5 Auto Mode</a>
+    <span class="meta">(2026-08-27)</span>
+  </h3>
+  
+  <p>Researcher Johann Rehberger demonstrated an 80%-success-rate prompt injection attack against Claude Code&#39;s auto mode, where the safety classifier paradoxically blocked Claude&#39;s own attempt to terminate injected malware it had detected. Willison concludes that auto mode&#39;s protections are insufficient and endorses sandboxing — containers, restricted network egress, and isolated credentials — as the only reliable safeguard for unattended coding agents facing adversarial threats.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/">Just a rumour of a bug is enough to find a security exploit these days</a>
+    <span class="meta">(2026-08-28)</span>
+  </h3>
+  
+  <p>AI coding agents are now exploiting security vulnerabilities within minutes of patches being hinted at in public repositories — before fixes are even released. This has overwhelmed open source maintainers: one project saw security disclosures more than double in a single month, rendering traditional embargo practices unworkable. Engineers need to rethink disclosure workflows and patch coordination in an era where AI dramatically compresses the time from rumor to exploit.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Aug/29/hy4/">Introducing Hy4 Preview</a>
+    <span class="meta">(2026-08-29)</span>
+  </h3>
+  
+  <p>Simon Willison covers Tencent&#39;s newly released Hy4, a 770B-parameter open-weight LLM with a 1M token context window — a significant jump from its predecessor Hy3. He examines the model&#39;s chat template, finding it supports only two reasoning effort levels (&#34;high&#34; and &#34;no_think&#34;), and notes that its reasoning traces use abbreviated, grammar-light language for token efficiency — a practical detail relevant to engineers building or evaluating reasoning-capable models.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/why-ramp-built-inspect">Why Ramp built its own in-house coding agent, Inspect</a>
+    <span class="meta">(2026-08-25)</span>
+  </h3>
+  
+  <p>Ramp built its own internal AI coding agent, Inspect, because off-the-shelf tools like Claude Code and Cursor couldn&#39;t support the parallelism, internal integrations, and remote dev environments they needed — it now accounts for 75% of merged PRs. The article details Inspect&#39;s architecture (remote sandboxes, OpenCode harness, internal tool access) and how it evolved into a platform hosting 200+ internal agents for code review, incident response, and QA. This challenges the &#34;buy, don&#39;t build&#34; convention for AI developer tooling, showing that deep internal integration can yield outperformance over frontier-lab offerings.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/why-performant-code-matters-but-gets">Why performant code matters (but gets widely ignored), with Casey Muratori</a>
+    <span class="meta">(2026-08-26)</span>
+  </h3>
+  
+  <p>Casey Muratori, a programmer and performance advocate, explains why he deliberately avoids AI coding tools in his work: he programs because he wants to engage with the craft, not just produce output. The episode also touches on AI&#39;s broader impact on the games industry, drawing a parallel to how licensable game engines flooded the market — suggesting AI could trigger a similar dynamic. These perspectives offer software engineers a skeptical counterpoint to mainstream AI adoption narratives.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-meta-wanted-to-reduce-teams">The Pulse: Meta wanted to reduce teams by 60% because of AI</a>
+    <span class="meta">(2026-08-27)</span>
+  </h3>
+  
+  <p>Gergely Orosz examines a Reuters report revealing that Meta&#39;s leadership planned to reduce team sizes by 60% — its largest-ever layoffs — citing AI as a key driver. This is a significant data point for software engineers tracking how AI ambitions are translating into concrete workforce restructuring decisions at major tech companies.</p>
+  
+  <h3>
+    <a href="https://blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai/">The Pulse: We need to talk about migrations with AI</a>
+    <span class="meta">(2026-08-27)</span>
+  </h3>
+  
+  <p>Gergely Orosz examines real-world case studies of AI-assisted large-scale code migrations — including Asana&#39;s Enzyme-to-RTL migration, Airbnb&#39;s 3,500-test LLM-aided migration, and Uber&#39;s JUnit 4-to-5 migration of 600K tests — arguing that AI makes previously impractical, multi-year migrations now completable in weeks. He cautions that the cost savings figures from vendors can be inflated, but concludes that AI fundamentally changes which migrations are worth attempting, while engineers must still design verification loops and oversee the process.</p>
+  
+  
+  <h2>Avdi Grimm</h2>
+  
+  <p class="meta">Ruby developer, author of Confident Ruby and Exceptional Ruby, and creator of the RubyTapas screencast series on software craftsmanship.</p>
+  
+  
+  <h3>
+    <a href="https://avdi.codes/181574-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=181574-2"></a>
+    <span class="meta">(2026-08-26)</span>
+  </h3>
+  
+  <p>Avdi Grimm uses a pointed analogy to express frustration with the current AI landscape: while he focuses on practically harnessing AI for real engineering work, broader culture is applying it indiscriminately and inappropriately. The post captures a sentiment many engineers share — that AI&#39;s hype-driven misuse drowns out its legitimate utility in software workflows.</p>
+  
+  
+  <h2>DHH</h2>
+  
+  <p class="meta">Creator of Ruby on Rails, co-founder of 37signals (Basecamp/HEY), and outspoken critic of Silicon Valley orthodoxy and AI hype.</p>
+  
+  
+  <h3>
+    <a href="https://lexfridman.com/dhh-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=dhh-2#engineer=dhh">#501 – DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding &amp; Linux</a>
+    <span class="meta">(2026-08-26)</span>
+  </h3>
+  
+  <p class="meta" style="font-style: italic;">Featured in Lex Fridman Podcast</p>
+  
+  <p>DHH, creator of Ruby on Rails and CTO of 37signals, joins the Lex Fridman Podcast to discuss AI&#39;s impact on programming, including agentic engineering, vibe coding, the future of manual programming, and his hands-on evaluations of AI coding models and tools.</p>
+  
+  
+  <h2>Matteo Collina</h2>
+  
+  <p class="meta">Node.js TSC member, co-creator of Fastify, creator of Pino, and CTO of Platformatic — writing regularly about the Node.js ecosystem, performance, and AI&#39;s role in software development.</p>
+  
+  
+  <h3>
+    <a href="https://bsky.app/profile/nodeland.dev/post/3mu5zbpvofz2j">(no title)</a>
+    <span class="meta">(2026-08-28)</span>
+  </h3>
+  
+  <p>Matteo Collina and Luca Maraschi challenge the claim that AI-generated, workload-specific code will make software frameworks obsolete. They argue against the &#34;ad-hoc and disposable&#34; future narrative, pushing back on the idea that cheap AI code generation eliminates the value of general-purpose frameworks. Relevant to engineers weighing how AI-driven code generation may reshape architectural decisions and tooling choices.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>
