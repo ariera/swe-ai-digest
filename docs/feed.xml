@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 01:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 01:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Understanding ChatGPT Work</title>
+      <link>https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 30 Aug 2026 23:59:47 +0000</pubDate>
+      <description>Simon Willison reverse-engineers ChatGPT Work, OpenAI's agentic cloud product, identifying key differentiators from standard Chat: open-internet code execution, a full headless Chrome browser, a persistent shared filesystem, deployable web apps via Cloudflare Workers, and parallel sub-agent orchestration. He raises a pointed security concern — ChatGPT Work satisfies his "lethal trifecta" of private data access, untrusted content exposure, and exfiltration capability, making prompt injection a serious risk. Engineers evaluating agentic AI tools will find this a practical, feature-by-feature breakdown with real usage examples.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/</guid>
+    </item>
     <item>
       <title>Introducing Hy4 Preview</title>
       <link>https://simonwillison.net/2026/Aug/29/hy4/</link>
