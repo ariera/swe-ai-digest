@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Aug 2026 01:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 01:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Introducing wrapture</title>
+      <link>https://simonwillison.net/2026/Aug/31/introducing-wrapture/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 31 Aug 2026 23:59:36 +0000</pubDate>
+      <description>Graham Dumpleton built Wrapture, a Python monkeypatching/tracing library, with every line of code and documentation written by an AI assistant under his expert direction — explicitly distinguishing this from "vibe coding." His approach argues that domain expertise remains essential: the engineer provides the design and judgment while AI serves as the implementation vehicle. This offers a concrete, practitioner-level example of agentic engineering done deliberately rather than speculatively.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Aug/31/introducing-wrapture/</guid>
+    </item>
     <item>
       <title>Understanding ChatGPT Work</title>
       <link>https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/</link>
