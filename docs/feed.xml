@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2026 05:00:25 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 06:00:28 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Rick Brewster</title>
+      <link>https://simonwillison.net/2026/Sep/2/rick-brewster/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 02 Sep 2026 05:50:57 +0000</pubDate>
+      <description>Paint.NET's author used Claude to write a 180,000-line clean-room reimplementation of Direct2D for WINE compatibility — a project he says would never have happened otherwise. He candidly describes the experience as "vibe coding," noting he couldn't feasibly review the output but had to actively supervise Claude on resource management and architectural decisions. The account offers a grounded, practitioner-level case study of AI-assisted large-scale code generation, including both its remarkable productivity ceiling and its failure modes.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/2/rick-brewster/</guid>
+    </item>
     <item>
       <title>Claude Fable 5.1 made me a really nice animated pelican</title>
       <link>https://simonwillison.net/2026/Sep/1/claude-fable-5-1/</link>
