@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2026 01:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 05:00:25 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -48,6 +48,14 @@
       <pubDate>Tue, 01 Sep 2026 16:06:50 +0000</pubDate>
       <description>Gergely Orosz launches a $10,000 essay competition inviting software engineers to document first-hand how AI tooling and LLMs are transforming engineering practices at their companies. Accepted topics include shifts in workflows, culture, and the transition to AI-native development. The contest reflects how rapidly industry norms are changing — fast enough that traditional weekly coverage can no longer capture the full breadth of on-the-ground shifts.</description>
       <guid isPermaLink="true">https://blog.pragmaticengineer.com/how-software-engineering-is-changing-an-essay-challenge/</guid>
+    </item>
+    <item>
+      <title>datasette-mcp 0.2</title>
+      <link>https://simonwillison.net/2026/Sep/1/datasette-mcp/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 01 Sep 2026 15:30:12 +0000</pubDate>
+      <description>Simon Willison releases datasette-mcp 0.2, a plugin connecting the Datasette SQL tool to the Model Context Protocol. A key change shifts SQL query results from arrays of arrays to arrays of objects, explicitly to help weaker LLMs correctly map column names to values. This reflects practical design thinking around LLM reliability in tool-use contexts.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/1/datasette-mcp/</guid>
     </item>
     <item>
       <title>Introducing wrapture</title>
