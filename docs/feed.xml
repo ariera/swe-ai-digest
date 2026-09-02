@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2026 00:00:24 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 01:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -32,6 +32,14 @@
       <pubDate>Tue, 01 Sep 2026 19:03:01 +0000</pubDate>
       <description>Simon Willison discovers that OpenAI's Codex desktop app (now rebranded as ChatGPT) silently bundles a 1.7GB runtime cache containing full Python and Node.js installations, along with native binaries for tools like Poppler, git, and LibreOffice. The app uses "skills" to instruct Codex how to locate and invoke these binaries, revealing how the agent is architected to handle document-related tasks locally. This offers software engineers a concrete look at how AI coding agents package and orchestrate external tool dependencies under the hood.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Sep/1/codex-libreoffice/</guid>
+    </item>
+    <item>
+      <title>GeoJSON Map Viewer</title>
+      <link>https://simonwillison.net/2026/Sep/1/geojson/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 01 Sep 2026 18:05:45 +0000</pubDate>
+      <description>Simon Willison describes building a GeoJSON map viewer by prompting GPT-5.6-Sol for tool suggestions — which proactively generated one — then iterating with Claude Code and Fable 5.1. He also used ChatGPT Work to extract and combine government data sources into precise geographic boundary files. The piece illustrates a practical AI-driven workflow where LLMs handle both tool creation and data extraction tasks end-to-end.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/1/geojson/</guid>
     </item>
     <item>
       <title>How software engineering is changing: an essay challenge</title>
