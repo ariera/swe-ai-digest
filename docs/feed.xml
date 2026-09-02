@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2026 06:00:28 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 14:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Maybe We Shouldn't Be Reviewing All This Code</title>
+      <link>https://martinfowler.com/rachels-ramblings/code-review.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Wed, 02 Sep 2026 13:32:00 +0000</pubDate>
+      <description>The author argues that AI-generated code volumes (e.g., PR sizes up 64%, lines of code per diff up 106% at Meta) are exposing deep flaws in code review as a process, rather than simply overwhelming it. Instead of automating reviews to match AI output speed, she advocates shifting feedback left through pairing, collaborative design, trunk-based development, and fitness functions. Human review should be reserved for high-stakes exceptions, while teams focus on maintaining system understanding rather than inspecting diffs.</description>
+      <guid isPermaLink="true">https://martinfowler.com/rachels-ramblings/code-review.html</guid>
+    </item>
     <item>
       <title>Quoting Rick Brewster</title>
       <link>https://simonwillison.net/2026/Sep/2/rick-brewster/</link>
