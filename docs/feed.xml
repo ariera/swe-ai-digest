@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2026 15:00:32 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 18:00:14 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>llm-gemini 0.34</title>
+      <link>https://simonwillison.net/2026/Sep/2/llm-gemini/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 02 Sep 2026 16:39:38 +0000</pubDate>
+      <description>Simon Willison releases llm-gemini 0.34, adding support for Google's Gemini 3.8 Flash model with configurable thinking levels (low, medium, high) and fixing a bug where async responses failed to record the resolved model version. This is relevant to engineers using the LLM CLI toolchain to interact with Gemini models programmatically.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/2/llm-gemini/</guid>
+    </item>
     <item>
       <title>An Accidental Blackboard</title>
       <link>https://martinfowler.com/articles/exploring-gen-ai/an-accidental-blackboard.html</link>
