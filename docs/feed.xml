@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2026 18:00:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 17:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title />
+      <link>https://avdi.codes/182978-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=182978-2</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Thu, 03 Sep 2026 16:01:03 +0000</pubDate>
+      <description>Avdi Grimm shares his stance on AI: those who flatly deny that currently-occurring AI developments are possible are likely wrong. He links to a Dan Luu analysis examining the accuracy of prominent AI skeptic Ed Zitron's predictions. This is relevant to engineers tracking AI trajectories, as it engages directly with the question of how well AI skepticism holds up against real-world outcomes.</description>
+      <guid isPermaLink="true">https://avdi.codes/182978-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=182978-2</guid>
+    </item>
     <item>
       <title>llm-gemini 0.34</title>
       <link>https://simonwillison.net/2026/Sep/2/llm-gemini/</link>
