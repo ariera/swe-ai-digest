@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Sep 2026 18:00:36 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 21:00:26 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>GPT‑6 Astra</title>
+      <link>https://simonwillison.net/2026/Sep/3/gpt6-astra/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 03 Sep 2026 20:18:41 +0000</pubDate>
+      <description>Simon Willison covers the launch of GPT-6 Astra, OpenAI's new frontier model positioned as a competitor to Claude Fable 5, priced at $10/M input and $50/M output tokens. Astra posts notable benchmark scores — including 99.9% on ARC-AGI 3 (via a custom harness) and 100% on ExploitBench — though it trails Fable on Artificial Analysis's Intelligence Index. Engineers evaluating frontier models for coding or security workloads will find its cost-efficiency and long-context improvements (up to 1M tokens) particularly relevant.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/3/gpt6-astra/</guid>
+    </item>
     <item>
       <title>The Pulse: Meta wanted to reduce teams by 60% because of AI</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-meta-wanted-to-reduce-teams-by-60-because-of-ai/</link>
