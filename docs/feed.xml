@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Sep 2026 06:00:31 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 16:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mupdggtlxw2w</link>
+      <author>Matteo Collina</author>
+      <pubDate>Fri, 04 Sep 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina advises developers to maintain at least two AI providers to ensure redundancy against outages, and to use different models for different tasks. The tip highlights that AI tooling has become a critical dependency in coding workflows, making provider diversification a practical resilience strategy for software engineers.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mupdggtlxw2w</guid>
+    </item>
     <item>
       <title>August newsletter is out</title>
       <link>https://simonwillison.net/2026/Sep/4/august-newsletter/</link>
