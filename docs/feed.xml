@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Sep 2026 13:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 16:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Using Blender with coding agents on macOS</title>
+      <link>https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 05 Sep 2026 15:51:09 +0000</pubDate>
+      <description>Simon Willison demonstrates using ChatGPT Codex as a coding agent to drive Blender's Python API on macOS, generating 3D rendered scenes through iterative natural-language prompts. The post illustrates a practical agentic workflow where an LLM writes and executes code against a local application, relevant to engineers exploring AI-assisted creative and generative pipelines.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/</guid>
+    </item>
     <item>
       <title>Latent Powers</title>
       <link>https://lucumr.pocoo.org/2026/9/5/latent-powers/</link>
