@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Sep 2026 00:00:24 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 13:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Latent Powers</title>
+      <link>https://lucumr.pocoo.org/2026/9/5/latent-powers/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher reflects on how LLMs don't just assist with tasks but actively shape what projects developers choose to pursue — often steering independent users toward the same ideas simultaneously. He argues this "latent nudging" effect, where models surface the same suggestions and capabilities to many users, raises questions about intellectual originality and homogeneity in what the engineering community builds. This is a meaningful observation for software engineers increasingly relying on AI as a collaborative thought partner.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/9/5/latent-powers/</guid>
+    </item>
     <item>
       <title>The Pelican comparison grid for Astra is pretty interesting</title>
       <link>https://simonwillison.net/2026/Sep/4/astra-pelicans/</link>
