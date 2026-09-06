@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Sep 2026 16:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 00:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Introducing GPT-6 Astra for developers</title>
+      <link>https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 05 Sep 2026 23:27:48 +0000</pubDate>
+      <description>Simon Willison highlights the launch of GPT-6 Astra, OpenAI's new model aimed at developers, noting its improved prompt understanding, attention to detail, and advanced generative capabilities — particularly in 3D modeling. The post is a brief observation rather than a deep analysis, but signals a new frontier model release relevant to engineers tracking LLM capability progression.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/</guid>
+    </item>
     <item>
       <title>Using Blender with coding agents on macOS</title>
       <link>https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/</link>
