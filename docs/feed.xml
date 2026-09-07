@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 01:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 22:00:32 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Video compressor</title>
+      <link>https://simonwillison.net/2026/Sep/7/video-compressor/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 07 Sep 2026 18:29:07 +0000</pubDate>
+      <description>Simon Willison used Claude Fable 5.1 via Claude Code to build a browser-based video compression tool powered by a WebAssembly build of FFMPEG. The example illustrates how AI coding agents can rapidly scaffold functional, non-trivial web tooling — combining WASM and media processing — from a practical, real-world need.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/7/video-compressor/</guid>
+    </item>
+    <item>
+      <title>Mercator ↔ Equal Earth</title>
+      <link>https://simonwillison.net/2026/Sep/7/equal-earth/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 07 Sep 2026 16:24:16 +0000</pubDate>
+      <description>Simon Willison used GPT-6 Astra (medium) via ChatGPT Work to vibe-code an animated D3 visualization transitioning between Mercator and Equal Earth map projections. The example illustrates how AI coding assistants can rapidly produce working, domain-specific visualizations from a casual prompt, with minimal manual coding effort.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/7/equal-earth/</guid>
+    </item>
     <item>
       <title>Research acceleration: The view inside OpenAI</title>
       <link>https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/</link>
