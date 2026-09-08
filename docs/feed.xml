@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 23:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 00:00:43 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Creepy crawlies</title>
+      <link>https://simonwillison.net/2026/Sep/7/creepy-crawlies/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 07 Sep 2026 23:08:58 +0000</pubDate>
+      <description>Simon Willison highlights a report from git.kernel.org showing that AI-driven web crawlers consume more server CPU than all legitimate traffic combined — including git clones. Willison flags this as a concern for his own project, Datasette, which exposes many crawlable pages. The post underscores the real infrastructure costs that aggressive AI training and scraping bots impose on open-source maintainers.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/7/creepy-crawlies/</guid>
+    </item>
     <item>
       <title>Quoting Jakub Pachocki</title>
       <link>https://simonwillison.net/2026/Sep/7/jakub-pachocki/</link>
@@ -128,6 +136,30 @@
       <pubDate>Thu, 03 Sep 2026 16:01:03 +0000</pubDate>
       <description>Avdi Grimm shares his stance on AI: those who flatly deny that currently-occurring AI developments are possible are likely wrong. He links to a Dan Luu analysis examining the accuracy of prominent AI skeptic Ed Zitron's predictions. This is relevant to engineers tracking AI trajectories, as it engages directly with the question of how well AI skepticism holds up against real-world outcomes.</description>
       <guid isPermaLink="true">https://avdi.codes/182978-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=182978-2</guid>
+    </item>
+    <item>
+      <title>llm-openrouter 0.7.1</title>
+      <link>https://simonwillison.net/2026/Sep/2/llm-openrouter/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 02 Sep 2026 20:23:26 +0000</pubDate>
+      <description>Simon Willison releases llm-openrouter 0.7.1, a minor patch fixing a performance issue when loading OpenRouter models in his LLM command-line tool. This update is relevant to engineers using the LLM CLI ecosystem to access multiple AI models via OpenRouter, as it improves the plugin's responsiveness.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/2/llm-openrouter/</guid>
+    </item>
+    <item>
+      <title>llm 0.34</title>
+      <link>https://simonwillison.net/2026/Sep/2/llm/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 02 Sep 2026 19:23:52 +0000</pubDate>
+      <description>Simon Willison releases llm 0.34, a CLI tool for interacting with large language models, adding response duration tracking to log outputs (in milliseconds and human-readable format) and delivering a significant performance improvement to the `llm logs` command. Bug fixes and a companion llm-openrouter 0.7.1 update are also included. Relevant to engineers building or monitoring LLM-powered workflows via command-line tooling.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/2/llm/</guid>
+    </item>
+    <item>
+      <title>llm-anthropic 0.28</title>
+      <link>https://simonwillison.net/2026/Sep/2/llm-anthropic/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 02 Sep 2026 17:59:32 +0000</pubDate>
+      <description>Simon Willison releases llm-anthropic 0.28, adding support for Claude Fable 5.1, enabling reasoning traces by default for compatible models, and introducing a new `llm_anthropic.ClaudeRefusal` exception for handling Claude's content refusals. This update matters to engineers building on Anthropic's models via the `llm` CLI/library, as it improves observability into model reasoning and adds structured error handling for refusals.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/2/llm-anthropic/</guid>
     </item>
     <item>
       <title>llm-gemini 0.34</title>
