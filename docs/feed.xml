@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Sep 2026 00:00:43 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 01:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Home Hardware, Part 1: My Control4 Revenge Arc</title>
+      <link>https://blog.jessfraz.com/post/home-hardware-part-one/</link>
+      <author>Jessie Frazelle</author>
+      <pubDate>Tue, 08 Sep 2026 00:34:58 +0000</pubDate>
+      <description>Jessie Frazelle details using OpenAI's Codex as an agentic assistant to design custom PCBs (a BLE Sensor Hub and Maintenance Board) for Home Assistant, walking through where it excelled—datasheet review, part substitution, tedious cross-board edits—and where it failed, such as placing connectors backwards and missing flex-cable reach issues. She also used ChatGPT for design renders and notes that Codex autonomously drafted manufacturer emails pending her approval. The piece offers a candid, hands-on evaluation of AI coding/engineering agents taken "the last mile" to physical hardware fabrication.</description>
+      <guid isPermaLink="true">https://blog.jessfraz.com/post/home-hardware-part-one/</guid>
+    </item>
     <item>
       <title>Creepy crawlies</title>
       <link>https://simonwillison.net/2026/Sep/7/creepy-crawlies/</link>
