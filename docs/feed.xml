@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Sep 2026 17:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 23:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Introducing ChatGPT Images 2.5</title>
+      <link>https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 08 Sep 2026 22:46:33 +0000</pubDate>
+      <description>Simon Willison covers OpenAI's GPT-Image 2.5 release, which introduces two new API model IDs (gpt-image-2.5-sunburst and gpt-image-2.5-flare) with improved instruction-following, faster responses, and better reference-photo preservation. He recommends Sunburst for precision editing workflows and Flare for everyday generation, and demonstrates practical API usage by extending his own CLI tool to support reference image inputs.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/</guid>
+    </item>
     <item>
       <title>What is happening with code reviews?</title>
       <link>https://newsletter.pragmaticengineer.com/p/what-is-happening-with-code-reviews</link>
