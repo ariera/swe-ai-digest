@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Sep 2026 16:00:39 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 17:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>What is happening with code reviews?</title>
+      <link>https://newsletter.pragmaticengineer.com/p/what-is-happening-with-code-reviews</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 08 Sep 2026 16:32:01 +0000</pubDate>
+      <description>Gergely Orosz surveys how engineering teams are adapting code review practices as AI agents now generate the majority of code at many companies, driving a fivefold increase in PRs since 2023. He documents five emerging strategies—AI-assisted review of AI output, risk-based "blast radius" triage (adopted by Anthropic and OpenAI), reviewing plans/tests/schemas instead of implementation, producing smaller PRs, and maintaining full human review. The piece argues there is no universal solution, but that human oversight remains critical for high-risk changes despite growing experimentation with fully automated pipelines.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/what-is-happening-with-code-reviews</guid>
+    </item>
     <item>
       <title>Fragments: September  8</title>
       <link>https://martinfowler.com/fragments/2026-09-08.html</link>
