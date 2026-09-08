@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Sep 2026 02:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 16:00:39 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Fragments: September  8</title>
+      <link>https://martinfowler.com/fragments/2026-09-08.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 08 Sep 2026 15:22:00 +0000</pubDate>
+      <description>Fowler curates several AI-focused perspectives: Catalini's argument that AI shifts automation's boundary from routine/non-routine to measurable/non-measurable work, warning that poor verification metrics create "counterfeit utility" and a "Hollow Economy." Additional fragments address LLM-generated writing's authenticity problem, copyright litigation against Anthropic, agent reliability limits, and the growing imperative for software engineers to prioritize rigorous, objective verification over raw AI output volume.</description>
+      <guid isPermaLink="true">https://martinfowler.com/fragments/2026-09-08.html</guid>
+    </item>
+    <item>
+      <title>The oldest architecture in computing</title>
+      <link>https://www.allthingsdistributed.com/2026/09/the-oldest-architecture-in-computing.html?utm_campaign=inbound&amp;utm_source=rss</link>
+      <author>Werner Vogels</author>
+      <pubDate>Tue, 08 Sep 2026 14:00:00 +0000</pubDate>
+      <description>Werner Vogels contrasts the energy and sample inefficiency of modern GPU-based AI (700W, hundreds of thousands of attempts to learn Pong) with the human brain's 20W efficiency, using this as a lens to explore what biological architecture can teach us about the future of AI agents and memory systems. The piece is relevant to engineers tracking the architectural and design trajectories of AI agents.</description>
+      <guid isPermaLink="true">https://www.allthingsdistributed.com/2026/09/the-oldest-architecture-in-computing.html?utm_campaign=inbound&amp;utm_source=rss</guid>
+    </item>
     <item>
       <title>Home Hardware, Part 1: My Control4 Revenge Arc</title>
       <link>https://blog.jessfraz.com/post/home-hardware-part-one/</link>
