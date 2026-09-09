@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Sep 2026 16:00:23 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 18:00:25 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -120,6 +120,14 @@
       <pubDate>Mon, 07 Sep 2026 16:24:16 +0000</pubDate>
       <description>Simon Willison used GPT-6 Astra (medium) via ChatGPT Work to vibe-code an animated D3 visualization transitioning between Mercator and Equal Earth map projections. The example illustrates how AI coding assistants can rapidly produce working, domain-specific visualizations from a casual prompt, with minimal manual coding effort.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Sep/7/equal-earth/</guid>
+    </item>
+    <item>
+      <title>Astra for Coding: Why Are We Doing This Again?</title>
+      <link>https://lucumr.pocoo.org/2026/9/7/astra-why/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher ran a multi-day agentic coding experiment with GPT-6 Astra, burning ~4 billion tokens to build a Python virtual-thread interpreter, and found the model produced no usable output. He argues Astra's training rewards long-horizon task completion but fails to penalize poor code quality, resulting in bizarre tool-call patterns (e.g., using Python string-splicing to patch C source). His conclusion is that current AI scaling may increase apparent activity without improving real engineering productivity — a form of "involution."</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/9/7/astra-why/</guid>
     </item>
     <item>
       <title>Research acceleration: The view inside OpenAI</title>
