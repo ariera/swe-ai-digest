@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Sep 2026 23:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 00:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>On the Navier–Stokes Millennium Prize Problem</title>
+      <link>https://simonwillison.net/2026/Sep/8/on-navier-stokes/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 08 Sep 2026 23:55:12 +0000</pubDate>
+      <description>Simon Willison analyzes a controversy in which OpenAI used an unreleased model to resolve a Millennium Prize mathematics problem days after a competing team (who had used OpenAI's own tools for nearly a year) made a breakthrough—raising questions about competitive fairness and data privacy. The incident illustrates how AI agents can rapidly replicate research directions once a rumor of progress surfaces, and sharpens longstanding concerns about whether user data fed into AI tools can inadvertently train models that later benefit rivals.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/8/on-navier-stokes/</guid>
+    </item>
     <item>
       <title>Introducing ChatGPT Images 2.5</title>
       <link>https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/</link>
