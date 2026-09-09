@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Sep 2026 01:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 16:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mv3vr6vpr42i</link>
+      <author>Matteo Collina</author>
+      <pubDate>Wed, 09 Sep 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina argues that if AI models are now writing most code, the rationale for TypeScript and transpilation weakens — LLMs produce valid JavaScript more token-efficiently without the overhead. This challenges conventional wisdom about static typing and toolchain complexity in an AI-driven development workflow.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mv3vr6vpr42i</guid>
+    </item>
+    <item>
+      <title>Building Codex with Tibo Sottiaux</title>
+      <link>https://newsletter.pragmaticengineer.com/p/building-codex-with-tibo-sottiaux</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 09 Sep 2026 15:57:24 +0000</pubDate>
+      <description>Gergely Orosz interviews Tibo Sottiaux, a lead engineer behind OpenAI's Codex, covering its architectural decisions (Rust, open source, multi-model support), how the harness evolves alongside models, and how AI agents are dramatically reducing the cost of code maintenance and rearchitecture. Sottiaux also shares how OpenAI internally uses Codex across the full SDLC—including code review and system design—and how AI is shifting engineers away from deep coding sessions toward faster, data-driven decision-making.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/building-codex-with-tibo-sottiaux</guid>
+    </item>
     <item>
       <title>Quoting Terence Tao</title>
       <link>https://simonwillison.net/2026/Sep/9/terence-tao/</link>
