@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Sep 2026 04:00:31 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 18:00:36 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: tech companies move to open AI models</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-tech-companies-move-to-open-ai-models/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 10 Sep 2026 17:22:31 +0000</pubDate>
+      <description>Gergely Orosz reports that major tech companies — including Uber, Pinterest, and AT&amp;T — are achieving dramatic AI cost reductions (50–92%) by shifting from expensive frontier models (e.g., Claude) to open-weight models run on inference providers, combined with techniques like model routing, prompt caching, and tiered subagent selection. Anthropic's pricing, particularly Opus 5 at 100x the cost of competitors, is accelerating this migration. For software engineers, the piece offers concrete optimization strategies and signals a structural shift in how AI tooling budgets will be managed at scale.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-tech-companies-move-to-open-ai-models/</guid>
+    </item>
+    <item>
+      <title>The Pulse #191: a new trend of CPU shortages</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-191-a-new-trend-of-cpu</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 10 Sep 2026 17:13:44 +0000</pubDate>
+      <description>Orosz identifies a new infrastructure trend: AI agents' heavy tool usage is driving CPU shortages, following earlier GPU and memory crunches caused by AI demand. For software engineers, this signals a tightening compute market and suggests proactively securing CPU resources before availability worsens further.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-191-a-new-trend-of-cpu</guid>
+    </item>
     <item>
       <title>Home Hardware, Part 2: Width Matters</title>
       <link>https://blog.jessfraz.com/post/home-hardware-part-two/</link>
