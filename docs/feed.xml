@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Sep 2026 18:00:25 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 01:00:27 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Calif Research</title>
+      <link>https://simonwillison.net/2026/Sep/10/calif-research/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 10 Sep 2026 00:56:41 +0000</pubDate>
+      <description>Calif Research demonstrates that AI dramatically accelerates offensive security work: their team used AI to find a zero-click WeChat RCE vulnerability and build a working worm in roughly one week — work that previously required a larger team and months of effort. This signals a significant shift in the threat landscape, with AI lowering the barrier for sophisticated cyberattacks and raising urgent questions for software engineers about defensive practices and vulnerability disclosure timelines.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/10/calif-research/</guid>
+    </item>
+    <item>
+      <title>.blend URL Viewer</title>
+      <link>https://simonwillison.net/2026/Sep/9/blender-viewer/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 09 Sep 2026 23:58:32 +0000</pubDate>
+      <description>Simon Willison demonstrates a practical AI-assisted 3D modeling workflow using ChatGPT Images 2.5 for image generation and Codex running GPT-6 Astra to autonomously generate Blender (.blend) files from that image over ~18 minutes. The result is shared via a browser-based viewer he built. This illustrates the growing capability of coding agents to drive complex creative tools end-to-end with minimal human intervention.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/9/blender-viewer/</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://bsky.app/profile/nodeland.dev/post/3mv3vr6vpr42i</link>
