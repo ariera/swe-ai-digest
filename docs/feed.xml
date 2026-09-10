@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Sep 2026 01:00:27 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 04:00:31 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Home Hardware, Part 2: Width Matters</title>
+      <link>https://blog.jessfraz.com/post/home-hardware-part-two/</link>
+      <author>Jessie Frazelle</author>
+      <pubDate>Thu, 10 Sep 2026 03:45:45 +0000</pubDate>
+      <description>Jessie Frazelle details using OpenAI's Codex agent to design custom home automation PCBs, focusing on how the agent reasoned through RF impedance calculations, selected JLC stackups, and documented its design decisions. The post highlights both the practical value of AI-assisted hardware design—working through datasheets, comparing parts, and checking layouts—and its limits, namely that human review remains essential to catch subtle errors like incorrect layer assumptions and unhelpful schematic organization.</description>
+      <guid isPermaLink="true">https://blog.jessfraz.com/post/home-hardware-part-two/</guid>
+    </item>
     <item>
       <title>Quoting Calif Research</title>
       <link>https://simonwillison.net/2026/Sep/10/calif-research/</link>
