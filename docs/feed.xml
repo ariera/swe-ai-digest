@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2026 04:00:38 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 17:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting huggingface.co/security.txt</title>
+      <link>https://simonwillison.net/2026/Sep/11/hugging-face-security/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 11 Sep 2026 16:04:53 +0000</pubDate>
+      <description>Hugging Face's security.txt includes a message directly addressed to AI agents instructed to find vulnerabilities, redirecting them to a public benchmark instead of attempting real attacks. This highlights an emerging security consideration: autonomous AI agents capable of acting on hacking instructions, and the novel defensive measures organizations are beginning to deploy against them.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/11/hugging-face-security/</guid>
+    </item>
     <item>
       <title>Datasette 1.0a39 and 0.65.4 security releases</title>
       <link>https://simonwillison.net/2026/Sep/11/datasette-security/</link>
