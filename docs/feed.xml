@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Sep 2026 22:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 04:00:38 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Datasette 1.0a39 and 0.65.4 security releases</title>
+      <link>https://simonwillison.net/2026/Sep/11/datasette-security/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 11 Sep 2026 03:27:16 +0000</pubDate>
+      <description>Simon Willison describes using frontier AI models (Claude Fable 5.1, GPT-5.6, GPT-6 Astra) to conduct an extensive security audit of Datasette, finding subtle bugs that led to two patch releases. The team paired AI-assisted auditing with a human split-review workflow — one engineer writing tests, another implementing fixes — and plans to integrate AI security audits into all future development. This offers a concrete, replicable pattern for using coding agents in security-critical code review.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/11/datasette-security/</guid>
+    </item>
     <item>
       <title>Native is now the future of mobile at Shopify</title>
       <link>https://simonwillison.net/2026/Sep/10/shopify-react-native/</link>
