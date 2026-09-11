@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2026 18:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 23:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>So you want to use OpenRouter?</title>
+      <link>https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 11 Sep 2026 22:49:18 +0000</pubDate>
+      <description>Simon Willison highlights a practical pitfall of using OpenRouter's automatic routing: different backend providers run different serving software, leading to inconsistent model behavior — including missing vision support or varied reasoning effort handling. Engineers can mitigate this by using the `provider.only` option or querying `/endpoints` to lock to a specific provider. This is a useful operational consideration for teams relying on OpenRouter in production LLM workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/</guid>
+    </item>
     <item>
       <title>Quoting Boris Cherny</title>
       <link>https://simonwillison.net/2026/Sep/11/boris-cherny/</link>
@@ -16,6 +24,14 @@
       <pubDate>Fri, 11 Sep 2026 17:47:11 +0000</pubDate>
       <description>Boris Cherny argues that AI-generated production code demands a higher quality bar than human-written code, and describes Anthropic's layered safeguards: extensive lint rules, tests, Claude-driven end-to-end tests, Claude-powered daily fuzzers, and automated code and security reviews. The insight matters to engineers adopting coding agents, highlighting that agentic output requires systematic, automated guardrails to remain maintainable at scale.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Sep/11/boris-cherny/</guid>
+    </item>
+    <item>
+      <title>Feeling sad about AI</title>
+      <link>https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 11 Sep 2026 17:28:37 +0000</pubDate>
+      <description>Simon Willison addresses the existential anxiety many software engineers feel when AI coding agents outperform them on tasks that once took days. He argues that while translating specifications into code is no longer a unique skill, experienced engineers retain an edge by leveraging AI tools alongside their deeper domain knowledge. He frames this disruption as consistent with software engineering's historically rapid pace of change.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai/</guid>
     </item>
     <item>
       <title>Quoting huggingface.co/security.txt</title>
