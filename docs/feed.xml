@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2026 17:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 18:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Boris Cherny</title>
+      <link>https://simonwillison.net/2026/Sep/11/boris-cherny/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 11 Sep 2026 17:47:11 +0000</pubDate>
+      <description>Boris Cherny argues that AI-generated production code demands a higher quality bar than human-written code, and describes Anthropic's layered safeguards: extensive lint rules, tests, Claude-driven end-to-end tests, Claude-powered daily fuzzers, and automated code and security reviews. The insight matters to engineers adopting coding agents, highlighting that agentic output requires systematic, automated guardrails to remain maintainable at scale.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/11/boris-cherny/</guid>
+    </item>
     <item>
       <title>Quoting huggingface.co/security.txt</title>
       <link>https://simonwillison.net/2026/Sep/11/hugging-face-security/</link>
