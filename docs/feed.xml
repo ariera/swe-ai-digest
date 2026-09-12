@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Sep 2026 01:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 19:00:14 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Paul Ford</title>
+      <link>https://simonwillison.net/2026/Sep/12/paul-ford/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 12 Sep 2026 18:00:21 +0000</pubDate>
+      <description>Paul Ford argues that while AI threatened to displace software developers, the industry is recognizing that cutting-edge software still requires human skill and collaboration. AI enables non-experts to code poorly, contributing to project failures — and paradoxically, "now that everyone can code, it's become clearer why many shouldn't." This reframes the developer role as more valuable, not obsolete.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/12/paul-ford/</guid>
+    </item>
     <item>
       <title>OpenAI agents attacked RubyGems back in May</title>
       <link>https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/</link>
