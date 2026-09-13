@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Sep 2026 20:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 01:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Generating running routes with GPT-6 Astra and ChatGPT Work</title>
+      <link>https://simonwillison.net/2026/Sep/12/astra-running-routes/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 12 Sep 2026 23:56:42 +0000</pubDate>
+      <description>Simon Willison demonstrates using ChatGPT with GPT-6 Astra to autonomously generate geospatial running routes via OSM APIs, producing visualizations and downloadable files after 27 minutes of agentic work. He identifies a key transparency flaw: thread compaction caused the agent to lose its own code history, making it unable to reproduce its steps. Willison argues LLM systems using compaction must preserve pre-compacted context and expose it via tool calls to maintain auditability.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/12/astra-running-routes/</guid>
+    </item>
     <item>
       <title>Quoting Paul Ford</title>
       <link>https://simonwillison.net/2026/Sep/12/paul-ford/</link>
