@@ -1,5 +1,13 @@
 [
   {
+    "cw": "2026-CW37",
+    "period_start": "2026-09-07",
+    "period_end": "2026-09-13",
+    "articles_count": 30,
+    "summary_short": "This digest period is dominated by several interlocking themes. First, AI coding agents are rapidly maturing into practical engineering tools \u2014 demonstrated across web tooling, PCB design, geospatial \u2026",
+    "page": "digests/2026-CW37.html"
+  },
+  {
     "cw": "2026-CW36",
     "period_start": "2026-08-31",
     "period_end": "2026-09-06",
