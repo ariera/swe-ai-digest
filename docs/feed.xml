@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2026 02:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 15:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Laurie Voss</title>
+      <link>https://simonwillison.net/2026/Sep/14/laurie-voss/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 14 Sep 2026 14:34:29 +0000</pubDate>
+      <description>Laurie Voss argues that AI is collapsing the cost of writing and operating code, shifting the core engineering role toward understanding user needs, precise specification, and UX — work that doesn't scale with AI. As software supply approaches infinity, the irreducible human work of defining *what* to build becomes the entire job, making engineers de facto product engineers.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/14/laurie-voss/</guid>
+    </item>
     <item>
       <title>Confessions of an Unrepentant Slop Snob</title>
       <link>https://charity.wtf/p/confessions-of-an-unrepentant-slop</link>
