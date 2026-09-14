@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2026 01:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 02:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Confessions of an Unrepentant Slop Snob</title>
+      <link>https://charity.wtf/p/confessions-of-an-unrepentant-slop</link>
+      <author>Charity Majors</author>
+      <pubDate>Mon, 14 Sep 2026 00:58:18 +0000</pubDate>
+      <description>Charity Majors argues that AI-generated text is not universally problematic, but becomes damaging to trust when used in personal or relational contexts — such as opinions, performance reviews, or direct outreach — where the value lies in hearing a specific person's voice. She introduces a functional-vs-relational framework to help practitioners decide where AI belongs in communication workflows. For software engineers, this reframes AI adoption debates away from blanket policies toward context-sensitive norms around disclosure and appropriate use.</description>
+      <guid isPermaLink="true">https://charity.wtf/p/confessions-of-an-unrepentant-slop</guid>
+    </item>
     <item>
       <title>commit-rewriter 0.1</title>
       <link>https://simonwillison.net/2026/Sep/14/commit-rewriter/</link>
