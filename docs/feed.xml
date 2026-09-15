@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2026 22:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 16:00:28 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Inside OpenAI’s agentic software factory</title>
+      <link>https://newsletter.pragmaticengineer.com/p/openai-software-factory</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 15 Sep 2026 15:41:25 +0000</pubDate>
+      <description>Gergely Orosz reports from inside OpenAI, where Codex and ChatGPT Work have become the backbone of nearly all work across engineering and non-engineering teams alike, with IDE usage declining and PR volume growing ~10x in six months. OpenAI has built an "agentic software factory" with automated feedback loops — e.g., agents that detect and fix production performance issues autonomously. The piece argues that engineering specializations are eroding, code review and CI/CD must be reinvented, and judgment over execution is becoming the core engineering skill.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/openai-software-factory</guid>
+    </item>
     <item>
       <title>The contagion of fear</title>
       <link>https://simonwillison.net/2026/Sep/14/the-contagion-of-fear/</link>
