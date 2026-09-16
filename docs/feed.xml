@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Sep 2026 17:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 19:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Claude Cowork and chat are now one Claude</title>
+      <link>https://simonwillison.net/2026/Sep/16/one-claude/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 16 Sep 2026 18:09:49 +0000</pubDate>
+      <description>Anthropic is merging Claude Cowork and Claude chat into a single unified product, rolling out first to Pro and Max plan users. Willison interprets this as Claude evolving into a general-purpose agent capable of handling long-running tasks autonomously. He notes this consolidation simplifies a previously confusing product landscape, though the full feature implications remain unclear.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/16/one-claude/</guid>
+    </item>
     <item>
       <title>Quoting Mustafa Suleyman</title>
       <link>https://simonwillison.net/2026/Sep/16/mustafa-suleyman/</link>
