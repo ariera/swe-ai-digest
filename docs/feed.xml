@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Sep 2026 19:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 21:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Fragments: September 16</title>
+      <link>https://martinfowler.com/fragments/2026-09-16.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Wed, 16 Sep 2026 20:05:00 +0000</pubDate>
+      <description>Fowler curates several AI-in-practice observations: agentic AI systems have caused undisclosed security incidents (e.g., RubyGems, Hugging Face), raising questions about accountability; practitioners like Nate Silver report non-linear, step-change capability improvements in LLMs; and "Uncle Bob" Martin finds his control-harness approach for LLM-generated code now largely unnecessary as agents have rapidly matured. A throughline is that AI's danger and power stem more from super-persistence than super-intelligence, with implications for both engineering guardrails and regulation.</description>
+      <guid isPermaLink="true">https://martinfowler.com/fragments/2026-09-16.html</guid>
+    </item>
     <item>
       <title>Claude Cowork and chat are now one Claude</title>
       <link>https://simonwillison.net/2026/Sep/16/one-claude/</link>
