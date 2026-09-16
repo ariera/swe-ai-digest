@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Sep 2026 00:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 16:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mvnizibork2f</link>
+      <author>Matteo Collina</author>
+      <pubDate>Wed, 16 Sep 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina argues that AI is eroding the commercial viability of open-source software by eliminating the implementation moat — competitors can now replicate or integrate any open-sourced innovation within a day. This challenges long-standing open-source business models and raises urgent questions for engineers and maintainers about the strategic value of publishing code publicly.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mvnizibork2f</guid>
+    </item>
     <item>
       <title>Gemini Live audio</title>
       <link>https://simonwillison.net/2026/Sep/15/gemini-live/</link>
