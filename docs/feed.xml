@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Sep 2026 21:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 12:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>AI Skills with Matt Pocock</title>
+      <link>https://newsletter.pragmaticengineer.com/p/ai-skills-with-matt-pocock</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 17 Sep 2026 11:29:00 +0000</pubDate>
+      <description>In this podcast episode, educator and engineer Matt Pocock shares concrete strategies for working with AI coding agents, including reusable "skills" like "grill-me," a "day shift/night shift" approach to agent delegation, and the concept of "leading words" drawn from classic software engineering books to improve agent output. He argues that agents excel at tactical programming, freeing engineers for strategic work, and that well-structured codebases ("Memento-driven development") are essential for effective agent collaboration. The episode also covers cloud vs. local agent setups, TDD with agents, and AI's impact on how engineers learn fundamentals.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/ai-skills-with-matt-pocock</guid>
+    </item>
     <item>
       <title>Fragments: September 16</title>
       <link>https://martinfowler.com/fragments/2026-09-16.html</link>
