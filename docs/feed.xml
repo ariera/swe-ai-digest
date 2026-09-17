@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Sep 2026 12:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 14:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>I don't like LLMs</title>
+      <link>https://martinfowler.com/articles/2026-dont-like-llms.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Thu, 17 Sep 2026 13:50:00 +0000</pubDate>
+      <description>Martin Fowler acknowledges LLMs as genuinely useful — even "irresponsible" to avoid — yet expresses a strong personal aversion to interacting with them, citing their confident hallucinations and uncanny, hollow tone. He warns against anthropomorphizing AI agents, framing them as value-laden products of their creators' culture. For engineers, this surfaces an underexplored tension: adopting AI tools as professional necessity while remaining critically aware of their embedded biases and limitations.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/2026-dont-like-llms.html</guid>
+    </item>
     <item>
       <title>AI Skills with Matt Pocock</title>
       <link>https://newsletter.pragmaticengineer.com/p/ai-skills-with-matt-pocock</link>
