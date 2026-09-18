@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2026 16:00:25 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 20:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Note on 18th September 2026</title>
+      <link>https://simonwillison.net/2026/Sep/18/probably-gonna-eat-you/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 18 Sep 2026 19:21:32 +0000</pubDate>
+      <description>Simon Willison argues that computer scientists who dismiss LLMs as unworthy of intellectual interest are making a professional misstep, analogizing it to a geneticist ignoring Jurassic Park. The provocation implies that LLMs represent a domain-defining development that practitioners in computing cannot reasonably afford to overlook.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/18/probably-gonna-eat-you/</guid>
+    </item>
+    <item>
+      <title>Quoting Thariq Shihipar</title>
+      <link>https://simonwillison.net/2026/Sep/18/thariq-shihipar/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 18 Sep 2026 19:09:27 +0000</pubDate>
+      <description>Claude Code (version 2.1.277) is adding support for AGENTS.md as a fallback project-instructions file when no CLAUDE.md is present, built on a new "mods" system that lets developers customize the Claude Code agent harness. This matters to engineers because it signals a move toward a standardized, extensible configuration layer for AI coding agents, enabling project-level customization of agent behavior.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/18/thariq-shihipar/</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://bsky.app/profile/nodeland.dev/post/3mvsjxdy67o2h</link>
