@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Sep 2026 22:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 00:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>How To Write With An LLM</title>
+      <link>https://simonwillison.net/2026/Sep/17/how-to-write-with-an-llm/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 17 Sep 2026 23:37:27 +0000</pubDate>
+      <description>Thomas Ptacek argues that LLMs should be used strictly as copyeditors — for fact-checking, grammar, and spelling — with a firm rule against adopting any phrasing they suggest. Simon Willison endorses this approach, noting he applies similar constraints on his own blog. The piece offers a concrete prompting discipline and a custom copyediting tool for writers who want AI assistance without ceding authorial voice.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/17/how-to-write-with-an-llm/</guid>
+    </item>
     <item>
       <title>Self-generated prompt injections in compaction summaries</title>
       <link>https://simonwillison.net/2026/Sep/17/compaction-summaries/</link>
