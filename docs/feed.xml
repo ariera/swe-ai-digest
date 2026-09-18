@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2026 00:00:23 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 16:00:25 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mvsjxdy67o2h</link>
+      <author>Matteo Collina</author>
+      <pubDate>Fri, 18 Sep 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina highlights a growing security challenge: AI-generated code changes and user automation increasingly rely on runtime JavaScript execution, but using `eval()` grants full host permissions by default. He announces a tool designed to sandbox this execution safely. This matters to engineers integrating AI-generated code into applications where permission isolation is critical.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mvsjxdy67o2h</guid>
+    </item>
     <item>
       <title>How To Write With An LLM</title>
       <link>https://simonwillison.net/2026/Sep/17/how-to-write-with-an-llm/</link>
