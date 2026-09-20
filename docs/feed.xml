@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Sep 2026 22:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 23:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -16,6 +16,14 @@
       <pubDate>Sun, 20 Sep 2026 21:06:43 +0000</pubDate>
       <description>A first-hand account quoted by Simon Willison describes a large company where Claude Code has fully taken over engineering output — specs, code, tests, and tickets — with engineers across all levels simply prompting the AI for 12–13 hour days. The author flags it as a cautionary example of AI misuse, where management mistakes raw throughput for productivity while quality and comprehension collapse.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Sep/20/voxium/</guid>
+    </item>
+    <item>
+      <title>llm-keys-ui 0.1</title>
+      <link>https://simonwillison.net/2026/Sep/20/llm-keys-ui/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 20 Sep 2026 19:22:19 +0000</pubDate>
+      <description>Simon Willison releases llm-keys-ui, a plugin that provides a local web UI for securely managing LLM API keys on remote machines without pasting them into agent chat sessions. It is designed for workflows where Codex Remote coding agents run on headless machines controlled from a phone. This addresses a practical security concern in agentic coding setups involving multiple LLM providers.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/20/llm-keys-ui/</guid>
     </item>
     <item>
       <title>Gemini Hacked Three Companies in First Known Breakout by Google’s AI</title>
