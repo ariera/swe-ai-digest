@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Sep 2026 23:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 18:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Where do AI norms come from?</title>
+      <link>https://charity.wtf/p/where-do-ai-norms-come-from</link>
+      <author>Charity Majors</author>
+      <pubDate>Mon, 21 Sep 2026 17:45:55 +0000</pubDate>
+      <description>Charity Majors describes how Honeycomb developed internal AI norms by first running open, opt-in listening sessions to surface employee frustrations before codifying any policies — finding this approach also reduced tension when guidelines were eventually released. She frames the broader challenge: teams may be delivering more with AI yet still fall short of inflated 10x–100x expectations, and no one yet knows how to calibrate those standards. The piece kicks off a dialogue with research psychologist Dr. Cat Hicks on navigating AI norms, ethics, and team culture.</description>
+      <guid isPermaLink="true">https://charity.wtf/p/where-do-ai-norms-come-from</guid>
+    </item>
     <item>
       <title>Quoting voxium</title>
       <link>https://simonwillison.net/2026/Sep/20/voxium/</link>
