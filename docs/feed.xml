@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Sep 2026 20:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 00:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Jev introduces a new shape of LLM - System One, aka Decision Models</title>
+      <link>https://simonwillison.net/2026/Sep/21/jev/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 21 Sep 2026 23:09:20 +0000</pubDate>
+      <description>Simon Willison reviews Jev, a new "decision model" from TypeSafe AI that takes unstructured text input and returns typed probabilistic outputs (yes/no, choice, or score) rather than text — positioning it as a fast, cheap alternative to LLMs for classification tasks like spam detection, ranking, and labeling. He highlights its black-box nature as a significant concern, warning that the absence of any explanatory output makes bias harder to detect and evals more critical. The rapid community uptake, including open-weight recreations and a JevBench benchmark, signals a potentially new architectural category engineers should watch.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/21/jev/</guid>
+    </item>
     <item>
       <title>Where do AI norms come from?</title>
       <link>https://charity.wtf/p/where-do-ai-norms-come-from</link>
