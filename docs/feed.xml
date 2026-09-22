@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Sep 2026 00:00:23 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 17:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>llm-typesafe 0.1a0</title>
+      <link>https://simonwillison.net/2026/Sep/22/llm-typesafe/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 22 Sep 2026 15:54:16 +0000</pubDate>
+      <description>Simon Willison announces llm-typesafe, a new plugin for his LLM CLI tool that integrates TypeSafe AI's Jev model, enabling structured classification tasks such as yes/no judgments, multi-class routing, and scored evaluations. This is relevant to engineers building LLM-powered pipelines who need reliable, structured outputs for tasks like support ticket routing or bug report triage.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/22/llm-typesafe/</guid>
+    </item>
     <item>
       <title>Jev introduces a new shape of LLM - System One, aka Decision Models</title>
       <link>https://simonwillison.net/2026/Sep/21/jev/</link>
