@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Sep 2026 17:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 18:00:23 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>How will AI change operating systems? Part 2: Windows</title>
+      <link>https://newsletter.pragmaticengineer.com/p/windows-and-ai</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 22 Sep 2026 17:17:31 +0000</pubDate>
+      <description>Gergely Orosz details Microsoft's strategy to integrate AI deeply into Windows, covering native agent identity via Entra ID, a centralized MCP server registry (ODR), and a new OS-agnostic agent sandboxing layer (MXC). The article also examines Windows' declining developer market share and Microsoft's bid to win engineers back through AI-native primitives, local model support via WindowsML, and an improved WSL experience. For engineers building agentic tools, these OS-level abstractions represent a meaningful new deployment and security surface to understand.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/windows-and-ai</guid>
+    </item>
     <item>
       <title>llm-typesafe 0.1a0</title>
       <link>https://simonwillison.net/2026/Sep/22/llm-typesafe/</link>
