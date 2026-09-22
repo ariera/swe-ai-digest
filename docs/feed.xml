@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Sep 2026 18:00:23 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 19:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting @therealcornpop</title>
+      <link>https://simonwillison.net/2026/Sep/22/therealcornpop/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 22 Sep 2026 18:03:21 +0000</pubDate>
+      <description>A TikTok creator argues that AI-generated video scripts are recognizable not just by stylistic tics ("it's not X, it's Y," rule of three, staccato phrasing) but by a deeper absence of genuine opinions and a distinct authorial voice. The observation is relevant to engineers building or evaluating AI writing tools, highlighting a qualitative signal — lack of authentic perspective — that audiences are already detecting in AI-generated content.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/22/therealcornpop/</guid>
+    </item>
     <item>
       <title>How will AI change operating systems? Part 2: Windows</title>
       <link>https://newsletter.pragmaticengineer.com/p/windows-and-ai</link>
