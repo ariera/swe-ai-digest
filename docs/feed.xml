@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Sep 2026 00:00:46 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 04:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>SF October 14th: A Birds of a Feather Session on Agentic Engineering</title>
+      <link>https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 23 Sep 2026 02:53:19 +0000</pubDate>
+      <description>Simon Willison announces an informal San Francisco gathering focused on "agentic engineering" — practitioners building with and on top of coding agents. The session is framed as a peer knowledge-sharing forum for early-stage experiments, odd findings, and unresolved challenges with agentic AI, signaling growing community interest in hands-on, practitioner-led exploration of coding agents.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/</guid>
+    </item>
     <item>
       <title>Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war</title>
       <link>https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/</link>
