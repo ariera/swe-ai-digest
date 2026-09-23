@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Sep 2026 04:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 18:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Design Engineering with Maggie Appleton</title>
+      <link>https://newsletter.pragmaticengineer.com/p/design-engineering-with-maggie-appleton</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 23 Sep 2026 17:07:22 +0000</pubDate>
+      <description>In this podcast episode, GitHub Next staff research engineer Maggie Appleton shares how she uses AI agents in design workflows — including writing detailed specs for coding agents, building interactive "jigs" as AI-generated prototypes, and avoiding code review for AI-generated PRs. She introduces the concept of "capability gaslighting" — where frontier models appear highly capable before failing unexpectedly — and argues that better human-agent collaboration requires new shared artifacts bridging physical and digital creativity.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/design-engineering-with-maggie-appleton</guid>
+    </item>
     <item>
       <title>SF October 14th: A Birds of a Feather Session on Agentic Engineering</title>
       <link>https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/</link>
