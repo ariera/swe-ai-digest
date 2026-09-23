@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Sep 2026 18:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 21:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Gemini 3.8 TTS Playground</title>
+      <link>https://simonwillison.net/2026/Sep/23/gemini-tts-playground/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 23 Sep 2026 17:12:27 +0000</pubDate>
+      <description>Simon Willison explores Google's new Gemini 3.8 TTS models, building a bring-your-own-key playground using GPT-6 Astra and scripting a demo with Claude 4.5 Opus. The piece highlights practical details relevant to engineers: multi-character voice synthesis, custom voice cloning from 30-second samples, open CORS API access, and cost/performance benchmarks (~$0.027 for 78 seconds of audio in ~20 seconds).</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/23/gemini-tts-playground/</guid>
+    </item>
     <item>
       <title>Design Engineering with Maggie Appleton</title>
       <link>https://newsletter.pragmaticengineer.com/p/design-engineering-with-maggie-appleton</link>
