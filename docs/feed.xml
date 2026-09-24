@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Sep 2026 16:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 17:00:24 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: a new trend of CPU shortages</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 24 Sep 2026 16:45:01 +0000</pubDate>
+      <description>AI-driven workloads — particularly reinforcement learning and cloud-based agents running tools like compilers, test runners, and linters — are causing a significant CPU shortage alongside the established GPU crunch. Cloud providers are rejecting new reservations, spot pricing has disappeared, and lead times for server orders have stretched to ~six months. Engineers at scale should begin capacity planning now, as CPU shortages are expected to persist for multiple quarters.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/</guid>
+    </item>
+    <item>
+      <title>The Pulse: RoR creator sparks new “death of coding by hand” debate</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-end-of-coding-by-hand</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 24 Sep 2026 16:44:27 +0000</pubDate>
+      <description>DHH's Rails World keynote declaring the end of hand-written code at 37signals has reignited industry debate about AI's role in professional software development. Gergely Orosz examines whether this shift is now inevitable across the industry, alongside related hiring struggles at Amazon and Meta. The piece is directly relevant to engineers assessing how AI tooling is reshaping day-to-day coding practice and team composition.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-end-of-coding-by-hand</guid>
+    </item>
     <item>
       <title>Fragments: September 24</title>
       <link>https://martinfowler.com/fragments/2026-09-24.html</link>
