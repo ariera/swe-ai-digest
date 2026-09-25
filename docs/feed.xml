@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Sep 2026 17:00:24 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 16:00:41 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Note on 24th September 2026</title>
+      <link>https://simonwillison.net/2026/Sep/24/harder/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 24 Sep 2026 23:31:08 +0000</pubDate>
+      <description>Simon Willison argues that coding agents don't simplify software engineering — they raise the bar, demanding greater discipline and deeper knowledge to use effectively. This challenges the common narrative that AI tools make development easier, suggesting that engineers who want to fully leverage agents must invest significantly in new skills and working practices.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/24/harder/</guid>
+    </item>
     <item>
       <title>The Pulse: a new trend of CPU shortages</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/</link>
