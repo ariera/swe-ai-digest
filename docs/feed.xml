@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Sep 2026 16:00:41 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 18:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting John Gruber</title>
+      <link>https://simonwillison.net/2026/Sep/25/john-gruber/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 25 Sep 2026 17:22:01 +0000</pubDate>
+      <description>Simon Willison quotes John Gruber's critique of Meta's Muse, a consumer-facing agentic AI system that gives each user a persistent Linux VM in Meta's cloud. Gruber argues that Muse's approachable packaging obscures its significant power and risk, warning that consumers likely don't grasp the dangers of a capable autonomous agent running on their machines. This raises important questions for engineers about how agentic AI systems are communicated and governed as they move into mainstream consumer hands.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/25/john-gruber/</guid>
+    </item>
     <item>
       <title>Note on 24th September 2026</title>
       <link>https://simonwillison.net/2026/Sep/24/harder/</link>
@@ -192,6 +200,14 @@
       <pubDate>Thu, 17 Sep 2026 23:37:27 +0000</pubDate>
       <description>Thomas Ptacek argues that LLMs should be used strictly as copyeditors — for fact-checking, grammar, and spelling — with a firm rule against adopting any phrasing they suggest. Simon Willison endorses this approach, noting he applies similar constraints on his own blog. The piece offers a concrete prompting discipline and a custom copyediting tool for writers who want AI assistance without ceding authorial voice.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Sep/17/how-to-write-with-an-llm/</guid>
+    </item>
+    <item>
+      <title>Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint</title>
+      <link>https://simonwillison.net/2026/Sep/17/hn-49747390/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 17 Sep 2026 22:13:05 +0000</pubDate>
+      <description>Simon Willison shares a practical walkthrough for running Bonsai 2 27B, a heavily compressed (9x smaller) LLM, locally on Apple Silicon using a custom llama.cpp fork from PrismML. He provides exact shell commands for setup and reports ~20–44 tokens/second on an M5 Pro, noting a Metal API compatibility issue. This is useful for engineers interested in running capable models locally with dramatically reduced storage footprints.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/17/hn-49747390/</guid>
     </item>
     <item>
       <title>Self-generated prompt injections in compaction summaries</title>
