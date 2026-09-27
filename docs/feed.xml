@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Sep 2026 18:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 00:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Kākāpō Party</title>
+      <link>https://simonwillison.net/2026/Sep/26/kakapo-party/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 26 Sep 2026 23:39:06 +0000</pubDate>
+      <description>Simon Willison demonstrates a practical AI workflow combining Claude Opus 5.5 and Claude Code to produce a pixel-art HTML5 canvas animation and then automate video capture via Playwright — all for a conference keynote closing slide. The example illustrates how chaining a conversational LLM with an agentic coding tool (Claude Code) can compress multi-step creative and scripting tasks into minutes, with the generated Playwright script being notably concise and functional.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/26/kakapo-party/</guid>
+    </item>
     <item>
       <title>Quoting John Gruber</title>
       <link>https://simonwillison.net/2026/Sep/25/john-gruber/</link>
