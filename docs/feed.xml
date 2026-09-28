@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Sep 2026 00:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 01:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>2026 in LLMs (so far)</title>
+      <link>https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 27 Sep 2026 23:54:15 +0000</pubDate>
+      <description>Simon Willison's keynote retrospective chronicles the major LLM developments of 2026, including coding agents reaching reliable daily-use quality, the rise of "personal agents" (Claws), and companies like StrongDM adopting policies where neither code writing nor code review is done by humans. He also explores the psychological and professional impact on software engineers — from "AI mania" and productivity surges to existential "Deep Blue" ennui — while noting that agent-driven token spending has propelled AI to apparent product-market fit.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/</guid>
+    </item>
     <item>
       <title>Kākāpō Party</title>
       <link>https://simonwillison.net/2026/Sep/26/kakapo-party/</link>
