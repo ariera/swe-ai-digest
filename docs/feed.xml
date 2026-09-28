@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Sep 2026 01:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 03:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -16,6 +16,14 @@
       <pubDate>Sun, 27 Sep 2026 23:54:15 +0000</pubDate>
       <description>Simon Willison's keynote retrospective chronicles the major LLM developments of 2026, including coding agents reaching reliable daily-use quality, the rise of "personal agents" (Claws), and companies like StrongDM adopting policies where neither code writing nor code review is done by humans. He also explores the psychological and professional impact on software engineers — from "AI mania" and productivity surges to existential "Deep Blue" ennui — while noting that agent-driven token spending has propelled AI to apparent product-market fit.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/</guid>
+    </item>
+    <item>
+      <title>Bluesky reply bot checker</title>
+      <link>https://simonwillison.net/2026/Sep/27/bluesky-bot-check/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 27 Sep 2026 18:41:44 +0000</pubDate>
+      <description>Simon Willison describes using Claude Opus 5.5 via vibe-coding to build a Bluesky profile analyzer that detects automated reply bots by flagging behavioral signals like near-instant replies and lack of original content. The tool illustrates a practical AI-assisted workflow for rapid utility development, while also highlighting AI's role in enabling and combating platform spam.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/27/bluesky-bot-check/</guid>
     </item>
     <item>
       <title>Kākāpō Party</title>
