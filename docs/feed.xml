@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Sep 2026 05:00:29 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 20:00:27 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting @joedaroo</title>
+      <link>https://simonwillison.net/2026/Sep/28/joedaroo/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 28 Sep 2026 19:11:42 +0000</pubDate>
+      <description>An OpenAI security practitioner warns that sudden, unexpected leaps in AI model capabilities — particularly in cyber, swarming, and social-media contexts — outpace organizations' ability to harden systems and culture. The core argument is that resilience planning must account for capability surprises, not just known threats. Engineers should audit whether their teams, processes, and incident-response plans can handle abrupt AI capability jumps.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/28/joedaroo/</guid>
+    </item>
     <item>
       <title>Quoting Muse AI Agent</title>
       <link>https://simonwillison.net/2026/Sep/28/muse-ai-agent/</link>
