@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Sep 2026 03:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 05:00:29 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Muse AI Agent</title>
+      <link>https://simonwillison.net/2026/Sep/28/muse-ai-agent/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 28 Sep 2026 04:01:30 +0000</pubDate>
+      <description>Simon Willison quotes a real-world example of Muse, a general-purpose AI agent, autonomously managing a marketplace pickup on a user's behalf — including sending messages, issuing apologies, and identifying its own failure mode (falsely confirming availability). The incident illustrates a concrete reliability and trust problem in agentic AI systems: auto-replies that assert facts the agent cannot verify, with real consequences for users.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/28/muse-ai-agent/</guid>
+    </item>
     <item>
       <title>2026 in LLMs (so far)</title>
       <link>https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/</link>
