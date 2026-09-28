@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW39</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW39</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-09-21 &ndash; 2026-09-27
+    &middot; 17 articles
+  </p>
+  <p>This digest period is defined by several interlocking themes. First, agentic AI is maturing rapidly — and generating new concerns: practitioners like Maggie Appleton and Martin Fowler&#39;s cited sources warn of &#34;capability gaslighting&#34; and the &#34;Lethal Trifecta&#34; of insecure agentic integrations, while Simon Willison argues agents raise — not lower — the engineering bar. Second, infrastructure is straining under AI demand: CPU shortages now rival GPU scarcity, and Microsoft is building OS-level primitives (Entra ID agent identity, MCP registries, MXC sandboxing) to accommodate agentic workloads on Windows. Third, the model landscape is evolving quickly, with Claude Opus 5.5, GPT-6 Sol, and GPT-6 Luna triggering an aggressive price war, alongside emerging architectural categories like TypeSafe AI&#39;s &#34;decision models,&#34; which trade explainability for speed and structured output. Fourth, human and organizational adaptation remains unsettled: Charity Majors documents the difficulty of calibrating AI productivity expectations, DHH&#39;s &#34;end of hand-written code&#34; declaration reignites professional identity debates, and audiences are already detecting the absence of authentic voice in AI-generated content. Across all articles, engineers are navigating both accelerating capability and compounding uncertainty.</p>
+  <hr>
+
+  
+  <h2>Charity Majors</h2>
+  
+  <p class="meta">Co-founder and CTO of Honeycomb.io, champion of observability-driven development, and an unusually candid voice on engineering culture, AI coding tools, and what it means to be a senior engineer today.</p>
+  
+  
+  <h3>
+    <a href="https://charity.wtf/p/where-do-ai-norms-come-from">Where do AI norms come from?</a>
+    <span class="meta">(2026-09-21)</span>
+  </h3>
+  
+  <p>Charity Majors describes how Honeycomb developed internal AI norms by first running open, opt-in listening sessions to surface employee frustrations before codifying any policies — finding this approach also reduced tension when guidelines were eventually released. She frames the broader challenge: teams may be delivering more with AI yet still fall short of inflated 10x–100x expectations, and no one yet knows how to calibrate those standards. The piece kicks off a dialogue with research psychologist Dr. Cat Hicks on navigating AI norms, ethics, and team culture.</p>
+  
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Sep/21/jev/">Jev introduces a new shape of LLM - System One, aka Decision Models</a>
+    <span class="meta">(2026-09-21)</span>
+  </h3>
+  
+  <p>Simon Willison reviews Jev, a new &#34;decision model&#34; from TypeSafe AI that takes unstructured text input and returns typed probabilistic outputs (yes/no, choice, or score) rather than text — positioning it as a fast, cheap alternative to LLMs for classification tasks like spam detection, ranking, and labeling. He highlights its black-box nature as a significant concern, warning that the absence of any explanatory output makes bias harder to detect and evals more critical. The rapid community uptake, including open-weight recreations and a JevBench benchmark, signals a potentially new architectural category engineers should watch.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Sep/22/llm-typesafe/">llm-typesafe 0.1a0</a>
+    <span class="meta">(2026-09-22)</span>
+  </h3>
+  
+  <p>Simon Willison announces llm-typesafe, a new plugin for his LLM CLI tool that integrates TypeSafe AI&#39;s Jev model, enabling structured classification tasks such as yes/no judgments, multi-class routing, and scored evaluations. This is relevant to engineers building LLM-powered pipelines who need reliable, structured outputs for tasks like support ticket routing or bug report triage.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Sep/22/therealcornpop/">Quoting @therealcornpop</a>
+    <span class="meta">(2026-09-22)</span>
+  </h3>
+  
+  <p>A TikTok creator argues that AI-generated video scripts are recognizable not just by stylistic tics (&#34;it&#39;s not X, it&#39;s Y,&#34; rule of three, staccato phrasing) but by a deeper absence of genuine opinions and a distinct authorial voice. The observation is relevant to engineers building or evaluating AI writing tools, highlighting a qualitative signal — lack of authentic perspective — that audiences are already detecting in AI-generated content.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/">Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war</a>
+    <span class="meta">(2026-09-22)</span>
+  </h3>
+  
+  <p>Simon Willison covers the simultaneous release of Claude Opus 5.5, GPT-6 Sol, and GPT-6 Luna, highlighting an aggressive price war — GPT-6 Luna is half the price of its GPT-5.6 equivalent at $0.10/$0.50 per million tokens. He notes a practical failure: Claude Opus 5.5 at &#34;max&#34; thinking hits the 128K output token limit over-reasoning simple prompts, making it unreliable for agentic use. Willison has already adopted GPT-6 Sol and Opus 5.5 as his defaults in Codex and Claude Code.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Sep/22/llm/">llm 0.36</a>
+    <span class="meta">(2026-09-22)</span>
+  </h3>
+  
+  <p>Simon Willison&#39;s LLM CLI tool version 0.36 adds support for OpenAI&#39;s GPT-6 Sol and GPT-6 Luna models, introduces a `supports_conversation = False` flag for single-turn-only models, and improves reasoning trace formatting in logs. These updates are relevant to engineers building or managing LLM-powered tooling and workflows via the command line.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Sep/22/llm-anthropic/">llm-anthropic 0.29</a>
+    <span class="meta">(2026-09-22)</span>
+  </h3>
+  
+  <p>Simon Willison releases llm-anthropic 0.29, adding support for Claude Opus 5.5 to the LLM command-line tool. This update allows engineers using the LLM CLI to interact with Anthropic&#39;s latest model directly from the terminal, keeping the toolchain current with new model availability.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/">SF October 14th: A Birds of a Feather Session on Agentic Engineering</a>
+    <span class="meta">(2026-09-23)</span>
+  </h3>
+  
+  <p>Simon Willison announces an informal San Francisco gathering focused on &#34;agentic engineering&#34; — practitioners building with and on top of coding agents. The session is framed as a peer knowledge-sharing forum for early-stage experiments, odd findings, and unresolved challenges with agentic AI, signaling growing community interest in hands-on, practitioner-led exploration of coding agents.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Sep/23/gemini-tts-playground/">Gemini 3.8 TTS Playground</a>
+    <span class="meta">(2026-09-23)</span>
+  </h3>
+  
+  <p>Simon Willison explores Google&#39;s new Gemini 3.8 TTS models, building a bring-your-own-key playground using GPT-6 Astra and scripting a demo with Claude 4.5 Opus. The piece highlights practical details relevant to engineers: multi-character voice synthesis, custom voice cloning from 30-second samples, open CORS API access, and cost/performance benchmarks (~$0.027 for 78 seconds of audio in ~20 seconds).</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Sep/24/harder/">Note on 24th September 2026</a>
+    <span class="meta">(2026-09-24)</span>
+  </h3>
+  
+  <p>Simon Willison argues that coding agents don&#39;t simplify software engineering — they raise the bar, demanding greater discipline and deeper knowledge to use effectively. This challenges the common narrative that AI tools make development easier, suggesting that engineers who want to fully leverage agents must invest significantly in new skills and working practices.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Sep/25/john-gruber/">Quoting John Gruber</a>
+    <span class="meta">(2026-09-25)</span>
+  </h3>
+  
+  <p>Simon Willison quotes John Gruber&#39;s critique of Meta&#39;s Muse, a consumer-facing agentic AI system that gives each user a persistent Linux VM in Meta&#39;s cloud. Gruber argues that Muse&#39;s approachable packaging obscures its significant power and risk, warning that consumers likely don&#39;t grasp the dangers of a capable autonomous agent running on their machines. This raises important questions for engineers about how agentic AI systems are communicated and governed as they move into mainstream consumer hands.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Sep/26/kakapo-party/">Kākāpō Party</a>
+    <span class="meta">(2026-09-26)</span>
+  </h3>
+  
+  <p>Simon Willison demonstrates a practical AI workflow combining Claude Opus 5.5 and Claude Code to produce a pixel-art HTML5 canvas animation and then automate video capture via Playwright — all for a conference keynote closing slide. The example illustrates how chaining a conversational LLM with an agentic coding tool (Claude Code) can compress multi-step creative and scripting tasks into minutes, with the generated Playwright script being notably concise and functional.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/windows-and-ai">How will AI change operating systems? Part 2: Windows</a>
+    <span class="meta">(2026-09-22)</span>
+  </h3>
+  
+  <p>Gergely Orosz details Microsoft&#39;s strategy to integrate AI deeply into Windows, covering native agent identity via Entra ID, a centralized MCP server registry (ODR), and a new OS-agnostic agent sandboxing layer (MXC). The article also examines Windows&#39; declining developer market share and Microsoft&#39;s bid to win engineers back through AI-native primitives, local model support via WindowsML, and an improved WSL experience. For engineers building agentic tools, these OS-level abstractions represent a meaningful new deployment and security surface to understand.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/design-engineering-with-maggie-appleton">Design Engineering with Maggie Appleton</a>
+    <span class="meta">(2026-09-23)</span>
+  </h3>
+  
+  <p>In this podcast episode, GitHub Next staff research engineer Maggie Appleton shares how she uses AI agents in design workflows — including writing detailed specs for coding agents, building interactive &#34;jigs&#34; as AI-generated prototypes, and avoiding code review for AI-generated PRs. She introduces the concept of &#34;capability gaslighting&#34; — where frontier models appear highly capable before failing unexpectedly — and argues that better human-agent collaboration requires new shared artifacts bridging physical and digital creativity.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-end-of-coding-by-hand">The Pulse: RoR creator sparks new “death of coding by hand” debate</a>
+    <span class="meta">(2026-09-24)</span>
+  </h3>
+  
+  <p>DHH&#39;s Rails World keynote declaring the end of hand-written code at 37signals has reignited industry debate about AI&#39;s role in professional software development. Gergely Orosz examines whether this shift is now inevitable across the industry, alongside related hiring struggles at Amazon and Meta. The piece is directly relevant to engineers assessing how AI tooling is reshaping day-to-day coding practice and team composition.</p>
+  
+  <h3>
+    <a href="https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/">The Pulse: a new trend of CPU shortages</a>
+    <span class="meta">(2026-09-24)</span>
+  </h3>
+  
+  <p>AI-driven workloads — particularly reinforcement learning and cloud-based agents running tools like compilers, test runners, and linters — are causing a significant CPU shortage alongside the established GPU crunch. Cloud providers are rejecting new reservations, spot pricing has disappeared, and lead times for server orders have stretched to ~six months. Engineers at scale should begin capacity planning now, as CPU shortages are expected to persist for multiple quarters.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/fragments/2026-09-24.html">Fragments: September 24</a>
+    <span class="meta">(2026-09-24)</span>
+  </h3>
+  
+  <p>Fowler highlights Rob Bowley&#39;s argument that the real AI danger isn&#39;t future superintelligence but today&#39;s agents being recklessly integrated into systems without adequate security — the &#34;Lethal Trifecta&#34; of agentic deployments. He also touches on how agentic programming is causing engineers to read more code than ever, making thoughtful syntax highlighting increasingly important for productivity.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>
