@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Sep 2026 16:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 17:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>OpenAI DevDay 2026 live blog</title>
+      <link>https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 29 Sep 2026 15:55:13 +0000</pubDate>
+      <description>Simon Willison live blogs OpenAI DevDay 2026 from San Francisco, covering the keynote and other sessions. Tagged with topics including coding agents and LLMs, the post is a firsthand account of OpenAI's developer-focused announcements — directly relevant to engineers tracking the evolution of AI tooling and coding agent capabilities.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/</guid>
+    </item>
     <item>
       <title>Why has Shopify dropped React Native?</title>
       <link>https://newsletter.pragmaticengineer.com/p/shopify-native-mobile</link>
