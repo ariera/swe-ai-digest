@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Sep 2026 23:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 01:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -16,6 +16,14 @@
       <pubDate>Tue, 29 Sep 2026 22:20:28 +0000</pubDate>
       <description>Anthropic's Frontier Red Team found that recent frontier models — including GLM-5.3 and Claude Mythos Preview — can successfully develop binary exploitation techniques in a small but non-trivial percentage of trials, a capability absent in earlier models like Claude Opus 4.6. This signals a meaningful threshold crossing in AI-enabled cyberoffensive capability, with significant implications for AI safety research and the security risks posed by increasingly capable LLMs.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/</guid>
+    </item>
+    <item>
+      <title>GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price</title>
+      <link>https://simonwillison.net/2026/Sep/29/hn-49898129/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 29 Sep 2026 18:27:48 +0000</pubDate>
+      <description>Simon Willison shares a brief comment and visual benchmark results for GPT-6.1-Sol, OpenAI's new model positioned as offering near-Astra-level intelligence at one-fifth the cost. He notes the model's outputs are not markedly different from the GPT-6 family, and references live-blogging OpenAI's DevDay 2026 keynote. This matters to engineers evaluating cost-performance trade-offs when selecting frontier models.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/29/hn-49898129/</guid>
     </item>
     <item>
       <title>OpenAI DevDay 2026 live blog</title>
