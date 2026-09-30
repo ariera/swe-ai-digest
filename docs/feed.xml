@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Sep 2026 14:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 17:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Distributed databases with Peter Mattis</title>
+      <link>https://newsletter.pragmaticengineer.com/p/distributed-databases-with-peter</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 30 Sep 2026 16:30:05 +0000</pubDate>
+      <description>CockroachDB co-founder Peter Mattis shares how AI tools brought him back to hands-on coding, enabling him to run multiple experiments simultaneously in a way he likens to managing a "swarm of research assistants." He predicts that code review as we know it will effectively disappear — akin to how engineers no longer scrutinize assembly — and notes that non-engineers at Cockroach Labs built ~1,000 internal apps in months using AI-powered tooling. The episode offers a senior engineering leader's firsthand perspective on AI's impact on productivity, code quality, and the future of review practices.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/distributed-databases-with-peter</guid>
+    </item>
     <item>
       <title>Quoting Anthropic Frontier Red Team</title>
       <link>https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/</link>
