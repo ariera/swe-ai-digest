@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Sep 2026 17:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 07:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Matthew Green</title>
+      <link>https://simonwillison.net/2026/Oct/1/matthew-green/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 01 Oct 2026 06:29:01 +0000</pubDate>
+      <description>Matthew Green, quoted by Simon Willison, argues that AI agents are susceptible to worm-style attacks: a malicious payload can hijack one agent and propagate to others via shared communication channels like email, Slack, or shared documents. Sandboxing alone is insufficient to contain this threat when agents interact through common infrastructure, posing serious security risks for deployments of personal or enterprise AI agents.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/1/matthew-green/</guid>
+    </item>
     <item>
       <title>Distributed databases with Peter Mattis</title>
       <link>https://newsletter.pragmaticengineer.com/p/distributed-databases-with-peter</link>
