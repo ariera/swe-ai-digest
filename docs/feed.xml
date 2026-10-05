@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Oct 2026 16:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 17:00:27 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -24,6 +24,14 @@
       <pubDate>Mon, 05 Oct 2026 04:28:00 +0000</pubDate>
       <description>Fowler's October fragments explore several AI themes: the shift from "building" deterministic systems to "nurturing" unpredictable LLMs, the ongoing debate over whether human-readable code still matters in an agentic era (with Sam Ruby and others arguing high-level languages remain the optimal "source of truth" even for LLM-driven pipelines), and the value of models that acknowledge uncertainty over confidently hallucinating. Collectively, these fragments argue that as LLMs reshape coding, the conceptual modeling role of code becomes more — not less — important for software engineers.</description>
       <guid isPermaLink="true">https://martinfowler.com/fragments/2026-10-04.html</guid>
+    </item>
+    <item>
+      <title>Qwen3.8 27B addition in words</title>
+      <link>https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 04 Oct 2026 23:34:00 +0000</pubDate>
+      <description>Simon Willison replicates an arithmetic benchmark — asking an LLM to sum large numbers and return answers in words — using Qwen3.8-27B locally on a DGX Spark. With reasoning enabled, the model answered correctly 167 out of 169 times, compared to GPT-4o's notably weaker results. The experiment highlights how reasoning-mode LLMs can approach reliable arithmetic without external tools.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/</guid>
     </item>
     <item>
       <title>We're going to need default hard budget caps on pretty much everything</title>
