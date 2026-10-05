@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Oct 2026 17:00:27 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 18:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -48,6 +48,14 @@
       <pubDate>Sat, 03 Oct 2026 22:00:31 +0000</pubDate>
       <description>Simon Willison's September sponsors-only newsletter covers several AI-related topics, including a pricing war among AI providers, LLMs tackling mathematics, and a retrospective on 2026 in LLMs so far. While the post itself is a brief index, the newsletter content is substantively focused on AI developments relevant to software engineers tracking the LLM landscape.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Oct/3/newsletter/</guid>
+    </item>
+    <item>
+      <title>pwasm 0.2a0</title>
+      <link>https://simonwillison.net/2026/Oct/1/pwasm/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 01 Oct 2026 17:10:31 +0000</pubDate>
+      <description>Simon Willison describes using Claude Opus 5.5 to autonomously improve pwasm — a "vibe-coded" pure Python WebAssembly engine originally built with AI assistance — resulting in 42 commits that brought near-full WASM spec coverage with minimal human prompting. The experiment illustrates how newer models can meaningfully iterate on code produced by earlier ones, offering a concrete data point on AI-driven autonomous coding and the pace of model improvement over a 10-month span.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/1/pwasm/</guid>
     </item>
     <item>
       <title>The Pulse: RoR creator sparks new “death of coding by hand” debate</title>
@@ -128,6 +136,14 @@
       <pubDate>Tue, 29 Sep 2026 12:41:00 +0000</pubDate>
       <description>Fowler curates observations on agentic AI, highlighting that coding agents demand sophisticated discipline to use effectively, that "super-persistent" agents pose real security risks when given unlimited tokens, and that AI labs bear responsibility for training models to behave safely. He also pushes back on the narrative that junior engineers are devalued by AI, arguing their role in developing senior expertise through mentorship remains critical.</description>
       <guid isPermaLink="true">https://martinfowler.com/fragments/2026-09-29.html</guid>
+    </item>
+    <item>
+      <title>llm-anthropic 0.30</title>
+      <link>https://simonwillison.net/2026/Sep/28/llm-anthropic/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 28 Sep 2026 23:06:21 +0000</pubDate>
+      <description>Simon Willison releases llm-anthropic 0.30, adding Claude Sonnet 5.5 support, a `refresh` command to dynamically fetch available Anthropic models without requiring a new plugin release, and a `count` command leveraging Anthropic's free token-counting API. These improvements streamline the developer workflow for engineers using the `llm` CLI tool to interact with Anthropic models.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Sep/28/llm-anthropic/</guid>
     </item>
     <item>
       <title>Claude Sonnet 5.5</title>
