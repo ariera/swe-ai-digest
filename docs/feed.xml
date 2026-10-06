@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Oct 2026 08:00:14 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 14:00:38 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -16,6 +16,14 @@
       <pubDate>Tue, 06 Oct 2026 07:28:30 +0000</pubDate>
       <description>DHH argues that coding agents have advanced to the point where writing code by hand is no longer economically viable for most tasks, and that programmers who resist this shift risk obsolescence. He frames AI not as a mere tool but as highly capable collaborators, and predicts a bloom in software development as costs plummet. The key message for engineers: embrace agentic workflows or risk being left behind.</description>
       <guid isPermaLink="true">https://world.hey.com/dhh/over-my-dead-pencil-fb0f3647</guid>
+    </item>
+    <item>
+      <title>What is Codemode</title>
+      <link>https://lucumr.pocoo.org/2026/10/6/codemode/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher introduces "Codemode," a mechanism in Pi 1.0 that lets LLM agents execute JavaScript on the harness side to orchestrate complex, concurrent tool calls—including image generation and classifier invocations—without bloating the LLM's context. He explains the key architectural distinction between the trusted harness ("brain") and the sandboxed execution environment ("hands"), arguing this separation enables richer agent workflows. Engineers building or evaluating agentic systems will find the pattern relevant for reducing context overhead and enabling structured, stateful multi-step agent execution.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/10/6/codemode/</guid>
     </item>
     <item>
       <title>Quoting Felix Rieseberg</title>
