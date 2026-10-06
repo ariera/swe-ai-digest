@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Oct 2026 14:00:38 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 16:00:39 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Scrimshaw Jukebox</title>
+      <link>https://simonwillison.net/2026/Oct/6/scrimshaw-jukebox/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 06 Oct 2026 15:17:39 +0000</pubDate>
+      <description>Simon Willison experiments with Claude Opus 5.5 to compose retro video game music, finding the results "surprisingly good." He speculates this may represent a newly emergent capability in large language models — analogous to recent improvements in 3D graphics generation — and notes that controlled comparisons across model versions would be needed to confirm whether this is genuinely new.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/6/scrimshaw-jukebox/</guid>
+    </item>
     <item>
       <title>Over my dead pencil</title>
       <link>https://world.hey.com/dhh/over-my-dead-pencil-fb0f3647</link>
