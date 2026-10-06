@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Oct 2026 18:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 01:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Felix Rieseberg</title>
+      <link>https://simonwillison.net/2026/Oct/5/felix-rieseberg/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 05 Oct 2026 23:56:47 +0000</pubDate>
+      <description>Felix Rieseberg of Anthropic describes an architectural shift in Claude's Cowork product: moving from local VM-based model inference to fully cloud-hosted inference and sandboxed VMs per session, with the desktop app handling only device-level file access. This change addresses user complaints about battery drain, performance overhead, and interrupted sessions when closing a laptop. For engineers, it illustrates a practical pattern for deploying agentic AI tools — offloading compute to the cloud while keeping a thin local client for secure, scoped device access.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/5/felix-rieseberg/</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://bsky.app/profile/nodeland.dev/post/3mx5buzy5p72n</link>
