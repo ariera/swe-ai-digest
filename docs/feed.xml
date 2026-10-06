@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Oct 2026 20:00:49 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 21:00:41 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>EmbeddingGemma 2</title>
+      <link>https://simonwillison.net/2026/Oct/6/hn-49983751/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 06 Oct 2026 20:37:53 +0000</pubDate>
+      <description>Simon Willison argues that embedding models should always be open-weight rather than proprietary, because vendor deprecation forces costly re-computation of stored vectors at scale. He favors EmbeddingGemma 2's Apache 2.0 license as it allows fallback to self-hosting or alternative providers, reducing long-term lock-in risk — a practical consideration for any engineer building embedding-dependent systems.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/6/hn-49983751/</guid>
+    </item>
+    <item>
+      <title>Introducing Mistral Large 4: Le chonk</title>
+      <link>https://simonwillison.net/2026/Oct/6/le-chonk/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 06 Oct 2026 20:18:19 +0000</pubDate>
+      <description>Simon Willison reviews Mistral Large 4, a 1-trillion-parameter mixture-of-experts model with 49B active parameters, available via API preview with open weights promised shortly. He benchmarks it against competitors like DeepSeek 4.1 Flash, finding it a major improvement over its predecessor but still roughly six months behind the frontier. Engineers evaluating open-weight LLM options should note its imminent public release and competitive positioning.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/6/le-chonk/</guid>
+    </item>
     <item>
       <title>Using Parseable with Datasette for OpenTelemetry traces</title>
       <link>https://simonwillison.net/2026/Oct/6/datasette-parseable-opentelemetry/</link>
