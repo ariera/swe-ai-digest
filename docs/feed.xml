@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2026 18:00:46 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 21:00:40 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Introducing Claude Haiku 5.5</title>
+      <link>https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 07 Oct 2026 20:56:21 +0000</pubDate>
+      <description>Simon Willison evaluates Anthropic's Claude Haiku 5.5, a fast, low-cost model priced at $0.10/$0.50 per million tokens — competitive with OpenAI's GPT-6 Luna, though a less generous tokenizer adds a hidden ~25% cost increase. He notes Haiku 5.5 requires reasoning (defaulting to medium effort) and cannot disable it. Anthropic also introduced monthly API credits for Max and Team subscribers, improving API accessibility for developers.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/</guid>
+    </item>
     <item>
       <title>Building resilient systems with Sam Newman</title>
       <link>https://newsletter.pragmaticengineer.com/p/building-resilient-systems-with-sam</link>
