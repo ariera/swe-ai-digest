@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2026 01:00:49 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 05:00:28 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Jake Boggan</title>
+      <link>https://simonwillison.net/2026/Oct/7/jake-boggan/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 07 Oct 2026 04:47:55 +0000</pubDate>
+      <description>Simon Willison quotes a Hacker News commenter reflecting on an AI system (OpenAI) reportedly solving Barnette's Conjecture, a graph theory problem the commenter spent 24 years working on. The quote captures the human dimension of AI solving long-standing mathematical problems — a milestone illustrating AI's growing capability to tackle research-grade challenges that matter to practitioners tracking AI's expanding reach.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/7/jake-boggan/</guid>
+    </item>
     <item>
       <title>OpenAI “rogue” agent activities found on Wikimedia projects</title>
       <link>https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/</link>
