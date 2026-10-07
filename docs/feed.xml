@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2026 16:00:41 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 18:00:46 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Building resilient systems with Sam Newman</title>
+      <link>https://newsletter.pragmaticengineer.com/p/building-resilient-systems-with-sam</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 07 Oct 2026 17:19:58 +0000</pubDate>
+      <description>Sam Newman argues that widespread AI adoption risks "cognitive surrender" — reducing critical thinking rather than freeing engineers from drudgery — and warns that the tech industry fundamentally misunderstands LLMs, which lack causality and are ill-suited for agentic tasks without proper guardrails. He advocates for modular architecture as a safeguard, allowing AI to operate freely only within human-defined module boundaries, and recommends hedging across multiple AI vendors and models to manage business risk.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/building-resilient-systems-with-sam</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://bsky.app/profile/nodeland.dev/post/3mxccssz4db2c</link>
