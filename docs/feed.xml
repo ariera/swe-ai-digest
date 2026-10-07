@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2026 13:00:31 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 16:00:41 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mxccssz4db2c</link>
+      <author>Matteo Collina</author>
+      <pubDate>Wed, 07 Oct 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina argues that in the AI era, a software engineer's professional network becomes a key differentiator and source of fulfillment, recommending attending more conferences as a result. The post implies AI is commoditizing technical work, making human relationships and community increasingly important for career value.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mxccssz4db2c</guid>
+    </item>
     <item>
       <title>Redundancy is the engine of progress</title>
       <link>https://world.hey.com/dhh/redundancy-is-the-engine-of-progress-76499402</link>
