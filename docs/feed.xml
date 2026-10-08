@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2026 21:00:40 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 17:00:40 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: new trend of building “internal vibe-coding apps” at tech companies</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-new-trend-of-building-internal</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 08 Oct 2026 16:55:51 +0000</pubDate>
+      <description>Gergely Orosz identifies an emerging trend of companies like Ramp and Stripe building internal "vibe-coding" platforms that enable non-engineers to create internal websites and tools using AI. He argues this pattern is gaining traction at mid-sized tech companies and predicts broader adoption. For software engineers, this signals a shift in how internal tooling is built and who builds it.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-new-trend-of-building-internal</guid>
+    </item>
     <item>
       <title>Introducing Claude Haiku 5.5</title>
       <link>https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/</link>
