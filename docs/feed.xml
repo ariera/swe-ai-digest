@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Oct 2026 19:00:40 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 22:00:42 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Carson Gross</title>
+      <link>https://simonwillison.net/2026/Oct/8/carson-gross/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 08 Oct 2026 21:05:44 +0000</pubDate>
+      <description>Carson Gross, quoted by Simon Willison, argues that software engineering remains viable in an AI-driven future because its core skills — problem-solving with computers and managing complexity — are unlikely to lose value. The quote offers a concise counterpoint to fears that AI tools will displace programmers, grounding career resilience in foundational computer science principles.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/8/carson-gross/</guid>
+    </item>
     <item>
       <title>If your team is happy, are you doing a good job?</title>
       <link>https://charity.wtf/p/if-your-team-is-happy-are-you-doing</link>
