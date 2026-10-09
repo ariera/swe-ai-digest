@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Oct 2026 22:00:42 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 02:00:46 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>ttok 0.4</title>
+      <link>https://simonwillison.net/2026/Oct/8/ttok/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 08 Oct 2026 23:34:28 +0000</pubDate>
+      <description>Simon Willison releases ttok 0.4, a CLI tool for counting tokens using OpenAI's tiktoken library, with minor updates including a new `--list-models` command and CI improvements. Token counting is a practical concern for engineers working with LLMs, and the tool's `uvx` compatibility makes it easy to integrate into developer workflows without installation overhead.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/8/ttok/</guid>
+    </item>
     <item>
       <title>Quoting Carson Gross</title>
       <link>https://simonwillison.net/2026/Oct/8/carson-gross/</link>
