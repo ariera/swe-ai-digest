@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2026 13:01:01 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 16:00:49 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Matthew Green</title>
+      <link>https://simonwillison.net/2026/Oct/9/matthew-green/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 09 Oct 2026 15:02:29 +0000</pubDate>
+      <description>Cryptographer Matthew Green warns that AI may produce cryptographic breakthroughs fast enough to undermine public-key encryption, estimating a 15% chance of losing confidence in existing algorithms. He argues the critical mismatch is between AI's speed of generating surprises and the much slower human process of replacing cryptographic standards — even with AI assistance. Software engineers should treat proactive migration planning as urgent, not reactive.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/9/matthew-green/</guid>
+    </item>
     <item>
       <title>A new feature for my, blog built using my voice</title>
       <link>https://simonwillison.net/2026/Oct/9/built-using-my-voice/</link>
