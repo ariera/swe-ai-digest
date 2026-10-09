@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2026 02:00:46 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 05:00:29 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>ttok 1.0</title>
+      <link>https://simonwillison.net/2026/Oct/9/ttok/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 09 Oct 2026 00:34:43 +0000</pubDate>
+      <description>Simon Willison releases ttok 1.0, a token-counting CLI tool, updating its default tokenizer from GPT-4 to the GPT-5/GPT-6 family. He notes that while OpenAI hasn't officially confirmed GPT-6's tokenizer, experimental evidence suggests it is identical to GPT-5's across all tested models. This is relevant for engineers managing LLM context windows and token budgets across model generations.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/9/ttok/</guid>
+    </item>
     <item>
       <title>ttok 0.4</title>
       <link>https://simonwillison.net/2026/Oct/8/ttok/</link>
