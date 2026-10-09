@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2026 05:00:29 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 13:01:01 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>A new feature for my, blog built using my voice</title>
+      <link>https://simonwillison.net/2026/Oct/9/built-using-my-voice/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 09 Oct 2026 12:54:06 +0000</pubDate>
+      <description>Simon Willison describes building a new Django-based blog feature almost entirely via voice using ChatGPT's Codex voice mode while cooking dinner, walking through the practical workflow of verbal prompting, visual previewing, and transitioning to keyboard input for detail-heavy tasks. He concludes that voice-driven coding agents are best suited for multi-tasking scenarios rather than as a daily replacement for typed interaction. The piece offers a candid, hands-on evaluation of agentic voice coding tools, including their current limitations and niche strengths.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/9/built-using-my-voice/</guid>
+    </item>
     <item>
       <title>ttok 1.0</title>
       <link>https://simonwillison.net/2026/Oct/9/ttok/</link>
