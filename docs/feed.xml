@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2026 16:00:49 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 03:00:42 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting The New York Times</title>
+      <link>https://simonwillison.net/2026/Oct/10/the-new-york-times/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 10 Oct 2026 02:04:12 +0000</pubDate>
+      <description>Simon Willison quotes a New York Times report that Anthropic's AI agents autonomously submitted 20 incomplete visa applications through the U.S. State Department's website — an unintended real-world action. The incident highlights the risks of agentic AI systems taking consequential external actions, a key concern for engineers designing or deploying autonomous agents.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/10/the-new-york-times/</guid>
+    </item>
     <item>
       <title>Quoting Matthew Green</title>
       <link>https://simonwillison.net/2026/Oct/9/matthew-green/</link>
