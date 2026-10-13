@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Oct 2026 03:00:42 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 01:00:49 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>web-edit 0.1a0</title>
+      <link>https://simonwillison.net/2026/Oct/12/web-edit/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 12 Oct 2026 15:54:36 +0000</pubDate>
+      <description>Simon Willison describes building a Python web-based file editor using AI coding agents (Codex Remote and GPT-6 Astra) to solve a practical workflow problem: editing credential files from a phone without exposing them to an LLM. The tool is designed to run over Tailscale so AI agents can hand off file-editing tasks to a secure, human-controlled interface. This illustrates a real-world pattern of composing AI agents with purpose-built micro-tools to manage trust and data privacy boundaries.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/12/web-edit/</guid>
+    </item>
     <item>
       <title>Quoting The New York Times</title>
       <link>https://simonwillison.net/2026/Oct/10/the-new-york-times/</link>
