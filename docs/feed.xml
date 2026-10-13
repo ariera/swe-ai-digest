@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Oct 2026 14:00:32 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 17:00:39 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Building resilient AI-powered software, and planning for when things go wrong</title>
+      <link>https://newsletter.pragmaticengineer.com/p/building-resilient-systems</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 13 Oct 2026 16:03:33 +0000</pubDate>
+      <description>Gergely Orosz shares excerpts from Sam Newman's new book on building resilient distributed systems, highlighting how AI agents generating more code are contributing to increased production incidents and outages. The book directly addresses AI-specific resilience concerns: model provider reliability, models changing unexpectedly, observability, and multi-model/multi-vendor strategies. For engineers integrating AI into production systems, this frames reliability planning as newly urgent and distinct from traditional distributed systems challenges.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/building-resilient-systems</guid>
+    </item>
     <item>
       <title>Are Harnesses Worth the Cost?</title>
       <link>https://martinfowler.com/articles/are-harnesses-worth-the-cost.html</link>
