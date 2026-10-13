@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Oct 2026 01:00:49 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 14:00:32 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Are Harnesses Worth the Cost?</title>
+      <link>https://martinfowler.com/articles/are-harnesses-worth-the-cost.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Tue, 13 Oct 2026 13:35:00 +0000</pubDate>
+      <description>Naresh Jain's experiment shows that a behavioral harness can bring a cost-optimized coding agent (GPT-6 Luna) from a 30% to a 100% success rate on an API-building task, matching a frontier model's reliability at 33% lower cost. The finding suggests that harness architecture is a practical lever for engineers seeking dependable AI agent outputs without paying frontier-model prices.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/are-harnesses-worth-the-cost.html</guid>
+    </item>
+    <item>
+      <title>Quoting Geoffrey Huntley</title>
+      <link>https://simonwillison.net/2026/Oct/13/geoffrey-huntley/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 13 Oct 2026 13:32:00 +0000</pubDate>
+      <description>Geoffrey Huntley describes a technique for steering coding agents toward correct behavior: using pre-commit hooks to detect policy violations in the git diff and injecting corrective prompts back to the agent. This "prompt injection via tooling" approach enforces architectural constraints without relying on the agent's memory or AGENTS.md files, which drift over time. It's a practical pattern for engineers designing reliable, self-correcting agentic workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/13/geoffrey-huntley/</guid>
+    </item>
     <item>
       <title>web-edit 0.1a0</title>
       <link>https://simonwillison.net/2026/Oct/12/web-edit/</link>
