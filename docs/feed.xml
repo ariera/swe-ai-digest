@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Oct 2026 00:00:52 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 17:00:44 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>AI is mass decompiling games. That's both awesome and scary.</title>
+      <link>https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 14 Oct 2026 16:26:53 +0000</pubDate>
+      <description>AI-powered decompilation tools are enabling developers to reverse-engineer games and software at scale, creating both opportunities (game preservation, browser ports via WebAssembly) and threats (IP theft, forced open-sourcing of proprietary code). The author highlights that this capability extends beyond games to all software, posing profound implications for intellectual property and competitive moats across the entire tech industry.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/</guid>
+    </item>
     <item>
       <title>Redesigning source control at Anthropic</title>
       <link>https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/</link>
