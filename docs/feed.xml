@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Oct 2026 17:00:44 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 18:00:46 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Uber’s AI infra, from the inside</title>
+      <link>https://newsletter.pragmaticengineer.com/p/ubers-ai-infra-from-the-inside</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 14 Oct 2026 17:06:56 +0000</pubDate>
+      <description>Gergely Orosz interviews Uber Distinguished Engineer Uday Kiran Medisetty on how Uber built its AI developer infrastructure — including a model-agnostic gateway, agentic coding tools (Minion, Slate, AIFX), and a 50% token cost reduction. Key findings include code review becoming a bottleneck as agent-generated PRs surge, and the engineer's role shifting toward "context engineering" and output verification. Uber's decade of internal dev tooling investments proved foundational to rapid AI adoption.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/ubers-ai-infra-from-the-inside</guid>
+    </item>
     <item>
       <title>AI is mass decompiling games. That's both awesome and scary.</title>
       <link>https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/</link>
