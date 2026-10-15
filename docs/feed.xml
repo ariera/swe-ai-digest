@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Oct 2026 18:00:46 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 19:00:40 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Lies, Damn Lies, and Github Stars</title>
+      <link>https://avdi.codes/lies-damn-lies-and-github-stars/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=lies-damn-lies-and-github-stars</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Thu, 15 Oct 2026 18:58:21 +0000</pubDate>
+      <description>Grimm argues that the AI tooling ecosystem is awash in circular social proof — GitHub stars and viral videos substituting for real evidence of effectiveness — and that many hyped agentic frameworks deliver zero measurable benefit. He warns that AI lowers the barrier to publishing convincing-looking but empty tools, and urges engineers to counter this by defining hard, business-facing metrics to evaluate whether any AI tool genuinely advances their goals.</description>
+      <guid isPermaLink="true">https://avdi.codes/lies-damn-lies-and-github-stars/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=lies-damn-lies-and-github-stars</guid>
+    </item>
     <item>
       <title>The Pulse: new trend of building “internal vibe-coding apps” at tech companies</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-new-trend-of-building-internal-vibe-coding-apps-at-tech-companies/</link>
