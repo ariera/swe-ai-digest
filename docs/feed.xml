@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Oct 2026 18:00:46 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 01:00:50 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Tree Appreciator</title>
+      <link>https://simonwillison.net/2026/Oct/14/tree-appreciator/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 14 Oct 2026 21:23:01 +0000</pubDate>
+      <description>Simon Willison shares a hands-on experiment using Claude Opus 5.5 Max via the iPhone app to generate a complete Three.js game through a single prompt, with the model running autonomously for over three hours. The result — a polished spot-the-difference game with music, animation, and achievements — illustrates how "vibe-coding" with frontier LLMs can produce surprisingly capable, self-directed outputs from minimal human instruction.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/14/tree-appreciator/</guid>
+    </item>
     <item>
       <title>Uber’s AI infra, from the inside</title>
       <link>https://newsletter.pragmaticengineer.com/p/ubers-ai-infra-from-the-inside</link>
