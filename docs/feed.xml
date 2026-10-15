@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Oct 2026 19:00:40 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 20:00:54 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Chirp Pong</title>
+      <link>https://simonwillison.net/2026/Oct/15/chirp-pong/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 15 Oct 2026 19:47:52 +0000</pubDate>
+      <description>Simon Willison demonstrates using Claude Opus 5.5 Extra via Claude Code to build a two-player browser-based Pong game that communicates game state between phones using audio chirps via the Web Microphone API — no backend required. The experiment showcases AI-assisted game development producing a novel, self-contained networking approach entirely through LLM-driven code generation.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/15/chirp-pong/</guid>
+    </item>
     <item>
       <title>Lies, Damn Lies, and Github Stars</title>
       <link>https://avdi.codes/lies-damn-lies-and-github-stars/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=lies-damn-lies-and-github-stars</link>
