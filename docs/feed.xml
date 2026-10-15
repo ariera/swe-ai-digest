@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Oct 2026 14:00:35 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 18:00:46 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: new trend of building “internal vibe-coding apps” at tech companies</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-new-trend-of-building-internal-vibe-coding-apps-at-tech-companies/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 15 Oct 2026 17:01:10 +0000</pubDate>
+      <description>Gergely Orosz identifies a growing trend of mid-to-large tech companies (e.g., Ramp, Stripe) building proprietary internal "vibe-coding" platforms that let non-engineers create apps using AI, rather than relying on third-party tools like Lovable or Replit. Key advantages include safe access to internal data, design-system compliance, and in-house AI infrastructure upskilling. Orosz predicts this pattern will spread broadly among companies already running their own coding agent infrastructure.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-new-trend-of-building-internal-vibe-coding-apps-at-tech-companies/</guid>
+    </item>
     <item>
       <title>Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO</title>
       <link>https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/</link>
