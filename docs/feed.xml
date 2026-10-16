@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Oct 2026 20:00:54 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 23:00:51 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang</title>
+      <link>https://simonwillison.net/2026/Oct/16/code-review/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 16 Oct 2026 22:06:37 +0000</pubDate>
+      <description>The Claude Code team describes a shift in code review philosophy: rather than treating human review as a mandatory gate, they frame it as a continuous process where Claude reviews and fixes most changes before a human ever sees them. This reframes the purpose of review from "did a human read this?" to "what's the right check — automated or human — for each risk?" The result is that human attention is preserved for higher-level judgment, not routine mistakes.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/16/code-review/</guid>
+    </item>
     <item>
       <title>Chirp Pong</title>
       <link>https://simonwillison.net/2026/Oct/15/chirp-pong/</link>
@@ -40,6 +48,14 @@
       <pubDate>Thu, 15 Oct 2026 13:04:03 +0000</pubDate>
       <description>Simon Willison breaks down Anthropic's rapid revenue growth — from $4.8bn in Q1 to $16.8bn in Q3 2026 — and highlights that rival labs spent over half a billion dollars "distilling" Anthropic's models in a single quarter before Anthropic clamped down on the practice. The distillation detail is particularly significant, revealing how commercially and technically interdependent competing AI labs have become, with direct implications for model training practices and competitive dynamics in the industry.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/</guid>
+    </item>
+    <item>
+      <title>LaTeX renderer</title>
+      <link>https://simonwillison.net/2026/Oct/15/latex/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 15 Oct 2026 02:07:28 +0000</pubDate>
+      <description>Simon Willison describes using Claude Code (Opus 5.5 Extra) to build a URL-fragment-based LaTeX renderer, walking through the exact prompt sequence he used. The post illustrates a practical AI-assisted development workflow where iterative prompting — including security and feature requirements — produces a functional tool. It's a concrete example of using an AI coding agent for rapid, spec-driven tool creation.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/15/latex/</guid>
     </item>
     <item>
       <title>Tree Appreciator</title>
