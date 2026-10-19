@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW42</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW42</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-10-12 &ndash; 2026-10-18
+    &middot; 18 articles
+  </p>
+  <p>This digest period is dominated by several interlocking themes around AI-assisted software engineering in increasingly mature, production-oriented contexts.
+
+The most prominent trend is the rapid evolution of agentic coding workflows. Multiple articles document engineers composing multi-model pipelines, chaining AI tools for analysis and code generation, and using AI to build novel applications with minimal human input. Alongside this, a cluster of articles addresses the systemic challenges that agentic scale creates: Anthropic replaced Git entirely after AI-driven commits increased twelvefold in four months, Uber restructured code review processes as agent-generated PRs surged, and Sam Newman&#39;s new book frames AI-specific reliability as a distinct engineering discipline.
+
+A second strong theme is the engineering of guardrails and quality controls around agents — including behavioral harnesses that lift success rates from 30% to 100%, pre-commit hooks that inject corrective prompts, and multi-model review pipelines that reduce human review to higher-order judgment.
+
+Skepticism also surfaces. Avdi Grimm warns of circular social proof in AI tooling, urging metric-driven evaluation. Separately, AI-powered decompilation raises significant IP concerns. Anthropic&#39;s explosive revenue growth and inter-lab model distillation underscore how commercially entangled the competitive landscape has become.</p>
+  <hr>
+
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/12/web-edit/">web-edit 0.1a0</a>
+    <span class="meta">(2026-10-12)</span>
+  </h3>
+  
+  <p>Simon Willison describes building a Python web-based file editor using AI coding agents (Codex Remote and GPT-6 Astra) to solve a practical workflow problem: editing credential files from a phone without exposing them to an LLM. The tool is designed to run over Tailscale so AI agents can hand off file-editing tasks to a secure, human-controlled interface. This illustrates a real-world pattern of composing AI agents with purpose-built micro-tools to manage trust and data privacy boundaries.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/13/geoffrey-huntley/">Quoting Geoffrey Huntley</a>
+    <span class="meta">(2026-10-13)</span>
+  </h3>
+  
+  <p>Geoffrey Huntley describes a technique for steering coding agents toward correct behavior: using pre-commit hooks to detect policy violations in the git diff and injecting corrective prompts back to the agent. This &#34;prompt injection via tooling&#34; approach enforces architectural constraints without relying on the agent&#39;s memory or AGENTS.md files, which drift over time. It&#39;s a practical pattern for engineers designing reliable, self-correcting agentic workflows.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/12/python-3-15-web-edit-profiling/">Profiling web-edit with Python 3.15: flame graphs and source heatmaps</a>
+    <span class="meta">(2026-10-12)</span>
+  </h3>
+  
+  <p>Simon Willison demonstrates using GPT-6 Astra via Codex to automate Python 3.15 profiling tasks — generating flame graphs and source heatmaps for his web-edit app via a natural language prompt. The post illustrates how AI coding agents can handle developer tooling workflows end-to-end, reducing manual setup for performance analysis tasks.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/12/llm-meta-ai/">llm-meta-ai 0.2</a>
+    <span class="meta">(2026-10-12)</span>
+  </h3>
+  
+  <p>Simon Willison announces version 0.2 of his llm-meta-ai plugin, updated to support Meta&#39;s newly released Muse Wonder models — their most capable to date, benchmarked near GPT-6.1 Sol. He notes Meta is shipping a new model roughly every month, with meaningful quality improvements across iterations, a cadence worth tracking for engineers evaluating LLM tool integrations.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/">Redesigning source control at Anthropic</a>
+    <span class="meta">(2026-10-13)</span>
+  </h3>
+  
+  <p>Anthropic replaced Git with a custom system called Scion after AI-driven coding caused daily code merges to explode from ~2,500 to 30,000+ in just four months, generating infrastructure demands Git couldn&#39;t handle. Willison also shares a personal takeaway on adversarial AI code review: while highly effective, models like Claude can over-engineer solutions in response to hypothetical concerns, requiring skilled engineers to actively steer them.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/13/llm-gemini/">llm-gemini 0.35</a>
+    <span class="meta">(2026-10-13)</span>
+  </h3>
+  
+  <p>Simon Willison announces llm-gemini 0.35, adding support for Google&#39;s new Gemini 4 Argon model, and evaluates its pricing relative to competitors like GPT-6 and Claude. He argues that raw per-token pricing is increasingly misleading, and that benchmark-level total cost (via Artificial Analysis) is a more meaningful metric for comparing models in agentic workflows.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/13/web-edit/">web-edit 0.1a1</a>
+    <span class="meta">(2026-10-13)</span>
+  </h3>
+  
+  <p>Simon Willison releases web-edit 0.1a1, incorporating performance optimizations generated by Claude Opus 5.5, which was prompted with a profiling report produced by GPT-6 Astra. This illustrates a practical AI-assisted workflow where multiple AI models are chained together — one for analysis, another for code generation — to optimize a Python project.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/">AI is mass decompiling games. That&#39;s both awesome and scary.</a>
+    <span class="meta">(2026-10-14)</span>
+  </h3>
+  
+  <p>AI-powered decompilation tools are enabling developers to reverse-engineer games and software at scale, creating both opportunities (game preservation, browser ports via WebAssembly) and threats (IP theft, forced open-sourcing of proprietary code). The author highlights that this capability extends beyond games to all software, posing profound implications for intellectual property and competitive moats across the entire tech industry.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/14/tree-appreciator/">Tree Appreciator</a>
+    <span class="meta">(2026-10-14)</span>
+  </h3>
+  
+  <p>Simon Willison shares a hands-on experiment using Claude Opus 5.5 Max via the iPhone app to generate a complete Three.js game through a single prompt, with the model running autonomously for over three hours. The result — a polished spot-the-difference game with music, animation, and achievements — illustrates how &#34;vibe-coding&#34; with frontier LLMs can produce surprisingly capable, self-directed outputs from minimal human instruction.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/">Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO</a>
+    <span class="meta">(2026-10-15)</span>
+  </h3>
+  
+  <p>Simon Willison breaks down Anthropic&#39;s rapid revenue growth — from $4.8bn in Q1 to $16.8bn in Q3 2026 — and highlights that rival labs spent over half a billion dollars &#34;distilling&#34; Anthropic&#39;s models in a single quarter before Anthropic clamped down on the practice. The distillation detail is particularly significant, revealing how commercially and technically interdependent competing AI labs have become, with direct implications for model training practices and competitive dynamics in the industry.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/15/chirp-pong/">Chirp Pong</a>
+    <span class="meta">(2026-10-15)</span>
+  </h3>
+  
+  <p>Simon Willison demonstrates using Claude Opus 5.5 Extra via Claude Code to build a two-player browser-based Pong game that communicates game state between phones using audio chirps via the Web Microphone API — no backend required. The experiment showcases AI-assisted game development producing a novel, self-contained networking approach entirely through LLM-driven code generation.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/16/code-review/">Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang</a>
+    <span class="meta">(2026-10-16)</span>
+  </h3>
+  
+  <p>The Claude Code team describes a shift in code review philosophy: rather than treating human review as a mandatory gate, they frame it as a continuous process where Claude reviews and fixes most changes before a human ever sees them. This reframes the purpose of review from &#34;did a human read this?&#34; to &#34;what&#39;s the right check — automated or human — for each risk?&#34; The result is that human attention is preserved for higher-level judgment, not routine mistakes.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/15/latex/">LaTeX renderer</a>
+    <span class="meta">(2026-10-15)</span>
+  </h3>
+  
+  <p>Simon Willison describes using Claude Code (Opus 5.5 Extra) to build a URL-fragment-based LaTeX renderer, walking through the exact prompt sequence he used. The post illustrates a practical AI-assisted development workflow where iterative prompting — including security and feature requirements — produces a functional tool. It&#39;s a concrete example of using an AI coding agent for rapid, spec-driven tool creation.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/articles/are-harnesses-worth-the-cost.html">Are Harnesses Worth the Cost?</a>
+    <span class="meta">(2026-10-13)</span>
+  </h3>
+  
+  <p>Naresh Jain&#39;s experiment shows that a behavioral harness can bring a cost-optimized coding agent (GPT-6 Luna) from a 30% to a 100% success rate on an API-building task, matching a frontier model&#39;s reliability at 33% lower cost. The finding suggests that harness architecture is a practical lever for engineers seeking dependable AI agent outputs without paying frontier-model prices.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/building-resilient-systems">Building resilient AI-powered software, and planning for when things go wrong</a>
+    <span class="meta">(2026-10-13)</span>
+  </h3>
+  
+  <p>Gergely Orosz shares excerpts from Sam Newman&#39;s new book on building resilient distributed systems, highlighting how AI agents generating more code are contributing to increased production incidents and outages. The book directly addresses AI-specific resilience concerns: model provider reliability, models changing unexpectedly, observability, and multi-model/multi-vendor strategies. For engineers integrating AI into production systems, this frames reliability planning as newly urgent and distinct from traditional distributed systems challenges.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/ubers-ai-infra-from-the-inside">Uber’s AI infra, from the inside</a>
+    <span class="meta">(2026-10-14)</span>
+  </h3>
+  
+  <p>Gergely Orosz interviews Uber Distinguished Engineer Uday Kiran Medisetty on how Uber built its AI developer infrastructure — including a model-agnostic gateway, agentic coding tools (Minion, Slate, AIFX), and a 50% token cost reduction. Key findings include code review becoming a bottleneck as agent-generated PRs surge, and the engineer&#39;s role shifting toward &#34;context engineering&#34; and output verification. Uber&#39;s decade of internal dev tooling investments proved foundational to rapid AI adoption.</p>
+  
+  <h3>
+    <a href="https://blog.pragmaticengineer.com/the-pulse-new-trend-of-building-internal-vibe-coding-apps-at-tech-companies/">The Pulse: new trend of building “internal vibe-coding apps” at tech companies</a>
+    <span class="meta">(2026-10-15)</span>
+  </h3>
+  
+  <p>Gergely Orosz identifies a growing trend of mid-to-large tech companies (e.g., Ramp, Stripe) building proprietary internal &#34;vibe-coding&#34; platforms that let non-engineers create apps using AI, rather than relying on third-party tools like Lovable or Replit. Key advantages include safe access to internal data, design-system compliance, and in-house AI infrastructure upskilling. Orosz predicts this pattern will spread broadly among companies already running their own coding agent infrastructure.</p>
+  
+  
+  <h2>Avdi Grimm</h2>
+  
+  <p class="meta">Ruby developer, author of Confident Ruby and Exceptional Ruby, and creator of the RubyTapas screencast series on software craftsmanship.</p>
+  
+  
+  <h3>
+    <a href="https://avdi.codes/lies-damn-lies-and-github-stars/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=lies-damn-lies-and-github-stars">Lies, Damn Lies, and Github Stars</a>
+    <span class="meta">(2026-10-15)</span>
+  </h3>
+  
+  <p>Grimm argues that the AI tooling ecosystem is awash in circular social proof — GitHub stars and viral videos substituting for real evidence of effectiveness — and that many hyped agentic frameworks deliver zero measurable benefit. He warns that AI lowers the barrier to publishing convincing-looking but empty tools, and urges engineers to counter this by defining hard, business-facing metrics to evaluate whether any AI tool genuinely advances their goals.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>
