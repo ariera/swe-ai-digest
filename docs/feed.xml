@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Oct 2026 23:00:51 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 01:00:49 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>llm-tools-datasette 0.1.1</title>
+      <link>https://simonwillison.net/2026/Oct/18/llm-tools-datasette/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 18 Oct 2026 23:43:09 +0000</pubDate>
+      <description>Simon Willison releases a patch for llm-tools-datasette, a plugin for his LLM tool, fixing a breakage caused by an httpx dependency change introduced in LLM 0.33. This is a maintenance release relevant to developers building or using LLM plugins, highlighting how internal dependency changes in AI tooling can silently break downstream integrations.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/18/llm-tools-datasette/</guid>
+    </item>
+    <item>
+      <title>llm-echo 0.5</title>
+      <link>https://simonwillison.net/2026/Oct/18/llm-echo/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 18 Oct 2026 23:16:16 +0000</pubDate>
+      <description>Simon Willison releases llm-echo 0.5, an update to a debug plugin for his LLM CLI tool that simulates a model by echoing prompts back without invoking a real LLM. The update adds accurate simulated token usage tracking for tool calls, system prompts, and reasoning tokens — useful for testing LLM integrations and plugins without API costs.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/18/llm-echo/</guid>
+    </item>
     <item>
       <title>Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang</title>
       <link>https://simonwillison.net/2026/Oct/16/code-review/</link>
