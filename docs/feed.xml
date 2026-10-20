@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Oct 2026 01:00:40 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 16:00:39 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>(no title)</title>
+      <link>https://bsky.app/profile/nodeland.dev/post/3mycyutm2vf2e</link>
+      <author>Matteo Collina</author>
+      <pubDate>Tue, 20 Oct 2026 15:59:00 +0000</pubDate>
+      <description>Matteo Collina, a Node.js core contributor, highlights a gatekeeping problem with Anthropic's Cyber Verification Program: developers using sponsored personal accounts are excluded from access, restricting top AI models to a privileged few. He raises a pointed concern about how critical open-source infrastructure like Node.js can remain secure if AI-assisted security tooling becomes inaccessible to its maintainers.</description>
+      <guid isPermaLink="true">https://bsky.app/profile/nodeland.dev/post/3mycyutm2vf2e</guid>
+    </item>
     <item>
       <title>My obituary for programming</title>
       <link>https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/</link>
