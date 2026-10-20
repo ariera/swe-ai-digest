@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Oct 2026 16:00:39 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 18:00:45 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>What’s the ROI of software engineers’ spending on AI?</title>
+      <link>https://newsletter.pragmaticengineer.com/p/whats-the-roi-of-software-engineers</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 20 Oct 2026 17:34:18 +0000</pubDate>
+      <description>Orosz surveys AI tool spending and PR throughput across 27 companies, finding per-developer monthly costs ranging from under $150 to over $3,000, with no correlation to company size. Aggregate data from CodeRabbit shows a ~2x increase in weekly PRs over the past year, though some engineers report quality concerns and flat velocity when code standards are maintained. The article highlights that few companies can yet quantify a clear ROI from AI spending.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/whats-the-roi-of-software-engineers</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://bsky.app/profile/nodeland.dev/post/3mycyutm2vf2e</link>
