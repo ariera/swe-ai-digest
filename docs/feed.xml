@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Oct 2026 01:00:49 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 01:00:40 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>My obituary for programming</title>
+      <link>https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 19 Oct 2026 23:58:25 +0000</pubDate>
+      <description>Simon Willison highlights Jeremy Scheff's argument that coding agents have fundamentally altered what made programming rewarding: the autonomy and intellectual satisfaction of solving hard logic puzzles. Willison draws a clear divide — engineers who find meaning in *building systems* will thrive with LLMs, while those who valued *solving the problems themselves* face a genuine professional loss. This is a concise but pointed take on AI's impact on programmer identity and career satisfaction.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/</guid>
+    </item>
     <item>
       <title>llm-tools-datasette 0.1.1</title>
       <link>https://simonwillison.net/2026/Oct/18/llm-tools-datasette/</link>
