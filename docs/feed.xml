@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2026 16:00:44 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 18:00:50 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The revised rules of engineering management with Will Larson</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-revised-rules-of-engineering</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 21 Oct 2026 16:58:21 +0000</pubDate>
+      <description>Will Larson argues that AI is fundamentally reshaping engineering management — driving larger team spans, pushing managers back toward hands-on technical work, and making "hire more engineers" an obsolete default. He warns that middle managers who don't reskill face obsolescence within three years, while noting that some engineers are abandoning the field because AI has eroded the deep-focus satisfaction of coding.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-revised-rules-of-engineering</guid>
+    </item>
     <item>
       <title>Fragments: October 21</title>
       <link>https://martinfowler.com/fragments/2026-10-21.html</link>
