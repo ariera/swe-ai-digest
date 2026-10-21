@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2026 19:00:36 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 20:00:49 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title />
+      <link>https://avdi.codes/190459-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=190459-2</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Wed, 21 Oct 2026 19:38:53 +0000</pubDate>
+      <description>Avdi Grimm briefly shares that he cannot afford to take an anti-AI stance as a technology leader, citing personal financial pressures such as healthcare costs and lack of a social safety net. He links approvingly to David Bryant Copeland's post on processing the AI moment. The excerpt highlights how economic realities are shaping how senior engineers publicly position themselves on AI adoption.</description>
+      <guid isPermaLink="true">https://avdi.codes/190459-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=190459-2</guid>
+    </item>
     <item>
       <title>Today's PHP Security Release, and How We're Strengthening PHP Security</title>
       <link>https://simonwillison.net/2026/Oct/21/php-security-release/</link>
