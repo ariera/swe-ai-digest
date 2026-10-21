@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2026 18:00:50 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 19:00:36 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Today's PHP Security Release, and How We're Strengthening PHP Security</title>
+      <link>https://simonwillison.net/2026/Oct/21/php-security-release/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 21 Oct 2026 18:41:53 +0000</pubDate>
+      <description>This post covers a critical PHP remote code execution vulnerability, noting that Wiz Research discovered it using AI tools — specifically Gemini 4 Argon and GPT-5.6 Sol — via their Wiz Atlas platform. It marks a concrete example of AI being used in offensive security research to find real-world vulnerabilities, a significant development for engineers thinking about AI's role in the security landscape.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/21/php-security-release/</guid>
+    </item>
     <item>
       <title>The revised rules of engineering management with Will Larson</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-revised-rules-of-engineering</link>
