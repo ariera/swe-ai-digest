@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2026 11:00:33 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 16:00:44 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -72,6 +72,14 @@
       <pubDate>Fri, 16 Oct 2026 22:06:37 +0000</pubDate>
       <description>The Claude Code team describes a shift in code review philosophy: rather than treating human review as a mandatory gate, they frame it as a continuous process where Claude reviews and fixes most changes before a human ever sees them. This reframes the purpose of review from "did a human read this?" to "what's the right check — automated or human — for each risk?" The result is that human attention is preserved for higher-level judgment, not routine mistakes.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Oct/16/code-review/</guid>
+    </item>
+    <item>
+      <title>sparqlite: SPARQL 1.1 inside SQLite, written in Rust</title>
+      <link>https://simonwillison.net/2026/Oct/16/sqlite-sparql-rust/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 16 Oct 2026 01:58:00 +0000</pubDate>
+      <description>Simon Willison experiments with Claude Code's "Ultracode" mode — which dynamically orchestrates networks of subagents — to generate a full SPARQL 1.1 SQLite extension in Rust after 12+ hours of autonomous execution. He raises a pointed question about the value of AI-generated code that is too complex to review or fully understand, framing this as "next-level vibe coding." The piece is a candid first-hand account of agentic AI capabilities and their practical limits around code ownership and comprehension.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/16/sqlite-sparql-rust/</guid>
     </item>
     <item>
       <title>Chirp Pong</title>
