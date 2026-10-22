@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2026 20:00:49 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 15:00:44 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: Anthropic builds its own source control system</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-anthropic-builds-its-own-source-control-system/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 22 Oct 2026 14:52:25 +0000</pubDate>
+      <description>Anthropic's AI-driven coding output—with engineers running 10–15 parallel Claude agents each—caused daily code merges to explode 12x in four months, forcing the company to abandon Git and build a custom source control system (Scion) and code review platform (Antique). Orosz argues this illustrates a broader trend: AI agents are making legacy developer infrastructure the new bottleneck, not coding itself. The piece also raises an IP controversy, with the creator of Meta's open-source Mononoke server accusing Anthropic of deliberately copying its data model.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-anthropic-builds-its-own-source-control-system/</guid>
+    </item>
+    <item>
+      <title>The Pulse: Time to rethink software security because of AI?</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-do-we-need-to-rethink-software</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 22 Oct 2026 14:08:21 +0000</pubDate>
+      <description>Gergely Orosz examines how a wave of high-profile security breaches is forcing a rethink of software security practices, with AI being leveraged by attackers to gain an advantage that defenders must now counter. The piece also covers Anthropic's alleged plagiarism of an open-source version control design and bold predictions from an Amp cofounder about AI's impact on software development, including the claim that open source may no longer make sense.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-do-we-need-to-rethink-software</guid>
+    </item>
     <item>
       <title />
       <link>https://avdi.codes/190459-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=190459-2</link>
