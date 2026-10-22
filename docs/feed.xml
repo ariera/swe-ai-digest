@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Oct 2026 15:00:44 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 19:00:43 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Donating Agent Skills to the Agentic AI Foundation</title>
+      <link>https://simonwillison.net/2026/Oct/22/donating-agent-skills/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 22 Oct 2026 18:09:56 +0000</pubDate>
+      <description>Anthropic has donated its Agent Skills standard to the Agentic AI Foundation (AAIF) under the Linux Foundation — the same body that now governs the Model Context Protocol (MCP) — ensuring the spec remains open, community-driven, and vendor-neutral. Willison notes he predicted this move in December and highlights his use of Claude via a datasette-mcp plugin to retrieve that prior post, illustrating real-world agentic tool use. For engineers, this signals a maturing governance structure for key agentic AI interoperability standards.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/22/donating-agent-skills/</guid>
+    </item>
     <item>
       <title>The Pulse: Anthropic builds its own source control system</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-anthropic-builds-its-own-source-control-system/</link>
