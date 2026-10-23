@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Oct 2026 20:00:51 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 23:00:41 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quick Study</title>
+      <link>https://simonwillison.net/2026/Oct/23/quick-study-painter/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 23 Oct 2026 21:35:13 +0000</pubDate>
+      <description>Simon Willison demonstrates using Claude Opus 5.5 to generate a canvas-based photo-painting artifact via a single prompt, leveraging Sobel edge detection with no external libraries. The experiment showcases AI-assisted code generation for creative visual tooling, illustrating how capable modern LLMs have become at producing self-contained, functional browser applications from natural-language descriptions.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/23/quick-study-painter/</guid>
+    </item>
     <item>
       <title>Introducing Kimi K3.1 Pro</title>
       <link>https://simonwillison.net/2026/Oct/23/kimi-k31-pro/</link>
