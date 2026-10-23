@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Oct 2026 19:00:43 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 20:00:51 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Introducing Kimi K3.1 Pro</title>
+      <link>https://simonwillison.net/2026/Oct/23/kimi-k31-pro/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 23 Oct 2026 19:40:54 +0000</pubDate>
+      <description>Simon Willison evaluates Kimi K3.1 Pro, a new frontier-tier LLM from Moonshot AI, comparing its pricing ($2/M input, $10/M output tokens) and benchmark performance against Claude Opus 5.5 and GPT-6 Astra. Notably, it is the first soon-to-be open-weight model to score at this level against closed frontier models, making it a significant development for engineers who rely on open-weight alternatives.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/23/kimi-k31-pro/</guid>
+    </item>
     <item>
       <title>Donating Agent Skills to the Agentic AI Foundation</title>
       <link>https://simonwillison.net/2026/Oct/22/donating-agent-skills/</link>
