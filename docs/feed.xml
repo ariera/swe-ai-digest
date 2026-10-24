@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Oct 2026 23:00:41 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 15:00:43 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>battledrones v14: Compass Rose, a four player map</title>
+      <link>https://simonwillison.net/2026/Oct/24/battledrones/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 24 Oct 2026 03:59:57 +0000</pubDate>
+      <description>Simon Willison describes using Claude Opus 4.5 to extend his Battledrones game with a four-player map ("Compass Rose"), sharing the exact prompt used to drive the feature. The model autonomously generated the new map and modified WebSocket multiplayer networking code to support up to four players. This is a concrete example of an AI coding agent handling non-trivial game and networking logic from a high-level natural-language specification.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/24/battledrones/</guid>
+    </item>
     <item>
       <title>Quick Study</title>
       <link>https://simonwillison.net/2026/Oct/23/quick-study-painter/</link>
