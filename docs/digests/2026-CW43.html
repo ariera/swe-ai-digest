@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW43</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW43</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-10-19 &ndash; 2026-10-25
+    &middot; 14 articles
+  </p>
+  <p>This digest period is dominated by a cluster of interconnected themes: the rapid maturation of AI coding agents, the organisational and human costs of that maturation, and the infrastructure strain it is already creating.
+
+On the capability front, multiple authors document AI agents handling increasingly non-trivial tasks — from autonomous gameplay balancing and WebSocket networking to AI-discovered security vulnerabilities — while the arrival of Kimi K3.1 Pro signals meaningful progress in open-weight frontier models. Agentic governance is also advancing, with Anthropic donating its Agent Skills standard to the Linux Foundation.
+
+The productivity story is more ambiguous. Orosz&#39;s survey finds a rough 2x increase in PR throughput, but ROI remains hard to quantify and code quality concerns persist. Anthropic&#39;s own 12x surge in daily merges forced it to abandon Git entirely — illustrating that developer tooling, not coding itself, is becoming the bottleneck.
+
+Human and organisational costs surface throughout. Willison, Larson, and Grimm all describe engineers losing the deep-focus satisfaction that made coding meaningful, with economic pressure shaping how practitioners publicly engage with AI adoption. Meanwhile, access inequities in AI security tooling and AI-accelerated attacks are pushing a broader rethink of software security practices.</p>
+  <hr>
+
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/">My obituary for programming</a>
+    <span class="meta">(2026-10-19)</span>
+  </h3>
+  
+  <p>Simon Willison highlights Jeremy Scheff&#39;s argument that coding agents have fundamentally altered what made programming rewarding: the autonomy and intellectual satisfaction of solving hard logic puzzles. Willison draws a clear divide — engineers who find meaning in *building systems* will thrive with LLMs, while those who valued *solving the problems themselves* face a genuine professional loss. This is a concise but pointed take on AI&#39;s impact on programmer identity and career satisfaction.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/20/battledrones/">Battle Drones - a vibe coded RTS with audio-based multiplayer</a>
+    <span class="meta">(2026-10-20)</span>
+  </h3>
+  
+  <p>Simon Willison details building a full-featured RTS game almost entirely through &#34;vibe coding&#34; — issuing high-level prompts to Claude (including Ultracode multi-agent mode) with minimal direct code review, across 12 major iterations and 321 agent commits. The project showcases practical limits and surprising capabilities of coding agents: Claude autonomously ran 1,000+ simulated playtests to rebalance gameplay and even generated 3D models in TypeScript. It serves as a concrete case study in how far LLM-driven iterative development can go on a non-trivial creative software project.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/21/php-security-release/">Today&#39;s PHP Security Release, and How We&#39;re Strengthening PHP Security</a>
+    <span class="meta">(2026-10-21)</span>
+  </h3>
+  
+  <p>This post covers a critical PHP remote code execution vulnerability, noting that Wiz Research discovered it using AI tools — specifically Gemini 4 Argon and GPT-5.6 Sol — via their Wiz Atlas platform. It marks a concrete example of AI being used in offensive security research to find real-world vulnerabilities, a significant development for engineers thinking about AI&#39;s role in the security landscape.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/22/donating-agent-skills/">Donating Agent Skills to the Agentic AI Foundation</a>
+    <span class="meta">(2026-10-22)</span>
+  </h3>
+  
+  <p>Anthropic has donated its Agent Skills standard to the Agentic AI Foundation (AAIF) under the Linux Foundation — the same body that now governs the Model Context Protocol (MCP) — ensuring the spec remains open, community-driven, and vendor-neutral. Willison notes he predicted this move in December and highlights his use of Claude via a datasette-mcp plugin to retrieve that prior post, illustrating real-world agentic tool use. For engineers, this signals a maturing governance structure for key agentic AI interoperability standards.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/23/kimi-k31-pro/">Introducing Kimi K3.1 Pro</a>
+    <span class="meta">(2026-10-23)</span>
+  </h3>
+  
+  <p>Simon Willison evaluates Kimi K3.1 Pro, a new frontier-tier LLM from Moonshot AI, comparing its pricing ($2/M input, $10/M output tokens) and benchmark performance against Claude Opus 5.5 and GPT-6 Astra. Notably, it is the first soon-to-be open-weight model to score at this level against closed frontier models, making it a significant development for engineers who rely on open-weight alternatives.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/23/quick-study-painter/">Quick Study</a>
+    <span class="meta">(2026-10-23)</span>
+  </h3>
+  
+  <p>Simon Willison demonstrates using Claude Opus 5.5 to generate a canvas-based photo-painting artifact via a single prompt, leveraging Sobel edge detection with no external libraries. The experiment showcases AI-assisted code generation for creative visual tooling, illustrating how capable modern LLMs have become at producing self-contained, functional browser applications from natural-language descriptions.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Oct/24/battledrones/">battledrones v14: Compass Rose, a four player map</a>
+    <span class="meta">(2026-10-24)</span>
+  </h3>
+  
+  <p>Simon Willison describes using Claude Opus 4.5 to extend his Battledrones game with a four-player map (&#34;Compass Rose&#34;), sharing the exact prompt used to drive the feature. The model autonomously generated the new map and modified WebSocket multiplayer networking code to support up to four players. This is a concrete example of an AI coding agent handling non-trivial game and networking logic from a high-level natural-language specification.</p>
+  
+  
+  <h2>Matteo Collina</h2>
+  
+  <p class="meta">Node.js TSC member, co-creator of Fastify, creator of Pino, and CTO of Platformatic — writing regularly about the Node.js ecosystem, performance, and AI&#39;s role in software development.</p>
+  
+  
+  <h3>
+    <a href="https://bsky.app/profile/nodeland.dev/post/3mycyutm2vf2e">(no title)</a>
+    <span class="meta">(2026-10-20)</span>
+  </h3>
+  
+  <p>Matteo Collina, a Node.js core contributor, highlights a gatekeeping problem with Anthropic&#39;s Cyber Verification Program: developers using sponsored personal accounts are excluded from access, restricting top AI models to a privileged few. He raises a pointed concern about how critical open-source infrastructure like Node.js can remain secure if AI-assisted security tooling becomes inaccessible to its maintainers.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/whats-the-roi-of-software-engineers">What’s the ROI of software engineers’ spending on AI?</a>
+    <span class="meta">(2026-10-20)</span>
+  </h3>
+  
+  <p>Orosz surveys AI tool spending and PR throughput across 27 companies, finding per-developer monthly costs ranging from under $150 to over $3,000, with no correlation to company size. Aggregate data from CodeRabbit shows a ~2x increase in weekly PRs over the past year, though some engineers report quality concerns and flat velocity when code standards are maintained. The article highlights that few companies can yet quantify a clear ROI from AI spending.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-revised-rules-of-engineering">The revised rules of engineering management with Will Larson</a>
+    <span class="meta">(2026-10-21)</span>
+  </h3>
+  
+  <p>Will Larson argues that AI is fundamentally reshaping engineering management — driving larger team spans, pushing managers back toward hands-on technical work, and making &#34;hire more engineers&#34; an obsolete default. He warns that middle managers who don&#39;t reskill face obsolescence within three years, while noting that some engineers are abandoning the field because AI has eroded the deep-focus satisfaction of coding.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-do-we-need-to-rethink-software">The Pulse: Time to rethink software security because of AI?</a>
+    <span class="meta">(2026-10-22)</span>
+  </h3>
+  
+  <p>Gergely Orosz examines how a wave of high-profile security breaches is forcing a rethink of software security practices, with AI being leveraged by attackers to gain an advantage that defenders must now counter. The piece also covers Anthropic&#39;s alleged plagiarism of an open-source version control design and bold predictions from an Amp cofounder about AI&#39;s impact on software development, including the claim that open source may no longer make sense.</p>
+  
+  <h3>
+    <a href="https://blog.pragmaticengineer.com/the-pulse-anthropic-builds-its-own-source-control-system/">The Pulse: Anthropic builds its own source control system</a>
+    <span class="meta">(2026-10-22)</span>
+  </h3>
+  
+  <p>Anthropic&#39;s AI-driven coding output—with engineers running 10–15 parallel Claude agents each—caused daily code merges to explode 12x in four months, forcing the company to abandon Git and build a custom source control system (Scion) and code review platform (Antique). Orosz argues this illustrates a broader trend: AI agents are making legacy developer infrastructure the new bottleneck, not coding itself. The piece also raises an IP controversy, with the creator of Meta&#39;s open-source Mononoke server accusing Anthropic of deliberately copying its data model.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/fragments/2026-10-21.html">Fragments: October 21</a>
+    <span class="meta">(2026-10-21)</span>
+  </h3>
+  
+  <p>Fowler highlights Cindy Sridharan&#39;s detailed framework for AI-assisted debugging, which argues that agents should gather empirical evidence before reading code — inverting the typical human approach. Key techniques include establishing a &#34;control,&#34; ranking hypotheses against factual signals, and validating against all constraints. Fowler also reflects on the social cost of &#34;LLM Voice&#34; in writing, noting that even partial AI use risks readers dismissing content as entirely AI-generated.</p>
+  
+  
+  <h2>Avdi Grimm</h2>
+  
+  <p class="meta">Ruby developer, author of Confident Ruby and Exceptional Ruby, and creator of the RubyTapas screencast series on software craftsmanship.</p>
+  
+  
+  <h3>
+    <a href="https://avdi.codes/190459-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=190459-2"></a>
+    <span class="meta">(2026-10-21)</span>
+  </h3>
+  
+  <p>Avdi Grimm briefly shares that he cannot afford to take an anti-AI stance as a technology leader, citing personal financial pressures such as healthcare costs and lack of a social safety net. He links approvingly to David Bryant Copeland&#39;s post on processing the AI moment. The excerpt highlights how economic realities are shaping how senior engineers publicly position themselves on AI adoption.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>
