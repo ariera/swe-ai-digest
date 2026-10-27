@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Oct 2026 20:00:47 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 01:00:25 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>GPT-6.1 Terra</title>
+      <link>https://simonwillison.net/2026/Oct/26/gpt-61-terra/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 26 Oct 2026 23:53:07 +0000</pubDate>
+      <description>Simon Willison evaluates OpenAI's newly released GPT-6.1 Terra, a mid-tier model emphasizing visual reasoning and computer use, priced at $1/million input and $5/million output tokens — roughly half the cost of its predecessor GPT-5.6 Terra. He positions it as a practical midrange option for API developers who need stronger vision and computer-use capabilities than Luna but at lower cost than Sol. Its speed advantage makes it particularly suited for automated, repetitive computer-use tasks.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/26/gpt-61-terra/</guid>
+    </item>
     <item>
       <title>Quoting Jason Koebler</title>
       <link>https://simonwillison.net/2026/Oct/26/jason-koebler/</link>
@@ -16,6 +24,14 @@
       <pubDate>Mon, 26 Oct 2026 19:00:25 +0000</pubDate>
       <description>Jason Koebler, quoted by Simon Willison, observes that ChatGPT is misdirecting users with ordinary tech support questions by incorrectly framing their issues as newsworthy and referring them to 404 Media. The phenomenon highlights a real-world failure mode of LLMs — confidently producing plausible but harmful misguidance — driven by the collapse of human customer support at major tech platforms.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Oct/26/jason-koebler/</guid>
+    </item>
+    <item>
+      <title>webframe: evaluated as a scraper and a sandbox</title>
+      <link>https://simonwillison.net/2026/Oct/26/webframe-evaluation/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 26 Oct 2026 16:15:00 +0000</pubDate>
+      <description>Simon Willison describes delegating a technical evaluation of the `webframe` tool to Claude Opus 5.5, prompting it to explore the GitHub repo, run experiments, and produce a research report on its viability as a scraper and sandbox. This illustrates a concrete workflow pattern where an AI agent handles exploratory prototyping and tool assessment, reducing the engineer's hands-on investigation time.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/26/webframe-evaluation/</guid>
     </item>
     <item>
       <title>battledrones v14: Compass Rose, a four player map</title>
