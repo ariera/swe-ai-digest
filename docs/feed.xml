@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2026 14:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 17:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>GitHub Octoverse 2026</title>
+      <link>https://simonwillison.net/2026/Oct/28/github-octoverse-2026/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 28 Oct 2026 16:45:23 +0000</pubDate>
+      <description>Simon Willison highlights the 2026 GitHub Octoverse report's striking metrics — merged PRs tripled to 220M/month and commits more than tripled to 7.38B/month — attributing the surge to "agentic engineering." The data signals that AI coding agents are now driving a measurable, large-scale shift in software development output across GitHub's platform.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/28/github-octoverse-2026/</guid>
+    </item>
     <item>
       <title>The October inflection point for vibe game development</title>
       <link>https://simonwillison.net/2026/Oct/28/vibe-game-development/</link>
