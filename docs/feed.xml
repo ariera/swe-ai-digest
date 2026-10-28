@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2026 11:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 13:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Fragments: October 28</title>
+      <link>https://martinfowler.com/fragments/2026-10-28.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Wed, 28 Oct 2026 12:55:00 +0000</pubDate>
+      <description>Fowler synthesizes multiple AI-in-software-engineering perspectives from Foocamp and linked authors: the uneven perception of LLM capability across the public and professionals, the emotional (not just technical) challenge of agentic coding adoption, enterprise underutilization of AI due to data readiness and risk, and a framework framing AI-assisted development as a shift from direct to supervisory control. He also covers a token-cost sourcing strategy projecting significant LLM spend reductions and reflections on whether current AI investment resembles 1997 or 1999 of the dotcom era. Collectively, the post maps the practical, organizational, and philosophical terrain software engineers must navigate as agentic workflows become mainstream.</description>
+      <guid isPermaLink="true">https://martinfowler.com/fragments/2026-10-28.html</guid>
+    </item>
     <item>
       <title>Quoting Terk Terkowitz</title>
       <link>https://simonwillison.net/2026/Oct/28/terk-terkowitz/</link>
