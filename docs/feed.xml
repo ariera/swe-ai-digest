@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2026 13:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 14:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The October inflection point for vibe game development</title>
+      <link>https://simonwillison.net/2026/Oct/28/vibe-game-development/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 28 Oct 2026 13:55:15 +0000</pubDate>
+      <description>Simon Willison argues that October 2026 marks an inflection point where AI models — particularly Claude Opus 5.5 — can now produce genuinely fun, complete games through pure natural-language prompting, with no code review. He demonstrates this through four browser-based games built entirely via "vibe coding," highlighting that Opus 5.5's improved 3D modeling, music generation, and game design sense elevate it above GPT-6. For software engineers, this signals that AI-assisted development has expanded beyond utility software into creative, design-intensive domains once considered beyond model capability.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/28/vibe-game-development/</guid>
+    </item>
     <item>
       <title>Fragments: October 28</title>
       <link>https://martinfowler.com/fragments/2026-10-28.html</link>
