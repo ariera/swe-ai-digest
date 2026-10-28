@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2026 17:00:28 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 11:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Terk Terkowitz</title>
+      <link>https://simonwillison.net/2026/Oct/28/terk-terkowitz/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 28 Oct 2026 10:09:07 +0000</pubDate>
+      <description>Simon Willison quotes Amazon engineering leadership urging engineers to treat cases where AI tooling doesn't help as a legitimate finding worth documenting and sharing, rather than a personal shortcoming. The framing positions critical evaluation of AI tools as a core engineering judgment, not an opt-out — directly relevant to how organizations are setting expectations around AI adoption.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/28/terk-terkowitz/</guid>
+    </item>
     <item>
       <title>AI SRE: what is it, how could it change on-call – and does it work?</title>
       <link>https://newsletter.pragmaticengineer.com/p/ai-sre</link>
