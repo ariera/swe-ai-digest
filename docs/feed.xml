@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Oct 2026 20:00:32 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 23:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>API credits benefit for eligible ChatGPT subscriptions</title>
+      <link>https://simonwillison.net/2026/Oct/29/api-credits/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 29 Oct 2026 22:48:29 +0000</pubDate>
+      <description>OpenAI has followed Anthropic in offering monthly API credits equal in value to a user's ChatGPT subscription tier ($100–$500/month), mirroring a benefit Anthropic recently launched for its Max and Team plans. Simon Willison notes this directly lowers the cost barrier for developers experimenting with or shipping AI-powered demos, as API usage is now bundled with existing subscriptions.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/29/api-credits/</guid>
+    </item>
     <item>
       <title />
       <link>https://avdi.codes/191403-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=191403-2</link>
