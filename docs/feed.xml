@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2026 17:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 00:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Ted Sanders</title>
+      <link>https://simonwillison.net/2026/Oct/28/ted-sanders/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 28 Oct 2026 23:23:21 +0000</pubDate>
+      <description>Simon Willison quotes OpenAI's Ted Sanders explaining two key LLM concepts: model performance is highly multidimensional but largely predicted by model size, and OpenAI's version numbering encodes release order, training similarity, and magnitude of improvement. This offers software engineers a practical framework for interpreting model tiers and version numbers when selecting models for cost, capability, or reliability tradeoffs.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/28/ted-sanders/</guid>
+    </item>
     <item>
       <title>GitHub Octoverse 2026</title>
       <link>https://simonwillison.net/2026/Oct/28/github-octoverse-2026/</link>
