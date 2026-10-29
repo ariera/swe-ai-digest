@@ -6,9 +6,33 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Oct 2026 00:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 14:00:32 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Running Self-Hosted AI Agents</title>
+      <link>https://oxide.computer/blog/self-hosted-ai-agents</link>
+      <author>Bryan Cantrill</author>
+      <pubDate>Thu, 29 Oct 2026 14:00:00 +0000</pubDate>
+      <description>Bryan Cantrill details how to run self-hosted AI agents (Claude Code and Amp) on Oxide's Cloud Computer using ephemeral virtual machines rather than containers, arguing VMs provide stronger isolation critical for agent security. He walks through orchestration patterns, lifecycle management (provisioning, cleanup, cold-start latency), and signals that microVM primitives may be the next frontier for balancing isolation with container-like startup speed. This is a practical infrastructure deep-dive for engineers designing or deploying agentic workloads on self-hosted hardware.</description>
+      <guid isPermaLink="true">https://oxide.computer/blog/self-hosted-ai-agents</guid>
+    </item>
+    <item>
+      <title>Why are good developers so wary of agentic development?</title>
+      <link>https://martinfowler.com/rachels-ramblings/good-devs-wary.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Thu, 29 Oct 2026 13:50:00 +0000</pubDate>
+      <description>The author argues that experienced developers' hesitancy toward fully agentic development stems not from fear of change or job loss, but from hard-won knowledge that "built" is not the same as "working in production." A Thoughtworks experiment building an airline app entirely with agents found teams spending ~⅔ of their time on design and architecture, with agents boosting output but causing persistent CI instability — mirroring DORA 2025 findings linking AI adoption to higher throughput but lower delivery stability. The author calls on leaders to distinguish valid caution from resistance, and urges experienced developers to bring that judgment into agentic experimentation rather than standing apart from it.</description>
+      <guid isPermaLink="true">https://martinfowler.com/rachels-ramblings/good-devs-wary.html</guid>
+    </item>
+    <item>
+      <title>Software engineering at Google &amp; CS education with Titus Winters</title>
+      <link>https://newsletter.pragmaticengineer.com/p/software-engineering-at-google-and</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 29 Oct 2026 13:37:13 +0000</pubDate>
+      <description>Titus Winters argues that AI's real value lies not in speeding up existing work but in enabling previously unthinkable ambitious projects — while noting that increased code output has correlated with ~30% more outages and stagnant feature delivery. He also observes that AI is widening the gap in CS education, benefiting top students while hollowing out middle-tier understanding, and advocates grading students on prompts and tests rather than code output.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/software-engineering-at-google-and</guid>
+    </item>
     <item>
       <title>Quoting Ted Sanders</title>
       <link>https://simonwillison.net/2026/Oct/28/ted-sanders/</link>
