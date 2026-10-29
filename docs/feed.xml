@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Oct 2026 17:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 18:00:30 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title />
+      <link>https://avdi.codes/191403-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=191403-2</link>
+      <author>Avdi Grimm</author>
+      <pubDate>Thu, 29 Oct 2026 17:41:11 +0000</pubDate>
+      <description>Avdi Grimm links to David Bryant Copeland's piece arguing that AI code generators cannot be trusted, adding that while humans can be trained to improve, AI cannot be made to genuinely care about quality. This matters to engineers because it frames AI tools as fundamentally misaligned with craftsmanship values, not merely limited in capability.</description>
+      <guid isPermaLink="true">https://avdi.codes/191403-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=191403-2</guid>
+    </item>
+    <item>
+      <title>Building a multiplayer game world with autonomous Fable-class models</title>
+      <link>https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 29 Oct 2026 17:00:26 +0000</pubDate>
+      <description>Jacob Sansbury's Spawn platform uses a swarm of autonomous Fable-powered agents to develop a multiplayer game, shipping code to production hourly and spending over $3M/month on tokens — roughly 30x their payroll. Agents autonomously read error logs, file bugs, and deploy fixes directly to users within an hour, representing an extreme form of continuous deployment. Simon Willison highlights this as a compelling real-world test of agentic engineering limits, noting both its surprising effectiveness and its model-sensitivity (GPT-6 Astra disabled features wholesale during a security review).</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://bsky.app/profile/nodeland.dev/post/3myzqgf3pks2a</link>
