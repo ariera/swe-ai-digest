@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Oct 2026 18:00:30 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 20:00:32 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -80,6 +80,14 @@
       <pubDate>Thu, 29 Oct 2026 13:37:13 +0000</pubDate>
       <description>Titus Winters argues that AI's real value lies not in speeding up existing work but in enabling previously unthinkable ambitious projects — while noting that increased code output has correlated with ~30% more outages and stagnant feature delivery. He also observes that AI is widening the gap in CS education, benefiting top students while hollowing out middle-tier understanding, and advocates grading students on prompts and tests rather than code output.</description>
       <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/software-engineering-at-google-and</guid>
+    </item>
+    <item>
+      <title>Custom Voices With Qwen3-TTS</title>
+      <link>https://lucumr.pocoo.org/2026/10/29/qwen3-custom-voices/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher explores practical techniques for custom voice generation using Qwen3-TTS, including voice cloning, embedding arithmetic for blending voices, and a method to apply emotional instructions to cloned voices by cross-loading speaker embeddings into the CustomVoice model. He also demonstrates using speaker embeddings for diarization. The post is a hands-on practitioner guide relevant to engineers integrating AI-generated audio into applications.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/10/29/qwen3-custom-voices/</guid>
     </item>
     <item>
       <title>Quoting Ted Sanders</title>
