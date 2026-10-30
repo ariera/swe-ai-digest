@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Oct 2026 17:00:26 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 23:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>dbreunig/nesformer</title>
+      <link>https://simonwillison.net/2026/Oct/30/nesformer/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 30 Oct 2026 21:59:22 +0000</pubDate>
+      <description>Drew Breunig embedded a functional NES 6502 CPU emulator directly into the weights of Qwen3.5-4B, enabling playback of ROMs like Super Mario Bros inside a language model. The project was built using Claude Opus 5.5 as a coding agent, which autonomously discovered and leveraged 15-year-old CPU conformance tests. This demonstrates an emerging pattern of using LLMs both as development agents and as unconventional compute substrates.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/30/nesformer/</guid>
+    </item>
     <item>
       <title>The Pulse: Time to rethink software security because of AI?</title>
       <link>https://blog.pragmaticengineer.com/the-pulse-time-to-rethink-software-security-because-of-ai/</link>
