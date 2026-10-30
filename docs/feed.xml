@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Oct 2026 16:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 17:00:26 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: Time to rethink software security because of AI?</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-time-to-rethink-software-security-because-of-ai/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Fri, 30 Oct 2026 16:49:15 +0000</pubDate>
+      <description>Orosz covers a wave of security incidents and highlights a notable AI angle: OpenAI's GPT-5.6 Sol, used in a "Patch the Planet" initiative, helped identify critical PHP vulnerabilities before attackers did — but the coordinated disclosure process leaked, enabling exploit attempts days before the patch was public. The piece also notes that attackers now deploy AI agents to automate exploit attempts at scale, raising the stakes for unpatched systems.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-time-to-rethink-software-security-because-of-ai/</guid>
+    </item>
+    <item>
+      <title>The Pulse: Anthropic kills the coding interview</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-anthropic-kills-the-coding</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Fri, 30 Oct 2026 16:37:51 +0000</pubDate>
+      <description>Anthropic has eliminated DSA coding interviews for engineering roles after finding they yield no useful signal, a shift that AI-native startups may follow. The article also covers Amazon formally tying AI usage to SDE/SDM performance expectations after correlating AI adoption with productivity, and incident.io reducing per-developer AI spend from $4,500 to $1,600/month. Together, these trends illustrate how AI is actively reshaping hiring, performance evaluation, and tooling economics in software engineering.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-anthropic-kills-the-coding</guid>
+    </item>
     <item>
       <title>How Do We Use LLMs at Oxide? FAQ Friday #66</title>
       <link>https://www.youtube.com/shorts/dc580R-l3X4</link>
