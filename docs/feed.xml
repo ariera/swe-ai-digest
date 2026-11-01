@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2026 00:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 01:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -16,6 +16,14 @@
       <pubDate>Sat, 31 Oct 2026 23:15:22 +0000</pubDate>
       <description>Parameter Labs discovered a multi-step exploit in ChatGPT's HTML preview (artifacts) feature, chaining a MathLive postMessage vulnerability, an unsandboxed iframe injection, and a YouTube oEmbed CSP bypass to achieve JavaScript execution on ChatGPT's origin — enabling private data exfiltration via a shareable URL. OpenAI patched the issue and paid a $5,000 bounty, which Willison considers undervalued for a vulnerability of this severity. Engineers building or securing AI-generated sandboxed content should treat this as a cautionary case study in iframe sandbox escapes and CSP misconfiguration.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/</guid>
+    </item>
+    <item>
+      <title>datasette-llm 0.1a9</title>
+      <link>https://simonwillison.net/2026/Oct/31/datasette-llm/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 31 Oct 2026 22:10:01 +0000</pubDate>
+      <description>Simon Willison releases datasette-llm 0.1a9, a plugin update that allows Datasette Agent to automatically inherit the default model configured in the LLM tool, removing the need for explicit model configuration at startup. This quality-of-life improvement lowers the friction for developers integrating LLM-powered database agents into their workflows via Datasette.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Oct/31/datasette-llm/</guid>
     </item>
     <item>
       <title>dbreunig/nesformer</title>
