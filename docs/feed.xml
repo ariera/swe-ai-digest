@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2026 17:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 14:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The U.S. Census Bureau and “Super Intelligence”</title>
+      <link>https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 02 Nov 2026 13:31:26 +0000</pubDate>
+      <description>Simon Willison examines updated U.S. Census Bureau data on corporate AI adoption, finding that large companies reporting AI use jumped from ~12% to ~40% between September 2025 and October 2026 — partly due to a broadened survey question. He also flags that Executive Order 14434 has forced the Bureau to rebrand "AI" as "Super Intelligence (SI)" in its surveys, raising concerns about data continuity and comparability for anyone tracking adoption trends.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/</guid>
+    </item>
     <item>
       <title>Quoting Kyle Kingsbury</title>
       <link>https://simonwillison.net/2026/Nov/1/kyle-kingsbury/</link>
