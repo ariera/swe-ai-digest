@@ -1,5 +1,13 @@
 [
   {
+    "cw": "2026-CW44",
+    "period_start": "2026-10-26",
+    "period_end": "2026-11-01",
+    "articles_count": 27,
+    "summary_short": "This digest period is dominated by a single overarching theme: AI agents are now operating at production scale, with measurable consequences \u2014 both positive and negative \u2014 across software engineering \u2026",
+    "page": "digests/2026-CW44.html"
+  },
+  {
     "cw": "2026-CW43",
     "period_start": "2026-10-19",
     "period_end": "2026-10-25",
