@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Nov 2026 01:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 06:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>October sponsors-only newsletter</title>
+      <link>https://simonwillison.net/2026/Nov/3/october-newsletter/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 03 Nov 2026 05:28:59 +0000</pubDate>
+      <description>Simon Willison's October sponsors-only newsletter covers several AI-relevant topics, including an "inflection point" in vibe-coding game development, a "vulnerability apocalypse" tied to LLM releases, and API credits for high-tier subscribers. The newsletter signals ongoing practitioner-level commentary on LLM tooling and AI-driven development trends that software engineers following the space will want to track.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/3/october-newsletter/</guid>
+    </item>
     <item>
       <title>llm 0.37</title>
       <link>https://simonwillison.net/2026/Nov/2/llm/</link>
