@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Nov 2026 06:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 17:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Qwen 3.8 27B on my laptop can interpret model weights, too</title>
+      <link>https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 03 Nov 2026 16:29:48 +0000</pubDate>
+      <description>Simon Willison hands-on tests a recent paper's claim that frontier LLMs can interpret raw neural network weights without tools, replicating the experiment locally using Qwen 3.8 27B via LM Studio. The model successfully identified three of four classic games from raw weight floats alone, though at significant time cost (up to 65 minutes). Willison urges caution against overblown interpretations, noting the paper conflates tool-assisted and tool-free weight manipulation.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/</guid>
+    </item>
     <item>
       <title>October sponsors-only newsletter</title>
       <link>https://simonwillison.net/2026/Nov/3/october-newsletter/</link>
