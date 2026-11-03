@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Nov 2026 14:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 01:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>llm 0.37</title>
+      <link>https://simonwillison.net/2026/Nov/2/llm/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 02 Nov 2026 23:49:30 +0000</pubDate>
+      <description>Simon Willison releases llm 0.37 of his LLM CLI tool, adding new OpenAI models, easier endpoint configuration, and improved embeddings support for multimodal content. He also addresses the growing phenomenon of AI-assisted PRs, arguing that using AI for triage (Opus 5.5/GPT-6 Astra) makes reviewing them manageable, reframing such PRs as "bug reports with attached examples."</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/2/llm/</guid>
+    </item>
     <item>
       <title>The U.S. Census Bureau and “Super Intelligence”</title>
       <link>https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/</link>
