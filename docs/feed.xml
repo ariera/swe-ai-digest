@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Nov 2026 17:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 18:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>How software engineering is changing: a tale of two eras</title>
+      <link>https://newsletter.pragmaticengineer.com/p/how-software-engineering-is-changing</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 03 Nov 2026 16:58:22 +0000</pubDate>
+      <description>Software engineer Neil Kakkar shares data-backed evidence of an 11x increase in PR output after joining an AI-native startup, attributing it to agentic tools like Claude Code that handle full feature development end-to-end. He argues that AI eliminates traditional constraints like communication overhead and mandatory code reviews, while introducing new ones such as context-switching and loss of shared context. The piece illustrates how engineering culture and team structure must fundamentally adapt for organizations to realize AI's productivity gains.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/how-software-engineering-is-changing</guid>
+    </item>
     <item>
       <title>Qwen 3.8 27B on my laptop can interpret model weights, too</title>
       <link>https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/</link>
