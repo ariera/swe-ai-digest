@@ -6,9 +6,33 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Nov 2026 18:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 19:00:25 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette-llm 0.1a10</title>
+      <link>https://simonwillison.net/2026/Nov/4/datasette-llm/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 04 Nov 2026 15:26:02 +0000</pubDate>
+      <description>Simon Willison releases datasette-llm 0.1a10, a patch fixing a bug where available LLM models were not properly restricted to those specified in configuration, affecting the agent.datasette.io demo site. This is relevant to engineers building LLM-integrated tools, as it highlights the importance of model access control in agent-facing deployments.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/4/datasette-llm/</guid>
+    </item>
+    <item>
+      <title>datasette-apps 0.3a0</title>
+      <link>https://simonwillison.net/2026/Nov/4/datasette-apps/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 04 Nov 2026 00:29:36 +0000</pubDate>
+      <description>Simon Willison releases datasette-apps 0.3a0, which deepens integration between Datasette's custom HTML app hosting and an LLM-powered agent. The update lets the agent create and manage apps via new tools, with user approval gates for write queries. This illustrates a practical pattern for AI agents operating within permission-scoped workflows in developer tooling.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/4/datasette-apps/</guid>
+    </item>
+    <item>
+      <title>datasette-agent 0.5a0</title>
+      <link>https://simonwillison.net/2026/Nov/3/datasette-agent/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 03 Nov 2026 23:13:45 +0000</pubDate>
+      <description>Simon Willison releases datasette-agent 0.5a0, introducing a "panel" feature that lets an AI chat agent sit alongside Datasette table or query pages. Combined with datasette-apps, users can prompt a database-backed app into existence and iteratively modify it through the adjacent chat interface — demonstrating a tightly integrated AI agent workflow for data-driven app development.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/3/datasette-agent/</guid>
+    </item>
     <item>
       <title>How software engineering is changing: a tale of two eras</title>
       <link>https://newsletter.pragmaticengineer.com/p/how-software-engineering-is-changing</link>
