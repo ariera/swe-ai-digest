@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Nov 2026 19:00:25 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 16:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Scaling Slack and GitHub with Maude Lemaire</title>
+      <link>https://newsletter.pragmaticengineer.com/p/scaling-slack-and-github-with-maude</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 05 Nov 2026 15:58:00 +0000</pubDate>
+      <description>In this podcast episode, principal engineer Maude Lemaire shares how she uses AI in her work while keeping judgment and decision-making in her own hands — notably, she personally verifies all LLM output for foundational/platform work to ensure correctness. She also discusses joining GitHub as Copilot was taking off and working on performance at Cursor. This offers a practitioner's grounded perspective on integrating AI tools into high-stakes infrastructure engineering without over-relying on them.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/scaling-slack-and-github-with-maude</guid>
+    </item>
     <item>
       <title>datasette-llm 0.1a10</title>
       <link>https://simonwillison.net/2026/Nov/4/datasette-llm/</link>
