@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Nov 2026 16:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 18:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Nilay Patel</title>
+      <link>https://simonwillison.net/2026/Nov/6/nilay-patel/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 06 Nov 2026 17:13:12 +0000</pubDate>
+      <description>Simon Willison quotes Nilay Patel arguing that the AI industry is failing because its products don't deliver tangible benefits that justify their societal and financial costs, and that agents remain unproven. Patel contends that recovery requires AI tools that demonstrably improve users' lives without persuasion campaigns — a pointed benchmark for practitioners building or evaluating AI products.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/6/nilay-patel/</guid>
+    </item>
     <item>
       <title>Scaling Slack and GitHub with Maude Lemaire</title>
       <link>https://newsletter.pragmaticengineer.com/p/scaling-slack-and-github-with-maude</link>
