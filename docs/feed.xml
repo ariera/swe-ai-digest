@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Nov 2026 18:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 23:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>parse_number() as a SQLite extension: C vs Rust</title>
+      <link>https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 08 Nov 2026 22:26:00 +0000</pubDate>
+      <description>Simon Willison demonstrates using Claude (Opus 5.5) as a hands-on coding and research assistant to explore building a SQLite extension in C vs. Rust — iteratively prompting the model to generate implementations, benchmark them, and even produce a formatted research report. The workflow highlights how LLMs can accelerate low-level systems exploration, with Claude ultimately producing a custom C parser that outperformed both the standard `strtod` and Rust alternatives.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/</guid>
+    </item>
     <item>
       <title>Quoting Nilay Patel</title>
       <link>https://simonwillison.net/2026/Nov/6/nilay-patel/</link>
