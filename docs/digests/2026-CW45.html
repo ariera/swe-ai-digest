@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW45</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW45</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-11-02 &ndash; 2026-11-08
+    &middot; 11 articles
+  </p>
+  <p>This digest period is defined by two intersecting themes: the rapid maturation of AI-assisted developer workflows, and growing scrutiny over how AI&#39;s impact is measured and communicated.
+
+On the tooling front, Simon Willison&#39;s releases of datasette-llm, datasette-apps, and datasette-agent collectively illustrate a converging pattern — AI agents embedded within permission-scoped, iterative workflows for data-driven development. His llm 0.37 update and use of Claude for SQLite extension development further demonstrate LLMs being integrated deeply into low-level engineering tasks, from code generation to benchmarking and reporting.
+
+Productivity claims are gaining data backing but also nuance. Neil Kakkar&#39;s reported 11x PR output increase with agentic tools signals genuine workflow transformation, while Maude Lemaire&#39;s insistence on personally verifying LLM output for infrastructure work illustrates that high-stakes engineering demands retained human judgment.
+
+Skepticism runs as a counterweight throughout. Nilay Patel&#39;s critique — that AI products have yet to deliver tangible, self-evident value — echoes Willison&#39;s caution against overinterpreting weight-inspection research. Meanwhile, the Census Bureau&#39;s rebranding of &#34;AI&#34; as &#34;Super Intelligence&#34; raises legitimate concerns about data integrity in tracking adoption trends industry-wide.</p>
+  <hr>
+
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/">The U.S. Census Bureau and “Super Intelligence”</a>
+    <span class="meta">(2026-11-02)</span>
+  </h3>
+  
+  <p>Simon Willison examines updated U.S. Census Bureau data on corporate AI adoption, finding that large companies reporting AI use jumped from ~12% to ~40% between September 2025 and October 2026 — partly due to a broadened survey question. He also flags that Executive Order 14434 has forced the Bureau to rebrand &#34;AI&#34; as &#34;Super Intelligence (SI)&#34; in its surveys, raising concerns about data continuity and comparability for anyone tracking adoption trends.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/2/llm/">llm 0.37</a>
+    <span class="meta">(2026-11-02)</span>
+  </h3>
+  
+  <p>Simon Willison releases llm 0.37 of his LLM CLI tool, adding new OpenAI models, easier endpoint configuration, and improved embeddings support for multimodal content. He also addresses the growing phenomenon of AI-assisted PRs, arguing that using AI for triage (Opus 5.5/GPT-6 Astra) makes reviewing them manageable, reframing such PRs as &#34;bug reports with attached examples.&#34;</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/3/october-newsletter/">October sponsors-only newsletter</a>
+    <span class="meta">(2026-11-03)</span>
+  </h3>
+  
+  <p>Simon Willison&#39;s October sponsors-only newsletter covers several AI-relevant topics, including an &#34;inflection point&#34; in vibe-coding game development, a &#34;vulnerability apocalypse&#34; tied to LLM releases, and API credits for high-tier subscribers. The newsletter signals ongoing practitioner-level commentary on LLM tooling and AI-driven development trends that software engineers following the space will want to track.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/">Qwen 3.8 27B on my laptop can interpret model weights, too</a>
+    <span class="meta">(2026-11-03)</span>
+  </h3>
+  
+  <p>Simon Willison hands-on tests a recent paper&#39;s claim that frontier LLMs can interpret raw neural network weights without tools, replicating the experiment locally using Qwen 3.8 27B via LM Studio. The model successfully identified three of four classic games from raw weight floats alone, though at significant time cost (up to 65 minutes). Willison urges caution against overblown interpretations, noting the paper conflates tool-assisted and tool-free weight manipulation.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/4/datasette-llm/">datasette-llm 0.1a10</a>
+    <span class="meta">(2026-11-04)</span>
+  </h3>
+  
+  <p>Simon Willison releases datasette-llm 0.1a10, a patch fixing a bug where available LLM models were not properly restricted to those specified in configuration, affecting the agent.datasette.io demo site. This is relevant to engineers building LLM-integrated tools, as it highlights the importance of model access control in agent-facing deployments.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/4/datasette-apps/">datasette-apps 0.3a0</a>
+    <span class="meta">(2026-11-04)</span>
+  </h3>
+  
+  <p>Simon Willison releases datasette-apps 0.3a0, which deepens integration between Datasette&#39;s custom HTML app hosting and an LLM-powered agent. The update lets the agent create and manage apps via new tools, with user approval gates for write queries. This illustrates a practical pattern for AI agents operating within permission-scoped workflows in developer tooling.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/3/datasette-agent/">datasette-agent 0.5a0</a>
+    <span class="meta">(2026-11-03)</span>
+  </h3>
+  
+  <p>Simon Willison releases datasette-agent 0.5a0, introducing a &#34;panel&#34; feature that lets an AI chat agent sit alongside Datasette table or query pages. Combined with datasette-apps, users can prompt a database-backed app into existence and iteratively modify it through the adjacent chat interface — demonstrating a tightly integrated AI agent workflow for data-driven app development.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/6/nilay-patel/">Quoting Nilay Patel</a>
+    <span class="meta">(2026-11-06)</span>
+  </h3>
+  
+  <p>Simon Willison quotes Nilay Patel arguing that the AI industry is failing because its products don&#39;t deliver tangible benefits that justify their societal and financial costs, and that agents remain unproven. Patel contends that recovery requires AI tools that demonstrably improve users&#39; lives without persuasion campaigns — a pointed benchmark for practitioners building or evaluating AI products.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/">parse_number() as a SQLite extension: C vs Rust</a>
+    <span class="meta">(2026-11-08)</span>
+  </h3>
+  
+  <p>Simon Willison demonstrates using Claude (Opus 5.5) as a hands-on coding and research assistant to explore building a SQLite extension in C vs. Rust — iteratively prompting the model to generate implementations, benchmark them, and even produce a formatted research report. The workflow highlights how LLMs can accelerate low-level systems exploration, with Claude ultimately producing a custom C parser that outperformed both the standard `strtod` and Rust alternatives.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/how-software-engineering-is-changing">How software engineering is changing: a tale of two eras</a>
+    <span class="meta">(2026-11-03)</span>
+  </h3>
+  
+  <p>Software engineer Neil Kakkar shares data-backed evidence of an 11x increase in PR output after joining an AI-native startup, attributing it to agentic tools like Claude Code that handle full feature development end-to-end. He argues that AI eliminates traditional constraints like communication overhead and mandatory code reviews, while introducing new ones such as context-switching and loss of shared context. The piece illustrates how engineering culture and team structure must fundamentally adapt for organizations to realize AI&#39;s productivity gains.</p>
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/scaling-slack-and-github-with-maude">Scaling Slack and GitHub with Maude Lemaire</a>
+    <span class="meta">(2026-11-05)</span>
+  </h3>
+  
+  <p>In this podcast episode, principal engineer Maude Lemaire shares how she uses AI in her work while keeping judgment and decision-making in her own hands — notably, she personally verifies all LLM output for foundational/platform work to ensure correctness. She also discusses joining GitHub as Copilot was taking off and working on performance at Cursor. This offers a practitioner&#39;s grounded perspective on integrating AI tools into high-stakes infrastructure engineering without over-relying on them.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>
