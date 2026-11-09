@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Nov 2026 05:00:42 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 18:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -24,6 +24,14 @@
       <pubDate>Mon, 09 Nov 2026 04:25:05 +0000</pubDate>
       <description>Simon Willison describes a practical workflow pattern for managing AI-generated PR descriptions: wrapping the verbose agent-written content in HTML `&lt;details&gt;&lt;summary&gt;` tags on GitHub, while placing a short, human-curated opener above it. He argues that although coding agents like Claude Code and Codex produce accurate PR descriptions, their comprehensiveness triggers "slop" fatigue in readers. The pattern preserves full agent output while restoring human editorial signal at a glance.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Nov/9/details-summary/</guid>
+    </item>
+    <item>
+      <title>AI and Irontown</title>
+      <link>https://lucumr.pocoo.org/2026/11/9/irontown/</link>
+      <author>Armin Ronacher</author>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Armin Ronacher uses Princess Mononoke as an allegory for AI's societal tensions, arguing that AI is genuinely empowering — especially for those previously excluded — but carries real costs borne by people who won't share in its benefits. He cautions against zero-sum "win at AI" geopolitical framing and calls for nuanced discourse that neither dismisses AI's value nor ignores its harms. The piece reflects a practitioner perspective: Ronacher uses AI daily yet advocates for thoughtful, pluralistic debate over polarized camps.</description>
+      <guid isPermaLink="true">https://lucumr.pocoo.org/2026/11/9/irontown/</guid>
     </item>
     <item>
       <title>parse_number() as a SQLite extension: C vs Rust</title>
