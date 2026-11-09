@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Nov 2026 23:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 05:00:42 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Web Is More Than Enough, by Paul Ford</title>
+      <link>https://simonwillison.net/2026/Nov/9/hn-50421091/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 09 Nov 2026 04:32:33 +0000</pubDate>
+      <description>Simon Willison shares a hands-on experiment where he used Claude Opus 5.5 to build a 3D Nudibranch-themed Fabergé Egg in Three.js, then prompted it to port the result to Vanilla JS + WebGL — successfully. The experiment demonstrates that frontier LLMs can handle non-trivial 3D graphics code without abstraction libraries, a practical data point for engineers evaluating AI-assisted creative or generative coding workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/9/hn-50421091/</guid>
+    </item>
+    <item>
+      <title>Hide your slop PR descriptions behind &lt;details&gt;&lt;summary&gt;</title>
+      <link>https://simonwillison.net/2026/Nov/9/details-summary/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 09 Nov 2026 04:25:05 +0000</pubDate>
+      <description>Simon Willison describes a practical workflow pattern for managing AI-generated PR descriptions: wrapping the verbose agent-written content in HTML `&lt;details&gt;&lt;summary&gt;` tags on GitHub, while placing a short, human-curated opener above it. He argues that although coding agents like Claude Code and Codex produce accurate PR descriptions, their comprehensiveness triggers "slop" fatigue in readers. The pattern preserves full agent output while restoring human editorial signal at a glance.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/9/details-summary/</guid>
+    </item>
     <item>
       <title>parse_number() as a SQLite extension: C vs Rust</title>
       <link>https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/</link>
@@ -64,6 +80,14 @@
       <pubDate>Tue, 03 Nov 2026 16:58:22 +0000</pubDate>
       <description>Software engineer Neil Kakkar shares data-backed evidence of an 11x increase in PR output after joining an AI-native startup, attributing it to agentic tools like Claude Code that handle full feature development end-to-end. He argues that AI eliminates traditional constraints like communication overhead and mandatory code reviews, while introducing new ones such as context-switching and loss of shared context. The piece illustrates how engineering culture and team structure must fundamentally adapt for organizations to realize AI's productivity gains.</description>
       <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/how-software-engineering-is-changing</guid>
+    </item>
+    <item>
+      <title>AI is destroying my CS degree</title>
+      <link>https://simonwillison.net/2026/Nov/3/hn-50354278/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 03 Nov 2026 16:42:02 +0000</pubDate>
+      <description>Simon Willison argues that AI is forcing a rethink of CS education but that educators face a painful challenge: the feedback loop for new teaching approaches spans 3–6 years, meaning students become unwitting test subjects for unproven methods. For software engineers, this signals that the pipeline of new developers is already being shaped — and potentially disrupted — by AI in ways whose outcomes won't be visible for years.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/3/hn-50354278/</guid>
     </item>
     <item>
       <title>Qwen 3.8 27B on my laptop can interpret model weights, too</title>
