@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Nov 2026 07:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 08:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Introducing Our Smallest, Most Efficient Model: Muse Ember</title>
+      <link>https://simonwillison.net/2026/Nov/10/muse-ember/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 10 Nov 2026 07:28:21 +0000</pubDate>
+      <description>Simon Willison evaluates Meta's newly released Muse Ember, a small, efficient model targeting agentic workloads like tool calls, routing, and document parsing — competing directly with GPT-6 Luna and Claude Haiku 5.5. He benchmarks pricing across prompt-length tiers and notes Ember sits on the Pareto efficiency frontier, delivering quality comparable to Muse Wonder at 40x the cost.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/10/muse-ember/</guid>
+    </item>
     <item>
       <title>Quoting Prompting Claude Fable 5.2</title>
       <link>https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/</link>
