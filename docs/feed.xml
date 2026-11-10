@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Nov 2026 01:00:27 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 06:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Prompting Claude Fable 5.2</title>
+      <link>https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 10 Nov 2026 05:34:14 +0000</pubDate>
+      <description>Anthropic's documentation for Claude Fable 5.2 reveals that framing code ownership in a prompt significantly affects model behavior: telling the model "this codebase is yours" led it to refactor and merge repeated code in ~50% of trials, versus under 10% without that phrase. This finding highlights how precise prompt engineering can materially shift AI coding agent output quality, with direct implications for engineers designing prompts or agentic workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/</guid>
+    </item>
     <item>
       <title>llm-anthropic 0.31</title>
       <link>https://simonwillison.net/2026/Nov/9/llm-anthropic/</link>
