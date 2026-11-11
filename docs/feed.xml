@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2026 18:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 19:00:20 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Browse tools.simonwillison.net by tag</title>
+      <link>https://simonwillison.net/2026/Nov/11/tools-tags/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 11 Nov 2026 18:42:50 +0000</pubDate>
+      <description>Simon Willison describes using an AI coding tool (Fable 5.2) and tree-sitter to automatically analyze and tag his collection of 244 "vibe-coded" tools, improving discoverability via tag clouds. The post is a practical example of AI-assisted workflow automation — using AI credits to generate metadata and enhance navigation of an AI-built tool library.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/11/tools-tags/</guid>
+    </item>
+    <item>
+      <title>llm 0.37.2</title>
+      <link>https://simonwillison.net/2026/Nov/11/llm/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 11 Nov 2026 17:19:52 +0000</pubDate>
+      <description>This release note covers a security patch for the LLM CLI tool (v0.37.2), fixing two vulnerabilities that could inadvertently leak a user's OpenAI API key to third-party OpenAI-compatible endpoints. The bugs were triggered under specific configuration conditions when routing requests through alternative providers. Engineers using LLM with custom API endpoints should update immediately to avoid credential exposure.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/11/llm/</guid>
+    </item>
     <item>
       <title>Tests as data: ensuring AI-generated code does what we want</title>
       <link>https://martinfowler.com/articles/tests-as-data.html</link>
