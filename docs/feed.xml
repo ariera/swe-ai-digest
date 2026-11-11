@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Nov 2026 21:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 16:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Tests as data: ensuring AI-generated code does what we want</title>
+      <link>https://martinfowler.com/articles/tests-as-data.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Wed, 11 Nov 2026 15:17:00 +0000</pubDate>
+      <description>Matteo Vaccari argues that when AI agents write both production and test code, traditional developer tests lose their integrity as a safety net. He proposes that human-readable "customer tests" stored as data (not code) should serve as the primary contract between humans and AI, making them harder for coding agents to inadvertently modify. This reframes testing strategy for AI-assisted development, with AI also lowering the cost of building custom DSL parsers and test runners to support this approach.</description>
+      <guid isPermaLink="true">https://martinfowler.com/articles/tests-as-data.html</guid>
+    </item>
+    <item>
+      <title>Anthropic's IPO roadshow video</title>
+      <link>https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 11 Nov 2026 15:11:59 +0000</pubDate>
+      <description>Simon Willison highlights key disclosures from Anthropic's IPO roadshow video, focusing on their multi-chip inference strategy (AWS Trainium, Google TPUs, NVIDIA and AMD GPUs) and the role of their internal AI agent "Mythos" in porting Claude to AMD GPUs in three days with minimal human effort. Anthropic also describes a compounding "compute multipliers" framework and signals ambitions toward recursive self-improvement, where Claude would autonomously discover further efficiency gains. These details matter to engineers tracking AI infrastructure strategy and the growing use of AI agents in low-level systems work.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/</guid>
+    </item>
     <item>
       <title>llm-gemini 0.36</title>
       <link>https://simonwillison.net/2026/Nov/10/llm-gemini/</link>
