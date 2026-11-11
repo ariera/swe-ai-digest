@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2026 19:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 22:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>aws-emulator</title>
+      <link>https://simonwillison.net/2026/Nov/11/aws-emulator/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 11 Nov 2026 21:18:30 +0000</pubDate>
+      <description>AWS has released an official local emulator for its cloud services, notably built by a large swarm of AI agents — evidenced by 29,684 commits in just three weeks. Simon Willison highlights this as a significant example of agentic engineering at scale, where LLM-driven agents produced a substantial, production-oriented Rust codebase. This signals a growing trend of AI agents being deployed to accelerate complex, real-world software infrastructure projects.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/11/aws-emulator/</guid>
+    </item>
     <item>
       <title>Browse tools.simonwillison.net by tag</title>
       <link>https://simonwillison.net/2026/Nov/11/tools-tags/</link>
