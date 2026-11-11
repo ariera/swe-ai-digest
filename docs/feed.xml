@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2026 22:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 23:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Gemini Decisions API</title>
+      <link>https://simonwillison.net/2026/Nov/11/gemini-decisions-api/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 11 Nov 2026 22:03:25 +0000</pubDate>
+      <description>Simon Willison evaluates Google's newly released "Gemini Decision 1," a model API designed for structured decision-making (yes/no, choice, rubric-scoring questions), comparing it to competitors Jev and OpenAI's GPT-6 Luna decision model. Gemini's key differentiator is multimodal support across text, images, audio, video, and PDFs, though it returns softer probability scores rather than binary 0.0/1.0 values. At 10 cents per million input tokens, it's pricier than Jev but on par with OpenAI.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/11/gemini-decisions-api/</guid>
+    </item>
     <item>
       <title>aws-emulator</title>
       <link>https://simonwillison.net/2026/Nov/11/aws-emulator/</link>
