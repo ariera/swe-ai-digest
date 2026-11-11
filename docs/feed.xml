@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2026 16:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 18:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -24,6 +24,14 @@
       <pubDate>Wed, 11 Nov 2026 15:11:59 +0000</pubDate>
       <description>Simon Willison highlights key disclosures from Anthropic's IPO roadshow video, focusing on their multi-chip inference strategy (AWS Trainium, Google TPUs, NVIDIA and AMD GPUs) and the role of their internal AI agent "Mythos" in porting Claude to AMD GPUs in three days with minimal human effort. Anthropic also describes a compounding "compute multipliers" framework and signals ambitions toward recursive self-improvement, where Claude would autonomously discover further efficiency gains. These details matter to engineers tracking AI infrastructure strategy and the growing use of AI agents in low-level systems work.</description>
       <guid isPermaLink="true">https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/</guid>
+    </item>
+    <item>
+      <title>AWS Emulator and the engineer's job when agents write the code</title>
+      <link>https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html?utm_campaign=inbound&amp;utm_source=rss</link>
+      <author>Werner Vogels</author>
+      <pubDate>Wed, 11 Nov 2026 14:30:00 +0000</pubDate>
+      <description>AWS Emulator — a local emulation of 200+ AWS services — was written and tested entirely by AI agents, serving as a concrete case study in agent-driven software development. The article examines how the engineer's role shifts when agents handle code generation and testing, a question directly relevant to software engineers navigating the profession's evolving responsibilities in an AI-driven era.</description>
+      <guid isPermaLink="true">https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html?utm_campaign=inbound&amp;utm_source=rss</guid>
     </item>
     <item>
       <title>llm-gemini 0.36</title>
