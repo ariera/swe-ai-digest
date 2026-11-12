@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Nov 2026 19:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 20:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: Details of incident.io’s AI spend</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-details-of-incident-ios-ai-spend/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 12 Nov 2026 19:00:11 +0000</pubDate>
+      <description>Incident.io shares detailed metrics on its AI tooling investment: ~$1.6M annually (~$2,700/engineer/month), with nearly 80% of production PRs now including agent-generated code and a 3.4x increase in PRs shipped year-over-year. The company introduces the "effort point" metric to compare AI vs. human PR complexity and calculate cost-per-PR. Key findings include that productivity gains skew heavily toward tenured engineers, new hires perform better when avoiding AI for the first month, and incidents per PR have dropped even as total incident volume rises with PR growth.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-details-of-incident-ios-ai-spend/</guid>
+    </item>
     <item>
       <title>The Pulse: What can we learn from the Railway hack?</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-pulse-what-can-we-learn-from-114</link>
