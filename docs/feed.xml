@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2026 23:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 15:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Bliki: Generated Glossary</title>
+      <link>https://martinfowler.com/bliki/GeneratedGlossary.html</link>
+      <author>Martin Fowler</author>
+      <pubDate>Thu, 12 Nov 2026 14:15:00 +0000</pubDate>
+      <description>Fowler describes a technique for improving LLM effectiveness in domain-specific enterprise contexts by using an LLM to auto-generate a glossary of specialized vocabulary from internal documents, emails, and code. The glossary—reviewed by human experts, versioned, and scoped by Domain-Driven Design bounded contexts—is then made available as context for other LLMs and agents. This matters to software engineers building agentic systems, as it offers a practical pattern for grounding LLMs in organization-specific terminology and improving code generation accuracy.</description>
+      <guid isPermaLink="true">https://martinfowler.com/bliki/GeneratedGlossary.html</guid>
+    </item>
     <item>
       <title>Gemini Decisions API</title>
       <link>https://simonwillison.net/2026/Nov/11/gemini-decisions-api/</link>
