@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Nov 2026 15:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 19:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: What can we learn from the Railway hack?</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pulse-what-can-we-learn-from-114</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 12 Nov 2026 18:53:19 +0000</pubDate>
+      <description>Gergely Orosz examines a postmortem from cloud platform Railway detailing a hack in which the attacker likely leveraged "abliterated" AI models—versions stripped of safety guardrails—to carry out the breach. The case highlights an emerging security threat where uncensored AI tools enable malicious actors, raising important considerations for engineers building or operating platforms exposed to AI-assisted attacks.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pulse-what-can-we-learn-from-114</guid>
+    </item>
     <item>
       <title>Bliki: Generated Glossary</title>
       <link>https://martinfowler.com/bliki/GeneratedGlossary.html</link>
