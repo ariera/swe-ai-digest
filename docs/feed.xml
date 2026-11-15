@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Nov 2026 01:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 01:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette-llm 0.1a11</title>
+      <link>https://simonwillison.net/2026/Nov/14/datasette-llm/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 14 Nov 2026 23:59:28 +0000</pubDate>
+      <description>Simon Willison announces datasette-llm 0.1a11, which adds support for OpenAI-compatible endpoints, enabling Datasette to connect to any LLM hosting service following the OpenAI API standard. This allows engineers to power Datasette Agent with locally-run models via LM Studio, Ollama, or llama.cpp, offering a privacy-friendly, self-hosted alternative for AI-assisted data exploration.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/14/datasette-llm/</guid>
+    </item>
     <item>
       <title>llm-gemini 0.37</title>
       <link>https://simonwillison.net/2026/Nov/12/llm-gemini/</link>
