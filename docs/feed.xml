@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2026 01:00:50 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 02:00:25 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette-maplibre 0.1a0</title>
+      <link>https://simonwillison.net/2026/Nov/15/datasette-maplibre/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 15 Nov 2026 23:58:36 +0000</pubDate>
+      <description>Simon Willison describes building a new Datasette geospatial plugin (datasette-maplibre) primarily through a single prompt to Claude Fable 5.2, which combined MapLibre GL and OpenFreeMap with features from two existing plugins. The AI independently generated creative additions, such as lazy-loading WebGL previews of GeoJSON shapes on scroll. This serves as a concrete example of using LLM agents to accelerate plugin development with minimal manual coding.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/15/datasette-maplibre/</guid>
+    </item>
     <item>
       <title>datasette-apps 0.4a0</title>
       <link>https://simonwillison.net/2026/Nov/15/datasette-apps/</link>
