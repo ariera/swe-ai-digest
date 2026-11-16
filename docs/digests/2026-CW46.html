@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWE AI Digest — 2026-CW46</title>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 680px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.3em; font-weight: normal; letter-spacing: 0.01em; }
+  h2 { font-size: 1.05em; margin-top: 2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  a { color: #1a0dab; }
+  nav { margin: 1.5em 0; font-size: 0.9em; }
+  nav a { margin-right: 1.5em; color: #666; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 0.85em; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  footer { margin-top: 4em; font-size: 0.8em; color: #aaa; border-top: 1px solid #eee; padding-top: 1.5em; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>SWE AI Digest — 2026-CW46</h1>
+  <nav>
+    <a href="../index.html">Index</a>
+    <a href="../about.html">About</a>
+    <a href="../feed.xml">RSS</a>
+  </nav>
+  <hr>
+
+  <p class="meta">
+    2026-11-09 &ndash; 2026-11-15
+    &middot; 23 articles
+  </p>
+  <p>This digest period is defined by two converging themes: the rapid maturation of agentic AI workflows and the emerging engineering discipline required to manage them responsibly.
+
+On the agentic frontier, multiple articles document AI agents taking on substantive, production-grade work — from AWS&#39;s emulator built by swarms of LLM-driven agents to Anthropic&#39;s internal &#34;Mythos&#34; agent porting Claude to AMD GPUs in days. Practitioners like Willison demonstrate agents with real-world sensory input, iterative code generation, and self-directed refactoring, while architectural patterns such as durable execution are being formalised to handle the reliability demands of long-horizon tasks.
+
+Scaling agents introduces hard engineering problems: token cost and budget exhaustion, context quality (the CAFE(S) framework), security vulnerabilities from uncensored models, and the integrity of AI-written tests. Practical mitigations are emerging — human-curated PR descriptions, customer tests stored as data, domain-specific glossaries as grounding context, and scoped prompt ownership language to steer agent behaviour.
+
+Economically, incident.io&#39;s $1.6M annual AI spend and 3.4x PR throughput increase offer rare quantitative grounding, while model releases from Anthropic, Google, and Meta reflect intensifying competition on price-performance curves. Armin Ronacher&#39;s societal framing serves as a counterpoint, urging practitioners to hold AI&#39;s genuine empowerment gains alongside its unequally distributed costs.</p>
+  <hr>
+
+  
+  <h2>Simon Willison</h2>
+  
+  <p class="meta">Co-creator of the Django web framework and independent developer whose blog is arguably the highest-volume, most rigorous public writing on LLMs from a practitioner&#39;s perspective.</p>
+  
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/9/hn-50421091/">The Web Is More Than Enough, by Paul Ford</a>
+    <span class="meta">(2026-11-09)</span>
+  </h3>
+  
+  <p>Simon Willison shares a hands-on experiment where he used Claude Opus 5.5 to build a 3D Nudibranch-themed Fabergé Egg in Three.js, then prompted it to port the result to Vanilla JS + WebGL — successfully. The experiment demonstrates that frontier LLMs can handle non-trivial 3D graphics code without abstraction libraries, a practical data point for engineers evaluating AI-assisted creative or generative coding workflows.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/9/details-summary/">Hide your slop PR descriptions behind &lt;details&gt;&lt;summary&gt;</a>
+    <span class="meta">(2026-11-09)</span>
+  </h3>
+  
+  <p>Simon Willison describes a practical workflow pattern for managing AI-generated PR descriptions: wrapping the verbose agent-written content in HTML `&lt;details&gt;&lt;summary&gt;` tags on GitHub, while placing a short, human-curated opener above it. He argues that although coding agents like Claude Code and Codex produce accurate PR descriptions, their comprehensiveness triggers &#34;slop&#34; fatigue in readers. The pattern preserves full agent output while restoring human editorial signal at a glance.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/9/llm-anthropic/">llm-anthropic 0.31</a>
+    <span class="meta">(2026-11-09)</span>
+  </h3>
+  
+  <p>Simon Willison announces llm-anthropic 0.31, adding support for Anthropic&#39;s newly released Claude Fable 5.2 and Mythos 5.2 models to his LLM CLI tool. He documents a practical bug where the `max` reasoning level exhausts the token budget (128,000 tokens) without producing output — a regression from Fable 5 and 5.1, though consistent with a known Opus 5.5 issue. Engineers using llm-anthropic should be aware of this token-exhaustion failure mode at maximum reasoning settings.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/9/mysterious-beeps/">Locating the source of a mysterious beep with Claude</a>
+    <span class="meta">(2026-11-09)</span>
+  </h3>
+  
+  <p>Simon Willison used Claude Code (with Opus 5.5 and Fable 5.2) to build a real-time acoustic triangulation system entirely through iterative prompting, solving a practical home problem. The project demonstrates a novel agentic pattern: giving a coding agent &#34;ears&#34; by wiring browser WebAudio and hot-swappable JavaScript modules over WebSockets, allowing the agent to perceive and act on live audio without manual redeployment. This showcases how coding agents can be extended with real-world sensory input, a technique with broad implications for autonomous debugging and environment-aware agents.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/">Quoting Prompting Claude Fable 5.2</a>
+    <span class="meta">(2026-11-10)</span>
+  </h3>
+  
+  <p>Anthropic&#39;s documentation for Claude Fable 5.2 reveals that framing code ownership in a prompt significantly affects model behavior: telling the model &#34;this codebase is yours&#34; led it to refactor and merge repeated code in ~50% of trials, versus under 10% without that phrase. This finding highlights how precise prompt engineering can materially shift AI coding agent output quality, with direct implications for engineers designing prompts or agentic workflows.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/10/yonkers-rises/">Yonkers Rises</a>
+    <span class="meta">(2026-11-10)</span>
+  </h3>
+  
+  <p>Simon Willison shares a brief experiment using Claude Fable 5.2 Medium to generate a Three.js 3D animation, testing the model&#39;s code generation and intent-inference capabilities. Notably, the model correctly interpreted a mobile keyboard typo (&#34;átomos&#34; → &#34;stomps&#34;), demonstrating practical robustness in natural language understanding for creative coding tasks.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/10/muse-ember/">Introducing Our Smallest, Most Efficient Model: Muse Ember</a>
+    <span class="meta">(2026-11-10)</span>
+  </h3>
+  
+  <p>Simon Willison evaluates Meta&#39;s newly released Muse Ember, a small, efficient model targeting agentic workloads like tool calls, routing, and document parsing — competing directly with GPT-6 Luna and Claude Haiku 5.5. He benchmarks pricing across prompt-length tiers and notes Ember sits on the Pareto efficiency frontier, delivering quality comparable to Muse Wonder at 40x the cost.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/10/llm-gemini/">llm-gemini 0.36</a>
+    <span class="meta">(2026-11-10)</span>
+  </h3>
+  
+  <p>Simon Willison announces the release of llm-gemini 0.36, adding support for Google&#39;s Gemini 4 Carbon model, now publicly available after an initial restricted rollout. He evaluates its pricing ($2/$10 per million tokens, doubling December 1st), tests its image generation quality at different thinking effort levels, and demos it via Google&#39;s Antigravity IDE for a creative coding task, comparing results to other frontier models.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/">Anthropic&#39;s IPO roadshow video</a>
+    <span class="meta">(2026-11-11)</span>
+  </h3>
+  
+  <p>Simon Willison highlights key disclosures from Anthropic&#39;s IPO roadshow video, focusing on their multi-chip inference strategy (AWS Trainium, Google TPUs, NVIDIA and AMD GPUs) and the role of their internal AI agent &#34;Mythos&#34; in porting Claude to AMD GPUs in three days with minimal human effort. Anthropic also describes a compounding &#34;compute multipliers&#34; framework and signals ambitions toward recursive self-improvement, where Claude would autonomously discover further efficiency gains. These details matter to engineers tracking AI infrastructure strategy and the growing use of AI agents in low-level systems work.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/11/tools-tags/">Browse tools.simonwillison.net by tag</a>
+    <span class="meta">(2026-11-11)</span>
+  </h3>
+  
+  <p>Simon Willison describes using an AI coding tool (Fable 5.2) and tree-sitter to automatically analyze and tag his collection of 244 &#34;vibe-coded&#34; tools, improving discoverability via tag clouds. The post is a practical example of AI-assisted workflow automation — using AI credits to generate metadata and enhance navigation of an AI-built tool library.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/11/llm/">llm 0.37.2</a>
+    <span class="meta">(2026-11-11)</span>
+  </h3>
+  
+  <p>This release note covers a security patch for the LLM CLI tool (v0.37.2), fixing two vulnerabilities that could inadvertently leak a user&#39;s OpenAI API key to third-party OpenAI-compatible endpoints. The bugs were triggered under specific configuration conditions when routing requests through alternative providers. Engineers using LLM with custom API endpoints should update immediately to avoid credential exposure.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/11/aws-emulator/">aws-emulator</a>
+    <span class="meta">(2026-11-11)</span>
+  </h3>
+  
+  <p>AWS has released an official local emulator for its cloud services, notably built by a large swarm of AI agents — evidenced by 29,684 commits in just three weeks. Simon Willison highlights this as a significant example of agentic engineering at scale, where LLM-driven agents produced a substantial, production-oriented Rust codebase. This signals a growing trend of AI agents being deployed to accelerate complex, real-world software infrastructure projects.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/11/gemini-decisions-api/">Gemini Decisions API</a>
+    <span class="meta">(2026-11-11)</span>
+  </h3>
+  
+  <p>Simon Willison evaluates Google&#39;s newly released &#34;Gemini Decision 1,&#34; a model API designed for structured decision-making (yes/no, choice, rubric-scoring questions), comparing it to competitors Jev and OpenAI&#39;s GPT-6 Luna decision model. Gemini&#39;s key differentiator is multimodal support across text, images, audio, video, and PDFs, though it returns softer probability scores rather than binary 0.0/1.0 values. At 10 cents per million input tokens, it&#39;s pricier than Jev but on par with OpenAI.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/12/llm-gemini/">llm-gemini 0.37</a>
+    <span class="meta">(2026-11-12)</span>
+  </h3>
+  
+  <p>Simon Willison covers the release of his llm-gemini 0.37 plugin alongside Google&#39;s new Gemini 4 Hydrogen model, analyzing its confusing pricing structure relative to the Carbon and Argon siblings. He notes Hydrogen is currently only 25% cheaper than its peers but will represent a 75% discount after December 1st — though it remains ~15x more expensive than comparable models like Claude Haiku 5.5 and GPT-6 Luna. Hydrogen is positioned as a fast execution model for everyday coding tasks and multi-model workflows, and will power Google&#39;s free tier and AI Search features.</p>
+  
+  <h3>
+    <a href="https://simonwillison.net/2026/Nov/14/datasette-llm/">datasette-llm 0.1a11</a>
+    <span class="meta">(2026-11-14)</span>
+  </h3>
+  
+  <p>Simon Willison announces datasette-llm 0.1a11, which adds support for OpenAI-compatible endpoints, enabling Datasette to connect to any LLM hosting service following the OpenAI API standard. This allows engineers to power Datasette Agent with locally-run models via LM Studio, Ollama, or llama.cpp, offering a privacy-friendly, self-hosted alternative for AI-assisted data exploration.</p>
+  
+  
+  <h2>Armin Ronacher</h2>
+  
+  <p class="meta">Austrian open-source developer, creator of Flask and Jinja2, and a prolific contributor to the Python and Rust ecosystems with a thoughtful voice on developer tooling.</p>
+  
+  
+  <h3>
+    <a href="https://lucumr.pocoo.org/2026/11/9/irontown/">AI and Irontown</a>
+    <span class="meta">(2026-11-09)</span>
+  </h3>
+  
+  <p>Armin Ronacher uses Princess Mononoke as an allegory for AI&#39;s societal tensions, arguing that AI is genuinely empowering — especially for those previously excluded — but carries real costs borne by people who won&#39;t share in its benefits. He cautions against zero-sum &#34;win at AI&#34; geopolitical framing and calls for nuanced discourse that neither dismisses AI&#39;s value nor ignores its harms. The piece reflects a practitioner perspective: Ronacher uses AI daily yet advocates for thoughtful, pluralistic debate over polarized camps.</p>
+  
+  
+  <h2>Martin Fowler</h2>
+  
+  <p class="meta">Chief Scientist at ThoughtWorks, author of Refactoring and Patterns of Enterprise Application Architecture, and original signatory of the Agile Manifesto.</p>
+  
+  
+  <h3>
+    <a href="https://martinfowler.com/fragments/2026-11-10.html">Fragments: November 10</a>
+    <span class="meta">(2026-11-10)</span>
+  </h3>
+  
+  <p>Fowler curates several AI-in-engineering developments: scaling agentic AI from pilots to enterprise introduces problems around shared context, token cost, cognitive load, security, and platform ownership. He highlights a CAFE(S) framework for evaluating agent context quality, notes that token verification now consumes more spend than generation in production systems, and touches on data center supply constraints and emerging weight-space programming research.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/articles/durable-execution-agents.html">Long-horizon agents and durable execution</a>
+    <span class="meta">(2026-11-10)</span>
+  </h3>
+  
+  <p>Kiran Prakash (via Martin Fowler&#39;s site) introduces durable execution as a key architectural pattern for long-horizon AI agents that run complex, multi-day tasks. The pattern works by persisting the result of each external interaction, allowing a failed agent to resume from where it left off rather than restart from scratch. This matters to software engineers building reliable agentic systems that must handle real-world failures like crashes and network errors gracefully.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/articles/tests-as-data.html">Tests as data: ensuring AI-generated code does what we want</a>
+    <span class="meta">(2026-11-11)</span>
+  </h3>
+  
+  <p>Matteo Vaccari argues that when AI agents write both production and test code, traditional developer tests lose their integrity as a safety net. He proposes that human-readable &#34;customer tests&#34; stored as data (not code) should serve as the primary contract between humans and AI, making them harder for coding agents to inadvertently modify. This reframes testing strategy for AI-assisted development, with AI also lowering the cost of building custom DSL parsers and test runners to support this approach.</p>
+  
+  <h3>
+    <a href="https://martinfowler.com/bliki/GeneratedGlossary.html">Bliki: Generated Glossary</a>
+    <span class="meta">(2026-11-12)</span>
+  </h3>
+  
+  <p>Fowler describes a technique for improving LLM effectiveness in domain-specific enterprise contexts by using an LLM to auto-generate a glossary of specialized vocabulary from internal documents, emails, and code. The glossary—reviewed by human experts, versioned, and scoped by Domain-Driven Design bounded contexts—is then made available as context for other LLMs and agents. This matters to software engineers building agentic systems, as it offers a practical pattern for grounding LLMs in organization-specific terminology and improving code generation accuracy.</p>
+  
+  
+  <h2>Werner Vogels</h2>
+  
+  <p class="meta">CTO of Amazon Web Services, author of the All Things Distributed blog, and a leading voice on cloud architecture, eventual consistency, and enterprise AI adoption.</p>
+  
+  
+  <h3>
+    <a href="https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html?utm_campaign=inbound&amp;utm_source=rss">AWS Emulator and the engineer&#39;s job when agents write the code</a>
+    <span class="meta">(2026-11-11)</span>
+  </h3>
+  
+  <p>AWS Emulator — a local emulation of 200+ AWS services — was written and tested entirely by AI agents, serving as a concrete case study in agent-driven software development. The article examines how the engineer&#39;s role shifts when agents handle code generation and testing, a question directly relevant to software engineers navigating the profession&#39;s evolving responsibilities in an AI-driven era.</p>
+  
+  
+  <h2>Gergely Orosz</h2>
+  
+  <p class="meta">Former engineer at Uber and Skype, author of The Software Engineer&#39;s Guidebook, and publisher of The Pragmatic Engineer — the most sustained newsletter coverage of AI&#39;s impact on engineering jobs.</p>
+  
+  
+  <h3>
+    <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-what-can-we-learn-from-114">The Pulse: What can we learn from the Railway hack?</a>
+    <span class="meta">(2026-11-12)</span>
+  </h3>
+  
+  <p>Gergely Orosz examines a postmortem from cloud platform Railway detailing a hack in which the attacker likely leveraged &#34;abliterated&#34; AI models—versions stripped of safety guardrails—to carry out the breach. The case highlights an emerging security threat where uncensored AI tools enable malicious actors, raising important considerations for engineers building or operating platforms exposed to AI-assisted attacks.</p>
+  
+  <h3>
+    <a href="https://blog.pragmaticengineer.com/the-pulse-details-of-incident-ios-ai-spend/">The Pulse: Details of incident.io’s AI spend</a>
+    <span class="meta">(2026-11-12)</span>
+  </h3>
+  
+  <p>Incident.io shares detailed metrics on its AI tooling investment: ~$1.6M annually (~$2,700/engineer/month), with nearly 80% of production PRs now including agent-generated code and a 3.4x increase in PRs shipped year-over-year. The company introduces the &#34;effort point&#34; metric to compare AI vs. human PR complexity and calculate cost-per-PR. Key findings include that productivity gains skew heavily toward tenured engineers, new hires perform better when avoiding AI for the first month, and incidents per PR have dropped even as total incident volume rises with PR growth.</p>
+  
+  
+
+  
+
+  <footer>
+    This digest tracks what a curated list of leading software engineers are publicly
+    writing about AI &mdash; its impact on the profession, how they use it, and where
+    they think it is going.<br><br>
+    All content belongs to the original authors. Links to source articles are always
+    included. Summaries and bios are AI-generated and may contain inaccuracies.
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+</body>
+</html>
