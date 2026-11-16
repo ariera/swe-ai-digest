@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2026 02:00:25 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 14:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Software engineering after code becomes cheap with Satya Nadella</title>
+      <link>https://newsletter.pragmaticengineer.com/p/software-engineering-after-code-becomes</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Mon, 16 Nov 2026 13:33:48 +0000</pubDate>
+      <description>Gergely Orosz interviews Microsoft CEO Satya Nadella on how AI is reshaping software engineering, covering topics including why GitHub Copilot lost ground to Claude Code, the emerging challenge of verifying AI-generated code, and Microsoft's internal shift toward building "software factories." Nadella also addresses the slowdown in junior hiring, voluntary exit offers, hybrid local/cloud AI inference, and advises engineers to prioritize hands-on AI experience over passive consumption of commentary.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/software-engineering-after-code-becomes</guid>
+    </item>
     <item>
       <title>datasette-maplibre 0.1a0</title>
       <link>https://simonwillison.net/2026/Nov/15/datasette-maplibre/</link>
