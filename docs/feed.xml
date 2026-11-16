@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Nov 2026 01:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 01:00:50 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette-apps 0.4a0</title>
+      <link>https://simonwillison.net/2026/Nov/15/datasette-apps/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 15 Nov 2026 04:02:45 +0000</pubDate>
+      <description>Simon Willison announces datasette-apps 0.4a0, which adds URL fragment linking between sandboxed HTML/JS apps embedded in Datasette — described as "Claude Artifacts, but with SQL access." The release also exposes supported URL schemes to Datasette Agent, enabling the AI agent to auto-generate apps that correctly link to one another, tightening the feedback loop between AI-assisted code generation and live data tooling.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/15/datasette-apps/</guid>
+    </item>
+    <item>
+      <title>datasette-agent 0.6a0</title>
+      <link>https://simonwillison.net/2026/Nov/15/datasette-agent/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 15 Nov 2026 03:49:47 +0000</pubDate>
+      <description>Simon Willison releases datasette-agent 0.6a0, an AI agent plugin for Datasette that lets users query their data using natural language. The update adds an agent prompt directly to the Datasette homepage with support for hash-mentions of tables and queries. This is a practical example of integrating LLM-powered agents into data tooling workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/15/datasette-agent/</guid>
+    </item>
     <item>
       <title>datasette-llm 0.1a11</title>
       <link>https://simonwillison.net/2026/Nov/14/datasette-llm/</link>
