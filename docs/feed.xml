@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2026 17:00:20 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 17:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Inference engineering for software engineers</title>
+      <link>https://newsletter.pragmaticengineer.com/p/inference-engineering-for-software-engineers</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 17 Nov 2026 16:11:23 +0000</pubDate>
+      <description>Gergely Orosz introduces "inference engineering" as a growing discipline for software engineers, covering how to migrate from frontier lab APIs (OpenAI, Anthropic) to open-weight model inference providers (Modal, Fireworks, Baseten) to cut costs, improve latency control, and enable fine-tuning. The article outlines a practical progression from multi-tenant API replacement to dedicated GPU deployments, discussing trade-offs around KV caching, rate limits, speculative decoding, and smart LLM routing. It matters because cost optimization and reliability gaps at frontier labs are pushing engineering teams to build deeper inference expertise in-house.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/inference-engineering-for-software-engineers</guid>
+    </item>
     <item>
       <title>(no title)</title>
       <link>https://bsky.app/profile/nodeland.dev/post/3n2gyt2coru2r</link>
