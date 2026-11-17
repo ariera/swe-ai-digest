@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Nov 2026 17:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 23:00:22 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>External sandboxes for coding agents</title>
+      <link>https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 17 Nov 2026 22:52:29 +0000</pubDate>
+      <description>Simon Willison introduces the "external sandbox" pattern for coding agents, where agent-executed code runs inside an isolated sandbox (via WebAssembly, Apple Containers, or QEMU) while the agent itself remains outside it. Three open-source server implementations are released, compatible with Claude Code, Codex, and Pi. The pattern mitigates prompt injection risks and limits network access, making it safer to experiment with local models on personal machines.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/</guid>
+    </item>
+    <item>
+      <title>GPT‑6.2 Astra and GPT‑6.2 Sol</title>
+      <link>https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 17 Nov 2026 22:38:52 +0000</pubDate>
+      <description>Simon Willison evaluates OpenAI's newly released GPT-6.2 Astra and GPT-6.2 Sol, noting significant price reductions (Astra at 80% of its predecessor's cost) and comparing their benchmark performance against Claude Fable 5.2 and Gemini 4 Carbon. Early reception is mixed — Astra underperforms Fable 5.2 on benchmarks and exhibits confusing communication behavior in long agentic tasks, particularly when surfacing opaque internal implementation questions to users.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/</guid>
+    </item>
     <item>
       <title>Inference engineering for software engineers</title>
       <link>https://newsletter.pragmaticengineer.com/p/inference-engineering-for-software-engineers</link>
