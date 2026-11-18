@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Nov 2026 23:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 17:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Daniel Stenberg</title>
+      <link>https://simonwillison.net/2026/Nov/18/daniel-stenberg/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 18 Nov 2026 15:58:27 +0000</pubDate>
+      <description>curl's creator Daniel Stenberg highlights a critical limitation of AI-driven "vibe-porting" projects: while agents converted 185,000 lines of C to 340,000 lines of Rust in weeks, the real curl project merged 300+ commits and 200 bugfixes in the same period — fixes the AI-generated clones lack. This underscores that AI code migration tools capture a static snapshot and struggle to keep pace with active, human-maintained projects.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/18/daniel-stenberg/</guid>
+    </item>
     <item>
       <title>External sandboxes for coding agents</title>
       <link>https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/</link>
