@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2026 04:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 07:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>llm-gemini 0.38</title>
+      <link>https://simonwillison.net/2026/Nov/18/llm-gemini/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 18 Nov 2026 23:59:20 +0000</pubDate>
+      <description>Simon Willison covers the release of llm-gemini 0.38 alongside Google's new Gemini 4 Neon model, critiquing the increasingly confusing pricing structure across the Gemini 4 lineup (Carbon, Neon, Hydrogen). He provides a practical comparison of Neon's reasoning levels and notes that current discounts make the tier ordering counterintuitive until Carbon's price doubles on December 1st. Useful for engineers evaluating Gemini API costs and model capabilities.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/18/llm-gemini/</guid>
+    </item>
     <item>
       <title>Software factories and code reviews with Harjot Gill</title>
       <link>https://newsletter.pragmaticengineer.com/p/software-factories-and-code-reviews</link>
