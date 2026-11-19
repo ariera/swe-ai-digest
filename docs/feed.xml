@@ -6,7 +6,7 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2026 19:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 04:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
     <item>
@@ -16,6 +16,14 @@
       <pubDate>Wed, 18 Nov 2026 18:08:52 +0000</pubDate>
       <description>Gergely Orosz interviews CodeRabbit CEO Harjot Gill, who ships 5,000+ PRs/month by running hundreds of AI agents in parallel at a personal AI spend of ~$250K/month. Gill argues human code review is dead, replaced by reviewing releases and plans rather than individual PRs, and details the agent verification stack (formal methods, simulations, staged rollouts) needed to maintain quality at this scale. The episode offers a rare look at an extreme, AI-native engineering workflow and its implications for hiring, tooling costs, and software development practices.</description>
       <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/software-factories-and-code-reviews</guid>
+    </item>
+    <item>
+      <title>datasette-arrows 0.1a0</title>
+      <link>https://simonwillison.net/2026/Nov/18/datasette-arrows/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 18 Nov 2026 17:09:59 +0000</pubDate>
+      <description>Simon Willison describes building a new Datasette plugin for Apache Arrow streaming exports, noting that Claude suggested the format and generated the plugin "in almost a single shot." The post illustrates a concrete AI-assisted development workflow where an LLM both proposes a technical solution and implements it with minimal human intervention — a practical example of AI accelerating plugin/tooling creation.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/18/datasette-arrows/</guid>
     </item>
     <item>
       <title>Quoting Daniel Stenberg</title>
