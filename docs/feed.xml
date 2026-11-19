@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2026 18:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 19:00:19 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pulse: What can we learn from the Railway hack?</title>
+      <link>https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-the-railway-hack/</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Thu, 19 Nov 2026 18:53:58 +0000</pubDate>
+      <description>Gergely Orosz analyzes a targeted attack on cloud infrastructure provider Railway, where threat actors used "abliterated" (guardrail-stripped) AI models to rapidly exploit a stolen codebase — compressing what would have taken human attackers days into hours. The article highlights a growing asymmetry: offensive AI models are unconstrained, while defenders' access to AI for cybersecurity remains restricted by safety policies. Key takeaways for engineers include the need for build isolation, fine-grained secrets access control, and faster alerting cadence as AI-accelerated attacks outpace traditional incident response.</description>
+      <guid isPermaLink="true">https://blog.pragmaticengineer.com/the-pulse-what-can-we-learn-from-the-railway-hack/</guid>
+    </item>
     <item>
       <title>The Pulse: Is Amazon’s writing culture collapsing because of AI?</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-pulse-is-amazons-writing-culture</link>
