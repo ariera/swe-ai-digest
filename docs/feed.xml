@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Nov 2026 03:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 17:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Levent Alpöge</title>
+      <link>https://simonwillison.net/2026/Nov/20/levent-alpoge/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 20 Nov 2026 16:30:48 +0000</pubDate>
+      <description>Mathematician Levent Alpöge claims to have proved the Riemann Hypothesis — one of mathematics' greatest unsolved problems — in collaboration with Claude, noting that the AI "far outpaced" him near the finish line. The claim is significant for AI watchers as it represents a practitioner asserting that an LLM made decisive, novel contributions to frontier mathematical research rather than merely assisting with routine tasks.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/20/levent-alpoge/</guid>
+    </item>
     <item>
       <title>Token fraud is here and it’s BAD (YouTube)</title>
       <link>https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/</link>
