@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Nov 2026 19:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 01:00:15 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Muru</title>
+      <link>https://simonwillison.net/2026/Nov/21/muru/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sat, 21 Nov 2026 23:56:28 +0000</pubDate>
+      <description>Graham Dumpleton is building Muru, a new AI-assisted Rust server for Python ASGI/WSGI apps, leveraging two decades of mod_wsgi experience to guide AI-generated code toward production quality. His companion post "AI as a lifestyle choice" argues that while AI handles much of the implementation work, deep domain expertise remains essential for evaluating and refining the output. This is a concrete case study in how experienced engineers can use AI tooling to accelerate low-level systems work without ceding critical judgment.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/21/muru/</guid>
+    </item>
     <item>
       <title>Fragments: November 20</title>
       <link>https://martinfowler.com/fragments/2026-11-20.html</link>
