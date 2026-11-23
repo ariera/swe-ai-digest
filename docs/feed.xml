@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Nov 2026 01:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 22:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Ladybird's first alpha release</title>
+      <link>https://simonwillison.net/2026/Nov/23/ladybird/</link>
+      <author>Simon Willison</author>
+      <pubDate>Mon, 23 Nov 2026 21:46:35 +0000</pubDate>
+      <description>Simon Willison covers Ladybird's first alpha browser release, highlighting how the project has aggressively leveraged AI coding agents to accelerate development — including porting 25,000 lines of C++ to Rust in two weeks using Claude Code and Codex, and gaining over 75,000 new web-platform-test passes in five days by pointing agents at failing tests. This case study offers a concrete, large-scale example of coding agents driving measurable engineering output on a complex, real-world open-source project.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/23/ladybird/</guid>
+    </item>
     <item>
       <title>Select Styling Specimens</title>
       <link>https://simonwillison.net/2026/Nov/22/select-styling/</link>
