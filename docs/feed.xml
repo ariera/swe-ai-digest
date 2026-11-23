@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Nov 2026 01:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 01:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Select Styling Specimens</title>
+      <link>https://simonwillison.net/2026/Nov/22/select-styling/</link>
+      <author>Simon Willison</author>
+      <pubDate>Sun, 22 Nov 2026 19:45:06 +0000</pubDate>
+      <description>Simon Willison used Claude (an AI coding assistant) to generate an HTML reference page exploring all possible CSS styling approaches for `&lt;select&gt;` elements across browsers. The article is a brief, practical example of using AI tools to accelerate front-end experimentation and documentation tasks, illustrating how engineers can delegate boilerplate exploration work to AI assistants.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/22/select-styling/</guid>
+    </item>
     <item>
       <title>Muru</title>
       <link>https://simonwillison.net/2026/Nov/21/muru/</link>
