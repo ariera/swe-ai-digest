@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Nov 2026 01:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 06:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette-charts 0.2a0</title>
+      <link>https://simonwillison.net/2026/Nov/24/datasette-charts/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 24 Nov 2026 04:24:29 +0000</pubDate>
+      <description>Simon Willison demonstrates a new integration between his datasette-charts plugin and Datasette Agent, an AI chat interface that can generate charts from natural language prompts. The agent uses underlying chart suggestion and generation tools, and can observe context changes in the UI — such as a user switching charts — to describe updated content. This showcases a practical agentic workflow where an LLM drives data visualization through tool use and environmental awareness.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/24/datasette-charts/</guid>
+    </item>
+    <item>
+      <title>datasette-agent 0.7a1</title>
+      <link>https://simonwillison.net/2026/Nov/24/datasette-agent/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 24 Nov 2026 03:45:57 +0000</pubDate>
+      <description>Simon Willison releases datasette-agent 0.7a1, a minor update to his AI chat agent plugin for Datasette. The release improves iframe side-panel navigation via fragment hashes, enabling deeper integration with other Datasette plugins that manage state through URL fragments. This is relevant as a real-world example of iterative agent/tool integration work in a developer-facing AI product.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/24/datasette-agent/</guid>
+    </item>
     <item>
       <title>GLM-5.4: Toward Generalized Coding with Our First Loop Transformer</title>
       <link>https://simonwillison.net/2026/Nov/23/glm-54/</link>
