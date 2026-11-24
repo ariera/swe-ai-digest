@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Nov 2026 06:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 18:00:16 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>GPT 6.2 Astra Solves a Historical Mystery</title>
+      <link>https://simonwillison.net/2026/Nov/24/astra-historical-mystery/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 24 Nov 2026 16:53:59 +0000</pubDate>
+      <description>Simon Willison highlights a case study in which GPT-6.2 Astra autonomously solved a historical archival mystery in 22 minutes, identifying the creator of an 1808 sketchbook by reasoning over publicly available sources and predicting the existence of a confirming document. History professor Mark Humphries reflects that agentic AI systems may soon trigger a "crisis of confidence" in the humanities, though he argues historians—unlike mathematicians—retain an irreplaceable role in reinterpreting the past through a human lens.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/24/astra-historical-mystery/</guid>
+    </item>
     <item>
       <title>datasette-charts 0.2a0</title>
       <link>https://simonwillison.net/2026/Nov/24/datasette-charts/</link>
