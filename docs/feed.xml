@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Nov 2026 18:00:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 20:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>The Pragmatic Engineer Essay Challenge: Category Winners (Part 1)</title>
+      <link>https://newsletter.pragmaticengineer.com/p/the-pragmatic-engineer-essay-challenge</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Tue, 24 Nov 2026 19:16:38 +0000</pubDate>
+      <description>Gergely Orosz curates winning essays from a competition examining how AI has transformed software engineering since late 2025, covering topics like the collapse of code review culture, non-engineers shipping production code, and engineers reorienting toward "machinist"-style oversight roles. Contributors from companies like HoneyBook, PostHog, and Devolutions provide data-backed accounts of dramatic productivity shifts alongside new quality and comprehension risks. The collection offers software engineers a candid, ground-level view of how AI-native workflows are reshaping team structures, practices, and professional identity.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/the-pragmatic-engineer-essay-challenge</guid>
+    </item>
     <item>
       <title>GPT 6.2 Astra Solves a Historical Mystery</title>
       <link>https://simonwillison.net/2026/Nov/24/astra-historical-mystery/</link>
