@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Nov 2026 20:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 00:00:21 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Three LLM inflection points in twelve months</title>
+      <link>https://simonwillison.net/2026/Nov/24/llm-inflection-points/</link>
+      <author>Simon Willison</author>
+      <pubDate>Tue, 24 Nov 2026 23:02:07 +0000</pubDate>
+      <description>Simon Willison identifies three major LLM capability inflection points over the past year: coding agents becoming reliably useful (Claude Opus 4.5, late 2025), the emergence of "Fable class" models capable of autonomous multi-step problem-solving (mid-2026), and frontier models gaining genuine 3D spatial and game-design competence (fall 2026). He argues that software development has fundamentally transformed — he no longer expects to write most code by hand — and that if a piece of software can be clearly imagined and described, current frontier models can build it.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/24/llm-inflection-points/</guid>
+    </item>
     <item>
       <title>The Pragmatic Engineer Essay Challenge: Category Winners (Part 1)</title>
       <link>https://newsletter.pragmaticengineer.com/p/the-pragmatic-engineer-essay-challenge</link>
