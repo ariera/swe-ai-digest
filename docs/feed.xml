@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 00:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 18:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>How Anthropic builds software in 2026 with Katelyn Lesse</title>
+      <link>https://newsletter.pragmaticengineer.com/p/how-anthropic-builds-software-in</link>
+      <author>Gergely Orosz</author>
+      <pubDate>Wed, 25 Nov 2026 17:31:32 +0000</pubDate>
+      <description>Gergely Orosz interviews Anthropic's platform engineering lead Katelyn Lesse about how AI is reshaping software development inside Anthropic in 2026 — covering agentic code review, Claude-first oncall, AI-assisted onboarding, and the Python-to-Rust API rewrite completed largely with Claude's help. Key shifts include replacing traditional coding interviews with agent-based exercises, rendering "time-to-completion" meaningless for promotions, and engineers reviewing only ~20% of AI-generated code. The episode offers a concrete, practitioner-level view of how frontier AI labs are restructuring engineering workflows around agents.</description>
+      <guid isPermaLink="true">https://newsletter.pragmaticengineer.com/p/how-anthropic-builds-software-in</guid>
+    </item>
     <item>
       <title>Three LLM inflection points in twelve months</title>
       <link>https://simonwillison.net/2026/Nov/24/llm-inflection-points/</link>
