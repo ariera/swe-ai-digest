@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Nov 2026 00:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 16:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Jack Despain Zhou</title>
+      <link>https://simonwillison.net/2026/Nov/26/jack-despain-zhou/</link>
+      <author>Simon Willison</author>
+      <pubDate>Thu, 26 Nov 2026 15:09:31 +0000</pubDate>
+      <description>Simon Willison quotes Jack Despain Zhou's critique of a pervasive "de-individualization" driven by AI, where Claude's voice is detectable across YouTube, conference talks, and professional email pitches. The observation highlights a cultural and professional concern for software engineers: as LLM-generated content saturates communication channels, authenticity and individual voice are eroding, raising questions about the real-world costs of widespread AI adoption.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/26/jack-despain-zhou/</guid>
+    </item>
     <item>
       <title>Quoting Scott Aaronson</title>
       <link>https://simonwillison.net/2026/Nov/25/scott-aaronson/</link>
