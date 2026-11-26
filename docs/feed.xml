@@ -6,9 +6,17 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 18:00:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 00:00:17 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>Quoting Scott Aaronson</title>
+      <link>https://simonwillison.net/2026/Nov/25/scott-aaronson/</link>
+      <author>Simon Willison</author>
+      <pubDate>Wed, 25 Nov 2026 23:26:32 +0000</pubDate>
+      <description>Simon Willison quotes Scott Aaronson arguing that AI (specifically LLMs) is unlocking not isolated mathematical breakthroughs but an entirely new continent of mathematical truth, comparable to the invention of the microscope or telescope. For software engineers, this signals that AI's impact on formal reasoning and complexity theory may be far deeper and more transformative than previously anticipated.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/25/scott-aaronson/</guid>
+    </item>
     <item>
       <title>How Anthropic builds software in 2026 with Katelyn Lesse</title>
       <link>https://newsletter.pragmaticengineer.com/p/how-anthropic-builds-software-in</link>
