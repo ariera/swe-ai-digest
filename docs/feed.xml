@@ -6,9 +6,25 @@
     <description>Weekly AI-filtered digest of what leading software engineers are writing about artificial intelligence, its impact on the profession, and how they use it in their own work.
 </description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Nov 2026 16:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 01:00:18 +0000</lastBuildDate>
     <atom:link href="https://ariera.github.io/swe-ai-digest/feed.xml" rel="self" type="application/rss+xml" />
     <managingEditor>digest@example.com (SWE AI Digest)</managingEditor>
+    <item>
+      <title>datasette-charts 0.4a0</title>
+      <link>https://simonwillison.net/2026/Nov/27/datasette-charts/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 27 Nov 2026 23:57:17 +0000</pubDate>
+      <description>Simon Willison used Claude Opus 5.5 to build an experimental plugin for datasette-charts, specifically to stress-test the plugin hook API for defining new chart types. The AI's attempts surfaced friction points in the design, which were then addressed in this release — a practical example of using AI-generated code as a feedback mechanism for API ergonomics.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/27/datasette-charts/</guid>
+    </item>
+    <item>
+      <title>datasette-mcp 0.4</title>
+      <link>https://simonwillison.net/2026/Nov/27/datasette-mcp/</link>
+      <author>Simon Willison</author>
+      <pubDate>Fri, 27 Nov 2026 00:26:17 +0000</pubDate>
+      <description>Simon Willison releases datasette-mcp 0.4, a compatibility fix for the Model Context Protocol (MCP) plugin for Datasette, updated to work with Datasette 1.0a44. MCP is an emerging standard for connecting AI models to external tools and data sources, making this plugin relevant to engineers building AI-integrated data workflows.</description>
+      <guid isPermaLink="true">https://simonwillison.net/2026/Nov/27/datasette-mcp/</guid>
+    </item>
     <item>
       <title>Quoting Jack Despain Zhou</title>
       <link>https://simonwillison.net/2026/Nov/26/jack-despain-zhou/</link>
